@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Bump.sh',
+  tagline: 'Much more than stunning docs. For all your APIs.',
+  url: 'https://preview.help.bump.sh',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'bump-sh', // Usually your GitHub org/user name.
+  projectName: 'bump-sh.github.io', // Usually your repo name.
+  trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,14 +38,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/bump-sh/bump-sh.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/bump-sh/bump-sh.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,21 +58,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Bump.sh',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Bump.sh Logo',
+          src: 'img/logo-bump-circle.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Help',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/bump-sh/bump-sh.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -81,46 +82,58 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Product',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'API Documentation',
+                to: 'https://bump.sh/api-documentation',
+              },
+              {
+                label: 'Change Management',
+                to: 'https://bump.sh/api-change-management',
+              },
+              {
+                label: 'Hubs',
+                to: 'https://bump.sh/api-catalog',
+              },
+              {
+                label: 'API Diff',
+                href: 'https://api-diff.io/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Specifications',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'OpenAPI (Swagger)',
+                to: 'https://bump.sh/openapi',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'AsyncAPI',
+                to: 'https://bump.sh/asyncapi',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Resources',
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://bump.sh/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'CLI',
+                href: 'https://github.com/bump-sh/cli',
               },
+              {
+                label: 'Status',
+                href: 'https://status.bump.sh/',
+              }
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Bump.sh. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
