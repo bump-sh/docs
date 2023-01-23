@@ -140,6 +140,37 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          const oldPaths = [
+            'bump-cli',
+            'continuous-integration',
+            'specifications-support',
+            'api-change-management',
+            'branching',
+            'references',
+            'markdown-support',
+            'custom-domains',
+            'meta-images',
+            'hubs',
+            'organizations',
+            'access-management',
+            'faq',
+          ];
+
+          return oldPaths.map(oldPath => {
+            if (existingPath.includes(oldPath.to || `/docs/${oldPath}`)) {
+              // Redirection de /oldPath vers /docs/oldPath
+              return existingPath.replace(oldPath.to || `/docs/${oldPath}`, oldPath.from || `/${oldPath}`);
+            }
+          }).filter(redirect => redirect !== undefined)[0];
+        },
+      },
+    ],
+  ],
 };
 
 module.exports = config;
