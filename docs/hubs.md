@@ -1,3 +1,6 @@
+# Hubs
+Easily create APIs catalogs to help your developers or consumers discover and synchronize with your entire APIs ecosystem. Only available with the Business plan.
+
 # Deploying inside a hub using our CLI
 
 Hubs provide their own authentication token. You can deploy an existing hub documentation using either its own authentication token, or the hub one.

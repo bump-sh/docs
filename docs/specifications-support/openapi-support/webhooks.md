@@ -1,3 +1,7 @@
+---
+sidebar_label: 'Webhooks'
+---
+
 One of the greatest new features provided by OpenAPI 3.1 is the support of webhooks. Indeed, a OpenAPI 3.1 documentation may include `paths` and / or `webhooks`, when `paths` were required for previous version.
 
 Every webhook has a required `keyName`, and some operations. If we follow this example, provided for OpenAPI 3.1 by [OpenAPI Initiative](https://github.com/OAI/OpenAPI-Specification):

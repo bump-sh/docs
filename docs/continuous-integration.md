@@ -1,3 +1,6 @@
+# Continuous integration
+How to integrate your documentation deployment to your CI.
+
 # Integrate with your CI
 
 Here, we are presenting the process recommended to our customers, but feel free to adapt it to your own workflow/requirements.

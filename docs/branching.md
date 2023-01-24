@@ -1,3 +1,5 @@
+# Branching
+
 ## Documentation vs. Branch
 
 Branches are a great solution for existing documentation that could need several versions. Instead of creating new documentation in your hub (for an updated version of your API specification for example), branching allows your users to switch from one version of your documentation to another easily.

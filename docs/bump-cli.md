@@ -1,3 +1,9 @@
+---
+sidebar_label: 'Bump CLI'
+---
+# Bump CLI
+How to use the Bump command line interface.
+
 # Installing Bump CLI
 
 Bump CLI is a node package, currently [distributed via NPM](https://www.npmjs.com/package/bump-cli) which means you need to have Node v12+ interpreter installed on your computer and servers.

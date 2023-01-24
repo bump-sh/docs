@@ -1,3 +1,6 @@
+# References
+References are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.
+
 # What is a reference?
 
 A reference can be either a pointer to another part of your current specification or a pointer to an external file or URL. This lets you re-use part of a specification instead of duplicating it across your file(s).

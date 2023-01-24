@@ -1,3 +1,5 @@
+# Markdown support
+
 Bump supports common Markdown syntax, language color syntax highlighting, and information call-outs. Markdown can be included inside your contract file or as an external reference using dedicated Markdown files. Here's several options that may help.
 
 # Common Markdown syntax support

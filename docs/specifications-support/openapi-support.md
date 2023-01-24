@@ -1,3 +1,6 @@
+---
+sidebar_label: 'OpenAPI support'
+---
 # Not (yet) supported properties
 
 ## Partially supported: `securitySchemes (V3)` / `securityDefinitions (V2)`

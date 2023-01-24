@@ -1,3 +1,5 @@
+# Access Management
+
 Access Management has recently changed: new options has been added and password protection will be removed soon (more details at the bottom of the article).
 
 Available from a dedicated section in the documentation or hubs settings, Access Management offers 3 different access levels :

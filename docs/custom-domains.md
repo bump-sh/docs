@@ -1,3 +1,5 @@
+# Set a custom domain
+
 ## Before you begin
 
 You can host your documentation under your own domain by creating a CNAME record pointing to `custom.bump.sh`.

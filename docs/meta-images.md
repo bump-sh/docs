@@ -1,3 +1,5 @@
+# Meta images
+
 ## Add your own image
 
 From your dashboard, select the documentation you would like to edit. If this documentation belongs to a hub, you'll need to select the hub directly.

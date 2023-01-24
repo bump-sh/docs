@@ -1,10 +1,12 @@
-# Will you support others specifications like BluePrint or GraphQL?
+# FAQ
+
+## Will you support others specifications like BluePrint or GraphQL?
 
 When we initially had the Bump idea, we though that it would be absolutely perfect to be able to handle any kind of documentation.
 
 This said, at the moment, we are focusing on OpenAPI and AsyncAPI to offer the best support of these specifications.
 
-# Why not supporting all the OpenAPI specification?
+## Why not supporting all the OpenAPI specification?
 
 If you have tried Bump, you probably have already discovered that we don't support the whole Swagger / OpenApi specification.
 
