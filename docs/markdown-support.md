@@ -4,61 +4,19 @@ Bump supports common Markdown syntax, language color syntax highlighting, and in
 
 # Common Markdown syntax support
 
-Formatting
+<details><summary>Markdown Syntax Support</summary>
 
-Markdown syntax
-
-Rendering
-
-bold
-
-`**bold**`
-
-**bold**
-
-italic
-
-`_italic_`
-
-_italic_
-
-link
-
-`[links](https://bump.sh)`
-
-[links](https://bump.sh/)
-
-inline code
-
-`̀ inline code ̀`
-
-`inline code`
-
-highlight
-
-`==highlight==`
-
-[highlight](https://bump.sh/)
-
-strike-through
-
-`~~strikethrough~~`
-
-strikethrough
-
-footnote
-
-`Footnote[^1]`
-
-Footnote¹
-¹: Content of the first footnote
-
-quotes
-
-`> quotes`
-
-- > quotes
->
+|Formatting|Markdown Syntax|Rendering|
+|---|---|---|
+|bold|`**bold**`|**bold**|
+|italic|`_italic_`|_italic_|
+|link|`[links](https://bump.sh)`|[links](https://bump.sh/)|
+|inline code|`̀ inline code ̀`|`inline code`|
+|highlight|`==highlight==`|[highlight](https://bump.sh/)|
+|strike-through|`~~strikethrough~~`|~~strikethrough~~|
+|footnote|`Footnote[^1]`|Footnote[^1]|
+|quotes|`> quotes`|> quotes|
+</details>
 
 # Titles & headings
 
