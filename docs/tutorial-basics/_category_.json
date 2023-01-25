@@ -1,8 +1,0 @@
-{
-  "label": "Continuous Integration",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "How to integrate your documentation deployment to your CI."
-  }
-}

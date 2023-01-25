@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# What is Bump.sh?
+# What is Bump?
 
 > Bump is an API contract management platform that helps document and track your APIs.
 
