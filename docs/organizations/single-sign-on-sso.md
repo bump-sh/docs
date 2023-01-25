@@ -18,5 +18,5 @@ We will send you a URL that will let you complete the configuration, picking the
 
 By default, all users who get access to Bump.sh via the configured SSO will have the [“Viewer” Role/Permission](organizations/index.md#member-management).
 
-The Organization Owner may [configure different permission levels](undefined) for each user via the Bump.sh administration user interface.
+The Organization Owner may [configure different permission levels](organizations/index.md#member-management) for each user via the Bump.sh administration user interface.
 

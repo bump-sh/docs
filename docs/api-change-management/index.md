@@ -57,7 +57,7 @@ With our [Github Action](continuous-integration/github-actions.md), you can rece
 
 - a diff summary
 - information about the breaking change state
-- a link to a [visual diff page](api-change-management.md#visual-diff)
+- a link to a [visual diff page](api-change-management/index.md#visual-diff)
 
 ![GitHub integration example](/files/ysIMcTzOxd1AzimVLJ4p.svg)
 
