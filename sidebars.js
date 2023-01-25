@@ -20,7 +20,7 @@ const sidebars = {
       {
         type: 'category',
         label: 'Continuous Integration',
-        link: {type: 'doc', id: 'continuous-integration'},
+        link: {type: 'doc', id: 'continuous-integration/index'},
         collapsible: true,
         collapsed: false,
         items: [
@@ -49,7 +49,7 @@ const sidebars = {
       {
         type: 'category',
         label: 'API change management',
-        link: {type: 'doc', id: 'api-change-management'},
+        link: {type: 'doc', id: 'api-change-management/index'},
         collapsible: true,
         collapsed: true,
         items: [
@@ -65,7 +65,7 @@ const sidebars = {
       {
         type: 'category',
         label: 'Organizations',
-        link: {type: 'doc', id: 'organizations'},
+        link: {type: 'doc', id: 'organizations/index'},
         collapsible: true,
         collapsed: true,
         items: ['organizations/single-sign-on-sso'],
