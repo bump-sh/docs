@@ -1,6 +1,4 @@
----
-sidebar_label: 'AsyncAPI Support'
----
+# AsyncAPI Support
 
 # Current support state
 

@@ -1,4 +1,5 @@
 # Hubs
+
 Easily create APIs catalogs to help your developers or consumers discover and synchronize with your entire APIs ecosystem. Only available with the Business plan.
 
 # Deploying inside a hub using our CLI

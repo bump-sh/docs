@@ -1,6 +1,4 @@
----
-sidebar_label: 'GitHub Actions'
----
+# GitHub Actions
 
 # Generate your API documentation & changelog
 

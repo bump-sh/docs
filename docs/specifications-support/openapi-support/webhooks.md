@@ -1,6 +1,4 @@
----
-sidebar_label: 'Webhooks'
----
+# Webhooks
 
 One of the greatest new features provided by OpenAPI 3.1 is the support of webhooks. Indeed, a OpenAPI 3.1 documentation may include `paths` and / or `webhooks`, when `paths` were required for previous version.
 

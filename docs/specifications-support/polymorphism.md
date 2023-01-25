@@ -1,6 +1,4 @@
----
-sidebar_label: 'Polymorphism'
----
+# Polymorphism
 
 Bump fully supports polymorphism for OpenAPI and AsyncAPI, commonly called anyOf, oneOf and allOf. More details on these discriminators can be found on each specification documentation:
 

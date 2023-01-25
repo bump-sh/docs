@@ -1,4 +1,4 @@
-# Set a custom domain
+# Custom domains
 
 ## Before you begin
 

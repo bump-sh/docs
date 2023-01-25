@@ -1,6 +1,4 @@
----
-sidebar_label: 'Name and sort endpoints and webhooks'
----
+# Name and sort endpoints and webhooks
 ## Endpoints and Webhooks are resources
 
 REST APIs are composed of a set of possible requests, from server to server.

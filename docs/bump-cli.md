@@ -1,6 +1,3 @@
----
-sidebar_label: 'Bump CLI'
----
 # Bump CLI
 How to use the Bump command line interface.
 

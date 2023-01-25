@@ -1,4 +1,5 @@
 # References
+
 References are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.
 
 # What is a reference?

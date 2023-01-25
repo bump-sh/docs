@@ -1,4 +1,5 @@
 # Single Sign-On (SSO)
+
 Bump.sh supports Single Sign-On through your Identity and Access Management systems, to ease who in your organization can access admin permissions.
 
 Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
