@@ -99,7 +99,14 @@ It's a great way to include “Topic” sections with handwritten content before
 
 Creating good API documentation requires giving users context and guides. As most of the specifications don't permit to add generic content, we have created a custom property. Setting the `x-topics` property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.
 
-Each topic can have the following properties:
+<details><summary>Each topic can have the following properties:</summary>
+
+|Property|Description|
+|---|---|
+|title|Topic title as it will appear in the navigation bar and in the content section.|
+|content|The topic content. Markdown is fully supported here.|
+|example|Will appear in the examples section, if activated. Markdown is fully supported here.|
+</details>
 
 Property
 
