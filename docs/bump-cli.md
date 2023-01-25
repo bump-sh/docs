@@ -82,13 +82,13 @@ You can create as many previews as you like without being authenticated. This is
 
 ## API diff or simple validation before a deployment
 
-This is mainly used when you integrate Bump in your automated environments ([Continuous Integration](undefined)). It will validate your documentation file to make sure it is parsed correctly by Bump. If you want to validate your API specification file before a deployment, you can either use:
+This is mainly used when you integrate Bump in your automated environments ([Continuous Integration](continuous-integration.md)). It will validate your documentation file to make sure it is parsed correctly by Bump. If you want to validate your API specification file before a deployment, you can either use:
 
-- [the `bump diff` command](undefined) if you also want to have a human diff summary of your API change
+- [the `bump diff` command](#api-diff-of-your-changes) if you also want to have a human diff summary of your API change
 
 _or_
 
-- [the `bump deploy --dry-run` command](undefined) if you only want to make sure the file is valid
+- [the `bump deploy --dry-run` command](#validation-before-a-deployment) if you only want to make sure the file is valid
 
 ### API diff of your changes
 

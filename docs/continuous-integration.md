@@ -12,7 +12,7 @@ We recommend two steps in your automation flow: a **validation** one during deve
 
 ### API diff for each proposed change request
 
-With our [Github Action](undefined), you can receive automatic API diff comments directly on your pull requests. This is done thanks to the `bump diff` command under the hood which will run each time a pull request is created or updated. It will make sure to fail the build if the documentation file is not valid.
+With our [Github Action](github-actions.md), you can receive automatic API diff comments directly on your pull requests. This is done thanks to the `bump diff` command under the hood which will run each time a pull request is created or updated. It will make sure to fail the build if the documentation file is not valid.
 
 ### Plain validation
 
