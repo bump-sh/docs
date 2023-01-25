@@ -10,7 +10,7 @@ For instance, if you want to host your documentation under the `developers.examp
 developers.example.com. 3600 IN CNAME custom.bump.sh.
 ```
 
-Once this is done, you can [set your custom domain](undefined) in Bump.
+Once this is done, you can set your custom domain in Bump.
 
 ## Set a custom domain
 
