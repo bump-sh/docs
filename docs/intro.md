@@ -1,4 +1,5 @@
 ---
+sidebar_label: "What is love?"
 sidebar_position: 1
 ---
 
