@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# What is Bump?
+# What is ~Bump?~ [Love?](https://www.youtube.com/watch?v=HwVh8pmOot4)
 
 > Bump is an API contract management platform that helps document and track your APIs.
 
