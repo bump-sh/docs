@@ -9,5 +9,5 @@ To ease readability, we strongly recommend to give titles to your alternatives: 
 
 Here's an [example of polymorphism](https://bump.sh/bump/doc/petstore-alternatives#operation-post-pets-body-animal-cat-species-species-alternative) in action:
 
-![](/files/Eqfjob6I3KfrblyPB8mV.gif)
+![](/files/anyof.gif)
 

@@ -42,7 +42,7 @@ paths:
 
 There are three operations here, and three different ways to generate, group and order them, regarding option chosen for **How to group operations?**
 
-![Group by path or group by tag?](/files/-MU8HgDhZXrUBOih-Aa4.png)
+![Group by path or group by tag?](/files/legacy/-MU8HgDhZXrUBOih-Aa4.png)
 
 ### Group by path
 
@@ -51,7 +51,7 @@ In this case, we deduce endpoint name from related `path`. First part of the pat
 
 Let's Bump it up to something visual with a first [Petstore live example](https://bump.sh/hub/examples/doc/petstore):
 
-![Group petstore operations by path](/files/-MUJe7kuSWbH7xA9Cwhy.png)
+![Group petstore operations by path](/files/group-by-path-dark.png)
 
 Operations `GET`  and `POST` from `/pets` , and `GET` from `/pets/{petId}` are grouped under same endpoint `Pets` (first part of the path), and their names are generated from field `summary`
 
@@ -59,7 +59,7 @@ Operations `GET`  and `POST` from `/pets` , and `GET` from `/pets/{petId}` are g
 
 You may have noticed they are two different `tags` for these 3 operations: "all pets" and "single pet" . If you chose option "Group by tag", we'll use these values to group, name and sort these operations. Here is our second [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the same specification, with option "Group by tag" :
 
-![Group Petstore operations by tag](/files/-MUJj6SDDPshQJ1uqwYp.png)
+![Group Petstore operations by tag](/files/group-by-tags-dark.png)
 
 This option **group by tag** allows a better customization of your doc, by overriding resources name. And, last but not least, there is a feature that'd allow you to override how your `endpoints` are ordered: a first level field `tags`, available at  [OpenAPI root document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object).
 
