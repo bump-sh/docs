@@ -1,7 +1,7 @@
 # Bump CLI
 How to use the Bump command line interface.
 
-# Installing Bump CLI
+## Installing Bump CLI
 
 Bump CLI is a node package, currently [distributed via NPM](https://www.npmjs.com/package/bump-cli) which means you need to have Node v12+ interpreter installed on your computer and servers.
 
@@ -47,7 +47,7 @@ npm exec -- bump --help
 
 Unfortunately, at the moment we only support the Node environment. However we plan to distribute universal binaries in the most common package managers very soon. In the meantime, you can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets or you can push your documentation using [our API](https://developers.bump.sh/).
 
-# Using Bump CLI
+## Using Bump CLI
 
 To list all the available commands, just type `bump`  in your command line environment. You can get some help anytime by using `--help` on any command. Example: `bump deploy --help` .
 

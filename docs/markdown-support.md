@@ -2,7 +2,7 @@
 
 Bump supports common Markdown syntax, language color syntax highlighting, and information call-outs. Markdown can be included inside your contract file or as an external reference using dedicated Markdown files. Here's several options that may help.
 
-# Common Markdown syntax support
+## Common Markdown syntax support
 
 |Formatting|Markdown Syntax|Rendering|
 |---|---|---|
@@ -15,13 +15,13 @@ Bump supports common Markdown syntax, language color syntax highlighting, and in
 |footnote|`Footnote[^1]`|Footnote[^1]|
 |quotes|`> quotes`| > quotes |
 
-# Titles & headings
+## Titles & headings
 
 - Heading 1: `# A first-level title`
 - Heading 2: `## A second-level title`
 - Heading 3: `### A third-level title`
 
-# Multi-line code blocks with language color syntax highlighting
+## Multi-line code blocks with language color syntax highlighting
 
 E.g.
 
@@ -45,7 +45,7 @@ will render:
 }
 ```
 
-# Information call-outs
+## Information call-outs
 
 Bump support information call-outs (of type `info`, `warn`, `success` or `error`) with the quote markdown syntax (lines starting with `> ` ) if the first line contains one of the call-out types.
 
@@ -62,7 +62,7 @@ will render:
 this is an important information to **standout**
 :::
 
-# Markdown files as an external reference
+## Markdown files as an external reference
 
 Markdown files can be included as an [external reference](references.md) within your contract document with the $ref syntax `$ref: "./path/to/local-markdown.md"`. In the same way you can extract part of your contract (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
 
@@ -94,7 +94,7 @@ With files `docs/introduction.md`, `docs/getting-started.md`, `docs/use-cases.md
 
 It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](specifications-support/openapi-support.md).
 
-# Adding topics to your documentation
+## Adding topics to your documentation
 
 Creating good API documentation requires giving users context and guides. As most of the specifications don't permit to add generic content, we have created a custom property. Setting the `x-topics` property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.
 

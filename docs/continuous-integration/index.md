@@ -2,7 +2,7 @@
 
 How to integrate your documentation deployment to your CI.
 
-# Integrate with your CI
+## Integrate with your CI
 
 Here, we are presenting the process recommended to our customers, but feel free to adapt it to your own workflow/requirements.
 
@@ -22,13 +22,13 @@ If you don't use Github, for each branch of your code base you can check that yo
 
 Once your branch has been merged into your main branch (generally the `master` or `main` one) you will want to deploy your new documentation file and make it live. You will use the `bump deploy` command.
 
-# Add our CLI tool to your project
+## Add our CLI tool to your project
 
 The simplest way to use our CLI tool is to add a `package.json` file to your project. You can find an example here: [https://github.com/bump-sh/bump-ci-example/blob/master/package.json](https://github.com/bump-sh/bump-ci-example/blob/master/package.json).
 
 If you prefer not using a `package.json`, be sure to install the CLI globally with `npm install -g bump-cli` before calling the `bump`  command.
 
-# Examples
+## Examples
 
 Here are examples for integrating Bump with the most commonly used CI products:
 

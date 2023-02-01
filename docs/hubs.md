@@ -2,7 +2,7 @@
 
 Easily create APIs catalogs to help your developers or consumers discover and synchronize with your entire APIs ecosystem. Only available with the Business plan.
 
-# Deploying inside a hub using our CLI
+## Deploying inside a hub using our CLI
 
 Hubs provide their own authentication token. You can deploy an existing hub documentation using either its own authentication token, or the hub one.
 
@@ -11,7 +11,7 @@ bump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token my-doc-token
 bump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token hub-token
 ```
 
-# Default settings
+## Default settings
 
 You can define default settings at the hub level. These settings will be then used by the hub's documentations. You can define:
 
@@ -22,13 +22,13 @@ You can define default settings at the hub level. These settings will be then us
 
 The default settings can be overridden at the documentation level by selecting specific values in the documentation settings tab.
 
-# Group documentations by tag
+## Group documentations by tag
 
 You can display hub's documentations grouped by tag instead of a global list. Select "Group documentations by tag" in your hub's UI settings, and fill tags for each documentation.
 
 You can add multiple tags to a documentation. It will be displayed under each associated tag on the hub.
 
-# Auto create the documentation
+## Auto create the documentation
 
 You can create a documentation on the fly by using the `--auto-create` CLI option. When deploying, if the documentation doesn't exist yet, a new one will be created with your hub defaults, the given slug (provided with `--doc`) and documentation name (`--doc-name`).
 
