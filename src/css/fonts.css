@@ -1,11 +1,8 @@
-@font-face {
-  font-family: "Avenir Next";
-  font-style: normal;
-  font-weight: 700;
-  src: url("fonts/AvenirNext-Bold.woff2") format("woff2"),
-    url("fonts/AvenirNext-Bold.woff") format("woff"),
-    url("fonts/AvenirNext-Bold.ttf") format("truetype");
-  font-display: swap;
+:root {
+  --font-family: "Avenir Next", -apple-system, system-ui, "Helvetica Neue",
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  --font-weight-normal: 500;
+  --font-weight-bold: 600;
 }
 
 @font-face {
@@ -21,7 +18,7 @@
 @font-face {
   font-family: "Avenir Next";
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--font-weight-normal);
   src: url("fonts/AvenirNext-Medium.woff2") format("woff2"),
     url("fonts/AvenirNext-Medium.woff") format("woff"),
     url("fonts/AvenirNext-Medium.ttf") format("truetype");
@@ -29,19 +26,8 @@
 }
 
 html {
-  @apply font-sans font-medium;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--text-color);
-}
-
-h1,
-h2 {
-  @apply font-sans font-bold text-3xl text-black;
-}
-
-@screen sm {
-  h1 {
-    @apply text-5xl;
-  }
+  font-weight: var(--font-weight-normal);
 }

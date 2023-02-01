@@ -1,0 +1,27 @@
+/* nav */
+nav.menu {
+  padding-block: var(--spacing-10);
+}
+
+.menu__link {
+  color: var(--text-color);
+}
+
+.menu__link:hover {
+  background-color: revert;
+  color: var(--link-color-hover);
+}
+
+.menu__link.menu__link--active[aria-current="page"] {
+  background-color: revert;
+  color: var(--brand-primary);
+}
+
+.menu__list-item-collapsible:hover,
+.menu__list-item-collapsible--active {
+  background-color: revert;
+}
+
+.menu__caret::before {
+  scale: 0.6;
+}
