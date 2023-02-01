@@ -57,3 +57,16 @@
   /* --ifm-color-primary-lightest: #4fddbf; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@import "colors.css";
+@import "spacings.css";
+@import "variables.css";
+@import "fonts.css";
+@import "navigation.css";
+
+body {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-normal);
+}

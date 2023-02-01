@@ -1,0 +1,10 @@
+:root {
+  --brand-primary: var(--blue-60);
+  --text-color: var(--gray-70);
+  --link-color-hover: var(--gray-50);
+}
+
+[data-theme='dark'] {
+  --text-color: var(--gray-20);
+  --link-color-hover: var(--gray-40);
+}
