@@ -15,14 +15,23 @@
 const sidebars = {
   docs:
     [
-      'intro',
+      'home',
+      {
+        type: 'category',
+        label: 'Getting started',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          'intro'
+        ],
+      },
       'bump-cli',
       {
         type: 'category',
         label: 'Continuous Integration',
         link: {type: 'doc', id: 'continuous-integration/index'},
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           'continuous-integration/github-actions'
         ],
