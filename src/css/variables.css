@@ -2,9 +2,12 @@
   --brand-primary: var(--blue-60);
   --text-color: var(--gray-70);
   --link-color-hover: var(--gray-50);
+  --border-color: var(--gray-20);
+  --border-radius-small: 2px;
 }
 
 [data-theme='dark'] {
   --text-color: var(--gray-20);
   --link-color-hover: var(--gray-40);
+  --border-color: var(--slate-80);
 }
