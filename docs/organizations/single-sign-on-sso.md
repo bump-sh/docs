@@ -4,7 +4,7 @@ Bump.sh supports Single Sign-On through your Identity and Access Management syst
 
 Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
 
-# Activating SSO for your organization
+## Activating SSO for your organization
 
 SSO is available on our [Business plans](https://bump.sh/pricing?utm_source=bump&utm_medium=help_center).
 
@@ -14,7 +14,7 @@ We will send you a URL that will let you complete the configuration, picking the
 
 ![Selecting an Identity and Access Management solution](/files/legacy/1SucEsWaJNivFoU9pusQ.png)
 
-# Configuring user permissions
+## Configuring user permissions
 
 By default, all users who get access to Bump.sh via the configured SSO will have the [“Viewer” Role/Permission](organizations/index.md#member-management).
 

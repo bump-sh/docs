@@ -14,7 +14,7 @@ Available from a dedicated section in the documentation or hubs settings, Access
 
 </div>
 
-### Private level
+## Private level
 
 Private level allows members from the same organization to have access to a documentation/hub. Writing permissions will only be granted if the member has admin/maintainer role.
 
@@ -26,7 +26,7 @@ From private level, you can also invite external users (like partners, customers
 
 </div>
 
-### About depreciation of the Password-Protected level
+## About depreciation of the Password-Protected level
 
 From our tests and user reviews, we felt that password protection was not relevant anymore and could cause confusion in the future.
 

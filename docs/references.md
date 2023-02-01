@@ -2,7 +2,7 @@
 
 References are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.
 
-# What is a reference?
+## What is a reference?
 
 A reference can be either a pointer to another part of your current specification or a pointer to an external file or URL. This lets you re-use part of a specification instead of duplicating it across your file(s).
 
@@ -14,9 +14,9 @@ $ref: path/to/reference
 
 You should note that OpenAPI and AsyncAPI specifications don't allow you to use references anywhere. However, Bump will resolve all the references found in your files, even if you didn't respect your specification.
 
-# The two types of references
+## The two types of references
 
-## Internal references
+### Internal references
 
 Use this when you want to point to another part of your current file. Internal references always start with `#/`.
 
@@ -33,7 +33,7 @@ paths:
 
 Internal references are always expanded by Bump. If a reference points on an empty path, the reference is just ignored.
 
-## External references
+### External references
 
 Using external references is particularly useful as it can point to external resources like full definitions, components, models, etc... External references let you reuse your components across multiple projects without duplicating your specification code.
 
@@ -68,7 +68,7 @@ $ref: ./models.yml#/user
 You can use recursive references if needed but we limit up to 5 recursive reference maximum.
 :::
 
-# How to deploy a specification with external references
+## How to deploy a specification with external references
 
 Bump does support external references from any channel, so you can deploy a specification including them through the web app, the CLI, our GitHub action, or our API.
 

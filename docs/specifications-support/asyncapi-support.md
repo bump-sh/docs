@@ -1,6 +1,6 @@
 # AsyncAPI Support
 
-# Current support state
+## Current support state
 
 Event driven APIs world is more complex than REST APIs one: there are more protocols, more tools, more different architectures. As a consequence, AsyncAPI is more complex that OpenAPI to support. We wanted to open our beta fast, so we have chosen to release it with minimal features.
 
