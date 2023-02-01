@@ -8,29 +8,26 @@ Organizations are also super useful if you want to invite guests (who are called
 
 You can easily create an organization from your dashboard. Select the settings section and the organization tab. From here, you can create an organization or manage the ones you own.
 
-![](/files/jUWSAyUYg6xpjB35eg2T.png)
+![](/files/organization-create.png)
 
 Select "Create Organization" to start a new one. You'll need to name it and choose its slug.
 
-![](/files/hGiwuZH9WdjbnQSNUDJD.png)
+![](/files/organization-creation.png)
 
 ## Member management
 
 Once your organization is created, you may want to invite teammates and guests (which is the point, actually). When you invite a new member, you'll have to select a role before sending the invitation. Each role has its own permissions, detailed below. Roles can be modified at anytime.
 
-Hubs access
+| Role/Permission          | Admin | Maintainer | Viewer |
+|:-------------------------|:------|:-----------|:-------|
+| Documentation access     | ✓     | ✓          | ✓      |
+| Hubs access              | ✓     | ✓          | ✓      |
+| Documentation management | ✓     | ✓          |        |
+| Hubs management          | ✓     | ✓          |        |
+| Organization management  | ✓     |            |        |
+| Member management        | ✓     |            |        |
 
-Documentation management
-
-Hubs management
-
-Organization management
-
-Member management
-
-Documentation access
-
-![Adding a new member requires an email address and an assigned role.](/files/Q6P4SEp9xUI38Vntiem7.png)
+![Adding a new member requires an email address and an assigned role.](/files/legacy/Q6P4SEp9xUI38Vntiem7.png)
 
 Billing and invoice are only managed by the owner of the organization.
 
@@ -38,13 +35,19 @@ Billing and invoice are only managed by the owner of the organization.
 
 From your dashboard, you can manage the organizations you own and those you have admin role. Organization settings allow you to change its name and URL, transfer ownership to an active member or completely delete the organization.
 
-![](/files/Hdo2CKReqm7JTLPS0FjV.png)
+![](/files/organization-settings.png)
 
+:::caution
 Transferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.
+:::
 
+:::caution
 If you choose to close your Bump account but are still the owner of an organization, a warning message will be displayed. Please consider transferring ownership if necessary.
+:::
 
+:::danger
 Deleting an organization will definitively erase its documentation and hubs. We **cannot** restore deleted content.
+:::
 
 ## Organizations FAQ
 

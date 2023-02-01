@@ -50,7 +50,9 @@ $ref: https://example.com/api/specification.yml
 $ref: ./models/user.yml
 ```
 
+:::info
 Bump supports absolute and relative paths for file system references.
+:::
 
 An external reference can also point to a subpart of the resource by adding a relative path after the absolute location:
 
@@ -62,13 +64,17 @@ $ref: https://example.com/api.yml#/models/user
 $ref: ./models.yml#/user
 ```
 
+:::caution
 You can use recursive references if needed but we limit up to 5 recursive reference maximum.
+:::
 
 # How to deploy a specification with external references
 
 Bump does support external references from any channel, so you can deploy a specification including them through the web app, the CLI, our GitHub action, or our API.
 
+:::caution
 Some limitations apply when using the web application though. Only references pointing to resources accessible by our servers will be resolved. This means that **file system paths and protected URI will be ignored**.
 
 If you need to deploy a specification using this kind of external references, please use [our CLI](bump-cli.md) or our [GitHub Action](continuous-integration/github-actions.md)
+:::
 
