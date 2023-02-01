@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'bump-sh', // Usually your GitHub org/user name.
-  projectName: 'bump-sh.github.io', // Usually your repo name.
+  projectName: 'docs', // Usually your repo name.
   trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -38,7 +38,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/bump-sh/bump-sh.github.io/tree/main/',
+            'https://github.com/bump-sh/docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -64,7 +64,7 @@ const config = {
             label: 'Help',
           },
           {
-            href: 'https://github.com/bump-sh/bump-sh.github.io',
+            href: 'https://github.com/bump-sh/docs',
             label: 'GitHub',
             position: 'right',
           },
