@@ -15,7 +15,7 @@
 const sidebars = {
   help:
     [
-      'home',
+      'index',
       {
         type: 'category',
         label: 'Getting started',
