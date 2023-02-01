@@ -8,7 +8,11 @@ Available from a dedicated section in the documentation or hubs settings, Access
 - Protected: (**Soon discarded**) Password is required to access to your documentation.
 - Private: Access is limited to authenticated users from your Organization or invited external users.
 
+<div style={{textAlign: 'center'}}>
+
 ![](/files/documentation-access-choice.png)
+
+</div>
 
 ### Private level
 
@@ -16,7 +20,11 @@ Private level allows members from the same organization to have access to a docu
 
 From private level, you can also invite external users (like partners, customers, etc...) to a read-only mode of your documentation/hub.
 
+<div style={{textAlign: 'center'}}>
+
 ![](/files/access-management-invite.png)
+
+</div>
 
 ### About depreciation of the Password-Protected level
 

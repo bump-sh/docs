@@ -6,13 +6,21 @@ From your dashboard, select the documentation you would like to edit. If this do
 
 From the documentation settings, select Customize UI, reach the Social Media section and upload or drop the image you would like to use.
 
+<div style={{textAlign: 'center'}}>
+
 ![](/files/meta-image-custom.gif)
+
+</div>
 
 ## Use the automated image generation
 
 In case you wouldn't have a visual you could use, Bump will automatically generate an image for social media. This visual display your documentation name (or the hub name, in such case), its logo and its type.
 
+<div style={{textAlign: 'center'}}>
+
 ![](/files/meta-image-example.png)
+
+</div>
 
 :::info
 The social media image will be modified each time you change the name or the logo.

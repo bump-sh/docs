@@ -3,11 +3,19 @@
 
 Bump automatically builds a changelog for your API. Each time you upload a new version of your API definition, you will have a new event in your changelog. A link to the changelog page is available on each documentation:
 
+<div style={{textAlign: 'center'}}>
+
 ![The changelog link](/files/changelog-link-dark.png)
+
+</div>
 
 As you can see below on the [Bump API changelog](https://developers.bump.sh/changes), every changes we made are listed: whether it's a structural change (endpoint or parameter removed, modified or added for example) or a content change (description or example modification).
 
+<div style={{textAlign: 'center'}}>
+
 ![Bump API changelog](/files/changelog.png)
+
+</div>
 
 ## Visual diff
 
@@ -15,7 +23,11 @@ Visual diff lets users get a contextualized view of what changed in their API, d
 
 For example in our own Bump API documentation, we've updated the documentation on [2021, August 10th](https://developers.bump.sh/changes#event-change-a71bf771-693f-49b1-95b3-756b67e9d7bf) to include a new attribute on a specific endpoint, as you can see on this [visual diff page](https://developers.bump.sh/changes/a71bf771-693f-49b1-95b3-756b67e9d7bf):
 
+<div style={{textAlign: 'center'}}>
+
 ![](/files/legacy/Hi6luEmmfzIzpj4rmSey.png)
+
+</div>
 
 ## Breaking changes identification
 
@@ -41,7 +53,11 @@ Each time your API changes, you can notify your team directly on Slack by activa
 
 Users can subscribe to your API changelog and receive a weekly digest.
 
+<div style={{textAlign: 'center'}}>
+
 ![Email changelog subscription](/files/legacy/8S2a0sPvEPpUkg6J6LMS.png)
+
+</div>
 
 ### RSS
 
@@ -59,7 +75,10 @@ With our [Github Action](continuous-integration/github-actions.md), you can rece
 - information about the breaking change state
 - a link to a [visual diff page](api-change-management/index.md#visual-diff)
 
+<div style={{textAlign: 'center'}}>
+
 ![GitHub integration example](/files/github-api-diff.svg)
 
+</div>
 
 
