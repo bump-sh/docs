@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/AvenirNext-Bold.woff2") format("woff2"),
+    url("fonts/AvenirNext-Bold.woff") format("woff"),
+    url("fonts/AvenirNext-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  src: url("fonts/AvenirNext-DemiBold.woff2") format("woff2"),
+    url("fonts/AvenirNext-DemiBold.woff") format("woff"),
+    url("fonts/AvenirNext-DemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/AvenirNext-Medium.woff2") format("woff2"),
+    url("fonts/AvenirNext-Medium.woff") format("woff"),
+    url("fonts/AvenirNext-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+html {
+  @apply font-sans font-medium;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+}
+
+h1,
+h2 {
+  @apply font-sans font-bold text-3xl text-black;
+}
+
+@screen sm {
+  h1 {
+    @apply text-5xl;
+  }
+}
