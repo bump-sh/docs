@@ -14,7 +14,10 @@ In case you wouldn't have a visual you could use, Bump will automatically genera
 
 ![](/files/meta-image-example.png)
 
+:::info
 The social media image will be modified each time you change the name or the logo.
+:::
 
+:::caution
 First generation of this new social media image may take a bit, but any modification or change will start the generation process. You can also reach our Support to push this new feature.
-
+:::

@@ -5,7 +5,9 @@ How to use the Bump command line interface.
 
 Bump CLI is a node package, currently [distributed via NPM](https://www.npmjs.com/package/bump-cli) which means you need to have Node v12+ interpreter installed on your computer and servers.
 
+:::info
 You can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets if you don't use Node. We plan to distribute universal binaries to common package managers soon. Please check our [installation methods](https://github.com/bump-sh/bump-node-cli#installation) for updates.
+:::
 
 ## Global installation
 
@@ -78,7 +80,9 @@ bump preview --live --open openapi-definition.json
 - Edit your `openapi-definition.json` file in your favorite text editor
 - Watch the live preview being updated each time your save your file!
 
+:::info
 You can create as many previews as you like without being authenticated. This is a **free and unlimited service**.
+:::
 
 ## API diff or simple validation before a deployment
 
@@ -100,7 +104,9 @@ bump diff path/to/file.json --doc my-documentation
 
 You can find your own `my-documentation` slug from your [documentation settings](https://bump.sh/docs).
 
+:::caution
 You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your documentation `settings > CI deployment`page
+:::
 
 ### Validation before a deployment
 
@@ -112,7 +118,9 @@ bump deploy --dry-run path/to/file.json --doc my-documentation
 
 You can find your own `my-documentation` slug from your [documentation settings](https://bump.sh/docs).
 
+:::caution
 You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your documentation `settings > CI deployment`page
+:::
 
 ## Deploy a file
 

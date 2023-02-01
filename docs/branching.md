@@ -26,7 +26,9 @@ Then select Branches and type its new name.
 
 From your Dashboard > Documentation, select Branches and the one you would like to rename or delete.
 
+:::danger
 Deleting a branch is definitive: you will lose the branch, its content and deployment history.
+:::
 
 ![](/files/legacy/s7PxQPw06kyQLEwV29eL.png)
 
