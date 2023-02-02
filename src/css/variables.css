@@ -6,7 +6,6 @@
   --bg-color: var(--white);
 
   --border-color: var(--gray-20);
-  --border-radius-small: 2px;
 }
 
 [data-theme='dark'] {

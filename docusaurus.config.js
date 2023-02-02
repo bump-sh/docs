@@ -53,10 +53,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Bump.sh',
         logo: {
           alt: 'Bump.sh Logo',
-          src: 'img/logo-bump-circle.png',
+          src: 'img/bump-logo.svg',
+          srcDark: 'img/bump-logo-wht.svg'
         },
         items: [],
       },
