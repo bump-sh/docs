@@ -66,10 +66,15 @@
 @import "markdown.css";
 
 body {
+  background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family);
   font-size: 0.9rem;
   font-weight: var(--font-weight-normal);
+}
+
+.main-wrapper {
+  background-color: var(--bg-color);
 }
 
 .container {
