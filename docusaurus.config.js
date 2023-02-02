@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Bump.sh',
   tagline: 'Much more than stunning docs. For all your APIs.',
-  url: 'https://preview.help.bump.sh',
+  url: 'https://docs.bump.sh',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
