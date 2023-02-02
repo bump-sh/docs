@@ -77,6 +77,6 @@ body {
   background-color: var(--bg-color);
 }
 
-.container {
-  margin: var(--spacing-6) var(--spacing-12);
+main {
+  padding: var(--spacing-6) var(--spacing-8);
 }
