@@ -15,25 +15,25 @@
 const sidebars = {
   help:
     [
-      'index',
+      'help/index',
       {
         type: 'category',
         label: 'Getting started',
         collapsible: true,
         collapsed: true,
         items: [
-          'intro'
+          'help/intro'
         ],
       },
-      'bump-cli',
+      'help/bump-cli',
       {
         type: 'category',
         label: 'Continuous Integration',
-        link: {type: 'doc', id: 'continuous-integration/index'},
+        link: {type: 'doc', id: 'help/continuous-integration/index'},
         collapsible: true,
         collapsed: true,
         items: [
-          'continuous-integration/github-actions'
+          'help/continuous-integration/github-actions'
         ],
       },
       {
@@ -45,42 +45,42 @@ const sidebars = {
           {
             type: 'category',
             label: 'OpenAPI support',
-            link: {type: 'doc', id: 'specifications-support/openapi-support'},
+            link: {type: 'doc', id: 'help/specifications-support/openapi-support'},
             items: [
-              'specifications-support/openapi-support/name-and-sort-resources',
-              'specifications-support/openapi-support/webhooks'
+              'help/specifications-support/openapi-support/name-and-sort-resources',
+              'help/specifications-support/openapi-support/webhooks'
             ]
           },
-          'specifications-support/asyncapi-support',
-          'specifications-support/polymorphism',
+          'help/specifications-support/asyncapi-support',
+          'help/specifications-support/polymorphism',
         ],
       },
       {
         type: 'category',
         label: 'API change management',
-        link: {type: 'doc', id: 'api-change-management/index'},
+        link: {type: 'doc', id: 'help/api-change-management/index'},
         collapsible: true,
         collapsed: true,
         items: [
-          'api-change-management/webhooks'
+          'help/api-change-management/webhooks'
         ],
       },
-      'branching',
-      'references',
-      'markdown-support',
-      'custom-domains',
-      'meta-images',
-      'hubs',
+      'help/branching',
+      'help/references',
+      'help/markdown-support',
+      'help/custom-domains',
+      'help/meta-images',
+      'help/hubs',
       {
         type: 'category',
         label: 'Organizations',
-        link: {type: 'doc', id: 'organizations/index'},
+        link: {type: 'doc', id: 'help/organizations/index'},
         collapsible: true,
         collapsed: true,
-        items: ['organizations/single-sign-on-sso'],
+        items: ['help/organizations/single-sign-on-sso'],
       },
-      'access-management',
-      'faq',
+      'help/access-management',
+      'help/faq',
     ]
 };
 

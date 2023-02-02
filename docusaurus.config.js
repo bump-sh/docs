@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Bump.sh',
   tagline: 'Much more than stunning docs. For all your APIs.',
-  url: 'https://preview.help.bump.sh',
+  url: 'https://docs.bump.sh',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -34,8 +34,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/help',
-          routeBasePath: 'help',
+          path: 'docs',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/bump-sh/docs/tree/main/',
@@ -58,19 +58,7 @@ const config = {
           alt: 'Bump.sh Logo',
           src: 'img/logo-bump-circle.png',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: 'Help',
-          },
-          {
-            href: 'https://github.com/bump-sh/docs',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        items: [],
       },
       footer: {
         style: 'dark',
@@ -123,7 +111,11 @@ const config = {
               {
                 label: 'Status',
                 href: 'https://status.bump.sh/',
-              }
+              },
+              {
+                label: 'API Reference',
+                href: 'https://developers.bump.sh/',
+              },
             ],
           },
         ],
