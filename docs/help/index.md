@@ -1,5 +1,6 @@
 ---
 slug: /
+sidebar_label: Home
 ---
 
 # Bump.sh Documentation
