@@ -6,6 +6,7 @@
   --bg-color: var(--white);
 
   --border-color: var(--gray-20);
+  --border-default: 1px solid var(--border-color);
 }
 
 [data-theme='dark'] {
