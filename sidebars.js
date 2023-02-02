@@ -13,9 +13,9 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docs:
+  help:
     [
-      'home',
+      'index',
       {
         type: 'category',
         label: 'Getting started',
