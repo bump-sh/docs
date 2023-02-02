@@ -34,6 +34,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs/help',
           routeBasePath: 'help',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
