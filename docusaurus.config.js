@@ -58,19 +58,7 @@ const config = {
           alt: 'Bump.sh Logo',
           src: 'img/logo-bump-circle.png',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: 'Help',
-          },
-          {
-            href: 'https://github.com/bump-sh/docs',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        items: [],
       },
       footer: {
         style: 'dark',
@@ -123,7 +111,11 @@ const config = {
               {
                 label: 'Status',
                 href: 'https://status.bump.sh/',
-              }
+              },
+              {
+                label: 'API Reference',
+                href: 'https://developers.bump.sh/',
+              },
             ],
           },
         ],
