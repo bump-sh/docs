@@ -62,7 +62,8 @@ const config = {
           {
             href: 'https://bump.sh',
             position: 'right',
-            'aria-label': 'Go to Bump.sh',
+            label: 'Go to Bump.sh',
+            target: '_blank',
           },
         ],
       },
