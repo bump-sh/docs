@@ -58,7 +58,13 @@ const config = {
           src: 'img/bump-logo.svg',
           srcDark: 'img/bump-logo-wht.svg'
         },
-        items: [],
+        items: [
+          {
+            href: 'https://bump.sh',
+            position: 'right',
+            'aria-label': 'Go to Bump.sh',
+          },
+        ],
       },
       footer: {
         style: 'dark',
