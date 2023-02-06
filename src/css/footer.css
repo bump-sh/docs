@@ -2,10 +2,24 @@
   align-items: center;
   display: flex;
   font-size: 0.75rem;
+  gap: var(--spacing-10);
+  justify-content: space-between;
 }
 
 .footer__bottom-links {
+  flex-grow: 1;
+}
+
+.footer__bottom-links,
+.footer__social-links {
+  align-items: center;
   display: flex;
   gap: var(--spacing-6);
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+}
+
+.footer__social-links img {
+  filter: invert(1);
 }

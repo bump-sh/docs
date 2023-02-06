@@ -6,13 +6,14 @@ import FooterLogo from '@theme/Footer/Logo';
 import FooterCopyright from '@theme/Footer/Copyright';
 import FooterLayout from '@theme/Footer/Layout';
 import FooterBottomLinks from '@theme/Footer/BottomLinks';
+import FooterSocialLinks from '@theme/Footer/SocialLinks';
 function Footer() {
   const {footer} = useThemeConfig();
   if (!footer) {
     return null;
   }
   const {copyright, links, logo, style} = footer;
-  const bottomLinks = useDocusaurusContext().siteConfig.customFields.bottomLinks;
+  const {bottomLinks, socialLinks} = useDocusaurusContext().siteConfig.customFields;
   return (
     <FooterLayout
       style={style}
@@ -20,6 +21,7 @@ function Footer() {
       logo={logo && <FooterLogo logo={logo} />}
       copyright={copyright && <FooterCopyright copyright={copyright} />}
       bottomLinks={bottomLinks && <FooterBottomLinks bottomLinks={bottomLinks} />}
+      socialLinks={socialLinks && <FooterSocialLinks socialLinks={socialLinks} />}
     />
   );
 }
