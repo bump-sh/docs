@@ -22,7 +22,7 @@ const sidebars = {
         collapsible: true,
         collapsed: true,
         items: [
-          'help/intro'
+          'help/intro','help/getting-started',
         ],
       },
       'help/bump-cli',
