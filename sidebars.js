@@ -52,6 +52,7 @@ const sidebars = {
             ]
           },
           'help/specifications-support/asyncapi-support',
+          'help/specifications-support/markdown-support',
           'help/specifications-support/polymorphism',
           'help/specifications-support/references',
         ],
@@ -67,7 +68,6 @@ const sidebars = {
         ],
       },
       'help/branching',
-      'help/markdown-support',
       'help/custom-domains',
       'help/meta-images',
       'help/hubs',
