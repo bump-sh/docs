@@ -127,6 +127,39 @@ const config = {
         additionalLanguages: ['ruby']
       },
     }),
+  customFields: {
+    bottomLinks: [
+      {
+        label: 'Privacy Policy',
+        to: 'https://bump.sh/privacy-policy',
+      },
+      {
+        label: 'Legal Mentions',
+        to: 'https://bump.sh/legal-mentions',
+      },
+      {
+        label: 'Terms of use',
+        to: 'https://bump.sh/terms'
+      }
+    ],
+    socialLinks: [
+      {
+        label: 'Github',
+        icon: 'img/footer/github.svg',
+        to: 'https://github.com/bump-sh'
+      },
+      {
+        label: 'Twitter',
+        icon: 'img/footer/twitter.svg',
+        to: 'https://twitter.com/bump_hq'
+      },
+      {
+        label: 'Linkedin',
+        icon: 'img/footer/linkedin.svg',
+        to: 'https://www.linkedin.com/company/bump-sh/'
+      }
+    ]
+  }
 };
 
 module.exports = config;
