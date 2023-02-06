@@ -18,7 +18,6 @@ Learn how to get the most of Bump.sh for your API ecosystem.
 
 ## Customization
 - [Custom domain](help/custom-domains.md) (Host your documentation under your own domain)
-- [UI customization](help/references.md) (Make it your own, with branding, colors, etc...)
 - [Branching](help/branching.md) (Switch between versions of a doc)
-- [Markdown Support](help/markdown-support.md) (Add context and information to your specification files)
+- [Markdown Support](help/specifications-support/markdown-support.md) (Add context and information to your specification files)
 - [Meta images](help/meta-images.md) (Share docs links on your social medias)
