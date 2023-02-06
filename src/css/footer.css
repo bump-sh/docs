@@ -1,0 +1,11 @@
+.footer__bottom {
+  align-items: center;
+  display: flex;
+  font-size: 0.75rem;
+}
+
+.footer__bottom-links {
+  display: flex;
+  gap: var(--spacing-6);
+  margin: 0;
+}

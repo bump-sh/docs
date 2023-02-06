@@ -127,6 +127,22 @@ const config = {
         additionalLanguages: ['ruby']
       },
     }),
+  customFields: {
+    bottomLinks: [
+      {
+        label: 'Privacy Policy',
+        to: 'https://bump.sh/privacy-policy',
+      },
+      {
+        label: 'Legal Mentions',
+        to: 'https://bump.sh/legal-mentions',
+      },
+      {
+        label: 'Terms of use',
+        to: 'https://bump.sh/terms'
+      }
+    ]
+  }
 };
 
 module.exports = config;
