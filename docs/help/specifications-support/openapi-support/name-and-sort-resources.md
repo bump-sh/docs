@@ -78,6 +78,9 @@ tags:
 paths:
   # ...
 ```
+:::caution
+Be careful about operations without tags when option “Group operations by tag” is selected, as they would be ignored!
+:::
 
 With these first level tags, endpoints 'Single Pet' would be displayed above 'All pets' on your documentation.
 
@@ -87,7 +90,9 @@ And what about webhooks?
 
 It's quite well explained how webhooks name is generated from `summary`, `description`  in [Webhooks documentation's page](/help/specifications-support/openapi-support/webhooks.md). But by choosing option "Group Operations by tag?", `webhooks` are displayed, grouped and ordered with same rule than `endpoints.`
 
-_⚠️ Be careful about webhooks without tags then, they would be ignored!_
+:::caution
+Be careful about webhooks without tags when option “Group operations by tag” is selected, as they would be ignored!
+:::
 
 Two possibilities for this OpenAPI 3.1 documentation with endpoints and webhooks, on our [examples hub](https://bump.sh/hub/examples):
 
