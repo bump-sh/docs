@@ -12,6 +12,18 @@ Here's an [example of polymorphism](https://bump.sh/bump/doc/petstore-alternativ
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/anyof.gif)
+![](/files/anyOf-discriminator.gif)
 
 </div>
+
+# Discriminator
+
+Both OpenAPI and AsyncAPI specifications provide support of a `discriminator` field,
+to easily identify which schema is used.
+
+In our generated API documentation, this `discriminator` property is identified
+with a specific flag, and allowed value is explicit.
+
+In example provided below:
+* `type` is the discriminator property between alternatives 'Human' or 'Pet'. Value has to be either `human` or `pet`.
+* `kind` is the discriminator property between alternatives 'Dog' or 'Cat'. Value has to be either `🐕` or `🐈`.
