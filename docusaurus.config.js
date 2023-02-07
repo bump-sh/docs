@@ -47,7 +47,11 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    ['./src/docusaurus-plugin-fathom', {siteId: "fathom-ABCDEFG"}],
+    ['./src/docusaurus-plugin-intercom', {appId: "intercom-ABCDEFG"}],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
