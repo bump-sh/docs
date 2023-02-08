@@ -49,8 +49,8 @@ const config = {
 
   plugins: [
     require.resolve('docusaurus-lunr-search'),
-    ['./src/docusaurus-plugin-fathom', {siteId: "fathom-ABCDEFG"}],
-    ['./src/docusaurus-plugin-intercom', {appId: "intercom-ABCDEFG"}],
+    ['./src/docusaurus-plugin-fathom', {siteId: "SBIGOMQN"}],
+    ['./src/docusaurus-plugin-intercom', {appId: "hxcxcbgc"}],
   ],
 
   themeConfig:
