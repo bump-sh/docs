@@ -19,7 +19,7 @@ module.exports = function pluginFathom(context, options) {
           {
             tagName: "script",
             attributes: {
-              src: "https://cdn.usefathom.com/script.js",
+              src: "https://meadowlark.bump.sh/script.js",
               dataSite: siteId,
               defer: true
             }
