@@ -92,31 +92,4 @@ paths:
 
 With files `docs/introduction.md`, `docs/getting-started.md`, `docs/use-cases.md` and `docs/use-cases-examples.md` right next to your contract document, you will be able to generate a comprehensive API documentation with nicely formatted content for your users.
 
-It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](help/specifications-support/openapi-support.md).
-
-## Adding topics to your documentation
-
-Creating good API documentation requires giving users context and guides. As most of the specifications don't permit to add generic content, we have created a custom property. Setting the `x-topics` property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.
-
-|Property|Description|
-|---|---|
-|title|Topic title as it will appear in the navigation bar and in the content section.|
-|content|The topic content. Markdown is fully supported here.|
-|example|Will appear in the examples section, if activated. Markdown is fully supported here.|
-
-Example:
-
-```yaml
-x-topics:
-  - title: Getting started
-    content: Before using the API you need to get an API key by sending us an email.
-  - title: Authentication
-    content: Send the `X-API-KEY` header with all your requests.
-    example: |
-      ```
-      $ curl \
-        -X POST https://api.example.com/endpoint/ \
-        -H "X-API-KEY: XXXXXX" \
-      ```
-```
-
+It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](help/doc-topics.md).
