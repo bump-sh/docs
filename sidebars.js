@@ -68,9 +68,8 @@ const sidebars = {
         ],
       },
       'help/branching',
-      'help/custom-domains',
-      'help/meta-images',
       'help/hubs',
+      'help/access-management',
       {
         type: 'category',
         label: 'Organizations',
@@ -79,7 +78,8 @@ const sidebars = {
         collapsed: true,
         items: ['help/organizations/single-sign-on-sso'],
       },
-      'help/access-management',
+      'help/custom-domains',
+      'help/meta-images',
       'help/faq',
     ]
 };
