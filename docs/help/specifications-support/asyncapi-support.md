@@ -59,5 +59,5 @@ Thus, it becomes easy to use the same Schema Object in different context, for ex
 
 ## Add topics to your documentation
 
-As this is not supported by AsyncAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](https://help.bump.sh/markdown-support#adding-topics-to-your-documentation).
+As this is not supported by AsyncAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](help/doc-topics.md).
 
