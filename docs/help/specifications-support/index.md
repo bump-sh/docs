@@ -2,12 +2,6 @@
 
 Bump.sh supports the most popular specifications for REST APIs and Event-Driven APIs.
 
-```mdx-code-block
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
-```
-
 - [OpenAPI Specification](help/specifications-support/openapi-support.md)
 - [AsyncAPI Specification](help/specifications-support/asyncapi-support.md)
 
