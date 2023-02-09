@@ -39,6 +39,7 @@ const sidebars = {
       {
         type: 'category',
         label: 'Specifications Support',
+        link: {type: 'doc', id: 'help/specifications-support/index'},
         collapsible: false,
         collapsed: false,
         items: [
