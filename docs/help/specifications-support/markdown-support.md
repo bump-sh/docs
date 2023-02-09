@@ -92,4 +92,4 @@ paths:
 
 With files `docs/introduction.md`, `docs/getting-started.md`, `docs/use-cases.md` and `docs/use-cases-examples.md` right next to your contract document, you will be able to generate a comprehensive API documentation with nicely formatted content for your users.
 
-It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](help/specifications-support/openapi-support.md).
+It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](help/doc-topics.md).
