@@ -9,7 +9,7 @@ We support OpenAPI `securitySchemes` property (`securityDefinitions` with openAP
 - `oauth2`
 - `openIdConnect`
 
-We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, please use the [`x-topics` property](https://help.bump.sh/markdown-support#adding-topics-to-your-documentation) for now.
+We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, please use the [`x-topics` property](help/doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
 

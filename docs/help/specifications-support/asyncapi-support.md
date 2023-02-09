@@ -28,7 +28,7 @@ We support AsyncAPI `securitySchemes` property with these authentication types:
 - `oauth2`
 - `openIdConnect`
 
-We do not support `X509`, `symmetricEncryption`, `asymmetricEncryption`, `plain`, `scramSha256`, `scramSha512` nor `gssapi.` To describe these authentication types, please use our [custom `x-topics` property](https://help.bump.sh/markdown-support#adding-topics-to-your-documentation) for now.
+We do not support `X509`, `symmetricEncryption`, `asymmetricEncryption`, `plain`, `scramSha256`, `scramSha512` nor `gssapi.` To describe these authentication types, please use our [custom `x-topics` property](help/doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
 
