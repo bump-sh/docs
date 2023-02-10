@@ -1,5 +1,4 @@
 ---
-slug: /
 sidebar_label: Home
 ---
 
