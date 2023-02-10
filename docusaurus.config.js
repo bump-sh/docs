@@ -60,7 +60,8 @@ const config = {
         logo: {
           alt: 'Bump.sh Logo',
           src: 'img/bump-logo.svg',
-          srcDark: 'img/bump-logo-wht.svg'
+          srcDark: 'img/bump-logo-wht.svg',
+          href: '/help'
         },
         items: [],
       },
