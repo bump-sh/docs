@@ -16,15 +16,7 @@ const sidebars = {
   help:
     [
       'help/index',
-      {
-        type: 'category',
-        label: 'Getting started',
-        collapsible: true,
-        collapsed: true,
-        items: [
-          'help/intro','help/getting-started',
-        ],
-      },
+      'help/getting-started',
       'help/bump-cli',
       {
         type: 'category',
@@ -40,8 +32,8 @@ const sidebars = {
         type: 'category',
         label: 'Specifications Support',
         link: {type: 'doc', id: 'help/specifications-support/index'},
-        collapsible: false,
-        collapsed: false,
+        collapsible: true,
+        collapsed: true,
         items: [
           {
             type: 'category',

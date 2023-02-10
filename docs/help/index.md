@@ -7,7 +7,7 @@ sidebar_label: Home
 
 Learn how to get the most of Bump.sh for your API ecosystem.
 
-- [Getting started](help/intro.md) -- Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.
+- [Getting started](help/getting-started.md) -- Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.
 - [Specification support](help/specifications-support/openapi-support.md) -- Which and how specifications are supported.
 - [Change Management](help/api-change-management/index.md) -- Never miss any changes of your API, check them with the diff.
 
