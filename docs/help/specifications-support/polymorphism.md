@@ -24,6 +24,6 @@ to easily identify which schema is used.
 In our generated API documentation, this `discriminator` property is identified
 with a specific flag, and allowed value is explicit.
 
-In example provided below:
+In example provided above:
 * `type` is the discriminator property between alternatives 'Human' or 'Pet'. Value has to be either `human` or `pet`.
 * `kind` is the discriminator property between alternatives 'Dog' or 'Cat'. Value has to be either `🐕` or `🐈`.
