@@ -21,6 +21,7 @@ module.exports = function pluginFathom(context, options) {
             attributes: {
               src: "https://meadowlark.bump.sh/script.js",
               "data-site": siteId,
+              "data-spa": "auto",
               defer: true
             }
           },
