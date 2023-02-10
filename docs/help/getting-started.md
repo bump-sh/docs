@@ -6,7 +6,7 @@ Get started in a few minutes with Bump.sh!
 
 ### Step 1: Create your space/documentation
 
-After creating your account, you'll be asked to name your first API documentation.
+After creating your account, you'll be asked [to create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
 By default, your documentation URL will use the same name: you can customize it in the slug field. You can also use [custom domains](help/custom-domains.md), which we'll explain later.
 
 ![](/files/doc-creation.png)
