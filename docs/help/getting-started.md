@@ -1,6 +1,6 @@
-# Deploying Bump.sh
+# Getting Started
 
-Get started in a few minutes with Bump.sh!
+Bump.sh connects people with APIs. From your API specifications, Bump.sh generates the documentation you need and offers many options to make it your custom and carefully crafted API experience.
 
 ## Create your first documentation
 
@@ -23,7 +23,7 @@ You can also use our examples to see Bump.sh in action. Finally, our [CLI](help/
 Generating your first documentation will take a few seconds. But let's not stop here: many features are awaiting to customize and make the most of your API documentation. Let's have a look in the next section.
 
 
-## Manage Access
+## Publish your documentation
 
 Congratulations on releasing your first API documentation on Bump.sh!
 
@@ -36,7 +36,7 @@ Private ones are only accessible to you (or your team/organization if you have o
 
 We share more details on the [Access Management page](help/access-management.md).
 
-## Customize it
+## Customization options
 
 With your documentation ready, you could want to make it more customized. Bump.sh offers several options to do so.
 
