@@ -32,7 +32,7 @@ Bump.sh offers several options to manage access to your documentation.
 During the onboarding, you may have noticed the option of making your doc public or private.
 
 Public documentation are available to anyone with the URL or if the search engine indexation has been activated.
-Privates are only accessible to you (or your team/organization if you have one).
+Private ones are only accessible to you (or your team/organization if you have one).
 
 We share more details on the [Access Management page](help/access-management.md).
 
