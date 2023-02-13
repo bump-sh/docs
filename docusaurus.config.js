@@ -63,7 +63,18 @@ const config = {
           srcDark: 'img/bump-logo-wht.svg',
           href: '/help'
         },
-        items: [],
+        items: [
+          {
+            label: 'API reference',
+            to: 'https://developers.bump.sh',
+            position: 'right',
+          },
+          {
+            label: 'Bump.sh',
+            to: 'https://bump.sh',
+            position: 'right',
+          }
+        ],
       },
       footer: {
         style: 'dark',
