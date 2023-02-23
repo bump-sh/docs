@@ -1,5 +1,6 @@
 ---
 title: Better change summaries
+tags: [Improvement]
 ---
 
 We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes & headers) in the API changelogs and notifications we send.

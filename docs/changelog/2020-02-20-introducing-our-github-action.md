@@ -1,5 +1,6 @@
 ---
 title: Introducing our GitHub action
+tags: [New feature]
 ---
 
 Deploying your API documentation has never been so simple if you are using GitHub. We have just released [our GitHub action](https://github.com/marketplace/actions/api-documentation-on-bump), which lets you super easily control when and how you want to deploy your doc.

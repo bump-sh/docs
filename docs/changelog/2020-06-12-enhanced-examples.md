@@ -1,5 +1,6 @@
 ---
 title: Documentation examples for lazy people
+tags: [Improvement]
 ---
 
 What's the first thing you look at when exploring a new tool? If you're as lazy as I am, it's probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.
