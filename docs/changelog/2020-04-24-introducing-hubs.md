@@ -1,5 +1,6 @@
 ---
 title: Your whole ecosystem on a single page
+tags: [New feature]
 ---
 
 Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.
