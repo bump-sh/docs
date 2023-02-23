@@ -37,8 +37,15 @@ const config = {
           path: 'docs/help',
           routeBasePath: '/help',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/bump-sh/docs/tree/main/',
+          editUrl: 'https://github.com/bump-sh/docs/tree/main/',
+        },
+        blog: {
+          path: 'docs/changelog',
+          routeBasePath: '/changelog',
+          editUrl:'https://github.com/bump-sh/docs/tree/main/',
+          showReadingTime: false,
+          blogTitle: 'Product changelog',
+          blogSidebarCount: 0
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -64,6 +71,16 @@ const config = {
           href: '/help'
         },
         items: [
+          {
+            label: 'Documentation',
+            to: '/help',
+            position: 'left',
+          },
+          {
+            label: 'Product changelog',
+            to: '/changelog',
+            position: 'left',
+          },
           {
             label: 'API reference',
             to: 'https://developers.bump.sh',
