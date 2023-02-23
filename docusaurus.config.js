@@ -34,8 +34,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs',
-          routeBasePath: '/',
+          path: 'docs/help',
+          routeBasePath: '/help',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/bump-sh/docs/tree/main/',
