@@ -9,7 +9,7 @@ We support OpenAPI `securitySchemes` property (`securityDefinitions` with openAP
 - `oauth2`
 - `openIdConnect`
 
-We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, please use the [`x-topics` property](help/doc-topics.md) for now.
+We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, please use the [`x-topics` property](doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
 
@@ -40,5 +40,5 @@ Thus, it becomes easy to use the same Schema Object in different contexts, for e
 
 ## Add topics to your documentation
 
-As this is not supported by OpenAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](help/doc-topics.md).
+As this is not supported by OpenAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](doc-topics.md).
 

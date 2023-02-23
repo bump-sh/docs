@@ -28,7 +28,7 @@ We support AsyncAPI `securitySchemes` property with these authentication types:
 - `oauth2`
 - `openIdConnect`
 
-We do not support `X509`, `symmetricEncryption`, `asymmetricEncryption`, `plain`, `scramSha256`, `scramSha512` nor `gssapi.` To describe these authentication types, please use our [custom `x-topics` property](help/doc-topics.md) for now.
+We do not support `X509`, `symmetricEncryption`, `asymmetricEncryption`, `plain`, `scramSha256`, `scramSha512` nor `gssapi.` To describe these authentication types, please use our [custom `x-topics` property](doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
 
@@ -59,5 +59,5 @@ Thus, it becomes easy to use the same Schema Object in different context, for ex
 
 ## Add topics to your documentation
 
-As this is not supported by AsyncAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](help/doc-topics.md).
+As this is not supported by AsyncAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](doc-topics.md).
 
