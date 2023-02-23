@@ -10,7 +10,7 @@ Available from a dedicated section in the documentation or hubs settings, Access
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/documentation-access-choice.png)
+![](/files/help/documentation-access-choice.png)
 
 </div>
 
@@ -22,7 +22,7 @@ From private level, you can also invite external users (like partners, customers
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/access-management-invite.png)
+![](/files/help/access-management-invite.png)
 
 </div>
 

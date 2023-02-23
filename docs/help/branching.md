@@ -10,7 +10,7 @@ We can also imagine API documentation using branching for a production environme
 
 Visually, documentation readers will see the available branches from which they can switch as seen in the screenshot below:
 
-![](/files/branch-select-dark.png)
+![](/files/help/branch-select-dark.png)
 
 ## Create a new branch
 
@@ -18,7 +18,7 @@ From your Dashboard, select the documentation you would like to add a new versio
 
 Then select Branches and type its new name.
 
-![](/files/branch-new-dark.png)
+![](/files/help/branch-new-dark.png)
 
 ## Modifying an existing branch
 
@@ -30,11 +30,11 @@ From your Dashboard > Documentation, select Branches and the one you would like 
 Deleting a branch is definitive: you will lose the branch, its content and deployment history.
 :::
 
-![](/files/legacy/s7PxQPw06kyQLEwV29eL.png)
+![](/files/help/legacy/s7PxQPw06kyQLEwV29eL.png)
 
 ### Upload a new version of an existing branch
 
 When uploading a new version of your API specification, you can choose which branch will receive the update.
 
-![](/files/legacy/bk2O9oSDJCk2ROLrAM9Y.png)
+![](/files/help/legacy/bk2O9oSDJCk2ROLrAM9Y.png)
 
