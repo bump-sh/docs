@@ -12,7 +12,7 @@ Here's an [example of polymorphism](https://bump.sh/bump/doc/petstore-alternativ
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/anyOf-discriminator.gif)
+![](/files/help/anyOf-discriminator.gif)
 
 </div>
 

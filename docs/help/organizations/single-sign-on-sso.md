@@ -12,7 +12,7 @@ Once you have purchased a Business plan, please [reach out to our support team](
 
 We will send you a URL that will let you complete the configuration, picking the Identity and Access Management solution you need.
 
-![Selecting an Identity and Access Management solution](/files/legacy/1SucEsWaJNivFoU9pusQ.png)
+![Selecting an Identity and Access Management solution](/files/help/legacy/1SucEsWaJNivFoU9pusQ.png)
 
 ## Configuring user permissions
 

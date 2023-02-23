@@ -8,7 +8,7 @@ From the documentation settings, select Customize UI, reach the Social Media sec
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/meta-image-custom.gif)
+![](/files/help/meta-image-custom.gif)
 
 </div>
 
@@ -18,7 +18,7 @@ In case you wouldn't have a visual you could use, Bump will automatically genera
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/meta-image-example.png)
+![](/files/help/meta-image-example.png)
 
 </div>
 

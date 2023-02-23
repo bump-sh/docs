@@ -5,7 +5,7 @@ Bump automatically builds a changelog for your API. Each time you upload a new v
 
 <div style={{textAlign: 'center'}}>
 
-![The changelog link](/files/changelog-link-dark.png)
+![The changelog link](/files/help/changelog-link-dark.png)
 
 </div>
 
@@ -13,7 +13,7 @@ As you can see below on the [Bump API changelog](https://developers.bump.sh/chan
 
 <div style={{textAlign: 'center'}}>
 
-![Bump API changelog](/files/changelog.png)
+![Bump API changelog](/files/help/changelog.png)
 
 </div>
 
@@ -25,7 +25,7 @@ For example in our own Bump API documentation, we've updated the documentation o
 
 <div style={{textAlign: 'center'}}>
 
-![](/files/legacy/Hi6luEmmfzIzpj4rmSey.png)
+![](/files/help/legacy/Hi6luEmmfzIzpj4rmSey.png)
 
 </div>
 
@@ -47,7 +47,7 @@ Bump can notify changes via Slack, email, RSS or any custom HTTP webhook.
 
 Each time your API changes, you can notify your team directly on Slack by activating the Slack integration in your API integrations settings:
 
-![Check the "Notify changes on Slack", fill your webhook URL and the channels you want to get the notifications on](/files/legacy/twaSpSvrbHghRTMKtqa2.png)
+![Check the "Notify changes on Slack", fill your webhook URL and the channels you want to get the notifications on](/files/help/legacy/twaSpSvrbHghRTMKtqa2.png)
 
 ### Email
 
@@ -55,7 +55,7 @@ Users can subscribe to your API changelog and receive a weekly digest.
 
 <div style={{textAlign: 'center'}}>
 
-![Email changelog subscription](/files/legacy/8S2a0sPvEPpUkg6J6LMS.png)
+![Email changelog subscription](/files/help/legacy/8S2a0sPvEPpUkg6J6LMS.png)
 
 </div>
 
@@ -77,6 +77,6 @@ With our [Github Action](continuous-integration/github-actions.md), you can rece
 
 <div style={{textAlign: 'center'}}>
 
-![GitHub integration example](/files/github-api-diff.svg)
+![GitHub integration example](/files/help/github-api-diff.svg)
 
 </div>

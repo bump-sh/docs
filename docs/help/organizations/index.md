@@ -8,11 +8,11 @@ Organizations are also super useful if you want to invite guests (who are called
 
 You can easily create an organization from your dashboard. Select the settings section and the organization tab. From here, you can create an organization or manage the ones you own.
 
-![](/files/organization-create.png)
+![](/files/help/organization-create.png)
 
 Select "Create Organization" to start a new one. You'll need to name it and choose its slug.
 
-![](/files/organization-creation.png)
+![](/files/help/organization-creation.png)
 
 ## Member management
 
@@ -27,7 +27,7 @@ Once your organization is created, you may want to invite teammates and guests (
 | Organization management  | ✓     |            |        |
 | Member management        | ✓     |            |        |
 
-![Adding a new member requires an email address and an assigned role.](/files/legacy/Q6P4SEp9xUI38Vntiem7.png)
+![Adding a new member requires an email address and an assigned role.](/files/help/legacy/Q6P4SEp9xUI38Vntiem7.png)
 
 Billing and invoice are only managed by the owner of the organization.
 
@@ -35,7 +35,7 @@ Billing and invoice are only managed by the owner of the organization.
 
 From your dashboard, you can manage the organizations you own and those you have admin role. Organization settings allow you to change its name and URL, transfer ownership to an active member or completely delete the organization.
 
-![](/files/organization-settings.png)
+![](/files/help/organization-settings.png)
 
 :::caution
 Transferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.

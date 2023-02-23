@@ -42,7 +42,7 @@ paths:
 
 There are three operations here, and three different ways to generate, group and order them, regarding option chosen for **How to group operations?**
 
-![Group by path or group by tag?](/files/legacy/-MU8HgDhZXrUBOih-Aa4.png)
+![Group by path or group by tag?](/files/help/legacy/-MU8HgDhZXrUBOih-Aa4.png)
 
 ### Group by path
 
@@ -53,7 +53,7 @@ Let's Bump it up to something visual with a first [Petstore live example](https:
 
 <div style={{textAlign: 'center'}}>
 
-![Group petstore operations by path](/files/group-by-path-dark.png)
+![Group petstore operations by path](/files/help/group-by-path-dark.png)
 
 </div>
 
@@ -65,7 +65,7 @@ You may have noticed they are two different `tags` for these 3 operations: "all 
 
 <div style={{textAlign: 'center'}}>
 
-![Group Petstore operations by tag](/files/group-by-tags-dark.png)
+![Group Petstore operations by tag](/files/help/group-by-tags-dark.png)
 
 </div>
 
