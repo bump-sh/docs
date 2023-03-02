@@ -71,8 +71,17 @@ const sidebars = {
         collapsed: true,
         items: ['organizations/single-sign-on-sso'],
       },
-      'custom-domains',
-      'meta-images',
+      {
+        type: 'category',
+        label: 'Documentation customization',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          'doc-topics',
+          'custom-domains',
+          'meta-images'
+        ],
+      },
       'faq',
     ]
 };
