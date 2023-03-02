@@ -132,7 +132,7 @@ bump deploy path/to/file.json --doc my-documentation
 
 You can find your own `my-documentation` slug from your [documentation settings](https://bump.sh/docs).
 
-You can also deploy a given file to a different branch of your documentation with the `--branch <branch-name>` parameter. The branch will be created if it doesn't exist. More details about the branching feature is available on [a dedicated help page](branching.md).
+You can also deploy a given file to a different branch of your documentation with the `--branch <branch-name>` parameter. The branch will be created if it doesn't exist. More details about the branching feature is available on [this dedicated help page](branching.md).
 
 ```undefined
 bump deploy path/to/file.json --doc my-documentation --branch staging
