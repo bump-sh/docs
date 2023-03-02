@@ -1,4 +1,4 @@
-# Documentation topics
+# Topics
 
 Creating good API documentation requires giving users context and guides. As most of the specifications don't permit to add generic content, we have created a custom property. Setting the `x-topics` property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.
 
