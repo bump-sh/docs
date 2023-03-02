@@ -132,7 +132,15 @@ bump deploy path/to/file.json --doc my-documentation
 
 You can find your own `my-documentation` slug from your [documentation settings](https://bump.sh/docs).
 
-You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your documentation `settings > CI deployment`page
+You can also deploy a given file to a different branch of your documentation with the `--branch <branch-name>` parameter. The branch will be created if it doesn't exist. More details about the branching feature is available on [this dedicated help page](branching.md).
+
+```undefined
+bump deploy path/to/file.json --doc my-documentation --branch staging
+```
+
+:::caution
+You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your documentation `settings > CI deployment`page.
+:::
 
 ## Compatible specification types
 
