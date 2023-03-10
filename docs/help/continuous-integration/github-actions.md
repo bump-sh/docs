@@ -59,6 +59,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   api-diff:
     name: Check API diff on Bump
@@ -95,6 +99,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   deploy-doc:
     if: ${{ github.event_name == 'push' }}
@@ -127,6 +135,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
+
+:::info
+Since [February 2nd, 2023](https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/), the default GITHUB_TOKEN permissions are set to read-only
+for every new repository.
+
+Permissions have to be explicitly defined in your workflows, as illustrated above.
+:::
 
 ## Input parameters
 
