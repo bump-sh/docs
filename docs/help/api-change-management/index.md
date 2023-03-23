@@ -17,18 +17,6 @@ As you can see below on the [Bump API changelog](https://developers.bump.sh/chan
 
 </div>
 
-## Visual diff
-
-Visual diff lets users get a contextualized view of what changed in their API, directly from the documentation.
-
-For example in our own Bump API documentation, we've updated the documentation on [2021, August 10th](https://developers.bump.sh/changes#event-change-a71bf771-693f-49b1-95b3-756b67e9d7bf) to include a new attribute on a specific endpoint, as you can see on this [visual diff page](https://developers.bump.sh/changes/a71bf771-693f-49b1-95b3-756b67e9d7bf):
-
-<div style={{textAlign: 'center'}}>
-
-![](/files/help/legacy/Hi6luEmmfzIzpj4rmSey.png)
-
-</div>
-
 ## Breaking changes identification
 
 Bump automatically identifies when a **change is breaking** for your API consumers. Here are the changes considered as breaking:
