@@ -1,6 +1,8 @@
 # Custom domains
 
-Your docs are hosted on Bump.sh. However you can set a custom domain: visitors of your docs will stay within your brand experience.
+Your docs are hosted on Bump.sh. However you can set a custom domain: visitors of your docs will stay within your brand experience. For this, you'll use a CNAME record.
+
+A CNAME, or Canonical Name, is a Domain Name System (DNS) entry. It serves as an alias, and maps a domain name to another. It our use case, it lets you set a domain name for your users to access your API docs, that they will use and see instead of the Bump.sh domain name.
 
 ## Setting a CNAME record
 
@@ -21,5 +23,6 @@ Once this is done, you can set your custom domain in Bump.sh.
 3. Enter your custom domain.
 4. Click **Update global settings**.
 
-That's it. SSL certificates are automatically issued. Note: DNS caches may take a moment to update.
+That's it. SSL certificates are automatically issued. 
 
+Note: DNS caches may take a moment to update. Outdated caches may lead to the fact that visitors will not be able to access your docs via your custom domain. Those caches are user-side, which means that 1. you can flush it on your local computer 2. people who never visited your doc will not face any issue.
