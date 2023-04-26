@@ -1,0 +1,23 @@
+.entry {
+  display: flex;
+  position: relative;
+}
+
+.entry + .entry {
+  margin-top: var(--spacing-20);
+}
+
+.entryDate {
+  align-self: start;
+  flex-shrink: 0;
+  margin-top: var(--spacing-7);
+  position: sticky;
+  top: var(--spacing-30);
+  width: 25%;
+}
+
+@media (max-width: 998px) {
+  .entry {
+    flex-direction: column;
+  }
+}
