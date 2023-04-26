@@ -65,6 +65,7 @@
 @import "navigation.css";
 @import "markdown.css";
 @import "footer.css";
+@import "changelog.css";
 
 body {
   background-color: var(--bg-color);
