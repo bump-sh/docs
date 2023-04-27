@@ -16,6 +16,16 @@
   width: 25%;
 }
 
+.entry h1,
+.entry h2 a {
+  color: var(--title-color);
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-weight: var(--font-weight-normal);
+  margin-top: var(--spacing-4);
+  text-decoration: none;
+}
+
 @media (max-width: 998px) {
   .entry {
     flex-direction: column;
