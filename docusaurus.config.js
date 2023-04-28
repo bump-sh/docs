@@ -40,11 +40,11 @@ const config = {
           editUrl: 'https://github.com/bump-sh/docs/tree/main/',
         },
         blog: {
-          path: 'docs/changelog',
-          routeBasePath: '/changelog',
+          path: 'docs/product-updates',
+          routeBasePath: '/product-updates',
           editUrl:'https://github.com/bump-sh/docs/tree/main/',
           showReadingTime: false,
-          blogTitle: 'Product changelog',
+          blogTitle: 'Product updates',
           blogSidebarCount: 0
         },
         theme: {
@@ -77,8 +77,8 @@ const config = {
             position: 'left',
           },
           {
-            label: 'Product changelog',
-            to: '/changelog',
+            label: 'Product updates',
+            to: '/product-updates',
             position: 'left',
           },
           {
