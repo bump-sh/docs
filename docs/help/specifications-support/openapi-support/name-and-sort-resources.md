@@ -4,7 +4,7 @@ In the Bump.sh console, if you click on any of your documentations and select **
 - `(default)`
 The default behaviour of Bump.sh is automatic grouping based on the presence of a list of top-level `tags`. More on that in [the `Group by tags` section](#group-by-tag).
 - [`Group by tags`](#group-by-tag)
-- [`Group by path`](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-path)
+- [`Group by path`](#group-by-path)
 
 But first let's provide a bit more context on endpoints and webhooks.
 
