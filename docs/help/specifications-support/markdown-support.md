@@ -62,6 +62,16 @@ will render:
 this is an important information to **standout**
 :::
 
+## Images
+
+Use the following syntax to add images in your markdown
+```
+![Alt text](/path/to/image.jpg "Image title")
+```
+
+Note that even it's a best practice to always add an [alt text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) for an image, the parameters `Alt text` and `"Image title"` are optional.
+
+
 ## Markdown files as an external reference
 
 Markdown files can be included as an [external reference](references.md) within your contract document with the $ref syntax `$ref: "./path/to/local-markdown.md"`. In the same way you can extract part of your contract (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
