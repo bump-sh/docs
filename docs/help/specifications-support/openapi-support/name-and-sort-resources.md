@@ -112,7 +112,7 @@ Operations `GET` and `POST` from `/pets` , and `GET` from `/pets/{petId}` are gr
 
 And what about webhooks?
 
-It's quite well explained how webhooks name are generated from `summary`, `description`  in [Webhooks documentation's page](/specifications-support/openapi-support/webhooks.md). But by choosing option `Group by tag`, `webhooks` are displayed, grouped and ordered with same rules as for `endpoints.`
+It's quite well explained how webhooks name are generated from `summary`, `description`  in [Webhooks documentation's page](/specifications-support/openapi-support/webhooks.md). But by choosing option `Group by tag`, `webhooks` are displayed, grouped and ordered with same rules as for `endpoints`.
 
 :::caution
 Be careful about webhooks without tags when option `Group by tag` is selected, as they would be ignored!
