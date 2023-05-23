@@ -8,7 +8,7 @@ The default behaviour of Bump.sh is automatic grouping based on the presence of 
 
 But first let's provide a bit more context on endpoints and webhooks.
 
-## Endpoints and Webhooks are resources
+## <a name="endpoints-and-webhooks-are-resources"></a>Endpoints and Webhooks are resources
 
 REST APIs are composed of a set of possible requests, from server to server.
 
@@ -54,7 +54,7 @@ There are three operations here, and three different ways to generate, group and
 
 ![Group by path or group by tag?](/files/help/legacy/-MU8HgDhZXrUBOih-Aa4.png)
 
-### Group by tag
+### <a name="group-by-tag"></a>Group by tag
 
 :::caution
 Be careful about operations without tags when option `Group operations by tag` is selected, as they would be ignored!
@@ -93,7 +93,7 @@ Note that you can also provide a `description` for your `tags`. This description
 
 This option `Group by tag` allows a better customization of your doc, by overriding resources name.
 
-### Group by path
+### <a name="group-by-path"></a>Group by path
 
 In this case, we deduce endpoint name from related `path`. First part of the path is extracted to generate the `endpoint` name, and every operation related to this endpoint name will be grouped together.
 
@@ -108,7 +108,7 @@ Let's Bump it up to something visual with a first [Petstore live example](https:
 
 Operations `GET`  and `POST` from `/pets` , and `GET` from `/pets/{petId}` are grouped under same endpoint `Pets` (first part of the path), and their names are generated from field `summary`.
 
-### Webhooks
+### <a name="webhooks"></a>Webhooks
 
 And what about webhooks?
 
