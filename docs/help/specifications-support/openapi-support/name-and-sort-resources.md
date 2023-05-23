@@ -63,7 +63,7 @@ Be careful about operations without tags when option `Group operations by tag` i
 You may have noticed in the above API Contract that there are two different `tags`: `all pets` and `single pet`.
 If you choose option `Group by tag`, Bump.sh will use these `tags` to group, name and sort the operations.
 
- Here is our second [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the same specification, with option `Group by tag` :
+ Here is our [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the OpenAPI specification, with option `Group by tag` :
 
 <div style={{textAlign: 'center'}}>
 
@@ -98,7 +98,7 @@ This option `Group by tag` allows a better customization of your doc, by overrid
 In this case, we deduce endpoint name from related `path`. First part of the path is extracted to generate the `endpoint` name, and every operation related to this endpoint name will be grouped together.
 
 
-Let's Bump it up to something visual with a first [Petstore live example](https://bump.sh/hub/examples/doc/petstore):
+Let's Bump it up to something visual with a [Petstore live example](https://bump.sh/hub/examples/doc/petstore):
 
 <div style={{textAlign: 'center'}}>
 
