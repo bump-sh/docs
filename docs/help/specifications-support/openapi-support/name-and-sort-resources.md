@@ -1,9 +1,19 @@
 # Name and sort endpoints and webhooks
+
+In the Bump.sh console, if you click on any of your documentations and select **Customize UI** in the left menu, you can scroll down to **How to group operations?**. There are three options available:
+- `(default)`
+The default behaviour of Bump.sh is automatic grouping based on the presence of a list of top-level `tags`. More on that in [the `Group by tags` section](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag).
+- [`Group by tags`](](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag))
+- [`Group by path`](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-path)
+
+But first let's provide a bit more context on endpoints and webhooks.
+
 ## Endpoints and Webhooks are resources
 
 REST APIs are composed of a set of possible requests, from server to server.
 
-- Endpoints are request that can be generated from an external server to the API, and the API responds. Endpoints are stored with OpenAPI under resource `paths`
+- In the API context, endpoints are most of the time [URLs](https://en.wikipedia.org/wiki/URL) that provides the location of a specific resource on an API server.
+With OpenAPI, endpoints are stored under the resource `paths`.
 
 OR
 
@@ -44,6 +54,45 @@ There are three operations here, and three different ways to generate, group and
 
 ![Group by path or group by tag?](/files/help/legacy/-MU8HgDhZXrUBOih-Aa4.png)
 
+### Group by tag
+
+:::caution
+Be careful about operations without tags when option `Group operations by tag` is selected, as they would be ignored!
+:::
+
+You may have noticed in the above API Contract that there are two different `tags`: `all pets` and `single pet`.
+If you choose option `Group by tag`, Bump.sh will use these `tags` to group, name and sort the operations.
+
+ Here is our second [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the same specification, with option `Group by tag` :
+
+<div style={{textAlign: 'center'}}>
+
+![Group Petstore operations by tag](/files/help/group-by-tags-dark.png)
+
+</div>
+
+:::info
+If first level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behaviour.
+:::
+
+Having this first level field `tags` allows you to override how your `endpoints` are ordered. Take the following API Contract sample:
+
+```yaml
+tags:
+  - name: single pet
+    description: all operations related to managing a single pet
+  - name: all pets
+    description: all operations related to managing all pets
+paths:
+  # ...
+```
+
+With these first level tags, endpoints `Single Pet` would be displayed above `All pets` in the left menu of your documentation.
+
+Note that you can also provide a `description` for your `tags`. This description will be displayed just under the `name` of the `tag` at the top level of your `tag` documentation page.
+
+This option `Group by tag` allows a better customization of your doc, by overriding resources name.
+
 ### Group by path
 
 In this case, we deduce endpoint name from related `path`. First part of the path is extracted to generate the `endpoint` name, and every operation related to this endpoint name will be grouped together.
@@ -59,39 +108,14 @@ Let's Bump it up to something visual with a first [Petstore live example](https:
 
 Operations `GET`  and `POST` from `/pets` , and `GET` from `/pets/{petId}` are grouped under same endpoint `Pets` (first part of the path), and their names are generated from field `summary`
 
-### Group by tag
-
-You may have noticed they are two different `tags` for these 3 operations: "all pets" and "single pet" . If you chose option "Group by tag", we'll use these values to group, name and sort these operations. Here is our second [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the same specification, with option "Group by tag" :
-
-<div style={{textAlign: 'center'}}>
-
-![Group Petstore operations by tag](/files/help/group-by-tags-dark.png)
-
-</div>
-
-This option **group by tag** allows a better customization of your doc, by overriding resources name. And, last but not least, there is a feature that'd allow you to override how your `endpoints` are ordered: a first level field `tags`, available at  [OpenAPI root document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object).
-
-```yaml
-tags:
-  - name: single pet
-  - name: all pets
-paths:
-  # ...
-```
-:::caution
-Be careful about operations without tags when option “Group operations by tag” is selected, as they would be ignored!
-:::
-
-With these first level tags, endpoints 'Single Pet' would be displayed above 'All pets' on your documentation.
-
 ### Webhooks
 
 And what about webhooks?
 
-It's quite well explained how webhooks name is generated from `summary`, `description`  in [Webhooks documentation's page](/specifications-support/openapi-support/webhooks.md). But by choosing option "Group Operations by tag?", `webhooks` are displayed, grouped and ordered with same rule than `endpoints.`
+It's quite well explained how webhooks name are generated from `summary`, `description`  in [Webhooks documentation's page](/specifications-support/openapi-support/webhooks.md). But by choosing option `Group by tag`, `webhooks` are displayed, grouped and ordered with same rules as for `endpoints.`
 
 :::caution
-Be careful about webhooks without tags when option “Group operations by tag” is selected, as they would be ignored!
+Be careful about webhooks without tags when option `Group by tag` is selected, as they would be ignored!
 :::
 
 Two possibilities for this OpenAPI 3.1 documentation with endpoints and webhooks, on our [examples hub](https://bump.sh/hub/examples):
