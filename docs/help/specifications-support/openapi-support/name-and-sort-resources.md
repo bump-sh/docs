@@ -106,7 +106,7 @@ Let's Bump it up to something visual with a first [Petstore live example](https:
 
 </div>
 
-Operations `GET`  and `POST` from `/pets` , and `GET` from `/pets/{petId}` are grouped under same endpoint `Pets` (first part of the path), and their names are generated from field `summary`.
+Operations `GET` and `POST` from `/pets` , and `GET` from `/pets/{petId}` are grouped under same endpoint `Pets` (first part of the path), and their names are generated from field `summary`.
 
 ### Webhooks
 
