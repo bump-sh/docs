@@ -2,7 +2,7 @@
 
 In the Bump.sh console, if you click on any of your documentations and select **Customize UI** in the left menu, you can scroll down to **How to group operations?**. There are three options available:
 - `(default)`
-The default behaviour of Bump.sh is automatic grouping based on the presence of a list of top-level `tags`. More on that in [the `Group by tags` section](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag).
+The default behaviour of Bump.sh is automatic grouping based on the presence of a list of top-level `tags`. More on that in [the `Group by tags` section](#group-by-tag).
 - [`Group by tags`](](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag))
 - [`Group by path`](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-path)
 
