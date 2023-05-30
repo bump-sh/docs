@@ -118,15 +118,15 @@ You can use any of the following CSS length units as `unit`:
 - `pc` picas (1pc = 12 pt)
 
 **Relative units**:
-`em` relative to the font-size of the element (usually 1em = 16px)
-`ex` relative to the x-height of the current font (rarely used)  
-`ch` relative to the width of the "0" (Unicode U +0030) in the current font
-`rem` relative to font-size of the root element   
-`vw` relative to 1% of the width of the viewport*  
-`vh` relative to 1% of the height of the viewport*   
-`vmin` relative to 1% of viewport's* smaller dimension   
-`vmax` relative to 1% of viewport's* larger dimension  
-`%` relative to the parent element
+- `em` relative to the font-size of the element (usually 1em = 16px)
+- `ex` relative to the x-height of the current font (rarely used)  
+- `ch` relative to the width of the "0" (Unicode U +0030) in the current font
+- `rem` relative to font-size of the root element   
+- `vw` relative to 1% of the width of the viewport*  
+- `vh` relative to 1% of the height of the viewport*   
+- `vmin` relative to 1% of viewport's* smaller dimension   
+- `vmax` relative to 1% of viewport's* larger dimension  
+- `%` relative to the parent element
 
 ## Markdown files as an external reference
 
