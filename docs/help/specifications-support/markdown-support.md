@@ -75,10 +75,10 @@ Note that even it's a best practice to always add an [alt text](https://en.wikip
 
 If you want to manually set the size of your image you can use Bump.sh `=dimension` parameter just before the closing parenthesis as:
 ```
-![Alt text](/path/to/image.jpg "Image title" =100pxx50px)
+![Alt text](/path/to/image.jpg "Image title" =dimension)
 ```
 
-`dimension` uses the following syntax:
+`=dimension` uses the following syntax:
 ```
 =[height][unit]x[width][unit]
 ```
