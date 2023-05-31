@@ -80,14 +80,14 @@ If you want to manually set the size of your image you can use Bump.sh `=dimensi
 
 `=dimension` uses the following syntax:
 ```
-=[height][unit]x[width][unit]
+=[width][unit]x[height][unit]
 ```
 
 for instance using `=100pxx50px` where 
-- `100` is the `height`
+- `100` is the `width`
 - `px` the `unit`
 - `x` the `separator`
-- `50` the `width`
+- `50` the `height`
 - second `px` is `unit` again
 will output an image with 100 pixels height and 50 pixels width.
 
