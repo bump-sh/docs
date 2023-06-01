@@ -69,7 +69,7 @@ Use the following syntax to add images in your markdown
 ![Alt text](/path/to/image.jpg "Image title")
 ```
 
-Note that even it's a best practice to always add an [alt text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) for an image, the parameters `Alt text` and `"Image title"` are optional.
+Note that even if it's a best practice to always add an [alt text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) for an image, the parameters `Alt text` and `"Image title"` are optional.
 
 ### Image sizing
 
