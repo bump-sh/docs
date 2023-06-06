@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbump_sh_github_io=self.webpackChunkbump_sh_github_io||[]).push([[5236],{8639:e=>{e.exports=JSON.parse('{"permalink":"/product-updates/tags/new/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":17,"previousPage":"/product-updates/tags/new","blogDescription":"Blog","blogTitle":"Product updates"}')}}]);

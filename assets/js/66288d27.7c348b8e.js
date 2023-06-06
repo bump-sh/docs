@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbump_sh_github_io=self.webpackChunkbump_sh_github_io||[]).push([[21],{4306:e=>{e.exports=JSON.parse('{"label":"Improvement","permalink":"/product-updates/tags/improvement","allTagsPath":"/product-updates/tags","count":21}')}}]);

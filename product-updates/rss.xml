@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Bump.sh Blog</title>
+        <link>https://docs.bump.sh/product-updates</link>
+        <description>Bump.sh Blog</description>
+        <lastBuildDate>Sat, 03 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Lightning-fast API Documentation rendering]]></title>
+            <link>https://docs.bump.sh/product-updates/2023/06/03/lightning-fast-api-documentation-rendering</link>
+            <guid>/2023/06/03/lightning-fast-api-documentation-rendering</guid>
+            <pubDate>Sat, 03 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[improved-access-management.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="improved-access-management.png" src="/assets/images/bump-sh-performance-enhancements-e5e6e591ee39450f1b0a033faae588fa.png" width="1600" height="800" class="img_ev3q"></p><p>Fast-loading page is a must these days, both for human users and search engines.</p><p>Thanks to the new rendering engine, which has already been released to 100% of our users, navigating your API documentation is now a breeze. It provides an optimal experience for all API consumers, whatever the size of the documentation (yes, any size).</p><p>Performance is significantly better: the first interactive content is as fast as the blink of an eye, which also means there's no more blocking time when you first navigate the API documentation.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Enhanced Specifications Support]]></title>
+            <link>https://docs.bump.sh/product-updates/2023/01/27/enhanced-specifications-support</link>
+            <guid>/2023/01/27/enhanced-specifications-support</guid>
+            <pubDate>Fri, 27 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Over the past weeks, we have considerably enhanced our support of the specifications.]]></description>
+            <content:encoded><![CDATA[<p>Over the past weeks, we have considerably enhanced our support of the specifications.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="minlength-maxlength-and-pattern">minLength, maxLength and pattern<a class="hash-link" href="#minlength-maxlength-and-pattern" title="Direct link to heading">​</a></h2><p>Wherever you need to document restrictions on string fields, OpenAPI and AsyncAPI specifications rely on JSON Schema to support this.
+<code>minLength</code> and <code>maxLength</code>  are meant to constrain the length of a string.
+<code>pattern</code>  restrict the string to a specific Regular Expression (regex).</p><p>Email addresses, IBANs and ZIP/Postal codes could be great examples of these features.</p><p><img loading="lazy" alt="minlength-example.png" src="/assets/images/minlength-example-ac715e95b1b8df25f429c262a84b4e07.png" width="1200" height="1085" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="readonly--and--writeonly--properties">readOnly  and  writeOnly  properties<a class="hash-link" href="#readonly--and--writeonly--properties" title="Direct link to heading">​</a></h2><p>JSON Schema allows defining a property as <code>readOnly</code>  or  <code>writeOnly</code>.
+Many examples can easily be imagined when used with AsyncAPI or OpenAPI : <code>readOnly</code>  timestamp, <code>writeOnly</code>  password, etc...</p><p>Our <a href="https://docs.bump.sh/help/specifications-support/asyncapi-support/#readonly-and-writeonly-properties" target="_blank" rel="noopener noreferrer">Help Center</a> shares more details on how Bump.sh works with this feature and a few examples.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Improved Access Management]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/12/07/improved-access-management</link>
+            <guid>/2022/12/07/improved-access-management</guid>
+            <pubDate>Wed, 07 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[improved-access-management.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="improved-access-management.png" src="/assets/images/improved-access-management-59c73d15af4d40d8fb5a53a29a255fbd.png" width="1200" height="785" class="img_ev3q"></p><p>Access management has been reshaped, thanks to extended tests and user feedback.</p><p>Inviting external customers and partners to access internal APIs is now possible directly from the dashboard.</p><p>From the dedicated section in your hub/documentation settings, you can quickly modify who has access to what. Open it to teammates of your organization, or invite external partners by email directly.</p><p>Password-protected level will stay available for a limited amount of time. More info can be found in our <a href="https://docs.bump.sh/help/access-management/" target="_blank" rel="noopener noreferrer">help center</a>.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Polymorphism]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/11/14/polymorphism</link>
+            <guid>/2022/11/14/polymorphism</guid>
+            <pubDate>Mon, 14 Nov 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[They have many names: schema alternatives, discriminator, inheritance... but you probably know them as oneOf, anyOf and allOf.]]></description>
+            <content:encoded><![CDATA[<p>They have many names: schema alternatives, discriminator, inheritance... but you probably know them as oneOf, anyOf and allOf.</p><p>Bump now fully supports polymorphism for AsyncAPI and OpenAPI. You can already upload your latest API specification file to check it out. Or see it in action with our <a href="https://bump.sh/bump/doc/petstore-alternatives#operation-post-pets-body-animal-cat-species-species-alternative" target="_blank" rel="noopener noreferrer">demo documentation of the feature</a>!</p><p><img loading="lazy" alt="polymorphism.png" src="/assets/images/polymorphism-e878f64bc5ee1b8e8706049bb1acc07e.png" width="1200" height="1208" class="img_ev3q"></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Automated Image Generation]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/09/05/automated-image-generation</link>
+            <guid>/2022/09/05/automated-image-generation</guid>
+            <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[After working so hard on your API and its documentation, the moment has come to share it with the world.]]></description>
+            <content:encoded><![CDATA[<p>After working so hard on your API and its documentation, the moment has come to share it with the world.
+We recently released a new social network feature, that helps you create beautiful visuals pointing to your API.</p><p>You can now upload your own image or leave the work to us to generate a nice one. Sharing your documentation link on social networks will now display your own visual, making it more appealing.</p><p>Find out more in our <a href="https://docs.bump.sh/help/meta-images/" target="_blank" rel="noopener noreferrer">Help Center</a>!</p><p><img loading="lazy" alt="metaimage-forto.png" src="/assets/images/metaimage-forto-c7bdb25f7bb9330aa00c176d72848399.png" width="1200" height="599" class="img_ev3q"></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Branching]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/07/08/branching</link>
+            <guid>/2022/07/08/branching</guid>
+            <pubDate>Fri, 08 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introducing Branching, a great way to host several versions of an API Specification on the same documentation.]]></description>
+            <content:encoded><![CDATA[<p>Introducing <strong>Branching</strong>, a great way to host several versions of an API Specification on the same documentation.</p><p>If your API has several versions you would like to maintain or if you are working between two environments, branching will make a difference and limit the number of documentation in your hub.</p><p>Create as many branches as you need, upload files accordingly and find the versions of your API anytime in your documentation, through a small selection menu.</p><p>Define which branch should be chosen by default, add or delete branches, keep everything up-to-date and share with your ecosystem the best API experience possible.</p><p><img loading="lazy" alt="branching.gif" src="/assets/images/branching-c4f3b150357f98dad1817186916f722b.gif" width="800" height="566" class="img_ev3q"></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Search!]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/06/13/search</link>
+            <guid>/2022/06/13/search</guid>
+            <pubDate>Mon, 13 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here comes a long-expected new feature the Search Bar solves this in a blink of an eye.]]></description>
+            <content:encoded><![CDATA[<p>Here comes a long-expected new feature: the Search Bar. We know how time-consuming it can be to scroll through long API documentation to find what you are looking for: the Search Bar solves this in a blink of an eye.</p><p>Our Search engine can look in your documentations and even your hubs on your APIs structures: endpoints, objects, properties, webhooks, etc... And to make it more comfortable, we sort them by types (and it looks great, seriously).</p><p>We are already working on two limitations: you cannot search in your spec history and we are lacking advanced filters.</p><p>Discoverability is an important topic on our end. We want to help teams and communities deep dive into their API ecosystem, making them easier to find and use. We will have a lot more to announce soon and we are preparing a small blog post on this feature’s making-of.</p><p>We hope you’ll enjoy the Search Bar: feel free to reach out if you have any feedback or suggestion!</p><p><em>P.S. Search will be activated on your documentation/hub after the next deploy but please contact us if you need it before this as we can manually activate it.</em></p><p><img loading="lazy" alt="search.gif" src="/assets/images/search-4232740259ea419f4ea32671d544c6ad.gif" width="962" height="640" class="img_ev3q"></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Multiple types for properties]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/06/04/multiple-types-for-properties copie</link>
+            <guid>/2022/06/04/multiple-types-for-properties copie</guid>
+            <pubDate>Sat, 04 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is an update that was released some time ago but out of the radar: we now display all available types (even nullable) on any properties in your OpenAPI or AsyncAPI definition.]]></description>
+            <content:encoded><![CDATA[<p>Here is an update that was released some time ago but out of the radar: we now display all available types (even <code>nullable</code>) on any properties in your OpenAPI or AsyncAPI definition. </p><p>You’ll now see these correctly displayed properties in your documentation. Multiple types may look like a slight improvement but will add clarification to your team and community.</p><p>And we have an example to show how great it is (thanks to <a href="https://bump.sh/doc/meilisearch#operation-indexes-documents-search-body-filter" target="_blank" rel="noopener noreferrer">Meilisearch's documentation</a>).</p><p><img loading="lazy" alt="multiple-types.png" src="/assets/images/multiple-types-4104e85296a2a59ec7cc588091fd189f.png" width="1200" height="819" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[COLORS]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/05/07/colors</link>
+            <guid>/2022/05/07/colors</guid>
+            <pubDate>Sat, 07 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[You already have deployed your API documentation but feel something's missing? You couldn't be more right.]]></description>
+            <content:encoded><![CDATA[<p>You already have deployed your API documentation but feel something's missing? You couldn't be more right.</p><p>Introducing one of the biggest updates to Bump yet: <strong>UI Color customization</strong>. You read that right. You can now change the primary color of your documentation to make it shine more than ever. Or make it match your logo/company brand!</p><p>We even added a short preview to help you find the best tone and ensure that you'll keep in mind how it will look in dark mode too.</p><p>Try it out from your <em>Dashboard &gt; Customize UI</em> and share with us your best results!</p><p><img loading="lazy" alt="colors.png" src="/assets/images/colors-27fecef601bca32d1729e7b963a0fd17.png" width="1200" height="797" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Webhooks]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/04/02/webhooks</link>
+            <guid>/2022/04/02/webhooks</guid>
+            <pubDate>Sat, 02 Apr 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today, we’re introducing Webhooks integration, as a new way to add Bump to your existing workflow.]]></description>
+            <content:encoded><![CDATA[<p>Today, we’re introducing Webhooks integration, as a new way to add Bump to your existing workflow.</p><p>Set them up from your dashboard and receive notifications when events on your API structure are detected on your documentation.</p><p>Find more in our <a href="https://docs.bump.sh/help/api-change-management/webhooks/" target="_blank" rel="noopener noreferrer">Help Center</a>!</p><p><img loading="lazy" alt="webhooks_main.png" src="/assets/images/webhooks_main-1f09ca1263bbd70e12282c2c2192d81a.png" width="1200" height="455" class="img_ev3q"></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Documentation Access]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/03/20/documentation-access</link>
+            <guid>/2022/03/20/documentation-access</guid>
+            <pubDate>Sun, 20 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Following our recently released Organization feature, the new Documentation Access Management will help control who has access to which documentation or hubs.]]></description>
+            <content:encoded><![CDATA[<p>Following our recently released Organization feature, the new Documentation Access Management will help control who has access to which documentation or hubs.</p><p>Three access levels are available: public, private (for your organization only) and protected (limited, password protection).</p><p>Find more in our <a href="https://docs.bump.sh/help/access-management/" target="_blank" rel="noopener noreferrer">Help Center</a>!</p><p><img loading="lazy" alt="access-management.png" src="/assets/images/access-management-70c8ae85e39e631417458a2cfc5e83cb.png" width="1200" height="726" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Organization support]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/03/10/organization-support</link>
+            <guid>/2022/03/10/organization-support</guid>
+            <pubDate>Thu, 10 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Building the best APIs can be a considerable amount of work and you may need your teammates to help. But you definitely do not want one single shared account for that.]]></description>
+            <content:encoded><![CDATA[<p>Building the best APIs can be a considerable amount of work and you may need your teammates to help. But you definitely do not want one single shared account for that.</p><p>Freshly out of beta, the awaited <strong>Organizations</strong> feature helps you with that. We did not reinvent the wheel but wanted to make it as simple but powerful as possible.</p><p><img loading="lazy" alt="organization-support.png" src="/assets/images/organization-support-3300d82fff6b82f7c3b9d03c6f2dd7fc.png" width="1200" height="775" class="img_ev3q"></p><p>You can easily customize access with 3 different roles: admin, maintainer, and viewers.
+Admins can invite and manage access, maintainers can manage hubs and docs, guests are limited to read-only.</p><p>Available from the Startup plan, we hope it will help teams work efficiently and smoothly on their APIs. You can find out more about Organizations in our <a href="https://docs.bump.sh/help/organizations/" target="_blank" rel="noopener noreferrer">Help Center</a>!</p><p>This update was also the opportunity to ship some enhancements for the dashboard.</p><p>We can’t wait to hear about what you think of it so feel free to reach out!</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Changelog update]]></title>
+            <link>https://docs.bump.sh/product-updates/2022/01/15/changelog-update</link>
+            <guid>/2022/01/15/changelog-update</guid>
+            <pubDate>Sat, 15 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️]]></description>
+            <content:encoded><![CDATA[<p>The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️</p><p>Hope you will enjoy it! </p><p>See it in action on our own API documentation: <a href="https://lnkd.in/gij9uHUy" target="_blank" rel="noopener noreferrer">https://lnkd.in/gij9uHUy</a></p><p>• Bonus point:</p><p>If you use our github-action, the diff comments have also been updated. Check our latest release for details: <a href="https://github.com/bump-sh/github-action/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">https://github.com/bump-sh/github-action/releases/tag/v1.1.0</a></p><p><img loading="lazy" alt="changelog.gif" src="/assets/images/changelog-9f5db76ced6eca68b123e4b7ab1c825a.gif" width="1000" height="552" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Bump diff navigation]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/11/14/bump-diff-navigation</link>
+            <guid>/2021/11/14/bump-diff-navigation</guid>
+            <pubDate>Sun, 14 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[✨  Quickly identify what has changed in your API ✨]]></description>
+            <content:encoded><![CDATA[<p>✨  Quickly identify what has changed in your API ✨ </p><p>Jump from change to change! No need to scroll anymore to see the latest changes in your documentation diff.</p><p><img loading="lazy" alt="diff-navigation.gif" src="/assets/images/diff-navigation-bca494d4419e9c019beaedf118dd4c96.gif" width="640" height="360" class="img_ev3q"></p><p>See it in action: <a href="https://docs.canopyservicing.com/changes/fbcf9592-a369-4f17-9adb-410d48e3ff98" target="_blank" rel="noopener noreferrer">https://docs.canopyservicing.com/changes/fbcf9592-a369-4f17-9adb-410d48e3ff98</a></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Multiple examples support]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/11/08/multiple-examples-support</link>
+            <guid>/2021/11/08/multiple-examples-support</guid>
+            <pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Give your API users a personalized experience and a better understanding of your API while reading your documentation by including multiple examples to your API definition.]]></description>
+            <content:encoded><![CDATA[<p>Give your API users a personalized experience and a better understanding of your API while reading your documentation by including multiple examples to your API definition.</p><p>Bump now supports displaying multiple examples which are supported by both OpenAPI and AsyncAPI specifications.</p><p><img loading="lazy" alt="multiple_examples.jpg" src="/assets/images/multiple_examples-92f6ab5a56bb822910b2d7248e757187.jpg" width="1200" height="627" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Bump live preview]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/10/12/bump-live-preview</link>
+            <guid>/2021/10/12/bump-live-preview</guid>
+            <pubDate>Tue, 12 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A new --live flag was added to the bump preview command.]]></description>
+            <content:encoded><![CDATA[<p>A new <code>--live</code> flag was added to the bump <code>preview</code> command.</p><p>This gives you the ability to stay focused on your API definition file (OpenAPI or AsyncAPI file) while seeing your Bump preview documentation page being updated as you change the file.</p><p>No need for a specific text editor, or any extension, just use the bump CLI to preview your documentation live.</p><p><img loading="lazy" alt="live-preview.gif" src="/assets/images/live-preview-bf049783e8682eb187f61d88a67dafa4.gif" width="1120" height="587" class="img_ev3q"></p><p>Learn more about live preview on <a href="https://docs.bump.sh/help/bump-cli/#live-preview" target="_blank" rel="noopener noreferrer">our help page</a>.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Automatic breaking change detection]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/10/03/automatic-breaking-change-detection</link>
+            <guid>/2021/10/03/automatic-breaking-change-detection</guid>
+            <pubDate>Sun, 03 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[If some changes are more important than others, it is especially true for your API.]]></description>
+            <content:encoded><![CDATA[<p>If some changes are more important than others, it is especially true for your API.</p><p>From now on, we automatically detect if a new version of your API includes some breaking changes. It will be visible in the&nbsp;<a href="https://developers.bump.sh/changes" target="_blank" rel="noopener noreferrer">changelog page</a>, in the&nbsp;changelog email or the brand new RSS feed… but also during your API design phase while opening a pull request thanks to&nbsp;<a href="https://github.com/bump-sh/github-action/" target="_blank" rel="noopener noreferrer">our Github Action</a>.</p><p><img loading="lazy" alt="breaking_changes.png" src="/assets/images/breaking_changes-7ecac730750aa4cfdbaf3acc2ef9c3f2.png" width="1200" height="628" class="img_ev3q"></p><p>With Bump, you will never miss a <em>breaking</em> change again.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Changelog makeover 💄]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/09/21/changelog-makeover</link>
+            <guid>/2021/09/21/changelog-makeover</guid>
+            <pubDate>Tue, 21 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[changelogrevamp.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="changelog_revamp.jpg" src="/assets/images/changelog_revamp-e1be15cc2c04c6ab86f5c92a599892d1.jpg" width="1200" height="627" class="img_ev3q"></p><p>We redesigned the whole changelog page in order to bring you a better understanding of changes history of your API.</p><p>Here's an example: <a href="https://developers.bump.sh/changes" target="_blank" rel="noopener noreferrer">https://developers.bump.sh/changes</a></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[RSS feed for your changelog]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/09/20/rss-feed-for-your-changelog</link>
+            <guid>/2021/09/20/rss-feed-for-your-changelog</guid>
+            <pubDate>Mon, 20 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[back.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="back.jpg" src="/assets/images/back-f203541f0b0c2edc7f64b055ccf66fb5.jpg" width="1200" height="627" class="img_ev3q"></p><p>In the age of information overload, getting access to information that matters can be quite challenging and that's exactly the purpose of RSS.</p><p>From now, get notified of the API changes through RSS in addition to the existing email.</p><p>Give it a try with the <a href="https://developers.bump.sh/changes.rss" target="_blank" rel="noopener noreferrer">Bump RSS feed</a> in your favorite RSS reader.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Bindings support for AsyncAPI]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/09/16/bindings-support-for-asyncapi</link>
+            <guid>/2021/09/16/bindings-support-for-asyncapi</guid>
+            <pubDate>Thu, 16 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[bindingsasyncapibump.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="bindings_asyncapi_bump.png" src="/assets/images/bindings_asyncapi_bump-ca22b8e3620e6c798bc459b00ab2548d.png" width="1200" height="627" class="img_ev3q"></p><p>AsyncAPI users, you'll be happy to know that Bump now supports bindings.</p><p>As AsyncAPI allows many protocols, which is really nice, bindings are a useful and necessary mechanism to define protocol-specific information. Bump now displays protocol information defined at server, operation, and message levels, as part of an ongoing work for a better understanding of API documentations.</p><p>Here's an example: <a href="https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information" target="_blank" rel="noopener noreferrer">https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information</a></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Share and highlight anything inside your API documentation]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/09/11/share-and-highlight-anything-inside-your-api-documentation</link>
+            <guid>/2021/09/11/share-and-highlight-anything-inside-your-api-documentation</guid>
+            <pubDate>Sat, 11 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[To give your users the best API onboarding,]]></description>
+            <content:encoded><![CDATA[<p>To give your users the best API onboarding,
+it often helps to be able to share specific pieces of information. </p><p>Thanks to this new feature, you can now share and highlight anything in your API documentation with just a click. The selected element will be highlighted following your color theme.</p><p><img loading="lazy" alt="share_highlight.gif" src="/assets/images/share_highlight-ed7d4cc5e08ee2a32b3936ec5cfa2b9f.gif" width="640" height="360" class="img_ev3q"></p><p>Give it a try: <a href="https://developers.bump.sh/#post-previews-body" target="_blank" rel="noopener noreferrer">https://developers.bump.sh/#post-previews-body</a></p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Markdown support]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/09/07/markdown-support</link>
+            <guid>/2021/09/07/markdown-support</guid>
+            <pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[markdown-callouts.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="markdown-callouts.jpg" src="/assets/images/markdown-callouts-40b4301653228f190fc216f07dcd9608.jpg" width="1200" height="480" class="img_ev3q"></p><p>As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.</p><p>Bump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.</p><p>Check <a href="https://docs.bump.sh/help/specifications-support/markdown-support/" target="_blank" rel="noopener noreferrer">our help page</a> to start taking advantage of markdown in your API documentation.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Receive API changelog in your mailbox 🔔]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/07/18/receive-api-changelog-in-your-mailbox</link>
+            <guid>/2021/07/18/receive-api-changelog-in-your-mailbox</guid>
+            <pubDate>Sun, 18 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[email-notif.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="email-notif.png" src="/assets/images/email-notif-d4fd274ffdc56501b194dc2d1bd4f0fb.png" width="1200" height="848" class="img_ev3q"></p><p>In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.</p><p>It's now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!</p><p>Want to see it in action on Bump API documentation? <a href="https://developers.bump.sh/changes" target="_blank" rel="noopener noreferrer">See it live</a></p><p>Do not hesitate to invite your API consumers to subscribe to your API updates (available at <code>http://{your-doc-url}/changes</code>)</p><p><em>Never miss an API change again</em> (now, it's in your mailbox in case you missed it 😉)</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Download source from your documentation]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/07/13/download-source-from-your-documentation</link>
+            <guid>/2021/07/13/download-source-from-your-documentation</guid>
+            <pubDate>Tue, 13 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[download-source.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="download-source.png" src="/assets/images/download-source-fa88ddb6c648f893c12c534ae2cfe659.png" width="1200" height="616" class="img_ev3q"></p><p>We've made it easy for API consumers to <a href="https://developers.bump.sh/" target="_blank" rel="noopener noreferrer">download the source</a> of an API documentation.</p><p>Whether you want to get your hands on a <code>JSON</code> or <code>YAML</code> format, for <code>OpenAPI</code> or <code>AsyncAPI</code>, you're now just a click away.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Bump diff from your Command Line Interface or your Continuous Integration platform]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/07/02/bump-diff-from-your-cli</link>
+            <guid>/2021/07/02/bump-diff-from-your-cli</guid>
+            <pubDate>Fri, 02 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Our new bump diff command has landed in our CLI.]]></description>
+            <content:encoded><![CDATA[<p>Our <a href="https://www.npmjs.com/package/bump-cli#bump-diff-file" target="_blank" rel="noopener noreferrer">new bump <code>diff</code> command</a> has landed in our CLI. <br>
+<em>Make sure to <a href="https://github.com/bump-sh/cli/releases/tag/v2.1.0" target="_blank" rel="noopener noreferrer">upgrade your <code>bump-cli</code> package</a> to at least <code>v2.1.0</code> to test it.</em></p><p>Now, straight from your CLI, you are able to describe the changes made in your contract:</p><div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&gt; bump diff --doc users-account api-specification.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Updated: GET /account</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Response modified: 200</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Body attribute added: ticket_ids</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Added: GET /tickets/{ticket_id}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>The new command will output a quick summary of what has changed between your latest deployed API contract and the file you have changed locally.</p><p>If you use Github Actions to launch your automation workflows, we have some more good news for you: <a href="https://github.com/bump-sh/github-action/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">we now offer a stable <code>bump-sh/github-action@v1</code> action</a>. And this latest release includes <strong>automatic API contract changelog pushed as a comment for each pull request</strong>.</p><p>Check <a href="https://docs.bump.sh/help/continuous-integration/github-actions/#api-diff-on-pull-requests--deploy-on-push" target="_blank" rel="noopener noreferrer">our help page</a> to get you started with team collaboration on API design.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Nested properties get a make up 🎀]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/06/09/nested-properties-get-a-make-up</link>
+            <guid>/2021/06/09/nested-properties-get-a-make-up</guid>
+            <pubDate>Wed, 09 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[nested-properties.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="nested-properties.jpg" src="/assets/images/nested-properties-567810e566bac0d8d6f444a40dd21b77.jpg" width="1200" height="615" class="img_ev3q"></p><p>Feedbacks are important to us and we do our best to make you feel heard.
+We know that accessing nested properties is a pain point for many of you so we tried to make the navigation clearer and the selected element will now stand out more.</p><p>We'd love to hear from you and see if these changes suit your needs so hit us up with <a href="mailto:hello@bump.sh" target="_blank" rel="noopener noreferrer">your comments</a> whether you love it or hate it!</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[New Command Line Interface era]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/05/29/new-command-line-interface-era</link>
+            <guid>/2021/05/29/new-command-line-interface-era</guid>
+            <pubDate>Sat, 29 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[new-cli.gif]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="new-cli.gif" src="/assets/images/new-cli-fd230487b19f62bb2f112248b95b57bb.gif" width="1024" height="475" class="img_ev3q"></p><p>Goodbye to our legacy ruby gem, and hello to our new node-based CLI 👋.</p><p>We are releasing a new Command Line Interface which is iso-feature with the old CLI. There is one additional improvement though: <strong>we now support recursive external references</strong> (<code>$ref</code> keyword in your API specifications), with mixed filesystem or URL paths. You can now refactor your API definitions in small chunks, re-use parts of it, and separate concerns between endpoints, models or nested-objects in peace.</p><p>This new CLI package is written in Typescript which will help us to publish a stable &amp; type safe tool. On top of that -and especially with the <a href="https://oclif.io/" target="_blank" rel="noopener noreferrer">oclif</a> framework- we are now able to publish universal packages for multiple OSes &amp; architectures so everybody can enjoy Bump via command line interface.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="get-it-while-its-hot">Get it while it's hot<a class="hash-link" href="#get-it-while-its-hot" title="Direct link to heading">​</a></h2><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm install -g bump-cli</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>or download a package directly from the <a href="https://github.com/bump-sh/cli/releases" target="_blank" rel="noopener noreferrer">latest Github release</a> assets.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="enjoy-the-commands">Enjoy the commands<a class="hash-link" href="#enjoy-the-commands" title="Direct link to heading">​</a></h2><ul><li><p><a href="https://github.com/bump-sh/bump-node-cli#bump-preview-file" target="_blank" rel="noopener noreferrer"><code>bump preview</code></a> to build as many API documentation preview as you want. </p></li><li><p><a href="https://github.com/bump-sh/bump-node-cli#bump-deploy-file" target="_blank" rel="noopener noreferrer"><code>bump deploy --dry-run</code></a> to validate your future API documentation deployment.</p><p><em>(⚠️ This is a breaking change compared to our old CLI's and replaces the old <code>bump validate</code> command)</em></p></li><li><p><a href="https://github.com/bump-sh/bump-node-cli#bump-deploy-file" target="_blank" rel="noopener noreferrer"><code>bump deploy</code></a> to deploy your latest API documentation changes.</p></li></ul>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Ease your sight with dark mode ☾]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/05/23/ease-your-sight-with-dark-mode</link>
+            <guid>/2021/05/23/ease-your-sight-with-dark-mode</guid>
+            <pubDate>Sun, 23 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[darkmode.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="darkmode.jpg" src="/assets/images/darkmode-5916180767c0ff12e43ff146c4b8c593.jpg" width="1200" height="615" class="img_ev3q"></p><p>Today we introduce the dark mode to your documentations! Depending on your system settings, your page will appear in a light mode (default) or in a darker scheme.</p><p>You'll also be able to toggle to light or dark mode regarding your own preferences.</p><p>We hope you will enjoy the new experience. 👻</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Documentations in your pocket]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/05/20/documentation-in-your-pocket</link>
+            <guid>/2021/05/20/documentation-in-your-pocket</guid>
+            <pubDate>Thu, 20 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[mobile-version.jpg]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="mobile-version.jpg" src="/assets/images/mobile-version-2653c75a90df5d84a41ba6e4a3eb389f.jpg" width="1200" height="615" class="img_ev3q"></p><p>We now offer a better mobile experience for your documentation if you happen to need it on-the-go. You will also have a navigation menu that allows to access the changelog page.</p><p>More changes are coming, stay tuned!</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Global support of external references]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/03/16/global-support-of-external-references</link>
+            <guid>/2021/03/16/global-support-of-external-references</guid>
+            <pubDate>Tue, 16 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[As your API grows, your specification becomes more and more complex. At some point, splitting it up into multiple files with $ref references pointing to these external resources can help a lot.]]></description>
+            <content:encoded><![CDATA[<p>As your API grows, your specification becomes more and more complex. At some point, splitting it up into multiple files with <code>$ref</code> references pointing to these external resources can help a lot.</p><p>We have just released full external references support  by updating:</p><ul><li>our web app</li><li>our CLI (<a href="https://github.com/bump-sh/bump-cli/releases/tag/v0.7.0" target="_blank" rel="noopener noreferrer">version 0.7 is out</a>)</li><li>our GitHub action (<a href="https://github.com/marketplace/actions/api-documentation-on-bump" target="_blank" rel="noopener noreferrer">version 0.2 is out</a>)</li></ul><p>Now, no matter the channel you use to deploy a specification, Bump will resolve all references (when possible) and import their content into your documentation.</p><p>Want to learn more? Have a look at <a href="https://docs.bump.sh/help/specifications-support/references/" target="_blank" rel="noopener noreferrer">our documentation</a>.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Hello, OpenAPI webhooks]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/02/04/hello-openapi-webhooks</link>
+            <guid>/2021/02/04/hello-openapi-webhooks</guid>
+            <pubDate>Thu, 04 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[openapi-webhooks.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="openapi-webhooks.png" src="/assets/images/openapi-webhooks-787a75b9d4355a4b7508e8af38c4c428.png" width="1200" height="615" class="img_ev3q"></p><p><a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.0.md" target="_blank" rel="noopener noreferrer">OpenAPI 3.1</a> has been released today. Some important changes are coming with this new version. Above all, the greatest improvement is the support of <code>webhooks</code>, at the same first level than <code>paths</code>.</p><p>We are glad to announce today that webhooks are now supported by Bump, as you can see in this <a href="https://bump.sh/doc/webhook-example" target="_blank" rel="noopener noreferrer">live example</a>.</p><p>We hope you'll enjoy this new feature, don't hesitate to have a look to our <a href="https://docs.bump.sh/help/specifications-support/openapi-support/webhooks/" target="_blank" rel="noopener noreferrer">technical documentation</a> if necessary.</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Customize operation URL]]></title>
+            <link>https://docs.bump.sh/product-updates/2021/01/10/customize-operation-url</link>
+            <guid>/2021/01/10/customize-operation-url</guid>
+            <pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[OpenAPI provides field servers on OperationObject, as an alternative url to service an operation.]]></description>
+            <content:encoded><![CDATA[<p>OpenAPI provides field <code>servers</code> on OperationObject, as an alternative url to service an operation.</p><blockquote><p>If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value. cf <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#operationObject" target="_blank" rel="noopener noreferrer">OpenAPI-Specification</a></p></blockquote><p>From now on, Operations <code>servers</code> are supported to customize your operations examples (in definition and curl example).</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Custom domain for everyone]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/12/01/custom-domain-for-everyone</link>
+            <guid>/2020/12/01/custom-domain-for-everyone</guid>
+            <pubDate>Tue, 01 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[custom-domains.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="custom-domains.png" src="/assets/images/custom-domains-c66c688f0d2e48d073cbdc8bb4135729.png" width="1200" height="615" class="img_ev3q"></p><p>You can now <a href="https://docs.bump.sh/help/custom-domains" target="_blank" rel="noopener noreferrer">configure your custom domain</a> directly from the app. No more manual email to us, just create your CNAME record, fill the form, and voilà.</p><p>We also have good news for you: we've updated our pricing plans to allow you to set up custom domains on free plans. One would say it's Christmas, before Christmas. Enjoy!</p>]]></content:encoded>
+            <category>New</category>
+        </item>
+        <item>
+            <title><![CDATA[Depreciation Support]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/11/22/depreciation-support</link>
+            <guid>/2020/11/22/depreciation-support</guid>
+            <pubDate>Sun, 22 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[depreciation-support.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="depreciation-support.png" src="/assets/images/depreciation-support-2a5baa839099a5050422d95989f4e92b.png" width="1200" height="615" class="img_ev3q"></p><p>We now identify deprecated elements in both OpenApi and AsyncApi specifications, and highlight them in your documentations.</p><p>We wanted to release it fast, as it was an important missing feature, but this is just the beginning: we have a lot of ideas on how we can enhance deprecation support that we will implement in the upcoming weeks.</p><p>Want to share some use cases with us? <a href="https://calendly.com/bump-anthony/30-min-meeting" target="_blank" rel="noopener noreferrer">Pick a slot on Anthony's calendar</a>, he will be super glad to hear from you.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Show verbs in navigation]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/11/18/show-verbs-in-navigation</link>
+            <guid>/2020/11/18/show-verbs-in-navigation</guid>
+            <pubDate>Wed, 18 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[verbs-in-navigation-zoom.png]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="verbs-in-navigation-zoom.png" src="/assets/images/verbs-in-nav-0b440e078063b428b123490e180b2e48.png" width="1200" height="615" class="img_ev3q"></p><p>Displaying operations in an endpoint or a channel is sometimes not enough.
+You can now configure your documentations to show operation verbs in navigation.</p><p>To enable it, go to your documentation settings "Customize UI" tab, then select "Groups and operations with verbs" in the "Navigation" input.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Add a favicon to your documentation]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/11/12/add-a-favicon-to-your-documentation</link>
+            <guid>/2020/11/12/add-a-favicon-to-your-documentation</guid>
+            <pubDate>Thu, 12 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Until now, for documentation having a customised logo, the same one was used as a favicon.]]></description>
+            <content:encoded><![CDATA[<p>Until now, for documentation having a customised logo, the same one was used as a favicon.</p><p>From now on, you can use a specific one, to brighten up your documentation more than ever!</p><p>Here is how <a href="https://developers.bump.sh/" target="_blank" rel="noopener noreferrer">Bump's documentation</a> looks like now:</p><p><img loading="lazy" alt="Bump doc with favicon.png" src="/assets/images/favicon-b1d39815c9c5843484595592dff9e2a2.png" width="1200" height="559" class="img_ev3q"></p><p>And icing on the cake: it works for your <a href="https://docs.bump.sh/help/hubs/" target="_blank" rel="noopener noreferrer">hub</a> too!</p><p>Happy enhancement!</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Better change summaries]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/07/02/better-change-summaries</link>
+            <guid>/2020/07/02/better-change-summaries</guid>
+            <pubDate>Thu, 02 Jul 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes & headers) in the API changelogs and notifications we send.]]></description>
+            <content:encoded><![CDATA[<p>We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes &amp; headers) in the API changelogs and notifications we send.</p><p>Here an example of a previous summary:</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Endpoint updated: Versions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Endpoint updated: Validations</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>Which now becomes:</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Updated: POST /docs/{:id}/versions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Body attribute added: specification</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Response added: 200</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Responses removed: 201, default</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Updated: POST /docs/{:id}/validations</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Body attribute added: specification</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  Response removed: default</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>It is now active for all new deployments. We’ll be recalculating the summaries of previous deployments to make your API changelogs clearer soon.</p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Documentation examples for lazy people]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/06/12/enhanced-examples</link>
+            <guid>/2020/06/12/enhanced-examples</guid>
+            <pubDate>Fri, 12 Jun 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[What's the first thing you look at when exploring a new tool? If you're as lazy as I am, it's probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.]]></description>
+            <content:encoded><![CDATA[<p>What's the first thing you look at when exploring a new tool? If you're as lazy as I am, it's probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.</p><p>First, we have improved the way we auto-generate examples when missing. We now generate them based on the format of the attribute, for the following formats: email, url, date, date-time and UUID.</p><p><img loading="lazy" src="https://cloud.headwayapp.co/changelogs_images/images/big/000/047/932-74090dff60fa2591c44bb291882921e52a6a136c.png" alt="Capture d’écran 2020-05-22 à 17.38.56.png" class="img_ev3q"></p><p>For requests with a body, we now display the whole body example, just under the cURL command example.</p><p>And last but not least, copying an example has never been easier: we have added a copy button for cURL and request body examples:</p><p><img loading="lazy" src="https://cloud.headwayapp.co/changelogs_images/images/big/000/047/934-5691743f4132ecdc68c12f439ffc69a5ccf2729e.gif" alt="May-22-2020 17-45-20.gif" class="img_ev3q"></p>]]></content:encoded>
+            <category>Improvement</category>
+        </item>
+        <item>
+            <title><![CDATA[Your whole ecosystem on a single page]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/04/24/introducing-hubs</link>
+            <guid>/2020/04/24/introducing-hubs</guid>
+            <pubDate>Fri, 24 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.]]></description>
+            <content:encoded><![CDATA[<p>Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.</p><p><img loading="lazy" src="https://cloud.headwayapp.co/changelogs_images/images/big/000/046/230-4d740fb504ecd138814ef507bb3fc4b256fd2118.png" alt="home-hub.png" class="img_ev3q"></p><p>Highlighted features:</p><ul><li>custom domain support</li><li>documentations can be grouped by tag</li><li>default settings at the hub level, applied to all its documentations</li><li>auto-creation of hub documentations from your CI</li><li>and obviously, OpenAPI and AsyncAPI support</li></ul><p>Hubs are available with our Business plan.  Learn more <a href="https://help.bump.sh/hubs" target="_blank" rel="noopener noreferrer">on our help center</a>.</p>]]></content:encoded>
+            <category>New feature</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing our GitHub action]]></title>
+            <link>https://docs.bump.sh/product-updates/2020/02/20/introducing-our-github-action</link>
+            <guid>/2020/02/20/introducing-our-github-action</guid>
+            <pubDate>Thu, 20 Feb 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Deploying your API documentation has never been so simple if you are using GitHub. We have just released our GitHub action, which lets you super easily control when and how you want to deploy your doc.]]></description>
+            <content:encoded><![CDATA[<p>Deploying your API documentation has never been so simple if you are using GitHub. We have just released <a href="https://github.com/marketplace/actions/api-documentation-on-bump" target="_blank" rel="noopener noreferrer">our GitHub action</a>, which lets you super easily control when and how you want to deploy your doc.</p><p>All you have to do is configuring your workflow:</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">steps:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  - name: Checkout</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    uses: actions/checkout@v2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  - name: Deploy API documentation</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    uses: bump-sh/github-action@0.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    with:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      id: &lt;BUMP_DOC_ID&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      token: &lt;BUMP_DOC_TOKEN&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      file: doc/api-documentation.yml</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>You can see it in action on our <a href="https://github.com/bump-sh/bump-ci-example/tree/master/.github/workflows" target="_blank" rel="noopener noreferrer">workflow examples</a> 😎</p>]]></content:encoded>
+            <category>New feature</category>
+        </item>
+    </channel>
+</rss>
