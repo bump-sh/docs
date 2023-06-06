@@ -1,5 +1,5 @@
 ---
-title: Lightning-fast API Documentation rendering
+title: Lightning-fast API documentation rendering
 tags: [Improvement]
 image: /files/changelog/bump-sh-performance-enhancements.png
 ---
