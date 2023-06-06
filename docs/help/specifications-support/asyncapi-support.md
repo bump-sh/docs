@@ -1,12 +1,8 @@
 # AsyncAPI Support
 
-## Current support state
-
-Event driven APIs world is more complex than REST APIs one: there are more protocols, more tools, more different architectures. As a consequence, AsyncAPI is more complex that OpenAPI to support. We wanted to open our beta fast, so we have chosen to release it with minimal features.
-
 ## Currently supported
 
-Bump is able to extract:
+Bump.sh is able to extract:
 
 - root properties (AsyncAPI Object)
 - channels (with automatic grouping according to channel name or tag grouping)
@@ -16,11 +12,11 @@ Bump is able to extract:
 
 ## Partially supported: message object `payload`
 
-Message#payload could be of any type according to the specification, but we only support `SchemaObject` type.
+[Message object](https://github.com/okere-prince/asyncapi/blob/master/versions/2.0.0/asyncapi.md#message-object) field `payload` could be of any type according to the specification, but we only support `SchemaObject` type.
 
 ## Partially supported: server `security` and `securitySchemes`
 
-We support AsyncAPI `securitySchemes` property with these authentication types:
+AsyncAPI `securitySchemes` property with these authentication types are supported:
 
 - `http`
 - `apiKey`
@@ -28,17 +24,40 @@ We support AsyncAPI `securitySchemes` property with these authentication types:
 - `oauth2`
 - `openIdConnect`
 
-We do not support `X509`, `symmetricEncryption`, `asymmetricEncryption`, `plain`, `scramSha256`, `scramSha512` nor `gssapi.` To describe these authentication types, please use our [custom `x-topics` property](doc-topics.md) for now.
+The following authentication types are **not** supported: 
+- `X509`
+- `symmetricEncryption`
+- `asymmetricEncryption`
+- `plain`
+- `scramSha256`
+- `scramSha512`
+- `gssapi.`
+To describe these authentication types, please use our [custom `x-topics` property](doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
 
-JSON Schema provide possibility to declare a property as read or write Only, with boolean fields writeOnly and readOnly (cf JSON Schema documentation).
+:::info
+Properties defined as `writeOnly` are hidden when they belong to a **subscribe operation**.
+Properties defined as `readOnly` are hidden when they belong to a **publish operation**.
+:::
 
-Basically, in Async API context, it means that a writeOnly property makes sense in request only (as password for example). Thus, we decided to hide a property defined as writeOnly when it belongs to a subscribe operation (messages produced by the application and sent to the channel).
+In the AsyncAPI context, most often, a subscriber (or consumer) is an application that connects to the broker, manifests an interest in a certain type of message, and leaves the connection open so the broker can push messages from the publisher to them. (more info on that [in the AsyncAPI documentation](https://www.asyncapi.com/docs/tutorials/getting-started/event-driven-architectures))
 
-And a readOnly makes sense in response only (as created_at, updated_at, your call...). Similarly,  we decided to hide a property defined as readOnly when it belongs to a publish operation (messages consumed by the application from the channel).
+JSON Schema provides the possibility to declare a property as read or write only, with boolean fields `writeOnly` and `readOnly` (cf [JSON Schema documentation](https://json-schema.org/draft-07/json-schema-validation.html#rfc.section.10.3)).
 
-Thus, it becomes easy to use the same Schema Object in different context, for example as seen below:
+Basically, in Async API context, it means that a `writeOnly` property makes sense in a **request** only (as password for example).
+
+- `writeOnly` properties are hidden when they belong to a subscribe operation (messages produced by the application and sent to the channel).
+
+`readOnly` makes sense in a **response** only ( `created_at`, `updated_at`, `uuid`...). Similarly, we decided to hide a property defined as readOnly when it belongs to a publish operation (messages consumed by the application from the channel).
+
+- `readOnly` properties are hidden when they belong to a publish operation (messages consumed by the application from the channel).
+
+:::info
+Not displaying `writeOnly` properties in subscribe operations and `readOnly` properties in publish operations allows the use of same `Schema Object` everywhere it is needed, without generating  confusing informations in the documentation.
+:::
+
+Thus, it becomes easy to use the same `Schema Object` in different contexts, for example as seen below:
 
 ```json
 "schema": {
@@ -59,5 +78,6 @@ Thus, it becomes easy to use the same Schema Object in different context, for ex
 
 ## Add topics to your documentation
 
-As this is not supported by AsyncAPI, we created a custom property to enrich your documentation. Find out more in our [dedicated section](doc-topics.md).
+You can add extra information to your documentation by using Bump.sh custom `x-topics`.
 
+Read more in the [Topics section of this documentation](doc-topics.md).
