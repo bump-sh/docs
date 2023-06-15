@@ -142,6 +142,44 @@ bump deploy path/to/file.json --doc my-documentation --branch staging
 You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your documentation `settings > CI deployment`page.
 :::
 
+## Deploy a folder
+
+When using the [Hub](../hubs) feature on Bump.sh, you might want to deploy multiple api definition files in a single command. The `deploy` command described in the [previous paragraph](#deploy-a-file) accepts a folder path as argument to do just that:
+
+```shell
+bump deploy path/to/apis/ --hub my-hub
+```
+
+:::info
+You can find your own `my-hub` slug from your [hub settings](https://bump.sh/hubs).
+:::
+
+Take into account your file naming convention by using the `--filename-pattern <pattern>` option.
+
+Note that it can include `*` wildcard special character, `{slug}` filter that will extract your documentation's slug from the filename, as well as any other fixed characters.
+
+Here's a practical example. Suppose you have the following files in your `path/to/apis/` directory:
+
+```undefined
+path/to/apis
+└─ private-api-users-service.json
+└─ partner-api-payments-service.yml
+└─ public-api-contracts-service.yml
+└─ data.json
+└─ README.md
+```
+
+In order to deploy the 3 services api definition files from this folder (`private-api-users-service.json`, `partner-api-payments-service.yml` and `public-api-contracts-service.yml`). You can execute the following command:
+
+```shell
+bump deploy path/to/apis/ --hub my-hub --filename-pattern *-api-{slug}-service
+```
+
+
+:::caution
+You will need to pass your private hub access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found from your hub `settings > CI deployment` page.
+:::
+
 ## Compatible specification types
 
 We currently support [OpenAPI](https://github.com/OAI/OpenAPI-Specification) from 2.0 (called Swagger) to 3.1 and [AsyncAPI 2.x](https://www.asyncapi.com/docs/reference/specification/v2.5.0) specification file types. Both YAML or JSON file formats are accepted file inputs to the CLI.
