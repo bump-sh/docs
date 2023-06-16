@@ -44,3 +44,15 @@ In this case, you have to provide the following parameters:
 - `--hub`:  the hub slug (or id)
 - `--token`: the hub token
 
+You can also combine this with the `--filename-pattern <pattern>` flag if you want to deploy multiple api definition files all at once.
+
+```shell
+bump deploy your/apis/folder/ --auto-create --filename-pattern *-{slug}-api --hub hub-slug-or-id --token hub-token
+```
+
+This command will search all files from the `your/apis/folder/` which matches the pattern `*-{slug}-api` and deploy each matching file to the corresponding `{slug}` documentation.
+
+For instance, a file called `private-payment-service-api.yml` will be deployed to a documentation on Bump.sh with the slug `payment-service`. Where as a file called `data.json` will not matched and be ignored by the command stated above.
+
+For more details about the folder deployment inside a Hub, please check the [Bump CLI related paragraph documentation page](../bump-cli#deploy-a-folder).
+
