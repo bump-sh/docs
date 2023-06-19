@@ -12,7 +12,7 @@ Bump.sh is able to extract:
 
 ## Partially supported: message object `payload`
 
-[Message object](https://github.com/okere-prince/asyncapi/blob/master/versions/2.0.0/asyncapi.md#message-object) field `payload` could be of any type according to the specification, but we only support `SchemaObject` type.
+[Message object](https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject) field `payload` could be of any type according to the specification, but we only support `SchemaObject` type.
 
 ## Partially supported: server `security` and `securitySchemes`
 
