@@ -31,7 +31,7 @@ The following authentication types are **not** supported:
 - `plain`
 - `scramSha256`
 - `scramSha512`
-- `gssapi.`
+- `gssapi`
 To describe these authentication types, please use our [custom `x-topics` property](doc-topics.md) for now.
 
 ## readOnly and writeOnly properties
