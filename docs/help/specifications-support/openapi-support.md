@@ -13,30 +13,7 @@ We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, 
 
 ## readOnly and writeOnly properties
 
-JSON Schema provides possibility to declare a property as read or write Only, with boolean fields writeOnly and readOnly (cf OpenAPI 3.0.3 or JSON Schema documentation).
-
-Basically, in REST API context, it means that a writeOnly property makes sense in request only (as password for example). Thus, we decided to hide a property defined as writeOnly when it belongs to a response.
-
-And a readOnly makes sense in response only (as created_at, updated_at, your call...). Similarly,  we decided to hide a property defined as readOnly when it belongs to a request body.
-
-Thus, it becomes easy to use the same Schema Object in different contexts, for example as seen below:
-
-```json
-"schema": {
-  "properties": {
-    "password": {
-      "type": "string",
-      "format": "password",
-      "writeOnly": true
-    },
-    "created_at": {
-      "type": "string",
-      "format": "date-time",
-      "readOnly": true
-    }
-  }
-}
-```
+JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](/specifications-support/json-schema.md#readonly-and-writeonly-properties).
 
 ## Add topics to your documentation
 
