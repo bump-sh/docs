@@ -16,7 +16,16 @@ const sidebars = {
   help:
     [
       'index',
-      'getting-started',
+      {
+        type: 'category'
+        label: 'Getting Started'
+        link: {type: 'doc', id: 'getting-started/index'},
+        collapsible: true,
+        collapsed: false,
+        items: [
+          'getting-started/fastapi'
+        ],
+      }
       'bump-cli',
       {
         type: 'category',
