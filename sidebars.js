@@ -25,7 +25,7 @@ const sidebars = {
         items: [
           'getting-started/fastapi'
         ],
-      }
+      },
       'bump-cli',
       {
         type: 'category',
