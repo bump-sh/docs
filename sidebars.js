@@ -18,7 +18,7 @@ const sidebars = {
       'index',
       {
         type: 'category'
-        label: 'Getting Started'
+        label: 'Getting Started',
         link: {type: 'doc', id: 'getting-started/index'},
         collapsible: true,
         collapsed: false,
