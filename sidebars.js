@@ -79,7 +79,8 @@ const sidebars = {
         items: [
           'doc-topics',
           'custom-domains',
-          'meta-images'
+          'meta-images',
+          'doc-code-samples',
         ],
       },
       'faq',
