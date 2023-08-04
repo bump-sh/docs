@@ -44,6 +44,10 @@
   font-weight: var(--font-weight-bold);
 }
 
+.markdown img {
+  border-radius: var(--spacing-3);
+}
+
 .pagination-nav__label {
   font-weight: var(--font-weight-normal);
 }
