@@ -21,7 +21,7 @@ const sidebars = {
         label: 'Getting Started',
         link: {type: 'doc', id: 'getting-started/index'},
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           'getting-started/fastapi'
         ],
