@@ -8,7 +8,7 @@ The following assumes your local machine is configured with Python and FastAPI, 
 
 1. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
 
-2. Install the Bump.sh CLI with NPM as below, or use [alternative options](../bump-cli.md), with
+2. Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true) as below, or use [alternative options](../bump-cli.md), with
 
 ```bash
 npm install -g bump-cli
