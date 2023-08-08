@@ -6,6 +6,6 @@ From OpenAPI and AsyncAPI specifications, Bump.sh generates the documentation yo
 
 Our guides below will help you locate and use those files to deploy your API docs on Bump.sh:
 
-- [Get started here](/quick-start) if you work directly with an OpenAPI or AsyncAPI file.
-- [Get started here](/api-platform) if you are building an API with API Platform (PHP).
-- [Get started here](/fastapi) if you are building an API with FastAPI (Python).
+- [Quick start with specification files](getting-started/quick-start) if you work directly with an OpenAPI or AsyncAPI file.
+- [Quick start with API Platform](getting-started/api-platform) if you are building an API with API Platform (PHP).
+- [Quick start with FastAPI](getting-started/fastapi) if you are building an API with FastAPI (Python).
