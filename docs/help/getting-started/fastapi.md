@@ -25,7 +25,7 @@ Note: You might need, depending on how you usually run your Python commands, to 
 4. Deploy your doc to Bump.sh with
 
 ```bash
-bump deploy http://127.0.0.1:8000/openapi.json --doc my-documentation
+bump deploy http://127.0.0.1:8000/openapi.json --doc YOUR_DOCUMENTATION_SLUG --token YOUR_TOKEN
 ```
 
 That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/index.md//#customization-options).
