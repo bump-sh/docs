@@ -23,7 +23,9 @@ const sidebars = {
         collapsible: true,
         collapsed: true,
         items: [
-          'getting-started/fastapi'
+          'getting-started/quick-start',
+          'getting-started/api-platform',
+          'getting-started/fastapi',
         ],
       },
       'bump-cli',
