@@ -19,7 +19,7 @@ npm install -g bump-cli
 4. Deploy your doc to Bump.sh with
 
 ```bash
-bump deploy https://localhost/docs.json --doc YOUR_DOCUMENTATION_SLUG --token YOUR_TOKEN
+bump deploy https://localhost/docs.json --doc my-documentation
 ```
 
 That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/index.md//#customization-options).
