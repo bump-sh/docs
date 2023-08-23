@@ -1,0 +1,51 @@
+.help main {
+  display: grid;
+  gap: var(--gap-medium);
+  padding: var(--spacing-8) var(--spacing-10);
+}
+
+.help main button {
+  display: none;
+  width: fit-content;
+}
+
+.help main img {
+  max-width: 100%;
+}
+
+.help .main-content {
+  align-content: start;
+  column-gap: var(--gap-medium);
+  container: main-content / layout inline-size;
+  display: grid;
+  grid-template-columns: minmax(auto, var(--doc-content-width)) minmax(auto, 30ch);
+  grid-auto-rows: auto;
+  position: relative;
+}
+
+.help .main-content > :where(*) {
+  grid-column: 1 / 1;
+}
+
+#markdown-toc {
+  grid-column: 2 / -1;
+  grid-row: 1 / 1000;
+}
+
+@media(max-width: 800px) {
+  .help main button {
+    display: inline-flex;
+  }  
+
+  .help main {
+    grid-column: 1 / -1;
+  }
+
+  .help .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  #markdown-toc {
+    display: none;
+  }
+}

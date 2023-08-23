@@ -1,0 +1,31 @@
+#markdown-toc {
+  align-self: start;
+  border-left: var(--border-default);
+  grid-column: 2 / -1;
+  grid-row: 1 / 1000;
+  position: sticky;
+  top: var(--spacing-6);
+}
+
+#markdown-toc,
+#markdown-toc ul {
+  list-style-type: none;
+  padding-left: var(--spacing-6);
+}
+
+#markdown-toc,
+#markdown-toc ul,
+#markdown-toc li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+#markdown-toc :where(a) {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#markdown-toc :where(a:hover) {
+  color: var(--base-color);
+}

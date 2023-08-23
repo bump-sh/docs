@@ -1,0 +1,16 @@
+side-item a,
+side-item a:is(:focus, :visited) {
+  border-radius: var(--border-radius-medium);
+  color: var(--text-color);
+  padding: var(--spacing-1) var(--spacing-3);
+  text-decoration: none;
+}
+
+side-item a[aria-current="true"] {
+  background-color: color-mix(in srgb, var(--base-color), transparent 90%);
+  color: var(--link-color);
+}
+
+test {
+  
+}

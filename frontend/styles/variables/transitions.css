@@ -1,0 +1,6 @@
+:root {
+  /* Animations */
+  --base-duration: 150ms;
+  --base-timing: ease;
+  --theme-change-transition: background-color ease-out 0.1s;
+}

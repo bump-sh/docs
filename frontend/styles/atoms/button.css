@@ -1,0 +1,106 @@
+:where(.button, button, input[type="submit"], input[type="button"]) {
+  --button-base-color: var(--base-color);
+  --button-base-color-hover: var(--blue-70);
+
+  --button-color: var(--button-base-color);
+  --button-color-hover: var(--button-base-color-hover);
+  --button-text-color: var(--white);
+  --button-text-color-hover: var(--white);
+  --button-border-color: var(--button-color);
+  --button-border-color-hover: var(--button-color-hover);
+
+  align-items: center;
+  background-color: var(--button-color);
+  display: inline-flex;
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--border-radius-medium);
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  -webkit-font-smoothing: antialiased;
+  gap: var(--spacing-3);
+  height: var(--spacing-10);
+  line-height: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--base-duration) var(--base-timing),
+    border-color var(--base-duration) var(--base-timing);
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+:where(.button, button, input[type="submit"], input[type="button"]):hover {
+  background: var(--button-color-hover);
+  border-color: var(--button-border-color-hover);
+  color: var(--button-text-color-hover);
+  text-decoration: none;
+}
+
+:where(.button, button, input[type="submit"], input[type="button"]):focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+:where(.button, button, input[type="submit"], input[type="button"]):disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* --- button styles --- */
+
+/* inverted button with base color outline */
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-style="outline"] {
+  --button-color: var(--bg-color);
+  --button-color-hover: var(--bg-color);
+  --button-border-color: var(--button-base-color);
+  --button-border-color-hover: var(--button-base-color-hover);
+  --button-text-color: var(--button-base-color);
+  --button-text-color-hover: var(--button-base-color-hover);
+}
+
+/* inverted button with neutral outline */
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-style="secondary"] {
+  --button-color: var(--bg-color);
+  --button-color-hover: var(--bg-color);
+  --button-border-color: var(--border-color-default);
+  --button-text-color: var(--text-color);
+  --button-text-color-hover: var(--text-color);
+  --button-border-color-hover: var(--text-color);
+}
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-style="action"] {
+  --button-text-color: var(--text-color-inverted);
+  --button-color: var(--bg-color-inverted);
+  --button-color-hover: var(--bg-color-inverted);
+}
+
+/* --- button sizes --- */
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-size="small"] {
+  gap: var(--spacing-2);
+  height: var(--spacing-8);
+}
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-size="small"] svg {
+  height: var(--spacing-3);
+}
+
+/* --- button states --- */
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-state="success"] {
+  --button-base-color: var(--green-60);
+  --button-base-color-hover: var(--green-70);
+}
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-state="error"] {
+  --button-base-color: var(--red-60);
+  --button-base-color-hover: var(--red-70);
+}
+
+:where(.button, button, input[type="submit"], input[type="button"])[data-button-state="warning"] {
+  --button-base-color: var(--orange-60);
+  --button-base-color-hover: var(--orange-70);
+}
