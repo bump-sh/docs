@@ -1,0 +1,44 @@
+body {
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  grid-template-rows: auto 1fr auto;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body > header {
+  grid-area: header;
+}
+
+body > aside {
+  grid-area: aside;
+}
+
+body > main {
+  grid-area: main;
+}
+
+body > footer {
+  grid-area: footer;
+}
+
+body.help {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(var(--page-content-width), calc(100% - 64px)) 1fr;
+  gap: var(--spacing-8) var(--spacing-12);
+  justify-content: center;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
