@@ -4,4 +4,5 @@
 
   --gap-small: var(--spacing-3);
   --gap-medium: var(--spacing-6);
+  --gap-large: var(--spacing-9);
 }

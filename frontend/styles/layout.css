@@ -34,7 +34,7 @@ body.help {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr min(var(--page-content-width), calc(100% - 64px)) 1fr;
+  grid-template-columns: 1fr min(var(--page-content-width), calc(100% - var(--spacing-20))) 1fr;
   gap: var(--spacing-8) var(--spacing-12);
   justify-content: center;
 }

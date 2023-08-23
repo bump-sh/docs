@@ -4,7 +4,7 @@ header {
   display: grid;
   gap: var(--gap-default);
   grid-template-columns: auto 1fr;
-  padding: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-6);
   position: relative;
 }
 
@@ -46,5 +46,11 @@ nav-links {
 
   nav-links[data-toggle-active="true"] {
     left: 0;
+  }
+}
+
+@media(max-width: 600px) {
+  header input[type="search"] {
+    display: none;
   }
 }

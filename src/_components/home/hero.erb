@@ -1,0 +1,12 @@
+<home-hero>
+  <div class="wrapper">
+    <h1>Welcome to Bump.sh Help Center</h1>
+    <p>Find everything you need to know for building the best ecosystem for your APIs.</p>
+    <%= liquid_render "bridgetown_quick_search/search" %>
+    <div class="cards">
+      <% @site.data.home.cards.each do |card| %>
+        <%= render Home::Hero::Card.new(card: card) %>
+      <% end %>
+    </div>
+  </div>
+</home-hero>
