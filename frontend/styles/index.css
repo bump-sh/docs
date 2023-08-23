@@ -19,4 +19,5 @@
 @import "components/search.css";
 @import "components/toc.css";
 
+@import "pages/home.css";
 @import "pages/help.css";

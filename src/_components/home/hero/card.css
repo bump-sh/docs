@@ -1,0 +1,37 @@
+home-hero-card {
+  background: color-mix(in srgb, var(--white) 70%, transparent);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-elevation-low);
+  padding: var(--spacing-8) var(--spacing-9);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    box-shadow: var(--shadow-elevation-medium);
+    transform: scale(1.05);
+  }
+
+  a {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+    text-decoration: none;
+  }
+
+  h2, p {
+    color: var(--title-color);
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  img {
+    height: 4rem;
+    margin-bottom: var(--spacing-4);
+  }
+}

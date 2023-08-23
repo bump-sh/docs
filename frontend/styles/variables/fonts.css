@@ -2,6 +2,7 @@
   --font-text: "Avenir Next";
 
   --text-color: var(--gray-70);
+  --title-color: var(--black);
 
   --link-color: var(--blue-60);
   --link-color-hover: var(--gray-50);
