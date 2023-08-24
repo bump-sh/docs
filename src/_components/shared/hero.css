@@ -1,0 +1,16 @@
+page-hero {
+  align-items: center;
+  border-bottom: var(--border-default);
+  display: flex;
+  flex-direction: column;
+  min-height: 8rem;
+  padding-block: var(--spacing-10);
+
+  h1, p {
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}

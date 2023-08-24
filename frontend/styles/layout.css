@@ -17,6 +17,7 @@ body > aside {
 }
 
 body > main {
+  container: main / inline-size;
   grid-area: main;
 }
 
@@ -35,10 +36,19 @@ body.help {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr min(var(--page-content-width), calc(100% - var(--spacing-20))) 1fr;
-  gap: var(--spacing-8) var(--spacing-12);
+  column-gap: var(--spacing-12);
   justify-content: center;
 }
 
 .wrapper > * {
   grid-column: 2;
+}
+
+.wrapper[data-wrapper-size="small"] {
+  --page-content-width: 1000px;
+}
+
+.full-bleed {
+  grid-column: 1 / -1;
+  padding-inline: var(--spacing-10);
 }

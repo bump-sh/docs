@@ -6,5 +6,6 @@ nav-item :is(a, a:visited, a:focus) {
 }
 
 nav-item :is(a:hover) {
-  background-color: var(--gray-20);
+  background-color: var(--bg-color-selected);
+  color: var(--base-color);
 }

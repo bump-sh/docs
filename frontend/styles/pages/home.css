@@ -4,6 +4,8 @@
   }
 
   .home-content {
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-20);
     padding-block: var(--spacing-20);
 

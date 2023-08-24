@@ -8,6 +8,7 @@
   --border-radius-small: var(--spacing-05);
   --border-radius-medium: var(--spacing-1);
   --border-radius-large: var(--spacing-2);
+  --border-radius-large: var(--spacing-5);
 
   --box-shadow-medium: 0px 5px 12px rgba(var(--black-rgb), 0.1);
   --box-shadow-large: 0px 5px 24px rgba(var(--black-rgb), 0.1);

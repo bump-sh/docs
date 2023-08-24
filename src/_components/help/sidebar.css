@@ -1,7 +1,7 @@
 side-bar {
   border-right: var(--border-default);
   width: var(--doc-sidebar-width);
-  z-index: 50;
+  z-index: 110;
 }
 
 side-bar aside {
@@ -61,7 +61,8 @@ side-bar li {
     left: calc(var(--doc-sidebar-width) * -1);
     max-height: 100vh;
     overflow-y: scroll;
-    position: absolute;
+    overscroll-behavior: contain;
+    position: fixed;
     transition: all 0.4s ease-in-out;
     top: 0;
   }

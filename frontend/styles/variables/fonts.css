@@ -2,6 +2,9 @@
   --font-text: "Avenir Next";
 
   --text-color: var(--gray-70);
+  --text-color-disabled: var(--gray-40);
+  --text-color-secondary: var(--slate-70);
+  --text-color-inverted: var(--white);
   --title-color: var(--black);
 
   --link-color: var(--blue-60);
