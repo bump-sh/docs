@@ -141,4 +141,5 @@
   --bg-color: var(--white);
   --bg-color-secondary: var(--gray-10);
   --bg-color-inverted: var(--black);
+  --bg-color-selected: color-mix(in srgb, var(--base-color), transparent 90%);
 }

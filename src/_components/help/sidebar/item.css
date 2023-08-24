@@ -7,7 +7,7 @@ side-item a:is(:focus, :visited) {
 }
 
 side-item a[aria-current="true"] {
-  background-color: color-mix(in srgb, var(--base-color), transparent 90%);
+  background-color: var(--bg-color-selected);
   color: var(--link-color);
 }
 

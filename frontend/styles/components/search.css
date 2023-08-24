@@ -1,4 +1,7 @@
-input[type="search"] {
-  background: var(--bg-color) url(/images/icons/search.svg) left var(--spacing-3) center no-repeat;
-  padding-left: var(--spacing-9);
+bridgetown-search-form {
+  input[type="search"] {
+    background: var(--bg-color) url(/images/icons/search.svg) left var(--spacing-3) center no-repeat;
+    width: 100%;
+    padding-left: var(--spacing-9);
+  }
 }

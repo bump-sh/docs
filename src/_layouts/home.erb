@@ -2,29 +2,31 @@
 layout: default
 ---
 
-<%= render Home::Hero.new %>
-<div class="wrapper home-content">
-  <%= render Home::GettingStarted.new %>
-  <section class="core-concepts">
-    <h2>Core Concepts</h2>
-    <ul>
-      <li>
-        <h3>
-          <a href="<%= relative_url "help/specifications-support/openapi-support" %>">
-            Specification Support
-          </a>
-        </h3>
-        <p>Which and how specifications are supported.</p>
-      </li>
-      <li>
-        <h3>
-          <a href="<%= relative_url "help/api-change-management/index" %>">
-            Change Management
-          </a>
-        </h3>
-        <p>Never miss any changes of your API, check them with the diff.</p>
-      </li>
-    </ul>
-  </section>
-  <%= yield %>
-</div>
+<main class="wrapper">
+  <%= render Home::Hero.new %>
+  <div class="home-content">
+    <%= render Home::GettingStarted.new %>
+    <section class="core-concepts">
+      <h2>Core Concepts</h2>
+      <ul>
+        <li>
+          <h3>
+            <a href="<%= relative_url "help/specifications-support/openapi-support" %>">
+              Specification Support
+            </a>
+          </h3>
+          <p>Which and how specifications are supported.</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<%= relative_url "help/api-change-management/index" %>">
+              Change Management
+            </a>
+          </h3>
+          <p>Never miss any changes of your API, check them with the diff.</p>
+        </li>
+      </ul>
+    </section>
+    <%= yield %>
+  </div>
+</main>

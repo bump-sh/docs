@@ -7,13 +7,7 @@
     <%# lit :bump_navbar, logo: relative_url('/images/bump-logo.svg') %>
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 
-    <% if data.sidebar %>
-      <%= render Help::Sidebar.new(metadata: site.metadata, resource: resource, page_list: collections.help.resources) %>
-    <% end %>
-
-    <main>
-      <%= yield %>
-    </main>
+    <%= yield %>
 
     <%= render Shared::Footer.new %>
   </body>

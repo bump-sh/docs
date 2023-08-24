@@ -39,6 +39,11 @@ collections:
     output: true
     future: true
     sort_by: order
+  updates:
+    name: Product Updates
+    output: true
+    permalink: pretty
+    future: true
 
 kramdown:
   parse_html_blocks: true

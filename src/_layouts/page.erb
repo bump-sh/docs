@@ -2,6 +2,9 @@
 layout: default
 ---
 
-<h1><%= data.title %></h1>
-
-<%= yield %>
+<main class="wrapper">
+  <%= render Shared::Hero.new(title: data.title) %>
+  <section>
+    <%= yield %>
+  </section>
+</main>

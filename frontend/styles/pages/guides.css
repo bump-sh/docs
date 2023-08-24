@@ -1,0 +1,64 @@
+.guides {
+  .section-container {
+    container: guides / inline-size;
+    display: grid;
+    gap: var(--gap-xlarge);
+    grid-template-columns: 1fr 1fr;
+    margin-block: var(--spacing-16);
+  }
+
+  guide-category {
+    grid-column: 1 / -1;
+
+    &[data-column-position] {
+      flex-direction: column;
+    }
+  
+    &[data-column-position="left"] {
+      grid-column: 1 / 1;
+    }
+  
+    &[data-column-position="right"] {
+      grid-column: 2 / -1;
+    }
+
+    guide-list ul {
+      width: 100%;
+    }
+  }
+
+  @container guides (width < 1000px) {
+    guide-category {
+      flex-direction: column;
+  
+      &[data-column-position] {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+.guide {
+  .double-pane {
+    --side-min-width: 250px;
+  }
+
+  .guide-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--spacing-10);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @container main (width < 800px) {
+    aside,
+    .guide-content {
+      border: 0;
+      padding: 0;
+    }
+  }
+}
