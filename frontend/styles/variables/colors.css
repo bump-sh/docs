@@ -142,4 +142,5 @@
   --bg-color-secondary: var(--gray-10);
   --bg-color-inverted: var(--black);
   --bg-color-selected: color-mix(in srgb, var(--base-color), transparent 90%);
+  --bg-color-gradient: linear-gradient(135deg, var(--blue-20), var(--blue-10), var(--purple-10));
 }

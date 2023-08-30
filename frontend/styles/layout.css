@@ -45,10 +45,38 @@ body.help {
 }
 
 .wrapper[data-wrapper-size="small"] {
-  --page-content-width: 1000px;
+  --page-content-width: 800px;
 }
 
 .full-bleed {
   grid-column: 1 / -1;
-  padding-inline: var(--spacing-10);
+}
+
+.double-pane {
+  --side-min-width: 100px;
+
+  display: grid;
+  grid-template-columns: max(var(--side-min-width), min(25%, 200px)) auto;
+  gap: var(--spacing-10) clamp(var(--spacing-10), 15%, var(--spacing-34));
+
+  aside {
+    border-right: var(--border-default);
+    box-sizing: border-box;
+    height: 100%;
+    padding-block: var(--spacing-14);
+    padding-right: var(--spacing-10);
+    width: 100%
+  }
+}
+
+@container main (width < 800px) {
+  .double-pane {
+    gap: var(--gap-large);
+    grid-template-columns: 1fr;
+    padding-block: var(--spacing-10);
+
+    aside {
+      border: 0;
+    }
+  }
 }

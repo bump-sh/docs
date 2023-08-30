@@ -38,11 +38,14 @@ collections:
     name: Help
     output: true
     future: true
-    sort_by: order
   updates:
     name: Product Updates
     output: true
     permalink: pretty
+    future: true
+  guides:
+    name: Guides
+    output: true
     future: true
 
 kramdown:

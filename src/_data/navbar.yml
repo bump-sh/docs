@@ -2,3 +2,4 @@ navbar:
   - {title: "Home", link: "/"}
   - {title: "Documentation", link: "/help"}
   - {title: "Product Updates", link: "/updates"}
+  - {title: "Guides", link: "/guides"}
