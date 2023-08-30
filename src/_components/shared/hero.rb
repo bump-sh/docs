@@ -1,5 +1,5 @@
 class Shared::Hero < Bridgetown::Component
-  def initialize(title:)
-    @title = title
+  def initialize(title:, description: nil)
+    @title, @description = title, description
   end
 end

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<main class="wrapper">
+  <%= render Shared::Hero.new(title: data.title, description: "Tutorials and how-tos to get up and running with Bump.sh") %>
+  <div class="section-container">
+    <%= render Guides::Category.new(resources: collections.guides.resources.select { |guide| guide.data.categories.include? "Improvement" }.first(2), title: "Getting Started") do |list| %>
+      <p>Make your first steps into deploying a beautiful documentation for your API.</p>
+    <% end %>
+    <%= render Guides::Category.new(resources: collections.guides.resources.select { |guide| guide.data.categories.include? "New" }.first(3), title: "Bump.sh-specific Guides") do |list| %>
+      <p>Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.</p>
+      <a href="<%= relative_url "/guides/new" %>">
+        Browse all Bump-related Guides
+        <img src="<%= relative_url "images/icons/arrow-right.svg"%>" />
+      </a>
+    <% end %>
+    <%= render Guides::Category.new(resources: collections.guides.resources.select { |guide| guide.data.categories.include? "API" }.first(3), title: "OpenAPI", position: "left") do |list| %>
+      <p>Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.</p>
+      <a href="<%= relative_url "/guides/api" %>">
+        Browse all OpenAPI Guides
+        <img src="<%= relative_url "images/icons/arrow-right.svg"%>" />
+      </a>
+    <% end %>
+    <%= render Guides::Category.new(resources: collections.guides.resources.select { |guide| guide.data.categories.include? "API" }.first(3), title: "AsyncPI", position: "right") do |list| %>
+      <p>Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.</p>
+      <a href="<%= relative_url "/guides/api" %>">
+        Browse all AsyncAPI Guides
+        <img src="<%= relative_url "images/icons/arrow-right.svg"%>" />
+      </a>
+    <% end %>
+  </div>
+  <%= yield %>
+</main>

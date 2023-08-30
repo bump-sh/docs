@@ -17,11 +17,13 @@
 @import "atoms/input.css";
 @import "atoms/label.css";
 
+@import "components/card.css";
 @import "components/search.css";
 @import "components/toc.css";
 @import "components/timeline.css";
 @import "components/update.css";
 
+@import "pages/category.css";
 @import "pages/guides.css";
 @import "pages/help.css";
 @import "pages/home.css";
