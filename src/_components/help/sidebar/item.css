@@ -10,7 +10,3 @@ side-item a[aria-current="true"] {
   background-color: var(--bg-color-selected);
   color: var(--link-color);
 }
-
-test {
-  
-}
