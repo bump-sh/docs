@@ -1,0 +1,28 @@
+author-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+  text-align: center;
+
+  .author-image {
+    border-radius: var(--border-radius-xlarge);
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+  }
+
+  h3, p {
+    margin: 0;
+  }
+
+  .links {
+    align-items: center;
+    display: flex;
+    gap: var(--gap-small);
+
+    img {
+      width: 20px;
+    }
+  }
+}
