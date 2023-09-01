@@ -1,6 +1,7 @@
 ---
 title: Enhanced Specifications Support
 categories: [Improvement]
+authors: [jay]
 ---
 
 Over the past weeks, we have considerably enhanced our support of the specifications.
