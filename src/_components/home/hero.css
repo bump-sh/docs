@@ -1,15 +1,15 @@
 home-hero {
   align-items: center;
+  animation: gradient 10s ease infinite;
+  background: linear-gradient(-45deg, var(--blue-30) 0%, var(--blue-10) 30%, var(--purple-10) 49%, var(--purple-10) 51%, var(--blue-10) 70%, var(--blue-30) 100%);
+  background-size: 300% 300%;
   border-radius: var(--border-radius-large);
   display: flex;
   flex-direction: column;
   gap: var(--gap-medium);
   margin: var(--spacing-4) var(--spacing-12);
-  padding-block: var(--spacing-20) var(--spacing-10);
+  padding: var(--spacing-20) var(--spacing-10) var(--spacing-10);
   text-align: center;
-  background: linear-gradient(-45deg, var(--blue-30) 0%, var(--blue-10) 30%, var(--purple-10) 49%, var(--purple-10) 51%, var(--blue-10) 70%, var(--blue-30) 100%);
-  background-size: 300% 300%;
-  animation: gradient 10s ease infinite;
 
   h1, p {
     margin: 0;
@@ -41,6 +41,7 @@ home-hero {
     gap: var(--spacing-10);
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: var(--spacing-4);
+    width: 100%;
   }
 
   @media (max-width: 1000px) {
