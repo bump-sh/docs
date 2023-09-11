@@ -1,6 +1,27 @@
 # JSON Schema support
 
-JSON schema is supported  by Bump.sh
+Both OpenAPI and AsyncAPI specifications supports JSON Schema to define input and output data types, identified as a Schema Object:
+Most of the time, a Schema Object is defined with keyword `schema`, and each child property can also be defined as a Schema object (as per definition of the JSON Schema specification).
+
+```json
+"schema": { // this property is a Schema Object
+  "type": "object",
+  "properties": {
+    "hello": {
+      // this property named 'hello' is defined by Schema Object
+      "type": "string"
+    },
+    "world": {
+      // this property named 'world' is also defined by Schema Object
+      "type": "string"
+    }
+  }
+}
+```
+
+[Here a documentation we love about JSON Schema](https://json-schema.org/)
+
+Thus, JSON schema is supported by Bump.sh, for both AsyncAPI ond OpenAPI Specification.
 
 ## readOnly and writeOnly properties
 
@@ -10,6 +31,7 @@ Thus, it becomes easy to use the same `Schema Object` in different contexts, for
 
 ```json
 "schema": {
+  "type": "object",
   "properties": {
     "password": {
       "type": "string",
