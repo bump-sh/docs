@@ -56,3 +56,33 @@ Thus, it becomes easy to use the same `Schema Object` in different contexts, for
 :::info
 Not displaying `writeOnly` properties in subscribe operations and `readOnly` properties in publish operations allows the use of the same `Schema Object` everywhere it is needed, without generating  confusing informations in the documentation.
 :::
+
+
+## Enumerated or constant values
+
+It's frequent to have to restrict possible value(s) for a given property, and two keywords
+are available in JSON schema to do this:
+
+When several values are possible, good practice is to use keyword `enum`,
+as mentioned in [Enumerated values documentation](https://json-schema.org/understanding-json-schema/reference/generic.html?highlight=const#enumerated-values).
+
+Keyword `enum` is used, it has to declare an array of all possible values.
+In your documentation, you'll see a sentence:
+> Values are `foo` and `bar`.
+
+When only one value is possible, instead of `enum` with one-item array,
+you should consider keyword `const`, used to declare a single allowed value,
+as mentioned in [Constant values documentation](https://json-schema.org/understanding-json-schema/reference/generic.html?highlight=const#constant-values).
+
+In this case, property description in your documentation will look like that:
+> Value is 42.
+
+:::info
+** `enum` and `const`?**
+
+When both `enum` and `const` fields are provided, allowed values is not easy to deduce.
+
+`foo`, `bar`, 42?
+
+In this case, only `const` field is extracted, and you should be warned about in your deployment logs.
+:::
