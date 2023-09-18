@@ -39,6 +39,7 @@ const sidebars = {
           'continuous-integration/github-actions'
         ],
       },
+      'publish-documentation/release-management',
       {
         type: 'category',
         label: 'Specifications Support',
