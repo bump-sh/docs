@@ -15,5 +15,5 @@ There are 2 reasons for that:
 - first, we are a fresh new project, which is far from being complete. So we may have decided to postpone some features due to our priorities.
 - second, we may have decided that a specification feature adds too much complexity to the documentation, and have preferred to simply ignore it to keep things simple for now.
 
-Feel free to ask us why a feature you need is missing, we'll be happy to answer and try to find a solution with you.
+Feel free to <a class="intercom-launcher-selector" href="mailto:help@bump.sh">ask us</a> why a feature you need is missing, we'll be happy to answer and try to find a solution with you.
 

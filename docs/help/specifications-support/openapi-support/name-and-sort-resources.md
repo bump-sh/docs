@@ -123,5 +123,5 @@ Two possibilities for this OpenAPI 3.1 documentation with endpoints and webhooks
 - [Resources grouped by path](https://bump.sh/hub/examples/doc/webhooks-extended)
 - [Resources grouped by tags](https://bump.sh/hub/examples/doc/webhooks-extended-grouped-by-tags)
 
-Finally, we hope these options will help you build the most readable documentations, feel free to [contact us](mailto:hello@bump.sh) if you need support or have some suggestion.
+Finally, we hope these options will help you build the most readable documentations, feel free to <a class="intercom-launcher-selector" href="mailto:help@bump.sh">contact us</a> if you need support or have some suggestion.
 

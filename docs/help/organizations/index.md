@@ -68,9 +68,9 @@ This is most likely due to an organization created during a trial that has not b
 
 ### Organizations are great but I need this another specific feature to work with my team.
 
-Organizations are a brand new feature we plan to polish with time. We're always open to feedback or suggestions, so please feel free to contact us anytime to discuss what would fit your needs the best.
+Organizations are a brand new feature we plan to polish with time. We're always open to feedback or suggestions, so please feel free to <a class="intercom-launcher-selector" href="mailto:help@bump.sh">contact us</a> anytime to discuss what would fit your needs the best.
 
 ### I would like to move one of my documentation/hubs from my personal space to an organization.
 
-If you cannot perform this operation on your end yet, we can surely do this for you. Contact us and we will take care of this!
+If you cannot perform this operation on your end yet, we can surely do this for you. <a class="intercom-launcher-selector" href="mailto:help@bump.sh">Contact us</a> and we will take care of this!
 
