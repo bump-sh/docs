@@ -26,7 +26,8 @@ module.exports = function pluginFathom(context, options) {
           {
             tagName: "script",
             innerHTML: `window.intercomSettings = {
-              app_id: '${appId}'
+              app_id: '${appId}',
+              custom_launcher_selector: '.intercom-launcher-selector',
             };
             (function(){
               var w=window;var ic=w.Intercom;
