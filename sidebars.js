@@ -57,6 +57,7 @@ const sidebars = {
           },
           'specifications-support/asyncapi-support',
           'specifications-support/markdown-support',
+          'specifications-support/json-schema',
           'specifications-support/polymorphism',
           'specifications-support/references',
         ],
