@@ -1,8 +1,0 @@
-I"�<p><img src="/images/updates/bindings_asyncapi_bump.png" alt="bindings_asyncapi_bump.png" /></p>
-
-<p>AsyncAPI users, you’ll be happy to know that Bump now supports bindings.</p>
-
-<p>As AsyncAPI allows many protocols, which is really nice, bindings are a useful and necessary mechanism to define protocol-specific information. Bump now displays protocol information defined at server, operation, and message levels, as part of an ongoing work for a better understanding of API documentations.</p>
-
-<p>Here’s an example: <a href="https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information">https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information</a></p>
-:ET

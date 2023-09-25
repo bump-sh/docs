@@ -1,7 +1,0 @@
-I"T<p>OpenAPI provides field <code class="highlighter-rouge">servers</code> on OperationObject, as an alternative url to service an operation.</p>
-<blockquote>
-  <p>If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value. cf <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#operationObject">OpenAPI-Specification</a></p>
-</blockquote>
-
-<p>From now on, Operations <code class="highlighter-rouge">servers</code> are supported to customize your operations examples (in definition and curl example).</p>
-:ET

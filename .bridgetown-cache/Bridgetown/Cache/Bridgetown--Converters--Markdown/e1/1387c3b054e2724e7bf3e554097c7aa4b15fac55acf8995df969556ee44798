@@ -1,8 +1,0 @@
-I"<p><img src="/images/updates/code-samples-support-openapi.png" alt="bump-sh-api-branch-management.png" /></p>
-
-<p>We now support the <code class="highlighter-rouge">x-codeSamples</code> extension that let you set language-specific code samples you expect your users to work with.</p>
-
-<p>Examples are often the first stop for developers in any API documentation. This extension allows you to set along a programming language, its custom code samples, for a more seamless developer experience when it comes to testing an API.</p>
-
-<p>Either supercharge your API documentation by setting language-specific code examples or keep things simple as the auto-generated cURL examples remain. See more about custom code sample <a href="https://docs.bump.sh/help/doc-code-samples/">in the docs</a>.</p>
-:ET

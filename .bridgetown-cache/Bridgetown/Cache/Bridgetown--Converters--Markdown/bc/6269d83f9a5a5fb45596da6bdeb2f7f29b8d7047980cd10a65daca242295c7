@@ -1,6 +1,0 @@
-I"#<p>They have many names: schema alternatives, discriminator, inheritance… but you probably know them as oneOf, anyOf and allOf.</p>
-
-<p>Bump now fully supports polymorphism for AsyncAPI and OpenAPI. You can already upload your latest API specification file to check it out. Or see it in action with our <a href="https://bump.sh/bump/doc/petstore-alternatives#operation-post-pets-body-animal-cat-species-species-alternative">demo documentation of the feature</a>!</p>
-
-<p><img src="/images/updates/polymorphism.png" alt="polymorphism.png" /></p>
-:ET

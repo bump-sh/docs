@@ -1,8 +1,0 @@
-I"�<p>Here is an update that was released some time ago but out of the radar: we now display all available types (even <code class="highlighter-rouge">nullable</code>) on any properties in your OpenAPI or AsyncAPI definition.</p>
-
-<p>You’ll now see these correctly displayed properties in your documentation. Multiple types may look like a slight improvement but will add clarification to your team and community.</p>
-
-<p>And we have an example to show how great it is (thanks to <a href="https://bump.sh/doc/meilisearch#operation-indexes-documents-search-body-filter">Meilisearch’s documentation</a>).</p>
-
-<p><img src="/images/updates/multiple-types.png" alt="multiple-types.png" /></p>
-:ET

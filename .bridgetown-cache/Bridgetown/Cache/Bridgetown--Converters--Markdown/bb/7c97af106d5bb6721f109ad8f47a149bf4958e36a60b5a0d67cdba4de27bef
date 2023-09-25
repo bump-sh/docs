@@ -1,8 +1,0 @@
-I"�<p>If some changes are more important than others, it is especially true for your API.</p>
-
-<p>From now on, we automatically detect if a new version of your API includes some breaking changes. It will be visible in the <a href="https://developers.bump.sh/changes">changelog page</a>, in the changelog email or the brand new RSS feed… but also during your API design phase while opening a pull request thanks to <a href="https://github.com/bump-sh/github-action/">our Github Action</a>.</p>
-
-<p><img src="/images/updates/breaking_changes.png" alt="breaking_changes.png" /></p>
-
-<p>With Bump, you will never miss a <em>breaking</em> change again.</p>
-:ET
