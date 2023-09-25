@@ -1,0 +1,20 @@
+I"�<p><img src="/images/updates/bump-sh-cli-2-7-0.png" alt="bump-sh-cli-2-7-0.png" /></p>
+
+<h3 id="multi-file-deployment">Multi-file Deployment</h3>
+
+<p>Deploying multiple files on your Hub has never been this effortless. You can now provide a directory path to deploy all files within a directory to your Bump.sh hub.</p>
+
+<p>For a more detailed walkthrough on how this works, check out the feature in action in our <a href="https://github.com/bump-sh/cli/releases/tag/v2.7.0">latest release notes</a>.</p>
+
+<h3 id="live-preview">Live Preview</h3>
+
+<p>Using the Live Preview feature  <code class="highlighter-rouge">bump preview --live my-definition-api.yml</code> now creates an immediate preview without waiting for the first change on the target file.</p>
+
+<h3 id="other-improvements">Other improvements</h3>
+
+<ul>
+  <li>Keeping up with the latest version of the CLI is now easier thanks to a new warning in case of outdated version usage.</li>
+  <li>Significant refactor of the deployment-related code to accommodate the new “Multiple files deploy” feature.</li>
+  <li>CLI upgraded to TypeScript 4.5 and performed some dependency upgrades.</li>
+</ul>
+:ET

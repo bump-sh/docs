@@ -1,0 +1,43 @@
+I"Ó<ul id="markdown-toc">
+  <li><a href="#readonly-and-writeonly-properties" id="markdown-toc-readonly-and-writeonly-properties">readOnly and writeOnly properties</a></li>
+</ul>
+
+<p>JSON schema is supported by Bump.sh</p>
+
+<h2 id="readonly-and-writeonly-properties">readOnly and writeOnly properties</h2>
+
+<p>JSON Schema provides the possibility to declare a property as read or write only, with boolean fields <code class="highlighter-rouge">writeOnly</code> and <code class="highlighter-rouge">readOnly</code> (cf <a href="https://json-schema.org/draft-07/json-schema-validation.html#rfc.section.10.3">JSON Schema documentation</a>).</p>
+
+<p>Thus, it becomes easy to use the same <code class="highlighter-rouge">Schema Object</code> in different contexts, for example as seen below:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"writeOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date-time"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>:::warning</p>
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">writeOnly</code> properties <strong>are hidden</strong> when they belong to a <code class="highlighter-rouge">subscribe</code> operation in AsyncAPI or a <code class="highlighter-rouge">response</code> in OpenAPI.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">readOnly</code> properties <strong>are hidden</strong> when they belong to a <code class="highlighter-rouge">publish</code> operation in AsyncAPI or a <code class="highlighter-rouge">request</code> in OpenAPI.
+:::</p>
+  </li>
+</ul>
+
+<p>:::info
+Not displaying <code class="highlighter-rouge">writeOnly</code> properties in subscribe operations and <code class="highlighter-rouge">readOnly</code> properties in publish operations allows the use of the same <code class="highlighter-rouge">Schema Object</code> everywhere it is needed, without generating  confusing informations in the documentation.
+:::</p>
+:ET

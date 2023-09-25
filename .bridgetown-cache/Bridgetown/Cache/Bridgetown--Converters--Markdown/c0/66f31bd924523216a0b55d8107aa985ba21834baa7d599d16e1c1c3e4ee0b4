@@ -1,0 +1,80 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#example-usage" id="markdown-toc-example-usage">Example usage</a></li>
+</ul>
+
+<p>Even though we generate a basic <code class="highlighter-rouge">cURL</code> code sample by default in your documentation, you might want to customize the example provided and share even more specific language code samples to your API consumers. This is why we added this custom property.</p>
+
+<p>Use the <code class="highlighter-rouge">x-codeSamples</code> property inside an Operation OpenAPI object. The <code class="highlighter-rouge">x-codeSamples</code> property accepts an array of code sample objects which are defined as such:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lang *</td>
+      <td>String</td>
+      <td>Code sample programming language name.</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>String</td>
+      <td>A label which will be used as a title in the code sample bloc. Defaults to the <code class="highlighter-rouge">lang</code> value if not provided.</td>
+    </tr>
+    <tr>
+      <td>source *</td>
+      <td>String</td>
+      <td>The source code sample content.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="info">
+  <p>Bump.sh relies on the <a href="https://github.com/highlightjs/highlight.js#supported-languages">Highlight.js lib</a> to color your code. If your language is not supported, the source code will be displayed anyway, just without color syntax.</p>
+</blockquote>
+
+<h2 id="example-usage">Example usage</h2>
+
+<p>The following screen capture shows the rendering of adding two code samples <code class="highlighter-rouge">cURL</code> and <code class="highlighter-rouge">Ruby</code> to your Operation.</p>
+
+<p><img src="/files/help/x-codesamples.gif" alt="x-codesamples.gif" /></p>
+
+<p>This is done by adding the following <code class="highlighter-rouge">x-codeSamples</code> array to your API definition:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paths</span><span class="pi">:</span>
+  <span class="na">/users</span><span class="pi">:</span>
+    <span class="na">get</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s">Retrieve a user</span>
+      <span class="na">operationId</span><span class="pi">:</span> <span class="s">getUserPath</span>
+      <span class="na">responses</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">...</span><span class="pi">]</span>
+      <span class="na">parameters</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">...</span><span class="pi">]</span>
+      <span class="na">x-codeSamples</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">lang</span><span class="pi">:</span> <span class="s">cURL</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s">Custom cURL</span>
+          <span class="na">source</span><span class="pi">:</span> <span class="pi">|</span>
+            <span class="s">curl \</span>
+              <span class="s">--user "name:password" \</span>
+              <span class="s">--request GET \</span>
+              <span class="s">--url 'https://api.example.com/v1/users' \</span>
+              <span class="s">--header 'Accept: application/json'</span>
+        <span class="pi">-</span> <span class="na">lang</span><span class="pi">:</span> <span class="s">ruby</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s">Ruby library</span>
+          <span class="na">source</span><span class="pi">:</span> <span class="pi">|</span>
+            <span class="s">require "http"</span>
+            <span class="s"> </span>
+            <span class="s">request = HTTP</span>
+              <span class="s">.basic_auth(:user =&gt; "name", :pass =&gt; "password")</span>
+              <span class="s">.headers(:accept =&gt; "application/json")</span>
+            <span class="s"> </span>
+            <span class="s">response = request.get("https://api.example.com/v1/users")</span>
+            <span class="s">if response.status.success?</span>
+              <span class="s"># Work with the response.body</span>
+            <span class="s">else</span>
+              <span class="s"># Handle error cases</span>
+            <span class="s">end</span>
+</code></pre></div></div>
+:ET

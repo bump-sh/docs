@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product Updates (Page 5) | Your awesome title</title>
+
+<meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+
+<link rel="stylesheet" href="/_bridgetown/static/index.WIAYYCEI.css" />
+<script src="/_bridgetown/static/index.4LUJF43L.js" defer></script>
+<script type="module">let lastmod = 0
+function startReloadConnection() {
+  const evtSource = new EventSource("/_bridgetown/live_reload")
+  evtSource.onmessage = event => {
+    if (document.querySelector("#bridgetown-build-error")) document.querySelector("#bridgetown-build-error").close()
+    if (event.data == "reloaded!") {
+      location.reload()
+    } else {
+      const newmod = Number(event.data)
+      if (lastmod > 0 && newmod > 0 && lastmod < newmod) {
+        location.reload()
+      } else {
+        lastmod = newmod
+      }
+    }
+  }
+  evtSource.addEventListener("builderror", event => {
+    let dialog = document.querySelector("#bridgetown-build-error")
+    if (!dialog) {
+      dialog = document.createElement("dialog")
+      dialog.id = "bridgetown-build-error"
+      dialog.style.borderColor = "red"
+      dialog.style.fontSize = "110%"
+      dialog.innerHTML = `
+        <p style="color:red">There was an error when building the site:</p>
+        <output><pre></pre></output>
+        <p><small>Check your Bridgetown logs for further details.</small></p>
+      `
+      document.body.appendChild(dialog)
+      dialog.showModal()
+    }
+    dialog.querySelector("pre").textContent = JSON.parse(event.data)
+  })
+  evtSource.onerror = event => {
+    if (evtSource.readyState === 2) {
+      // reconnect with new object
+      evtSource.close()
+      console.warn("Live reload: attempting to reconnect in 3 seconds...")
+
+      setTimeout(() => startReloadConnection(), 3000)
+    }
+  }
+}
+setTimeout(() => {
+  startReloadConnection()
+}, 500)
+</script>
+
+  </head>
+  <body class="updates" >
+    <header>
+  <a href="/">
+    <img src="/images/bump-logo.svg" alt="Bump.sh" />
+  </a>
+
+  <nav data-controller="toggle">
+    
+<bridgetown-search-form>
+  <input slot="input" type="search" class="" placeholder="Search…" />
+  <bridgetown-search-results theme=""></bridgetown-search-results>
+</bridgetown-search-form>
+
+    <button data-button-style="secondary" data-toggle-target="button" data-action="toggle#click">
+  <svg class="nav-icon" viewBox="0 0 100 100" width="80">
+    <path class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path class="line middle"
+          d="m 70,50 h -40" />
+    <path class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</button>
+
+    <nav-links data-toggle-target="item">
+        <nav-item>
+  <a href="/">Home</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/help">Documentation</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/updates">Product Updates</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/guides">Guides</a>
+</nav-item>
+
+    </nav-links>
+  </nav>
+</header>
+
+
+    <main class="wrapper">
+  <page-hero class="full-bleed wrapper">
+  <h1>Product Updates (Page 5)</h1>
+</page-hero>
+
+  <ul class="update-list">
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>July 02, 2020</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2020/07/02/better-change-summaries/">Better change summaries</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p>We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes &amp; headers) in the API changelogs and notifications we send.</p>
+
+<p>Here an example of a previous summary:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Endpoint updated: Versions
+Endpoint updated: Validations
+</code></pre></div></div>
+
+<p>Which now becomes:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Updated: POST /docs/{:id}/versions
+  Body attribute added: specification
+  Response added: 200
+  Responses removed: 201, default
+Updated: POST /docs/{:id}/validations
+  Body attribute added: specification
+  Response removed: default
+</code></pre></div></div>
+
+<p>It is now active for all new deployments. We’ll be recalculating the summaries of previous deployments to make your API changelogs clearer soon.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>June 12, 2020</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2020/06/12/enhanced-examples/">Documentation examples for lazy people</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p>What’s the first thing you look at when exploring a new tool? If you’re as lazy as I am, it’s probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.</p>
+
+<p>First, we have improved the way we auto-generate examples when missing. We now generate them based on the format of the attribute, for the following formats: email, url, date, date-time and UUID.</p>
+
+<p><img src="https://cloud.headwayapp.co/changelogs_images/images/big/000/047/932-74090dff60fa2591c44bb291882921e52a6a136c.png" alt="Capture d’écran 2020-05-22 à 17.38.56.png" /></p>
+
+<p>For requests with a body, we now display the whole body example, just under the cURL command example.</p>
+
+<p>And last but not least, copying an example has never been easier: we have added a copy button for cURL and request body examples:</p>
+
+<p><img src="https://cloud.headwayapp.co/changelogs_images/images/big/000/047/934-5691743f4132ecdc68c12f439ffc69a5ccf2729e.gif" alt="May-22-2020 17-45-20.gif" /></p>
+
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>April 24, 2020</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2020/04/24/introducing-hubs/">Your whole ecosystem on a single page</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New feature</a>
+            </div>
+            <p>Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.</p>
+
+<p><img src="https://cloud.headwayapp.co/changelogs_images/images/big/000/046/230-4d740fb504ecd138814ef507bb3fc4b256fd2118.png" alt="home-hub.png" /></p>
+
+<p>Highlighted features:</p>
+<ul>
+  <li>custom domain support</li>
+  <li>documentations can be grouped by tag</li>
+  <li>default settings at the hub level, applied to all its documentations</li>
+  <li>auto-creation of hub documentations from your CI</li>
+  <li>and obviously, OpenAPI and AsyncAPI support</li>
+</ul>
+
+<p>Hubs are available with our Business plan.  Learn more <a href="https://help.bump.sh/hubs">on our help center</a>.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>February 20, 2020</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2020/02/20/introducing-our-github-action/">Introducing our GitHub action</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New feature</a>
+            </div>
+            <p>Deploying your API documentation has never been so simple if you are using GitHub. We have just released <a href="https://github.com/marketplace/actions/api-documentation-on-bump">our GitHub action</a>, which lets you super easily control when and how you want to deploy your doc.</p>
+
+<p>All you have to do is configuring your workflow:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Deploy API documentation
+    uses: bump-sh/github-action@0.1
+    with:
+      id: &lt;BUMP_DOC_ID&gt;
+      token: &lt;BUMP_DOC_TOKEN&gt;
+      file: doc/api-documentation.yml
+</code></pre></div></div>
+
+<p>You can see it in action on our <a href="https://github.com/bump-sh/bump-ci-example/tree/master/.github/workflows">workflow examples</a> 😎</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+</ul>
+
+<post-pagination>
+    <div class="page-count">
+      Page 5 of 5
+    </div>
+    <ul class="pagination">
+      <li>
+          <a class="page previous" href="/updates/page/4/">
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor" /></svg>
+            Previous
+          </a>
+      </li>
+    </ul>
+  </post-pagination>
+
+
+</main>
+
+
+    <footer class="wrapper">
+  <div class="columns">
+      <footer-column>
+  <div class="title">
+    Product
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/api-documentation">API Documentation</a>
+      <a class="link" href="https://bump.sh/api-change-management">Change Management</a>
+      <a class="link" href="https://bump.sh/api-catalog">Hubs</a>
+      <a class="link" href="https://api-diff.io/">API Diff</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Specifications
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/openapi">OpenAPI (Swagger)</a>
+      <a class="link" href="https://bump.sh/asyncapi">AsyncAPI</a>
+      <a class="link" href="https://bump.sh/graphql">GraphQL</a>
+      <a class="link" href="https://bump.sh/grpc">gRPC</a>
+      <a class="link" href="https://bump.sh/soap">SOAP</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Resources
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/customers">Customers</a>
+      <a class="link" href="https://bump.sh/blog">Blog</a>
+      <a class="link" href="https://github.com/bump-sh/cli">CLI</a>
+      <a class="link" href="https://status.bump.sh/">Status</a>
+      <a class="link" href="https://developers.bump.sh/">API Reference</a>
+      <a class="link" href="mailto:hello@bump.sh">Contact</a>
+  </div>
+</footer-column>
+
+  </div>
+  <div class="bottom">
+    <div class="bottom-column">
+      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+        <a class="link" href="https://bump.sh/privacy-policy">Privacy policy</a>
+        <a class="link" href="https://bump.sh/legal-mentions">Legal mentions</a>
+        <a class="link" href="https://bump.sh/terms">Terms of use</a>
+        <a class="link" href="https://bump.sh/dpa">Data Processing Agreement</a>
+    </div>
+    <div class="bottom-column">
+        <a class="link" href="https://github.com/bump-sh"><img src="/images/icons/github.svg" alt="Github" /></a>
+        <a class="link" href="https://fosstodon.org/@Bump_hq"><img src="/images/icons/mastodon.svg" alt="Mastodon" /></a>
+        <a class="link" href="https://www.linkedin.com/company/bump-sh/"><img src="/images/icons/linkedin.svg" alt="Linkedin" /></a>
+        <a class="link" href="https://twitter.com/bump_hq"><img src="/images/icons/twitter.svg" alt="X" /></a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Receive API changelog in your mailbox 🔔 | Your awesome title</title>
+
+<meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+
+<link rel="stylesheet" href="/_bridgetown/static/index.WIAYYCEI.css" />
+<script src="/_bridgetown/static/index.4LUJF43L.js" defer></script>
+<script type="module">let lastmod = 0
+function startReloadConnection() {
+  const evtSource = new EventSource("/_bridgetown/live_reload")
+  evtSource.onmessage = event => {
+    if (document.querySelector("#bridgetown-build-error")) document.querySelector("#bridgetown-build-error").close()
+    if (event.data == "reloaded!") {
+      location.reload()
+    } else {
+      const newmod = Number(event.data)
+      if (lastmod > 0 && newmod > 0 && lastmod < newmod) {
+        location.reload()
+      } else {
+        lastmod = newmod
+      }
+    }
+  }
+  evtSource.addEventListener("builderror", event => {
+    let dialog = document.querySelector("#bridgetown-build-error")
+    if (!dialog) {
+      dialog = document.createElement("dialog")
+      dialog.id = "bridgetown-build-error"
+      dialog.style.borderColor = "red"
+      dialog.style.fontSize = "110%"
+      dialog.innerHTML = `
+        <p style="color:red">There was an error when building the site:</p>
+        <output><pre></pre></output>
+        <p><small>Check your Bridgetown logs for further details.</small></p>
+      `
+      document.body.appendChild(dialog)
+      dialog.showModal()
+    }
+    dialog.querySelector("pre").textContent = JSON.parse(event.data)
+  })
+  evtSource.onerror = event => {
+    if (evtSource.readyState === 2) {
+      // reconnect with new object
+      evtSource.close()
+      console.warn("Live reload: attempting to reconnect in 3 seconds...")
+
+      setTimeout(() => startReloadConnection(), 3000)
+    }
+  }
+}
+setTimeout(() => {
+  startReloadConnection()
+}, 500)
+</script>
+
+  </head>
+  <body class="guide" >
+    <header>
+  <a href="/">
+    <img src="/images/bump-logo.svg" alt="Bump.sh" />
+  </a>
+
+  <nav data-controller="toggle">
+    
+<bridgetown-search-form>
+  <input slot="input" type="search" class="" placeholder="Search…" />
+  <bridgetown-search-results theme=""></bridgetown-search-results>
+</bridgetown-search-form>
+
+    <button data-button-style="secondary" data-toggle-target="button" data-action="toggle#click">
+  <svg class="nav-icon" viewBox="0 0 100 100" width="80">
+    <path class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path class="line middle"
+          d="m 70,50 h -40" />
+    <path class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</button>
+
+    <nav-links data-toggle-target="item">
+        <nav-item>
+  <a href="/">Home</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/help">Documentation</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/updates">Product Updates</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/guides">Guides</a>
+</nav-item>
+
+    </nav-links>
+  </nav>
+</header>
+
+
+    <main class="wrapper">
+  <page-hero class="full-bleed wrapper">
+  <h1>Receive API changelog in your mailbox 🔔</h1>
+</page-hero>
+
+  <div class="double-pane">
+    <aside>
+    </aside>
+    <div class="guide-content wrapper" data-wrapper-size="small">
+      <p><img src="/images/updates/email-notif.png" alt="email-notif.png" /></p>
+
+<p>In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.</p>
+
+<p>It’s now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!</p>
+
+<p>Want to see it in action on Bump API documentation? <a href="https://developers.bump.sh/changes">See it live</a></p>
+
+<p>Do not hesitate to invite your API consumers to subscribe to your API updates (available at <code class="highlighter-rouge">http://{your-doc-url}/changes</code>)</p>
+
+<p><em>Never miss an API change again</em> (now, it’s in your mailbox in case you missed it 😉)</p>
+
+    </div>
+  </div>
+</main>
+
+
+    <footer class="wrapper">
+  <div class="columns">
+      <footer-column>
+  <div class="title">
+    Product
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/api-documentation">API Documentation</a>
+      <a class="link" href="https://bump.sh/api-change-management">Change Management</a>
+      <a class="link" href="https://bump.sh/api-catalog">Hubs</a>
+      <a class="link" href="https://api-diff.io/">API Diff</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Specifications
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/openapi">OpenAPI (Swagger)</a>
+      <a class="link" href="https://bump.sh/asyncapi">AsyncAPI</a>
+      <a class="link" href="https://bump.sh/graphql">GraphQL</a>
+      <a class="link" href="https://bump.sh/grpc">gRPC</a>
+      <a class="link" href="https://bump.sh/soap">SOAP</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Resources
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/customers">Customers</a>
+      <a class="link" href="https://bump.sh/blog">Blog</a>
+      <a class="link" href="https://github.com/bump-sh/cli">CLI</a>
+      <a class="link" href="https://status.bump.sh/">Status</a>
+      <a class="link" href="https://developers.bump.sh/">API Reference</a>
+      <a class="link" href="mailto:hello@bump.sh">Contact</a>
+  </div>
+</footer-column>
+
+  </div>
+  <div class="bottom">
+    <div class="bottom-column">
+      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+        <a class="link" href="https://bump.sh/privacy-policy">Privacy policy</a>
+        <a class="link" href="https://bump.sh/legal-mentions">Legal mentions</a>
+        <a class="link" href="https://bump.sh/terms">Terms of use</a>
+        <a class="link" href="https://bump.sh/dpa">Data Processing Agreement</a>
+    </div>
+    <div class="bottom-column">
+        <a class="link" href="https://github.com/bump-sh"><img src="/images/icons/github.svg" alt="Github" /></a>
+        <a class="link" href="https://fosstodon.org/@Bump_hq"><img src="/images/icons/mastodon.svg" alt="Mastodon" /></a>
+        <a class="link" href="https://www.linkedin.com/company/bump-sh/"><img src="/images/icons/linkedin.svg" alt="Linkedin" /></a>
+        <a class="link" href="https://twitter.com/bump_hq"><img src="/images/icons/twitter.svg" alt="X" /></a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

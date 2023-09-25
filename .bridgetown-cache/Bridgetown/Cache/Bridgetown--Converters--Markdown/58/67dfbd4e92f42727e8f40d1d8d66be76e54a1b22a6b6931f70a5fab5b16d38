@@ -1,0 +1,244 @@
+I"11<ul class="update-list">
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>October 03, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/10/03/automatic-breaking-change-detection/">Automatic breaking change detection</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p>If some changes are more important than others, it is especially true for your API.</p>
+
+<p>From now on, we automatically detect if a new version of your API includes some breaking changes. It will be visible in the <a href="https://developers.bump.sh/changes">changelog page</a>, in the changelog email or the brand new RSS feed… but also during your API design phase while opening a pull request thanks to <a href="https://github.com/bump-sh/github-action/">our Github Action</a>.</p>
+
+<p><img src="/images/updates/breaking_changes.png" alt="breaking_changes.png" /></p>
+
+<p>With Bump, you will never miss a <em>breaking</em> change again.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>September 21, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/09/21/changelog-makeover/">Changelog makeover 💄</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p><img src="/images/updates/changelog_revamp.jpg" alt="changelog_revamp.jpg" /></p>
+
+<p>We redesigned the whole changelog page in order to bring you a better understanding of changes history of your API.</p>
+
+<p>Here’s an example: https://developers.bump.sh/changes</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>September 20, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/09/20/rss-feed-for-your-changelog/">RSS feed for your changelog</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p><img src="/images/updates/back.jpg" alt="back.jpg" /></p>
+
+<p>In the age of information overload, getting access to information that matters can be quite challenging and that’s exactly the purpose of RSS.</p>
+
+<p>From now, get notified of the API changes through RSS in addition to the existing email.</p>
+
+<p>Give it a try with the <a href="https://developers.bump.sh/changes.rss">Bump RSS feed</a> in your favorite RSS reader.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>September 16, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/09/16/bindings-support-for-asyncapi/">Bindings support for AsyncAPI</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p><img src="/images/updates/bindings_asyncapi_bump.png" alt="bindings_asyncapi_bump.png" /></p>
+
+<p>AsyncAPI users, you’ll be happy to know that Bump now supports bindings.</p>
+
+<p>As AsyncAPI allows many protocols, which is really nice, bindings are a useful and necessary mechanism to define protocol-specific information. Bump now displays protocol information defined at server, operation, and message levels, as part of an ongoing work for a better understanding of API documentations.</p>
+
+<p>Here’s an example: <a href="https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information">https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information</a></p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>September 11, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/09/11/share-and-highlight-anything-inside-your-api-documentation/">Share and highlight anything inside your API documentation</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p>To give your users the best API onboarding, 
+it often helps to be able to share specific pieces of information.</p>
+
+<p>Thanks to this new feature, you can now share and highlight anything in your API documentation with just a click. The selected element will be highlighted following your color theme.</p>
+
+<p><img src="/images/updates/share_highlight.gif" alt="share_highlight.gif" /></p>
+
+<p>Give it a try: <a href="https://developers.bump.sh/#post-previews-body">https://developers.bump.sh/#post-previews-body</a></p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>September 07, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/09/07/markdown-support/">Markdown support</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p><img src="/images/updates/markdown-callouts.jpg" alt="markdown-callouts.jpg" /></p>
+
+<p>As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.</p>
+
+<p>Bump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.</p>
+
+<p>Check <a href="https://docs.bump.sh/help/specifications-support/markdown-support/">our help page</a> to start taking advantage of markdown in your API documentation.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>July 18, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/07/18/receive-api-changelog-in-your-mailbox/">Receive API changelog in your mailbox 🔔</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p><img src="/images/updates/email-notif.png" alt="email-notif.png" /></p>
+
+<p>In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.</p>
+
+<p>It’s now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!</p>
+
+<p>Want to see it in action on Bump API documentation? <a href="https://developers.bump.sh/changes">See it live</a></p>
+
+<p>Do not hesitate to invite your API consumers to subscribe to your API updates (available at <code class="highlighter-rouge">http://{your-doc-url}/changes</code>)</p>
+
+<p><em>Never miss an API change again</em> (now, it’s in your mailbox in case you missed it 😉)</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>July 13, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/07/13/download-source-from-your-documentation/">Download source from your documentation</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p><img src="/images/updates/download-source.png" alt="download-source.png" /></p>
+
+<p>We’ve made it easy for API consumers to <a href="https://developers.bump.sh/">download the source</a> of an API documentation.</p>
+
+<p>Whether you want to get your hands on a <code class="highlighter-rouge">JSON</code> or <code class="highlighter-rouge">YAML</code> format, for <code class="highlighter-rouge">OpenAPI</code> or <code class="highlighter-rouge">AsyncAPI</code>, you’re now just a click away.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>July 02, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/07/02/bump-diff-from-your-cli/">Bump diff from your Command Line Interface or your Continuous Integration platform</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">New</a>
+            </div>
+            <p>Our <a href="https://www.npmjs.com/package/bump-cli#bump-diff-file">new bump <code class="highlighter-rouge">diff</code> command</a> has landed in our CLI. <br />
+<em>Make sure to <a href="https://github.com/bump-sh/cli/releases/tag/v2.1.0">upgrade your <code class="highlighter-rouge">bump-cli</code> package</a> to at least <code class="highlighter-rouge">v2.1.0</code> to test it.</em></p>
+
+<p>Now, straight from your CLI, you are able to describe the changes made in your contract:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> bump diff <span class="nt">--doc</span> users-account api-specification.yaml
+Updated: GET /account
+  Response modified: 200
+    Body attribute added: ticket_ids
+Added: GET /tickets/<span class="o">{</span>ticket_id<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The new command will output a quick summary of what has changed between your latest deployed API contract and the file you have changed locally.</p>
+
+<p>If you use Github Actions to launch your automation workflows, we have some more good news for you: <a href="https://github.com/bump-sh/github-action/releases/tag/v1.0.0">we now offer a stable <code class="highlighter-rouge">bump-sh/github-action@v1</code> action</a>. And this latest release includes <strong>automatic API contract changelog pushed as a comment for each pull request</strong>.</p>
+
+<p>Check <a href="https://docs.bump.sh/help/continuous-integration/github-actions/#api-diff-on-pull-requests--deploy-on-push">our help page</a> to get you started with team collaboration on API design.</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+    <li>
+      <article class="update">
+        <timeline-element>
+          <time>June 09, 2021</time>
+          <div class="timeline-content">
+            <h2><a href="/updates/2021/06/09/nested-properties-get-a-make-up/">Nested properties get a make up 🎀</a></h2>
+            <div class="tag-list">
+                <a class="label" data-label-status="inverted">Improvement</a>
+            </div>
+            <p><img src="/images/updates/nested-properties.jpg" alt="nested-properties.jpg" /></p>
+
+<p>Feedbacks are important to us and we do our best to make you feel heard.
+We know that accessing nested properties is a pain point for many of you so we tried to make the navigation clearer and the selected element will now stand out more.</p>
+
+<p>We’d love to hear from you and see if these changes suit your needs so hit us up with <a href="mailto:hello@bump.sh">your comments</a> whether you love it or hate it!</p>
+
+          </div>
+        </timeline-element>
+      </article>
+    </li>
+</ul>
+
+<post-pagination>
+    <div class="page-count">
+      Page 3 of 5
+    </div>
+    <ul class="pagination">
+      <li>
+          <a class="page previous" href="/updates/page/2/">
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor" /></svg>
+            Previous
+          </a>
+      </li>
+      <li>
+          <a class="page next" href="/updates/page/4/">
+            Next
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor" /></svg>
+          </a>
+      </li>
+    </ul>
+  </post-pagination>
+
+:ET

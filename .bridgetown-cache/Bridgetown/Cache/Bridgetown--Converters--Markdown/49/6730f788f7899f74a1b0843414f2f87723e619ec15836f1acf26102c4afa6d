@@ -1,0 +1,58 @@
+I"š<ul id="markdown-toc">
+  <li><a href="#currently-supported" id="markdown-toc-currently-supported">Currently supported</a></li>
+  <li><a href="#partially-supported-message-object-payload" id="markdown-toc-partially-supported-message-object-payload">Partially supported: message object <code class="highlighter-rouge">payload</code></a></li>
+  <li><a href="#partially-supported-server-security-and-securityschemes" id="markdown-toc-partially-supported-server-security-and-securityschemes">Partially supported: server <code class="highlighter-rouge">security</code> and <code class="highlighter-rouge">securitySchemes</code></a></li>
+  <li><a href="#readonly-and-writeonly-properties" id="markdown-toc-readonly-and-writeonly-properties">readOnly and writeOnly properties</a></li>
+  <li><a href="#add-topics-to-your-documentation" id="markdown-toc-add-topics-to-your-documentation">Add topics to your documentation</a></li>
+</ul>
+
+<h2 id="currently-supported">Currently supported</h2>
+
+<p>Bump.sh is able to extract:</p>
+
+<ul>
+  <li>root properties (AsyncAPI Object)</li>
+  <li>channels (with automatic grouping according to channel name or tag grouping)</li>
+  <li>operations (subscribe and publish)</li>
+  <li>messages (payload and headers), with examples.</li>
+  <li>bindings (server, operation and message).</li>
+</ul>
+
+<h2 id="partially-supported-message-object-payload">Partially supported: message object <code class="highlighter-rouge">payload</code></h2>
+
+<p><a href="https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject">Message object</a> field <code class="highlighter-rouge">payload</code> could be of any type according to the specification, but we only support <code class="highlighter-rouge">SchemaObject</code> type.</p>
+
+<h2 id="partially-supported-server-security-and-securityschemes">Partially supported: server <code class="highlighter-rouge">security</code> and <code class="highlighter-rouge">securitySchemes</code></h2>
+
+<p>AsyncAPI <code class="highlighter-rouge">securitySchemes</code> property with these authentication types are supported:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">http</code></li>
+  <li><code class="highlighter-rouge">apiKey</code></li>
+  <li><code class="highlighter-rouge">httpApiKey</code></li>
+  <li><code class="highlighter-rouge">oauth2</code></li>
+  <li><code class="highlighter-rouge">openIdConnect</code></li>
+</ul>
+
+<p>The following authentication types are <strong>not</strong> supported:</p>
+<ul>
+  <li><code class="highlighter-rouge">X509</code></li>
+  <li><code class="highlighter-rouge">symmetricEncryption</code></li>
+  <li><code class="highlighter-rouge">asymmetricEncryption</code></li>
+  <li><code class="highlighter-rouge">plain</code></li>
+  <li><code class="highlighter-rouge">scramSha256</code></li>
+  <li><code class="highlighter-rouge">scramSha512</code></li>
+  <li><code class="highlighter-rouge">gssapi</code>
+To describe these authentication types, please use our <a href="../../documentation-customization/doc-topics">custom <code class="highlighter-rouge">x-topics</code> property</a> for now.</li>
+</ul>
+
+<h2 id="readonly-and-writeonly-properties">readOnly and writeOnly properties</h2>
+
+<p>JSON Schema provides the possibility to declare a property as read or write only. Read more in <a href="../json-schema#readonly-and-writeonly-properties">the JSON Schema section of this documentation</a>.</p>
+
+<h2 id="add-topics-to-your-documentation">Add topics to your documentation</h2>
+
+<p>You can add extra information to your documentation by using Bump.sh custom <code class="highlighter-rouge">x-topics</code>.</p>
+
+<p>Read more in the <a href="../../documentation-customization/doc-topics">Topics section of this documentation</a>.</p>
+:ET

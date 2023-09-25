@@ -1,0 +1,10 @@
+I"©
+<p>Bump.sh supports the most popular specifications for REST APIs and Event-Driven APIs.</p>
+
+<ul>
+  <li><a href="../specification-support/openapi-support">OpenAPI Specification</a></li>
+  <li><a href="../specification-support/asyncapi-support">AsyncAPI Specification</a></li>
+</ul>
+
+<p>We do plan to support more specifications in the future. If there is one specifically youâ€™re looking for, feel free to contact us!</p>
+:ET

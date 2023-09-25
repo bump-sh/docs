@@ -1,0 +1,8 @@
+I"C<p><img src="/images/updates/openapi-webhooks.png" alt="openapi-webhooks.png" /></p>
+
+<p><a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.0.md">OpenAPI 3.1</a> has been released today. Some important changes are coming with this new version. Above all, the greatest improvement is the support of <code class="highlighter-rouge">webhooks</code>, at the same first level than <code class="highlighter-rouge">paths</code>.</p>
+
+<p>We are glad to announce today that webhooks are now supported by Bump, as you can see in this <a href="https://bump.sh/doc/webhook-example">live example</a>.</p>
+
+<p>We hope you’ll enjoy this new feature, don’t hesitate to have a look to our <a href="https://docs.bump.sh/help/specifications-support/openapi-support/webhooks/">technical documentation</a> if necessary.</p>
+:ET

@@ -1,0 +1,17 @@
+I"N<p>Deploying your API documentation has never been so simple if you are using GitHub. We have just released <a href="https://github.com/marketplace/actions/api-documentation-on-bump">our GitHub action</a>, which lets you super easily control when and how you want to deploy your doc.</p>
+
+<p>All you have to do is configuring your workflow:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Deploy API documentation
+    uses: bump-sh/github-action@0.1
+    with:
+      id: &lt;BUMP_DOC_ID&gt;
+      token: &lt;BUMP_DOC_TOKEN&gt;
+      file: doc/api-documentation.yml
+</code></pre></div></div>
+
+<p>You can see it in action on our <a href="https://github.com/bump-sh/bump-ci-example/tree/master/.github/workflows">workflow examples</a> 😎</p>
+:ET

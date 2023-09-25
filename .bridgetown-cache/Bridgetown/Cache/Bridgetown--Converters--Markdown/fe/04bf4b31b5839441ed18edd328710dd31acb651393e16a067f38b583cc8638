@@ -1,0 +1,19 @@
+I"‹<p>Over the past weeks, we have considerably enhanced our support of the specifications.</p>
+
+<h3 id="minlength-maxlength-and-pattern">minLength, maxLength and pattern</h3>
+
+<p>Wherever you need to document restrictions on string fields, OpenAPI and AsyncAPI specifications rely on JSON Schema to support this.
+<code class="highlighter-rouge">minLength</code> and <code class="highlighter-rouge">maxLength</code>  are meant to constrain the length of a string.
+<code class="highlighter-rouge">pattern</code>  restrict the string to a specific Regular Expression (regex).</p>
+
+<p>Email addresses, IBANs and ZIP/Postal codes could be great examples of these features.</p>
+
+<p><img src="/images/updates/minlength-example.png" alt="minlength-example.png" /></p>
+
+<h3 id="readonly--and--writeonly--properties">readOnly  and  writeOnly  properties</h3>
+
+<p>JSON Schema allows defining a property as <code class="highlighter-rouge">readOnly</code>  or  <code class="highlighter-rouge">writeOnly</code>.
+Many examples can easily be imagined when used with AsyncAPI or OpenAPI : <code class="highlighter-rouge">readOnly</code>  timestamp, <code class="highlighter-rouge">writeOnly</code>  password, etcâ€¦</p>
+
+<p>Our <a href="https://docs.bump.sh/help/specifications-support/asyncapi-support/#readonly-and-writeonly-properties">Help Center</a> shares more details on how Bump.sh works with this feature and a few examples.</p>
+:ET

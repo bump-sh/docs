@@ -1,0 +1,1598 @@
+[
+        {
+          "id": "help-access-management",
+          "title": "Access Management",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/access-management/",
+          "content": "Private level\n  About depreciation of the Password-Protected level\n\n\nAccess Management has recently changed: new options has been added and password protection will be removed soon (more details at the bottom of the article).\n\nAvailable from a dedicated section in the documentation or hubs settings, Access Management offers 3 different access levels :\n\n\n  Public: Anyone can view your documentation.\n  Protected: (Soon discarded) Password is required to access to your documentation.\n  Private: Access is limited to authenticated users from your Organization or invited external users.\n\n\n\n\nPrivate level\n\nPrivate level allows members from the same organization to have access to a documentation/hub. Writing permissions will only be granted if the member has admin/maintainer role.\n\nFrom private level, you can also invite external users (like partners, customers, etc…) to a read-only mode of your documentation/hub.\n\n\n\nAbout depreciation of the Password-Protected level\n\nFrom our tests and user reviews, we felt that password protection was not relevant anymore and could cause confusion in the future.\n\nFor this reason, it will be soon deprecated and users will be contacted directly to inform them in advance."
+        },
+        {
+          "id": "help-api-change-management",
+          "title": "API change management",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/api-change-management/",
+          "content": "Automatic API changelog\n  Breaking changes identification\n  Changes notification    \n      Slack\n      Email\n      RSS\n      Webhooks\n    \n  \n  GitHub integration\n\n\nAutomatic API changelog\n\nBump automatically builds a changelog for your API. Each time you upload a new version of your API definition, you will have a new event in your changelog. A link to the changelog page is available on each documentation:\n\n\n\nAs you can see below on the Bump API changelog, every changes we made are listed: whether it’s a structural change (endpoint or parameter removed, modified or added for example) or a content change (description or example modification).\n\n\n\nBreaking changes identification\n\nBump automatically identifies when a change is breaking for your API consumers. Here are the changes considered as breaking:\n\n\n  Rename or delete endpoint, unless it was deprecated before\n  Rename or delete a property (body, header or query parameter), unless it was deprecated before\n  Modify the type of a property\n  Set an existing property as required\n  Add or delete a security requirement\n\n\nChanges notification\n\nBump can notify changes via Slack, email, RSS or any custom HTTP webhook.\n\nSlack\n\nEach time your API changes, you can notify your team directly on Slack by activating the Slack integration in your API integrations settings:\n\n\n\nEmail\n\nUsers can subscribe to your API changelog and receive a weekly digest.\n\n\n\nRSS\n\nThe changelog page exposes an RSS feed your users can subscribe to. Here is an example with the Bump API changelog.\n\nWebhooks\n\nYou can define as many webhooks as you wish to receive structural changes when they occur on your documentations. Please check the dedicated page to find out how to setup a webhook.\n\nGitHub integration\n\nWith our Github Action, you can receive automatic API diff comments directly in your pull requests. This pull request comment will include:\n\n\n  a diff summary\n  information about the breaking change state"
+        },
+        {
+          "id": "help-api-change-management-webhooks",
+          "title": "Webhooks",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/api-change-management/webhooks/",
+          "content": "Setup    \n      Step 1:\n      Step 2:\n      Step 3:\n      Payload content\n    \n  \n  Delete a webhook\n\n\nA webhook is a way for an app to get instant notifications from other applications. Webhooks are automated messages (also called payloads) sent to a specific URL. Unlike a classic call to an API, webhooks are more efficient than just polling it.\n\nWebhooks help integrate Bump into your current workflows. The chosen URLs will receive an HTTP request automatically when Bump notices a structural change in your documentation.\n\nNotifications can be sent to several URLs, allowing better integration with your existing tools.\n\nSetup\n\nStep 1:\n\nSelect the Integrations tab from your Bump’s dashboard to reach the webhook section.\n\n\n\nStep 2:\n\nAfter adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps to secure requests coming from Bump).\n\n\n\nHere is a pseudo-code (in Ruby language) which you should implement in your server if you want to check the authenticity of the received payload:\n\ndef verify_signature(payload_body)\n  signature = \"sha256=\" + OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new(\"sha256\"), ENV[\"SECRET_TOKEN\"], payload_body)\n  return halt 500, \"Signatures didn't match!\" unless Rack::Utils.secure_compare(signature, request.env[\"HTTP_X_BUMP_SIGNATURE_256\"])\nend\n\n\nStep 3:\n\nThe Recent deliveries section include a **Test Webhook **element that helps you verify that the webhook works correctly. You can also check the 10 last notifications.\n\n\n\nPayload content\n\nDetails about the payload content sent for each setup webhooks is available in our absolutely gorgeous API documentation.\n\nDelete a webhook\n\nTo stop receiving notifications, you can delete a webhook by selecting it from the Integrations section and then confirm the deletion in the Danger zone."
+        },
+        {
+          "id": "help-branching",
+          "title": "Branching",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/branching/",
+          "content": "Documentation vs. Branch\n  Create a new branch\n  Modifying an existing branch    \n      Rename or delete a branch\n      Upload a new version of an existing branch\n    \n  \n\n\nDocumentation vs. Branch\n\nBranches are a great solution for existing documentation that could need several versions. Instead of creating new documentation in your hub (for an updated version of your API specification for example), branching allows your users to switch from one version of your documentation to another easily.\n\nYou may imagine using branching to maintain several versions of your API specifications, for users still on a legacy version.\n\nWe can also imagine API documentation using branching for a production environment and a testing one.\n\nVisually, documentation readers will see the available branches from which they can switch as seen in the screenshot below:\n\n\n\nCreate a new branch\n\nFrom your Dashboard, select the documentation you would like to add a new version.\n\nThen select Branches and type its new name.\n\n\n\nModifying an existing branch\n\nRename or delete a branch\n\nFrom your Dashboard &gt; Documentation, select Branches and the one you would like to rename or delete.\n\n:::danger\nDeleting a branch is definitive: you will lose the branch, its content and deployment history.\n:::\n\n\n\nUpload a new version of an existing branch\n\nWhen uploading a new version of your API specification, you can choose which branch will receive the update."
+        },
+        {
+          "id": "help-bump-cli",
+          "title": "Bump CLI",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/bump-cli/",
+          "content": "Installing Bump CLI\n  Global installation\n  Add Bump CLI to your node project\n  How should I do if I’m not using Node?\n  Using Bump CLI\n  Preview a file    \n      Live preview\n    \n  \n  API diff or simple validation before a deployment    \n      API diff of your changes\n      Validation before a deployment\n    \n  \n  Deploy a file\n  Deploy a folder\n  Compatible specification types\n  Contributing\n  License\n\n\nHow to use the Bump command line interface.\n\nInstalling Bump CLI\n\nBump CLI is a node package, currently distributed via NPM which means you need to have Node v12+ interpreter installed on your computer and servers.\n\n:::info\nYou can download a standalone package directly from the latest Github release assets if you don’t use Node. We plan to distribute universal binaries to common package managers soon. Please check our installation methods for updates.\n:::\n\nGlobal installation\n\nTo install it globally, run the following command with NPM\n\nnpm install -g bump-cli\n\n\nOr, with Yarn via\n\nyarn global add bump-cli\n\n\nAdd Bump CLI to your node project\n\nAs our CLI is a node package, you can easily embed it to your project by adding the package to your package.json file, either via NPM\n\nnpm install --save-dev bump-cli\n\n\nOr via Yarn\n\nyarn add --dev bump-cli\n\n\nYou can then use any Bump CLI commands via npm exec as such\n\nnpm exec -- bump --help\n\n\nHow should I do if I’m not using Node?\n\nUnfortunately, at the moment we only support the Node environment. However we plan to distribute universal binaries in the most common package managers very soon. In the meantime, you can download a standalone package directly from the latest Github release assets or you can push your documentation using our API.\n\nUsing Bump CLI\n\nTo list all the available commands, just type bump  in your command line environment. You can get some help anytime by using --help on any command. Example: bump deploy --help .\n\nPreview a file\n\nWhen writing a documentation, you’ll want to preview how it renders on Bump. This is exactly the goal of the preview  command: it will create a temporary documentation with a unique URL, which will be available for a short period of time.\n\nUsage from a local OpenAPI or AsyncAPI file\n\nbump preview path/to/file.json\n\n\nYou can also preview a file available from a URL\n\nbump preview https://developers.bump.sh/source.yaml\n\n\nLive preview\n\nBy using the --live flag you can stay focused on API design (OpenAPI or AsyncAPI file) while seeing a continuously updated preview each time you save your API definition file.\n\n\n  Launch the live preview command in your terminal\n\n\nbump preview --live --open openapi-definition.json\n\n\n\n  Edit your openapi-definition.json file in your favorite text editor\n  Watch the live preview being updated each time your save your file!\n\n\n:::info\nYou can create as many previews as you like without being authenticated. This is a free and unlimited service.\n:::\n\nAPI diff or simple validation before a deployment\n\nThis is mainly used when you integrate Bump in your automated environments (Continuous Integration). It will validate your documentation file to make sure it is parsed correctly by Bump. If you want to validate your API specification file before a deployment, you can either use:\n\n\n  the bump diff command if you also want to have a human diff summary of your API change\n\n\nor\n\n\n  the bump deploy --dry-run command if you only want to make sure the file is valid\n\n\nAPI diff of your changes\n\nThis command will output a diff summary of what has changed in the API. It can be used to ensure that future file deployment will work smoothly and to get a human diff summary during code reviews.\n\nbump diff path/to/file.json --doc my-documentation\n\n\nYou can find your own my-documentation slug from your documentation settings.\n\n:::caution\nYou will need to pass your private documentation access token for this command to work. Either with the --token flag or via the BUMP_TOKEN environment variable. This token can be found from your documentation settings &gt; CI deploymentpage\n:::\n\nValidation before a deployment\n\nIf you don’t need a diff summary from the bump diff command explained above, you can also make sure your API specification file is valid and parsed correctly by Bump with the bump deploy --dry-run command. It can be used to ensure that future file deployment will work smoothly.\n\nbump deploy --dry-run path/to/file.json --doc my-documentation\n\n\nYou can find your own my-documentation slug from your documentation settings.\n\n:::caution\nYou will need to pass your private documentation access token for this command to work. Either with the --token flag or via the BUMP_TOKEN environment variable. This token can be found from your documentation settings &gt; CI deploymentpage\n:::\n\nDeploy a file\n\nOnce your documentation has been updated and merged, you want it to be live for your API users. This is what the deploy command is for. When deploying the new version, Bump will analyse your API structure and will generate a changelog item if the API structure has changed.\n\nbump deploy path/to/file.json --doc my-documentation\n\n\nYou can find your own my-documentation slug from your documentation settings.\n\nYou can also deploy a given file to a different branch of your documentation with the --branch &lt;branch-name&gt; parameter. The branch will be created if it doesn’t exist. More details about the branching feature is available on this dedicated help page.\n\nbump deploy path/to/file.json --doc my-documentation --branch staging\n\n\n:::caution\nYou will need to pass your private documentation access token for this command to work. Either with the --token flag or via the BUMP_TOKEN environment variable. This token can be found from your documentation settings &gt; CI deploymentpage.\n:::\n\nDeploy a folder\n\nWhen using the Hub feature on Bump.sh, you might want to deploy multiple api definition files in a single command. The deploy command described in the previous paragraph accepts a folder path as argument to do just that:\n\nbump deploy path/to/apis/ --hub my-hub\n\n\n:::info\nYou can find your own my-hub slug from your hub settings.\n:::\n\nTake into account your file naming convention by using the --filename-pattern &lt;pattern&gt; option.\n\nNote that it can include * wildcard special character, {slug} filter that will extract your documentation’s slug from the filename, as well as any other fixed characters.\n\nHere’s a practical example. Suppose you have the following files in your path/to/apis/ directory:\n\npath/to/apis\n└─ private-api-users-service.json\n└─ partner-api-payments-service.yml\n└─ public-api-contracts-service.yml\n└─ data.json\n└─ README\n\n\nIn order to deploy the 3 services api definition files from this folder (private-api-users-service.json, partner-api-payments-service.yml and public-api-contracts-service.yml). You can execute the following command:\n\nbump deploy path/to/apis/ --hub my-hub --filename-pattern *-api-{slug}-service\n\n\n:::caution\nYou will need to pass your private hub access token for this command to work. Either with the --token flag or via the BUMP_TOKEN environment variable. This token can be found from your hub settings &gt; CI deployment page.\n:::\n\nCompatible specification types\n\nWe currently support OpenAPI from 2.0 (called Swagger) to 3.1 and AsyncAPI 2.x specification file types. Both YAML or JSON file formats are accepted file inputs to the CLI.\n\nContributing\n\nBug reports and pull requests are welcome on GitHub at https://github.com/bump-sh/cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.\n\nLicense\n\nThe Bump CLI project is released under the MIT License."
+        },
+        {
+          "id": "help-continuous-integration-github-actions",
+          "title": "GitHub Action",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/continuous-integration/github-actions/",
+          "content": "Generate your API documentation &amp; changelog\n  Usage    \n      Deploy on git push\n      API diff on pull requests\n      API diff on pull requests &amp; Deploy on push\n    \n  \n  Input parameters\n  Contributing\n  License\n  Code of Conduct\n\n\nGenerate your API documentation &amp; changelog\n\nBump is a Continuous Documentation Platform: it lets you keep your API doc always synchronized with your codebase. With this Github Action you can automatically generate your API reference (with changelog and diff) on Bump from any OpenAPI or AsyncAPI file.\n\nUsage\n\nStart by creating a documentation on Bump. Then add one of the following workflow file to your GitHub project.\n\n\n  In all the examples below, make sure to change the branch name main with the name of your repository main destination branch, replace &lt;BUMP_DOC_ID&gt; with your Bump documentation slug or id and change the filepath doc/api-documentation.yml with your api specification file path.\n\n\n\n  actions/checkout has to be called before our action.\n\n\nDeploy on git push\n\nIf you only need to deploy the documentation on push you can use this workflow file:\n\n.github/workflows/bump-deploy.yml\n\nname: Deploy documentation\n\non:\n  push:\n    branches:\n      - main\n\njobs:\n  deploy-doc:\n    name: Deploy API doc on Bump\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v3\n      - name: Deploy API documentation\n        uses: bump-sh/github-action@v1\n        with:\n          doc: &lt;BUMP_DOC_ID&gt;\n          token: ${{secrets.BUMP_TOKEN}}\n          file: doc/api-documentation.yml\n\n\nAPI diff on pull requests\n\nIf you only want to have API diff summary sent as a comment on your pull requests:\n\n.github/workflows/bump-diff.yml\n\nname: API diff\n\non:\n  pull_request:\n    branches:\n      - main\n\npermissions:\n  contents: read\n  pull-requests: write\n\njobs:\n  api-diff:\n    name: Check API diff on Bump\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v3\n      - name: Comment pull request with API diff\n        uses: bump-sh/github-action@v1\n        with:\n          doc: &lt;BUMP_DOC_ID&gt;\n          token: ${{secrets.BUMP_TOKEN}}\n          file: doc/api-documentation.yml\n          command: diff\n        env:\n          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}\n\n\nAPI diff on pull requests &amp; Deploy on push\n\nThis is the most common workflow that we recommend, which will create two steps in your automation flow: a validation &amp; diff step on code reviews, followed by a deployment step on merged changes.\n\n.github/workflows/bump.yml\n\nname: Check &amp; deploy API documentation\n\non:\n  push:\n    branches:\n      - main\n\n  pull_request:\n    branches:\n      - main\n\npermissions:\n  contents: read\n  pull-requests: write\n\njobs:\n  deploy-doc:\n    if: ${{ github.event_name == 'push' }}\n    name: Deploy API documentation on Bump\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v3\n      - name: Deploy API documentation\n        uses: bump-sh/github-action@v1\n        with:\n          doc: &lt;BUMP_DOC_ID&gt;\n          token: ${{secrets.BUMP_TOKEN}}\n          file: doc/api-documentation.yml\n\n  api-diff:\n    if: ${{ github.event_name == 'pull_request' }}\n    name: Check API diff on Bump\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v3\n      - name: Comment pull request with API diff\n        uses: bump-sh/github-action@v1\n        with:\n          doc: &lt;BUMP_DOC_ID&gt;\n          token: ${{secrets.BUMP_TOKEN}}\n          file: doc/api-documentation.yml\n          command: diff\n        env:\n          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}\n\n\n\n  Since February 2nd, 2023, the default GITHUB_TOKEN permissions are set to read-only for every new repository.\n\n  Permissions have to be explicitly defined in your workflows, as illustrated above.\n\n\nInput parameters\n\n\n  doc (required): Documentation slug (or id). Can be found in the documentation settings on https://bump.sh/docs\n  token (required): Do not add your documentation token here, but create an encrypted secret that holds your documentation token.\n    \n      Your Bump token can be found in the documentation settings on https://bump.sh. Copy it for later usage.\n      In your GitHub repository, click Settings, and then Secrets.\n      Click the button “New repository secret”, name the secret BUMP_TOKEN and paste your Bump token in the value field.\n    \n  \n  file: Relative path to the documentation file. Default: api-contract.yml.\n  command: Bump command to execute. Default: __deploy\n    \n      deploy deploy a new version of the documentation\n      diff: automatically comment your pull request with the API diff\n      dry-run: validate the documentation file before a deployment\n      preview: create a temporary preview\n    \n  \n\n\nContributing\n\nBug reports and pull requests are welcome on GitHub at https://github.com/bump-sh/github-action. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.\n\nLicense\n\nThe scripts and documentation in this project are released under the MIT License.\n\nCode of Conduct\n\nEveryone interacting in the Bump github-action project codebase, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct."
+        },
+        {
+          "id": "help-continuous-integration",
+          "title": "Continuous Integration",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/continuous-integration/",
+          "content": "Integrate with your CI\n  1. API diff &amp; validation of the documentation file    \n      API diff for each proposed change request\n      Plain validation\n    \n  \n  2. Deploy your doc\n  Add our CLI tool to your project\n  Examples\n\n\nHow to integrate your documentation deployment to your CI.\n\nIntegrate with your CI\n\nHere, we are presenting the process recommended to our customers, but feel free to adapt it to your own workflow/requirements.\n\nWe recommend two steps in your automation flow: a validation one during development, followed by a deployment one on production merges.\n\n1. API diff &amp; validation of the documentation file\n\nAPI diff for each proposed change request\n\nWith our Github Action, you can receive automatic API diff comments directly on your pull requests. This is done thanks to the bump diff command under the hood which will run each time a pull request is created or updated. It will make sure to fail the build if the documentation file is not valid.\n\nPlain validation\n\nIf you don’t use Github, for each branch of your code base you can check that your documentation file is still valid and will not fail during deployment. By using the bump deploy --dry-run  command each time a branch is pushed you will make sure to fail the build if the documentation file is not valid. You can also use the bump diff command to validate your documentation file and to output the API diff in your CI logs.\n\n2. Deploy your doc\n\nOnce your branch has been merged into your main branch (generally the master or main one) you will want to deploy your new documentation file and make it live. You will use the bump deploy command.\n\nAdd our CLI tool to your project\n\nThe simplest way to use our CLI tool is to add a package.json file to your project. You can find an example here: https://github.com/bump-sh/bump-ci-example/blob/master/package.json.\n\nIf you prefer not using a package.json, be sure to install the CLI globally with npm install -g bump-cli before calling the bump  command.\n\nExamples\n\nHere are examples for integrating Bump with the most commonly used CI products:\n\n\n  CircleCI : https://github.com/bump-sh/bump-ci-example/blob/master/.circleci/config.yml\n  Gitlab CI: https://github.com/bump-sh/bump-ci-example/blob/master/.gitlab-ci.yml \n  Travis CI:  https://github.com/bump-sh/bump-ci-example/blob/master/.travis.yml\n  GitHub Action: https://github.com/bump-sh/github-action\n\n\nThe GitHub action example uses a dedicated action we crafted especially for you. You may find more information on our GitHub market place page.\n\nNote that if you don’t want to keep the private token and id in your code base, you should use environment variables. Our CLI automatically recognizes these 3 variables:\n\n\n  BUMP_ID: your documentation public slug or id\n  BUMP_TOKEN: your documentation private token\n  BUMP_HUB_ID: if using hubs, your hub public slug or id"
+        },
+        {
+          "id": "help-documentation-customization-custom-domains",
+          "title": "Custom domains",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/documentation-customization/custom-domains/",
+          "content": "Setting a CNAME record\n  Setting a custom domain in Bump.sh\n\n\nYour docs are hosted on Bump.sh. However you can set a custom domain: visitors of your docs will stay within your brand experience. For this, you’ll use a CNAME.\n\nA CNAME, or Canonical Name, is a Domain Name System (DNS) entry. It serves as an alias, and maps a domain name to another. In our use case, it lets you set a domain name for your users to access your API docs, that they will use and see instead of the Bump.sh domain name.\n\nSetting a CNAME record\n\nFirst, you’ll need to create a CNAME record pointing to custom.bump.sh, at your domain name provider.\n\nFor instance, if you want to host your documentation under the developers.example.com domain, you will create the following record:\n\ndevelopers.example.com. 3600 IN CNAME custom.bump.sh.\n\n\nOnce this is done, you can set your custom domain in Bump.sh.\n\nSetting a custom domain in Bump.sh\n\n\n  Click on the chosen Documentation &gt; Settings\n  Check the Setup a custom domain box.\n  Enter your custom domain.\n  Click Update global settings.\n\n\nThat’s it. SSL certificates are automatically issued.\n\nNote: DNS caches may take a moment to update. Outdated caches may lead to the fact that visitors will not be able to access your docs via your custom domain. Those caches are user-side, which means that 1. you can flush it on your local computer 2. people who never visited your doc will not face any issue."
+        },
+        {
+          "id": "help-documentation-customization-doc-code-samples",
+          "title": "Custom code samples",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/documentation-customization/doc-code-samples/",
+          "content": "Example usage\n\n\nEven though we generate a basic cURL code sample by default in your documentation, you might want to customize the example provided and share even more specific language code samples to your API consumers. This is why we added this custom property.\n\nUse the x-codeSamples property inside an Operation OpenAPI object. The x-codeSamples property accepts an array of code sample objects which are defined as such:\n\n\n  \n    \n      Property\n      Type\n      Description\n    \n  \n  \n    \n      lang *\n      String\n      Code sample programming language name.\n    \n    \n      label\n      String\n      A label which will be used as a title in the code sample bloc. Defaults to the lang value if not provided.\n    \n    \n      source *\n      String\n      The source code sample content.\n    \n  \n\n\n\n  Bump.sh relies on the Highlight.js lib to color your code. If your language is not supported, the source code will be displayed anyway, just without color syntax.\n\n\nExample usage\n\nThe following screen capture shows the rendering of adding two code samples cURL and Ruby to your Operation.\n\n\n\nThis is done by adding the following x-codeSamples array to your API definition:\n\npaths:\n  /users:\n    get:\n      summary: Retrieve a user\n      operationId: getUserPath\n      responses: [...]\n      parameters: [...]\n      x-codeSamples:\n        - lang: cURL\n          label: Custom cURL\n          source: |\n            curl \\\n              --user \"name:password\" \\\n              --request GET \\\n              --url 'https://api.example.com/v1/users' \\\n              --header 'Accept: application/json'\n        - lang: ruby\n          label: Ruby library\n          source: |\n            require \"http\"\n             \n            request = HTTP\n              .basic_auth(:user =&gt; \"name\", :pass =&gt; \"password\")\n              .headers(:accept =&gt; \"application/json\")\n             \n            response = request.get(\"https://api.example.com/v1/users\")\n            if response.status.success?\n              # Work with the response.body\n            else\n              # Handle error cases\n            end"
+        },
+        {
+          "id": "help-documentation-customization-doc-topics",
+          "title": "Topics",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/documentation-customization/doc-topics/",
+          "content": "Creating good API documentation requires giving users context and guides. As most of the specifications don’t permit to add generic content, we have created a custom property. Setting the x-topics property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.\n\n\n  \n    \n      Property\n      Description\n    \n  \n  \n    \n      title\n      Topic title as it will appear in the navigation bar and in the content section.\n    \n    \n      content\n      The topic content. Markdown is fully supported here.\n    \n    \n      example\n      Will appear in the examples section, if activated. Markdown is fully supported here.\n    \n  \n\n\nExample:\n\nx-topics:\n  - title: Getting started\n    content: Before using the API you need to get an API key by sending us an email.\n  - title: Authentication\n    content: Send the `X-API-KEY` header with all your requests.\n    example: |\n      ```\n      $ curl \\\n        -X POST https://api.example.com/endpoint/ \\\n        -H \"X-API-KEY: XXXXXX\" \\\n      ```"
+        },
+        {
+          "id": "help-documentation-customization-meta-images",
+          "title": "Meta images",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/documentation-customization/meta-images/",
+          "content": "Add your own image\n  Use the automated image generation\n\n\nAdd your own image\n\nFrom your dashboard, select the documentation you would like to edit. If this documentation belongs to a hub, you’ll need to select the hub directly.\n\nFrom the documentation settings, select Customize UI, reach the Social Media section and upload or drop the image you would like to use.\n\n\n\nUse the automated image generation\n\nIn case you wouldn’t have a visual you could use, Bump will automatically generate an image for social media. This visual display your documentation name (or the hub name, in such case), its logo and its type.\n\n\n\n\n  The social media image will be modified each time you change the name or the logo.\n\n\n\n  First generation of this new social media image may take a bit, but any modification or change will start the generation process. You can also reach our Support to push this new feature."
+        },
+        {
+          "id": "help-faq",
+          "title": "FAQ",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/faq/",
+          "content": "Will you support others specifications like BluePrint or GraphQL?\n  Why not supporting all the OpenAPI specification?\n\n\nWill you support others specifications like BluePrint or GraphQL?\n\nWhen we initially had the Bump idea, we though that it would be absolutely perfect to be able to handle any kind of documentation.\n\nThis said, at the moment, we are focusing on OpenAPI and AsyncAPI to offer the best support of these specifications.\n\nWhy not supporting all the OpenAPI specification?\n\nIf you have tried Bump, you probably have already discovered that we don’t support the whole Swagger / OpenApi specification.\n\nThere are 2 reasons for that:\n\n\n  first, we are a fresh new project, which is far from being complete. So we may have decided to postpone some features due to our priorities.\n  second, we may have decided that a specification feature adds too much complexity to the documentation, and have preferred to simply ignore it to keep things simple for now.\n\n\nFeel free to ask us why a feature you need is missing, we’ll be happy to answer and try to find a solution with you."
+        },
+        {
+          "id": "help-getting-started-api-platform",
+          "title": "Deploying docs from API Platform",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/getting-started/api-platform/",
+          "content": "Deploying docs from your local machine\n\n\nAPI Platform is an API-first PHP framework that allows you to create REST and GraphQL APIs using PHP classes, and automatically generates their documentation, based on the OpenAPI specification. If you are new to API Platform, check out their getting started guide.\n\nDeploying docs from your local machine\n\nThe following assumes your local machine is configured with PHP and API Platform.\n\n\n  \n    Create and name your first API documentation.\n  \n  \n    Install the Bump.sh CLI with npm as below, or use alternative options, with\n  \n\n\nnpm install -g bump-cli\n\n\n\n  \n    Launch your local server with Docker or Symfony\n  \n  \n    Deploy your doc to Bump.sh with\n  \n\n\nbump deploy https://localhost/docs.json --doc my-documentation\n\n\nThat’s it! Enjoy the comfort of Bump.sh to browse through your API doc, and customize it to your needs."
+        },
+        {
+          "id": "help-getting-started-fastapi",
+          "title": "Deploying docs from FastAPI",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/getting-started/fastapi/",
+          "content": "Deploying docs from your local machine\n\n\nFastAPI is a Python framework that allows you to create APIs, and automatically generates their documentation, based on the OpenAPI specification.\n\nDeploying docs from your local machine\n\nThe following assumes your local machine is configured with Python and FastAPI, and that your main file is named main.py.\n\n\n  \n    Create and name your first API documentation.\n  \n  \n    Install the Bump.sh CLI with npm as below, or use alternative options, with\n  \n\n\nnpm install -g bump-cli\n\n\n\n  Launch your local server with\n\n\nuvicorn main:app --reload\n\n\nNote: You might need, depending on how you usually run your Python commands, to prepend them with python3 -m.\n\n\n  Deploy your doc to Bump.sh with\n\n\nbump deploy http://127.0.0.1:8000/openapi.json --doc my-documentation\n\n\nThat’s it! Enjoy the comfort of Bump.sh to browse through your API doc, and customize it to your needs."
+        },
+        {
+          "id": "help-getting-started",
+          "title": "Getting Started with Bump.sh",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/getting-started/",
+          "content": "Bump.sh connects people with REST and event-driven APIs, by centralizing a reference point: their documentation, highlighted with the latest changes and updates.\n\nFrom OpenAPI and AsyncAPI specifications, Bump.sh generates the documentation you need and offers many options to make it your custom and carefully crafted API experience.\n\nThose specifications, supported by a wide variety of frameworks in various programming languages that generate definition files automatically, can be easily deployed on Bump.sh.\n\nOur guides below will help you locate and use those files to deploy your API docs on Bump.sh:\n\n\n  Quick start with definition files if you work directly with an OpenAPI or AsyncAPI file.\n  Quick start with API Platform if you are building an API with API Platform (PHP).\n  Quick start with FastAPI if you are building an API with FastAPI (Python)."
+        },
+        {
+          "id": "help-getting-started-quick-start",
+          "title": "Quick Start",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/getting-started/quick-start/",
+          "content": "Create your first documentation    \n      Step 1: Create your space/documentation\n      Step 2: Upload your file\n      Step 3: Enjoy\n    \n  \n  Publish your documentation\n  Customization options\n  And way more\n\n\nThis quick start guide is made for you, if you are actively writing OpenAPI or AsyncAPI files, or able to locate it in your code repository.\n\nCreate your first documentation\n\nStep 1: Create your space/documentation\n\nAfter creating your account, you’ll be asked to create and name your first API documentation.\nBy default, your documentation URL will use the same name: you can customize it in the slug field. You can also use custom domains, which we’ll explain later.\n\n\n\nStep 2: Upload your file\n\nIf you already have a specification file, you can immediately upload it.\nYou can also use our examples to see Bump.sh in action. Finally, our CLI can also be directly used to jump in.\n\n\n\nStep 3: Enjoy\n\nGenerating your first documentation will take a few seconds. But let’s not stop here: many features are awaiting to customize and make the most of your API documentation. Let’s have a look in the next section.\n\nPublish your documentation\n\nCongratulations on releasing your first API documentation on Bump.sh!\n\nOne of the first things you may have in mind is how to share your documentation with the world, your team or keep it for yourself.\nBump.sh offers several options to manage access to your documentation.\nDuring the onboarding, you may have noticed the option of making your doc public or private.\n\nPublic documentation are available to anyone with the URL or if the search engine indexation has been activated.\nPrivate ones are only accessible to you (or your team/organization if you have one).\n\nWe share more details on the Access Management page.\n\nCustomization options\n\nWith your documentation ready, you could want to make it more customized. Bump.sh offers several options to do so.\n\nYou can setup Custom Domains, to make your doc available behind your own URL.\nSeveral branding options are available: from your logo to Meta Images (that helps sharing your doc in a fancy way).\nWe also support Documentation Topics, that helps you adding rich (con)text to your API doc, sharing the informations your community needs.\n\n\n\nAnd way more\n\nWe do not stop here. Feel free to browse this documentation or directly reach us to find out how to make the most of Bump.sh.\nThere’s a lot more to cover: from Hubs that groups several API documentation to Branching, hosting several version of a same doc, you’ll find many simple options that make a huge change.\n\nThe team is always here to listen if you have any feature requests or suggestions. We are here to help.\n\nWe hope you’ll enjoy using Bump.sh!"
+        },
+        {
+          "id": "help-how-can-bump-help",
+          "title": "How can Bump.sh help you?",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/how-can-bump-help/",
+          "content": "Specifications\n  Customization\n  Track changes\n  CLI and Integration\n  Hubs and Collaboration\n\n\n// Work in Progress\n\nBump allows you to generate your API documentation and API changelog quickly.\n\nSpecifications\nBump.sh supports OpenAPI or AsyncAPI specification: you can deploy your API documentation in a few minutes.\n\nCustomization\nCustom domains, branding, colors, branching, Markdown support… you name it: Bump.sh offers many possibilities to make your documentation truly yours.\n\nTrack changes\nShare a link to your documentation with your API consumers and help them never miss an API change again. They can track API structural changes if they subscribe by email. Once a week, subscribers will receive a changelog digest of your documentation if your API has changed.\n\nCLI and Integration\nWe suggest integrating our tool into your development process to make the most out of Bump. We offer a Command Line Interface and Continuous Integration examples to let you: view API diff during code review thanks to our GitHub Action, Bump will automatically comment on your pull requests with changes digest, then once merged we will deploy your changes directly your documentation page.\n\nHubs and Collaboration\nIf you work in a multiple services environment and have many different APIs, we got you covered. You can organize and mix your OpenAPI and AsyncAPI-based documentation, in a developer Hub. You will thus have all of your APIs listed in one place.\nWork with your team and partners through Organizations and use our Access Management to check who can access what."
+        },
+        {
+          "id": "help-hubs",
+          "title": "Hubs",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/hubs/",
+          "content": "Deploying inside a hub using our CLI\n  Default settings\n  Group documentations by tag\n  Auto create the documentation\n\n\nEasily create APIs catalogs to help your developers or consumers discover and synchronize with your entire APIs ecosystem. Only available with the Business plan.\n\nDeploying inside a hub using our CLI\n\nHubs provide their own authentication token. You can deploy an existing hub documentation using either its own authentication token, or the hub one.\n\nbump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token my-doc-token\nbump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token hub-token\n\n\nDefault settings\n\nYou can define default settings at the hub level. These settings will be then used by the hub’s documentations. You can define:\n\n\n  logo\n  color scheme\n  grouping strategy (group by tag or by path)\n  navigation mode (1 or 2 levels navigation)\n\n\nThe default settings can be overridden at the documentation level by selecting specific values in the documentation settings tab.\n\nGroup documentations by tag\n\nYou can display hub’s documentations grouped by tag instead of a global list. Select “Group documentations by tag” in your hub’s UI settings, and fill tags for each documentation.\n\nYou can add multiple tags to a documentation. It will be displayed under each associated tag on the hub.\n\nAuto create the documentation\n\nYou can create a documentation on the fly by using the --auto-create CLI option. When deploying, if the documentation doesn’t exist yet, a new one will be created with your hub defaults, the given slug (provided with --doc) and documentation name (--doc-name).\n\nbump deploy your/doc.yml --auto-create --doc my-doc --hub hub-slug-or-id --token hub-token\n\n\nIn this case, you have to provide the following parameters:\n\n\n  --auto-create: activate the auto-creation mode\n  --doc:  the documentation slug (url) you want to use\n  --doc-name (optional): the documentation name you want to use. Automatically generated from documentation’s slug if missing.\n  --hub:  the hub slug (or id)\n  --token: the hub token\n\n\nYou can also combine this with the --filename-pattern &lt;pattern&gt; flag if you want to deploy multiple api definition files all at once.\n\nbump deploy your/apis/folder/ --auto-create --filename-pattern *-{slug}-api --hub hub-slug-or-id --token hub-token\n\n\nThis command will search all files from the your/apis/folder/ which matches the pattern *-{slug}-api and deploy each matching file to the corresponding {slug} documentation.\n\nFor instance, a file called private-payment-service-api.yml will be deployed to a documentation on Bump.sh with the slug payment-service. Where as a file called data.json will not matched and be ignored by the command stated above.\n\nFor more details about the folder deployment inside a Hub, please check the Bump CLI related paragraph documentation page."
+        },
+        {
+          "id": "help",
+          "title": "Bump.sh Documentation",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/",
+          "content": "Manage your documentation and access\n  Customization\n\n\nLearn how to get the most of Bump.sh for your API ecosystem.\n\n\n  Getting started – Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.\n  Specification support – Which and how specifications are supported.\n  Change Management – Never miss any changes of your API, check them with the diff.\n\n\nManage your documentation and access\n\n  Hubs – Create groups of documentation.\n  Access Management – Setup who can access what in your hubs and docs.\n  Organizations – Invite teammates or partners to your ecosystem.\n\n\nCustomization\n\n  Custom domain – Host your documentation under your own domain.\n  Documentation Topics – Add context and information to your specification files.\n  Meta images – Share docs links on your social medias."
+        },
+        {
+          "id": "help-organizations",
+          "title": "Organizations",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/organizations/",
+          "content": "Create a new organization\n  Member management\n  Organization management\n  Organizations FAQ    \n      How many members can I invite to my organization?\n      I’ve invited the wrong person!\n      I can’t access my organization/documentation anymore!\n      Organizations are great but I need this another specific feature to work with my team.\n      I would like to move one of my documentation/hubs from my personal space to an organization.\n    \n  \n\n\nOrganizations are great when you need to work collaboratively with your team. Instead of a single shared account, each member of your team will be able to access/maintain your documentation and hubs.\n\nOrganizations are also super useful if you want to invite guests (who are called “viewers”) to your documentation: it’s a read-only role. If you need to keep your API private or shared with a small number of partners, viewers are a great solution.\n\nCreate a new organization\n\nYou can easily create an organization from your dashboard. Select the settings section and the organization tab. From here, you can create an organization or manage the ones you own.\n\n\n\nSelect “Create Organization” to start a new one. You’ll need to name it and choose its slug.\n\n\n\nMember management\n\nOnce your organization is created, you may want to invite teammates and guests (which is the point, actually). When you invite a new member, you’ll have to select a role before sending the invitation. Each role has its own permissions, detailed below. Roles can be modified at anytime.\n\n\n  \n    \n      Role/Permission\n      Admin\n      Maintainer\n      Viewer\n    \n  \n  \n    \n      Documentation access\n      ✓\n      ✓\n      ✓\n    \n    \n      Hubs access\n      ✓\n      ✓\n      ✓\n    \n    \n      Documentation management\n      ✓\n      ✓\n       \n    \n    \n      Hubs management\n      ✓\n      ✓\n       \n    \n    \n      Organization management\n      ✓\n       \n       \n    \n    \n      Member management\n      ✓\n       \n       \n    \n  \n\n\n\n\nBilling and invoice are only managed by the owner of the organization.\n\nOrganization management\n\nFrom your dashboard, you can manage the organizations you own and those you have admin role. Organization settings allow you to change its name and URL, transfer ownership to an active member or completely delete the organization.\n\n\n\n:::caution\nTransferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.\n:::\n\n:::caution\nIf you choose to close your Bump account but are still the owner of an organization, a warning message will be displayed. Please consider transferring ownership if necessary.\n:::\n\n:::danger\nDeleting an organization will definitively erase its documentation and hubs. We cannot restore deleted content.\n:::\n\nOrganizations FAQ\n\nHow many members can I invite to my organization?\n\nThe sky is the limit! You can invite as many members as you want to your organizations.\n\nI’ve invited the wrong person!\n\nNo worries, you can cancel a pending invitation at anytime (or even resend the invitation email).\nIf the invitation has been accepted, you can still revoke access in a few clicks.\n\n\n\nI can’t access my organization/documentation anymore!\n\nThis is most likely due to an organization created during a trial that has not been switched to a paid plan. Organization is a feature available from the Startup plan. If you are in such a situation, please reach us, we’ll try to find the most suitable solution for you and your team!\n\nOrganizations are great but I need this another specific feature to work with my team.\n\nOrganizations are a brand new feature we plan to polish with time. We’re always open to feedback or suggestions, so please feel free to contact us anytime to discuss what would fit your needs the best.\n\nI would like to move one of my documentation/hubs from my personal space to an organization.\n\nIf you cannot perform this operation on your end yet, we can surely do this for you. Contact us and we will take care of this!"
+        },
+        {
+          "id": "help-organizations-single-sign-on-sso",
+          "title": "Single Sign-On (SSO)",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/organizations/single-sign-on-sso/",
+          "content": "Activating SSO for your organization\n  Configuring user permissions\n\n\nBump.sh supports Single Sign-On through your Identity and Access Management systems, to ease who in your organization can access admin permissions.\n\nOur Single Sign-On feature relies on WorkOS, which supports a wide variety of integrations with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).\n\nActivating SSO for your organization\n\nSSO is available on our Business plans.\n\nOnce you have purchased a Business plan, please reach out to our support team to have the feature activated on your account.\n\nWe will send you a URL that will let you complete the configuration, picking the Identity and Access Management solution you need.\n\n\n\nConfiguring user permissions\n\nBy default, all users who get access to Bump.sh via the configured SSO will have the “Viewer” Role/Permission.\n\nThe Organization Owner may configure different permission levels for each user via the Bump.sh administration user interface."
+        },
+        {
+          "id": "help-specification-support-asyncapi-support",
+          "title": "AsyncAPI Support",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/asyncapi-support/",
+          "content": "Currently supported\n  Partially supported: message object payload\n  Partially supported: server security and securitySchemes\n  readOnly and writeOnly properties\n  Add topics to your documentation\n\n\nCurrently supported\n\nBump.sh is able to extract:\n\n\n  root properties (AsyncAPI Object)\n  channels (with automatic grouping according to channel name or tag grouping)\n  operations (subscribe and publish)\n  messages (payload and headers), with examples.\n  bindings (server, operation and message).\n\n\nPartially supported: message object payload\n\nMessage object field payload could be of any type according to the specification, but we only support SchemaObject type.\n\nPartially supported: server security and securitySchemes\n\nAsyncAPI securitySchemes property with these authentication types are supported:\n\n\n  http\n  apiKey\n  httpApiKey\n  oauth2\n  openIdConnect\n\n\nThe following authentication types are not supported:\n\n  X509\n  symmetricEncryption\n  asymmetricEncryption\n  plain\n  scramSha256\n  scramSha512\n  gssapi\nTo describe these authentication types, please use our custom x-topics property for now.\n\n\nreadOnly and writeOnly properties\n\nJSON Schema provides the possibility to declare a property as read or write only. Read more in the JSON Schema section of this documentation.\n\nAdd topics to your documentation\n\nYou can add extra information to your documentation by using Bump.sh custom x-topics.\n\nRead more in the Topics section of this documentation."
+        },
+        {
+          "id": "help-specification-support",
+          "title": "Specification Support",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/",
+          "content": "Bump.sh supports the most popular specifications for REST APIs and Event-Driven APIs.\n\n\n  OpenAPI Specification\n  AsyncAPI Specification\n\n\nWe do plan to support more specifications in the future. If there is one specifically you’re looking for, feel free to contact us!"
+        },
+        {
+          "id": "help-specification-support-json-schema",
+          "title": "JSON Schema support",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/json-schema/",
+          "content": "readOnly and writeOnly properties\n\n\nJSON schema is supported by Bump.sh\n\nreadOnly and writeOnly properties\n\nJSON Schema provides the possibility to declare a property as read or write only, with boolean fields writeOnly and readOnly (cf JSON Schema documentation).\n\nThus, it becomes easy to use the same Schema Object in different contexts, for example as seen below:\n\n\"schema\": {\n  \"properties\": {\n    \"password\": {\n      \"type\": \"string\",\n      \"format\": \"password\",\n      \"writeOnly\": true\n    },\n    \"created_at\": {\n      \"type\": \"string\",\n      \"format\": \"date-time\",\n      \"readOnly\": true\n    }\n  }\n}\n\n\n:::warning\n\n  \n    writeOnly properties are hidden when they belong to a subscribe operation in AsyncAPI or a response in OpenAPI.\n  \n  \n    readOnly properties are hidden when they belong to a publish operation in AsyncAPI or a request in OpenAPI.\n:::\n  \n\n\n:::info\nNot displaying writeOnly properties in subscribe operations and readOnly properties in publish operations allows the use of the same Schema Object everywhere it is needed, without generating  confusing informations in the documentation.\n:::"
+        },
+        {
+          "id": "help-specification-support-markdown-support",
+          "title": "Markdown support",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/markdown-support/",
+          "content": "Common Markdown syntax support\n  Titles &amp; headings\n  Multi-line code blocks with language color syntax highlighting\n  Information call-outs\n  Images    \n      Image sizing\n    \n  \n  Markdown files as an external reference\n\n\nBump supports common Markdown syntax, language color syntax highlighting, and information call-outs. Markdown can be included inside your contract file or as an external reference using dedicated Markdown files. Here’s several options that may help.\n\nCommon Markdown syntax support\n\n\n  \n    \n      Formatting\n      Markdown Syntax\n      Rendering\n    \n  \n  \n    \n      bold\n      **bold**\n      bold\n    \n    \n      italic\n      _italic_\n      italic\n    \n    \n      link\n      [links](https://bump.sh)\n      links\n    \n    \n      inline code\n      ̀ inline code ̀\n      inline code\n    \n    \n      highlight\n      ==highlight==\n      highlight\n    \n    \n      strike-through\n      ~~strikethrough~~\n      strikethrough\n    \n    \n      footnote\n      Footnote[^1]\n      Footnote[^1]\n    \n    \n      quotes\n      &gt; quotes\n      &gt; quotes\n    \n  \n\n\nTitles &amp; headings\n\n\n  Heading 1: # A first-level title\n  Heading 2: ## A second-level title\n  Heading 3: ### A third-level title\n\n\nMulti-line code blocks with language color syntax highlighting\n\nE.g.\n\n    ```json\n    {\n      \"hello\": \"world\",\n      \"number\": 1,\n      \"boolean\": true\n    }\n    ```\n\n\nwill render:\n\n{\n  \"hello\": \"world\",\n  \"number\": 1,\n  \"boolean\": true\n}\n\n\nInformation call-outs\n\nBump support information call-outs (of type info, warn, success or error) with the quote markdown syntax (lines starting with &gt;  ) if the first line contains one of the call-out types.\n\nE.g.\n\n&gt; info\n&gt; this is an important information to **standout**\n\n\nwill render:\n\n\n  this is an important information to standout\n\n\nImages\n\nUse the following syntax to add images in your markdown\n![Alt text](/path/to/image.jpg \"Image title\")\n\n\nNote that even if it’s a best practice to always add an alt text for an image, the parameters Alt text and \"Image title\" are optional.\n\nImage sizing\n\nIf you want to manually set the size of your image you can use Bump.sh =dimension parameter just before the closing parenthesis as:\n![Alt text](/path/to/image.jpg \"Image title\" =dimension)\n\n\n=dimension uses the following syntax:\n=[width][unit]x[height][unit]\n\n\nfor instance using =100pxx50px where\n\n  100 is the width\n  px the unit\n  x the separator\n  50 the height\n  second px is unit again\nwill output an image with 100 pixels height and 50 pixels width.\n\n\nAt least one height or width parameter is mandatory, everything else being optional.\n\n=100pxx50px   # with everything\n=100x50       # without unit\n=100          # without height (x separator not needed) and unit\n=100px        # without height\n=x50          # without width and unit\n=x50px        # without width\n\n\n\n  \n    If you don’t specify a unit it will default to pixel\n    If you don’t specify width or height, the other value will be a ratio calculated from the original size of the image so it doesn’t shrink\n  \n\n\nYou can use any of the following CSS length units as unit:\n\nAbsolute units:\n\n  cm centimeters\n  mm millimeters\n  in inches (1in = 96px = 2.54cm)\n  px pixels (1px = 1/96th of 1in)\n  pt points (1pt = 1/72 of 1in)\n  pc picas (1pc = 12 pt)\n\n\nRelative units:\n\n  em relative to the font-size of the element (usually 1em = 16px)\n  ex relative to the x-height of the current font (rarely used)\n  ch relative to the width of the “0” (Unicode U +0030) in the current font\n  rem relative to font-size of the root element\n  vw relative to 1% of the width of the viewport*\n  vh relative to 1% of the height of the viewport*\n  vmin relative to 1% of viewport’s* smaller dimension\n  vmax relative to 1% of viewport’s* larger dimension\n  % relative to the parent element\n\n\nMarkdown files as an external reference\n\nMarkdown files can be included as an external reference within your contract document with the $ref syntax $ref: \"./path/to/local-markdown.md\". In the same way you can extract part of your contract (usually JSON schema of your models into dedicated *.yaml or *.json files), you can extract your markdown content into dedicated files too.\n\nE.g. Your OpenAPI contract api-contract.yml can thus looks like:\n\nopenapi: 3.1.0\ninfo:\n  title: Bump API documentation\n  version: 1.0.0\n  description:\n    $ref: \"./docs/introduction.md\"\nx-topics:\n  - title: Getting started\n    content:\n      $ref: \"./docs/getting-started.md\"\n  - title: Use cases\n    content:\n      $ref: \"./docs/use-cases.md\"\n    example:\n      $ref: \"./docs/use-cases-examples.md\"\nservers:\n  ...\npaths:\n  ...\n\n\nWith files docs/introduction.md, docs/getting-started.md, docs/use-cases.md and docs/use-cases-examples.md right next to your contract document, you will be able to generate a comprehensive API documentation with nicely formatted content for your users.\n\nIt’s a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an AsyncAPI contract) in dedicated Markdown files. Thanks to the x-topics top-level property in your contract as explained in the dedicated help page."
+        },
+        {
+          "id": "help-specification-support-openapi-support",
+          "title": "OpenAPI support",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/openapi-support/",
+          "content": "Partially supported: securitySchemes (V3) / securityDefinitions (V2)\n  readOnly and writeOnly properties\n  Add topics to your documentation\n\n\nPartially supported: securitySchemes (V3) / securityDefinitions (V2)\n\nWe support OpenAPI securitySchemes property (securityDefinitions with openAPI v2) with these authentication type values:\n\n\n  http\n  apiKey\n  oauth2\n  openIdConnect\n\n\nWe do not support mutualTLS. To describe a mutualTLS authentication method, please use the x-topics property for now.\n\nreadOnly and writeOnly properties\n\nJSON Schema provides the possibility to declare a property as read or write only. Read more in the JSON Schema section of this documentation.\n\nAdd topics to your documentation\n\nAs this is not supported by OpenAPI, we created a custom property to enrich your documentation. Find out more in our dedicated section."
+        },
+        {
+          "id": "help-specification-support-openapi-support-name-and-sort-resources",
+          "title": "Name and sort endpoints and webhooks",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/openapi-support/name-and-sort-resources/",
+          "content": "Endpoints and Webhooks are resources    \n      Group by tag\n      Group by path\n      Webhooks\n    \n  \n\n\nIn the Bump.sh console, if you click on any of your documentations and select Customize UI in the left menu, you can scroll down to How to group operations?. There are three options available:\n\n  (default)\nThe default behaviour of Bump.sh is automatic grouping based on the presence of a list of top-level tags. More on that in the Group by tags section.\n  Group by tags\n  Group by path\n\n\nBut first let’s provide a bit more context on endpoints and webhooks.\n\nEndpoints and Webhooks are resources\n\nREST APIs are composed of a set of possible requests, from server to server.\n\n\n  In the API context, endpoints are most of the time URLs that provides the location of a specific resource on an API server.\nWith OpenAPI, endpoints are stored under the resource paths.\n\n\nOR\n\n\n  Webhooks are requests that can be generated from the API to the external server, after a specific event occurred. Webhooks are stored with OpenAPI 3.1 under resource webhooks\n\n\nHere’s how we describe, sort and group these resources, based on an OpenAPI specification example. Below is an overview of the full specification you can find on OpenAPI Specification examples repo.\n\nopenapi: \"3.0.0\"\ninfo:\n  title: Swagger Petstore\npaths:\n  /pets:\n    get:\n      summary: List all pets\n      operationId: listPets\n      tags:\n        - all pets\n      # ...\n\n    post:\n      summary: Create a pet\n      operationId: createPets\n      tags:\n        - single pet\n      # ...\n  /pets/{petId}:\n    get:\n      summary: Info for a specific pet\n      operationId: showPetById\n      tags:\n        - single pet\n      # ...\n\n\n\nThere are three operations here, and three different ways to generate, group and order them, regarding option chosen for How to group operations?\n\n\n\nGroup by tag\n\n\n  Be careful about operations without tags when option Group operations by tag is selected, as they would be ignored!\n\n\nYou may have noticed in the above API Contract that there are two different tags: all pets and single pet.\nIf you choose option Group by tag, Bump.sh will use these tags to group, name and sort the operations.\n\nHere is our Petstore live example, based on the OpenAPI specification, with option Group by tag :\n\n\n\n\n  If first level field tags are present at the root of your OpenAPI document object, Bump.sh will use Group by tags as a default documentation generation behaviour.\n{. :info}\n\n\nHaving this first level field tags allows you to override how your endpoints are ordered. Take the following API Contract sample:\n\ntags:\n  - name: single pet\n    description: all operations related to managing a single pet\n  - name: all pets\n    description: all operations related to managing all pets\npaths:\n  # ...\n\n\nWith these first level tags, endpoints Single Pet would be displayed above All pets in the left menu of your documentation.\n\nNote that you can also provide a description for your tags. This description will be displayed just under the name of the tag at the top level of your tag documentation page.\n\nThis option Group by tag allows a better customization of your doc, by overriding resources name.\n\nGroup by path\n\nIn this case, we deduce endpoint name from related path. First part of the path is extracted to generate the endpoint name, and every operation related to this endpoint name will be grouped together.\n\nLet’s Bump it up to something visual with a Petstore live example:\n\n\n\nOperations GET and POST from /pets , and GET from /pets/{petId} are grouped under same endpoint Pets (first part of the path), and their names are generated from field summary.\n\nWebhooks\n\nAnd what about webhooks?\n\nIt’s quite well explained how webhooks name are generated from summary, description  in Webhooks documentation’s page. But by choosing option Group by tag, webhooks are displayed, grouped and ordered with same rules as for endpoints.\n\n\n  Be careful about webhooks without tags when option Group by tag is selected, as they would be ignored!\n\n\nTwo possibilities for this OpenAPI 3.1 documentation with endpoints and webhooks, on our examples hub:\n\n\n  Resources grouped by path\n  Resources grouped by tags\n\n\nFinally, we hope these options will help you build the most readable documentations, feel free to contact us if you need support or have some suggestion."
+        },
+        {
+          "id": "help-specification-support-openapi-support-webhooks",
+          "title": "Webhooks",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/openapi-support/webhooks/",
+          "content": "One of the greatest new features provided by OpenAPI 3.1 is the support of webhooks. Indeed, a OpenAPI 3.1 documentation may include paths and / or webhooks, when paths were required for previous version.\n\nEvery webhook has a required keyName, and some operations. If we follow this example, provided for OpenAPI 3.1 by OpenAPI Initiative:\n\nwebhooks:\n  # Each webhook needs a name\n  newPet:\n    # This is a Path Item Object, the only difference is that the request is initiated by the API provider\n    post:\n      description: A new pet arrived, let's come and discover it IRL.\n      requestBody:\n        description: Information about a new pet in the system\n        content:\n          application/json:\n            schema:\n              $ref: \"#/components/schemas/Pet\"\n      responses:\n        \"200\":\n          description: Return a 200 status to indicate that the data was received successfully\n\n\nHere, there is a single webhook whom keyName  is newPet , and a POST operation. If such a documentation was generated by Bump (see live documentation):\n\n\n\n\n  Webhook’s name is deduced from the keyName.\n  Webhook’s operation name is extracted from field summary.\n  As for endpoints, webhook has body parameters, responses… and some curl and request payloadexamples are generated.\n\n\nFurthermore, webhooks are fully compatible with UI customization How to group operations?\n\nBy adding some tags to your webhooks, you can re-organize how webhooks are named, sorted, and how webhooks operations are sorted."
+        },
+        {
+          "id": "help-specification-support-polymorphism",
+          "title": "Polymorphism",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/polymorphism/",
+          "content": "Discriminator\n\n\nBump.sh fully supports polymorphism for OpenAPI and AsyncAPI, commonly called anyOf, oneOf and allOf.\nMore details on these combinators can be found on each specification documentation:\n\n\n  OpenAPI\n  AsyncAPI\n\n\nTo ease readability, we strongly recommend to give titles to your alternatives: it will help to identify and search them, specifically if you use this feature extensively.\n\nHere’s an example of polymorphism in action:\n\n\n\nDiscriminator\n\nBoth OpenAPI and AsyncAPI specifications provide support of a discriminator field,\nto easily identify which schema is used.\n\nIn our generated API documentation, this discriminator property is identified\nwith a specific flag, and allowed value is explicit.\n\nIn example provided above:\n\n  type is the discriminator property between alternatives ‘Human’ or ‘Pet’. Value has to be either human or pet.\n  kind is the discriminator property between alternatives ‘Dog’ or ‘Cat’. Value has to be either 🐕 or 🐈."
+        },
+        {
+          "id": "help-specification-support-references",
+          "title": "References",
+          "collection": {
+            "label": "help",
+            "name": "Help"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/help/specification-support/references/",
+          "content": "What is a reference?\n  The two types of references    \n      Internal references\n      External references\n    \n  \n  How to deploy a specification with external references\n\n\nReferences are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.\n\nWhat is a reference?\n\nA reference can be either a pointer to another part of your current specification or a pointer to an external file or URL. This lets you re-use part of a specification instead of duplicating it across your file(s).\n\nA reference is always described as follows in YAML:\n\n$ref: path/to/reference\n\n\nYou should note that OpenAPI and AsyncAPI specifications don’t allow you to use references anywhere. However, Bump will resolve all the references found in your files, even if you didn’t respect your specification.\n\nThe two types of references\n\nInternal references\n\nUse this when you want to point to another part of your current file. Internal references always start with #/.\n\nExample:\n\npaths:\n  /ping:\n    description: Test your API status\n    responses:\n      200:\n        $ref: \"#/responses/pong\"\n\n\nInternal references are always expanded by Bump. If a reference points on an empty path, the reference is just ignored.\n\nExternal references\n\nUsing external references is particularly useful as it can point to external resources like full definitions, components, models, etc… External references let you reuse your components across multiple projects without duplicating your specification code.\n\nYou can find two kinds of external reference locations supported by Bump:\n\n\n  URI: a resource hosted online and accessible through HTTP\n  File system path: a resource located on the same file system as your definition\n\n\n# URI\n$ref: https://example.com/api/specification.yml\n\n# File system path\n$ref: ./models/user.yml\n\n\n\n  Bump supports absolute and relative paths for file system references.\n\n\nAn external reference can also point to a subpart of the resource by adding a relative path after the absolute location:\n\n# URI\n$ref: https://example.com/api.yml#/models/user\n\n# File system path\n$ref: ./models.yml#/user\n\n\n\n  You can use recursive references if needed but we limit up to 5 recursive reference maximum.\n\n\nHow to deploy a specification with external references\n\nBump does support external references from any channel, so you can deploy a specification including them through the web app, the CLI, our GitHub action, or our API.\n\n\n  Some limitations apply when using the web application though. Only references pointing to resources accessible by our servers will be resolved. This means that file system paths and protected URI will be ignored.\n\n  If you need to deploy a specification using this kind of external references, please use our CLI or our GitHub Action"
+        },
+        {
+          "id": "updates-2020-02-20-introducing-our-github-action",
+          "title": "Introducing our GitHub action",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New feature",
+          "url": "/updates/2020/02/20/introducing-our-github-action/",
+          "content": "Deploying your API documentation has never been so simple if you are using GitHub. We have just released our GitHub action, which lets you super easily control when and how you want to deploy your doc.\n\nAll you have to do is configuring your workflow:\n\nsteps:\n  - name: Checkout\n    uses: actions/checkout@v2\n  - name: Deploy API documentation\n    uses: bump-sh/github-action@0.1\n    with:\n      id: &lt;BUMP_DOC_ID&gt;\n      token: &lt;BUMP_DOC_TOKEN&gt;\n      file: doc/api-documentation.yml\n\n\nYou can see it in action on our workflow examples 😎"
+        },
+        {
+          "id": "updates-2020-04-24-introducing-hubs",
+          "title": "Your whole ecosystem on a single page",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New feature",
+          "url": "/updates/2020/04/24/introducing-hubs/",
+          "content": "Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.\n\n\n\nHighlighted features:\n\n  custom domain support\n  documentations can be grouped by tag\n  default settings at the hub level, applied to all its documentations\n  auto-creation of hub documentations from your CI\n  and obviously, OpenAPI and AsyncAPI support\n\n\nHubs are available with our Business plan.  Learn more on our help center."
+        },
+        {
+          "id": "updates-2020-06-12-enhanced-examples",
+          "title": "Documentation examples for lazy people",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2020/06/12/enhanced-examples/",
+          "content": "What’s the first thing you look at when exploring a new tool? If you’re as lazy as I am, it’s probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.\n\nFirst, we have improved the way we auto-generate examples when missing. We now generate them based on the format of the attribute, for the following formats: email, url, date, date-time and UUID.\n\n\n\nFor requests with a body, we now display the whole body example, just under the cURL command example.\n\nAnd last but not least, copying an example has never been easier: we have added a copy button for cURL and request body examples:"
+        },
+        {
+          "id": "updates-2020-07-02-better-change-summaries",
+          "title": "Better change summaries",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2020/07/02/better-change-summaries/",
+          "content": "We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes &amp; headers) in the API changelogs and notifications we send.\n\nHere an example of a previous summary:\n\nEndpoint updated: Versions\nEndpoint updated: Validations\n\n\nWhich now becomes:\n\nUpdated: POST /docs/{:id}/versions\n  Body attribute added: specification\n  Response added: 200\n  Responses removed: 201, default\nUpdated: POST /docs/{:id}/validations\n  Body attribute added: specification\n  Response removed: default\n\n\nIt is now active for all new deployments. We’ll be recalculating the summaries of previous deployments to make your API changelogs clearer soon."
+        },
+        {
+          "id": "updates-2020-11-12-add-a-favicon-to-your-documentation",
+          "title": "Add a favicon to your documentation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2020/11/12/add-a-favicon-to-your-documentation/",
+          "content": "Until now, for documentation having a customised logo, the same one was used as a favicon.\n\nFrom now on, you can use a specific one, to brighten up your documentation more than ever!\n\nHere is how Bump’s documentation looks like now:\n\n\n\nAnd icing on the cake: it works for your hub too!\n\nHappy enhancement!"
+        },
+        {
+          "id": "updates-2020-11-18-show-verbs-in-navigation",
+          "title": "Show verbs in navigation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2020/11/18/show-verbs-in-navigation/",
+          "content": "Displaying operations in an endpoint or a channel is sometimes not enough. \nYou can now configure your documentations to show operation verbs in navigation.\n\nTo enable it, go to your documentation settings “Customize UI” tab, then select “Groups and operations with verbs” in the “Navigation” input."
+        },
+        {
+          "id": "updates-2020-11-22-depreciation-support",
+          "title": "Depreciation Support",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2020/11/22/depreciation-support/",
+          "content": "We now identify deprecated elements in both OpenApi and AsyncApi specifications, and highlight them in your documentations.\n\nWe wanted to release it fast, as it was an important missing feature, but this is just the beginning: we have a lot of ideas on how we can enhance deprecation support that we will implement in the upcoming weeks.\n\nWant to share some use cases with us? Pick a slot on Anthony’s calendar, he will be super glad to hear from you."
+        },
+        {
+          "id": "updates-2020-12-01-custom-domain-for-everyone",
+          "title": "Custom domain for everyone",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2020/12/01/custom-domain-for-everyone/",
+          "content": "You can now configure your custom domain directly from the app. No more manual email to us, just create your CNAME record, fill the form, and voilà.\n\nWe also have good news for you: we’ve updated our pricing plans to allow you to set up custom domains on free plans. One would say it’s Christmas, before Christmas. Enjoy!"
+        },
+        {
+          "id": "updates-2021-01-10-customize-operation-url",
+          "title": "Customize operation URL",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/01/10/customize-operation-url/",
+          "content": "OpenAPI provides field servers on OperationObject, as an alternative url to service an operation.\n\n  If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value. cf OpenAPI-Specification\n\n\nFrom now on, Operations servers are supported to customize your operations examples (in definition and curl example)."
+        },
+        {
+          "id": "updates-2021-02-04-hello-openapi-webhooks",
+          "title": "Hello, OpenAPI webhooks",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/02/04/hello-openapi-webhooks/",
+          "content": "OpenAPI 3.1 has been released today. Some important changes are coming with this new version. Above all, the greatest improvement is the support of webhooks, at the same first level than paths.\n\nWe are glad to announce today that webhooks are now supported by Bump, as you can see in this live example.\n\nWe hope you’ll enjoy this new feature, don’t hesitate to have a look to our technical documentation if necessary."
+        },
+        {
+          "id": "updates-2021-03-16-global-support-of-external-references",
+          "title": "Global support of external references",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/03/16/global-support-of-external-references/",
+          "content": "As your API grows, your specification becomes more and more complex. At some point, splitting it up into multiple files with $ref references pointing to these external resources can help a lot.\n\nWe have just released full external references support  by updating:\n\n  our web app\n  our CLI (version 0.7 is out)\n  our GitHub action (version 0.2 is out)\n\n\nNow, no matter the channel you use to deploy a specification, Bump will resolve all references (when possible) and import their content into your documentation.\n\nWant to learn more? Have a look at our documentation."
+        },
+        {
+          "id": "updates-2021-05-20-documentation-in-your-pocket",
+          "title": "Documentations in your pocket",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/05/20/documentation-in-your-pocket/",
+          "content": "We now offer a better mobile experience for your documentation if you happen to need it on-the-go. You will also have a navigation menu that allows to access the changelog page.\n\nMore changes are coming, stay tuned!"
+        },
+        {
+          "id": "updates-2021-05-23-ease-your-sight-with-dark-mode",
+          "title": "Ease your sight with dark mode ☾",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/05/23/ease-your-sight-with-dark-mode/",
+          "content": "Today we introduce the dark mode to your documentations! Depending on your system settings, your page will appear in a light mode (default) or in a darker scheme.\n\nYou’ll also be able to toggle to light or dark mode regarding your own preferences.\n\nWe hope you will enjoy the new experience. 👻"
+        },
+        {
+          "id": "updates-2021-05-29-new-command-line-interface-era",
+          "title": "New Command Line Interface era",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/05/29/new-command-line-interface-era/",
+          "content": "Goodbye to our legacy ruby gem, and hello to our new node-based CLI 👋.\n\nWe are releasing a new Command Line Interface which is iso-feature with the old CLI. There is one additional improvement though: we now support recursive external references ($ref keyword in your API specifications), with mixed filesystem or URL paths. You can now refactor your API definitions in small chunks, re-use parts of it, and separate concerns between endpoints, models or nested-objects in peace.\n\nThis new CLI package is written in Typescript which will help us to publish a stable &amp; type safe tool. On top of that -and especially with the oclif framework- we are now able to publish universal packages for multiple OSes &amp; architectures so everybody can enjoy Bump via command line interface.\n\nGet it while it’s hot\n\nnpm install -g bump-cli\n\n\nor download a package directly from the latest Github release assets.\n\nEnjoy the commands\n\n\n  bump preview to build as many API documentation preview as you want.\n  \n    bump deploy --dry-run to validate your future API documentation deployment.\n\n    (⚠️ This is a breaking change compared to our old CLI’s and replaces the old bump validate command)\n  \n  bump deploy to deploy your latest API documentation changes."
+        },
+        {
+          "id": "updates-2021-06-09-nested-properties-get-a-make-up",
+          "title": "Nested properties get a make up 🎀",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/06/09/nested-properties-get-a-make-up/",
+          "content": "Feedbacks are important to us and we do our best to make you feel heard.\nWe know that accessing nested properties is a pain point for many of you so we tried to make the navigation clearer and the selected element will now stand out more.\n\nWe’d love to hear from you and see if these changes suit your needs so hit us up with your comments whether you love it or hate it!"
+        },
+        {
+          "id": "updates-2021-07-02-bump-diff-from-your-cli",
+          "title": "Bump diff from your Command Line Interface or your Continuous Integration platform",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/07/02/bump-diff-from-your-cli/",
+          "content": "Our new bump diff command has landed in our CLI. \nMake sure to upgrade your bump-cli package to at least v2.1.0 to test it.\n\nNow, straight from your CLI, you are able to describe the changes made in your contract:\n\n&gt; bump diff --doc users-account api-specification.yaml\nUpdated: GET /account\n  Response modified: 200\n    Body attribute added: ticket_ids\nAdded: GET /tickets/{ticket_id}\n\n\nThe new command will output a quick summary of what has changed between your latest deployed API contract and the file you have changed locally.\n\nIf you use Github Actions to launch your automation workflows, we have some more good news for you: we now offer a stable bump-sh/github-action@v1 action. And this latest release includes automatic API contract changelog pushed as a comment for each pull request.\n\nCheck our help page to get you started with team collaboration on API design."
+        },
+        {
+          "id": "updates-2021-07-13-download-source-from-your-documentation",
+          "title": "Download source from your documentation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/07/13/download-source-from-your-documentation/",
+          "content": "We’ve made it easy for API consumers to download the source of an API documentation.\n\nWhether you want to get your hands on a JSON or YAML format, for OpenAPI or AsyncAPI, you’re now just a click away."
+        },
+        {
+          "id": "updates-2021-07-18-receive-api-changelog-in-your-mailbox",
+          "title": "Receive API changelog in your mailbox 🔔",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/07/18/receive-api-changelog-in-your-mailbox/",
+          "content": "In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.\n\nIt’s now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!\n\nWant to see it in action on Bump API documentation? See it live\n\nDo not hesitate to invite your API consumers to subscribe to your API updates (available at http://{your-doc-url}/changes)\n\nNever miss an API change again (now, it’s in your mailbox in case you missed it 😉)"
+        },
+        {
+          "id": "updates-2021-09-07-markdown-support",
+          "title": "Markdown support",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/09/07/markdown-support/",
+          "content": "As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.\n\nBump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.\n\nCheck our help page to start taking advantage of markdown in your API documentation."
+        },
+        {
+          "id": "updates-2021-09-11-share-and-highlight-anything-inside-your-api-documentation",
+          "title": "Share and highlight anything inside your API documentation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/09/11/share-and-highlight-anything-inside-your-api-documentation/",
+          "content": "To give your users the best API onboarding, \nit often helps to be able to share specific pieces of information.\n\nThanks to this new feature, you can now share and highlight anything in your API documentation with just a click. The selected element will be highlighted following your color theme.\n\n\n\nGive it a try: https://developers.bump.sh/#post-previews-body"
+        },
+        {
+          "id": "updates-2021-09-16-bindings-support-for-asyncapi",
+          "title": "Bindings support for AsyncAPI",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/09/16/bindings-support-for-asyncapi/",
+          "content": "AsyncAPI users, you’ll be happy to know that Bump now supports bindings.\n\nAs AsyncAPI allows many protocols, which is really nice, bindings are a useful and necessary mechanism to define protocol-specific information. Bump now displays protocol information defined at server, operation, and message levels, as part of an ongoing work for a better understanding of API documentations.\n\nHere’s an example: https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information"
+        },
+        {
+          "id": "updates-2021-09-20-rss-feed-for-your-changelog",
+          "title": "RSS feed for your changelog",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/09/20/rss-feed-for-your-changelog/",
+          "content": "In the age of information overload, getting access to information that matters can be quite challenging and that’s exactly the purpose of RSS.\n\nFrom now, get notified of the API changes through RSS in addition to the existing email.\n\nGive it a try with the Bump RSS feed in your favorite RSS reader."
+        },
+        {
+          "id": "updates-2021-09-21-changelog-makeover",
+          "title": "Changelog makeover 💄",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/09/21/changelog-makeover/",
+          "content": "We redesigned the whole changelog page in order to bring you a better understanding of changes history of your API.\n\nHere’s an example: https://developers.bump.sh/changes"
+        },
+        {
+          "id": "updates-2021-10-03-automatic-breaking-change-detection",
+          "title": "Automatic breaking change detection",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2021/10/03/automatic-breaking-change-detection/",
+          "content": "If some changes are more important than others, it is especially true for your API.\n\nFrom now on, we automatically detect if a new version of your API includes some breaking changes. It will be visible in the changelog page, in the changelog email or the brand new RSS feed… but also during your API design phase while opening a pull request thanks to our Github Action.\n\n\n\nWith Bump, you will never miss a breaking change again."
+        },
+        {
+          "id": "updates-2021-10-12-bump-live-preview",
+          "title": "Bump live preview",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/10/12/bump-live-preview/",
+          "content": "A new --live flag was added to the bump preview command.\n\nThis gives you the ability to stay focused on your API definition file (OpenAPI or AsyncAPI file) while seeing your Bump preview documentation page being updated as you change the file.\n\nNo need for a specific text editor, or any extension, just use the bump CLI to preview your documentation live.\n\n\n\nLearn more about live preview on our help page."
+        },
+        {
+          "id": "updates-2021-11-08-multiple-examples-support",
+          "title": "Multiple examples support",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/11/08/multiple-examples-support/",
+          "content": "Give your API users a personalized experience and a better understanding of your API while reading your documentation by including multiple examples to your API definition.\n\nBump now supports displaying multiple examples which are supported by both OpenAPI and AsyncAPI specifications."
+        },
+        {
+          "id": "updates-2021-11-14-bump-diff-navigation",
+          "title": "Bump diff navigation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2021/11/14/bump-diff-navigation/",
+          "content": "✨  Quickly identify what has changed in your API ✨\n\nJump from change to change! No need to scroll anymore to see the latest changes in your documentation diff.\n\n\n\nSee it in action: https://docs.canopyservicing.com/changes/fbcf9592-a369-4f17-9adb-410d48e3ff98"
+        },
+        {
+          "id": "updates-2022-01-15-changelog-update",
+          "title": "Changelog update",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2022/01/15/changelog-update/",
+          "content": "The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️\n\nHope you will enjoy it!\n\nSee it in action on our own API documentation: https://lnkd.in/gij9uHUy\n\n• Bonus point:\n\nIf you use our github-action, the diff comments have also been updated. Check our latest release for details: https://github.com/bump-sh/github-action/releases/tag/v1.1.0"
+        },
+        {
+          "id": "updates-2022-03-10-organization-support",
+          "title": "Organization support",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/03/10/organization-support/",
+          "content": "Building the best APIs can be a considerable amount of work and you may need your teammates to help. But you definitely do not want one single shared account for that.\n\nFreshly out of beta, the awaited Organizations feature helps you with that. We did not reinvent the wheel but wanted to make it as simple but powerful as possible.\n\n\n\nYou can easily customize access with 3 different roles: admin, maintainer, and viewers.\nAdmins can invite and manage access, maintainers can manage hubs and docs, guests are limited to read-only.\n\nAvailable from the Startup plan, we hope it will help teams work efficiently and smoothly on their APIs. You can find out more about Organizations in our Help Center!\n\nThis update was also the opportunity to ship some enhancements for the dashboard.\n\nWe can’t wait to hear about what you think of it so feel free to reach out!"
+        },
+        {
+          "id": "updates-2022-03-20-documentation-access",
+          "title": "Documentation Access",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2022/03/20/documentation-access/",
+          "content": "Following our recently released Organization feature, the new Documentation Access Management will help control who has access to which documentation or hubs.\n\nThree access levels are available: public, private (for your organization only) and protected (limited, password protection).\n\nFind more in our Help Center!"
+        },
+        {
+          "id": "updates-2022-04-02-webhooks",
+          "title": "Webhooks",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/04/02/webhooks/",
+          "content": "Today, we’re introducing Webhooks integration, as a new way to add Bump to your existing workflow.\n\nSet them up from your dashboard and receive notifications when events on your API structure are detected on your documentation.\n\nFind more in our Help Center!"
+        },
+        {
+          "id": "updates-2022-05-07-colors",
+          "title": "COLORS",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2022/05/07/colors/",
+          "content": "You already have deployed your API documentation but feel something’s missing? You couldn’t be more right.\n\nIntroducing one of the biggest updates to Bump yet: UI Color customization. You read that right. You can now change the primary color of your documentation to make it shine more than ever. Or make it match your logo/company brand!\n\nWe even added a short preview to help you find the best tone and ensure that you’ll keep in mind how it will look in dark mode too.\n\nTry it out from your Dashboard &gt; Customize UI and share with us your best results!"
+        },
+        {
+          "id": "updates-2022-06-04-multiple-types-for-properties-copie",
+          "title": "Multiple types for properties",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2022/06/04/multiple-types-for-properties-copie/",
+          "content": "Here is an update that was released some time ago but out of the radar: we now display all available types (even nullable) on any properties in your OpenAPI or AsyncAPI definition.\n\nYou’ll now see these correctly displayed properties in your documentation. Multiple types may look like a slight improvement but will add clarification to your team and community.\n\nAnd we have an example to show how great it is (thanks to Meilisearch’s documentation)."
+        },
+        {
+          "id": "updates-2022-06-13-search",
+          "title": "Search!",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/06/13/search/",
+          "content": "Here comes a long-expected new feature: the Search Bar. We know how time-consuming it can be to scroll through long API documentation to find what you are looking for: the Search Bar solves this in a blink of an eye.\n\nOur Search engine can look in your documentations and even your hubs on your APIs structures: endpoints, objects, properties, webhooks, etc… And to make it more comfortable, we sort them by types (and it looks great, seriously).\n\nWe are already working on two limitations: you cannot search in your spec history and we are lacking advanced filters.\n\nDiscoverability is an important topic on our end. We want to help teams and communities deep dive into their API ecosystem, making them easier to find and use. We will have a lot more to announce soon and we are preparing a small blog post on this feature’s making-of.\n\nWe hope you’ll enjoy the Search Bar: feel free to reach out if you have any feedback or suggestion!\n\nP.S. Search will be activated on your documentation/hub after the next deploy but please contact us if you need it before this as we can manually activate it."
+        },
+        {
+          "id": "updates-2022-07-08-branching",
+          "title": "Branching",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/07/08/branching/",
+          "content": "Introducing Branching, a great way to host several versions of an API Specification on the same documentation.\n\nIf your API has several versions you would like to maintain or if you are working between two environments, branching will make a difference and limit the number of documentation in your hub.\n\nCreate as many branches as you need, upload files accordingly and find the versions of your API anytime in your documentation, through a small selection menu.\n\nDefine which branch should be chosen by default, add or delete branches, keep everything up-to-date and share with your ecosystem the best API experience possible."
+        },
+        {
+          "id": "updates-2022-09-05-automated-image-generation",
+          "title": "Automated Image Generation",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/09/05/automated-image-generation/",
+          "content": "After working so hard on your API and its documentation, the moment has come to share it with the world.\nWe recently released a new social network feature, that helps you create beautiful visuals pointing to your API.\n\nYou can now upload your own image or leave the work to us to generate a nice one. Sharing your documentation link on social networks will now display your own visual, making it more appealing.\n\nFind out more in our Help Center!"
+        },
+        {
+          "id": "updates-2022-11-14-polymorphism",
+          "title": "Polymorphism",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2022/11/14/polymorphism/",
+          "content": "They have many names: schema alternatives, discriminator, inheritance… but you probably know them as oneOf, anyOf and allOf.\n\nBump now fully supports polymorphism for AsyncAPI and OpenAPI. You can already upload your latest API specification file to check it out. Or see it in action with our demo documentation of the feature!"
+        },
+        {
+          "id": "updates-2022-12-07-improved-access-management",
+          "title": "Improved Access Management",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2022/12/07/improved-access-management/",
+          "content": "Access management has been reshaped, thanks to extended tests and user feedback.\n\nInviting external customers and partners to access internal APIs is now possible directly from the dashboard.\n\nFrom the dedicated section in your hub/documentation settings, you can quickly modify who has access to what. Open it to teammates of your organization, or invite external partners by email directly.\n\nPassword-protected level will stay available for a limited amount of time. More info can be found in our help center."
+        },
+        {
+          "id": "updates-2023-01-27-enhanced-specifications-support",
+          "title": "Enhanced Specifications Support",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2023/01/27/enhanced-specifications-support/",
+          "content": "Over the past weeks, we have considerably enhanced our support of the specifications.\n\nminLength, maxLength and pattern\n\nWherever you need to document restrictions on string fields, OpenAPI and AsyncAPI specifications rely on JSON Schema to support this.\nminLength and maxLength  are meant to constrain the length of a string.\npattern  restrict the string to a specific Regular Expression (regex).\n\nEmail addresses, IBANs and ZIP/Postal codes could be great examples of these features.\n\n\n\nreadOnly  and  writeOnly  properties\n\nJSON Schema allows defining a property as readOnly  or  writeOnly.\nMany examples can easily be imagined when used with AsyncAPI or OpenAPI : readOnly  timestamp, writeOnly  password, etc…\n\nOur Help Center shares more details on how Bump.sh works with this feature and a few examples."
+        },
+        {
+          "id": "updates-2023-06-03-lightning-fast-api-documentation-rendering",
+          "title": "Lightning-fast API documentation rendering",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2023/06/03/lightning-fast-api-documentation-rendering/",
+          "content": "Fast-loading page is a must these days, both for human users and search engines.\n\nThanks to the new rendering engine, which has already been released to 100% of our users, navigating your API documentation is now a breeze. It provides an optimal experience for all API consumers, whatever the size of the documentation (yes, any size).\n\nPerformance is significantly better: the first interactive content is as fast as the blink of an eye, which also means there’s no more blocking time when you first navigate the API documentation."
+        },
+        {
+          "id": "updates-2023-06-14-bump-cli-2-7-0",
+          "title": "Bump.sh CLI v2.7.0",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New",
+          "url": "/updates/2023/06/14/bump-cli-2-7-0/",
+          "content": "Multi-file Deployment\n\nDeploying multiple files on your Hub has never been this effortless. You can now provide a directory path to deploy all files within a directory to your Bump.sh hub.\n\nFor a more detailed walkthrough on how this works, check out the feature in action in our latest release notes.\n\nLive Preview\n\nUsing the Live Preview feature  bump preview --live my-definition-api.yml now creates an immediate preview without waiting for the first change on the target file.\n\nOther improvements\n\n\n  Keeping up with the latest version of the CLI is now easier thanks to a new warning in case of outdated version usage.\n  Significant refactor of the deployment-related code to accommodate the new “Multiple files deploy” feature.\n  CLI upgraded to TypeScript 4.5 and performed some dependency upgrades."
+        },
+        {
+          "id": "updates-2023-06-16-api-branch-management",
+          "title": "Managing Branches from your API",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "New, API",
+          "url": "/updates/2023/06/16/api-branch-management/",
+          "content": "Branch Management is now available from the Bump.sh API, making your API evolution workflows a whole lot smoother as an easy and effective way to manage your versions and optimizes how you deliver ephemeral or major ones, at hand (at least within our API).\n\nLet’s explore how these new features simplify your API workflow\n\n\n  Branch creation: Create a new branch effortlessly with a single API call, eliminating manual work.\n  List of Branches: Obtain an overview of all API branches, facilitating efficient management and organization.\n  Set Default Branch: Easily choose and showcase a default branch for up-to-date API documentation.\n  Delete Branch: Remove unnecessary branches to maintain a clean and organized development environment."
+        },
+        {
+          "id": "updates-2023-08-01-custom-code-samples",
+          "title": "Custom code samples",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2023/08/01/custom-code-samples/",
+          "content": "We now support the x-codeSamples extension that let you set language-specific code samples you expect your users to work with.\n\nExamples are often the first stop for developers in any API documentation. This extension allows you to set along a programming language, its custom code samples, for a more seamless developer experience when it comes to testing an API.\n\nEither supercharge your API documentation by setting language-specific code examples or keep things simple as the auto-generated cURL examples remain. See more about custom code sample in the docs."
+        },
+        {
+          "id": "updates-2023-08-09-changelog-layout",
+          "title": "Improved Changelog",
+          "collection": {
+            "label": "updates",
+            "name": "Product Updates"
+          },
+          "categories": "",
+          "tags": "Improvement",
+          "url": "/updates/2023/08/09/changelog-layout/",
+          "content": "The changelog is a crucial part of your API ecosystem, providing a clear view of what’s new, changed, fixed or removed.\nWe’ve redesigned it to make it cleaner, clearer and more efficient while maintaining the ability for anyone to stay aware of updates, one click away.\n\nCheck how it looks on the Bump.sh API doc: it is absolutely stunning."
+        },
+        {
+          "id": "guides-introducing-our-github-action",
+          "title": "Introducing our GitHub action",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New feature",
+          "tags": "",
+          "url": "/guides/introducing-our-github-action/",
+          "content": "Deploying your API documentation has never been so simple if you are using GitHub. We have just released our GitHub action, which lets you super easily control when and how you want to deploy your doc.\n\nAll you have to do is configuring your workflow:\n\nsteps:\n  - name: Checkout\n    uses: actions/checkout@v2\n  - name: Deploy API documentation\n    uses: bump-sh/github-action@0.1\n    with:\n      id: &lt;BUMP_DOC_ID&gt;\n      token: &lt;BUMP_DOC_TOKEN&gt;\n      file: doc/api-documentation.yml\n\n\nYou can see it in action on our workflow examples 😎"
+        },
+        {
+          "id": "guides-introducing-hubs",
+          "title": "Your whole ecosystem on a single page",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New feature",
+          "tags": "",
+          "url": "/guides/introducing-hubs/",
+          "content": "Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.\n\n\n\nHighlighted features:\n\n  custom domain support\n  documentations can be grouped by tag\n  default settings at the hub level, applied to all its documentations\n  auto-creation of hub documentations from your CI\n  and obviously, OpenAPI and AsyncAPI support\n\n\nHubs are available with our Business plan.  Learn more on our help center."
+        },
+        {
+          "id": "guides-enhanced-examples",
+          "title": "Documentation examples for lazy people",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/enhanced-examples/",
+          "content": "What’s the first thing you look at when exploring a new tool? If you’re as lazy as I am, it’s probably the examples. As we think they are one of the most important parts of your documentation, we gave them the attention they deserve.\n\nFirst, we have improved the way we auto-generate examples when missing. We now generate them based on the format of the attribute, for the following formats: email, url, date, date-time and UUID.\n\n\n\nFor requests with a body, we now display the whole body example, just under the cURL command example.\n\nAnd last but not least, copying an example has never been easier: we have added a copy button for cURL and request body examples:"
+        },
+        {
+          "id": "guides-better-change-summaries",
+          "title": "Better change summaries",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/better-change-summaries/",
+          "content": "We have enhanced the way we summarize API changes. We now list any changes, at all levels (endpoints, requests, responses, attributes &amp; headers) in the API changelogs and notifications we send.\n\nHere an example of a previous summary:\n\nEndpoint updated: Versions\nEndpoint updated: Validations\n\n\nWhich now becomes:\n\nUpdated: POST /docs/{:id}/versions\n  Body attribute added: specification\n  Response added: 200\n  Responses removed: 201, default\nUpdated: POST /docs/{:id}/validations\n  Body attribute added: specification\n  Response removed: default\n\n\nIt is now active for all new deployments. We’ll be recalculating the summaries of previous deployments to make your API changelogs clearer soon."
+        },
+        {
+          "id": "guides-add-a-favicon-to-your-documentation",
+          "title": "Add a favicon to your documentation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/add-a-favicon-to-your-documentation/",
+          "content": "Until now, for documentation having a customised logo, the same one was used as a favicon.\n\nFrom now on, you can use a specific one, to brighten up your documentation more than ever!\n\nHere is how Bump’s documentation looks like now:\n\n\n\nAnd icing on the cake: it works for your hub too!\n\nHappy enhancement!"
+        },
+        {
+          "id": "guides-show-verbs-in-navigation",
+          "title": "Show verbs in navigation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/show-verbs-in-navigation/",
+          "content": "Displaying operations in an endpoint or a channel is sometimes not enough. \nYou can now configure your documentations to show operation verbs in navigation.\n\nTo enable it, go to your documentation settings “Customize UI” tab, then select “Groups and operations with verbs” in the “Navigation” input."
+        },
+        {
+          "id": "guides-depreciation-support",
+          "title": "Depreciation Support",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/depreciation-support/",
+          "content": "We now identify deprecated elements in both OpenApi and AsyncApi specifications, and highlight them in your documentations.\n\nWe wanted to release it fast, as it was an important missing feature, but this is just the beginning: we have a lot of ideas on how we can enhance deprecation support that we will implement in the upcoming weeks.\n\nWant to share some use cases with us? Pick a slot on Anthony’s calendar, he will be super glad to hear from you."
+        },
+        {
+          "id": "guides-custom-domain-for-everyone",
+          "title": "Custom domain for everyone",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/custom-domain-for-everyone/",
+          "content": "You can now configure your custom domain directly from the app. No more manual email to us, just create your CNAME record, fill the form, and voilà.\n\nWe also have good news for you: we’ve updated our pricing plans to allow you to set up custom domains on free plans. One would say it’s Christmas, before Christmas. Enjoy!"
+        },
+        {
+          "id": "guides-customize-operation-url",
+          "title": "Customize operation URL",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/customize-operation-url/",
+          "content": "OpenAPI provides field servers on OperationObject, as an alternative url to service an operation.\n\n  If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value. cf OpenAPI-Specification\n\n\nFrom now on, Operations servers are supported to customize your operations examples (in definition and curl example)."
+        },
+        {
+          "id": "guides-hello-openapi-webhooks",
+          "title": "Hello, OpenAPI webhooks",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/hello-openapi-webhooks/",
+          "content": "OpenAPI 3.1 has been released today. Some important changes are coming with this new version. Above all, the greatest improvement is the support of webhooks, at the same first level than paths.\n\nWe are glad to announce today that webhooks are now supported by Bump, as you can see in this live example.\n\nWe hope you’ll enjoy this new feature, don’t hesitate to have a look to our technical documentation if necessary."
+        },
+        {
+          "id": "guides-global-support-of-external-references",
+          "title": "Global support of external references",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/global-support-of-external-references/",
+          "content": "As your API grows, your specification becomes more and more complex. At some point, splitting it up into multiple files with $ref references pointing to these external resources can help a lot.\n\nWe have just released full external references support  by updating:\n\n  our web app\n  our CLI (version 0.7 is out)\n  our GitHub action (version 0.2 is out)\n\n\nNow, no matter the channel you use to deploy a specification, Bump will resolve all references (when possible) and import their content into your documentation.\n\nWant to learn more? Have a look at our documentation."
+        },
+        {
+          "id": "guides-documentation-in-your-pocket",
+          "title": "Documentations in your pocket",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/documentation-in-your-pocket/",
+          "content": "We now offer a better mobile experience for your documentation if you happen to need it on-the-go. You will also have a navigation menu that allows to access the changelog page.\n\nMore changes are coming, stay tuned!"
+        },
+        {
+          "id": "guides-ease-your-sight-with-dark-mode",
+          "title": "Ease your sight with dark mode ☾",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/ease-your-sight-with-dark-mode/",
+          "content": "Today we introduce the dark mode to your documentations! Depending on your system settings, your page will appear in a light mode (default) or in a darker scheme.\n\nYou’ll also be able to toggle to light or dark mode regarding your own preferences.\n\nWe hope you will enjoy the new experience. 👻"
+        },
+        {
+          "id": "guides-new-command-line-interface-era",
+          "title": "New Command Line Interface era",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/new-command-line-interface-era/",
+          "content": "Goodbye to our legacy ruby gem, and hello to our new node-based CLI 👋.\n\nWe are releasing a new Command Line Interface which is iso-feature with the old CLI. There is one additional improvement though: we now support recursive external references ($ref keyword in your API specifications), with mixed filesystem or URL paths. You can now refactor your API definitions in small chunks, re-use parts of it, and separate concerns between endpoints, models or nested-objects in peace.\n\nThis new CLI package is written in Typescript which will help us to publish a stable &amp; type safe tool. On top of that -and especially with the oclif framework- we are now able to publish universal packages for multiple OSes &amp; architectures so everybody can enjoy Bump via command line interface.\n\nGet it while it’s hot\n\nnpm install -g bump-cli\n\n\nor download a package directly from the latest Github release assets.\n\nEnjoy the commands\n\n\n  bump preview to build as many API documentation preview as you want.\n  \n    bump deploy --dry-run to validate your future API documentation deployment.\n\n    (⚠️ This is a breaking change compared to our old CLI’s and replaces the old bump validate command)\n  \n  bump deploy to deploy your latest API documentation changes."
+        },
+        {
+          "id": "guides-nested-properties-get-a-make-up",
+          "title": "Nested properties get a make up 🎀",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/nested-properties-get-a-make-up/",
+          "content": "Feedbacks are important to us and we do our best to make you feel heard.\nWe know that accessing nested properties is a pain point for many of you so we tried to make the navigation clearer and the selected element will now stand out more.\n\nWe’d love to hear from you and see if these changes suit your needs so hit us up with your comments whether you love it or hate it!"
+        },
+        {
+          "id": "guides-bump-diff-from-your-cli",
+          "title": "Bump diff from your Command Line Interface or your Continuous Integration platform",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/bump-diff-from-your-cli/",
+          "content": "Our new bump diff command has landed in our CLI. \nMake sure to upgrade your bump-cli package to at least v2.1.0 to test it.\n\nNow, straight from your CLI, you are able to describe the changes made in your contract:\n\n&gt; bump diff --doc users-account api-specification.yaml\nUpdated: GET /account\n  Response modified: 200\n    Body attribute added: ticket_ids\nAdded: GET /tickets/{ticket_id}\n\n\nThe new command will output a quick summary of what has changed between your latest deployed API contract and the file you have changed locally.\n\nIf you use Github Actions to launch your automation workflows, we have some more good news for you: we now offer a stable bump-sh/github-action@v1 action. And this latest release includes automatic API contract changelog pushed as a comment for each pull request.\n\nCheck our help page to get you started with team collaboration on API design."
+        },
+        {
+          "id": "guides-download-source-from-your-documentation",
+          "title": "Download source from your documentation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/download-source-from-your-documentation/",
+          "content": "We’ve made it easy for API consumers to download the source of an API documentation.\n\nWhether you want to get your hands on a JSON or YAML format, for OpenAPI or AsyncAPI, you’re now just a click away."
+        },
+        {
+          "id": "guides-receive-api-changelog-in-your-mailbox",
+          "title": "Receive API changelog in your mailbox 🔔",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/receive-api-changelog-in-your-mailbox/",
+          "content": "In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.\n\nIt’s now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!\n\nWant to see it in action on Bump API documentation? See it live\n\nDo not hesitate to invite your API consumers to subscribe to your API updates (available at http://{your-doc-url}/changes)\n\nNever miss an API change again (now, it’s in your mailbox in case you missed it 😉)"
+        },
+        {
+          "id": "guides-markdown-support",
+          "title": "Markdown support",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/markdown-support/",
+          "content": "As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.\n\nBump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.\n\nCheck our help page to start taking advantage of markdown in your API documentation."
+        },
+        {
+          "id": "guides-share-and-highlight-anything-inside-your-api-documentation",
+          "title": "Share and highlight anything inside your API documentation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/share-and-highlight-anything-inside-your-api-documentation/",
+          "content": "To give your users the best API onboarding, \nit often helps to be able to share specific pieces of information.\n\nThanks to this new feature, you can now share and highlight anything in your API documentation with just a click. The selected element will be highlighted following your color theme.\n\n\n\nGive it a try: https://developers.bump.sh/#post-previews-body"
+        },
+        {
+          "id": "guides-bindings-support-for-asyncapi",
+          "title": "Bindings support for AsyncAPI",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/bindings-support-for-asyncapi/",
+          "content": "AsyncAPI users, you’ll be happy to know that Bump now supports bindings.\n\nAs AsyncAPI allows many protocols, which is really nice, bindings are a useful and necessary mechanism to define protocol-specific information. Bump now displays protocol information defined at server, operation, and message levels, as part of an ongoing work for a better understanding of API documentations.\n\nHere’s an example: https://bump.sh/hub/examples/doc/asyncapi-user-signup#protocol-information"
+        },
+        {
+          "id": "guides-rss-feed-for-your-changelog",
+          "title": "RSS feed for your changelog",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/rss-feed-for-your-changelog/",
+          "content": "In the age of information overload, getting access to information that matters can be quite challenging and that’s exactly the purpose of RSS.\n\nFrom now, get notified of the API changes through RSS in addition to the existing email.\n\nGive it a try with the Bump RSS feed in your favorite RSS reader."
+        },
+        {
+          "id": "guides-changelog-makeover",
+          "title": "Changelog makeover 💄",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/changelog-makeover/",
+          "content": "We redesigned the whole changelog page in order to bring you a better understanding of changes history of your API.\n\nHere’s an example: https://developers.bump.sh/changes"
+        },
+        {
+          "id": "guides-automatic-breaking-change-detection",
+          "title": "Automatic breaking change detection",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/automatic-breaking-change-detection/",
+          "content": "If some changes are more important than others, it is especially true for your API.\n\nFrom now on, we automatically detect if a new version of your API includes some breaking changes. It will be visible in the changelog page, in the changelog email or the brand new RSS feed… but also during your API design phase while opening a pull request thanks to our Github Action.\n\n\n\nWith Bump, you will never miss a breaking change again."
+        },
+        {
+          "id": "guides-bump-live-preview",
+          "title": "Bump live preview",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/bump-live-preview/",
+          "content": "A new --live flag was added to the bump preview command.\n\nThis gives you the ability to stay focused on your API definition file (OpenAPI or AsyncAPI file) while seeing your Bump preview documentation page being updated as you change the file.\n\nNo need for a specific text editor, or any extension, just use the bump CLI to preview your documentation live.\n\n\n\nLearn more about live preview on our help page."
+        },
+        {
+          "id": "guides-multiple-examples-support",
+          "title": "Multiple examples support",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/multiple-examples-support/",
+          "content": "Give your API users a personalized experience and a better understanding of your API while reading your documentation by including multiple examples to your API definition.\n\nBump now supports displaying multiple examples which are supported by both OpenAPI and AsyncAPI specifications."
+        },
+        {
+          "id": "guides-bump-diff-navigation",
+          "title": "Bump diff navigation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/bump-diff-navigation/",
+          "content": "✨  Quickly identify what has changed in your API ✨\n\nJump from change to change! No need to scroll anymore to see the latest changes in your documentation diff.\n\n\n\nSee it in action: https://docs.canopyservicing.com/changes/fbcf9592-a369-4f17-9adb-410d48e3ff98"
+        },
+        {
+          "id": "guides-changelog-update",
+          "title": "Changelog update",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/changelog-update/",
+          "content": "The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️\n\nHope you will enjoy it!\n\nSee it in action on our own API documentation: https://lnkd.in/gij9uHUy\n\n• Bonus point:\n\nIf you use our github-action, the diff comments have also been updated. Check our latest release for details: https://github.com/bump-sh/github-action/releases/tag/v1.1.0"
+        },
+        {
+          "id": "guides-organization-support",
+          "title": "Organization support",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/organization-support/",
+          "content": "Building the best APIs can be a considerable amount of work and you may need your teammates to help. But you definitely do not want one single shared account for that.\n\nFreshly out of beta, the awaited Organizations feature helps you with that. We did not reinvent the wheel but wanted to make it as simple but powerful as possible.\n\n\n\nYou can easily customize access with 3 different roles: admin, maintainer, and viewers.\nAdmins can invite and manage access, maintainers can manage hubs and docs, guests are limited to read-only.\n\nAvailable from the Startup plan, we hope it will help teams work efficiently and smoothly on their APIs. You can find out more about Organizations in our Help Center!\n\nThis update was also the opportunity to ship some enhancements for the dashboard.\n\nWe can’t wait to hear about what you think of it so feel free to reach out!"
+        },
+        {
+          "id": "guides-documentation-access",
+          "title": "Documentation Access",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/documentation-access/",
+          "content": "Following our recently released Organization feature, the new Documentation Access Management will help control who has access to which documentation or hubs.\n\nThree access levels are available: public, private (for your organization only) and protected (limited, password protection).\n\nFind more in our Help Center!"
+        },
+        {
+          "id": "guides-webhooks",
+          "title": "Webhooks",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/webhooks/",
+          "content": "Today, we’re introducing Webhooks integration, as a new way to add Bump to your existing workflow.\n\nSet them up from your dashboard and receive notifications when events on your API structure are detected on your documentation.\n\nFind more in our Help Center!"
+        },
+        {
+          "id": "guides-colors",
+          "title": "COLORS",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/colors/",
+          "content": "You already have deployed your API documentation but feel something’s missing? You couldn’t be more right.\n\nIntroducing one of the biggest updates to Bump yet: UI Color customization. You read that right. You can now change the primary color of your documentation to make it shine more than ever. Or make it match your logo/company brand!\n\nWe even added a short preview to help you find the best tone and ensure that you’ll keep in mind how it will look in dark mode too.\n\nTry it out from your Dashboard &gt; Customize UI and share with us your best results!"
+        },
+        {
+          "id": "guides-multiple-types-for-properties-copie",
+          "title": "Multiple types for properties",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/multiple-types-for-properties copie/",
+          "content": "Here is an update that was released some time ago but out of the radar: we now display all available types (even nullable) on any properties in your OpenAPI or AsyncAPI definition.\n\nYou’ll now see these correctly displayed properties in your documentation. Multiple types may look like a slight improvement but will add clarification to your team and community.\n\nAnd we have an example to show how great it is (thanks to Meilisearch’s documentation)."
+        },
+        {
+          "id": "guides-search",
+          "title": "Search!",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/search/",
+          "content": "Here comes a long-expected new feature: the Search Bar. We know how time-consuming it can be to scroll through long API documentation to find what you are looking for: the Search Bar solves this in a blink of an eye.\n\nOur Search engine can look in your documentations and even your hubs on your APIs structures: endpoints, objects, properties, webhooks, etc… And to make it more comfortable, we sort them by types (and it looks great, seriously).\n\nWe are already working on two limitations: you cannot search in your spec history and we are lacking advanced filters.\n\nDiscoverability is an important topic on our end. We want to help teams and communities deep dive into their API ecosystem, making them easier to find and use. We will have a lot more to announce soon and we are preparing a small blog post on this feature’s making-of.\n\nWe hope you’ll enjoy the Search Bar: feel free to reach out if you have any feedback or suggestion!\n\nP.S. Search will be activated on your documentation/hub after the next deploy but please contact us if you need it before this as we can manually activate it."
+        },
+        {
+          "id": "guides-branching",
+          "title": "Branching",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/branching/",
+          "content": "Introducing Branching, a great way to host several versions of an API Specification on the same documentation.\n\nIf your API has several versions you would like to maintain or if you are working between two environments, branching will make a difference and limit the number of documentation in your hub.\n\nCreate as many branches as you need, upload files accordingly and find the versions of your API anytime in your documentation, through a small selection menu.\n\nDefine which branch should be chosen by default, add or delete branches, keep everything up-to-date and share with your ecosystem the best API experience possible."
+        },
+        {
+          "id": "guides-automated-image-generation",
+          "title": "Automated Image Generation",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/automated-image-generation/",
+          "content": "After working so hard on your API and its documentation, the moment has come to share it with the world.\nWe recently released a new social network feature, that helps you create beautiful visuals pointing to your API.\n\nYou can now upload your own image or leave the work to us to generate a nice one. Sharing your documentation link on social networks will now display your own visual, making it more appealing.\n\nFind out more in our Help Center!"
+        },
+        {
+          "id": "guides-polymorphism",
+          "title": "Polymorphism",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/polymorphism/",
+          "content": "They have many names: schema alternatives, discriminator, inheritance… but you probably know them as oneOf, anyOf and allOf.\n\nBump now fully supports polymorphism for AsyncAPI and OpenAPI. You can already upload your latest API specification file to check it out. Or see it in action with our demo documentation of the feature!"
+        },
+        {
+          "id": "guides-improved-access-management",
+          "title": "Improved Access Management",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/improved-access-management/",
+          "content": "Access management has been reshaped, thanks to extended tests and user feedback.\n\nInviting external customers and partners to access internal APIs is now possible directly from the dashboard.\n\nFrom the dedicated section in your hub/documentation settings, you can quickly modify who has access to what. Open it to teammates of your organization, or invite external partners by email directly.\n\nPassword-protected level will stay available for a limited amount of time. More info can be found in our help center."
+        },
+        {
+          "id": "guides-enhanced-specifications-support",
+          "title": "Enhanced Specifications Support",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/enhanced-specifications-support/",
+          "content": "Over the past weeks, we have considerably enhanced our support of the specifications.\n\nminLength, maxLength and pattern\n\nWherever you need to document restrictions on string fields, OpenAPI and AsyncAPI specifications rely on JSON Schema to support this.\nminLength and maxLength  are meant to constrain the length of a string.\npattern  restrict the string to a specific Regular Expression (regex).\n\nEmail addresses, IBANs and ZIP/Postal codes could be great examples of these features.\n\n\n\nreadOnly  and  writeOnly  properties\n\nJSON Schema allows defining a property as readOnly  or  writeOnly.\nMany examples can easily be imagined when used with AsyncAPI or OpenAPI : readOnly  timestamp, writeOnly  password, etc…\n\nOur Help Center shares more details on how Bump.sh works with this feature and a few examples."
+        },
+        {
+          "id": "guides-lightning-fast-api-documentation-rendering",
+          "title": "Lightning-fast API documentation rendering",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/lightning-fast-api-documentation-rendering/",
+          "content": "Fast-loading page is a must these days, both for human users and search engines.\n\nThanks to the new rendering engine, which has already been released to 100% of our users, navigating your API documentation is now a breeze. It provides an optimal experience for all API consumers, whatever the size of the documentation (yes, any size).\n\nPerformance is significantly better: the first interactive content is as fast as the blink of an eye, which also means there’s no more blocking time when you first navigate the API documentation."
+        },
+        {
+          "id": "guides-bump-cli-2-7-0",
+          "title": "Bump.sh CLI v2.7.0",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New",
+          "tags": "",
+          "url": "/guides/bump-cli-2-7-0/",
+          "content": "Multi-file Deployment\n\nDeploying multiple files on your Hub has never been this effortless. You can now provide a directory path to deploy all files within a directory to your Bump.sh hub.\n\nFor a more detailed walkthrough on how this works, check out the feature in action in our latest release notes.\n\nLive Preview\n\nUsing the Live Preview feature  bump preview --live my-definition-api.yml now creates an immediate preview without waiting for the first change on the target file.\n\nOther improvements\n\n\n  Keeping up with the latest version of the CLI is now easier thanks to a new warning in case of outdated version usage.\n  Significant refactor of the deployment-related code to accommodate the new “Multiple files deploy” feature.\n  CLI upgraded to TypeScript 4.5 and performed some dependency upgrades."
+        },
+        {
+          "id": "guides-api-branch-management",
+          "title": "Managing Branches from your API",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "New, API",
+          "tags": "",
+          "url": "/guides/api-branch-management/",
+          "content": "Branch Management is now available from the Bump.sh API, making your API evolution workflows a whole lot smoother as an easy and effective way to manage your versions and optimizes how you deliver ephemeral or major ones, at hand (at least within our API).\n\nLet’s explore how these new features simplify your API workflow\n\n\n  Branch creation: Create a new branch effortlessly with a single API call, eliminating manual work.\n  List of Branches: Obtain an overview of all API branches, facilitating efficient management and organization.\n  Set Default Branch: Easily choose and showcase a default branch for up-to-date API documentation.\n  Delete Branch: Remove unnecessary branches to maintain a clean and organized development environment."
+        },
+        {
+          "id": "guides-custom-code-samples",
+          "title": "Custom code samples",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/custom-code-samples/",
+          "content": "We now support the x-codeSamples extension that let you set language-specific code samples you expect your users to work with.\n\nExamples are often the first stop for developers in any API documentation. This extension allows you to set along a programming language, its custom code samples, for a more seamless developer experience when it comes to testing an API.\n\nEither supercharge your API documentation by setting language-specific code examples or keep things simple as the auto-generated cURL examples remain. See more about custom code sample in the docs."
+        },
+        {
+          "id": "guides-changelog-layout",
+          "title": "Improved Changelog",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "Improvement",
+          "tags": "",
+          "url": "/guides/changelog-layout/",
+          "content": "The changelog is a crucial part of your API ecosystem, providing a clear view of what’s new, changed, fixed or removed.\nWe’ve redesigned it to make it cleaner, clearer and more efficient while maintaining the ability for anyone to stay aware of updates, one click away.\n\nCheck how it looks on the Bump.sh API doc: it is absolutely stunning."
+        },
+        {
+          "id": "guides",
+          "title": "Guides",
+          "collection": {
+            "label": "guides",
+            "name": "Guides"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/guides/",
+          "content": ""
+        },
+        {
+          "id": "404",
+          "title": "404",
+          "collection": {
+            "label": "pages",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/404",
+          "content": "404\n\nPage Not Found :(\n\nThe requested page could not be found."
+        },
+        {
+          "id": "500",
+          "title": "500",
+          "collection": {
+            "label": "pages",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/500",
+          "content": "500\n\nInternal Server Error :(\n\nThe requested page could not be delivered."
+        },
+        {
+          "id": "about",
+          "title": "About",
+          "collection": {
+            "label": "pages",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/about/",
+          "content": "This is the basic Bridgetown site template. You can find out more info about customizing your Bridgetown site, as well as basic Bridgetown usage documentation at bridgetownrb.com\n\nYou can find the source code for Bridgetown at GitHub:\nbridgetownrb /\nbridgetown"
+        },
+        {
+          "id": "",
+          "title": "Index",
+          "collection": {
+            "label": "pages",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/",
+          "content": ""
+        },
+        {
+          "id": "bridgetown_quick_search-index.json",
+          "title": "Index",
+          "collection": {
+            "label": "pages",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "/bridgetown_quick_search/index.json",
+          "content": "[\n  {%- assign looped = false %}\n  {%- assign documents = site.documents %}\n  {%- if site.content_engine == \"resource\" %}{% assign documents = site.resources %}{% endif %}\n  {%- for document in documents %}\n    {%- if document.title %}\n      {%- unless document.exclude_from_search or document.id == \"\" %}\n        {%- assign url = document.url %}\n        {%- if site.content_engine == \"resource\" %}{% assign url = document.relative_url %}{% endif %}\n        {%- if looped %},{% endif %}\n        {\n          \"id\": \"{{ url | slugify }}\",\n          \"title\": {{ document.title | jsonify }},\n          {%- if document.collection %}\n          \"collection\": {\n            \"label\": {{ document.collection.label | jsonify }},\n            \"name\": {{ document.collection.name | default: \"Posts\" | jsonify }}\n          },\n          {%- endif %}\n          \"categories\": {{ document.categories | join: \", \" | jsonify }},\n          \"tags\": {{ document.tags | join: \", \" | jsonify }},\n          \"url\": {{ url | jsonify }},\n          \"content\": {{ document.content | strip_html | replace_regex: \"[\\s/\\n]+\",\" \" | strip | jsonify }}\n        }\n        {%- assign looped = true %}\n      {%- endunless %}\n    {%- endif %}\n  {%- endfor %}\n  {%- for document in site.generated_pages %}\n    {%- if document.name contains \".md\" or document.name contains \".html\" %}\n      {%- if document.title %}\n        {%- unless document.exclude_from_search %}\n          {%- if looped %},{% endif %}\n          {\n            \"id\": \"{{ document.url | slugify }}\",\n            \"title\": {{ document.title | jsonify }},\n            \"categories\": {{ document.categories | join: \", \" | jsonify }},\n            \"tags\": {{ document.tags | join: \", \" | jsonify }},\n            \"url\": {{ document.url | jsonify }},\n            \"content\": {{ document.content | strip_html | replace_regex: \"[\\s/\\n]+\",\" \" | strip | jsonify }}\n          }\n        {%- endunless %}\n      {%- endif %}\n    {%- endif %}\n  {%- endfor %}\n]"
+        },
+        {
+          "id": "",
+          "title": "Your awesome title",
+          "collection": {
+            "label": "data",
+            "name": "Posts"
+          },
+          "categories": "",
+          "tags": "",
+          "url": "",
+          "content": ""
+        },
+          {
+            "id": "updates",
+            "title": "Product Updates",
+            "categories": "",
+            "tags": "",
+            "url": "/updates/",
+            "content": "\">"
+          },
+          {
+            "id": "updates-page-2",
+            "title": "Product Updates (Page 2)",
+            "categories": "",
+            "tags": "",
+            "url": "/updates/page/2/",
+            "content": "\">"
+          },
+          {
+            "id": "updates-page-3",
+            "title": "Product Updates (Page 3)",
+            "categories": "",
+            "tags": "",
+            "url": "/updates/page/3/",
+            "content": "\">"
+          },
+          {
+            "id": "updates-page-4",
+            "title": "Product Updates (Page 4)",
+            "categories": "",
+            "tags": "",
+            "url": "/updates/page/4/",
+            "content": "\">"
+          },
+          {
+            "id": "updates-page-5",
+            "title": "Product Updates (Page 5)",
+            "categories": "",
+            "tags": "",
+            "url": "/updates/page/5/",
+            "content": "\">"
+          },
+          {
+            "id": "guides-new-feature",
+            "title": "Guides in category \"New Feature\"",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/new-feature/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-improvement",
+            "title": "Guides in category \"Improvement\"",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/improvement/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-improvement-page-2",
+            "title": "Guides in category \"Improvement\" (Page 2)",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/improvement/page/2/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-improvement-page-3",
+            "title": "Guides in category \"Improvement\" (Page 3)",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/improvement/page/3/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-new",
+            "title": "Guides in category \"New\"",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/new/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-new-page-2",
+            "title": "Guides in category \"New\" (Page 2)",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/new/page/2/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          },
+          {
+            "id": "guides-api",
+            "title": "Guides in category \"Api\"",
+            "categories": "",
+            "tags": "",
+            "url": "/guides/api/",
+            "content": "Other categories:\n    \n      \n        \n          \">\n            \n          \n        \n      \n    \n  \n  \n    \n    \n      \n        \">"
+          }
+]

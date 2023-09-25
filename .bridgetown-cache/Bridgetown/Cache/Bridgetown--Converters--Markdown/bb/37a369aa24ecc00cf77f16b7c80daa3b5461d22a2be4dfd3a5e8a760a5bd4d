@@ -1,0 +1,8 @@
+I"ã<p><img src="/images/updates/markdown-callouts.jpg" alt="markdown-callouts.jpg" /></p>
+
+<p>As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.</p>
+
+<p>Bump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.</p>
+
+<p>Check <a href="https://docs.bump.sh/help/specifications-support/markdown-support/">our help page</a> to start taking advantage of markdown in your API documentation.</p>
+:ET

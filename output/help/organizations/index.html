@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Organizations | Your awesome title</title>
+
+<meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+
+<link rel="stylesheet" href="/_bridgetown/static/index.WIAYYCEI.css" />
+<script src="/_bridgetown/static/index.4LUJF43L.js" defer></script>
+<script type="module">let lastmod = 0
+function startReloadConnection() {
+  const evtSource = new EventSource("/_bridgetown/live_reload")
+  evtSource.onmessage = event => {
+    if (document.querySelector("#bridgetown-build-error")) document.querySelector("#bridgetown-build-error").close()
+    if (event.data == "reloaded!") {
+      location.reload()
+    } else {
+      const newmod = Number(event.data)
+      if (lastmod > 0 && newmod > 0 && lastmod < newmod) {
+        location.reload()
+      } else {
+        lastmod = newmod
+      }
+    }
+  }
+  evtSource.addEventListener("builderror", event => {
+    let dialog = document.querySelector("#bridgetown-build-error")
+    if (!dialog) {
+      dialog = document.createElement("dialog")
+      dialog.id = "bridgetown-build-error"
+      dialog.style.borderColor = "red"
+      dialog.style.fontSize = "110%"
+      dialog.innerHTML = `
+        <p style="color:red">There was an error when building the site:</p>
+        <output><pre></pre></output>
+        <p><small>Check your Bridgetown logs for further details.</small></p>
+      `
+      document.body.appendChild(dialog)
+      dialog.showModal()
+    }
+    dialog.querySelector("pre").textContent = JSON.parse(event.data)
+  })
+  evtSource.onerror = event => {
+    if (evtSource.readyState === 2) {
+      // reconnect with new object
+      evtSource.close()
+      console.warn("Live reload: attempting to reconnect in 3 seconds...")
+
+      setTimeout(() => startReloadConnection(), 3000)
+    }
+  }
+}
+setTimeout(() => {
+  startReloadConnection()
+}, 500)
+</script>
+
+  </head>
+  <body class="help" data-controller="toggle">
+    <header>
+  <a href="/">
+    <img src="/images/bump-logo.svg" alt="Bump.sh" />
+  </a>
+
+  <nav data-controller="toggle">
+    
+<bridgetown-search-form>
+  <input slot="input" type="search" class="" placeholder="Search…" />
+  <bridgetown-search-results theme=""></bridgetown-search-results>
+</bridgetown-search-form>
+
+    <button data-button-style="secondary" data-toggle-target="button" data-action="toggle#click">
+  <svg class="nav-icon" viewBox="0 0 100 100" width="80">
+    <path class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path class="line middle"
+          d="m 70,50 h -40" />
+    <path class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</button>
+
+    <nav-links data-toggle-target="item">
+        <nav-item>
+  <a href="/">Home</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/help">Documentation</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/updates">Product Updates</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/guides">Guides</a>
+</nav-item>
+
+    </nav-links>
+  </nav>
+</header>
+
+
+    <side-bar data-toggle-target="item">
+  <aside>
+    <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">
+      <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="#025FD7"/></svg>
+      Hide menu
+    </button>
+    <ul class="sidebar-list">
+        <side-item>
+  <li>
+      <a class="item" href="/help/">Home</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/">Getting Started</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/quick-start/">Quick Start</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/api-platform/">Deploying docs from API Platform</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/fastapi/">Deploying docs from FastAPI</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/bump-cli/">Bump CLI</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/continuous-integration/">Continuous Integration</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/continuous-integration/github-actions/">Github Action</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/">Specification Support</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/">OpenAPI support</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/name-and-sort-resources/">Name and sort endpoints and webhooks</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/webhooks/">Webhooks</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/asyncapi-support/">AsyncAPI support</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/markdown-support/">Markdown support</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/polymorphism/">Polymorphism</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/references/">References</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/api-change-management/">API change management</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/api-change-management/webhooks/">Webhooks</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/branching/">Branching</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/hubs/">Hubs</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/access-management/">Access Management</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/organizations/" aria-current="true">Organizations</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/organizations/single-sign-on-sso/">Single Sign-On (SSO)</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <div class="item">Documentation customization</div>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/doc-topics/">Topics</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/custom-domains/">Custom domains</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/meta-images/">Meta images</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/doc-code-samples/">Custom code samples</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/faq/">FAQ</a>
+  </li>
+</side-item>
+
+    </ul>
+  </aside>
+</side-bar>
+
+<main>
+  <div class="main-content">
+    <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">
+      Show menu <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="#025FD7"/></svg>
+    </button>
+
+    <h1>Organizations</h1>
+    <ul id="markdown-toc">
+  <li><a href="#create-a-new-organization" id="markdown-toc-create-a-new-organization">Create a new organization</a></li>
+  <li><a href="#member-management" id="markdown-toc-member-management">Member management</a></li>
+  <li><a href="#organization-management" id="markdown-toc-organization-management">Organization management</a></li>
+  <li><a href="#organizations-faq" id="markdown-toc-organizations-faq">Organizations FAQ</a>    <ul>
+      <li><a href="#how-many-members-can-i-invite-to-my-organization" id="markdown-toc-how-many-members-can-i-invite-to-my-organization">How many members can I invite to my organization?</a></li>
+      <li><a href="#ive-invited-the-wrong-person" id="markdown-toc-ive-invited-the-wrong-person">I’ve invited the wrong person!</a></li>
+      <li><a href="#i-cant-access-my-organizationdocumentation-anymore" id="markdown-toc-i-cant-access-my-organizationdocumentation-anymore">I can’t access my organization/documentation anymore!</a></li>
+      <li><a href="#organizations-are-great-but-i-need-this-another-specific-feature-to-work-with-my-team" id="markdown-toc-organizations-are-great-but-i-need-this-another-specific-feature-to-work-with-my-team">Organizations are great but I need this another specific feature to work with my team.</a></li>
+      <li><a href="#i-would-like-to-move-one-of-my-documentationhubs-from-my-personal-space-to-an-organization" id="markdown-toc-i-would-like-to-move-one-of-my-documentationhubs-from-my-personal-space-to-an-organization">I would like to move one of my documentation/hubs from my personal space to an organization.</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Organizations are great when you need to work collaboratively with your team. Instead of a single shared account, each member of your team will be able to access/maintain your documentation and hubs.</p>
+
+<p>Organizations are also super useful if you want to invite guests (who are called “viewers”) to your documentation: it’s a read-only role. If you need to keep your API private or shared with a small number of partners, viewers are a great solution.</p>
+
+<h2 id="create-a-new-organization">Create a new organization</h2>
+
+<p>You can easily create an organization from your dashboard. Select the settings section and the organization tab. From here, you can create an organization or manage the ones you own.</p>
+
+<p><img src="/images/help/organization-create.png" alt="" /></p>
+
+<p>Select “Create Organization” to start a new one. You’ll need to name it and choose its slug.</p>
+
+<p><img src="/images/help/organization-creation.png" alt="" /></p>
+
+<h2 id="member-management">Member management</h2>
+
+<p>Once your organization is created, you may want to invite teammates and guests (which is the point, actually). When you invite a new member, you’ll have to select a role before sending the invitation. Each role has its own permissions, detailed below. Roles can be modified at anytime.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Role/Permission</th>
+      <th style="text-align: left">Admin</th>
+      <th style="text-align: left">Maintainer</th>
+      <th style="text-align: left">Viewer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Documentation access</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hubs access</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Documentation management</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hubs management</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Organization management</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Member management</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/images/help/legacy/Q6P4SEp9xUI38Vntiem7.png" alt="Adding a new member requires an email address and an assigned role." /></p>
+
+<p>Billing and invoice are only managed by the owner of the organization.</p>
+
+<h2 id="organization-management">Organization management</h2>
+
+<p>From your dashboard, you can manage the organizations you own and those you have admin role. Organization settings allow you to change its name and URL, transfer ownership to an active member or completely delete the organization.</p>
+
+<p><img src="/images/help/organization-settings.png" alt="" /></p>
+
+<p>:::caution
+Transferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.
+:::</p>
+
+<p>:::caution
+If you choose to close your Bump account but are still the owner of an organization, a warning message will be displayed. Please consider transferring ownership if necessary.
+:::</p>
+
+<p>:::danger
+Deleting an organization will definitively erase its documentation and hubs. We <strong>cannot</strong> restore deleted content.
+:::</p>
+
+<h2 id="organizations-faq">Organizations FAQ</h2>
+
+<h3 id="how-many-members-can-i-invite-to-my-organization">How many members can I invite to my organization?</h3>
+
+<p>The sky is the limit! You can invite as many members as you want to your organizations.</p>
+
+<h3 id="ive-invited-the-wrong-person">I’ve invited the wrong person!</h3>
+
+<p>No worries, you can cancel a pending invitation at anytime (or even resend the invitation email).
+If the invitation has been accepted, you can still revoke access in a few clicks.</p>
+
+<!-- ![undefined](undefined) -->
+
+<h3 id="i-cant-access-my-organizationdocumentation-anymore">I can’t access my organization/documentation anymore!</h3>
+
+<p>This is most likely due to an organization created during a trial that has not been switched to a paid plan. Organization is a feature available <a href="https://bump.sh/pricing">from the Startup plan</a>. If you are in such a situation, please reach us, we’ll try to find the most suitable solution for you and your team!</p>
+
+<h3 id="organizations-are-great-but-i-need-this-another-specific-feature-to-work-with-my-team">Organizations are great but I need this another specific feature to work with my team.</h3>
+
+<p>Organizations are a brand new feature we plan to polish with time. We’re always open to feedback or suggestions, so please feel free to contact us anytime to discuss what would fit your needs the best.</p>
+
+<h3 id="i-would-like-to-move-one-of-my-documentationhubs-from-my-personal-space-to-an-organization">I would like to move one of my documentation/hubs from my personal space to an organization.</h3>
+
+<p>If you cannot perform this operation on your end yet, we can surely do this for you. Contact us and we will take care of this!</p>
+
+
+  </div>
+</main>
+
+
+    <footer class="wrapper">
+  <div class="columns">
+      <footer-column>
+  <div class="title">
+    Product
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/api-documentation">API Documentation</a>
+      <a class="link" href="https://bump.sh/api-change-management">Change Management</a>
+      <a class="link" href="https://bump.sh/api-catalog">Hubs</a>
+      <a class="link" href="https://api-diff.io/">API Diff</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Specifications
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/openapi">OpenAPI (Swagger)</a>
+      <a class="link" href="https://bump.sh/asyncapi">AsyncAPI</a>
+      <a class="link" href="https://bump.sh/graphql">GraphQL</a>
+      <a class="link" href="https://bump.sh/grpc">gRPC</a>
+      <a class="link" href="https://bump.sh/soap">SOAP</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Resources
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/customers">Customers</a>
+      <a class="link" href="https://bump.sh/blog">Blog</a>
+      <a class="link" href="https://github.com/bump-sh/cli">CLI</a>
+      <a class="link" href="https://status.bump.sh/">Status</a>
+      <a class="link" href="https://developers.bump.sh/">API Reference</a>
+      <a class="link" href="mailto:hello@bump.sh">Contact</a>
+  </div>
+</footer-column>
+
+  </div>
+  <div class="bottom">
+    <div class="bottom-column">
+      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+        <a class="link" href="https://bump.sh/privacy-policy">Privacy policy</a>
+        <a class="link" href="https://bump.sh/legal-mentions">Legal mentions</a>
+        <a class="link" href="https://bump.sh/terms">Terms of use</a>
+        <a class="link" href="https://bump.sh/dpa">Data Processing Agreement</a>
+    </div>
+    <div class="bottom-column">
+        <a class="link" href="https://github.com/bump-sh"><img src="/images/icons/github.svg" alt="Github" /></a>
+        <a class="link" href="https://fosstodon.org/@Bump_hq"><img src="/images/icons/mastodon.svg" alt="Mastodon" /></a>
+        <a class="link" href="https://www.linkedin.com/company/bump-sh/"><img src="/images/icons/linkedin.svg" alt="Linkedin" /></a>
+        <a class="link" href="https://twitter.com/bump_hq"><img src="/images/icons/twitter.svg" alt="X" /></a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

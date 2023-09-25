@@ -1,0 +1,86 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#what-is-a-reference" id="markdown-toc-what-is-a-reference">What is a reference?</a></li>
+  <li><a href="#the-two-types-of-references" id="markdown-toc-the-two-types-of-references">The two types of references</a>    <ul>
+      <li><a href="#internal-references" id="markdown-toc-internal-references">Internal references</a></li>
+      <li><a href="#external-references" id="markdown-toc-external-references">External references</a></li>
+    </ul>
+  </li>
+  <li><a href="#how-to-deploy-a-specification-with-external-references" id="markdown-toc-how-to-deploy-a-specification-with-external-references">How to deploy a specification with external references</a></li>
+</ul>
+
+<p>References are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.</p>
+
+<h2 id="what-is-a-reference">What is a reference?</h2>
+
+<p>A reference can be either a pointer to another part of your current specification or a pointer to an external file or URL. This lets you re-use part of a specification instead of duplicating it across your file(s).</p>
+
+<p>A reference is always described as follows in YAML:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">$ref</span><span class="pi">:</span> <span class="s">path/to/reference</span>
+</code></pre></div></div>
+
+<p>You should note that OpenAPI and AsyncAPI specifications don’t allow you to use references anywhere. However, Bump will resolve all the references found in your files, even if you didn’t respect your specification.</p>
+
+<h2 id="the-two-types-of-references">The two types of references</h2>
+
+<h3 id="internal-references">Internal references</h3>
+
+<p>Use this when you want to point to another part of your current file. Internal references always start with <code class="highlighter-rouge">#/</code>.</p>
+
+<p>Example:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paths</span><span class="pi">:</span>
+  <span class="na">/ping</span><span class="pi">:</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s">Test your API status</span>
+    <span class="na">responses</span><span class="pi">:</span>
+      <span class="na">200</span><span class="pi">:</span>
+        <span class="na">$ref</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#/responses/pong"</span>
+</code></pre></div></div>
+
+<p>Internal references are always expanded by Bump. If a reference points on an empty path, the reference is just ignored.</p>
+
+<h3 id="external-references">External references</h3>
+
+<p>Using external references is particularly useful as it can point to external resources like full definitions, components, models, etc… External references let you reuse your components across multiple projects without duplicating your specification code.</p>
+
+<p>You can find two kinds of external reference locations supported by Bump:</p>
+
+<ul>
+  <li>URI: a resource hosted online and accessible through HTTP</li>
+  <li>File system path: a resource located on the same file system as your definition</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># URI</span>
+<span class="na">$ref</span><span class="pi">:</span> <span class="s">https://example.com/api/specification.yml</span>
+
+<span class="c1"># File system path</span>
+<span class="na">$ref</span><span class="pi">:</span> <span class="s">./models/user.yml</span>
+</code></pre></div></div>
+
+<blockquote class="info">
+  <p>Bump supports absolute and relative paths for file system references.</p>
+</blockquote>
+
+<p>An external reference can also point to a subpart of the resource by adding a relative path after the absolute location:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># URI</span>
+<span class="na">$ref</span><span class="pi">:</span> <span class="s">https://example.com/api.yml#/models/user</span>
+
+<span class="c1"># File system path</span>
+<span class="na">$ref</span><span class="pi">:</span> <span class="s">./models.yml#/user</span>
+</code></pre></div></div>
+
+<blockquote class="warning">
+  <p>You can use recursive references if needed but we limit up to 5 recursive reference maximum.</p>
+</blockquote>
+
+<h2 id="how-to-deploy-a-specification-with-external-references">How to deploy a specification with external references</h2>
+
+<p>Bump does support external references from any channel, so you can deploy a specification including them through the web app, the CLI, our GitHub action, or our API.</p>
+
+<blockquote class="warning">
+  <p>Some limitations apply when using the web application though. Only references pointing to resources accessible by our servers will be resolved. This means that <strong>file system paths and protected URI will be ignored</strong>.</p>
+
+  <p>If you need to deploy a specification using this kind of external references, please use <a href="../bump-cli">our CLI</a> or our <a href="../continuous-integration/github-actions">GitHub Action</a></p>
+</blockquote>
+:ET

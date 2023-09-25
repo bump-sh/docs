@@ -1,0 +1,12 @@
+I"�<p>The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️</p>
+
+<p>Hope you will enjoy it!</p>
+
+<p>See it in action on our own API documentation: https://lnkd.in/gij9uHUy</p>
+
+<p>• Bonus point:</p>
+
+<p>If you use our github-action, the diff comments have also been updated. Check our latest release for details: <a href="https://github.com/bump-sh/github-action/releases/tag/v1.1.0">https://github.com/bump-sh/github-action/releases/tag/v1.1.0</a></p>
+
+<p><img src="/images/updates/changelog.gif" alt="changelog.gif" /></p>
+:ET

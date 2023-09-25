@@ -1,0 +1,33 @@
+I"P<ul id="markdown-toc">
+  <li><a href="#setting-a-cname-record" id="markdown-toc-setting-a-cname-record">Setting a CNAME record</a></li>
+  <li><a href="#setting-a-custom-domain-in-bumpsh" id="markdown-toc-setting-a-custom-domain-in-bumpsh">Setting a custom domain in Bump.sh</a></li>
+</ul>
+
+<p>Your docs are hosted on Bump.sh. However you can set a custom domain: visitors of your docs will stay within your brand experience. For this, you’ll use a CNAME.</p>
+
+<p>A CNAME, or Canonical Name, is a Domain Name System (DNS) entry. It serves as an alias, and maps a domain name to another. In our use case, it lets you set a domain name for your users to access your API docs, that they will use and see instead of the Bump.sh domain name.</p>
+
+<h2 id="setting-a-cname-record">Setting a CNAME record</h2>
+
+<p>First, you’ll need to create a CNAME record pointing to <code class="highlighter-rouge">custom.bump.sh</code>, at your domain name provider.</p>
+
+<p>For instance, if you want to host your documentation under the <code class="highlighter-rouge">developers.example.com</code> domain, you will create the following record:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>developers.example.com. 3600 IN CNAME custom.bump.sh.
+</code></pre></div></div>
+
+<p>Once this is done, you can set your custom domain in Bump.sh.</p>
+
+<h2 id="setting-a-custom-domain-in-bumpsh">Setting a custom domain in Bump.sh</h2>
+
+<ol>
+  <li>Click on the chosen <strong>Documentation</strong> <strong>&gt;</strong> <strong>Settings</strong></li>
+  <li>Check the <strong>Setup a custom domain</strong> box.</li>
+  <li>Enter your custom domain.</li>
+  <li>Click <strong>Update global settings</strong>.</li>
+</ol>
+
+<p>That’s it. SSL certificates are automatically issued.</p>
+
+<p>Note: DNS caches may take a moment to update. Outdated caches may lead to the fact that visitors will not be able to access your docs via your custom domain. Those caches are user-side, which means that 1. you can flush it on your local computer 2. people who never visited your doc will not face any issue.</p>
+:ET

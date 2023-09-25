@@ -1,0 +1,49 @@
+I"Ó	<ul id="markdown-toc">
+  <li><a href="#documentation-vs-branch" id="markdown-toc-documentation-vs-branch">Documentation vs. Branch</a></li>
+  <li><a href="#create-a-new-branch" id="markdown-toc-create-a-new-branch">Create a new branch</a></li>
+  <li><a href="#modifying-an-existing-branch" id="markdown-toc-modifying-an-existing-branch">Modifying an existing branch</a>    <ul>
+      <li><a href="#rename-or-delete-a-branch" id="markdown-toc-rename-or-delete-a-branch">Rename or delete a branch</a></li>
+      <li><a href="#upload-a-new-version-of-an-existing-branch" id="markdown-toc-upload-a-new-version-of-an-existing-branch">Upload a new version of an existing branch</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="documentation-vs-branch">Documentation vs. Branch</h2>
+
+<p>Branches are a great solution for existing documentation that could need several versions. Instead of creating new documentation in your hub (for an updated version of your API specification for example), branching allows your users to switch from one version of your documentation to another easily.</p>
+
+<p>You may imagine using branching to maintain several versions of your API specifications, for users still on a legacy version.</p>
+
+<p>We can also imagine API documentation using branching for a production environment and a testing one.</p>
+
+<p>Visually, documentation readers will see the available branches from which they can switch as seen in the screenshot below:</p>
+
+<p><img src="/images/help/branch-select-dark.png" alt="" /></p>
+
+<h2 id="create-a-new-branch">Create a new branch</h2>
+
+<p>From your Dashboard, select the documentation you would like to add a new version.</p>
+
+<p>Then select Branches and type its new name.</p>
+
+<p><img src="/images/help/branch-new-dark.png" alt="" /></p>
+
+<h2 id="modifying-an-existing-branch">Modifying an existing branch</h2>
+
+<h3 id="rename-or-delete-a-branch">Rename or delete a branch</h3>
+
+<p>From your Dashboard &gt; Documentation, select Branches and the one you would like to rename or delete.</p>
+
+<p>:::danger
+Deleting a branch is definitive: you will lose the branch, its content and deployment history.
+:::</p>
+
+<p><img src="/images/help/legacy/s7PxQPw06kyQLEwV29eL.png" alt="" /></p>
+
+<h3 id="upload-a-new-version-of-an-existing-branch">Upload a new version of an existing branch</h3>
+
+<p>When uploading a new version of your API specification, you can choose which branch will receive the update.</p>
+
+<p><img src="/images/help/legacy/bk2O9oSDJCk2ROLrAM9Y.png" alt="" /></p>
+
+:ET

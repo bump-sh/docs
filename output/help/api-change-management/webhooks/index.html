@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Webhooks | Your awesome title</title>
+
+<meta name="description" content="Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+
+<link rel="stylesheet" href="/_bridgetown/static/index.WIAYYCEI.css" />
+<script src="/_bridgetown/static/index.4LUJF43L.js" defer></script>
+<script type="module">let lastmod = 0
+function startReloadConnection() {
+  const evtSource = new EventSource("/_bridgetown/live_reload")
+  evtSource.onmessage = event => {
+    if (document.querySelector("#bridgetown-build-error")) document.querySelector("#bridgetown-build-error").close()
+    if (event.data == "reloaded!") {
+      location.reload()
+    } else {
+      const newmod = Number(event.data)
+      if (lastmod > 0 && newmod > 0 && lastmod < newmod) {
+        location.reload()
+      } else {
+        lastmod = newmod
+      }
+    }
+  }
+  evtSource.addEventListener("builderror", event => {
+    let dialog = document.querySelector("#bridgetown-build-error")
+    if (!dialog) {
+      dialog = document.createElement("dialog")
+      dialog.id = "bridgetown-build-error"
+      dialog.style.borderColor = "red"
+      dialog.style.fontSize = "110%"
+      dialog.innerHTML = `
+        <p style="color:red">There was an error when building the site:</p>
+        <output><pre></pre></output>
+        <p><small>Check your Bridgetown logs for further details.</small></p>
+      `
+      document.body.appendChild(dialog)
+      dialog.showModal()
+    }
+    dialog.querySelector("pre").textContent = JSON.parse(event.data)
+  })
+  evtSource.onerror = event => {
+    if (evtSource.readyState === 2) {
+      // reconnect with new object
+      evtSource.close()
+      console.warn("Live reload: attempting to reconnect in 3 seconds...")
+
+      setTimeout(() => startReloadConnection(), 3000)
+    }
+  }
+}
+setTimeout(() => {
+  startReloadConnection()
+}, 500)
+</script>
+
+  </head>
+  <body class="help" data-controller="toggle">
+    <header>
+  <a href="/">
+    <img src="/images/bump-logo.svg" alt="Bump.sh" />
+  </a>
+
+  <nav data-controller="toggle">
+    
+<bridgetown-search-form>
+  <input slot="input" type="search" class="" placeholder="Search…" />
+  <bridgetown-search-results theme=""></bridgetown-search-results>
+</bridgetown-search-form>
+
+    <button data-button-style="secondary" data-toggle-target="button" data-action="toggle#click">
+  <svg class="nav-icon" viewBox="0 0 100 100" width="80">
+    <path class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+    <path class="line middle"
+          d="m 70,50 h -40" />
+    <path class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+  </svg>
+</button>
+
+    <nav-links data-toggle-target="item">
+        <nav-item>
+  <a href="/">Home</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/help">Documentation</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/updates">Product Updates</a>
+</nav-item>
+
+        <nav-item>
+  <a href="/guides">Guides</a>
+</nav-item>
+
+    </nav-links>
+  </nav>
+</header>
+
+
+    <side-bar data-toggle-target="item">
+  <aside>
+    <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">
+      <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="#025FD7"/></svg>
+      Hide menu
+    </button>
+    <ul class="sidebar-list">
+        <side-item>
+  <li>
+      <a class="item" href="/help/">Home</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/">Getting Started</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/quick-start/">Quick Start</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/api-platform/">Deploying docs from API Platform</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/getting-started/fastapi/">Deploying docs from FastAPI</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/bump-cli/">Bump CLI</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/continuous-integration/">Continuous Integration</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/continuous-integration/github-actions/">Github Action</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/">Specification Support</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/">OpenAPI support</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/name-and-sort-resources/">Name and sort endpoints and webhooks</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/openapi-support/webhooks/">Webhooks</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/asyncapi-support/">AsyncAPI support</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/markdown-support/">Markdown support</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/polymorphism/">Polymorphism</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/specification-support/references/">References</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/api-change-management/">API change management</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/api-change-management/webhooks/" aria-current="true">Webhooks</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/branching/">Branching</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/hubs/">Hubs</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/access-management/">Access Management</a>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/organizations/">Organizations</a>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/organizations/single-sign-on-sso/">Single Sign-On (SSO)</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <div class="item">Documentation customization</div>
+      <ul class="sidebar-sublist">
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/doc-topics/">Topics</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/custom-domains/">Custom domains</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/meta-images/">Meta images</a>
+  </li>
+</side-item>
+
+          <side-item>
+  <li>
+      <a class="item" href="/help/documentation-customization/doc-code-samples/">Custom code samples</a>
+  </li>
+</side-item>
+
+      </ul>
+  </li>
+</side-item>
+
+        <side-item>
+  <li>
+      <a class="item" href="/help/faq/">FAQ</a>
+  </li>
+</side-item>
+
+    </ul>
+  </aside>
+</side-bar>
+
+<main>
+  <div class="main-content">
+    <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">
+      Show menu <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="#025FD7"/></svg>
+    </button>
+
+    <h1>Webhooks</h1>
+    <ul id="markdown-toc">
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a>    <ul>
+      <li><a href="#step-1" id="markdown-toc-step-1">Step 1:</a></li>
+      <li><a href="#step-2" id="markdown-toc-step-2">Step 2:</a></li>
+      <li><a href="#step-3" id="markdown-toc-step-3">Step 3:</a></li>
+      <li><a href="#payload-content" id="markdown-toc-payload-content">Payload content</a></li>
+    </ul>
+  </li>
+  <li><a href="#delete-a-webhook" id="markdown-toc-delete-a-webhook">Delete a webhook</a></li>
+</ul>
+
+<p>A webhook is a way for an app to get instant notifications from other applications. Webhooks are automated messages (also called payloads) sent to a specific URL. Unlike a classic call to an API, webhooks are more efficient than just polling it.</p>
+
+<p>Webhooks help integrate Bump into your current workflows. The chosen URLs will receive an HTTP request automatically when Bump notices a structural change in your documentation.</p>
+
+<p>Notifications can be sent to several URLs, allowing better integration with your existing tools.</p>
+
+<h2 id="setup">Setup</h2>
+
+<h3 id="step-1">Step 1:</h3>
+
+<p>Select the <strong>Integrations</strong> tab from your Bump’s dashboard to reach the webhook section.</p>
+
+<p><img src="/images/help/legacy/N3rDneaswUa7YztE6nH0.png" alt="" /></p>
+
+<h3 id="step-2">Step 2:</h3>
+
+<p>After adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps to secure requests coming from Bump).</p>
+
+<p><img src="/images/help/legacy/OE8vOhb9gWGtCiB9bTvZ.png" alt="" /></p>
+
+<p>Here is a pseudo-code (in Ruby language) which you should implement in your server if you want to check the authenticity of the received payload:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">verify_signature</span><span class="p">(</span><span class="n">payload_body</span><span class="p">)</span>
+  <span class="n">signature</span> <span class="o">=</span> <span class="s2">"sha256="</span> <span class="o">+</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">HMAC</span><span class="p">.</span><span class="nf">hexdigest</span><span class="p">(</span><span class="no">OpenSSL</span><span class="o">::</span><span class="no">Digest</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"sha256"</span><span class="p">),</span> <span class="no">ENV</span><span class="p">[</span><span class="s2">"SECRET_TOKEN"</span><span class="p">],</span> <span class="n">payload_body</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">halt</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">"Signatures didn't match!"</span> <span class="k">unless</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Utils</span><span class="p">.</span><span class="nf">secure_compare</span><span class="p">(</span><span class="n">signature</span><span class="p">,</span> <span class="n">request</span><span class="p">.</span><span class="nf">env</span><span class="p">[</span><span class="s2">"HTTP_X_BUMP_SIGNATURE_256"</span><span class="p">])</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="step-3">Step 3:</h3>
+
+<p>The <strong>Recent deliveries</strong> section include a **Test Webhook **element that helps you verify that the webhook works correctly. You can also check the 10 last notifications.</p>
+
+<p><img src="/images/help/legacy/MMsiIICn5P1iK10bnwO9.png" alt="" /></p>
+
+<h3 id="payload-content">Payload content</h3>
+
+<p>Details about the payload content sent for each setup webhooks is available in our <a href="https://developers.bump.sh/#webhook-documentation-change">absolutely gorgeous API documentation</a>.</p>
+
+<h2 id="delete-a-webhook">Delete a webhook</h2>
+
+<p>To stop receiving notifications, you can delete a webhook by selecting it from the <strong>Integrations</strong> section and then confirm the deletion in the <strong>Danger zone</strong>.</p>
+
+<p><img src="/images/help/legacy/zv44dbSnFqeaZqgfIvSD.png" alt="" /></p>
+
+
+  </div>
+</main>
+
+
+    <footer class="wrapper">
+  <div class="columns">
+      <footer-column>
+  <div class="title">
+    Product
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/api-documentation">API Documentation</a>
+      <a class="link" href="https://bump.sh/api-change-management">Change Management</a>
+      <a class="link" href="https://bump.sh/api-catalog">Hubs</a>
+      <a class="link" href="https://api-diff.io/">API Diff</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Specifications
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/openapi">OpenAPI (Swagger)</a>
+      <a class="link" href="https://bump.sh/asyncapi">AsyncAPI</a>
+      <a class="link" href="https://bump.sh/graphql">GraphQL</a>
+      <a class="link" href="https://bump.sh/grpc">gRPC</a>
+      <a class="link" href="https://bump.sh/soap">SOAP</a>
+  </div>
+</footer-column>
+
+      <footer-column>
+  <div class="title">
+    Resources
+  </div>
+  <div class="items">
+      <a class="link" href="https://bump.sh/customers">Customers</a>
+      <a class="link" href="https://bump.sh/blog">Blog</a>
+      <a class="link" href="https://github.com/bump-sh/cli">CLI</a>
+      <a class="link" href="https://status.bump.sh/">Status</a>
+      <a class="link" href="https://developers.bump.sh/">API Reference</a>
+      <a class="link" href="mailto:hello@bump.sh">Contact</a>
+  </div>
+</footer-column>
+
+  </div>
+  <div class="bottom">
+    <div class="bottom-column">
+      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+        <a class="link" href="https://bump.sh/privacy-policy">Privacy policy</a>
+        <a class="link" href="https://bump.sh/legal-mentions">Legal mentions</a>
+        <a class="link" href="https://bump.sh/terms">Terms of use</a>
+        <a class="link" href="https://bump.sh/dpa">Data Processing Agreement</a>
+    </div>
+    <div class="bottom-column">
+        <a class="link" href="https://github.com/bump-sh"><img src="/images/icons/github.svg" alt="Github" /></a>
+        <a class="link" href="https://fosstodon.org/@Bump_hq"><img src="/images/icons/mastodon.svg" alt="Mastodon" /></a>
+        <a class="link" href="https://www.linkedin.com/company/bump-sh/"><img src="/images/icons/linkedin.svg" alt="Linkedin" /></a>
+        <a class="link" href="https://twitter.com/bump_hq"><img src="/images/icons/twitter.svg" alt="X" /></a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
