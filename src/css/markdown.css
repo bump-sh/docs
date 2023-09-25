@@ -45,6 +45,7 @@
 }
 
 .markdown img {
+  border: var(--border-default);
   border-radius: var(--spacing-3);
 }
 
