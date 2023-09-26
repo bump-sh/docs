@@ -1,13 +1,17 @@
 <author-card>
-  <img class="author-image" src="<%= @author.image_url %>" />
+  <div class="author-image">
+    <% if @author.image_url.present? %>
+      <img src="<%= @author.image_url %>" />
+    <% end %>
+  </div>
   <h3><%= @author.name %></h3>
   <p><%= @author.title %></p>
   <div class="links">
     <a href="<%= "mailto:#{@author.email}" %>">
-      <img src="<%= relative_url "images/icons/mail.svg" %>" />
+      <img src="<%= relative_url "images/icons/mail.svg" %>" alt="Mail" />
     </a>
     <a href="<%= @author.url %>">
-      <img src="<%= relative_url "images/icons/github.svg" %>" />
+      <img src="<%= relative_url "images/icons/github.svg" %>" alt="Github" />
     </a>
   </div>
 </author-card>
