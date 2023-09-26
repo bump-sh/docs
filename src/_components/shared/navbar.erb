@@ -7,7 +7,7 @@
     <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…" %>
     <%= render Shared::Nav::Button.new %>
     <nav-links data-toggle-target="item">
-      <% @site.data.navbar.navbar.each do |item| %>
+      <% @site.data.navbar.links.each do |item| %>
         <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
       <% end %>
     </nav-links>
