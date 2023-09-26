@@ -1,6 +1,8 @@
 class Help::Sidebar::Item < Bridgetown::Component
   def initialize(page:, page_list:, resource:)
-    @page, @page_list, @resource = page, page_list, resource
+    @page = page
+    @page_list = page_list
+    @resource = resource
   end
 
   def item_resource
@@ -12,8 +14,6 @@ class Help::Sidebar::Item < Bridgetown::Component
   end
 
   def is_current?
-    if item_resource.present?
-      @resource.path == item_resource.path
-    end
+    item_resource.present? && @resource.path == item_resource.path
   end 
 end
