@@ -94,6 +94,13 @@ const sidebars = {
           'doc-code-samples',
         ],
       },
+      {
+        type: 'category',
+        label: 'Account',
+        collapsible: true,
+        collapsed: true,
+        items: ['account/user-account-settings', 'account/billing', 'account/github-student']
+      },
       'faq',
     ]
 };
