@@ -1,61 +1,60 @@
-footer:
-  columns: 
-    - label: Product
-      items:
-      - label: API Documentation
-        link: https://bump.sh/api-documentation
-      - label: Change Management
-        link: https://bump.sh/api-change-management
-      - label: Hubs
-        link: https://bump.sh/api-catalog
-      - label: API Diff
-        link: https://api-diff.io/
-        external: true
-    - label: Specifications
-      items:
-      - label: OpenAPI (Swagger)
-        link: https://bump.sh/openapi
-      - label: AsyncAPI
-        link: https://bump.sh/asyncapi
-      - label: GraphQL
-        link: https://bump.sh/graphql
-      - label: gRPC
-        link: https://bump.sh/grpc
-      - label: SOAP
-        link: https://bump.sh/soap
-    - label: Resources
-      items:
-      - label: Customers
-        link: https://bump.sh/customers
-      - label: Blog
-        link: https://bump.sh/blog
-      - label: CLI
-        link: https://github.com/bump-sh/cli
-      - label: Status
-        link: https://status.bump.sh/
-      - label: API Reference
-        link: https://developers.bump.sh/
-      - label: Contact
-        link: mailto:hello@bump.sh
-  bottom:
-    - label: Privacy policy
-      link: https://bump.sh/privacy-policy
-    - label: Legal mentions
-      link: https://bump.sh/legal-mentions
-    - label: Terms of use
-      link: https://bump.sh/terms
-    - label: Data Processing Agreement
-      link: https://bump.sh/dpa
-  social:
-    - label: Github
-      link: https://github.com/bump-sh
-      icon: github.svg
-    - label: Mastodon
-      link: https://fosstodon.org/@Bump_hq
-      icon: mastodon.svg
-    - label: Linkedin
-      link: https://www.linkedin.com/company/bump-sh/
-      icon: linkedin.svg
-    - label: X
-      link: https://twitter.com/bump_hq
-      icon: twitter.svg
+columns: 
+  - label: Product
+    items:
+    - label: API Documentation
+      link: https://bump.sh/api-documentation
+    - label: Change Management
+      link: https://bump.sh/api-change-management
+    - label: Hubs
+      link: https://bump.sh/api-catalog
+    - label: API Diff
+      link: https://api-diff.io/
+      external: true
+  - label: Specifications
+    items:
+    - label: OpenAPI (Swagger)
+      link: https://bump.sh/openapi
+    - label: AsyncAPI
+      link: https://bump.sh/asyncapi
+    - label: GraphQL
+      link: https://bump.sh/graphql
+    - label: gRPC
+      link: https://bump.sh/grpc
+    - label: SOAP
+      link: https://bump.sh/soap
+  - label: Resources
+    items:
+    - label: Customers
+      link: https://bump.sh/customers
+    - label: Blog
+      link: https://bump.sh/blog
+    - label: CLI
+      link: https://github.com/bump-sh/cli
+    - label: Status
+      link: https://status.bump.sh/
+    - label: API Reference
+      link: https://developers.bump.sh/
+    - label: Contact
+      link: mailto:hello@bump.sh
+bottom:
+  - label: Privacy policy
+    link: https://bump.sh/privacy-policy
+  - label: Legal mentions
+    link: https://bump.sh/legal-mentions
+  - label: Terms of use
+    link: https://bump.sh/terms
+  - label: Data Processing Agreement
+    link: https://bump.sh/dpa
+social:
+  - label: Github
+    link: https://github.com/bump-sh
+    icon: github.svg
+  - label: Mastodon
+    link: https://fosstodon.org/@Bump_hq
+    icon: mastodon.svg
+  - label: Linkedin
+    link: https://www.linkedin.com/company/bump-sh/
+    icon: linkedin.svg
+  - label: X
+    link: https://twitter.com/bump_hq
+    icon: twitter.svg

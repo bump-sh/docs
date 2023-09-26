@@ -3,8 +3,8 @@
     <%= @column.label %>
   </div>
   <div class="items">
-    <% @column.items.each do |entry| %>
-      <a class="link" href="<%= entry.link %>"><%= entry.label %></a>
+    <% @column.items.each do |item| %>
+      <a class="link" href="<%= item.link %>"><%= item.label %></a>
     <% end %>
   </div>
 </footer-column>
