@@ -1,15 +1,17 @@
-footer-column,
-footer-column .items {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-4);
-}
+footer-column {
+  &,
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
 
-footer-column .items {
-  gap: var(--spacing-2);
-}
+  .items {
+    gap: var(--spacing-2);
+  }
 
-footer-column .title {
-  font-size: 1rem;
-  font-weight: var(--font-weight-semibold);
+  .title {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+  }
 }
