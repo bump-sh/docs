@@ -2,11 +2,11 @@ help:
   - type: page
     label: Home
     link: /
+    icon: home
   - type: category
     label: Getting Started
     link: /getting-started/
-    collapsible: true
-    collapsed: true
+    icon: zap
     items:
       - type: page
         label: Quick Start
@@ -20,11 +20,11 @@ help:
   - type: page
     label: Bump CLI
     link: /bump-cli/
+    icon: terminal
   - type: category
     label: Continuous Integration
     link: /continuous-integration/
-    collapsible: true
-    collapsed: true
+    icon: iteration
     items:
       - type: page
         label: Github Action
@@ -32,8 +32,7 @@ help:
   - type: category
     label: Specification Support
     link: /specification-support/
-    collapsible: true
-    collapsed: true
+    icon: code-file
     items:
       - type: category
         label: OpenAPI support
@@ -60,8 +59,7 @@ help:
   - type: category
     label: API change management
     link: /api-change-management/
-    collapsible: true
-    collapsed: true
+    icon: bell-dot
     items:
       - type: page
         label: Webhooks
@@ -69,25 +67,26 @@ help:
   - type: page
     label: Branching
     link: /branching/
+    icon: branch
   - type: page
     label: Hubs
     link: /hubs/
+    icon: hub
   - type: page
     label: Access Management
     link: /access-management/
+    icon: key
   - type: category
     label: Organizations
     link: /organizations/
-    collapsible: true
-    collapsed: true
+    icon: org
     items:
       - type: page
         label: Single Sign-On (SSO)
         link: /organizations/single-sign-on-sso/
   - type: category
     label: Documentation customization
-    collapsible: true
-    collapsed: true
+    icon: sparkles
     items:
       - type: page
         label: Topics
@@ -104,3 +103,4 @@ help:
   - type: page
     label: FAQ
     link: /faq/
+    icon: help-circle
