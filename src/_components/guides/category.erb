@@ -1,8 +1,0 @@
-<guide-category class="<%= @css_classes %>" <% if @position.present? %>data-column-position="<%= @position %>"<% end %>>
-  <div class="list-header">
-    <h2><%= @title %></h2>
-    <%= content %>
-  </div>
-
-  <%= render Guides::List.new(resources: @resources) %>
-</guide-category>
