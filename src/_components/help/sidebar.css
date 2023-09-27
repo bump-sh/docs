@@ -44,6 +44,7 @@ side-bar {
       border-left: 2px solid transparent;
       border-radius: 0;
       margin-left: -1px;
+      padding-left: var(--spacing-5);
 
       &[aria-current="true"] {
         background: none;
