@@ -6,11 +6,15 @@ The Billing section of your account provides access to the following items:
 - your invoice history
 - your billing details
 
-Bump.sh offers monthly or annual billing. Payment is by credit card only; we do not offer any alternatives at this time. We use Stripe to handle all payments, so we never store your bank details.
+Bump.sh offers monthly or annual billing. We use [Stripe](https://stripe.com/) to handle all payments, so we never store your bank details.
+
+:::info
+Payment is made by credit card only. We are considering offering alternative payment methods in the future.
+:::
 
 ## Invoices
 
-### Edit Your Billing Information
+### Edit your billing information
 
 You can edit the following billing information so that it appears on your upcoming invoices:
 
@@ -19,12 +23,12 @@ You can edit the following billing information so that it appears on your upcomi
 - VAT Number
 
 :::info
-Edited information will only appear on future invoices; it is not possible to edit the details of an already created invoice.
+Updating your billing information will only apply to future invoices; it is not possible to edit the details of an already created invoice.
 :::
 
 ### Invoices
 
-Every month, we send your invoice in PDF format to the email address linked to your account. You can specify an alternative email address to which they will be sent, for your accounting department, for example.
+Every month, we send your invoice in PDF format to the email address linked to your account. You can specify an additionnal email address to which they will be sent, for your accounting department, for example.
 
 On this page, you will also find a history of your invoices, available in PDF.
 
@@ -32,10 +36,11 @@ On this page, you will also find a history of your invoices, available in PDF.
 
 We apply taxes in accordance with current regulations. Three scenarios are possible:
 
-- you or your company reside outside of Europe: we do not apply VAT.
-- you or your company reside in Europe: we apply a 20% VAT unless you provide your VAT number in your billing details.
+- your billing address is located outside of Europe: we do not apply VAT.
+- your billing address is located in Europe (except France): we do not apply VAT.
+- your billing address is located in France: we apply a 20% VAT unless you provide your VAT number in your billing details.
 
-## Payment Issues
+## Payment issues
 
 In the event of an issue with the charge on your credit card, Stripe will make several debit attempts in the following days. If, despite these attempts, payment remains unsuccessful, our Support team will contact you to assist in finding a solution.
 

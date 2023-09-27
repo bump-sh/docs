@@ -4,7 +4,7 @@ The [GitHub Student Developer Pack](https://education.github.com/pack?sort=popu
 
 [Bump.sh](http://bump.sh/) is incredibly proud to be a part of this offering. We have been students too and understand the importance of good documentation for your academic or personal projects.
 
-To benefit from this, you must be an eligible student (see conditions on GitHub) and use your GitHub account to sign up for [Bump.sh](http://bump.sh/). You can enjoy your [Bump.sh](http://bump.sh/) subscription for free as long as you are recognized as a student on your GitHub account.
+To benefit from this, you must be an eligible student (see conditions on GitHub) and use your GitHub account to sign up to [Bump.sh](http://bump.sh/). You can enjoy your [Bump.sh](http://bump.sh/) subscription for free as long as you are recognized as a student on your GitHub account.
 
 The GitHub Student Pack provides access to all the features of the Standard plan on Bump.sh.
 
