@@ -43,10 +43,6 @@ collections:
     output: true
     permalink: pretty
     future: true
-  guides:
-    name: Guides
-    output: true
-    future: true
 
 kramdown:
   parse_html_blocks: true
