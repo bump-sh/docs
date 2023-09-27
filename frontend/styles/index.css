@@ -16,6 +16,7 @@
 @import "atoms/code.css";
 @import "atoms/details.css";
 @import "atoms/input.css";
+@import "atoms/kbd.css";
 @import "atoms/label.css";
 
 @import "components/card.css";
