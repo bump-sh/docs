@@ -1,0 +1,42 @@
+details {
+  margin-block: var(--spacing-4);
+  padding-left: var(--spacing-5);
+  position: relative;
+
+  &::before {
+    background: url(/static/img/icons/caret-right.svg) center center no-repeat;
+    content: "";
+    display: block;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    top: calc(var(--spacing-4) + var(--spacing-05));
+    transition: all 0.15s ease-out;
+    width: 1em;
+  }
+
+  & + details {
+    border-top: var(--border-default);
+    margin-top: 0;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+    padding-top: var(--spacing-4);
+
+    &::marker {
+      content: none;
+    }
+  }
+  
+  &[open] {
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    summary {
+      padding-bottom: var(--spacing-3);
+    }
+  }
+}
