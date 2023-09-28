@@ -37,6 +37,7 @@
   
     h2 {
       font-size: 1.5rem;
+      scroll-margin-top: var(--spacing-24);
     }
   
     #markdown-toc {
