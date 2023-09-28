@@ -1,3 +1,5 @@
 links:
   - {title: "Documentation", link: "/help"}
   - {title: "Product Updates", link: "/updates"}
+  - {title: "API Reference", link: "https://developers.bump.sh"}
+  - {title: "Bump.sh", link: "https://www.bump.sh"}
