@@ -9,6 +9,7 @@
 
 */
 
+pre,
 pre.highlight {
   background-color: var(--bg-color-secondary);
   max-width: calc(100vw - var(--spacing-30));
