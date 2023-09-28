@@ -3,7 +3,7 @@ title: RSS feed for your changelog
 tags: [New]
 ---
 
-![back.jpg](/images/updates/back.jpg)
+![back.jpg](/images/changelog/back.jpg)
 
 In the age of information overload, getting access to information that matters can be quite challenging and that's exactly the purpose of RSS.
 

@@ -3,7 +3,7 @@ title: Bindings support for AsyncAPI
 tags: [Improvement]
 ---
 
-![bindings_asyncapi_bump.png](/images/updates/bindings_asyncapi_bump.png)
+![bindings_asyncapi_bump.png](/images/changelog/bindings_asyncapi_bump.png)
 
 AsyncAPI users, you'll be happy to know that Bump now supports bindings.
 

@@ -3,7 +3,7 @@ title: Show verbs in navigation
 tags: [Improvement]
 ---
 
-![verbs-in-navigation-zoom.png](/images/updates/verbs-in-nav.png)
+![verbs-in-navigation-zoom.png](/images/changelog/verbs-in-nav.png)
 
 Displaying operations in an endpoint or a channel is sometimes not enough. 
 You can now configure your documentations to show operation verbs in navigation.

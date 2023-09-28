@@ -9,8 +9,8 @@ From now on, you can use a specific one, to brighten up your documentation more 
 
 Here is how [Bump's documentation](https://developers.bump.sh/) looks like now:
 
-![Bump doc with favicon.png](/images/updates/favicon.png)
+![Bump doc with favicon.png](/images/changelog/favicon.png)
 
-And icing on the cake: it works for your [hub](https://docs.bump.sh/help/hubs/) too!
+And icing on the cake: it works for your [hub](/help/hubs/) too!
 
 Happy enhancement!

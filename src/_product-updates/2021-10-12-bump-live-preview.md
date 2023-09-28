@@ -9,6 +9,6 @@ This gives you the ability to stay focused on your API definition file (OpenAPI 
 
 No need for a specific text editor, or any extension, just use the bump CLI to preview your documentation live.
 
-![live-preview.gif](/images/updates/live-preview.gif)
+![live-preview.gif](/images/changelog/live-preview.gif)
 
-Learn more about live preview on [our help page](https://docs.bump.sh/help/bump-cli/#live-preview). 
+Learn more about live preview on [our help page](/help/bump-cli#live-preview). 

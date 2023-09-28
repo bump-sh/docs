@@ -12,4 +12,4 @@ We have just released full external references support  by updating:
 
 Now, no matter the channel you use to deploy a specification, Bump will resolve all references (when possible) and import their content into your documentation.
 
-Want to learn more? Have a look at [our documentation](https://docs.bump.sh/help/specifications-support/references/).
+Want to learn more? Have a look at [our documentation]/help/specification-support/references/).

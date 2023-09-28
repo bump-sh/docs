@@ -11,4 +11,4 @@ Create as many branches as you need, upload files accordingly and find the versi
 
 Define which branch should be chosen by default, add or delete branches, keep everything up-to-date and share with your ecosystem the best API experience possible.
 
-![branching.gif](/images/updates/branching.gif)
+![branching.gif](/images/changelog/branching.gif)

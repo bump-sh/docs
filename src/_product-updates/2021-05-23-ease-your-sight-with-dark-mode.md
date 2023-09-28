@@ -3,7 +3,7 @@ title: Ease your sight with dark mode ☾
 tags: [New]
 ---
 
-![darkmode.jpg](/images/updates/darkmode.jpg)
+![darkmode.jpg](/images/changelog/darkmode.jpg)
 
 Today we introduce the dark mode to your documentations! Depending on your system settings, your page will appear in a light mode (default) or in a darker scheme.
 

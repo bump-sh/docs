@@ -9,4 +9,4 @@ You’ll now see these correctly displayed properties in your documentation. Mul
 
 And we have an example to show how great it is (thanks to [Meilisearch's documentation](https://bump.sh/doc/meilisearch#operation-indexes-documents-search-body-filter)).
 
-![multiple-types.png](/images/updates/multiple-types.png)
+![multiple-types.png](/images/changelog/multiple-types.png)

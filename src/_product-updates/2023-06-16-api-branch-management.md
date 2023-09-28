@@ -1,10 +1,10 @@
 ---
 title: Managing Branches from your API
 tags: [New, API]
-image: /images/updates/bump-sh-api-branch-management.png
+image: /images/changelog/bump-sh-api-branch-management.png
 ---
 
-![bump-sh-api-branch-management.png](/images/updates/bump-sh-api-branch-management.png)
+![bump-sh-api-branch-management.png](/images/changelog/bump-sh-api-branch-management.png)
 
 Branch Management is now available from the [Bump.sh API](https://developers.bump.sh/), making your API evolution workflows a whole lot smoother as an easy and effective way to manage your versions and optimizes how you deliver ephemeral or major ones, at hand (at least within our API).
 

@@ -3,7 +3,7 @@ title: Receive API changelog in your mailbox 🔔
 tags: [New]
 ---
 
-![email-notif.png](/images/updates/email-notif.png)
+![email-notif.png](/images/changelog/email-notif.png)
 
 In API documentation, changelogs are important, and your API consumers need to stay up-to-date on recent changes.
 

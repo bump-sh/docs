@@ -14,7 +14,7 @@ Wherever you need to document restrictions on string fields, OpenAPI and AsyncAP
 Email addresses, IBANs and ZIP/Postal codes could be great examples of these features.
 
 
-![minlength-example.png](/images/updates/minlength-example.png)
+![minlength-example.png](/images/changelog/minlength-example.png)
 
 
 ### readOnly  and  writeOnly  properties
@@ -22,4 +22,4 @@ Email addresses, IBANs and ZIP/Postal codes could be great examples of these fea
 JSON Schema allows defining a property as `readOnly`  or  `writeOnly`.
 Many examples can easily be imagined when used with AsyncAPI or OpenAPI : `readOnly`  timestamp, `writeOnly`  password, etc...
 
-Our [Help Center](https://docs.bump.sh/help/specifications-support/asyncapi-support/#readonly-and-writeonly-properties) shares more details on how Bump.sh works with this feature and a few examples.
+Our [Help Center](/help/specification-support/asyncapi-support/#readonly-and-writeonly-properties) shares more details on how Bump.sh works with this feature and a few examples.

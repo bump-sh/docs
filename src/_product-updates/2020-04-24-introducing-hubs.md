@@ -14,4 +14,4 @@ Highlighted features:
 * auto-creation of hub documentations from your CI
 * and obviously, OpenAPI and AsyncAPI support
 
-Hubs are available with our Business plan.  Learn more [on our help center](https://help.bump.sh/hubs).
+Hubs are available with our Business plan.  Learn more [on our help center](/help/hubs).
