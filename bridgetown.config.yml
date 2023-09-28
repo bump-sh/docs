@@ -38,7 +38,7 @@ collections:
     name: Help
     output: true
     future: true
-  updates:
+  product-updates:
     name: Product Updates
     output: true
     permalink: pretty

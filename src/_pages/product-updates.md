@@ -3,7 +3,7 @@ layout: page
 title: Product Updates
 page_class: updates
 paginate:
-  collection: updates
+  collection: product-updates
   per_page: 10
   sort_reverse: true
 ---
