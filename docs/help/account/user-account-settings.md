@@ -10,7 +10,7 @@ From this page, you can modify:
 
 ## Modify username
 
-Your username serves also as your Slug, which is part of the URL of your documentation and hubs except if you use custom domains.
+Your username serves also as your slug, which is part of the URL of your documentation and hubs except if you use custom domains.
 
 :::info
 Changing your username will also change the URL of your documentations. Bump.sh does not automatically redirect after a change, so be sure to inform your API consumers accordingly.
