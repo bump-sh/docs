@@ -1,12 +1,18 @@
-side-item a,
-side-item a:is(:focus, :visited) {
-  border-radius: var(--border-radius-medium);
-  color: var(--text-color);
-  padding: var(--spacing-1) var(--spacing-3);
-  text-decoration: none;
-}
+side-item {
+  .item,
+  .item:where(:focus, :visited) {
+    border-radius: var(--border-radius-medium);
+    color: var(--text-color);
+    padding: var(--spacing-1) var(--spacing-3);
+    text-decoration: none;
 
-side-item a[aria-current="true"] {
-  background-color: var(--bg-color-selected);
-  color: var(--link-color);
+    &:hover {
+      color: var(--base-color);
+    }
+
+    &[aria-current="true"] {
+      background-color: var(--bg-color-selected);
+      color: var(--link-color);
+    }
+  }
 }
