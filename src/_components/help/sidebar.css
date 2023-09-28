@@ -1,7 +1,7 @@
 side-bar {
   border-right: var(--border-default);
   width: var(--doc-sidebar-width);
-  z-index: 110;
+  z-index: 90;
 }
 
 side-bar aside {
