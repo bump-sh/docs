@@ -1,0 +1,10 @@
+.errored {
+  main {
+    padding-block: var(--spacing-40);
+    text-align: center;
+
+    h1, p {
+      margin: 0;
+    }
+  }
+}

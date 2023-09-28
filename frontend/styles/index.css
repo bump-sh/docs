@@ -25,5 +25,6 @@
 @import "components/timeline.css";
 @import "components/update.css";
 
+@import "pages/errored.css";
 @import "pages/help.css";
 @import "pages/updates.css";

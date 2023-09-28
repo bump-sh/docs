@@ -42,4 +42,5 @@ Bridgetown.configure do |config|
   # visit: https://edge.bridgetownrb.com/docs/configuration/initializers/
   init :"bridgetown-lit-renderer" 
   init :"bridgetown-quick-search"
+  init :"bridgetown-svg-inliner"
 end
