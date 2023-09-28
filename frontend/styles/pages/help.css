@@ -37,13 +37,21 @@
   
     h2 {
       font-size: 1.5rem;
-      scroll-margin-top: var(--spacing-24);
     }
   
+    h1, h2, h3, h4 {
+      scroll-margin-top: var(--spacing-24);
+    }
+
     #markdown-toc {
       grid-column: 2 / -1;
       grid-row: 1 / 1000;
-    }  
+    }
+
+    img {
+      border-radius: var(--border-radius-xlarge);
+      margin-inline: auto;
+    }
   }
 
   @media(max-width: 800px) {

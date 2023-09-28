@@ -9,11 +9,13 @@
 
 */
 
+pre,
 pre.highlight {
   background-color: var(--bg-color-secondary);
   max-width: calc(100vw - var(--spacing-30));
   overflow-y: scroll;
   padding: var(--spacing-4);
+  white-space: pre-wrap;
 }
 
 .highlight .hll { background-color: #ffffcc }
