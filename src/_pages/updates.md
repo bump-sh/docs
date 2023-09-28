@@ -13,7 +13,9 @@ paginate:
     <li>
       <article class="update">
         <timeline-element>
-          <time><%= update.date.strftime("%B %d, %Y") %></time>
+          <div class="timeline-side">
+            <time><%= update.date.strftime("%B %d, %Y") %></time>
+          </div>
           <div class="timeline-content">
             <h2><a href="<%= update.relative_url %>"><%= update.data.title %></a></h2>
             <div class="tag-list">

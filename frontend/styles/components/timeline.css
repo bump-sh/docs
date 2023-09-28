@@ -4,25 +4,29 @@ timeline-element {
   grid-template-columns: clamp(100px, 25%, 200px) auto;
   gap: var(--spacing-10) clamp(var(--spacing-10), 15%, var(--spacing-34));
 
-  time {
+  .timeline-side {
     border-right: var(--border-default);
     box-sizing: border-box;
     height: 100%;
     padding-block: var(--spacing-14);
     padding-right: var(--spacing-10);
-    position: sticky;
-    top: var(--spacing-12);
 
-    &::after {
-      background-color: var(--title-color);
-      border-radius: 50%;
-      content: "";
-      display: block;
-      height: var(--spacing-2);
-      position: absolute;
-      right: calc(var(--spacing-1-minus) - 0.5px);
-      top: var(--spacing-16);
-      width: var(--spacing-2);
+    time {
+      display: flex;
+      position: sticky;
+      top: var(--spacing-24);
+
+      &::after {
+        background-color: var(--title-color);
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: var(--spacing-2);
+        position: absolute;
+        right: calc(var(--spacing-11-minus) - 0.5px);
+        top: var(--spacing-2);
+        width: var(--spacing-2);
+      }
     }
   }
 
@@ -30,6 +34,7 @@ timeline-element {
     padding-block: var(--spacing-10) var(--spacing-10);
 
     img {
+      border-radius: var(--border-radius-xlarge);
       width: 100%;
     }
   }

@@ -3,21 +3,20 @@ layout: default
 ---
 
 <main class="wrapper">
-  <%= render Shared::Hero.new(title: data.title) %>
-  <section>
-    <article class="update">
-      <timeline-element>
+  <article class="update">
+    <timeline-element>
+      <div class="timeline-side">
         <time><%= data.date.strftime("%B %d, %Y") %></time>
-        <div class="timeline-content">
-          <div class="tag-list">
-            <% data.tags.each do |tag| %>
-              <a class="label" data-label-status="inverted"><%= tag %></a>
-            <% end %>
-          </div>
-          
-          <%= yield %>
+      </div>
+      <div class="timeline-content">
+        <h2><%= data.title %></h2>
+        <div class="tag-list">
+          <% data.tags.each do |tag| %>
+            <a class="label" data-label-status="inverted"><%= tag %></a>
+          <% end %>
         </div>
-      </timeline-element>
-    </article>
-  </section>
+        <%= yield %>
+      </div>
+    </timeline-element>
+  </article>
 </main>
