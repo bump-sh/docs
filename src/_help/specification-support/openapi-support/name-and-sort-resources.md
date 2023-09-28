@@ -67,12 +67,12 @@ There are three operations here, and three different ways to generate, group and
 You may have noticed in the above API Contract that there are two different `tags`: `all pets` and `single pet`.
 If you choose option `Group by tag`, Bump.sh will use these `tags` to group, name and sort the operations.
 
- Here is our [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the OpenAPI specification, with option `Group by tag` :
+ Here is our [Petstore live example](https://bump.sh/hub/examples/doc/petstore-grouped-by-tags), based on the OpenAPI specification, with option `Group by tag`:
 
 ![Group Petstore operations by tag](/images/help/group-by-tags-dark.png)
 
-> If first level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behaviour.
-{. :info}
+> If first level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behaviour.
+{: .info}
 
 Having this first level field `tags` allows you to override how your `endpoints` are ordered. Take the following API Contract sample:
 
@@ -107,7 +107,7 @@ Operations `GET` and `POST` from `/pets` , and `GET` from `/pets/{petId}` are gr
 
 And what about webhooks?
 
-It's quite well explained how webhooks name are generated from `summary`, `description`  in [Webhooks documentation's page](../webhooks). But by choosing option `Group by tag`, `webhooks` are displayed, grouped and ordered with same rules as for `endpoints`.
+It's quite well explained how webhooks name are generated from `summary`, `description` in [Webhooks documentation's page](/help/specification-support/openapi-support/webhooks). But by choosing option `Group by tag`, `webhooks` are displayed, grouped and ordered with same rules as for `endpoints`.
 
 > Be careful about webhooks without tags when option `Group by tag` is selected, as they would be ignored!
 {: .warning}

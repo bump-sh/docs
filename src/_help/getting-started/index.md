@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Bump.sh
+title: Getting started with Bump.sh
 ---
 
 - TOC
@@ -13,6 +13,6 @@ Those specifications, supported by a wide variety of frameworks in various progr
 
 Our guides below will help you locate and use those files to deploy your API docs on Bump.sh:
 
-- [Quick start with definition files](quick-start) if you work directly with an OpenAPI or AsyncAPI file.
-- [Quick start with API Platform](api-platform) if you are building an API with API Platform (PHP).
-- [Quick start with FastAPI](fastapi) if you are building an API with FastAPI (Python).
+- [Quick start with definition files](/help/quick-start) if you work directly with an OpenAPI or AsyncAPI file.
+- [Quick start with API Platform](/help/api-platform) if you are building an API with API Platform (PHP).
+- [Quick start with FastAPI](/help/fastapi) if you are building an API with FastAPI (Python).

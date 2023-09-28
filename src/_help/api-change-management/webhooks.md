@@ -15,13 +15,13 @@ Notifications can be sent to several URLs, allowing better integration with your
 
 ### Step 1:
 
-Select the **Integrations** tab from your Bump’s dashboard to reach the webhook section.
+Select the **Integrations** tab from your Bump dashboard to reach the webhook section.
 
 ![](/images/help/legacy/N3rDneaswUa7YztE6nH0.png)
 
 ### Step 2:
 
-After adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps to secure requests coming from Bump).
+After adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps securing requests coming from Bump).
 
 ![](/images/help/legacy/OE8vOhb9gWGtCiB9bTvZ.png)
 

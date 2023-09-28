@@ -1,4 +1,9 @@
-# GitHub Student Developer Pack
+---
+title: GitHub Student Developer Pack
+---
+
+- TOC
+{:toc}
 
 The [GitHub Student Developer Pack](https://education.github.com/pack?sort=popularity&tag=Infrastructure+%26+APIs) is a collection of tools available for free to eligible students, enabling them to try out professional tools that would otherwise be financially out of reach.
 

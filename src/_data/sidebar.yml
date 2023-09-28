@@ -29,6 +29,10 @@ help:
       - type: page
         label: Github Action
         link: /continuous-integration/github-actions/
+  - type: page
+    label: Release Management
+    link: /publish-documentation/release-management/
+    icon: send
   - type: category
     label: Specification Support
     link: /specification-support/
@@ -50,6 +54,9 @@ help:
       - type: page
         label: Markdown support
         link: /specification-support/markdown-support/
+      - type: page
+        label: JSON Schema
+        link: /specification-support/json-schema/
       - type: page
         label: Polymorphism
         link: /specification-support/polymorphism/
@@ -90,16 +97,29 @@ help:
     items:
       - type: page
         label: Topics
-        link: /documentation-customization/doc-topics/
+        link: /doc-topics/
       - type: page
         label: Custom domains
-        link: /documentation-customization/custom-domains/
+        link: /custom-domains/
       - type: page
         label: Meta images
-        link: /documentation-customization/meta-images/
+        link: /meta-images/
       - type: page
         label: Custom code samples
-        link: /documentation-customization/doc-code-samples/
+        link: /doc-code-samples/
+  - type: category
+    label: Account
+    icon: user
+    items:
+      - type: page
+        label: User account settings
+        link: /account/user-account-settings/
+      - type: page
+        label: Billing
+        link: /account/billing/
+      - type: page
+        label: Github Student
+        link: /account/github-student/
   - type: page
     label: FAQ
     link: /faq/

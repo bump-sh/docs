@@ -37,14 +37,15 @@ The following authentication types are **not** supported:
 - `scramSha256`
 - `scramSha512`
 - `gssapi`
-To describe these authentication types, please use our [custom `x-topics` property](../../documentation-customization/doc-topics) for now.
+
+To describe these authentication types, please use our [custom `x-topics` property](/help/doc-topics) for now.
 
 ## readOnly and writeOnly properties
 
-JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](../json-schema#readonly-and-writeonly-properties).
+JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](/help/specification-support/json-schema#readonly-and-writeonly-properties).
 
 ## Add topics to your documentation
 
 You can add extra information to your documentation by using Bump.sh custom `x-topics`.
 
-Read more in the [Topics section of this documentation](../../documentation-customization/doc-topics).
+Read more in the [Topics section of this documentation](/help/doc-topics).

@@ -19,7 +19,7 @@ Available from a dedicated section in the documentation or hubs settings, Access
 
 Private level allows members from the same organization to have access to a documentation/hub. Writing permissions will only be granted if the member has admin/maintainer role.
 
-From private level, you can also invite external users (like partners, customers, etc...) to a read-only mode of your documentation/hub.
+From private level, you can also invite external users (like partners, customers, etc.) to a read-only mode of your documentation/hub.
 
 ![](/images/help/access-management-invite.png)
 

@@ -42,17 +42,14 @@ From your dashboard, you can manage the organizations you own and those you have
 
 ![](/images/help/organization-settings.png)
 
-:::caution
-Transferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.
-:::
+> Transferring ownership is mandatory if you want to leave an organization. You can only transfer ownership to a member with admin role.
+{: .warning}
 
-:::caution
-If you choose to close your Bump account but are still the owner of an organization, a warning message will be displayed. Please consider transferring ownership if necessary.
-:::
+> If you choose to close your Bump account but are still the owner of an organization, a warning message will be displayed. Please consider transferring ownership if necessary.
+{: .warning}
 
-:::danger
-Deleting an organization will definitively erase its documentation and hubs. We **cannot** restore deleted content.
-:::
+> Deleting an organization will definitively erase its documentation and hubs. We **cannot** restore deleted content.
+{: .error}
 
 ## Organizations FAQ
 
@@ -64,8 +61,6 @@ The sky is the limit! You can invite as many members as you want to your organiz
 
 No worries, you can cancel a pending invitation at anytime (or even resend the invitation email).
 If the invitation has been accepted, you can still revoke access in a few clicks.
-
-<!-- ![undefined](undefined) -->
 
 ### I can't access my organization/documentation anymore!
 

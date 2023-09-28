@@ -2,9 +2,6 @@
 title: Branching
 ---
 
-- TOC
-{:toc}
-
 ## Documentation vs. Branch
 
 Branches are a great solution for existing documentation that could need several versions. Instead of creating new documentation in your hub (for an updated version of your API specification for example), branching allows your users to switch from one version of your documentation to another easily.
@@ -31,9 +28,8 @@ Then select Branches and type its new name.
 
 From your Dashboard > Documentation, select Branches and the one you would like to rename or delete.
 
-:::danger
-Deleting a branch is definitive: you will lose the branch, its content and deployment history.
-:::
+> Deleting a branch is definitive: you will lose the branch, its content and deployment history.
+{: .error}
 
 ![](/images/help/legacy/s7PxQPw06kyQLEwV29eL.png)
 

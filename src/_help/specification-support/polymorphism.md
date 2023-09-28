@@ -17,7 +17,7 @@ Here's an [example of polymorphism](https://bump.sh/bump/doc/petstore-alternativ
 
 ![](/images/help/anyOf-discriminator.gif)
 
-# Discriminator
+## Discriminator
 
 Both OpenAPI and AsyncAPI specifications provide support of a `discriminator` field,
 to easily identify which schema is used.

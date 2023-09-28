@@ -1,4 +1,9 @@
-# Billing
+---
+title: Billing
+---
+
+- TOC
+{:toc}
 
 The Billing section of your account provides access to the following items:
 
@@ -8,9 +13,8 @@ The Billing section of your account provides access to the following items:
 
 Bump.sh offers monthly or annual billing. We use [Stripe](https://stripe.com/) to handle all payments, so we never store your bank details.
 
-:::info
-Payment is made by credit card only. We are considering offering alternative payment methods in the future.
-:::
+> Payment is made by credit card only. We are considering offering alternative payment methods in the future.
+{: .info}
 
 ## Invoices
 
@@ -22,9 +26,8 @@ You can edit the following billing information so that it appears on your upcomi
 - Address
 - VAT Number
 
-:::info
-Updating your billing information will only apply to future invoices; it is not possible to edit the details of an already created invoice.
-:::
+> Updating your billing information will only apply to future invoices; it is not possible to edit the details of an already created invoice.
+{: .info}
 
 ### Invoices
 
@@ -43,6 +46,5 @@ We apply taxes in accordance with current regulations. Three scenarios are possi
 
 In the event of an issue with the charge on your credit card, Stripe will make several debit attempts in the following days. If, despite these attempts, payment remains unsuccessful, our Support team will contact you to assist in finding a solution.
 
-:::info
-After a certain number of failed attempts, your documentations and accounts may become temporarily inaccessible.
-:::
+> After a certain number of failed attempts, your documentations and accounts may become temporarily inaccessible.
+{: .info}

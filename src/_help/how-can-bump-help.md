@@ -1,10 +1,6 @@
 ---
-title: How can Bump.sh help you?
+title: How can Bump help you?
 ---
-
-- TOC
-{:toc}
-
 // Work in Progress 
 
 Bump allows you to generate your API documentation and API changelog quickly.

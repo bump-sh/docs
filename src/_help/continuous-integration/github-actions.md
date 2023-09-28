@@ -86,7 +86,7 @@ jobs:
 
 ### API diff on pull requests & Deploy on push
 
-This is the most common workflow that we [recommend](../../continuous-integration/#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
+This is the most common workflow that we [recommend](/help/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
 
 `.github/workflows/bump.yml`
 
@@ -139,7 +139,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Since [February 2nd, 2023](https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/), the default `GITHUB_TOKEN` permissions are set to read-only for every new repository.
+> Since [February 2nd, 2023](https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/), the default GITHUB_TOKEN permissions are set to read-only for every new repository.
 > 
 > Permissions have to be explicitly defined in your workflows, as illustrated above.
 {: .warning}
@@ -152,8 +152,8 @@ jobs:
   - In your GitHub repository, click Settings, and then Secrets.
   - Click the button “New repository secret”, name the secret `BUMP_TOKEN` and paste your Bump token in the value field.
 
-- `file`: Relative path to the documentation file. _Default: __`api-contract.yml`__._
-- `command`: Bump command to execute. _Default: __`deploy`_
+- `file`: Relative path to the documentation file. _Default:_ `api-contract.yml`
+- `command`: Bump command to execute. _Default:_ `deploy`
   - `deploy` deploy a new version of the documentation
   - `diff`: automatically comment your pull request with the API diff
   - `dry-run`: validate the documentation file before a deployment
@@ -166,9 +166,9 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/bump-
 
 ## License
 
-The scripts and documentation in this project are released under the [MIT License](https://app.gitbook.com/s/-LcGTglveItuwKl8raFP/continuous-integration/LICENSE).
+The scripts and documentation in this project are released under the [MIT License](http://opensource.org/licenses/MIT).
 
 ## Code of Conduct
 
-Everyone interacting in the Bump `github-action` project codebase, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/bump-sh/github-action/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Bump `github-action` project codebase, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/bump-sh/github-action/blob/master/CODE_OF_CONDUCT).
 

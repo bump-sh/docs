@@ -2,9 +2,6 @@
 title: FAQ
 ---
 
-- TOC
-{:toc}
-
 ## Will you support others specifications like BluePrint or GraphQL?
 
 When we initially had the Bump idea, we though that it would be absolutely perfect to be able to handle any kind of documentation.

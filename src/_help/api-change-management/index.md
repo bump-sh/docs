@@ -47,11 +47,11 @@ The changelog page exposes an RSS feed your users can subscribe to. Here is an e
 
 ### Webhooks
 
-You can define as many webhooks as you wish to receive structural changes when they occur on your documentations. Please check [the dedicated page to find out how to setup a webhook](webhooks).
+You can define as many webhooks as you wish to receive structural changes when they occur on your documentations. Please check [the dedicated page to find out how to setup a webhook](/help/api-change-management/webhooks).
 
 # GitHub integration
 
-With our [Github Action](../continuous-integration/github-actions), you can receive automatic API diff comments directly in your pull requests. This pull request comment will include:
+With our [Github Action](/help/continuous-integration/github-actions), you can receive automatic API diff comments directly in your pull requests. This pull request comment will include:
 
 - a diff summary
 - information about the breaking change state

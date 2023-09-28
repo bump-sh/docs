@@ -1,5 +1,5 @@
 ---
-title: Continuous Integration
+title: Continuous integration
 ---
 
 - TOC
@@ -17,7 +17,7 @@ We recommend two steps in your automation flow: a **validation** one during deve
 
 ### API diff for each proposed change request
 
-With our [Github Action](github-actions), you can receive automatic API diff comments directly on your pull requests. This is done thanks to the `bump diff` command under the hood which will run each time a pull request is created or updated. It will make sure to fail the build if the documentation file is not valid.
+With our [Github Action](/help/continuous-integration/github-actions), you can receive automatic API diff comments directly on your pull requests. This is done thanks to the `bump diff` command under the hood which will run each time a pull request is created or updated. It will make sure to fail the build if the documentation file is not valid.
 
 ### Plain validation
 
@@ -31,7 +31,7 @@ Once your branch has been merged into your main branch (generally the `master` o
 
 The simplest way to use our CLI tool is to add a `package.json` file to your project. You can find an example here: [https://github.com/bump-sh/bump-ci-example/blob/master/package.json](https://github.com/bump-sh/bump-ci-example/blob/master/package.json).
 
-If you prefer not using a `package.json`, be sure to install the CLI globally with `npm install -g bump-cli` before calling the `bump`  command.
+If you prefer not using a `package.json`, be sure to install the CLI globally with `npm install -g bump-cli` before calling the `bump` command.
 
 ## Examples
 
@@ -48,7 +48,7 @@ Note that if you don't want to keep the private token and id in your code base, 
 
 - `BUMP_ID`: your documentation public slug or id
 - `BUMP_TOKEN`: your documentation private token
-- `BUMP_HUB_ID`: if [using hubs](../hubs), your hub public slug or id
+- `BUMP_HUB_ID`: if [using hubs](/help/hubs), your hub public slug or id
 
 
 

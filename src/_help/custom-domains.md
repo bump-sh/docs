@@ -15,7 +15,7 @@ First, you'll need to create a CNAME record pointing to `custom.bump.sh`, at you
 
 For instance, if you want to host your documentation under the `developers.example.com` domain, you will create the following record:
 
-```shell
+```undefined
 developers.example.com. 3600 IN CNAME custom.bump.sh.
 ```
 
@@ -24,7 +24,7 @@ Once this is done, you can set your custom domain in Bump.sh.
 ## Setting a custom domain in Bump.sh
 
 1. Click on the chosen **Documentation** **>** **Settings**
-2. Check the **Setup a custom domain** box.
+2. Check the **Setup a custom domain **box.
 3. Enter your custom domain.
 4. Click **Update global settings**.
 

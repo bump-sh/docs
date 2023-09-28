@@ -106,8 +106,8 @@ At least one `height` *or* `width` parameter is mandatory, everything else being
 =x50px        # without width
 ```
 
-> - If you don't specify a `unit` it will default to pixel
-> - If you don't specify `width` *or* `height`, the other value will be a ratio calculated from the original size of the image so it doesn't shrink
+>- If you don't specify a `unit` it will default to pixel
+- If you don't specify `width` *or* `height`, the other value will be a ratio calculated from the original size of the image so it doesn't shrink
 {: .info}
 
 You can use any of the following CSS length units as `unit`:
@@ -133,7 +133,7 @@ You can use any of the following CSS length units as `unit`:
 
 ## Markdown files as an external reference
 
-Markdown files can be included as an [external reference](../references) within your contract document with the $ref syntax `$ref: "./path/to/local-markdown.md"`. In the same way you can extract part of your contract (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
+Markdown files can be included as an [external reference](/help/specification-support/references) within your contract document with the $ref syntax `$ref: "./path/to/local-markdown.md"`. In the same way you can extract part of your contract (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
 
 **E.g.** Your OpenAPI contract `api-contract.yml` can thus looks like:
 
@@ -161,4 +161,4 @@ paths:
 
 With files `docs/introduction.md`, `docs/getting-started.md`, `docs/use-cases.md` and `docs/use-cases-examples.md` right next to your contract document, you will be able to generate a comprehensive API documentation with nicely formatted content for your users.
 
-It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](doc-topics).
+It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](/help/doc-topics).
