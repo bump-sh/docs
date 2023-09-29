@@ -43,4 +43,5 @@ Bridgetown.configure do |config|
   init :"bridgetown-lit-renderer" 
   init :"bridgetown-quick-search"
   init :"bridgetown-svg-inliner"
+  init :"bridgetown-sitemap"
 end

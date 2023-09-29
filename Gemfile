@@ -39,3 +39,5 @@ gem "bridgetown-lit-renderer", "= 2.1.0.beta2"
 
 gem "bridgetown-quick-search", "~> 2.0"
 gem "bridgetown-svg-inliner", "~> 2.0"
+
+gem "bridgetown-sitemap", "~> 2.0"
