@@ -78,10 +78,14 @@ help:
     label: Branching
     link: /branching/
     icon: branch
-  - type: page
+  - type: category
     label: Hubs
     link: /hubs/
     icon: hub
+    items:
+      - type: page
+        label: Hub settings
+        link: /hubs/hub-settings/
   - type: page
     label: Access Management
     link: /access-management/
