@@ -1,0 +1,14 @@
+kbd {
+  background-color: var(--bg-color-secondary);
+  border-radius: var(--border-radius-small);
+  border: var(--border-default);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: var(--text-color-secondary);
+  display: inline-block;
+  font-size: 0.75em;
+  line-height: 1;
+  padding: var(--spacing-1);
+  white-space: nowrap;
+}

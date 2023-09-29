@@ -1,0 +1,39 @@
+<% if @paginator.total_pages > 1 %>
+  <post-pagination>
+    <div class="page-count">
+      Page <%= @paginator.page %> of <%= @paginator.total_pages %>
+    </div>
+    <ul class="pagination">
+      <% if @paginator.previous_page %>
+      <li>
+        <% if @paginator.page == 1 %>
+          <span class="page previous">
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor"/></svg>
+            Previous
+          </span>
+        <% else %>
+          <a class="page previous" href="<%= @paginator.previous_page_path %>">
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor"/></svg>
+            Previous
+          </a>
+        <% end %>
+      </li>
+      <% end %>
+      <% if @paginator.next_page %>
+      <li>
+        <% if @paginator.page == @paginator.total_pages %>
+          <span class="page next">
+            Next
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor"/></svg>
+          </span>
+        <% else %>
+          <a class="page next" href="<%= @paginator.next_page_path %>">
+            Next
+            <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="currentColor"/></svg>
+          </a>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </post-pagination>
+<% end %>

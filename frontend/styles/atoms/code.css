@@ -1,0 +1,17 @@
+:where(code) {
+  --code-bg-color: var(--bg-color-secondary);
+  --code-border: var(--border-default);
+  --code-border-radius: var(--border-radius-small);
+
+  background-color: var(--code-bg-color);
+  border: var(--code-border);
+  border-radius: var(--code-border-radius);
+  font-size: 0.875em;
+  padding: var(--spacing-px) var(--spacing-1);
+}
+
+pre :where(code) {
+  --code-bg-color: transparent;
+  --code-border: 0;
+  padding-left: 0;
+}

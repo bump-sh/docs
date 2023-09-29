@@ -1,0 +1,72 @@
+.label {
+  --label-bg: var(--bg-color-secondary);
+  --label-bg-info: var(--bg-color-neutral);
+  --label-bg-error: var(--bg-color-error);
+  --label-bg-success: var(--bg-color-success);
+  --label-bg-none: var(--bg-color-transparent);
+  --label-border-color: var(--border-color);
+  --label-text-color: var(--text-color);
+
+  align-items: center;
+  background-color: var(--label-bg);
+  border-radius: var(--border-radius-medium);
+  color: var(--label-text-color);
+  display: inline-flex;
+  font-size: 0.875rem;
+  gap: var(--spacing-1);
+  line-height: 2;
+  padding: 0 var(--spacing-2);
+  white-space: nowrap;
+}
+
+/* shape variants */
+.label[data-label-type="rounded"] {
+  --label-text-color: var(--text-color-secondary);
+  
+  border-radius: var(--border-radius-xlarge);
+  border: 1px solid var(--label-border-color);
+  line-height: 1.25rem;
+  padding: var(--spacing-05) var(--spacing-2);
+  text-transform: capitalize;
+}
+
+.label[data-label-type="outlined"] {
+  background: 0;
+  border: var(--border-default);
+}
+
+/* color modifiers */
+.label[data-label-status="info"] {
+  --label-bg: var(--label-bg-info);
+  --label-border-color: rgba(var(--blue-rgb), 0.1);
+  --label-text-color: var(--text-color-info);
+}
+
+.label[data-label-status="success"] {
+  --label-bg: var(--label-bg-success);
+  --label-border-color: rgba(var(--green-rgb), 0.1);
+  --label-text-color: var(--text-color-success);
+}
+
+.label[data-label-status="warning"] {
+  --label-bg: var(--bg-color-warning);
+  --label-border-color: rgba(var(--orange-50-rgb), 0.1);
+  --label-text-color: var(--text-color-warning);
+}
+
+.label[data-label-status="error"] {
+  --label-bg: var(--bg-color-error);
+  --label-border-color: rgba(var(--red-rgb), 0.1);
+  --label-text-color: var(--text-color-error);
+}
+
+.label[data-label-status="breaking"] {
+  --label-bg: var(--label-bg-error);
+  --label-border-color: rgba(var(--red-rgb), 0.1);
+  --label-text-color: var(--text-color-error);
+}
+
+.label[data-label-status="inverted"] {
+  --label-bg: var(--bg-color-inverted);
+  --label-text-color: var(--text-color-inverted);
+}

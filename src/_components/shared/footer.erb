@@ -1,0 +1,20 @@
+<footer class="wrapper">
+  <div class="columns">
+    <% @site.data.footer.columns.each do |column| %>
+      <%= render Shared::Footer::Column.new(column: column) %>
+    <% end %>
+  </div>
+  <div class="bottom">
+    <div class="bottom-column">
+      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+      <% @site.data.footer.bottom.each do |entry| %>
+        <a class="link" href="<%= entry.link %>"><%= entry.label %></a>
+      <% end %>
+    </div>
+    <div class="bottom-column">
+      <% @site.data.footer.social.each do |entry| %>
+        <a class="link" href="<%= entry.link %>"><img src="<%= relative_url "/images/icons/#{entry.icon}" %>" alt="<%= entry.label %>" /></a>
+      <% end %>
+    </div>
+  </div>
+</footer>

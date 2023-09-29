@@ -1,0 +1,10 @@
+:root {
+  --doc-sidebar-width: 300px;
+  --doc-content-width: 80ch;
+
+  --gap-xsmall: var(--spacing-1);
+  --gap-small: var(--spacing-3);
+  --gap-medium: var(--spacing-6);
+  --gap-large: var(--spacing-9);
+  --gap-xlarge: var(--spacing-16);
+}

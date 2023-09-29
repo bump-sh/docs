@@ -1,0 +1,36 @@
+:root {
+  --border-color-default: var(--gray-20);
+  --border-width-default: 1px;
+  --border-default: var(--border-width-default) solid var(--border-color-default);
+
+  --border-color-focus: var(--gray-40);
+
+  --border-radius-small: var(--spacing-05);
+  --border-radius-medium: var(--spacing-1);
+  --border-radius-large: var(--spacing-2);
+  --border-radius-xlarge: var(--spacing-4);
+
+  --box-shadow-medium: 0px 5px 12px rgba(var(--black-rgb), 0.1);
+  --box-shadow-large: 0px 5px 24px rgba(var(--black-rgb), 0.1);
+
+  /* blue-tinted shadow from https://www.joshwcomeau.com/shadow-palette/ */
+  --shadow-color: 229deg 36% 64%;
+  --shadow-elevation-low:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0),
+    0.2px 0.8px 1.2px hsl(var(--shadow-color) / 0.17),
+    0.4px 1.5px 2.3px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0),
+    0.5px 1.9px 2.9px hsl(var(--shadow-color) / 0.13),
+    1.1px 3.8px 5.9px hsl(var(--shadow-color) / 0.27),
+    2.1px 7.7px 12px hsl(var(--shadow-color) / 0.4);
+  --shadow-elevation-high:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0),
+    1px 3.5px 5.5px hsl(var(--shadow-color) / 0.06),
+    1.7px 6.2px 9.6px hsl(var(--shadow-color) / 0.12),
+    2.5px 8.9px 13.9px hsl(var(--shadow-color) / 0.19),
+    3.5px 12.4px 19.3px hsl(var(--shadow-color) / 0.25),
+    4.8px 17.2px 26.8px hsl(var(--shadow-color) / 0.31),
+    6.7px 23.8px 37.1px hsl(var(--shadow-color) / 0.37),
+    9.2px 32.8px 51.1px hsl(var(--shadow-color) / 0.44);
+}

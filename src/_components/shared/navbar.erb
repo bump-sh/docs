@@ -1,0 +1,22 @@
+<header>
+  <a href="/">
+    <img src="<%= relative_url '/images/bump-logo.svg' %>" alt="Bump.sh" />
+  </a>
+
+  <nav data-controller="toggle">
+    <nav-links data-toggle-target="item">
+      <div class="nav-group">
+        <% @site.data.navbar.left_links.each do |item| %>
+          <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
+        <% end %>
+      </div>
+      <div class="nav-group">
+        <% @site.data.navbar.right_links.each do |item| %>
+          <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
+        <% end %>
+      </div>
+    </nav-links>
+    <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…" %>
+    <%= render Shared::Nav::Button.new %>
+  </nav>
+</header>

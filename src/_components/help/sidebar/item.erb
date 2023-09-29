@@ -1,0 +1,22 @@
+<side-item>
+  <li>
+    <% if item_resource.present? %>
+      <a class="item" href="<%= item_resource.relative_url %>"<% if is_current? %> aria-current="true"<% end %>>
+        <%= svg "images/icons/#{@page.icon}.svg" if @page.icon.present? %>
+        <%= @page.label %>
+      </a>
+    <% else %>
+      <div class="item"<% if is_current? %> aria-current="true"<% end %>>
+        <%= svg "images/icons/#{@page.icon}.svg" if @page.icon.present? %>
+        <%= @page.label %>
+      </div>
+    <% end %>
+    <% if is_category? %>
+      <ul class="sidebar-sublist">
+        <% @page.items.each do |item| %>
+          <%= render Help::Sidebar::Item.new(page: item, page_list: @page_list, resource: @resource) %>
+        <% end %>
+      </ul>
+    <% end %>
+  </li>
+</side-item>

@@ -1,0 +1,58 @@
+timeline-element {
+  align-items: start;
+  display: grid;
+  grid-template-columns: clamp(100px, 25%, 200px) auto;
+  gap: var(--spacing-10) clamp(var(--spacing-10), 15%, var(--spacing-34));
+
+  .timeline-side {
+    border-right: var(--border-default);
+    box-sizing: border-box;
+    height: 100%;
+    padding-block: var(--spacing-14);
+    padding-right: var(--spacing-10);
+
+    time {
+      display: flex;
+      position: sticky;
+      top: var(--spacing-24);
+
+      &::after {
+        background-color: var(--title-color);
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: var(--spacing-2);
+        position: absolute;
+        right: calc(var(--spacing-11-minus) - 0.5px);
+        top: var(--spacing-2);
+        width: var(--spacing-2);
+      }
+    }
+  }
+
+  .timeline-content {
+    padding-block: var(--spacing-10) var(--spacing-10);
+
+    img {
+      border-radius: var(--border-radius-xlarge);
+      width: 100%;
+    }
+  }
+
+  @container main (width < 800px) {
+    border-left: var(--border-default);
+    grid-template-columns: 1fr;
+    padding-left: var(--spacing-10);
+
+    time {
+      border: 0;
+      padding: 0;
+      position: relative;
+
+      &::after {
+        right: calc(100% + var(--spacing-10) - var(--spacing-1));
+        top: var(--spacing-2);
+      }
+    }
+  }
+}

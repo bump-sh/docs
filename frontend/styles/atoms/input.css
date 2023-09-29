@@ -1,0 +1,18 @@
+:where(input) {
+  appearance: none;
+  border: var(--border-default);
+  border-radius: var(--border-radius-medium);
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  height: var(--spacing-10);
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+:where(input):hover {
+  border-color: var(--text-color);
+}
+
+:where(input:focus, input:active) {
+  border-color: var(--border-color-focus);
+  outline: none;
+}

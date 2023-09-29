@@ -1,0 +1,19 @@
+.update {
+  .timeline-content {
+    h2 {
+      font-size: 2rem;
+      margin-block: 0 var(--spacing-2);
+    }
+
+    h2 > a {
+      color: var(--title-color);
+      text-decoration: none;
+    }
+  }
+
+  .tag-list {
+    display: flex;
+    gap: var(--gap-small);
+    margin-bottom: var(--spacing-10);
+  }
+}

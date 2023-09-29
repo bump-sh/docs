@@ -1,0 +1,11 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+title: Bump.sh Docs & Guides
+tagline: Discover everything you have to know about Bump.sh and APIs at large.
+email: hello@bump.sh
+description: >-
+  This site contains the Bump.sh documentation, product updates descriptions, examples of how to use Bump.sh, as well as guides to help you build better REST APIs (OpenAPI) and event-driven architectures (AsyncAPI).

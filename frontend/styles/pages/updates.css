@@ -1,0 +1,21 @@
+.updates {
+  .update-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @container main (width < 800px) {
+    .page-count {
+      border-left: var(--border-default);
+      padding-left: var(--spacing-10);
+
+      &::after {
+        content: "";
+        left: var(--spacing-1-minus);
+      }
+    }
+  }
+}

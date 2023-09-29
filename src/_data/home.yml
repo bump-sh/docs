@@ -1,0 +1,18 @@
+cards:
+  - label: Help Center
+    description: Everything about Bump.sh
+    link: /help/
+    icon: icons/help-center
+  - label: Guides
+    description: Get the best out of our product with these guides
+    link: /guides/
+    icon: icons/guides
+  - label: API Reference
+    description: Find the documentation to our very own API
+    link: https://developers.bump.sh/
+    icon: icons/api-reference
+  - label: Product Updates
+    description: Learn about our latest features and changes
+    link: /product-updates/
+    icon: icons/product-updates
+    

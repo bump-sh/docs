@@ -1,0 +1,25 @@
+side-item {
+  .item,
+  .item:where(:focus, :visited) {
+    align-items: center;
+    border-radius: var(--border-radius-medium);
+    color: var(--text-color);
+    display: flex;
+    gap: var(--gap-small);
+    padding: var(--spacing-1) var(--spacing-3);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--base-color);
+    }
+
+    &[aria-current="true"] {
+      background-color: var(--bg-color-selected);
+      color: var(--link-color);
+    }
+
+    svg {
+      width: 1em;
+    }
+  }
+}

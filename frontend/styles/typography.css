@@ -1,0 +1,23 @@
+/* usage of :where makes specificity lower */
+:where(h1, h2, h3, h4, h5, h6) {
+  color: var(--title-color);
+  font-weight: var(--font-weight-normal);
+}
+
+:where(h1) {
+  font-size: clamp(2.5rem, 10vw, 3rem);
+  font-weight: var(--font-weight-bold);
+}
+
+:where(h2) {
+  font-size: 2rem;
+}
+
+:where(a, a:focus, a:visited) {
+  color: var(--link-color);
+  transition: all var(--base-duration) var(--base-timing);
+}
+
+:where(strong) {
+  font-weight: var(--font-weight-semibold);
+}

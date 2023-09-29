@@ -1,0 +1,10 @@
+<footer-column>
+  <div class="title">
+    <%= @column.label %>
+  </div>
+  <div class="items">
+    <% @column.items.each do |item| %>
+      <a class="link" href="<%= item.link %>"><%= item.label %></a>
+    <% end %>
+  </div>
+</footer-column>

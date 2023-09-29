@@ -1,0 +1,12 @@
+:root {
+  --text-color-inverted: var(--white);
+  --text-color-success: var(--green-60);
+  --text-color-warning: var(--orange-60);
+  --text-color-error: var(--red-60);
+  --text-color-info: var(--blue-60);
+  
+  --bg-color-success: var(--green-10);
+  --bg-color-warning: var(--orange-10);
+  --bg-color-error: var(--red-10);
+  --bg-color-info: var(--blue-10);
+}

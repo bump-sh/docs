@@ -1,0 +1,126 @@
+help:
+  - type: page
+    label: Home
+    link: /
+    icon: home
+  - type: category
+    label: Getting Started
+    link: /getting-started/
+    icon: zap
+    items:
+      - type: page
+        label: Quick Start
+        link: /getting-started/quick-start/
+      - /type: page
+        label: Deploying docs from API Platform
+        link: /getting-started/api-platform/
+      - type: page
+        label: Deploying docs from FastAPI
+        link: /getting-started/fastapi/
+  - type: page
+    label: Bump CLI
+    link: /bump-cli/
+    icon: terminal
+  - type: category
+    label: Continuous Integration
+    link: /continuous-integration/
+    icon: iteration
+    items:
+      - type: page
+        label: Github Action
+        link: /continuous-integration/github-actions/
+  - type: page
+    label: Release Management
+    link: /publish-documentation/release-management/
+    icon: send
+  - type: category
+    label: Specification Support
+    link: /specification-support/
+    icon: code-file
+    items:
+      - type: category
+        label: OpenAPI support
+        link: /specification-support/openapi-support/
+        items:
+          - type: page
+            label: Name and sort endpoints and webhooks
+            link: /specification-support/openapi-support/name-and-sort-resources/
+          - type: page
+            label: Webhooks
+            link: /specification-support/openapi-support/webhooks/
+      - type: page
+        label: AsyncAPI support
+        link: /specification-support/asyncapi-support/
+      - type: page
+        label: Markdown support
+        link: /specification-support/markdown-support/
+      - type: page
+        label: JSON Schema
+        link: /specification-support/json-schema/
+      - type: page
+        label: Polymorphism
+        link: /specification-support/polymorphism/
+      - type: page
+        label: References
+        link: /specification-support/references/
+  - type: category
+    label: API change management
+    link: /api-change-management/
+    icon: bell-dot
+    items:
+      - type: page
+        label: Webhooks
+        link: /api-change-management/webhooks/
+  - type: page
+    label: Branching
+    link: /branching/
+    icon: branch
+  - type: page
+    label: Hubs
+    link: /hubs/
+    icon: hub
+  - type: page
+    label: Access Management
+    link: /access-management/
+    icon: key
+  - type: category
+    label: Organizations
+    link: /organizations/
+    icon: org
+    items:
+      - type: page
+        label: Single Sign-On (SSO)
+        link: /organizations/single-sign-on-sso/
+  - type: category
+    label: Documentation customization
+    icon: sparkles
+    items:
+      - type: page
+        label: Topics
+        link: /doc-topics/
+      - type: page
+        label: Custom domains
+        link: /custom-domains/
+      - type: page
+        label: Meta images
+        link: /meta-images/
+      - type: page
+        label: Custom code samples
+        link: /doc-code-samples/
+  - type: category
+    label: Account
+    icon: user
+    items:
+      - type: page
+        label: User account settings
+        link: /account/user-account-settings/
+      - type: page
+        label: Billing
+        link: /account/billing/
+      - type: page
+        label: Github Student
+        link: /account/github-student/
+  - type: page
+    label: FAQ
+    link: /faq/
+    icon: help-circle
