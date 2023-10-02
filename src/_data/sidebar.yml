@@ -63,6 +63,9 @@ help:
       - type: page
         label: References
         link: /specification-support/references/
+      - type: page
+        label: Multiple servers
+        link: /specification-support/multiple-servers/
   - type: category
     label: API change management
     link: /api-change-management/

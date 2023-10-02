@@ -1,4 +1,6 @@
-# Multiple Servers
+---
+title: Multiple Servers
+---
 
 Both REST and Event-Driven APIs may run on different servers (production, staging, sandbox).
 
@@ -10,9 +12,9 @@ With multiple servers support, it’s now possible to render these different ser
 
 Publishing the list of all of your servers in your documentation on Bump.sh is optional. In some cases, you might need to expose only the first server of the list.
 
-To show the list of servers on your documentation, activate the setting from the Settings tab of your documentation administration panel:
+To show the list of servers on your documentation, activate the setting from the **Settings** tab of your documentation administration panel:
 
-![multiple servers setting](/files/help/multiple-servers--setting.png)
+![multiple servers setting](/images/help/multiple-servers--setting.png)
 
 
 ## Render multiple servers
@@ -24,21 +26,21 @@ By default, the first server is used to generate all curl examples on your docum
 
 Readers of the documentation can select a different server from this selection component:
 
-![multiple servers component](/files/help/multiple-servers--component.png)
+![multiple servers component](/images/help/multiple-servers--component.png)
 
 For REST API documentation, the url of selected server is used to generate curl examples.
 For Event-Driven API documentation, protocol and protocol versions are updated depending on the selected server.
 
 When sharing a link to the documentation as a reader, the `server_id` query parameter will be passed with the URL, so that the recipient will see the exact same information as the person who shared it.
 
-:::info
-For REST APIs, alternative servers can be defined for every [OpenAPI Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object):
 
-Operation objects can include a `servers` field, which is an array of servers for this specific operation.
-
-> If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value.
-
-It means this operation has its own and dedicated url to receive requests.
-
-Thus, of course, curl examples for these operations are not concerned by the selection of multiple servers: only this alternative server is displayed.
-:::
+> For REST APIs, alternative servers can be defined for every [OpenAPI Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object):
+>
+> Operation objects can include a `servers` field, which is an array of servers for this specific operation.
+>
+> > If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value.
+>
+> It means this operation has its own and dedicated url to receive requests.
+>
+> Thus, of course, curl examples for these operations are not concerned by the selection of multiple servers: only this alternative server is displayed.
+{: .info}
