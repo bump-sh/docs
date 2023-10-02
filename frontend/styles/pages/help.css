@@ -1,9 +1,13 @@
 .help {
+  height: 100dvh;
+  overflow: hidden;
+
   main {
     box-sizing: border-box;
     display: grid;
     gap: var(--gap-medium);
     justify-content: center;
+    overflow-y: scroll;
     padding: var(--spacing-8) var(--spacing-10);
     width: calc(100vw - var(--doc-sidebar-width));
 

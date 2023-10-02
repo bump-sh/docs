@@ -4,7 +4,7 @@
   grid-column: 2 / -1;
   grid-row: 1 / 1000;
   position: sticky;
-  top: var(--spacing-30);
+  top: var(--spacing-8);
 }
 
 #markdown-toc,
