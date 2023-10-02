@@ -1,5 +1,6 @@
 side-bar {
   border-right: var(--border-default);
+  overflow-y: scroll;
   width: var(--doc-sidebar-width);
   z-index: 90;
 

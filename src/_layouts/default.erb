@@ -9,6 +9,6 @@
 
     <%= yield %>
 
-    <%= render Shared::Footer.new %>
+    <%= render Shared::Footer.new(show: data.footer) %>
   </body>
 </html>
