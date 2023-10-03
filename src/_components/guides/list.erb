@@ -1,0 +1,19 @@
+<guide-list>
+  <ul>
+    <% @resources.each do |resource| %>
+      <li>
+        <a class="guide card" href="<%= resource.relative_url %>">
+          <h3><%= resource.data.title %></h3>
+          <div class="tag-list">
+            <% resource.data.categories.each do |category| %>
+              <span class="label" data-label-status="inverted"><%= category %></span>
+            <% end %>
+            <% resource.data.tags.each do |tag| %>
+              <span class="label" data-label-status="inverted"><%= tag %></span>
+            <% end %>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</guide-list>

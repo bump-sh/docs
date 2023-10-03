@@ -1,0 +1,29 @@
+guide-list {
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-medium);
+    justify-content: end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    a {
+      background-color: var(--bg-color);
+      box-sizing: border-box;
+      min-height: 300px;
+      width: 230px;
+    }
+
+    @container guide-list (width < 800px) {
+      flex-direction: column;
+
+      a {
+        min-height: 100px;
+        width: 100%;
+      }
+    }
+  }
+}
