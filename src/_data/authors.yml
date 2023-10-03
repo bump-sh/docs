@@ -5,9 +5,16 @@ jay:
   image_url: https://bump.sh/packs/static/8ff1fac949fbf2a8f3c3.jpg
   email: jay@bump.sh
 
-valeriane:
-  name: Valériane Venance
-  title: Principal Developer Advocate
-  url: https://github.com/vvenance
-  image_url: https://bump.sh/packs/static/d42a3bdb0c6192b772df.jpg
-  email: valeriane@bump.sh
+chris:
+  name: Christophe Dujarric
+  title: Head of Product Marketing
+  url: https://github.com/ChristopheDujarric
+  image_url: https://bump.sh/packs/static/ee8962c988131c701834.png
+  email: christophe@bump.sh
+
+polo:
+  name: Paul Monseu de Bodinat
+  title: Backend engineer
+  url: https://github.com/polo2bodi
+  image_url: https://bump.sh/packs/static/d07e1af8fe843b6a6599.png
+  email: paul@bump.sh
