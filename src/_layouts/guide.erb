@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<main class="wrapper">
+  <%= render Shared::Hero.new(title: data.title) %>
+  <div class="double-pane">
+    <%= render Guides::Authors::List.new(authors: data.authors) %>
+    <div class="guide-content wrapper" data-wrapper-size="small">
+      <%= yield %>
+    </div>
+  </div>
+</main>

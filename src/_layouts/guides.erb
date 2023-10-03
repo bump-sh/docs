@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<main class="wrapper">
+  <%= render Shared::Hero.new(title: data.title, description: "Tutorials and how-tos to get up and running with Bump.sh") %>
+  <div class="section-container">
+    <%= render Guides::Category::Section.new(resources: collections.guides.resources.first(2), title: "Browse our latest guides", position: "full") %>
+  </div>
+  <%= yield %>
+</main>
