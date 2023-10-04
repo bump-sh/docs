@@ -1,10 +1,10 @@
 class Shared::Footer < Bridgetown::Component
-  def initialize(show:)
-    @show = show
+  def initialize(hide: false)
+    @hide = hide
     @site = Bridgetown::Current.site
   end
 
   def render?
-    @show
+    !@hide
   end
 end
