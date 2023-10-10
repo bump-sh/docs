@@ -1,0 +1,9 @@
+categories:
+  - name: API Basics
+    description: Make your first steps into deploying a beautiful documentation for your API.
+  - name: Bump.sh tutorials
+    description: Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.
+  - name: OpenAPI
+    description: OpenAPI-specific tips & tricks.
+  - name: AsyncAPI
+    description: Resources over the industry standard for asynchronous APIs.

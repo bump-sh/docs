@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Guides in category ":prototype-term-titleize"
+title: Guides in category :prototype-term-titleize
 page_class: category
 prototype:
   collection: guides
@@ -11,7 +11,7 @@ prototype:
 
 <div class="double-pane">
   <aside>
-    Other categories:
+    <h2>All categories</h2>
     <ul>
       <% collections.guides.resources.map{ |resource| resource.data.categories }.flatten.uniq.each do |category| %>
         <li>
@@ -22,24 +22,6 @@ prototype:
       <% end %>
     </ul>
   </aside>
-  <guide-list>
-    <ul class="category-items">
-    <% paginator.resources.each do |item| %>
-      <li>
-        <a class="item card" href="<%= item.relative_url %>">
-          <h3><%= item.data.title %></h3>
-          <div class="tag-list">
-            <% item.data.categories.each do |tag| %>
-              <span class="label" data-label-status="inverted"><%= tag %></span>
-            <% end %>
-            <% item.data.tags.each do |tag| %>
-              <a class="label" data-label-status="inverted"><%= tag %></a>
-            <% end %>
-          </div>
-        </a>
-      </li>
-    <% end %>
-    </ul>
-  </guide-list>
+  <%= render Guides::List.new(resources: paginator.resources) %>
 </div>
 <%= render Shared::Pagination.new(paginator: paginator) %>

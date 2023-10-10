@@ -1,5 +1,8 @@
 .category {
   aside {
+    h2 {
+      font-size: 1.23rem;
+    }
     ul {
       list-style-type: none;
       padding: 0;
@@ -31,6 +34,13 @@
       min-height: 180px;
       width: 100%;
     }
+  }
+
+  guide-list {
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: var(--spacing-20);
   }
 
   @container main (width < 800px) {
