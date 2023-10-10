@@ -1,14 +1,16 @@
 .card {
-  border: var(--border-default);
+  border: solid 1px transparent;
+  background-image: linear-gradient(90deg, white, white), linear-gradient(90deg, rgba(25, 174, 255, 0.4) 0.3%, rgba(255, 255, 255, 0.2) 25.92%, rgba(1, 92, 213, 0.4) 46.89%, rgba(25, 174, 255, 0.4) 88.32%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   border-radius: var(--border-radius-large);
   box-sizing: border-box;
   box-shadow: var(--shadow-elevation-low);
   color: var(--title-color);
   display: flex;
   flex-direction: column;
-  height: 100%;
   gap: var(--gap-default);
-  padding: var(--spacing-6);
+  padding: var(--spacing-10);
   text-decoration: none;
   transition: all 0.2s ease-out;
 
@@ -16,14 +18,11 @@
     box-shadow: var(--shadow-elevation-medium);
   }
 
-  h3, p {
-    margin: 0;
-  }
-
   h3 {
     font-size: 1.5rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1.2;
+    margin: 0;
   }
 
   img {

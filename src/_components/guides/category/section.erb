@@ -1,7 +1,15 @@
-<guide-category class="<%= @css_classes %>" <% if @position.present? %>data-column-position="<%= @position %>"<% end %>>
+<guide-category class="<%= @css_classes %>">
   <div class="list-header">
     <h2><%= @title %></h2>
-    <%= content %>
+    <% if @description.present? %>
+      <p><%= @description %></p>
+    <% end %>
+    <% if @category_name != "All" %>
+      <a href="<%= relative_url "/guides/#{@category_name.parameterize}" %>">
+        Browse all <%= @category_name %> Guides
+        <%= svg "images/icons/arrow-right.svg" %>
+      </a>
+    <% end %>
   </div>
 
   <%= render Guides::List.new(resources: @resources) %>

@@ -6,7 +6,7 @@ html {
 /* usage of :where makes specificity lower */
 :where(h1, h2, h3, h4, h5, h6) {
   color: var(--title-color);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 :where(h1) {
@@ -16,6 +16,17 @@ html {
 
 :where(h2) {
   font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+:where(h3) {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+
+:where(h4) {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 :where(a, a:focus, a:visited) {

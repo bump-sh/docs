@@ -2,23 +2,33 @@ guide-category {
   align-items: center;
   border-radius: var(--border-radius-xlarge);
   color: var(--text-color);
-  container: guide-list / inline-size;
+  container: guide-category / inline-size;
   display: flex;
-  gap: var(--gap-large);
-  justify-content: space-between;
+  flex-direction: column; 
+  gap: var(--gap-medium);
   width: 100%;
 
   .list-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xsmall);
     width: 100%;
 
     a {
       align-items: center;
       display: inline-flex;
-      gap: var(--gap-small);
+      font-weight: var(--font-weight-semibold);
+      gap: var(--spacing-2);
+      text-decoration: none;
+
+      &:hover {
+        gap: var(--spacing-3);
+        transition: all 0.2s ease;
+      }
     }
   }
 
-  h2 {
+  h2, p {
     margin: 0;
   }
 }

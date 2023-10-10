@@ -1,7 +1,6 @@
 ---
 title: "AsyncAPI vs. OpenAPI: Which Specification Is Right for Your App?"
 authors: Joanna Wallace
-category: [Beginner]
 image: images/guides/asyncapi-vs-openapi.png
 ---
 
