@@ -39,7 +39,11 @@ side-bar {
     list-style-type: none;
     margin: 0;
     margin-bottom: var(--spacing-2);
-    margin-left: var(--spacing-4);
+    margin-left: var(--spacing-5);
+
+    .sidebar-sublist {
+      margin-left: var(--spacing-7);
+    }
 
     .item {
       border-left: 2px solid transparent;
