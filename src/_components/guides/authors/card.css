@@ -1,21 +1,20 @@
 author-card {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-small);
-  text-align: center;
+  gap: var(--gap-xsmall);
 
   .author-image {
     align-items: center;
-    background-color: var(--blue-20);
+    background-image: var(--bg-color-gradient);
     border-radius: var(--border-radius-xlarge);
     display: flex;
-    height: 120px;
+    flex-shrink: 0;
+    height: 100px;
     justify-content: center;
-    margin-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
     overflow: hidden;
     position: relative;
-    width: 120px;
+    width: 100px;
 
     img {
       height: 100%;
@@ -30,7 +29,7 @@ author-card {
       border-radius: 100%;
       content: "";
       display: block;
-      height: 30px;
+      height: 35%;
       position: absolute;
     }
 
@@ -39,21 +38,28 @@ author-card {
       border-radius: 60% 60% 0 0;
       content: "";
       display: block;
-      height: 40px;
+      height: 50%;
       position: absolute;
-      top: 63px;
-      width: 50px;
+      top: 70%;
+      width: 60%;
     }
+  }
+
+  .author-description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xsmall);
+  }
+
+  h3, p {
+    margin: 0;
   }
 
   h3 {
     font-size: 1.125rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1;
-  }
-
-  h3, p {
-    margin: 0;
+    margin-top: var(--spacing-2);
   }
 
   .links {
@@ -65,5 +71,11 @@ author-card {
       color: var(--text-color);
       width: 20px;
     }
+  }
+
+  @container guide-sidebar (width > 250px) {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gap-medium);
   }
 }

@@ -17,6 +17,7 @@
   gap: var(--spacing-1);
   line-height: 2;
   padding: 0 var(--spacing-2);
+  text-decoration: none;
   white-space: nowrap;
 }
 

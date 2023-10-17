@@ -3,11 +3,13 @@ layout: default
 ---
 
 <main class="wrapper">
-  <%= render Shared::Hero.new(title: data.title) %>
+  <%= render Shared::Hero.new(title: data.title, tags: data.tags) %>
   <div class="double-pane">
-    <%= render Guides::Authors::List.new(authors: data.authors) %>
+    <%= render Guides::Sidebar.new(data: data) %>
     <div class="guide-content wrapper" data-wrapper-size="small">
-      <img class="guide-cover" src="<%= relative_url data.image %>">
+      <% if data.image.present? %>
+        <img class="guide-cover" src="<%= relative_url data.image %>">
+      <% end %>
       <%= yield %>
     </div>
   </div>

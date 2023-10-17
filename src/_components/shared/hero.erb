@@ -3,4 +3,5 @@
   <% if @description.present? %>
     <p><%= @description %></p>
   <% end %>
+  <%= render Shared::Taglist.new(tags: @tags) %>
 </page-hero>

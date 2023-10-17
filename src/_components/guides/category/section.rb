@@ -5,7 +5,7 @@ class Guides::Category::Section < Bridgetown::Component
     @css_classes = css_classes
     @site = Bridgetown::Current.site
     @category_name = category.name
-    @description = category.description
+    @excerpt = category.excerpt
     @resources = if @category_name == "Latest"
       @site.collections.guides.resources.first(4)
     else

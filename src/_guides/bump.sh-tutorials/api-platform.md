@@ -1,6 +1,6 @@
 ---
 title: Deploying docs from API Platform
-authors: polo
+authors: chris
 ---
 
 [API Platform](https://api-platform.com/) is an API-first PHP framework that allows you to create REST and GraphQL APIs using PHP classes, and automatically generates their documentation, based on the OpenAPI specification. If you are new to API Platform, check out [their getting started guide](https://api-platform.com/docs/distribution/).

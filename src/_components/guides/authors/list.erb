@@ -1,7 +1,5 @@
 <author-list>
-  <aside>
-    <% @authors.each do |author| %>
-      <%= render Guides::Authors::Card.new(author: author) %>
-    <% end %>
-  </aside>
+  <% @authors.each do |author| %>
+    <%= render Guides::Authors::Card.new(author: author) %>
+  <% end %>
 </author-list>
