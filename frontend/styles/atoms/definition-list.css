@@ -1,0 +1,16 @@
+:where(dl) {
+  margin: 0;
+
+  :where(dt) {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  :where(dd) {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  :where(dd + dt) {
+    margin-top: var(--gap-small);
+  }
+}

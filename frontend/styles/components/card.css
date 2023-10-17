@@ -29,10 +29,4 @@
     border-radius: var(--border-radius-medium);
     width: 100%;
   }
-
-  .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-small);
-  }
 }

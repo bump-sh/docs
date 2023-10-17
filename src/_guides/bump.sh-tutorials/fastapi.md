@@ -1,6 +1,6 @@
 ---
 title: Deploying docs from FastAPI
-authors: [polo]
+authors: chris
 ---
 
 [FastAPI](https://fastapi.tiangolo.com/) is a Python framework that allows you to create APIs, and automatically generates their documentation, based on the OpenAPI specification.

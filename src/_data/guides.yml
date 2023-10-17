@@ -1,9 +1,17 @@
 categories:
   - name: API Basics
-    description: Make your first steps into deploying a beautiful documentation for your API.
+    long_name: API Basics for beginners
+    excerpt: Make your first steps into deploying a beautiful documentation for your API.
+    description: Something very long that should explain what the specifities of the category are until we write something better.
   - name: Bump.sh tutorials
-    description: Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.
+    excerpt: Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.
+    long_name: Bump.sh-related tutorials
+    description: Something very long that should explain what the specifities of the category are until we write something better.
   - name: OpenAPI
-    description: OpenAPI-specific tips & tricks.
+    excerpt: OpenAPI-specific tips & tricks.
+    long_name: Become an OpenAPI Jedi
+    description: Something very long that should explain what the specifities of the category are until we write something better.
   - name: AsyncAPI
-    description: Resources over the industry standard for asynchronous APIs.
+    excerpt: Resources over the industry standard for asynchronous APIs.
+    long_name: Become an AsyncAPI Jedi
+    description: Something very long that should explain what the specifities of the category are until we write something better.

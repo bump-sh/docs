@@ -9,14 +9,12 @@
 }
 
 .guide {
-  .double-pane {
-    --side-min-width: 250px;
+  & h1 {
+    font-size: clamp(2rem, 10vw, 2.5rem);
   }
 
-  aside {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-large);
+  .double-pane {
+    --side-min-width: 250px;
   }
 
   .guide-content {
@@ -35,10 +33,13 @@
   }
 
   @container main (width < 800px) {
-    aside,
-    .guide-content {
+    aside {
       border: 0;
       padding: 0;
+    }
+
+    .guide-content {
+      border-top: var(--border-default);
     }
   }
 }

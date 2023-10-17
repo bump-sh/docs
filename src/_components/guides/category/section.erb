@@ -1,11 +1,11 @@
 <guide-category class="<%= @css_classes %>">
   <div class="list-header">
     <h2><%= @title %></h2>
-    <% if @description.present? %>
-      <p><%= @description %></p>
+    <% if @excerpt.present? %>
+      <p><%= @excerpt %></p>
     <% end %>
     <% if @category_name != "All" %>
-      <a href="<%= relative_url "/guides/#{@category_name.parameterize}" %>">
+      <a href="<%= relative_url "/guides/#{@category_name.downcase.split(" ").join("-")}" %>">
         Browse all <%= @category_name %> Guides
         <%= svg "images/icons/arrow-right.svg" %>
       </a>

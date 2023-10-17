@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: category
 title: Guides in category :prototype-term-titleize
 page_class: category
 prototype:
@@ -9,14 +9,21 @@ prototype:
   sort_reverse: true
 ---
 
+<% @category = site.data.guides.categories.find{ |category| category.name.downcase == data.category.downcase }
+%>
+<% if @category %>
+  <%= render Shared::Hero.new(title: @category.long_name, description: @category.description) %>
+<% else %>
+  <%= render Shared::Hero.new(title: data.category.titleize) %>
+<% end %>
 <div class="double-pane">
   <aside>
     <h2>All categories</h2>
     <ul>
-      <% collections.guides.resources.map{ |resource| resource.data.categories }.flatten.uniq.each do |category| %>
+      <% site.data.guides.categories.each do |category| %>
         <li>
-          <a href="<%= relative_url "/guides/#{category.downcase.split(" ").join("-")}" %>">
-            <%= category %>
+          <a href="<%= relative_url "/guides/#{category.name.downcase.split(" ").join("-")}" %>" <% if data.category.downcase == category.name.downcase%>aria-current="true"<% end %>>
+            <%= category.name %>
           </a>
         </li>
       <% end %>

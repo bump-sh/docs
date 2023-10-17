@@ -4,6 +4,10 @@
       font-size: 1.23rem;
     }
     ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: var(--gap-xsmall);
       list-style-type: none;
       padding: 0;
     }
@@ -14,11 +18,12 @@
       display: flex;
       padding: var(--spacing-1) var(--spacing-3);
       text-decoration: none;
-    }
   
-    a:hover {
-      background-color: var(--bg-color-selected);
-      color: var(--link-color);
+      &:hover,
+      &[aria-current="true"] {
+        background-color: var(--bg-color-selected);
+        color: var(--link-color);
+      }
     }
   }
 
@@ -37,7 +42,6 @@
   }
 
   guide-list {
-    align-items: start;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-block: var(--spacing-20);

@@ -1,0 +1,12 @@
+<guide-sidebar>
+  <aside>
+    <%= render Guides::Authors::List.new(authors: @authors) %>
+    <hr>
+    <dl>
+      <dt>Posted in</dt>
+      <dd><a class="label" href="<%= "relative_url #{@category.split(" ").join("-")}" %>"><%= @category %></a></dd>
+      <dt>Last update</dt>
+      <dd><%= @update %></dd>
+    </dl>
+  </aside>
+</guide-sidebar>
