@@ -3,5 +3,8 @@
 <%= seo %>
 <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico"/>
 <link rel="stylesheet" href="<%= webpack_path :css %>" />
+<% if data.canonical_url.present? %>
+  <link rel="canonical" href="<%= data.canonical_url %>" />
+<% end %>
 <script src="<%= webpack_path :js %>" defer></script>
 <%= live_reload_dev_js %>
