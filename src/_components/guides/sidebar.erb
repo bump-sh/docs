@@ -4,7 +4,7 @@
     <hr>
     <dl>
       <dt>Posted in</dt>
-      <dd><a class="label" href="<%= "relative_url #{@category.split(" ").join("-")}" %>"><%= @category %></a></dd>
+      <dd><a class="label" href="<%= relative_url "/guides/#{@category.downcase.split(" ").join("-")}" %>"><%= @category %></a></dd>
       <dt>Last update</dt>
       <dd><%= @update %></dd>
     </dl>
