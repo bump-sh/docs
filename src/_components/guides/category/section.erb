@@ -1,8 +1,8 @@
 <guide-category class="<%= @css_classes %>">
   <div class="list-header">
     <h2><%= @title %></h2>
-    <% if @excerpt.present? %>
-      <p><%= @excerpt %></p>
+    <% if @description.present? %>
+      <p><%= @description %></p>
     <% end %>
     <% if @category_name != "All" %>
       <a href="<%= relative_url "/guides/#{@category_name.downcase.split(" ").join("-")}" %>">
