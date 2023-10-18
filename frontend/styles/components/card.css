@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-default);
-  min-height: 170px;
   padding: var(--spacing-10);
   text-decoration: none;
   transition: all 0.2s ease-out;
@@ -20,14 +19,13 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1.2;
     margin: 0;
   }
 
-  img {
-    border-radius: var(--border-radius-medium);
-    width: 100%;
+  p {
+    margin: 0;
   }
 }

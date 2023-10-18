@@ -27,23 +27,8 @@
     }
   }
 
-  .category-items {
-    display: grid;
-    gap: var(--gap-medium);
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    list-style-type: none;
-    margin: 0;
-    padding-block: var(--spacing-10);
-
-    a {
-      min-height: 180px;
-      width: 100%;
-    }
-  }
-
-  guide-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  guide-list .list-container {
+    grid-template-columns: repeat(2, 1fr);
     padding-block: var(--spacing-20);
   }
 
