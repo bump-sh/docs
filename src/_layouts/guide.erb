@@ -7,9 +7,6 @@ layout: default
   <div class="double-pane">
     <%= render Guides::Sidebar.new(data: data) %>
     <div class="guide-content wrapper" data-wrapper-size="small">
-      <% if data.image.present? %>
-        <img class="guide-cover" src="<%= relative_url data.image %>">
-      <% end %>
       <%= yield %>
     </div>
   </div>
