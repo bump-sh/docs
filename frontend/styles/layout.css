@@ -44,7 +44,7 @@ body.help {
 }
 
 .wrapper[data-wrapper-size="small"] {
-  --page-content-width: 800px;
+  --page-content-width: 75ch;
 }
 
 .full-bleed {
