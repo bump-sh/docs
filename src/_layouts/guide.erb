@@ -3,10 +3,10 @@ layout: default
 ---
 
 <main class="wrapper">
-  <%= render Shared::Hero.new(title: data.title, tags: data.tags) %>
   <div class="double-pane">
     <%= render Guides::Sidebar.new(data: data) %>
     <div class="guide-content wrapper" data-wrapper-size="small">
+      <h1><%= data.title %></h1>
       <%= yield %>
     </div>
   </div>
