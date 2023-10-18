@@ -1,8 +1,11 @@
 <guide-list>
-  <% @resources.each do |resource| %>
-    <a class="guide card" href="<%= resource.relative_url %>">
-      <h3><%= resource.data.title %></h3>
-      <%= render Shared::Taglist.new(tags: resource.data.tags) %>
-    </a>
-  <% end %>
+  <div class="list-container">
+    <% @resources.each do |resource| %>
+      <a class="guide card" href="<%= resource.relative_url %>">
+        <h3><%= resource.data.title %></h3>
+        <p><%= resource.data.excerpt %></p>
+        <%= render Shared::Taglist.new(tags: resource.data.tags) %>
+      </a>
+    <% end %>
+  </div>
 </guide-list>
