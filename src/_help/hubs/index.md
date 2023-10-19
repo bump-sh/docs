@@ -43,11 +43,23 @@ The CLI allows you to deploy new documentation directly to a hub. It does not su
 
 To deploy a new doc to a hub, execute the following command:
 
-bump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token my-doc-token
+``bump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token my-doc-token``
+
 Find here the commands and more information about the CLI.
 ### Using the API
 
-Bump.sh's API allows you to upload new versions of your API documentation directly to your hub.
+The Bump.sh API allows for several actions on your hub and the documentation it contains:
+
+- Deploy a new version of a documentation present in a hub.
+- Validate a version (pre-deployment check) for a documentation in a hub.
+- List the documentation in a hub.
+
+However, the API does not currently support the following actions:
+
+- Deleting a documentation from a hub.
+- Attaching an existing documentation (outside of the hub) to a hub.
+- Modifying the metadata of a hub (title, description, settings, etc.).
+- Deleting a hub.
 
 [For more information, please refer to our API documentation.](https://developers.bump.sh/group/endpoint-versions)
 
