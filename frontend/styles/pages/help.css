@@ -44,7 +44,7 @@
     }
   
     h1, h2, h3, h4 {
-      scroll-margin-top: var(--spacing-24);
+      scroll-margin-top: var(--spacing-8);
     }
 
     #markdown-toc {
