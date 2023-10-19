@@ -3,7 +3,7 @@
   <head>
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
-  <body class="<%= data.page_class %>" <% if data.sidebar %>data-controller="toggle"<% end %>>
+  <body class="<%= data.page_class %>"data-controller="copy <% if data.sidebar %>toggle<% end %>">
     <%# lit :bump_navbar, logo: relative_url('/images/bump-logo.svg') %>
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 

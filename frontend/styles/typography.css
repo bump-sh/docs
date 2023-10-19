@@ -26,3 +26,23 @@ html {
 :where(strong) {
   font-weight: var(--font-weight-semibold);
 }
+
+h2, h3, h4 {
+  &[id] {
+    position: relative;
+
+    .heading-anchor {
+      bottom: 0.2em;
+      font-size: 0.75em;
+      font-weight: 500;
+      margin-left: var(--gap-xsmall);
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.3s;
+    }
+
+    &:hover .heading-anchor {
+      opacity: 1;
+    }
+  }
+}
