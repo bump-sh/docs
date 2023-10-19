@@ -2,6 +2,8 @@
 title: "AsyncAPI vs. OpenAPI: Which Specification Is Right for Your App?"
 authors: Joanna Wallace
 image: images/guides/asyncapi-vs-openapi.png
+canonical_url: https://bump.sh/blog/asyncapi-vs-openapi
+excerpt: Learn about the basic differences between AsyncAPI and OpenAPI that will help you pick one of them.
 ---
 
 Depending on how your application is designed and what it needs to accomplish, you probably want to consider choosing one type of communication protocol for your API over another—namely, synchronous or asynchronous. And which protocol you use determines which specification you need to follow for your API—[OpenAPI](https://www.openapis.org/) or [AsyncAPI](https://www.asyncapi.com/).

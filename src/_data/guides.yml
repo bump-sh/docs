@@ -1,13 +1,14 @@
 categories:
   - name: API Basics
-    long_name: API Basics for beginners
-    description: Make your first steps into deploying a beautiful documentation for your API.
+    long_name: Getting Started with APIs
+    description: Learn the basics of API technologies, their benefits and how to get started with it.
   - name: Bump.sh tutorials
-    description: Perfect your knowledge of Bump.sh and build a nice ecosystem for your community.
-    long_name: Bump.sh-related tutorials
+    long_name: Bump.sh product tutorials
+    description: Find cookbooks that will help you get the most out of Bump.sh, for your specific use case.
   - name: OpenAPI
-    description: OpenAPI-specific tips & tricks.
-    long_name: Become an OpenAPI Jedi
+    long_name: OpenAPI specification guides and tutorials
+    description: Learn how to use OpenAPI to build HTTP APIs that humans and machines can interact with conveniently.
   - name: AsyncAPI
-    description: Resources over the industry standard for asynchronous APIs.
-    long_name: Become an AsyncAPI Jedi
+    long_name: AsyncAPI specification guides and tutorials
+    description: Learn how to use AsyncAPI to build event-driven APIs that humans and machines can interact with conveniently.
+    
