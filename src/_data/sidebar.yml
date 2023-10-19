@@ -84,6 +84,9 @@ help:
     icon: hub
     items:
       - type: page
+        label: Create and manage hubs
+        link: /hubs/create-and-manage-hubs/
+      - type: page
         label: Hub settings
         link: /hubs/hub-settings/
   - type: page
