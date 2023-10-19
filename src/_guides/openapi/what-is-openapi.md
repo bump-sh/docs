@@ -2,6 +2,8 @@
 title: What is OpenAPI?
 authors: Grégoire Pichat
 image: images/guides/what-is-openapi.png
+canonical_url: https://bump.sh/blog/what-is-openapi
+excerpt: OpenAPI allows to describe, develop, test, and document APIs conforming to the REST architecture, to create RESTful APIs.
 ---
 OpenAPI is a standard for describing APIs (Application Programming Interfaces). The OpenAPI specification (or OAS) defines an open and independent description format for API services and allows both humans and computers to discover and understand how an API works and how to interact with it, without the need to look at the source code. More specifically, OpenAPI allows to describe, develop, test, and document APIs conforming to the REST architecture, to create RESTful APIs.
 
