@@ -1,6 +1,7 @@
 ---
 title: Deploying docs from FastAPI
 authors: chris
+excerpt: Get started with Bump.sh for FastAPI projects.
 ---
 
 [FastAPI](https://fastapi.tiangolo.com/) is a Python framework that allows you to create APIs, and automatically generates their documentation, based on the OpenAPI specification.

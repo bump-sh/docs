@@ -2,6 +2,8 @@
 title: What is AsyncAPI?
 authors: jay
 image: images/guides/what-is-asyncapi.png
+canonical_url: https://bump.sh/blog/what-is-asyncapi
+excerpt: AsyncAPI is the most popular specification for describing asynchronous APIs and Event-Driven Architectures.
 ---
 
 AsyncAPI is the most popular specification for describing asynchronous APIs and Event-Driven Architectures.
