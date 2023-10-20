@@ -5,7 +5,7 @@
       <p><%= @description %></p>
     <% end %>
     <% if @category_name != "All" %>
-      <a href="<%= relative_url "/guides/#{@category_name.downcase.split(" ").join("-")}" %>">
+      <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>">
         Browse all <%= @category_name %> Guides
         <%= svg "images/icons/arrow-right.svg" %>
       </a>
