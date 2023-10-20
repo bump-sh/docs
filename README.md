@@ -60,7 +60,9 @@ You can deploy Bridgetown sites on hosts like Render or Vercel as well as tradit
 
 ## Contributing
 
-If repo is on GitHub:
+Hi and thanks for helping us providing a better understanding of Bump.sh and the API ecosystem!
+
+### Creating a pull request
 
 1. Fork it
 2. Clone the fork using `git clone` to your local development machine.
@@ -68,3 +70,49 @@ If repo is on GitHub:
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
+
+### Guides
+
+We'd be thrilled to have you submitting community guides!
+
+#### Folder structure
+
+Guides are located in [`src/_guides`](https://github.com/bump-sh/docs/tree/main/src/_guides).
+
+Under this folder you should find a few folders that act as categories.
+These categories are fixed as they are the ones we want to show on our guide index.
+
+If however you think your submission doesn't fit in any of the provided categories, you can create a new folder to put it in.
+
+This folder will require a `_default.yml` file at its root where you'll add the new category name. `categories: [Tips and tricks]`
+The folder name should be the slugified name of your category: `Tips and tricks -> tips-and-tricks`.
+
+However, guides can freely be added into subfolders and their url would follow the folder path.
+For example, `src/_guides/bump-sh-tutorials/cli/mastering-bump-command-line.md` will show under `https://docs.bump.sh/guides/bump-sh-tutorials/cli/mastering-bump-command-line`.
+
+#### Writing the guide
+
+Guides should have a frontmatter containing at least a title, a list of authors and an excerpt.
+```
+title: Donde esta la biblioteca
+authors: [Troy Barnes, Abed Nadir]
+excerpt: Discoteca, muñeca, la biblioteca. Es en bigote grande, perro, manteca.
+```
+
+The key `authors` will first lookup to a list of known authors defined in [`src/_data/authors.yml`](https://github.com/bump-sh/docs/blob/main/src/_data/authors.yml).
+If you wish to share more information about you, you can add a key of your choice in this file in this form, especially if you intend to submit many posts:
+```
+your_preferred_name_key:
+  name: <your_name>
+  title: A kind soul that loves sharing knowledge to the world
+  url: <url_to_your_github_profile>
+  image_url: <url_to_your_avatar>
+  email: <your_email_address>
+```
+If this is a one-time submission and you don't want to bother, you can just add your full name (or nickname, anything works).
+
+The excerpt is a small description of the guide content that will show on the guide list so users can have a glimpse of what the guide is about. Be clear and concise!
+
+Images go under [`src/images`](https://github.com/bump-sh/docs/tree/main/src/images) and can be called with `![](/images/guides/<your_image_name>)`.
+
+Then you can let your ~~pen~~ keyboard handle the content!
