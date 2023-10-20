@@ -22,7 +22,7 @@ This option allows you to add a description to your hub, and supports Markdown f
 
 ![](/images/help/slug-hub.png)
 
-## Default Settings
+## Default Settings & Visual Customization
 
 These hub settings are applied by default to all the documentation it contains. From the Hub Settings tab, you can customize several general options.
 
