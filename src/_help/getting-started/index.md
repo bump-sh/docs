@@ -11,8 +11,7 @@ From OpenAPI and AsyncAPI specifications, Bump.sh generates the documentation yo
 
 Those specifications, supported by a wide variety of frameworks in various programming languages that generate definition files automatically, can be easily deployed on Bump.sh.
 
-Our guides below will help you locate and use those files to deploy your API docs on Bump.sh:
+Our guide below will help you locate and use those files to deploy your API docs on Bump.sh:
 
-- [Quick start with definition files](/help/getting-started/quick-start) if you work directly with an OpenAPI or AsyncAPI file.
-- [Quick start with API Platform](/help/getting-started/api-platform) if you are building an API with API Platform (PHP).
-- [Quick start with FastAPI](/help/getting-started/fastapi) if you are building an API with FastAPI (Python).
+[Quick start with definition files](/help/getting-started/quick-start) if you work directly with an OpenAPI or AsyncAPI file.
+
