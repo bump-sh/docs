@@ -22,22 +22,28 @@ Finally, you can decide whether this hub is visible to everyone or only to membe
 ## Add documentation to a hub
 
 ### Using the webapp
-#### Deploy a new documentation
+
+#### Create a new documentation
+
 From the "Hubs" tab, click on "Create Documentation" to add it to the desired hub. You can then specify the documentation's name, its slug, and its access level (Public or private).
 During the creation of a stand-alone documentation, you'll also find the option to add it automatically to an existing hub.
+
 #### Transfer an existing documentation
-From any documentation, you can choose to move it to an existing hub. The "Hubs Settings" section allows you to choose which hub to associate this documentation with. You can also specify a category if necessary.
+
+From any documentation settings, you can choose to move it to an existing hub. The "Hubs Settings" section allows you to choose which hub to associate this documentation with. You can also specify a category if necessary.
 
 ![](/images/help/move-standalone-doc.png)
+
 ### Using the CLI
 
 The CLI allows you to deploy new documentation directly to a hub. It does not support yet the possibility to create a hub, nor to transfer a doc from one hub to another (you will need to do that via the webapp, as described above).
 
 To deploy a new doc to a hub, execute the following command:
 
-``bump deploy your/doc.yml --doc my-doc --hub hub-slug-or-id --token my-doc-token``
+``bump deploy your/doc.yml --auto-create --doc my-doc --hub hub-slug-or-id --token my-doc-token``
 
-Find here the commands and more information about the CLI.
+[Find here the commands and more information about the CLI](/help/bump-cli/).
+
 ### Using the API
 
 The Bump.sh API allows for several actions on your hub and the documentation it contains:
@@ -53,7 +59,7 @@ However, the API does not currently support the following actions:
 - Modifying the metadata of a hub (title, description, settings, etc.).
 - Deleting a hub.
 
-[For more information, please refer to our API documentation.](https://developers.bump.sh/group/endpoint-versions)
+[For more information, please refer to our API documentation.](https://developers.bump.sh/)
 
 ## Hub access management
 
@@ -67,7 +73,7 @@ Two settings are possible:
 
 ## Group by categories
 
-Categories are visible on the homepage of your hub and allow you to organize the documentation. You can add one or more categories to your documentation directly from their settings.
+Categories are visible on the homepage of your hub and allow you to organize the documentation. You can add one or more categories to them by reaching the documentation settings.
 From the settings, you can choose to display the documentation sorted by categories.
 
 ![](/images/help/categories.png)

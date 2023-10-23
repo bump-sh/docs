@@ -7,10 +7,13 @@ title: Hubs
 
 ## What is a hub
 
-Hubs are a feature available starting from our paid plans: they allow you to manage collections of API documentation simply and efficiently.
+Hubs allow you to manage collections of API documentation simply and efficiently.
 
 With hubs, your API ecosystem is displayed on a single page, where documentation can be sorted by categories.
 
 Hubs also provide a unified changelog, making it easy to identify all changes across all the documentation it contains at a glance. Search is also global, allowing you to search across all documentation.
 
-Next step: [Create your first hub](/hubs/create-and-manage-hubs).
+> Hubs are available from our paid plans.
+{: .info}
+
+Next step: [Create your first hub](/help/hubs/create-and-manage-hubs/)
