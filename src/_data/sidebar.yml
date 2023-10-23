@@ -92,8 +92,11 @@ help:
     icon: org
     items:
       - type: page
-        label: Single Sign-On (SSO)
-        link: /organizations/single-sign-on-sso/
+        label: Create and manage organizations
+        link: /organizations/create-and-manage-organizations/
+      - type: page
+        label: Organization Access Management
+        link: /organizations/organization-access-management/
   - type: category
     label: Documentation customization
     icon: sparkles

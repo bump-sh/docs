@@ -1,5 +1,5 @@
 ---
-title: Single Sign-On (SSO)
+title: Organization Access Management
 ---
 
 - TOC
