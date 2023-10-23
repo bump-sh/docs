@@ -3,20 +3,10 @@ help:
     label: Home
     link: /
     icon: home
-  - type: category
-    label: Getting Started
-    link: /getting-started/
+  - type: page
+    label: Quick Start
+    link: /quick-start/
     icon: zap
-    items:
-      - type: page
-        label: Quick Start
-        link: /getting-started/quick-start/
-      - /type: page
-        label: Deploying docs from API Platform
-        link: /getting-started/api-platform/
-      - type: page
-        label: Deploying docs from FastAPI
-        link: /getting-started/fastapi/
   - type: page
     label: Bump CLI
     link: /bump-cli/
