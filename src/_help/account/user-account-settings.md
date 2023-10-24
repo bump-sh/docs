@@ -30,7 +30,7 @@ If necessary, you can initiate the deletion of your Bump.sh account from this se
 
 ![](/images/help/account-settings.png)
 
-### Organization tab
+## Organization tab
 
 > [Organizations](/help/organizations) are available starting from our paid plans.
 {: .info}
