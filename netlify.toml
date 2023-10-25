@@ -49,8 +49,8 @@
 
 [[redirects]]
   from = "/help/getting-started/api-platform/"
-  to = "/guides/bump.sh-tutorials/api-platform/"
+  to = "/guides/bump-sh-tutorials/api-platform/"
 
 [[redirects]]
   from = "/help/getting-started/fastapi/"
-  to = "/guides/bump.sh-tutorials/fastapi/"
+  to = "/guides/bump-sh-tutorials/fastapi/"
