@@ -15,7 +15,7 @@ You will then be prompted to specify the organization's name (visible to all its
 
 ![](/images/help/org-creation.png)
 
-At this stage, you can also choose to add documentation and/or hubs to your new organization. These will retain their access settings as they had before the migration.
+At this stage, you can also choose to add existing documentation and/or hubs to your new organization. These will retain the access settings they had before the migration.
 
 ## Add teammates to an organization
 From the Members section in the settings of an organization, you can add new members, view the list of existing members, modify their roles, and check pending invitations.
