@@ -63,6 +63,6 @@ This action can be initiated from the organization's settings, in the danger zon
 
 ![](/images/help/org-danger-zone.png)
 
-> Deleting an organization results in its permanent and irreversible erasure: the documentation and hubs it contains will also be destroyed.
+> Deleting an organization is permanent and irreversible; the documentation and hubs it contains will also be destroyed.
 We cannot recover content that has been deleted.
 {: .warning}
