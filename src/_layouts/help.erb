@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<%= render Help::Sidebar.new(metadata: site.metadata, resource: resource, page_list: collections.help.resources) %>
+<%= render Help::Sidebar.new(metadata: site.metadata, current: resource) %>
 <main>
   <div class="main-content">
     <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">

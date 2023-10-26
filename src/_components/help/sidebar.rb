@@ -1,8 +1,7 @@
 class Help::Sidebar < Bridgetown::Component
-  def initialize(metadata:, resource:, page_list:)
+  def initialize(metadata:, current:)
     @metadata = metadata
-    @resource = resource
-    @page_list = page_list
+    @current = current
     @site = Bridgetown::Current.site
   end
 end

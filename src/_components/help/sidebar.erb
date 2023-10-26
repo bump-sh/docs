@@ -5,8 +5,8 @@
       Hide menu
     </button>
     <ul class="sidebar-list">
-      <% @site.data.sidebar.help.each do |page| %>
-        <%= render Help::Sidebar::Item.new(page: page, page_list: @page_list, resource: @resource) %>
+      <% @site.data.help_sidebar.each do |page| %>
+        <%= render Help::Sidebar::Item.new(page: page, current: @current) %>
       <% end %>
     </ul>
   </aside>

@@ -1,129 +1,93 @@
 help:
-  - type: page
-    label: Home
+  - label: Home
     link: /
     icon: home
-  - type: page
-    label: Quick Start
+  - label: Quick Start
     link: /quick-start/
     icon: zap
-  - type: page
-    label: Bump CLI
+  - label: Bump CLI
     link: /bump-cli/
     icon: terminal
-  - type: category
-    label: Continuous Integration
+  - label: Continuous Integration
     link: /continuous-integration/
     icon: iteration
     items:
-      - type: page
-        label: Github Action
+      - label: Github Action
         link: /continuous-integration/github-actions/
-  - type: page
-    label: Release Management
+  - label: Release Management
     link: /publish-documentation/release-management/
     icon: send
-  - type: category
-    label: API change management
+  - label: API change management
     link: /api-change-management/
     icon: bell-dot
     items:
-      - type: page
-        label: Webhooks
+      - label: Webhooks
         link: /api-change-management/webhooks/
-  - type: page
-    label: Branching
+  - label: Branching
     link: /branching/
     icon: branch
-  - type: category
-    label: Hubs
+  - label: Hubs
     link: /hubs/
     icon: hub
     items:
-      - type: page
-        label: Create and manage hubs
+      - label: Create and manage hubs
         link: /hubs/create-and-manage-hubs/
-      - type: page
-        label: Hub settings
+      - label: Hub settings
         link: /hubs/hub-settings/
-  - type: page
-    label: Access Management
+  - label: Access Management
     link: /access-management/
     icon: key
-  - type: category
-    label: Organizations
+  - label: Organizations
     link: /organizations/
     icon: org
     items:
-      - type: page
-        label: Create and manage organizations
+      - label: Create and manage organizations
         link: /organizations/create-and-manage-organizations/
-      - type: page
-        label: Organization Access Management
+      - label: Organization Access Management
         link: /organizations/organization-access-management/
-  - type: category
-    label: Documentation customization
+  - label: Documentation customization
     icon: sparkles
     items:
-      - type: page
-        label: Topics
+      - label: Topics
         link: /doc-topics/
-      - type: page
-        label: Custom domains
+      - label: Custom domains
         link: /custom-domains/
-      - type: page
-        label: Meta images
+      - label: Meta images
         link: /meta-images/
-      - type: page
-        label: Custom code samples
+      - label: Custom code samples
         link: /doc-code-samples/
-  - type: category
-    label: Account
+  - label: Account
     icon: user
     items:
-      - type: page
-        label: User account settings
+      - label: User account settings
         link: /account/user-account-settings/
-      - type: page
-        label: Billing
+      - label: Billing
         link: /account/billing/
-      - type: page
-        label: Github Student
+      - label: Github Student
         link: /account/github-student/
-  - type: category
-    label: Specification Support
+  - label: Specification Support
     link: /specification-support/
     icon: code-file
     items:
-      - type: category
-        label: OpenAPI support
+      - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
-          - type: page
-            label: Name and sort endpoints and webhooks
+          - label: Name and sort endpoints and webhooks
             link: /specification-support/openapi-support/name-and-sort-resources/
-          - type: page
-            label: Webhooks
+          - label: Webhooks
             link: /specification-support/openapi-support/webhooks/
-      - type: page
-        label: AsyncAPI support
+      - label: AsyncAPI support
         link: /specification-support/asyncapi-support/
-      - type: page
-        label: Markdown support
+      - label: Markdown support
         link: /specification-support/markdown-support/
-      - type: page
-        label: JSON Schema
+      - label: JSON Schema
         link: /specification-support/json-schema/
-      - type: page
-        label: Polymorphism
+      - label: Polymorphism
         link: /specification-support/polymorphism/
-      - type: page
-        label: References
+      - label: References
         link: /specification-support/references/
-      - type: page
-        label: Multiple servers
+      - label: Multiple servers
         link: /specification-support/multiple-servers/
-  - type: page
-    label: FAQ
+  - label: FAQ
     link: /faq/
     icon: help-circle

@@ -9,7 +9,7 @@ side-item {
     padding: var(--spacing-1) var(--spacing-3);
     text-decoration: none;
 
-    &:hover {
+    &:is(a):hover {
       color: var(--base-color);
     }
 
