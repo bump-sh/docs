@@ -35,7 +35,7 @@ on:
 
 jobs:
   deploy-doc:
-    name: Deploy API doc on Bump
+    name: Deploy API doc on Bump.sh
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -68,7 +68,7 @@ permissions:
 
 jobs:
   api-diff:
-    name: Check API diff on Bump
+    name: Check API diff on Bump.sh
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -109,7 +109,7 @@ permissions:
 jobs:
   deploy-doc:
     if: ${{ github.event_name == 'push' }}
-    name: Deploy API documentation on Bump
+    name: Deploy API documentation on Bump.sh
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -123,7 +123,7 @@ jobs:
 
   api-diff:
     if: ${{ github.event_name == 'pull_request' }}
-    name: Check API diff on Bump
+    name: Check API diff on Bump.sh
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -140,25 +140,27 @@ jobs:
 ```
 
 > Since [February 2nd, 2023](https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/), the default GITHUB_TOKEN permissions are set to read-only for every new repository.
-> 
+>
 > Permissions have to be explicitly defined in your workflows, as illustrated above.
 {: .warning}
 
 ## Input parameters
 
-- `doc` (required): Documentation slug (or id). Can be found in the documentation settings on [https://bump.sh/docs](https://bump.sh/docs)
+- `doc` (required): Documentation slug (or id). Can be found in the documentation settings on <https://bump.sh/docs>
 - `token` (required): Do not add your documentation token here, but create an [encrypted secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) that holds your documentation token.
-  - Your Bump token can be found in the documentation settings on [https://bump.sh](https://bump.sh). Copy it for later usage.
-  - In your GitHub repository, click Settings, and then Secrets.
-  - Click the button “New repository secret”, name the secret `BUMP_TOKEN` and paste your Bump token in the value field.
-
-- `file`: Relative path to the documentation file. _Default:_ `api-contract.yml`
-- `command`: Bump command to execute. _Default:_ `deploy`
-  - `deploy` deploy a new version of the documentation
+  - Your Bump.sh token can be found in the documentation settings on [your API dashboard](https://bump.sh/docs). Copy it for later usage.
+  - In your GitHub repository, click “Settings”, and then “Secrets”.
+  - Click the button “New repository secret”, name the secret `BUMP_TOKEN` and paste your Bump.sh token in the value field.
+- `file`: Relative path to the documentation file. _Default: `api-contract.yml`_
+- `hub` (optional): Hub slug or id. Needed when deploying to a documentation attached to a Hub. Can be found in the hub settings on <https://bump.sh>
+- `branch` (optional): Branch name used during `deploy` or `diff` commands. This can be useful to maintain multiple API reference history and make it available in your API documentation.
+- `command`: Bump.sh command to execute. _Default: `deploy`_
+  - `deploy`: deploy a new version of the documentation
   - `diff`: automatically comment your pull request with the API diff
-  - `dry-run`: validate the documentation file before a deployment
+  - `dry-run`: dry-run a deployment of the documentation file
   - `preview`: create a temporary preview
-
+- `expires` (optional): Specify a longer expiration date for **public diffs** (defaults to 1 day). Use iso8601 format to provide a date, or you can use `never` to keep the result live indefinitely.
+- `fail_on_breaking` (optional): Mark the action as failed when a breaking change is detected with the diff command. This is only valid with `diff` command.
 
 ## Contributing
 
