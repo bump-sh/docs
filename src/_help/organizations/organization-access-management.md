@@ -38,5 +38,5 @@ To activate SSO for your organization, the organization's owner must contact our
 The configuration step for your identity provider depends on the specific provider you are using. You can refer to the [various guides provided by WorkOS](https://workos.com/docs/integrations) to follow the necessary steps.
 
 > By default, all users who get access to Bump.sh via the configured SSO will have the “Viewer” Role/Permission.
-{: .warning}
+{: .info}
 

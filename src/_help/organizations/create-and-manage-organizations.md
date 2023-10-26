@@ -6,8 +6,11 @@ title: Create and manage organizations
 {:toc}
 
 ## How to create an organization
-To create an organization, you should start by accessing the settings of your personal account.
-The Organizations section allows you to view the organizations you are currently associated with and create a new one.
+To create an organization, simply reach the account selection in menu in the top bar and click on "Create a new organization".
+
+![](/images/help/org-dropdown.png)
+
+You can also, from your settings and the Organization section, create a new organization and view the list of those you are a member of.
 
 ![](/images/help/create-org.png)
 
@@ -15,7 +18,7 @@ You will then be prompted to specify the organization's name (visible to all its
 
 ![](/images/help/org-creation.png)
 
-At this stage, you can also choose to add existing documentation and/or hubs to your new organization. These will retain the access settings they had before the migration.
+At this stage, you can also choose to move existing documentation and/or hubs to your new organization. These will retain the access settings they had before the migration.
 
 ## Add teammates to an organization
 From the Members section in the settings of an organization, you can add new members, view the list of existing members, modify their roles, and check pending invitations.
@@ -30,23 +33,21 @@ To invite a new member, simply provide their email address and specify the role 
 {: .info}
 
 ### Add teammates with SSO
-The SSO support allows you to add and manage members of your organization directly through your existing solution. We support most of the available identity providers (list them), through WorkOS.
+If your plan allows it, you can add team members via SSO. More information is available in the [dedicated section here](/help/organizations/organization-access-management/#sso).
 
 > Using SSO does not prevent you from inviting users via manual invitations.
-{: .info}
-
-> SSO is a feature available from our Business plan.
 {: .info}
 
 ## Delete teammates in an organization
 Still from the Members section, you can easily remove a member from your organization by clicking on their role to the right of their name and email. The option to delete this member is available at the very end of the list that appears.
 
 ## Change URL/slug
+Slug can be considered as the namespace of your organization, a human-readable URLs pointing to it.
+Everything in your organization, from documentation to hubs, will be below the slug in the URL.
+It will look like this: `https://bump.sh/your-slug/your-documentation`.
+
 From the settings of your organization, you can quickly change the slug via the dedicated field.
-
 Bump.sh does not automatically redirect to the new URL after changing the slug, so be sure to notify your users of this change.
-
-The Custom Domain option allows you to keep your users within your brand experience by fully customizing the URL of your organization.
 
 > Modifying the slug also changes all the public URLs for accessing your organization, hubs, and documentation!
 {: .warning}
