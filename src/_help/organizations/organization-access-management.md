@@ -23,6 +23,7 @@ A member's role can be changed at any time through the organization's list of me
 ![](/images/help/org-members.png)
 
 ## SSO
+
 Bump.sh supports Single Sign-On through your identity providers, to ease who in your organization can access admin permissions.
 
 Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
@@ -31,6 +32,7 @@ Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of i
 {: .info}
 
 ### How to setup SSO
+
 Enabling SSO typically involves two steps: one on the Bump.sh side and one on your identity provider's side.
 
 To activate SSO for your organization, the organization's owner must contact our support team, who will send them a configuration email.
