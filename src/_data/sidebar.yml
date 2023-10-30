@@ -14,19 +14,32 @@ help:
     items:
       - label: Github Action
         link: /continuous-integration/github-actions/
-  - label: Release Management
-    link: /publish-documentation/release-management/
+  - type: category
+    label: Publish Documentation
+    link: /publish-documentation/
     icon: send
-  - label: API change management
+    items:
+      - type: page
+        label: Create and manage documentation
+        link: /publish-documentation/create-and-manage-documentation/
+      - type: page
+        label: Deploy and release management
+        link: /publish-documentation/deploy-and-release-management/
+      - type: page
+        label: Branching
+        link: /publish-documentation/branching/
+      - type: page
+        label: Documentation access management
+        link: /publish-documentation/documentation-access-management/
+  - type: category
+    label: API change management
     link: /api-change-management/
     icon: bell-dot
     items:
       - label: Webhooks
         link: /api-change-management/webhooks/
-  - label: Branching
-    link: /branching/
-    icon: branch
-  - label: Hubs
+  - type: category
+    label: Hubs
     link: /hubs/
     icon: hub
     items:
@@ -34,10 +47,8 @@ help:
         link: /hubs/create-and-manage-hubs/
       - label: Hub settings
         link: /hubs/hub-settings/
-  - label: Access Management
-    link: /access-management/
-    icon: key
-  - label: Organizations
+  - type: category
+    label: Organizations
     link: /organizations/
     icon: org
     items:
