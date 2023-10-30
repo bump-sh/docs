@@ -19,10 +19,14 @@ help:
       - type: page
         label: Github Action
         link: /continuous-integration/github-actions/
-  - type: page
-    label: Release Management
-    link: /publish-documentation/release-management/
+  - type: category
+    label: Publish Documentation
+    link: /publish-documentation/
     icon: send
+    items:
+      - type: page
+        label: Create and manage documentation
+        link: /publish-documentation/create-and-manage-documentation/
   - type: category
     label: Specification Support
     link: /specification-support/
