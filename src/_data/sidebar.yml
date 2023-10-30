@@ -24,39 +24,6 @@ help:
     link: /publish-documentation/release-management/
     icon: send
   - type: category
-    label: Specification Support
-    link: /specification-support/
-    icon: code-file
-    items:
-      - type: category
-        label: OpenAPI support
-        link: /specification-support/openapi-support/
-        items:
-          - type: page
-            label: Name and sort endpoints and webhooks
-            link: /specification-support/openapi-support/name-and-sort-resources/
-          - type: page
-            label: Webhooks
-            link: /specification-support/openapi-support/webhooks/
-      - type: page
-        label: AsyncAPI support
-        link: /specification-support/asyncapi-support/
-      - type: page
-        label: Markdown support
-        link: /specification-support/markdown-support/
-      - type: page
-        label: JSON Schema
-        link: /specification-support/json-schema/
-      - type: page
-        label: Polymorphism
-        link: /specification-support/polymorphism/
-      - type: page
-        label: References
-        link: /specification-support/references/
-      - type: page
-        label: Multiple servers
-        link: /specification-support/multiple-servers/
-  - type: category
     label: API change management
     link: /api-change-management/
     icon: bell-dot
@@ -123,6 +90,39 @@ help:
       - type: page
         label: Github Student
         link: /account/github-student/
+  - type: category
+    label: Specification Support
+    link: /specification-support/
+    icon: code-file
+    items:
+      - type: category
+        label: OpenAPI support
+        link: /specification-support/openapi-support/
+        items:
+          - type: page
+            label: Name and sort endpoints and webhooks
+            link: /specification-support/openapi-support/name-and-sort-resources/
+          - type: page
+            label: Webhooks
+            link: /specification-support/openapi-support/webhooks/
+      - type: page
+        label: AsyncAPI support
+        link: /specification-support/asyncapi-support/
+      - type: page
+        label: Markdown support
+        link: /specification-support/markdown-support/
+      - type: page
+        label: JSON Schema
+        link: /specification-support/json-schema/
+      - type: page
+        label: Polymorphism
+        link: /specification-support/polymorphism/
+      - type: page
+        label: References
+        link: /specification-support/references/
+      - type: page
+        label: Multiple servers
+        link: /specification-support/multiple-servers/
   - type: page
     label: FAQ
     link: /faq/
