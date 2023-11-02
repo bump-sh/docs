@@ -19,13 +19,17 @@ Switching from one version to another on documentation can be done in an instant
 
 From the settings of a documentation, the Branches section allows you to create new branches. Simply enter the name of the new branch and confirm.
 
-Once you have created your branch, you can start uploading and deploying your first versions using your dashboard, the CLI, or the API.
+![](/images/help/create-branch.png)
+
+Once you have created your branch, you can start uploading and [deploying your first versions](/help/publish-documentation/deploy-and-release-management/) using your dashboard, the CLI, or the CI.
 
 ## Deploy into a branch
 
 Deploying a version in a branch follows the usual procedure, with an additional step where you specify which branch to add this new version to.
 
 From the settings of a documentation, in the "Upload" section, simply select the branch in which to deploy the version before confirming the upload.
+
+![](/images/help/upload-branch.png)
 
 ### Using the CLI
 
@@ -48,6 +52,8 @@ Please note that, currently, the API does not support renaming a branch.
 ## Rename or delete a branch
 
 The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it.
+
+![](/images/help/manage-branch.png)
 
 > Deleting a branch is definitive: you will lose the branch, its content and deployment history.
 
