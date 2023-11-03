@@ -1,16 +1,17 @@
 side-item {
-  .item,
-  .item:where(:focus, :visited) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2) var(--gap-small);
+
+  .item {
     align-items: center;
     border-radius: var(--border-radius-medium);
-    color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     gap: var(--gap-small);
     padding: var(--spacing-1) var(--spacing-3);
-    text-decoration: none;
 
-    &:is(a):hover {
-      color: var(--base-color);
+    &[data-current-parent="true"] {
+      color: var(--link-color);
     }
 
     &[aria-current="true"] {
@@ -18,8 +19,47 @@ side-item {
       color: var(--link-color);
     }
 
-    svg {
+    > :where(a, a:focus, a:visited, div) {
+      color: currentColor;
+      flex-grow: 1;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      color: var(--base-color);
+    }
+
+    > svg {
       width: 1em;
     }
+  
+    li {
+      display: inline-flex;
+    }
+  }
+
+  button {
+    font-size: .75rem;
+    height: var(--spacing-6);
+    padding: 0 var(--spacing-1);
+    width: fit-content;
+
+    svg {
+      height: 0.5em;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    > .item > button svg {
+      rotate: 90deg;
+    }
+
+    > .sidebar-sublist {
+      display: block
+    }
+  }
+
+  .sidebar-sublist [data-current-parent="true"] {
+    background-color: revert;
   }
 }

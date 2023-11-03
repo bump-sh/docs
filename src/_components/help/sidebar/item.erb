@@ -1,22 +1,28 @@
-<side-item>
-  <li>
+<side-item id="<%= category_id %>"<% if @items.present? %> aria-expanded="true" data-sidebar-target="expandable"<% end %>>
+  <div class="item"<% if @is_current %> aria-current="true"<% elsif @is_parent %>data-current-parent="true"<% end %>>
+    <%= svg "images/icons/#{@icon}.svg" if @icon.present? %>
     <% if @resource.present? %>
-      <a class="item" href="<%= @resource.relative_url %>"<% if @is_current %> aria-current="true"<% end %>>
-        <%= svg "images/icons/#{@icon}.svg" if @icon.present? %>
+      <a class="link" href="<%= @resource.relative_url %>">
         <%= @label %>
       </a>
     <% else %>
-      <div class="item"<% if @is_current %> aria-current="true"<% end %>>
-        <%= svg "images/icons/#{@icon}.svg" if @icon.present? %>
+      <a href="" aria-controls="<%= category_id %>" data-action="click->sidebar#toggle">
         <%= @label %>
-      </div>
+      </a>
     <% end %>
     <% if @items.present? %>
-      <ul class="sidebar-sublist">
-        <% @items.each do |item| %>
-          <%= render Help::Sidebar::Item.new(page: item, current: @current) %>
-        <% end %>
-      </ul>
+      <button data-button-style="secondary" data-button-size="xsmall" aria-controls="<%= category_id %>" data-action="sidebar#toggle">
+        <%= svg "images/icons/caret-right.svg" %>
+      </button>
     <% end %>
-  </li>
+  </div>
+  <% if @items.present? %>
+    <ul class="sidebar-sublist">
+      <% @items.each do |item| %>
+        <li>
+          <%= render Help::Sidebar::Item.new(page: item, current: @current) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
 </side-item>
