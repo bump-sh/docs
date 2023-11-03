@@ -6,10 +6,10 @@ side-bar {
 
   aside {
     padding: var(--spacing-10) var(--spacing-4);
-  }
-
-  button {
-    display: none;
+  
+    > button {
+      display: none;
+    }
   }
 
   ul {
@@ -28,14 +28,11 @@ side-bar {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-1);
-  
-    > li {
-      padding-inline: var(--spacing-4);
-    }
   }
 
   .sidebar-sublist {
     border-left: var(--border-default);
+    display: none;
     list-style-type: none;
     margin: 0;
     margin-bottom: var(--spacing-2);
@@ -47,14 +44,9 @@ side-bar {
 
     .item {
       border-left: 2px solid transparent;
-      border-radius: 0;
+      border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
       margin-left: -1px;
       padding-left: var(--spacing-5);
-
-      &[aria-current="true"] {
-        background: none;
-        border-color: var(--base-color);
-      }
     }
   }
 
