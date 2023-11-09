@@ -53,7 +53,6 @@ Here are some basic concepts to keep in mind while designing your API contract:
 At a minimum, your API contract should showcase the expected behavior of your API and its endpoints as well as explore details about how an application will call the API. Here's an excerpt of an API contract showcasing the API behavior and the data you can get from it:
 
 ```
-
 GET /weather
 
 Input parameters:
@@ -73,7 +72,6 @@ Output:
   "temperature": 72.5,
   "condition": "sunny"
 }
-
 ```
 
 [*Representation of the behavior of the API*]

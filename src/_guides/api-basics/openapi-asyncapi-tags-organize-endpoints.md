@@ -71,7 +71,7 @@ Let’s take [Bump.sh API documentation](https://bump.sh/demo/doc/bump). Here is
 ```yaml
 tags:
   - name: Diffs
-      description: Diff summary of changes in the API
+    description: Diff summary of changes in the API
 ```
 
 The documentation will show the `Diffs` property like this:
@@ -107,17 +107,17 @@ When specifying your OpenAPI or AsyncAPI tags in the root of your API contract, 
 ```yaml
 tags:
   - name: Diffs
-	description: Diff summary of changes in the API
+    description: Diff summary of changes in the API
   - name: Ping
     description: Monitoring status endpoints
   - name: Previews
     description: Preview for documentation file
   - name: Versions
-	description: Deploy your API contracts
+    description: Deploy your API contracts
   - name: Validations
-	description: Check & validate your API contracts
- - name: Hubs
-	description: Interact with your Hubs
+    description: Check & validate your API contracts
+  - name: Hubs
+    description: Interact with your Hubs
 ```
 
 When you generate API documentation, you'll notice the documentation orders the endpoint groups in the same way:
@@ -139,16 +139,16 @@ Notice how all diff-related endpoints are tagged with the `Diffs` tag in this sn
 ```yaml
 paths:
   /diffs:
-	  post:
-  	  tags: [ Diffs ]
-  	  summary: Create a diff
-	  [...]
+    post:
+      tags: [ Diffs ]
+      summary: Create a diff
+      [...]
   /diffs/{id}:
-	  get:
-  	  tags: [ Diffs ]
-  	  summary: Fetch detailed information from an existing diff
-	  [...]
-  ```
+    get:
+      tags: [ Diffs ]
+      summary: Fetch detailed information from an existing diff
+      [...]
+```
 
 You can [see live](https://developers.bump.sh/group/endpoint-diffs) how they are all available under the section Diffs. By clicking the name of the section in the left menu, the tagged endpoints will show up.
 
@@ -167,17 +167,17 @@ The code snippet below contains the root Tag Object in an API contract. Notice h
 ```yaml
 tags:
   - name: Diffs
-	description: Diff summary of changes in the API
+    description: Diff summary of changes in the API
   - name: Versions
-	description: Deploy your API contracts
+    description: Deploy your API contracts
   - name: Validations
-	description: Check & validate your API contracts
+    description: Check & validate your API contracts
   - name: Hubs
-	description: Interact with your Hubs
+    description: Interact with your Hubs
   - name: "Documentation change"
-	description: Check & validate your API contracts
+    description: Check & validate your API contracts
   - name: Validations
-	description: Validate your API status
+    description: Validate your API status
 ```
 
 These duplicate tags would confuse anyone trying to understand your API contract, as they wouldn't know which of the two tag definitions an endpoint belongs to.
@@ -187,15 +187,15 @@ Instead, make sure you define and describe every tag only once in the root Tag O
 ```yaml
 tags:
   - name: Diffs
-	description: Diff summary of changes in the API
+    description: Diff summary of changes in the API
   - name: Versions
-	description: Deploy your API contracts
+    description: Deploy your API contracts
   - name: Validations
-	description: Check & validate your API contracts
+    description: Check & validate your API contracts
   - name: Hubs
-	description: Interact with your Hubs
+    description: Interact with your Hubs
   - name: "Documentation change"
-	description: Check & validate your API contracts
+    description: Check & validate your API contracts
 ```
 
 ### Define All Your OpenAPI Tags in the Root Tag Object
