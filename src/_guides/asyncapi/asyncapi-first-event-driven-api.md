@@ -17,7 +17,7 @@ Let’s break those two ideas down a bit so you can really see what’s going on
 
 An *event* is any change in state or an update that a client might be interested in, like a new user registration or an update in the payment status of a transaction. In an event-driven system, a component known as the *publisher* sends an event to a message broker. The message broker sends the event to all the other components, known as *subscribers*, that have registered to receive that particular event. This allows the components of the system to communicate in real-time without being directly connected to each other.
 
-![Event Driven Architecture](images/guides/event-driven-architecture.png)
+![Event Driven Architecture](/images/guides/event-driven-architecture.png)
 
 As an example, picture a chat application. When a user sends a message, an event-driven API can immediately notify all the other users in the chat, allowing the message to display in their chat window without needing to refresh the page. In a traditional synchronous API, the client would need to poll the server to check for new messages very often and then update the user.  With event-driven APIs, clients receive real-time updates from the API without constantly polling for changes, making them more efficient when it comes to network resource usage. 
 
