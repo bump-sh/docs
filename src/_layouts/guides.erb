@@ -3,7 +3,7 @@ layout: default
 ---
 
 <main class="wrapper">
-  <%= render Shared::Hero.new(title: data.title, description: "Tutorials and how-tos to get up and running with Bump.sh") %>
+  <%= render Shared::Hero.new(title: data.title, description: "Learn about APIs at large, and how to use Bump.sh in your API ecosystem.") %>
   <div class="section-container">
     <% @site.data.guides.categories.each do |category| %>
       <%= render Guides::Category::Section.new(category: category) %>

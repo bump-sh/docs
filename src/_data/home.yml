@@ -4,7 +4,7 @@ cards:
     link: /help/
     icon: icons/help-center
   - label: Guides
-    description: Get the best out of our product with these guides
+    description: Learn about APIs at large, and how to use Bump.sh in your API ecosystem
     link: /guides/
     icon: icons/guides
   - label: API Reference
