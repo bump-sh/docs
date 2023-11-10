@@ -41,6 +41,20 @@ help:
         link: /enhance-documentation-content/topics/
   - type: category
     label: API change management
+  - label: Customization Options
+    link: /customization-options/
+    icon: image
+    items:
+      - label: Custom domains
+        link: /customization-options/custom-domains/
+      - label: Logo and Meta images
+        link: /customization-options/logo-meta-images/
+      - label: Operations & Navigation
+        link: /customization-options/operations-navigation/
+  - label: Release Management
+    link: /publish-documentation/release-management/
+    icon: send
+  - label: API change management
     link: /api-change-management/
     icon: bell-dot
     items:
