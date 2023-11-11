@@ -77,10 +77,6 @@ help:
       - type: page
         label: Webhooks
         link: /api-change-management/webhooks/
-  - type: page
-    label: Branching
-    link: /branching/
-    icon: branch
   - type: category
     label: Hubs
     link: /hubs/
@@ -92,10 +88,6 @@ help:
       - type: page
         label: Hub settings
         link: /hubs/hub-settings/
-  - type: page
-    label: Access Management
-    link: /access-management/
-    icon: key
   - type: category
     label: Organizations
     link: /organizations/

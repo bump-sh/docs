@@ -19,7 +19,7 @@ Switching from one API definition to another on documentation can be done in an 
 
 ## Create a new branch
 
-From the settings of a documentation, the Branches section allows you to create new branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.
+From the documentation settings, the Branches section allows you to create new branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.
 
 ![](/images/help/create-branch.png)
 

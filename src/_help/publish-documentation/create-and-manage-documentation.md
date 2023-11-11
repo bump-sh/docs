@@ -28,7 +28,7 @@ The next step is to deploy the first API document of your documentation, for whi
 
 There are several methods for deploying the first and future API definitions of your documentation, which we will detail further in the next section.
 
-## Delete a doc
+## Delete a documentation
 
 You can delete documentation at any time from the Settings section of that documentation.
 
