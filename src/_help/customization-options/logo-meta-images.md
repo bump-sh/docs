@@ -9,7 +9,7 @@ title: Logo and Meta images
 
 You can upload your own logo and favicon on Bump.sh to customize your documentation with your brand or project colors.
 
-From the "Customize UI" tab in the settings of a documentation, you can add your own logo and favicon.
+From the "Customize UI" tab in the documentation settings, you can add your own logo and favicon.
 
 ![](/images/help/logo-favicon.png)
 

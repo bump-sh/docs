@@ -30,7 +30,8 @@ From the settings of your documentation, check the "Custom domain" box. You will
 
 ![](/images/help/custom-domains.png)
 
-SSL certificates are automatically issued. 
+> SSL certificates are automatically issued.
+{: .info}
 
 > It may take some time for your custom domain update to propagate. This delay is normal and is not dependent on Bump.sh or your hosting provider.
 During this period, visitors returning to access your documentation may have difficulty accessing it. It is recommended to try again later or clear your cache before making another attempt.
