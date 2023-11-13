@@ -31,53 +31,11 @@ After processing, the new API document will be automatically deployed after a fe
 
 ### Deploy from the CLI
 
-Using the CLI, you can also deploy an API document using the `deploy` command.
-
-> You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN`environment variable. This token can be found from your documentation settings > CI deployment page.
-{: .info}
-
-```
-bump deploy path/to/file.json --doc my-documentation --token
-```
-
-You can find your own `my-documentation` slug from your documentation settings.
-
-You can also deploy a given file to a different branch of your documentation with the `--branch <branch-name>` parameter. The branch will be created if it doesn’t exist.
-
-```
-bump deploy path/to/file.json --doc my-documentation --branch staging
-```
-
-### Deploy with CI
+Our CLI can also help with deploying an API document using the `deploy` command. The complete process is available on the dedicated [CLI page](/help/continuous-integration/index/).
 
 ### Deploy using the GitHub Action
 
-Our GitHub Action allows you to easily integrate Bump.sh into your projects by simply adding a workflow file.
-
-If you want to deploy your documentation after each push, you can use the following file: `.github/workflows/bump-deploy.yml`
-
-```
-name: Deploy documentation
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy-doc:
-    name: Deploy API doc on Bump.sh
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Deploy API documentation
-        uses: bump-sh/github-action@v1
-        with:
-          doc: <BUMP_DOC_ID>
-          token: ${{secrets.BUMP_TOKEN}}
-          file: doc/api-documentation.yml
-```
+Our [GitHub Action](/help/continuous-integration/github-actions/) allows you to easily integrate Bump.sh into your projects by simply adding a workflow file.
 
 ## Release management
 
