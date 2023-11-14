@@ -42,15 +42,3 @@
   for = "/*.(png|jpg|js|css|svg|woff|ttf|eot|ico|woff2)"
   [headers.values]
     Cache-Control = "private, max-age=0, must-revalidate"
-
-[[redirects]]
-  from = "/"
-  to = "/help"
-
-[[redirects]]
-  from = "/help/getting-started/api-platform/"
-  to = "/guides/bump-sh-tutorials/api-platform/"
-
-[[redirects]]
-  from = "/help/getting-started/fastapi/"
-  to = "/guides/bump-sh-tutorials/fastapi/"
