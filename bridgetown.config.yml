@@ -22,6 +22,8 @@ url: "https://docs.bump.sh" # the base hostname & protocol for your site, e.g. h
 permalink: simple
 template_engine: erb
 
+include: ["_redirects"]
+
 # Other options you might want to investigate:
 #
 # base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,
