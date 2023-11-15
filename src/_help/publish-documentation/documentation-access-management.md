@@ -23,7 +23,7 @@ They require user authentication to be accessible and are not indexed by search 
 
 Members of an organization have access to all the documentation contained within that organization.
 
-Inviting a colleague or teammate to become a member of [your organization](/help/organizations/) can be done from the settings of that organization. Simply enter the email address of the person in question.
+Inviting a colleague or teammate to become a member of [your organization](/help/organizations/) can be done from the settings of that organization, by entering the email address in the dedicated form.
 
 ![](/images/help/org-add-member.png)
 

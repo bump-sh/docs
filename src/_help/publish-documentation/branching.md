@@ -9,11 +9,11 @@ title: Branching
 
 What we refer to as "Branching" is a solution that allows you to have multiple different definitions of the same API documentation on parallel branches.
 
-Branches can, for example, be used to distinguish between two environments of your API documentation, such as those for production or development environments. Another example is keeping track of previous versions of an API (e.g., 1.0, 1.1, 2.0, etc.).
+Branches can, for example, be used to distinguish between two environments of your API documentation, such as production or development environments. Another example is keeping track of previous versions of an API (e.g., 1.0, 1.1, 2.0, etc.).
 
 You can create as many branches as necessary, and each of these branches can receive its own deploys and has a distinct changelog from others. You can choose which branch will be displayed and used by default for deployments (when no target branch is designated).
 
-Switching from one API definition to another on documentation can be done in an instant through a dropdown menu.
+Switching from one API definition to another in the documentation can be done in an instant via a dropdown menu.
 
 ![](/images/help/version-selector.png)
 
@@ -53,12 +53,9 @@ Please note that, currently, the API does not support renaming a branch.
 
 ## Rename or delete a branch
 
-The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it.
+The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it. After changing the branch name, don't forget to update your CI deployment.
 
 ![](/images/help/manage-branch.png)
-
-> Don't forget to update your CI deployment to correctly reflect the new branch name.
-{: .warning}
 
 > Deleting a branch is definitive: you will lose the branch, its content and deployment history.
 {: .warning}
