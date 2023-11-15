@@ -7,7 +7,7 @@ title: Topics
 
 Topics are an exclusive custom property that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
 
-By default, most specification standards do not support the addition of extra content. That's why we've added this additional property to insert at the beginning of your specification file: `x-topics`.
+By default, most specification standards do not support the addition of extra content. So we have added an additional property to insert at the beginning of your specification file: `x-topics`.
 
 ## Use `x-topics`
 

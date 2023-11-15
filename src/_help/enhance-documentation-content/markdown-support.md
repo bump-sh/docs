@@ -7,7 +7,7 @@ title: Markdown support
 
 The generation of your API documentation is based on your specification file, which must adhere to one of the standards we support (OpenAPI, AsyncAPI, and soon others like GraphQL, etc.).
 
-However, to allow you to enrich your documentation, we support common Markdown syntax, including call-outs and the addition of images, for example.
+To allow you to enrich your documentation, we support common Markdown syntax, including call-outs and the addition of images, for example.
 
 You can integrate Markdown directly into your specification file or as an [external reference](/help/enhance-documentation-content/markdown-support/#markdown-files-as-an-external-reference) pointing to Markdown files.
 
@@ -77,7 +77,7 @@ Use the following syntax to add images in your markdown:
 ![Alt text](/path/to/image.jpg "Image title")
 ```
 
-We strongly recommend to add an [alt text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) for an image, even if the parameters `Alt text` and `"Image title"` are optional.
+Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) to your images: this description helps make them accessible to all your readers.
 
 ### Image sizing
 
