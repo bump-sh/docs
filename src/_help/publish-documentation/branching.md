@@ -5,7 +5,7 @@ title: Branching
 - TOC
 {:toc}
 
-## What are branches?
+## What are branches
 
 What we refer to as "Branching" is a solution that allows you to have multiple different definitions of the same API documentation on parallel branches.
 
@@ -17,9 +17,9 @@ Switching from one API definition to another in the documentation can be done in
 
 ![](/images/help/version-selector.png)
 
-## Create a new branch
+## Create a branch
 
-From the documentation settings, the Branches section allows you to create new branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.
+From the documentation settings, the Branches section allows you to create branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.
 
 ![](/images/help/create-branch.png)
 

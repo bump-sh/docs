@@ -7,7 +7,7 @@ title: Deploy and release management
 
 ## What are deployments
 
-A Deployment is the processing of an API document - containing your API definition - uploaded to Bump.sh servers. 
+A Deployment is the processing of an API document - containing your API definition - uploaded to Bump.sh servers.
 
 Following this deployment, the new API definition is published to your API consumers. This is what we call a Release: your API documentation is updated, and if your API has changed since the last deployment, a new entry representing this API change is added to your API changelog.
 
@@ -19,7 +19,7 @@ You can also add context (title, description) to any release afterward. This opt
 
 ### Deploy from the dashboard
 
-To deploy a new API document from the dashboard, you first need to go to the settings of that documentation.
+To deploy a new API document from the dashboard, you first need to go to the settings of a documentation.
 
 From there, you will find the "Deploy new version" button, which will allow you to choose the file to upload and, if the documentation has branches, the branch to deploy it on.
 
@@ -33,13 +33,13 @@ Deploying an API Document can also be done from our CLI using the `deploy` comma
 
 ### Deploy using the GitHub Action
 
-Our [GitHub Action](/help/continuous-integration/github-actions/) allows you to easily integrate Bump.sh into your projects by simply adding a workflow file.
+Our [GitHub Action](/help/continuous-integration/github-actions/) allows you to easily integrate Bump.sh into your projects by adding a workflow file.
 
 ## Release management
 
 Releasing a new API definition typically follows a two-step process:
-- You upload a new API documentation through your dashboard, our CLI, GitHub Action or API.
-- This new API document is validated and deployed, becoming the "visible" API definition. The changelog is also updated, reflecting changes between the current and previous definitions.
+- You upload a new API document through your dashboard, our CLI, GitHub Action or API.
+- This new API document is validated and deployed, becoming the "visible" one. The changelog is also updated, reflecting changes between the current and previous definitions.
 
 By default, these two steps are automatically linked: uploading a new API document results in its release. However, it is possible to dissociate them using the Manual Release mode.
 
@@ -49,7 +49,8 @@ The Deployments section of your documentation provides access to the history of 
 
 ### Manual Release
 
-The Manual Release mode is still in beta. Please don't hesitate to contact us if you have any questions.
+>The Manual Release mode is still in beta. Please don't hesitate to [contact us](mailto: hello@bump.sh) if you have any questions.
+{: .info}
 
 The Manual Release mode is an option that allows you to separate the processing step from the releasing step of your API definition.
 
@@ -75,9 +76,6 @@ It is possible to "unrelease" any previously released deployment. By clicking on
 
 ![](/images/help/unrelease-button.png)
 
-> > Unreleasing a deployment not only rolls back your API documentation to the previously released one. It also automatically reprocesses its changelog to correctly reflect the changes.
+> Unreleasing a deployment not only rolls back your API documentation to the previously released one. It also automatically reprocesses its changelog to correctly reflect the changes.
 {: .info}
-
-> We cannot restore a deleted API document.
-{: .warning}
 
