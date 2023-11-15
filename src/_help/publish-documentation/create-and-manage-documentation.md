@@ -8,6 +8,7 @@ title: Create and manage documentation
 ## Where can I find my documentation?
 
 By default, accessing your dashboard displays your personal account, which lists all your documentation.
+
 ![](/images/help/personal-account.png)
 
 ## Create a documentation
