@@ -13,9 +13,8 @@ From the "Customize UI" tab in the documentation settings, you can add your own 
 
 ![](/images/help/logo-favicon.png)
 
-To provide the best image quality, it is recommended to adhere to the dimensions below:
-- Logo:
-- Favicon:
+To provide the best image quality, it is recommended to adhere to the following dimensions for your logo: 140px*36px.
+
 
 ## Meta images
 
@@ -31,7 +30,7 @@ It is advisable not to exceed a width of 1200px and to maintain the height betwe
 
 ### Use the automated image generation
 
-In case you wouldn't have a visual you could use, Bump will automatically generate a meta image. It displays your documentation name, its logo and its type.
+In case you don't have a visual you could use, Bump will automatically generate a meta image that will display your documentation name, logo and API type.
 
 ![](/images/help/meta-image-example.png)
 
@@ -43,6 +42,6 @@ In case you wouldn't have a visual you could use, Bump will automatically genera
 
 ## Hub customization
 
-All of these customization settings can be applied to all the documentations within a hub.
+All of these customization settings can be applied to all the documentation within a hub.
 
 These options are available directly in the "Customize UI" tab in the hub settings.
