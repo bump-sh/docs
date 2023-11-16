@@ -1,6 +1,22 @@
 table {
   border-spacing: 0;
   overflow: hidden;
+
+  > tbody:first-child {
+    tr:first-child {
+      td {
+        border-top: var(--border-default);
+
+        &:first-child {
+          border-top-left-radius: var(--border-radius-large);
+        }
+
+        &:last-child {
+          border-top-right-radius: var(--border-radius-large);
+        }
+      }
+    }
+  }
 }
 
 thead {
