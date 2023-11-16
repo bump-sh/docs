@@ -17,7 +17,7 @@ help:
   - type: category
     label: Publish Documentation
     link: /publish-documentation/
-    icon: send
+    icon: book-open-check
     items:
       - type: page
         label: Create and manage documentation
