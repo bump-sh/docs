@@ -52,33 +52,6 @@ help:
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
   - type: category
-    label: Publish Documentation
-    link: /publish-documentation/
-    icon: send
-    items:
-      - type: page
-        label: Create and manage documentation
-        link: /publish-documentation/create-and-manage-documentation/
-      - type: page
-        label: Deploy and release management
-        link: /publish-documentation/deploy-and-release-management/
-      - type: page
-        label: Branching
-        link: /publish-documentation/branching/
-      - type: page
-        label: Documentation access management
-        link: /publish-documentation/documentation-access-management/
-  - label: Customization Options
-    link: /customization-options/
-    icon: sparkles
-    items:
-      - label: Custom domains
-        link: /customization-options/custom-domains/
-      - label: Logo and Meta images
-        link: /customization-options/logo-meta-images/
-      - label: Operations & Navigation
-        link: /customization-options/operations-navigation/
-  - type: category
     label: API change management
     link: /api-change-management/
     icon: bell-dot
