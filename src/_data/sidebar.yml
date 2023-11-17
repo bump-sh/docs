@@ -68,6 +68,16 @@ help:
       - type: page
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
+  - label: Customization Options
+    link: /customization-options/
+    icon: sparkles
+    items:
+      - label: Custom domains
+        link: /customization-options/custom-domains/
+      - label: Logo and Meta images
+        link: /customization-options/logo-meta-images/
+      - label: Operations & Navigation
+        link: /customization-options/operations-navigation/
   - type: category
     label: API change management
     link: /api-change-management/
