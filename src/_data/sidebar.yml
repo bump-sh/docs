@@ -43,7 +43,7 @@ help:
     label: API change management
   - label: Customization Options
     link: /customization-options/
-    icon: image
+    icon: sparkles
     items:
       - label: Custom domains
         link: /customization-options/custom-domains/
