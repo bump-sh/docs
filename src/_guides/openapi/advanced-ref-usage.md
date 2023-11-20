@@ -1,4 +1,10 @@
-# OpenAPI & AsyncAPI $ref: Advanced Guide
+---
+title: "OpenAPI & AsyncAPI $ref: Advanced Guide"
+authors: Phil Sturgeon
+# image: images/guides/building-your-api-design-mode.png
+# canonical_url: https://bump.sh/blog/building-your-api-design-mode
+excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI and AsyncAPI documents.
+---
 
 After using OpenAPI or AsyncAPI for a while, you might notice your description documents have become a rather unwieldy mess of YAML and JSON. You end up with a whole lot of repetition, and the huge mess of YAML and JSON just loves trigger merge conflicts as multiple developers change different things but Git seems none the wiser.
 
