@@ -63,10 +63,16 @@ help:
   - type: category
     label: API change management
     link: /api-change-management/
+    label: Track changes
+    link: /track-changes/
     icon: bell-dot
     items:
-      - label: Webhooks
-        link: /api-change-management/webhooks/
+      - label: Changelog
+        link: /track-changes/changelog/
+      - label: Branches comparison
+        link: /track-changes/branches-comparison/
+      - label: Follow changes
+        link: /track-changes/follow-changes/
   - type: category
     label: Hubs
     link: /hubs/
