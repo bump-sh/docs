@@ -20,7 +20,7 @@ With our [Github Action](/help/continuous-integration/github-actions), you can r
 
 Integrating Bump.sh with Slack can be done in three steps.
 
-1. From your Slack workspace admin, create a webhook: this allows you to specify where Bump.sh should send change notifications.
+1. From your Slack workspace admin, [create a webhook](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks): this allows you to specify where Bump.sh should send change notifications.
 2. Once you have the webhook, go to the settings of your documentation, in the Integrations tab, enable the Slack option, and provide the previously obtained webhook.
 3. Mention the channels where you want to receive notifications.
 
