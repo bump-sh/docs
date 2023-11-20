@@ -227,6 +227,8 @@ All the filepaths are relative to their current location, and can traverse up an
 
 The chance of getting a Git conflict when two different developers add two different paths or expanding properties in a schema is now a fair bit smaller. If a conflict does occur, the diff will be a lot less confusing to work out.
 
+One downside of splitting up components into different documents like this is that it becomes harder to follow API changes, either directly or by looking at files in GitHub. Changing a schema in one document can effect how multiple different endpoints work, and that can caused a bit of confusion. API change management tools like [Bump.sh](https://bump.sh/api-change-management) or [Optic](https://www.useoptic.com/docs/diff-openapi) can help by spotting breaking changes and reporting them on PRs, so that you can easily see problems that could otherwise slip through.
+
 ## AsyncAPI Reusable Components
 
 AsyncAPI is thankfully the same when it comes to `$ref` and `components`, so if your event-driven API is struggling as much as your HTTP API then it's time to split things up.
@@ -264,7 +266,7 @@ Simply publish those shared components as JSON, YAML, or both, on a static site 
       content:
         application/json:
           schema:
-            $ref: https://schema.example.org/status.json
+            $ref: "https://schema.example.org/status.json"
 ```
 
 ### Benefits of URL `$ref`
@@ -285,9 +287,11 @@ Finally there's authentication. Some people have their API descriptions in a pri
 
 Others hide their OpenAPI and AsyncAPI by choice for security reasons, but that's never made much sense because Stripe, PayPal, Box, GitHub, and plenty of other massive API companies have their API descriptions out in public and nobody has hacked them. APIs should be protected with firewalls and API keys, but OpenAPI and AsyncAPI information can be plastered all over the place. Another vote for the public static site.
 
+There is an argument for making public APIs public and keeping internal API's private, and some hosted API documentation tools can help with that, or you can host internal API docs on a different static site that's only available on the company network. Either way you'll need to keep your public APIs public, and keep your shared components public, then hide the internal APIs that reference those. That gives you the best of both worlds.
+
 ## Propagating Changes
 
-Using tools like Bump you get all the benefits of a tool that understands $ref, but without any of the hassle of needing to bundle documents up. 
+Using tools like Bump.sh you get all the benefits of a tool that understands $ref, but without any of the hassle of needing to bundle documents up. 
 
 Like any tool which uses a build step, this has the pro and the con of meaning that documentation is built at a certain point in time. Changes that happen to the $ref'ed resources - whether they're in another repository, or being pulled in via URL - will take some time to appear in your API.
 
@@ -297,7 +301,7 @@ Is that a good thing or a bad thing? It can be both depending on the scenario, b
 
 ## Tools for Bundling & Splitting 
 
-Bundling has been mentioned a few times, but how does it actually work? There are various tools around but the best one currently is the general swiss-army knife Redocly CLI.
+Bundling is usually only needed if you are working with older or strange tools which do not support $ref properly (or at all). If you are working with Bump.sh CLI you won’t need to bundle, but if a tool wants you to import a single `openapi.yaml` document you might need to bundle.
 
 ```
 $ redocly bundle openapi.yaml -o openapi-bundled.yaml
@@ -307,8 +311,7 @@ bundling openapi.yaml...
 
 This will grab all of the `$ref`'s that use "external files" or URLs and move the contents into the relevant subsection of `components` in the `openapi-bundled.yaml` document.
 
-Splitting does the opposite. If you have a massive painful document (maybe generated from HTTP or converted from Postman) you can split it down into multiple documents with a sensible folder structure, ditch the original, commit all that to Git, and push it up to Bump with all the `$ref`'s intact.
-
+Splitting does the opposite. If you have a massive painful document (maybe generated from HTTP or converted from Postman) you can split it down into multiple documents with a sensible folder structure, ditch the original, commit all that to Git, and push it up to Bump.sh with all the `$ref`'s intact.
 ```
 redocly split generated-openapi.json --outDir api/
 
