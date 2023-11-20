@@ -247,7 +247,7 @@ AsyncAPI is thankfully the same when it comes to `$ref` and `components`, so if 
         "$ref": "./components/messages/ServerPlayerBanned.json"
 ```
 
-This example is taken from the [Gaming API](https://github.com/GamingAPI/definitions/) example projects, and highlights a slightly different approach of using a single `parameters.json` and referencing a parameter within that file, instead of using a `parameters/` subdirectory with a file for each parameter. You could do either with either OpenAPI or AsyncAPI, it's a matter of personal preference. 
+This example is taken from the [Gaming API](https://github.com/GamingAPI/definitions/) example projects, and highlights a slightly different approach of using a single `parameters.json` document and referencing a parameter within that file, instead of using a `parameters/` subdirectory with a file for each parameter. You could do either with either OpenAPI or AsyncAPI, it's a matter of personal preference. 
 
 To learn more about the `components` keyword in AsyncAPI, head on over to [their documentation](https://www.asyncapi.com/docs/reference/specification/v2.6.0#componentsObject).
 
