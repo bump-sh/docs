@@ -5,7 +5,7 @@ title: Topics
 - TOC
 {:toc}
 
-`x-topics` is a vendor-specific that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
+`x-topics` is a vendor-specific property that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
 
 ## Use `x-topics`
 

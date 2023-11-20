@@ -31,7 +31,7 @@ help:
       - type: page
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
-    - label: Enhance your documentation content
+  - label: Enhance your documentation content
     link: /enhance-documentation-content/
     icon: pencil-line
     items:
