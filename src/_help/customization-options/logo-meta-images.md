@@ -22,7 +22,7 @@ A "meta image" typically refers to an image that is used as a preview image when
 
 ### Add your own image
 
-From the "Customize UI" tab in the settings of a documentation, you can add your own meta image.
+From the "Customize UI" tab in the documentation settings, you can add your own meta image.
 
 It is advisable not to exceed a width of 1200px and to maintain the height between 600px and 700px for better integration on most platforms.
 

@@ -9,7 +9,7 @@ Your API documentation is hosted on Bump.sh under our domain name. By default, a
 
 To extend your brand experience to your visitors and API consumers, you can use a custom domain that replaces our URL. This change is based on a CNAME record.
 
-A CNAME, or Canonical Name, is a Domain Name System (DNS) entry. It serves as an alias, and maps a domain name to another. In our use case, it lets you set a domain name for your users to access your API docs, that they will use and see instead of the Bump.sh domain name.
+A CNAME, or Canonical Name, is a Domain Name System (DNS) entry. It serves as an alias, and maps a domain name to another. In our use case, it lets you set a domain name for your users to access your API documentation, that they will use and see instead of the Bump.sh domain name.
 
 ## Setting a CNAME record
 
