@@ -5,9 +5,7 @@ title: Topics
 - TOC
 {:toc}
 
-Topics are an exclusive custom property that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
-
-By default, most specification standards do not support the addition of extra content. So we have added an additional property to insert at the beginning of your specification file: `x-topics`.
+`x-topics` is a vendor-specific that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
 
 ## Use `x-topics`
 
@@ -38,4 +36,4 @@ x-topics:
 Here are some examples of public documentation made by teams using `x-topics`:
 
 - [Memo Bank API Documentation](https://docs.api.memo.bank/)
-- [Pexip Engage API Documentation](https://docs.api.memo.bank/)
+- [Pexip Engage API Documentation](https://developer.pexipengage.com/)

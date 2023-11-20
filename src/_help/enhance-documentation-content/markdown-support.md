@@ -5,11 +5,11 @@ title: Markdown support
 - TOC
 {:toc}
 
-The generation of your API documentation is based on your specification file, which must adhere to one of the standards we support (OpenAPI, AsyncAPI, and soon others like GraphQL, etc.).
+The generation of your API documentation is based on your API document, which must adhere to one of the standards we support (OpenAPI/Swagger and AsyncAPI.).
 
 To allow you to enrich your documentation, we support common Markdown syntax, including call-outs and the addition of images, for example.
 
-You can integrate Markdown directly into your specification file or as an [external reference](/help/enhance-documentation-content/markdown-support/#markdown-files-as-an-external-reference) pointing to Markdown files.
+You can integrate Markdown directly into your API document or as an [external reference](/help/enhance-documentation-content/markdown-support/#markdown-files-as-an-external-reference) pointing to Markdown files.
 
 ## Common Markdown syntax support
 
@@ -137,11 +137,11 @@ You can use any of the following CSS length units as `unit`:
 
 ## Markdown files as an external reference
 
-Markdown files can be included as an [external reference](/help/specification-support/references) within your specification file with the $ref syntax `$ref: "./path/to/local-markdown.md"`.
+Markdown files can be included as an [external reference](/help/specification-support/references) within your API document with the $ref syntax `$ref: "./path/to/local-markdown.md"`.
 
-In the same way you can extract part of your specification file (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
+In the same way you can extract part of your API definition (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
 
-**E.g.** Your OpenAPI spec file `api-contract.yml` can thus looks like:
+**E.g.** Your OpenAPI file `api-contract.yml` can thus looks like:
 
 ```yaml
 openapi: 3.1.0
@@ -150,23 +150,10 @@ info:
   version: 1.0.0
   description:
     $ref: "./docs/introduction.md"
-x-topics:
-  - title: Getting started
-    content:
-      $ref: "./docs/getting-started.md"
-  - title: Use cases
-    content:
-      $ref: "./docs/use-cases.md"
-    example:
-      $ref: "./docs/use-cases-examples.md"
 servers:
   ...
 paths:
   ...
 ```
 
-The rendering will display these files as accessible pages within your documentation, making it easier to use and navigate through it and allowing for a greater variety of resources.
-
-External references also integrate well with topics, which are manually written text sections that allow you to add context and other elements to the beginning of your endpoints, webhooks, or channels.
-
-To learn more about topics, a property unique to Bump.sh, please refer to the [dedicated page](/help/enhance-documentation-content/topics/).
+These files will be rendered within your documentation as if they were part of your API document.
