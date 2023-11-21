@@ -31,7 +31,8 @@ help:
       - type: page
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
-  - label: Enhance your documentation content
+  - type: category
+    label: Enhance your documentation content
     link: /enhance-documentation-content/
     icon: pencil-line
     items:
@@ -40,15 +41,14 @@ help:
       - label: Topics
         link: /enhance-documentation-content/topics/
   - type: category
-    label: API change management
-  - label: Customization Options
+    label: Customization Options
     link: /customization-options/
     icon: sparkles
     items:
       - label: Custom domains
         link: /customization-options/custom-domains/
-      - label: Logo and Meta images
-        link: /customization-options/logo-meta-images/
+      - label: Color, logo and meta images
+        link: /customization-options/color-logo-meta-images/
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
   - type: category
@@ -76,15 +76,6 @@ help:
         link: /organizations/create-and-manage-organizations/
       - label: Organization Access Management
         link: /organizations/organization-access-management/
-  - label: Documentation customization
-    icon: sparkles
-    items:
-      - label: Custom domains
-        link: /custom-domains/
-      - label: Meta images
-        link: /meta-images/
-      - label: Custom code samples
-        link: /doc-code-samples/
   - label: Account
     icon: user
     items:
