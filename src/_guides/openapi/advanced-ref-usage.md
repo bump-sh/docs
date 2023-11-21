@@ -8,7 +8,7 @@ excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI 
 
 After using OpenAPI or AsyncAPI for a while, you might notice your description documents have become a rather unwieldy mess of YAML and JSON. You end up with a whole lot of repetition, and this huge mess just loves to trigger merge conflicts as multiple developers change different things but Git seems none the wiser.
 
-You can avoid this pain by splitting description documents up with `$ref`, putting various reusable components, but how exactly you go about doing that can be a tricky one to work out.
+You can avoid this pain by splitting description documents up with `$ref`, using various reusable components, but how exactly you go about doing that can be a tricky one to work out.
 
 ## OpenAPI Reusable Components
 
@@ -17,16 +17,6 @@ The [OpenAPI Documentation](https://learn.openapis.org/) includes a brilliant ex
 This has several parts that are used several times, so instead of copy-pasting everything they've defined reusable `components` for both `schemas` and `parameters`. 
 
 ```yaml
-openapi: 3.1.0
-info:
-  title: Tic Tac Toe
-  description: |
-    This API allows writing down marks on a Tic Tac Toe board
-    and requesting the state of the board or of individual squares.
-  version: 1.0.0
-tags:
-  - name: Gameplay
-paths:
   # Whole board operations
   /board:
     get:
@@ -42,64 +32,15 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/status"
-
   # Single square operations
   /board/{row}/{column}:
     parameters:
       - $ref: "#/components/parameters/rowParam"
       - $ref: "#/components/parameters/columnParam"
     get:
-      summary: Get a single board square
-      description: Retrieves the requested square.
-      tags:
-        - Gameplay
-      operationId: get-square
-      responses:
-        "200":
-          description: "OK"
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/mark"
-        "400":
-          description: The provided parameters are incorrect
-          content:
-            text/html:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-              example: "Illegal coordinates"
+      # ... Hidden for readability...
     put:
-      summary: Set a single board square
-      description: Places a mark on the board and retrieves the whole board and the winner (if any).
-      tags:
-        - Gameplay
-      operationId: put-square
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/mark"
-      responses:
-        "200":
-          description: "OK"
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/status"
-        "400":
-          description: The provided parameters are incorrect
-          content:
-            text/html:
-              schema:
-                $ref: "#/components/schemas/errorMessage"
-              examples:
-                illegalCoordinates:
-                  value: "Illegal coordinates."
-                notEmpty:
-                  value: "Square is not empty."
-                invalidMark:
-                  value: "Invalid Mark (X or O)."
+      # ... Hidden for readability...
 
 components:
   parameters:
