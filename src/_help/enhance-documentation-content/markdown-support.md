@@ -5,7 +5,7 @@ title: Markdown support
 - TOC
 {:toc}
 
-The generation of your API documentation is based on your API document, which must adhere to one of the standards we support (OpenAPI/Swagger and AsyncAPI.).
+The generation of your API documentation is based on your API definition, which must adhere to one of the standards we support (OpenAPI/Swagger and AsyncAPI.).
 
 To allow you to enrich your documentation, we support common Markdown syntax, including call-outs and the addition of images, for example.
 
@@ -54,7 +54,7 @@ will render:
 }
 ```
 
-## Information call-outs
+### Information call-outs
 
 Bump.sh supports information call-outs (of type `info`, `warn`, `success` or `error`) with the quote markdown syntax (lines starting with `> ` ) if the first line contains one of the call-out types.
 
@@ -70,7 +70,7 @@ will render:
 > this is an important information to **standout**.
 {: .info}
 
-## Images
+### Images
 
 Use the following syntax to add images in your markdown:
 ```
@@ -79,7 +79,7 @@ Use the following syntax to add images in your markdown:
 
 Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) to your images: this description helps make them accessible to all your readers.
 
-### Image sizing
+#### Image sizing
 
 If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
 ```
@@ -137,7 +137,7 @@ You can use any of the following CSS length units as `unit`:
 
 ## Markdown files as an external reference
 
-Markdown files can be included as an [external reference](/help/specification-support/references) within your API document with the $ref syntax `$ref: "./path/to/local-markdown.md"`.
+Markdown files can be included as an [external reference](/help/specification-support/references) within your API definition with the $ref syntax `$ref: "./path/to/local-markdown.md"`.
 
 In the same way you can extract part of your API definition (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
 
@@ -156,4 +156,4 @@ paths:
   ...
 ```
 
-These files will be rendered within your documentation as if they were part of your API document.
+These files will be rendered within your documentation as if they were part of your API definition.
