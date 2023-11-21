@@ -31,6 +31,14 @@ help:
       - type: page
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
+  - label: Enhance your documentation content
+    link: /enhance-documentation-content/
+    icon: pencil-line
+    items:
+      - label: Markdown support
+        link: /enhance-documentation-content/markdown-support/
+      - label: Topics
+        link: /enhance-documentation-content/topics/
   - type: category
     label: API change management
     link: /api-change-management/
@@ -59,8 +67,6 @@ help:
   - label: Documentation customization
     icon: sparkles
     items:
-      - label: Topics
-        link: /doc-topics/
       - label: Custom domains
         link: /custom-domains/
       - label: Meta images
@@ -89,8 +95,6 @@ help:
             link: /specification-support/openapi-support/webhooks/
       - label: AsyncAPI support
         link: /specification-support/asyncapi-support/
-      - label: Markdown support
-        link: /specification-support/markdown-support/
       - label: JSON Schema
         link: /specification-support/json-schema/
       - label: Polymorphism

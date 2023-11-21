@@ -5,7 +5,11 @@ title: Markdown support
 - TOC
 {:toc}
 
-Bump supports common Markdown syntax, language color syntax highlighting, and information call-outs. Markdown can be included inside your contract file or as an external reference using dedicated Markdown files. Here's several options that may help.
+The generation of your API documentation is based on your API definition, which must adhere to one of the standards we support (OpenAPI/Swagger and AsyncAPI.).
+
+To allow you to enrich your documentation, we support common Markdown syntax, including call-outs and the addition of images, for example.
+
+You can integrate Markdown directly into your API document or as an [external reference](/help/enhance-documentation-content/markdown-support/#markdown-files-as-an-external-reference) pointing to Markdown files.
 
 ## Common Markdown syntax support
 
@@ -20,7 +24,7 @@ Bump supports common Markdown syntax, language color syntax highlighting, and in
 |footnote|`Footnote[^1]`|Footnote[^1]|
 |quotes|`> quotes`| > quotes |
 
-## Titles & headings
+### Titles & headings
 
 - Heading 1: `# A first-level title`
 - Heading 2: `## A second-level title`
@@ -50,34 +54,34 @@ will render:
 }
 ```
 
-## Information call-outs
+### Information call-outs
 
-Bump support information call-outs (of type `info`, `warn`, `success` or `error`) with the quote markdown syntax (lines starting with `> ` ) if the first line contains one of the call-out types.
+Bump.sh supports information call-outs (of type `info`, `warn`, `success` or `error`) with the quote markdown syntax (lines starting with `> ` ) if the first line contains one of the call-out types.
 
 E.g.
 
 ```undefined
 > info
-> this is an important information to **standout**
+> this is an important information to **standout**.
 ```
 
 will render:
 
-> this is an important information to **standout**
+> this is an important information to **standout**.
 {: .info}
 
-## Images
+### Images
 
-Use the following syntax to add images in your markdown
+Use the following syntax to add images in your markdown:
 ```
 ![Alt text](/path/to/image.jpg "Image title")
 ```
 
-Note that even if it's a best practice to always add an [alt text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) for an image, the parameters `Alt text` and `"Image title"` are optional.
+Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) to your images: this description helps make them accessible to all your readers.
 
-### Image sizing
+#### Image sizing
 
-If you want to manually set the size of your image you can use Bump.sh `=dimension` parameter just before the closing parenthesis as:
+If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
 ```
 ![Alt text](/path/to/image.jpg "Image title" =dimension)
 ```
@@ -106,8 +110,8 @@ At least one `height` *or* `width` parameter is mandatory, everything else being
 =x50px        # without width
 ```
 
->- If you don't specify a `unit` it will default to pixel
-- If you don't specify `width` *or* `height`, the other value will be a ratio calculated from the original size of the image so it doesn't shrink
+>- If you don't specify a `unit` it will default to pixel.
+- If you don't specify `width` *or* `height`, the other value will be a ratio calculated from the original size of the image so it doesn't shrink.
 {: .info}
 
 You can use any of the following CSS length units as `unit`:
@@ -133,9 +137,11 @@ You can use any of the following CSS length units as `unit`:
 
 ## Markdown files as an external reference
 
-Markdown files can be included as an [external reference](/help/specification-support/references) within your contract document with the $ref syntax `$ref: "./path/to/local-markdown.md"`. In the same way you can extract part of your contract (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
+Markdown files can be included as an [external reference](/help/specification-support/references) within your API definition with the $ref syntax `$ref: "./path/to/local-markdown.md"`.
 
-**E.g.** Your OpenAPI contract `api-contract.yml` can thus looks like:
+In the same way you can extract part of your API definition (usually JSON schema of your models into dedicated `*.yaml` or `*.json` files), you can extract your markdown content into dedicated files too.
+
+**E.g.** Your OpenAPI file `api-contract.yml` can thus looks like:
 
 ```yaml
 openapi: 3.1.0
@@ -144,21 +150,10 @@ info:
   version: 1.0.0
   description:
     $ref: "./docs/introduction.md"
-x-topics:
-  - title: Getting started
-    content:
-      $ref: "./docs/getting-started.md"
-  - title: Use cases
-    content:
-      $ref: "./docs/use-cases.md"
-    example:
-      $ref: "./docs/use-cases-examples.md"
 servers:
   ...
 paths:
   ...
 ```
 
-With files `docs/introduction.md`, `docs/getting-started.md`, `docs/use-cases.md` and `docs/use-cases-examples.md` right next to your contract document, you will be able to generate a comprehensive API documentation with nicely formatted content for your users.
-
-It's a great way to include “Topic” sections with handwritten content before the documentation of endpoints/webhooks (or channels in case of an [AsyncAPI](https://www.asyncapi.com/) contract) in dedicated Markdown files. Thanks to the `x-topics` top-level property in your contract as [explained in the dedicated help page](/help/doc-topics).
+These files will be rendered within your documentation as if they were part of your API definition.

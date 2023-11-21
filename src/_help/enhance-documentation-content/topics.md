@@ -5,7 +5,9 @@ title: Topics
 - TOC
 {:toc}
 
-Creating good API documentation requires giving users context and guides. As most of the specifications don't permit to add generic content, we have created a custom property. Setting the `x-topics` property at the root of your documentation specification will let you add some content sections at the beginning of your documentation.
+`x-topics` is a vendor-specific property that we've created to allow you to add extended content to your API documentation. They enable you to add context, additional information, or even tutorial elements to guide your readers in using your API.
+
+## Use `x-topics`
 
 |Property|Description|
 |---|---|
@@ -28,3 +30,10 @@ x-topics:
         -H "X-API-KEY: XXXXXX" \
       ```
 ```
+
+## Public documentation examples
+
+Here are some examples of public documentation made by teams using `x-topics`:
+
+- [Memo Bank API Documentation](https://docs.api.memo.bank/)
+- [Pexip Engage API Documentation](https://developer.pexipengage.com/)
