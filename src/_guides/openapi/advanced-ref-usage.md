@@ -14,7 +14,7 @@ You can avoid this pain by splitting description documents up with `$ref`, putti
 
 The [OpenAPI Documentation](https://learn.openapis.org/) includes a brilliant example of an API for playing the classic board game Tic Tac Toe. 
 
-This has several parts that are used several times, so instead of copy-pasting everything they've defined reusable `components` for `schemas` and `parameters`. 
+This has several parts that are used several times, so instead of copy-pasting everything they've defined reusable `components` for both `schemas` and `parameters`. 
 
 ```yaml
 openapi: 3.1.0
