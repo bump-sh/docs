@@ -321,7 +321,7 @@ Splitting does the opposite. If you have a massive painful document (maybe gener
 ```
 redocly split generated-openapi.json --outDir api/
 
-bump deploy api/
+bump deploy api/openapi.json
 ```
 
 To give Redocly CLI a try, in combination with the Bump CLI, install them both:
