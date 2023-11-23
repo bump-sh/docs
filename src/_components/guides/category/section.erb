@@ -6,5 +6,5 @@
     <% end %>
   </div>
 
-  <%= render Guides::List.new(resources: @resources, category_name: @category_name, show_browse_button: true) %>
+  <%= render Guides::List.new(resources: @resources.first(3), category_name: @category_name, remaining_count: @remaining_count) %>
 </guide-category>
