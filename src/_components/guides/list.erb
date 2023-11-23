@@ -7,5 +7,11 @@
         <%= render Shared::Taglist.new(tags: resource.data.tags) %>
       </a>
     <% end %>
+    <% if @show_browse_button %>
+      <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>" class="card browse-all">
+        <span>Browse more <strong><%= @category_name %></strong> guides</span>
+        <%= svg "images/icons/arrow-right-circle.svg" %>
+      </a>
+    <% end %>
   </div>
 </guide-list>

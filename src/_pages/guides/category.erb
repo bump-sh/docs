@@ -25,6 +25,6 @@ prototype:
       <% end %>
     </ul>
   </aside>
-  <%= render Guides::List.new(resources: paginator.resources) %>
+  <%= render Guides::List.new(resources: paginator.resources, category_name: @category.name) %>
 </div>
 <%= render Shared::Pagination.new(paginator: paginator) %>

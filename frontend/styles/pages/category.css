@@ -28,7 +28,6 @@
   }
 
   guide-list .list-container {
-    grid-template-columns: repeat(2, 1fr);
     padding-block: var(--spacing-20);
   }
 
