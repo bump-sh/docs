@@ -1,8 +1,8 @@
 class Guides::List < Bridgetown::Component
-  def initialize(resources:, category_name:, css_classes: "", show_browse_button: false)
+  def initialize(resources:, category_name:, css_classes: "", remaining_count: 0)
     @resources = resources
     @category_name = category_name
     @css_classes = css_classes
-    @show_browse_button = show_browse_button
+    @remaining_count = remaining_count
   end
 end
