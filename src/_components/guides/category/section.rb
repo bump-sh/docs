@@ -9,7 +9,7 @@ class Guides::Category::Section < Bridgetown::Component
     @resources = if @category_name == "Latest"
       @site.collections.guides.resources.first(4)
     else
-      @site.collections.guides.resources.select { |guide| guide.data.categories.find { |category| Bridgetown::Utils.slugify(category) == Bridgetown::Utils.slugify(@category_name)} }.first(4)
+      @site.collections.guides.resources.select { |guide| guide.data.categories.find { |category| Bridgetown::Utils.slugify(category) == Bridgetown::Utils.slugify(@category_name)} }.first(3)
     end
   end
 end
