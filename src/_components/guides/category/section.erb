@@ -4,13 +4,7 @@
     <% if @description.present? %>
       <p><%= @description %></p>
     <% end %>
-    <% if @category_name != "All" %>
-      <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>">
-        Browse all <%= @category_name %> Guides
-        <%= svg "images/icons/arrow-right.svg" %>
-      </a>
-    <% end %>
   </div>
 
-  <%= render Guides::List.new(resources: @resources) %>
+  <%= render Guides::List.new(resources: @resources, category_name: @category_name, show_browse_button: true) %>
 </guide-category>

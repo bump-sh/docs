@@ -4,7 +4,7 @@ guide-list {
 
   .list-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-medium);
     list-style-type: none;
     padding: 0;
@@ -14,16 +14,7 @@ guide-list {
     .card {
       background-color: var(--bg-color);
       box-sizing: border-box;
-      min-height: 290px;
-    }
-
-    @container guide-category (width < 800px) {
-      flex-direction: column;
-
-      .card {
-        min-height: 100px;
-        width: 100%;
-      }
+      min-height: 270px;
     }
   }
 

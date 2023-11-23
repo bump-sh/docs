@@ -6,6 +6,36 @@
     gap: var(--gap-xlarge);
     margin-block: var(--spacing-16);
   }
+
+  guide-list .list-container {
+    display: flex;
+
+    .card:not(.browse-all) {
+      width: 28%;
+    }
+
+    .browse-all {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 10%;
+
+      em {
+        color: var(--base-color);
+        font-style: normal;
+      }
+    }
+
+    @container guides (width < 800px) {
+      flex-direction: column;
+
+      .card:not(.browse-all),
+      .browse-all {
+        min-height: 100px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .guide {
