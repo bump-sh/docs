@@ -12,4 +12,5 @@ layout: default
     <h1><%= data.title %></h1>
     <%= yield %>
   </div>
+  <%= render Shared::EditOnGithub.new(relative_path: resource.relative_path) %>
 </main>

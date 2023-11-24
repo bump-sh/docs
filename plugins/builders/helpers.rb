@@ -6,6 +6,10 @@ class Builders::Helpers < SiteBuilder
     helper :guide_category_url do |category|
       "/guides/#{Bridgetown::Utils.slugify(category)}"
     end
+
+    helper :github_edit_url do |permalink|
+      "#{site.metadata.github_edit_url}#{permalink}"
+    end
   end
 
   def toc_template(*)

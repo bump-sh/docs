@@ -1,9 +1,10 @@
 class Guides::Sidebar < Bridgetown::Component
-  def initialize(data:)
+  def initialize(data:, relative_path:)
     @data = data
     @authors = @data.authors
     @category = @data.categories.first
     @tags = @data.tags
-    @update = data.date.strftime("%B %d, %Y")
+    @update = @data.date.strftime("%B %d, %Y")
+    @relative_path = relative_path
   end
 end

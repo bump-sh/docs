@@ -5,7 +5,7 @@ side-bar {
   z-index: 90;
 
   aside {
-    padding: var(--spacing-10) var(--spacing-4);
+    padding: var(--spacing-14) var(--spacing-4);
   
     > button {
       display: none;

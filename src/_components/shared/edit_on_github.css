@@ -1,0 +1,10 @@
+.edit-on-github {
+  height: auto;
+  text-decoration: none;
+  width: fit-content;
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}

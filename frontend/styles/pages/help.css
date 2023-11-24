@@ -3,6 +3,8 @@
   overflow: hidden;
 
   main {
+    align-content: start;
+    align-items: start;
     box-sizing: border-box;
     display: grid;
     gap: var(--gap-medium);
