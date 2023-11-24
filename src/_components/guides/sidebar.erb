@@ -4,7 +4,7 @@
     <hr>
     <dl>
       <dt>Posted in</dt>
-      <dd><a class="label" href="<%= relative_url "/guides/#{@category.downcase.split(" ").join("-")}" %>"><%= @category %></a></dd>
+      <dd><a class="label" href="<%= relative_url guide_category_url(@category) %>"><%= @category %></a></dd>
       <% if @tags.present? %>
         <dt>Tags</dt>
         <dd><%= render Shared::Taglist.new(tags: @tags) %></dd>
