@@ -4,7 +4,7 @@ class Builders::Helpers < SiteBuilder
     helper "toc", :toc_template
 
     helper :guide_category_url do |category|
-      "/guides/#{category.downcase.split(" ").join("-")}"
+      "/guides/#{Bridgetown::Utils.slugify(category)}"
     end
   end
 

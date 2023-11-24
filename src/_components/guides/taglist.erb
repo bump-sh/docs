@@ -1,0 +1,5 @@
+<tag-list>
+  <% @tags.each do |tag| %>
+    <a href="<%= guide_category_url(tag) %>" class="label" data-label-status="info"><%= tag %></a>
+  <% end %>
+</tag-list>

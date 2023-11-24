@@ -1,5 +1,5 @@
 <li>
-  <a href="<%= relative_url "/guides/#{slugified_name}" %>" <% if is_current? %>aria-current="true"<% end %>>
+  <a href="<%= relative_url guide_category_url(@category.name) %>" <% if is_current? %>aria-current="true"<% end %>>
     <%= @category.name %>
   </a>
 </li>

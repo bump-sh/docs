@@ -14,4 +14,8 @@ page-hero {
   p {
     font-size: 1.25rem;
   }
+
+  tag-list {
+    margin-top: var(--gap-small);
+  }
 }
