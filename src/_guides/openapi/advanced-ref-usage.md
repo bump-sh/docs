@@ -1,6 +1,6 @@
 ---
 title: "OpenAPI & AsyncAPI $ref: Advanced Guide"
-authors: Phil Sturgeon
+authors: phil
 # image: images/guides/building-your-api-design-mode.png
 # canonical_url: https://bump.sh/blog/building-your-api-design-mode
 excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI and AsyncAPI documents.
