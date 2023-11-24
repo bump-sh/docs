@@ -3,7 +3,7 @@ title: API Contracts - an Extended Introduction
 authors: Sooter Saalu
 image: images/guides/api-contracts-extended-introduction.png
 canonical_url: https://bump.sh/blog/api-contracts-extended-introduction
-excerpt: This guide exaplains how API contracts can help your business, the best practices to follow, and gives some practical examples.
+excerpt: This guide explains how API contracts can help your business, the best practices to follow, and gives some practical examples.
 ---
 
 An API contract is a document that showcases how an API behaves and how it should be used.
