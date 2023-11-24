@@ -4,7 +4,7 @@ layout: default
 
 <main class="wrapper">
   <div class="double-pane">
-    <%= render Guides::Sidebar.new(data: data) %>
+    <%= render Guides::Sidebar.new(data: data, relative_path: resource.relative_path) %>
     <div class="guide-content wrapper" data-wrapper-size="small">
       <h1><%= data.title %></h1>
       <%= yield %>

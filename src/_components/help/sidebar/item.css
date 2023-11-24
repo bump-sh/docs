@@ -30,6 +30,7 @@ side-item {
     }
 
     > svg {
+      flex-shrink: 0;
       width: 1em;
     }
   

@@ -12,5 +12,6 @@
       <dt>Last update</dt>
       <dd><%= @update %></dd>
     </dl>
+  <%= render Shared::EditOnGithub.new(relative_path: @relative_path) %>
   </aside>
 </guide-sidebar>
