@@ -26,7 +26,8 @@ To provide the best image quality, it is recommended to adhere to the following 
 
 ## Social media image
 
-A social media image, also known as "meta image", typically refers to an image that is used as a preview image when a web page is shared on social media platforms and can be displayed in search engine results. Social media images help make the links posted on social media platforms more attractive, especially when shared or displayed in posts.
+A social media image, also known as "meta image", typically refers to an image that is used as a preview image when a web page is shared on social media platforms and can be displayed in search engine results.<br>
+Social media images help make the links posted on social media platforms more attractive, especially when shared or displayed in posts.
 
 By default, Bump.sh will automatically generate a social media image that can be changed to your own later on.
 
