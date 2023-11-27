@@ -1,8 +1,8 @@
 ---
 title: "OpenAPI & AsyncAPI $ref: Advanced Guide"
 authors: phil
-# image: images/guides/ref_advanced_usages.png
-# canonical_url: https://bump.sh/blog/openapi-asyncapi-ref-usage-guide
+image: images/guides/ref_advanced_usages.png
+canonical_url: https://bump.sh/blog/openapi-asyncapi-ref-usage-guide
 excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI and AsyncAPI documents.
 ---
 
