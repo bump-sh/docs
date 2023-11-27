@@ -8,6 +8,7 @@
   border-radius: var(--code-border-radius);
   font-size: 1em;
   padding: var(--spacing-px) var(--spacing-1);
+  word-break: break-word;
 }
 
 pre :where(code) {
