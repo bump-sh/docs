@@ -17,6 +17,7 @@ The [OpenAPI Documentation](https://learn.openapis.org/) includes a brilliant ex
 This has several parts that are used several times, so instead of copy-pasting everything they've defined reusable `components` for both `schemas` and `parameters`. 
 
 ```yaml
+paths:
   # Whole board operations
   /board:
     get:
