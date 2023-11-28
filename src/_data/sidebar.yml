@@ -2,8 +2,17 @@ help:
   - label: Home
     link: /
     icon: home
-  - label: Quick Start
-    link: /quick-start/
+  - label: Getting started
+    link: /getting-started/
+    items:
+      - label: Important concepts
+        link: /getting-started/concepts/
+      - label: API definition
+        link: /getting-started/api-definition/
+      - label: Upload your first API definition
+        link: /getting-started/upload-your-first-definition/
+      - label: Going further
+        link: /getting-started/going-further/
     icon: zap
   - type: category
     label: Integrate Bump.sh with your workflow
