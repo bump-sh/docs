@@ -115,6 +115,8 @@ help:
             link: /specification-support/references/
           - label: Specification extensions
             link: /specification-support/extensions/
+          - label: Beta
+            link: /specification-support/doc-beta/
       - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
