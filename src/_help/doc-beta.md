@@ -5,15 +5,15 @@ title: Beta
 - TOC
 {:toc}
 
-Use the `x-beta` property inside an Operation, a schema or a parameter object to identify it as beta.
+Use the `x-beta` property inside an operation, a schema or a parameter object to identify it as beta.
 The `x-beta` property is a boolean.
 
-Adding or removing this property is a strucutal change.
+Adding or removing this property is a structural change.
 A change on a beta component, can't be breaking.
 
 ## Example usage
 
-Here under is an example of a beta Operation, a beta request body and a beta Schema attribute.
+Here under is an example of a beta operation, a beta request body and a beta schema attribute.
 
 ```yaml
   "paths": {
@@ -46,6 +46,6 @@ Here under is an example of a beta Operation, a beta request body and a beta Sch
   }
 ```
 
-The documentation displays a "Beta" flag on the components:
+The documentation displays a “Beta” flag on the components:
 
 ![doc-beta.png](/images/help/doc-beta.png)
