@@ -15,7 +15,7 @@ A change on a beta component, can't be breaking.
 
 The following screen capture shows the rendering of adding two code samples `cURL` and `Ruby` to your Operation.
 
-Hereunder is an example of a beta Operation, Schema and Parameter.
+Here under is an example of a beta Operation, a beta request body and a beta Schema attribute.
 
 ```yaml
   "paths": {
@@ -24,11 +24,11 @@ Hereunder is an example of a beta Operation, Schema and Parameter.
         "x-beta": true,
         "description": "Create a diff between any two given API definitions",
         "requestBody": {
-          "x-beta": true,
           "description": "The diff creation request object",
           "content": {
             "application/json": {
               "schema": {
+                "x-beta": true,
                 "type": "object",
                 "properties": {
                   "url": {
