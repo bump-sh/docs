@@ -39,4 +39,4 @@ You can use the `webhooks` field (introduced in OpenAPI 3.1) to define the API w
 
 ### Expose your beta features (`x-beta`)
 
-This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/doc-beta).
+This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/specification-support/doc-beta).
