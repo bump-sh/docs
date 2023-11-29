@@ -33,7 +33,7 @@ By default, Bump.sh will automatically generate a social media image that can be
 
 ### Use the automated image generation
 
-In case you don't have a visual you could use, Bump will automatically generate a meta image that will display your documentation name, logo and API type.
+In case you don't have a visual you could use, Bump.sh will automatically generate a meta image that will display your documentation name, logo and API type.
 First generation of this new social media image may take a bit, but any modification or change will start the generation process.
 
 ![](/images/help/meta-image-example.png)
@@ -51,6 +51,6 @@ It is advisable not to exceed a width of 1200px and to maintain the height betwe
 
 ## Hub customization
 
-All of these customization settings can be applied to all the documentation within a hub.
+All of these customization settings can be applied to all the documentation within a [hub](/help/hubs/).
 
 These options are available directly in the "Customize UI" tab in the hub settings.
