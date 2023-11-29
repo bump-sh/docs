@@ -58,6 +58,10 @@ To describe these authentication types, please use our [custom `x-topics` proper
 
 JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](/help/specification-support/json-schema#readonly-and-writeonly-properties).
 
+You can add extra information to your documentation by using Bump.sh custom `x-topics`.
+
+Read more in the [Topics section of this documentation](/help/doc-topics).
+
 ### Expose your beta features (`x-beta`)
 
-This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/doc-beta).
+This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/specification-support/doc-beta).
