@@ -48,7 +48,7 @@ Thanks to the [Branches endpoints](https://developers.bump.sh/group/endpoint-bra
 
 Thanks to the [Hubs endpoints](https://developers.bump.sh/group/endpoint-hubs) you can:
 
-- [Fetch information of an existing Hub](https://developers.bump.sh/operation/operation-get-hubs-parameter) including the list of APIs it contains
+- [Fetch information of an existing Hub](https://developers.bump.sh/operation/operation-get-hubs-parameter) including the list of APIs it contains.
 
 ## Documentation Change Webhook
 

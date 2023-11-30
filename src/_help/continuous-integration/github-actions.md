@@ -25,7 +25,7 @@ Then you can pick from one of the three following API workflow files.
 
 ### Deploy Documentation & Diff on Pull Requests
 
-This is the most common worklow that we [recommend using](https://help.bump.sh/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
+This is the [recommend workflow](https://help.bump.sh/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
 
 `.github/workflows/bump.yml`
 
@@ -113,9 +113,9 @@ jobs:
 > make sure to change your destination branch name (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
-### Diff on Pull Requests only
+### Diff on pull requests only
 
-If you only want to have API diff posted on pull requests use this workflow:
+If you only want to have API diff posted on pull requests, use this workflow:
 
 `.github/workflows/api-diff.yml`
 
@@ -189,4 +189,4 @@ The scripts and documentation in this project are released under the [MIT Licens
 
 ## Code of Conduct
 
-Everyone interacting in the Bump `github-action` project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/bump-sh/github-action/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Bump.sh `github-action` project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/bump-sh/github-action/blob/master/CODE_OF_CONDUCT.md).

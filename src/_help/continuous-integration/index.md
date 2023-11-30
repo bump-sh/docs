@@ -17,7 +17,7 @@ There are multiple ways to integrate with Bump.sh:
 
 ## Steps to integrate in your CI
 
-Here, we are presenting the process recommended to our customers, but feel free to adapt it to your own workflow/requirements.
+Here, we are presenting the process recommended to our users, but feel free to adapt it to your own workflow/requirements.
 
 We recommend two steps in your automation flow:
 - a [**validation** and **diff** step](#api-diff--validation-of-the-documentation-file) during development
