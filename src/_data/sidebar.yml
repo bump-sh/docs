@@ -5,15 +5,15 @@ help:
   - label: Quick Start
     link: /quick-start/
     icon: zap
-  - label: Bump CLI
-    link: /bump-cli/
-    icon: terminal
-  - label: Continuous Integration
+  - type: category
+    label: Integrate Bump.sh with your workflow
     link: /continuous-integration/
-    icon: iteration
+    icon: terminal
     items:
       - label: Github Action
         link: /continuous-integration/github-actions/
+      - label: CLI
+        link: /continuous-integration/cli/
   - type: category
     label: Publish Documentation
     link: /publish-documentation/

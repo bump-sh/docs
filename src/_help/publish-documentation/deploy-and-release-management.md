@@ -29,7 +29,7 @@ After processing, the new API document will be automatically released after a fe
 
 ### Deploy from the CLI
 
-Deploying an API Document can also be done from our CLI using the `deploy` command. The complete process is available on the dedicated [CLI page](/help/bump-cli/).
+Deploying an API Document can also be done from our CLI using the `deploy` command. The complete process is available on the dedicated [CLI page](/help/continuous-integration/cli/).
 
 ### Deploy using the GitHub Action
 
