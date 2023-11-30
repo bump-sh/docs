@@ -14,6 +14,8 @@ help:
         link: /continuous-integration/github-actions/
       - label: CLI
         link: /continuous-integration/cli/
+      - label: API (advanced)
+        link: /continuous-integration/api/
   - type: category
     label: Publish Documentation
     link: /publish-documentation/
