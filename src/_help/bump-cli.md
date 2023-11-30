@@ -5,22 +5,20 @@ title: Bump CLI
 - TOC
 {:toc}
 
-The Bump CLI is used to interact with your API documentation or hubs hosted on Bump.sh. With any API contract of you choice (from Swagger, OpenAPI v3 or AsyncAPI v2), it can help you to:
+The Bump.sh CLI is used to interact with your API documentation or hubs hosted on Bump.sh. With any API definition of your choice (from Swagger, OpenAPI or AsyncAPI), it can help you to:
 
 - Validate an API document before publishing to your documentation
 - Publish an API document to your Bump.sh documentation or hubs
-- Compare two API documents to generate a human readable diff from your API contracts
+- Compare two API documents to generate a human-readable diff from your API definitions
 
 ## Installation
 
-Bump CLI is a node package, currently distributed via NPM which means you need to have Node v14+ interpreter installed on your computer or CI servers.
+Bump.sh CLI is a node package currently distributed via NPM which means you need to have Node v14+ interpreter installed on your computer or CI servers.
 
-_If you are looking to use Bump in a continuous integration environment you might be interested by [our Github Action](https://github.com/marketplace/actions/api-documentation-on-bump)._
+_If you are looking to use Bump.sh in a continuous integration environment you might be interested by [our Github Action](https://github.com/marketplace/actions/api-documentation-on-bump)._
 
 > You can download a standalone package directly from the latest
-> Github release assets if you don’t use Node. We plan to distribute
-> universal binaries to common package managers soon. Please check our
-> installation methods for updates.
+> Github release assets if you don’t use Node.
 {: .info}
 
 ### Global installation
@@ -51,7 +49,7 @@ Or with Yarn via
 yarn add --dev bump-cli
 ```
 
-You can then use any Bump commands with `npx` (same as `npm exec`)
+You can then use any Bump.sh commands with `npx` (same as `npm exec`)
 
 ```shell
 npx bump --help
@@ -59,7 +57,7 @@ npx bump --help
 
 ### How should I do if I'm not using npm ?
 
-Unfortunately, at the moment we only support the Node environment. However we plan to distribute universal binaries in the most common package managers very soon. In the meantime, you can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets or you can push your documentation using [our API](https://developers.bump.sh/) (advanced usage only).
+Unfortunately, at the moment we only support the Node environment. However, you can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets which you can run as a standalone binary. Or you can push your documentation using [our API](https://developers.bump.sh/) (advanced usage only).
 
 ## Usage
 
@@ -67,7 +65,7 @@ To list all the available commands, just type `bump` in your command line enviro
 
 ```shell
 $ bump --help
-The Bump CLI is used to interact with your API documentation hosted on Bump by using the API of developers.bump.sh
+The Bump.sh CLI is used to interact with your API documentation hosted on Bump.sh by using the API of developers.bump.sh
 
 VERSION
   bump-cli/2.7.2 linux-x64 node-v16.17.0
@@ -88,7 +86,7 @@ COMMANDS
 
 While some commands don't need any API token (`preview` or `diff`) you will need an access key if you want to interact with your Bump.sh documentation.
 
-Head to your Documentation Settings in the “CI deployment” section, or your Account or Organization Settings in the “API keys” section to fetch a personnal token for later usage.
+Head to your Documentation settings in the “CI deployment” section, or your Account or Organization settings in the “API keys” section to fetch a personal token for later usage.
 
 ## Commands
 
@@ -98,7 +96,7 @@ Head to your Documentation Settings in the “CI deployment” section, or your 
 
 ### `bump deploy [FILE]`
 
-When you update your API, you want its documentation to be live for your API users. This is what the deploy command is for. Publish a new API document with this command, and Bump.sh will analyse your API structure and generate a changelog item if the API structure has changed. It will also update your latest published document with the deployed file.
+When you update your API, you want its documentation to be live for your API users. This is what the deploy command is for.
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
@@ -107,7 +105,7 @@ bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
 > You can find your own `my-documentation` slug and `$DOC_TOKEN` api key from your [documentation settings](https://bump.sh/docs).
 {: .info}
 
-You can also deploy a given file to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature is available on [this dedicated help page](https://docs.bump.sh/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
+You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature is available on [this dedicated help page](https://docs.bump.sh/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN --branch staging
@@ -128,7 +126,7 @@ Please note, by default, only files named `{slug}-api.[format]` are published. W
 
 Note that it _can_ include `*` wildcard special character, but **must** include the `{slug}` filter to extract your documentation’s slug from the filename. The pattern can also have any other optional fixed characters.
 
-Here’s a practical example. Suppose you have the following files in your `path/to/apis/` directory:
+Here’s a practical example. Let's assume that you have the following files in your `path/to/apis/` directory:
 
 ```
 path/to/apis
@@ -139,7 +137,7 @@ path/to/apis
 └─ README.md
 ```
 
-In order to deploy the 3 services api definition files from this folder (`private-api-users-service.json`, `partner-api-payments-service.yml` and `public-api-contracts-service.yml`). You can execute the following command:
+In order to deploy the 3 services API definition files from this folder (`private-api-users-service.json`, `partner-api-payments-service.yml` and `public-api-contracts-service.yml`), you can execute the following command:
 
 ```
 bump deploy path/to/apis/ --hub my-hub --filename-pattern '*-api-{slug}-service'
@@ -170,7 +168,7 @@ Modified: GET /consommations
   Response modified: 200
     [Breaking] Body attribute modified: energie
 ```
-> You can create as many diffs as you like without being authenticated. This is a **free and unlimited service** provided you have a fair use of the service.
+> You can create as many diffs as you like without being authenticated. This is a **free and unlimited service** provided as long as you use the service fairly.
 {: .info}
 
 _Note: You can also test this feature in our dedicated web application at <https://api-diff.io/>._
@@ -194,7 +192,7 @@ Please check `bump diff --help` for full usage details.
 ### `bump preview [FILE]`
 
 
-When writing a documentation, you might want to preview how it renders on Bump.sh. This is exactly the goal of the `preview` command: it will create a temporary documentation with a unique URL, which will be available for a short period of time.
+When writing a documentation, you might want to preview how it renders on Bump.sh. This is precisely the goal of the `preview` command: it will create a temporary documentation with a unique URL, which will be available for a short period.
 
 Usage from a local OpenAPI or AsyncAPI file
 
@@ -219,7 +217,7 @@ bump preview --live --open openapi-definition.json
 ```
 
 - Edit your `openapi-definition.json` file in your favorite text editor
-- Watch the live preview being updated each time your save your file!
+- Watch the live preview being updated each time you save your file.
 
 > You can create as many previews as you like without being authenticated. This is a **free and unlimited service**.
 {: .info}
