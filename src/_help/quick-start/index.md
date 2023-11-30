@@ -53,7 +53,7 @@ With your documentation ready, you could want to make it more customized. Bump.s
 
 You can setup [Custom Domains](/help/custom-domains), to make your doc available behind your own URL.
 Several branding options are available: from your logo to [Meta Images](/help/meta-images) (that helps sharing your doc in a fancy way).
-We also support [Documentation Topics](/help/doc-topics), that helps you adding rich (con)text to your API doc, sharing the informations your community needs.
+We also support [Documentation Topics](/help/enhance-documentation-content/topics/), that helps you adding rich (con)text to your API doc, sharing the informations your community needs.
 
 ![](/images/help/meta-image-2.png)
 
