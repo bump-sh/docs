@@ -9,7 +9,7 @@ These are additional properties that are not specified by either the OpenAPI or 
 
 ### Add topics to your documentation (`x-topics`)
 
-We created a custom property to enrich your documentation. This vendor-specific property helpsto add more context paragraphs in your generated documentation. Find out more in our [dedicated section](/help/enhance-documentation-content/topics/).
+We created a custom property to enrich your documentation. This vendor-specific property helps to add more context paragraphs in your generated documentation. Find out more in our [dedicated section](/help/enhance-documentation-content/topics/).
 
 ### Custom code sample examples (`x-codeSamples`)
 
