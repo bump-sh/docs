@@ -27,8 +27,6 @@ To go even further, create an organization and [assign roles to members of your 
 
 There are numerous possibilities to customize your documentation and incorporate your brand.
 
-Using a custom domain allows you to integrate your API documentation under your domain and a unified URL. You can also customize the logo or colors of your documentation to display your brand.
+Using a [custom domain](/help/customization-options/custom-domains/) allows you to integrate your API documentation under your domain and a unified URL. You can also customize the [logo or colors](/help/customization-options/color-logo-meta-images/) of your documentation to display your brand.
 
-Feel free to take a look at our dedicated help page for more information.
-
-**We hope you'll enjoy using Bump.sh!**
+Feel free to take a look at our [dedicated help page](/help/customization-options/) for more information.
