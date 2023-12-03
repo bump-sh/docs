@@ -5,36 +5,38 @@ title: Upload your first API definition
 - TOC
 {:toc}
 
+Publishing your first API documentation on Bump.sh will only take you a few moments. Creating an account, documentation, and uploading your first API definition can be done in just a few clicks.
+
+## Create your Bump.sh account
+
+The very first step is to create your Bump.sh account.
+
+Two options are available: using your email address and creating a username, or through your GitHub account.
+
+![](/images/help/signup.png)
+
+Pay attention when choosing your username: it will act as a slug to access your API documentation and will appear in the URL (unless you configure a custom domain later). You can change this username/slug later on.
+
 ## Create your first documentation
 
-### Step 1: Create your space/documentation
+### Step 1: Create your documentation
 
-After creating your account, you'll be asked [to create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
-By default, your documentation URL will use the same name: you can customize it in the slug field. You can also use [custom domains](/help/custom-domains), which we'll explain later.
+Now that your Bump.sh account is created, you will immediately be prompted to create your first API documentation.
 
-![](/images/help/doc-creation.png)
+As mentioned earlier, you will find your username in its URL. Choose a name and define whether this documentation should be public or private. Feel free to check the dedicated help page to learn more about our access management options.
+
+![](/images/help/first-doc.png)
 
 ### Step 2: Upload your file
 
-If you already have a specification file, you can immediately upload it.
-You can also use our examples to see Bump.sh in action. Finally, our [CLI](/help/bump-cli) can also be directly used to jump in.
+Once the documentation is created, all that's left is to upload your first API definition. You can also use our CLI or use one of the provided examples to get started with Bump.sh.
 
-![](/images/help/upload-spec-file.png)
+![](/images/help/first-upload.png)
 
 ### Step 3: Enjoy
 
-Generating your first documentation will take a few seconds. But let's not stop here: many features are awaiting to customize and make the most of your API documentation. Let's have a look in the next section.
+And there you have it: you've just deployed your first API documentation!<br>
+You can already check out the result or [start exploring the many options available](/help/getting-started/going-further/) to you for customization, inviting your team and API consumers, or creating new ones.
 
+![](/images/help/congrats.png)
 
-## Publish your documentation
-
-Congratulations on releasing your first API documentation on Bump.sh!
-
-One of the first things you may have in mind is how to share your documentation with the world, your team or keep it for yourself.
-Bump.sh offers several options to manage access to your documentation.
-During the onboarding, you may have noticed the option of making your doc public or private.
-
-Public documentation are available to anyone with the URL or if the search engine indexation has been activated.
-Private ones are only accessible to you (or your team/organization if you have one).
-
-We share more details on the [Access Management page](/help/access-management).

@@ -7,8 +7,8 @@ title: Quick Start
 
 Bump.sh connects people with REST and event-driven APIs, by centralizing a reference point: their documentation, highlighted with the latest changes and updates.
 
-From OpenAPI and AsyncAPI specifications, Bump.sh generates the documentation you need and offers many options to make it your custom and carefully crafted API experience.
+From your API definition (OpenAPI and AsyncAPI), Bump.sh automatically generates the documentation you need, a detailed changelog of the latest changes, and offers you many options to customize it to provide a unique experience that is your own.
 
-Those specifications, supported by a wide variety of frameworks in various programming languages that generate definition files automatically, can be easily deployed on Bump.sh.
+This Getting Started guide aims to get you started quickly if you're writing OpenAPI or AsyncAPI files or if you know where these files are located in your code repository.
 
-This quick start guide is made for you, if you are actively writing OpenAPI or AsyncAPI files, or able to locate it in your code repository.
+You will start by [deploying your first API documentation](/getting-started/upload-your-first-definition/) and then explore initial customization options before [delving deeper](/going-further/).

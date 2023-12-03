@@ -5,21 +5,30 @@ title: Going further
 - TOC
 {:toc}
 
+Now that your first documentation has been published, you may want to personalize it further. There are numerous options available to you to enhance your use of Bump.sh.
+
+## Publish more documentation
+
+Your ecosystem might include multiple APIs that also need their own documentation, and Bump.sh offers various tools to assist you.
+
+Learn how to add additional individual documentation or even consider [creating a hub](/help/hubs/), a library of API documents.
+
+You also have the option to choose [how to upload your API documents](/help/continuous-integration/) to Bump.sh and have finer [control over their release](/help/publish-documentation/deploy-and-release-management/).
+
+## Access management
+
+Whether it's for internal use within your team or for an entire community, Bump.sh offers many options to adjust access to your documentation.
+
+You can configure access management for each of [your documentation](/help/publish-documentation/documentation-access-management/) or [hubs](/help/hubs/).
+
+To go even further, create an organization and [assign roles to members of your team and API consumers](/help/organizations/organization-access-management/).
+
 ## Customization options
 
-With your documentation ready, you could want to make it more customized. Bump.sh offers several options to do so.
+There are numerous possibilities to customize your documentation and incorporate your brand.
 
-You can setup [Custom Domains](/help/custom-domains), to make your doc available behind your own URL.
-Several branding options are available: from your logo to [Meta Images](/help/meta-images) (that helps sharing your doc in a fancy way).
-We also support [Documentation Topics](/help/doc-topics), that helps you adding rich (con)text to your API doc, sharing the informations your community needs.
+Using a custom domain allows you to integrate your API documentation under your domain and a unified URL. You can also customize the logo or colors of your documentation to display your brand.
 
-![](/images/help/meta-image-2.png)
-
-## And way more
-
-We do not stop here. Feel free to browse this documentation or directly reach us to find out how to make the most of Bump.sh.
-There's a lot more to cover: from Hubs that groups several API documentation to Branching, hosting several version of a same doc, you'll find many simple options that make a huge change.
-
-The team is always here to listen if you have any feature requests or suggestions. We are here to help.
+Feel free to take a look at our dedicated help page for more information.
 
 **We hope you'll enjoy using Bump.sh!**
