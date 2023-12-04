@@ -9,7 +9,7 @@ Use the `x-beta` property inside an operation, a schema or a parameter object to
 The `x-beta` property is a boolean.
 
 Adding or removing this property is a structural change.
-A change on a beta component, can't be breaking.
+A change in a beta component is never identified as a breaking change.
 
 ## Example usage
 
