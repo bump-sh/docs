@@ -13,7 +13,7 @@ The Bump.sh CLI is used to interact with your API documentation or hubs hosted o
 
 ## Installation
 
-Bump.sh CLI is a node package currently distributed via NPM which means you need to have Node v14+ interpreter installed on your computer or CI servers.
+The Bump.sh CLI is a node package currently distributed via NPM. This means you must have the Node v14+ interpreter installed on your computer or CI servers.
 
 _If you are looking to use Bump.sh in a continuous integration environment you might be interested by [our Github Action](https://github.com/marketplace/actions/api-documentation-on-bump)._
 
@@ -86,7 +86,7 @@ COMMANDS
 
 While some commands don't need any API token (`preview` or `diff`) you will need an access key if you want to interact with your Bump.sh documentation.
 
-Head to your Documentation settings in the “CI deployment” section, or your Account or Organization settings in the “API keys” section to fetch a personal token for later usage.
+Head over to your Documentation settings in the “CI deployment” section or your Account or Organization settings in the “API keys” section to fetch a personal token for later usage.
 
 ## Commands
 
@@ -96,7 +96,7 @@ Head to your Documentation settings in the “CI deployment” section, or your 
 
 ### `bump deploy [FILE]`
 
-When you update your API, you want its documentation to be live for your API users. This is what the deploy command is for.
+When you update your API, you also want its documentation to be up to date for your API users. This is what the deploy command is for.
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
@@ -105,7 +105,7 @@ bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
 > You can find your own `my-documentation` slug and `$DOC_TOKEN` api key from your [documentation settings](https://bump.sh/docs).
 {: .info}
 
-You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature is available on [this dedicated help page](https://docs.bump.sh/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
+You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature are available on [this dedicated help page](https://docs.bump.sh/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN --branch staging
@@ -113,7 +113,7 @@ bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN -
 
 #### Deploy a folder all at once
 
-If you already have a hub in your [Bump.sh](https://bump.sh) account, you can automatically create documentation inside it and deploy to it by publishing a whole directory containing multiple API documents in a single command
+If you already have a hub in your [Bump.sh](https://bump.sh) account, you can automatically create documentation and deploy it into that hub by publishing a whole directory containing multiple API documents in a single command:
 
 ```shell
 bump deploy dir/path/to/apis/ --auto-create --hub my-hub --token $HUB_TOKEN
@@ -122,7 +122,7 @@ bump deploy dir/path/to/apis/ --auto-create --hub my-hub --token $HUB_TOKEN
 > You can find your own `my-hub` slug and `$HUB_TOKEN` api key from your [hub settings](https://bump.sh/hubs).
 {: .info}
 
-Please note, by default, only files named `{slug}-api.[format]` are published. Where `{slug}` is a name for your API and `[format]` is either `yaml` or `json`. Take into account your own file naming convention by using the `--filename-pattern <pattern>` option.
+Please note, by default, only files named `{slug}-api.[format]` are published. Where `{slug}` is a name for your API and `[format]` is either `yaml` or `json`. Adjust to your file naming convention using the `--filename-pattern <pattern>` option.
 
 Note that it _can_ include `*` wildcard special character, but **must** include the `{slug}` filter to extract your documentation’s slug from the filename. The pattern can also have any other optional fixed characters.
 
@@ -145,7 +145,7 @@ bump deploy path/to/apis/ --hub my-hub --filename-pattern '*-api-{slug}-service'
 
 #### Validate an API document
 
-Simulate a deployment of your API document to make sure it is valid by adding the `--dry-run` flag to the `deploy` command, it is particularly useful in a Continuous Integration environment running a test deployment outside your main branch:
+Simulate your API document's deployment to ensure it is valid by adding the `--dry-run` flag to the `deploy` command. It is handy in a Continuous Integration environment running a test deployment outside your main branch:
 
 ```shell
 bump deploy path/to/api-document.yml --dry-run --doc my-documentation --token $DOC_TOKEN
@@ -192,7 +192,7 @@ Please check `bump diff --help` for full usage details.
 ### `bump preview [FILE]`
 
 
-When writing a documentation, you might want to preview how it renders on Bump.sh. This is precisely the goal of the `preview` command: it will create a temporary documentation with a unique URL, which will be available for a short period.
+When writing documentation, you might want to preview how it renders on Bump.sh. This is precisely the goal of the `preview` command: it will create temporary documentation with a unique URL, which will be available for a short period (30 minutes).
 
 Usage from a local OpenAPI or AsyncAPI file
 
