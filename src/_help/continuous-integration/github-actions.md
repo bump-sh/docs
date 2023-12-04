@@ -15,7 +15,7 @@ Bump.sh keeps your API docs always synchronized with your codebase. With this [G
 
 Start with creating a documentation on [Bump.sh](https://bump.sh).
 
-Once you've got an API Documentation set up, go to Settings > CI Deployment, copy the access token, then add it to GitHub Settings > Secrets > Actions as a new environment variable called `BUMP_TOKEN`.
+Once you've set up an API Documentation, go to Settings > CI Deployment, copy the access token, then add it to GitHub Settings > Secrets > Actions as a new environment variable called `BUMP_TOKEN`.
 
 Then you can pick from one of the three following API workflow files.
 
@@ -83,7 +83,7 @@ jobs:
 
 ### Deploy Documentation only
 
-If you only need to deploy documentation changes on push then you can use this workflow instead:
+If you only need to deploy documentation changes on push, then you can use this workflow instead:
 
 `.github/workflows/bump-deploy.yml`
 
@@ -164,7 +164,7 @@ jobs:
 
 * `file`: Relative path to the documentation file. _Default: `api-contract.yml`_
 
-* `hub` (optional): Hub slug or id. Needed when deploying to a documentation attached to a Hub. Can be found in the hub settings on https://bump.sh
+* `hub` (optional): Hub slug or id. Needed when deploying to documentation in a Hub. Can be found in the hub settings on https://bump.sh
 
 * `branch` (optional): Branch name used during `deploy` or `diff` commands. This can be useful to maintain multiple API reference history and make it available in your API documentation.
 

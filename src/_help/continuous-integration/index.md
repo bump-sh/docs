@@ -27,9 +27,9 @@ We recommend two steps in your automation flow:
 
 When suggesting a change to your API, you probably follow a pull request flow (also known as merge request) and make the changes on a development branch. You can integrate Bump.sh at this stage to generate an API diff or only validate your changed API document.
 
-With our [Github Action](/help/continuous-integration/github-actions), you can receive automatic API diff comments directly on your GitHub pull requests. With other source code management system, you can use our [CLI](/help/continuous-integration/cli) within your CI with the `bump diff` command to run each time a development branch is created or updated.
+With our [Github Action](/help/continuous-integration/github-actions), you can receive automatic API diff comments directly on your GitHub pull requests. With other source code management systems, you can use our [CLI](/help/continuous-integration/cli) within your CI with the `bump diff` command to run each time a development branch is created or updated.
 
-This step will make sure to fail the build if the documentation file is not valid. You can also ask our tools to fail if a **breaking change** is detected on your API (Thanks to the `fail_on_breaking:` Github Action input parameter or `--fail-on-breaking` CLI option).
+This step will fail the build if the documentation file is not valid. You can also ask our tools to fail if a **breaking change** is detected on your API (Thanks to the `fail_on_breaking:` Github Action input parameter or `--fail-on-breaking` CLI option).
 
 ### Deploy your API document
 
