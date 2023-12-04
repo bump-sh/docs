@@ -1,32 +1,4 @@
 .category {
-  aside {
-    h2 {
-      font-size: 1.23rem;
-    }
-    ul {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: var(--gap-xsmall);
-      list-style-type: none;
-      padding: 0;
-    }
-
-    a {
-      border-radius: var(--border-radius-medium);
-      color: var(--text-color);
-      display: flex;
-      padding: var(--spacing-1) var(--spacing-3);
-      text-decoration: none;
-  
-      &:hover,
-      &[aria-current="true"] {
-        background-color: var(--bg-color-selected);
-        color: var(--link-color);
-      }
-    }
-  }
-
   guide-list .list-container {
     padding-block: var(--spacing-20);
   }

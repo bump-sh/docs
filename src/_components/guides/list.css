@@ -1,5 +1,8 @@
 guide-list {
   container: guide-list / inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
   width: 100%;
 
   .list-container {

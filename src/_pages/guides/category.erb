@@ -17,14 +17,7 @@ prototype:
   <%= render Shared::Hero.new(title: data.category.titleize) %>
 <% end %>
 <div class="double-pane">
-  <aside>
-    <h2>All categories</h2>
-    <ul>
-      <% site.data.guides.categories.each do |category| %>
-        <%= render Categories::Sidebar::Item.new(category: category, current: data.category) %>
-      <% end %>
-    </ul>
-  </aside>
+  <%= render Categories::Sidebar.new(categories: site.data.guides.categories, current: data.category) %>
   <%= render Guides::List.new(resources: paginator.resources, category_name: @category.name) %>
 </div>
 <%= render Shared::Pagination.new(paginator: paginator) %>

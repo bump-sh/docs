@@ -1,0 +1,8 @@
+<aside class="category-sidebar">
+  <h2>All categories</h2>
+  <ul>
+    <% @categories.each do |category| %>
+      <%= render Categories::Sidebar::Item.new(category: category, current: @current) %>
+    <% end %>
+  </ul>
+</aside>

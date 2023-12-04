@@ -1,5 +1,5 @@
 class Categories::Sidebar::Item < Bridgetown::Component
-  def initialize(category:, current:)
+  def initialize(category:, current: false)
     @category = category
     @current = current
   end

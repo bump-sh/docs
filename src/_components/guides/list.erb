@@ -7,11 +7,11 @@
         <%= render Shared::Taglist.new(tags: resource.data.tags) %>
       </a>
     <% end %>
-    <% if @remaining_count > 0 %>
-      <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>" class="card browse-all">
-        <span>Browse <strong><%= @remaining_count %> more </strong> guides</span>
-        <%= svg "images/icons/arrow-right-circle.svg" %>
-      </a>
-    <% end %>
   </div>
+  <% if @remaining_count > 0 %>
+    <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>" class="card browse-all">
+      <span>Browse <strong><%= @remaining_count %> more </strong> guides</span>
+      <%= svg "images/icons/arrow-right-circle.svg" %>
+    </a>
+  <% end %>
 </guide-list>
