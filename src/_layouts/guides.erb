@@ -5,19 +5,14 @@ layout: default
 <% @categories = @site.data.guides.categories %>
 <main class="wrapper">
   <%= render Shared::Hero.new(title: data.title,
-                              description: "Learn about APIs at large, and how to use Bump.sh in your API ecosystem.") do %>
-    <% if @categories.present? %>
-      <tag-list>
-        <% @categories.each do |category| %>
-          <a class="label" href="<%= relative_url guide_category_url(category.name) %>"><%= category.name %></a>
-        <% end %>
-      </tag-list>
-    <% end %>
-  <% end %>
-  <div class="section-container">
-    <% @categories.each do |category| %>
-      <%= render Guides::Category::Section.new(category: category) %>
-    <% end %>
+                              description: "Learn about APIs at large, and how to use Bump.sh in your API ecosystem.") %>
+  <div class="double-pane">
+    <%= render Categories::Sidebar.new(categories: @categories) %>
+    <guide-list class="section-container">
+      <% @categories.each do |category| %>
+        <%= render Guides::Category::Section.new(category: category) %>
+      <% end %>
+    </guide-list>
+    <%= yield %>
   </div>
-  <%= yield %>
 </main>

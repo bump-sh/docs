@@ -1,0 +1,20 @@
+.category-sidebar {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--gap-small);
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a:hover,
+  a[aria-current="true"] {
+    background-color: var(--bg-color-selected);
+    color: var(--link-color);
+  }
+}

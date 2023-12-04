@@ -7,33 +7,20 @@
     margin-block: var(--spacing-16);
   }
 
-  guide-list .list-container {
-    display: flex;
+  guide-list {
+    .list-container {
+      grid-template-columns: repeat(3, 1fr);
 
-    .card:not(.browse-all) {
-      width: 28%;
+      @container guides (width < 800px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .browse-all {
-      align-items: center;
+      flex-direction: row;
+      gap: var(--gap-small);
       justify-content: center;
-      text-align: center;
-      width: 10%;
-
-      em {
-        color: var(--base-color);
-        font-style: normal;
-      }
-    }
-
-    @container guides (width < 800px) {
-      flex-direction: column;
-
-      .card:not(.browse-all),
-      .browse-all {
-        min-height: 100px;
-        width: 100%;
-      }
+      padding-block: var(--spacing-4);
     }
   }
 }
