@@ -33,6 +33,23 @@ From the documentation settings, in the "Upload" section, select the branch in w
 
 ![](/images/help/upload-branch.png)
 
+### Using the Github-Action
+
+When deploying via the [Github-Action](/help/continuous-integration/github-actions/), you can specify the target branch using the `branch:` input parameter. If the branch does not exist, it will be created at this stage. Your Bump.sh deployment step will thus need to be changed to:
+
+```
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          doc: DOCUMENTATION_SLUG_OR_ID
+          token: ${{secrets.BUMP_TOKEN}}
+          branch: BRANCH_NAME # New input specifying the branch name
+          file: doc/api-documentation.yml
+```
+
+> You will need to set a secret variable on your Github repository settings named `BUMP_TOKEN` with a valid Bump.sh token. This token value can be found in your documentation settings under the "CI deployment" section.
+{: .info}
+
 ### Using the CLI
 
 When deploying via the CLI, it is possible to specify the target branch using the `--branch <branch-name>` parameter. If the branch does not exist, it will be created at this stage.
@@ -42,18 +59,19 @@ bump deploy path/to/file.json --doc my-documentation --branch staging
 ```
 
 > You will need to pass your private documentation access token for this command to work. Either with the `--token` flag or via the `BUMP_TOKEN` environment variable. This token can be found in your documentation settings under the "CI deployment" page.
-
 {: .info}
 
 ### Using the API
 
-Our [API](https://developers.bump.sh/group/endpoint-branches) also allows you to manage the branches of your documentation. You can create a new branch, delete one, list them all, select one as the default branch, and deploy a new API definition into a branch.
+Our [API](https://developers.bump.sh/operation/operation-post-versions) lets you publish to a specific branch by providing the `branch_name` request body parameter. However, we recommend using either our CLI or our Github-Action to publish your API documents to Bump.sh.
+
+Our dedicated [Branch API](https://developers.bump.sh/group/endpoint-branches) endpoints, help to manage the branches of your documentation. You can create a new branch, delete one, list them all, or select one as the default branch.
 
 Please note that, currently, the API does not support renaming a branch.
 
 ## Rename or delete a branch
 
-The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it. After changing the branch name, don't forget to update your CI deployment.
+The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it. After changing the branch name, don't forget to update your CI or CLI deployment settings.
 
 ![](/images/help/manage-branch.png)
 
