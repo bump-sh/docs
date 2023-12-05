@@ -77,6 +77,6 @@ Bump does support external references from any channel, so you can deploy a spec
 
 > Some limitations apply when using the web application though. Only references pointing to resources accessible by our servers will be resolved. This means that **file system paths and protected URI will be ignored**.
 > 
-> If you need to deploy a specification using this kind of external references, please use [our CLI](/help/bump-cli) or our [GitHub Action](/help/continuous-integration/github-actions)
+> If you need to deploy a specification using this kind of external references, please use [our CLI](/help/continuous-integration/cli) or our [GitHub Action](/help/continuous-integration/github-actions)
 {: .warning}
 

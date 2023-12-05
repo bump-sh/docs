@@ -42,7 +42,7 @@ To deploy a new doc to a hub, execute the following command:
 
 ``bump deploy your/doc.yml --auto-create --doc my-doc --hub hub-slug-or-id --token my-doc-token``
 
-[Find here the commands and more information about the CLI](/help/bump-cli/).
+[Find here the commands and more information about the CLI](/help/continuous-integration/cli/).
 
 ### Using the API
 

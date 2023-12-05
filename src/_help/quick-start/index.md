@@ -25,7 +25,7 @@ By default, your documentation URL will use the same name: you can customize it 
 ### Step 2: Upload your file
 
 If you already have a specification file, you can immediately upload it.
-You can also use our examples to see Bump.sh in action. Finally, our [CLI](/help/bump-cli) can also be directly used to jump in.
+You can also use our examples to see Bump.sh in action. Finally, our [CLI](/help/continuous-integration/cli) can also be directly used to jump in.
 
 ![](/images/help/upload-spec-file.png)
 
