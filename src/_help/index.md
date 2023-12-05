@@ -18,5 +18,5 @@ Learn how to get the most of Bump.sh for your API ecosystem.
 
 ## Customization
 - [Custom domain](custom-domains) -- Host your documentation under your own domain.
-- [Documentation Topics](doc-topics) -- Add context and information to your specification files.
+- [Documentation Topics](enhance-documentation-content/topics) -- Add context and information to your specification files.
 - [Meta images](meta-images) -- Share docs links on your social medias.

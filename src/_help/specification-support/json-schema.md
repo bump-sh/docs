@@ -80,7 +80,7 @@ as mentioned in [Constant values documentation](https://json-schema.org/understa
 In this case, property description in your documentation will look like that:
 > Value is 42.
 
-> ** `enum` and `const`?**
+> **`enum` and `const`?**
 >
 > When both `enum` and `const` fields are provided, allowed values is not easy to deduce.
 > 

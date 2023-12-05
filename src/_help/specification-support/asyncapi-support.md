@@ -5,6 +5,20 @@ title: AsyncAPI Support
 - TOC
 {:toc}
 
+We support the latest major version (v2) of [AsyncAPI specification](https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject). This pages describes some specificities related to our support for this specification.
+
+## Minimal mandatory fields
+
+Bump.sh needs to receive at least these fields to generate a Message-Driven documentation
+
+| field          | description                                                               |
+|----------------|---------------------------------------------------------------------------|
+| `asyncapi`     | define which version of the specification you want to use. E.g. `"2.6.0"` |
+| `info`         | General information about your API                                        |
+| `info.title`   | The title of the API                                                      |
+| `info.version` | The version of the API document                                           |
+| `channels`     | The available channels and messages for the API                           |
+
 ## Currently supported
 
 Bump.sh is able to extract:
@@ -29,7 +43,7 @@ AsyncAPI `securitySchemes` property with these authentication types are supporte
 - `oauth2`
 - `openIdConnect`
 
-The following authentication types are **not** supported: 
+The following authentication types are **not** supported:
 - `X509`
 - `symmetricEncryption`
 - `asymmetricEncryption`
@@ -38,14 +52,8 @@ The following authentication types are **not** supported:
 - `scramSha512`
 - `gssapi`
 
-To describe these authentication types, please use our [custom `x-topics` property](/help/doc-topics) for now.
+To describe these authentication types, please use our [custom `x-topics` property](/help/enhance-documentation-content/topics/) for now.
 
 ## readOnly and writeOnly properties
 
 JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](/help/specification-support/json-schema#readonly-and-writeonly-properties).
-
-## Add topics to your documentation
-
-You can add extra information to your documentation by using Bump.sh custom `x-topics`.
-
-Read more in the [Topics section of this documentation](/help/doc-topics).

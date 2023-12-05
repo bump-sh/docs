@@ -85,29 +85,32 @@ help:
         link: /account/billing/
       - label: Github Student
         link: /account/github-student/
-  - label: Specification Support
+  - type: category
+    label: Specification Support
     link: /specification-support/
     icon: code-file
     items:
+      - label: Common elements
+        items:
+          - label: JSON Schema
+            link: /specification-support/json-schema/
+          - label: Multiple servers
+            link: /specification-support/multiple-servers/
+          - label: Polymorphism
+            link: /specification-support/polymorphism/
+          - label: References
+            link: /specification-support/references/
+          - label: Specification extensions
+            link: /specification-support/extensions/
       - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
-          - label: Name and sort endpoints and webhooks
-            link: /specification-support/openapi-support/name-and-sort-resources/
           - label: Webhooks
             link: /specification-support/openapi-support/webhooks/
+          - label: Custom code samples
+            link: /specification-support/doc-code-samples/
       - label: AsyncAPI support
         link: /specification-support/asyncapi-support/
-      - label: JSON Schema
-        link: /specification-support/json-schema/
-      - label: Polymorphism
-        link: /specification-support/polymorphism/
-      - label: References
-        link: /specification-support/references/
-      - label: Multiple servers
-        link: /specification-support/multiple-servers/
-      - label: Custom code samples
-        link: /doc-code-samples/
   - label: FAQ
     link: /faq/
     icon: help-circle

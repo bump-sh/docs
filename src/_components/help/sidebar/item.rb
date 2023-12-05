@@ -17,7 +17,7 @@ class Help::Sidebar::Item < Bridgetown::Component
   def is_parent
     if @items.present?
       current_child = @items&.find do |item|
-        item[:resource].path == @current.path
+        item[:resource].path == @current.path if item[:resource].present?
       end
       return !!current_child
     end
