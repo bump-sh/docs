@@ -61,18 +61,16 @@ help:
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
   - type: category
-    label: API change management
-    link: /api-change-management/
-    label: Track changes
-    link: /track-changes/
+    label: Changes management
+    link: /changes-management/
     icon: bell-dot
     items:
       - label: Changelog
-        link: /track-changes/changelog/
-      - label: Branches comparison
-        link: /track-changes/branches-comparison/
-      - label: Follow changes
-        link: /track-changes/follow-changes/
+        link: /changes-management/changelog/
+      - label: Changes management
+        link: /changes-management/changes-management/
+      - label: Integrations
+        link: /changes-management/integrations/
   - type: category
     label: Hubs
     link: /hubs/
