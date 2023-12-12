@@ -1,5 +1,5 @@
 ---
-title: Main concepts
+title: %Important concepts
 ---
 
 - TOC
@@ -37,7 +37,7 @@ A deployment is the processing of an API document by Bump.sh: after the upload, 
 
 ## Release
 
-The step following a successful deploy. During the [release](/help/publish-documentation/deploy-and-release-management/), the documentation is updated, the changelog reflects the related changes, and notifications, if configured, are sent out. Release step can be automatic, or manual.
+The step following a successful deploy. During the [release](/help/publish-documentation/deploy-and-release-management/), the documentation is updated, the changelog reflects the related changes, and notifications, if configured, are sent out. The release step can be automatic, or manual.
 
 ## API change
 
