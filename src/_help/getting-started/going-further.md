@@ -11,7 +11,7 @@ Now that your first documentation has been published, you may want to personaliz
 
 Your ecosystem might include multiple APIs that also need their own documentation, and Bump.sh offers various tools to assist you.
 
-Learn how to add additional individual documentation or even consider [creating a hub](/help/hubs/), a library of API documents.
+Learn how to add additional stand-alone documentation or consider [creating a hub](/help/hubs/), a library of API documents.
 
 You also have the option to choose [how to upload your API documents](/help/continuous-integration/) to Bump.sh and have finer [control over their release](/help/publish-documentation/deploy-and-release-management/).
 
@@ -19,9 +19,9 @@ You also have the option to choose [how to upload your API documents](/help/cont
 
 Whether it's for internal use within your team or for an entire community, Bump.sh offers many options to adjust access to your documentation.
 
-You can configure access management for each of [your documentation](/help/publish-documentation/documentation-access-management/) or [hubs](/help/hubs/).
+You can create an organization and [assign roles to members of your team and API consumers](/help/organizations/organization-access-management/).
 
-To go even further, create an organization and [assign roles to members of your team and API consumers](/help/organizations/organization-access-management/).
+To go even further, you could configure access management for each of [your documentation](/help/publish-documentation/documentation-access-management/) or [hubs](/help/hubs/).
 
 ## Customization options
 
