@@ -62,6 +62,6 @@ You can add extra information to your documentation by using Bump.sh custom `x-t
 
 Read more in the [Topics section of this documentation](/help/doc-topics).
 
-### Expose your beta features (`x-beta`)
+## Expose your beta features (`x-beta`)
 
 This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/specification-support/doc-beta).

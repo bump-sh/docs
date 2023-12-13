@@ -37,6 +37,6 @@ JSON Schema provides the possibility to declare a property as read or write only
 
 You can use the `webhooks` field (introduced in OpenAPI 3.1) to define the API webhook payloads. Please read to the [dedicated documentation page](/help/specification-support/openapi-support/webhooks/) for more information.
 
-### Expose your beta features (`x-beta`)
+## Expose your beta features (`x-beta`)
 
 This custom property allows you to identify some components of your documentation as beta. Find out more in our [dedicated section](/help/specification-support/doc-beta).
