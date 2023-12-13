@@ -9,7 +9,7 @@ Tracking API changes is essential, both for API builders and consumers.
 
 ## What is a change
 
-A change is a modification of your API with an impact on its behavior. <br>
+A change is a modification of your API with an impact on its behavior.
 Changes are differentiated into various categories:
 
 | Documentation change     | a description is modified  |

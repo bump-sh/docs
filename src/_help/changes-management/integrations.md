@@ -21,8 +21,8 @@ After configuration, remember to test the proper reception of notifications with
 
 When your API evolves, you may want to automatically trigger some related tasks: rebuilding your API client, updating your security test suite, your integration tests, etc.
 
-This can be achieved through Bump.sh webhooks.<br>
-It will send a specific request to the URLs you have configured every time it detects a change in your API structure.<br>
+This can be achieved through Bump.sh webhooks.
+It will send a specific request to the URLs you have configured every time it detects a change in your API structure.
 You can define as many webhooks as you need.
 
 Notifications can be sent to several URLs, allowing better integration with your existing tools.

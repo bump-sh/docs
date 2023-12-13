@@ -39,7 +39,7 @@ You have the option to share the URL of this comparison directly with your API c
 
 ## Email & RSS notifications
 
-Your API consumers can subscribe to a weekly summary of changes to your API via email by clicking on `Get Updates` from the changelog page. <br>
+Your API consumers can subscribe to a weekly summary of changes to your API via email by clicking on `Get Updates` from the changelog page.
 Two options are available: email notification or RSS feed.
 
 > The emails collected in this way will only be used for sending this changelog summary and nothing else.
