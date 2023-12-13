@@ -5,15 +5,15 @@ title: Changes management
 - TOC
 {:toc}
 
-Tracking API changes is essential, both for users and developers.
+Tracking API changes is essential, both for API builders and consumers.
 
 ## What is a change
 
 Changes are differentiated into various categories:
 
 | Documentation change     | a description is modified  |
-| Structural change        | the structure of the API definition is modified  |
-| Breaking change    | a major change in your API definition requires an update to the code consuming the API for its users |
+| Structural change        | the structure of the API is modified  |
+| Breaking change    | a major change in your API  requires an update to the code consuming it |
 
 Breaking changes are the ones your API consumers should not miss and are highlighted in the changelog. Here is a non-exhaustive list of criteria that help us determine if a change is breaking or not:
 - Renaming/Deleting an endpoint or operation
