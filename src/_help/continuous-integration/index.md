@@ -12,14 +12,15 @@ How to integrate your documentation deployment to your Continuous Integration (C
 There are multiple ways to integrate with Bump.sh:
 
 - Using the [Github Action](/help/continuous-integration/github-actions)
-- Using the [CLI](/help/continuous-integration/cli)
+- Using other [CI examples](/help/continuous-integration/ci)
+- Manually using the [CLI](/help/continuous-integration/cli)
 - More advanced usage can be done with the [API](/help/continuous-integration/api)
 
 ## Steps to integrate in your CI
 
-Here, we are presenting the process recommended to our users, but feel free to adapt it to your own workflow/requirements.
+We are presenting the process recommended to our users, but feel free to adapt it to your own workflow/requirements.
 
-We recommend two steps in your automation flow:
+We advise to setup two steps in your automation flow:
 - a [**validation** and **diff** step](#api-diff--validation-of-the-documentation-file) during development
 - followed by a [**deployment** step](#deploy-your-api-document) on production merges.
 
@@ -45,6 +46,14 @@ The GitHub action example uses a dedicated action we crafted especially for you.
 - [API diff & validation step](/help/continuous-integration/github-actions/#diff-on-pull-requests-only)
 - [Deploy to your documentation](/help/continuous-integration/github-actions/#deploy-documentation-only)
 
+### Other Continuous Integration tools (CI)
+
+The CI examples are here to help you build a similar process described with our GitHub action. We try to keep some specially crafted scripts for you to build the same experience for your own tools:
+
+- Example [Gitlab CI pipelines](/help/continuous-integration/ci/#gitlab-ci).
+- Example [delivery process with a CircleCI](/help/continuous-integration/ci/#circleci) config file.
+- Example [Travis CI Build Configuration](/help/continuous-integration/ci/#travis-ci)
+
 ### CLI
 
 The CLI can be used in your custom CI scripts with the two available recommendeded steps:
@@ -52,11 +61,6 @@ The CLI can be used in your custom CI scripts with the two available recommended
 - [`bump diff`](/help/continuous-integration/cli/#api-diff-of-your-changes) to check the changes & validate the API document
 - [`bump deploy`](/help/continuous-integration/cli/#deploy-a-file) to publish to your Bump.sh documentation
 
-Here are examples for integrating Bump.sh CLI with other commonly used CI products:
-
-- CircleCI : [https://github.com/bump-sh/bump-ci-example/blob/master/.circleci/config.yml](https://github.com/bump-sh/bump-ci-example/blob/master/.circleci/config.yml)
-- Gitlab CI: [https://github.com/bump-sh/bump-ci-example/blob/master/.gitlab-ci.yml ](https://github.com/bump-sh/bump-ci-example/blob/master/.gitlab-ci.yml )
-- Travis CI: [ https://github.com/bump-sh/bump-ci-example/blob/master/.travis.yml]( https://github.com/bump-sh/bump-ci-example/blob/master/.travis.yml)
 
 ## Recommendation
 
