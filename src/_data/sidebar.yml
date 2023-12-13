@@ -63,12 +63,14 @@ help:
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
   - type: category
-    label: API change management
-    link: /api-change-management/
+    label: Changes management
+    link: /changes-management/
     icon: bell-dot
     items:
-      - label: Webhooks
-        link: /api-change-management/webhooks/
+      - label: Changelog
+        link: /changes-management/changelog/
+      - label: Integrations
+        link: /changes-management/integrations/
   - type: category
     label: Hubs
     link: /hubs/

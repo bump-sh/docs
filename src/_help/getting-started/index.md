@@ -11,4 +11,4 @@ From your API definition (OpenAPI and AsyncAPI), Bump.sh automatically generates
 
 This Getting Started guide aims to get you started quickly if you're writing OpenAPI or AsyncAPI files or if you know where these files are located in your code repository.
 
-You will start by [deploying your first API documentation](/getting-started/upload-your-first-definition/) and then explore initial customization options before [digging further](/going-further/).
+You will start by [deploying your first API documentation](/help/getting-started/upload-your-first-definition/) and then explore initial customization options before [digging further](/help/getting-started/going-further/).

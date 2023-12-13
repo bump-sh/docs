@@ -5,15 +5,15 @@ title: Important concepts
 - TOC
 {:toc}
 
-Before we proceed further, we wanted to share some vocabulary to clarify what we are talking about throughout this documentation.<br>
+Before we proceed further, we wanted to share some vocabulary to clarify what we are talking about throughout this documentation.
 The terminology used here aims to be as accurate as possible, but you may encounter different terms elsewhere. We have chosen to use the most common and meaningful terms.
 
 ## API definition
 
-An API definition is the representation of an API written in compliance with an existing specification.<br>
+An API definition is the representation of an API written in compliance with an existing specification.
 It is sometimes referred to as an API schema, API contract, or even [API specification](/help/getting-started/concepts/#specification) (which is something different).
 
-As of today, Bump.sh supports the following specifications: [OpenAPI (Swagger)](https://spec.openapis.org/oas/latest.html), and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/v3.0.0).<br>
+As of today, Bump.sh supports the following specifications: [OpenAPI (Swagger)](https://spec.openapis.org/oas/latest.html), and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/v3.0.0).
 
 We provide a detailed introduction to API definitions [through this guide](https://docs.bump.sh/guides/api-basics/api-contracts-extended-introduction/).
 
@@ -23,7 +23,7 @@ An API contract represents the use of an API definition when it defines an agree
 
 ## API document
 
-An API document refers to the file containing an API definition.<br>
+An API document refers to the file containing an API definition.
 
 ## Specification
 
@@ -42,6 +42,16 @@ The step following a successful deploy. During the [release](/help/publish-docum
 ## API change
 
 An API change refers to a change in the structure of an API. After the release of an API definition, it is represented by a new entry in the [API changelog](/help/changes-management/changelog/).
+
+## Breaking change
+
+Breaking changes are the ones your API consumers should not miss and are highlighted in the changelog. Here is a non-exhaustive list of criteria that help us determine if a change is breaking or not:
+- Renaming/Deleting an endpoint or operation
+- Renaming/Deleting a property (body, parameters, etc...)
+- Changing the "type" attribute of a property
+- Removing polymorphism of a property
+- Marking an existing property as required
+- Add or delete a security requirement
 
 ## Changelog
 
