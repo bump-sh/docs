@@ -7,16 +7,14 @@ title: Bump.sh Documentation
 
 Learn how to get the most of Bump.sh for your API ecosystem.
 
-- [Quick start](quick-start) -- Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.
-- [Specification support](specification-support/openapi-support) -- Which and how specifications are supported.
-- [Change Management](api-change-management/index) -- Never miss any changes of your API, check them with the diff.
+- [Getting started](/help/getting-started) -- Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.
+- [Specification support](/help/specification-support) -- Which and how specifications are supported.
+- [Changes Management](/help/changes-management) -- Never miss any changes of your API, check them with the diff.
 
 ## Manage your documentation and access
-- [Hubs](hubs) -- Create groups of documentation.
-- [Access Management](access-management) -- Setup who can access what in your hubs and docs.
-- [Organizations](organizations/index) -- Invite teammates or partners to your ecosystem.
+- [Hubs](/help/hubs) -- Create groups of documentation.
+- [Enhance your documentation content](/help/enhance-documentation-content) -- Best ways to improve your documentation for your API consumers.
+- [Organizations](/help/organizations/index) -- Invite teammates or partners to your ecosystem.
 
 ## Customization
-- [Custom domain](custom-domains) -- Host your documentation under your own domain.
-- [Documentation Topics](enhance-documentation-content/topics) -- Add context and information to your specification files.
-- [Meta images](meta-images) -- Share docs links on your social medias.
+- [Customization options](/help/customization-options) -- Various options to customize your documentation and hubs to your needs.
