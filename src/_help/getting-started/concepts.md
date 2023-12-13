@@ -1,5 +1,5 @@
 ---
-title: %Important concepts
+title: Important concepts
 ---
 
 - TOC
