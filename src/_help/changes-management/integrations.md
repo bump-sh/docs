@@ -19,12 +19,11 @@ After configuration, remember to test the proper reception of notifications with
 
 ## Webhooks
 
-You can define as many webhooks as you wish to receive structural changes when they occur on your documentations.
+When your API evolves, you may want to automatically trigger some related tasks: rebuilding your API client, updating your security test suite, your integration tests, etc.
 
-A webhook is a way for an app to get instant notifications from other applications. Webhooks are automated messages (also called payloads) sent to a specific URL. Unlike a classic call to an API, webhooks are more efficient than just polling it. <br>
-Webhooks are useful for updating an API client generator, rebuilding an integration, and more, such as through a security suite, etc.
-
-Webhooks help integrate Bump into your current workflows. The chosen URLs will receive an HTTP request automatically when Bump notices a structural change in your documentation.
+This can be achieved through Bump.sh webhooks.<br>
+It will send a specific request to the URLs you have configured every time it detects a change in your API structure.<br>
+You can define as many webhooks as you need.
 
 Notifications can be sent to several URLs, allowing better integration with your existing tools.
 
