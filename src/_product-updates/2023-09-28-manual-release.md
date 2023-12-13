@@ -14,7 +14,7 @@ Gain greater control over your API Documentation deployments by using the Manual
 
 **Quality Assurance:** Add an extra layer of QA and collaboration before a change is officially published.
 
-Learn more in our [Release Management documentation](/help/publish-documentation/release-management/).
+Learn more in our [Release Management documentation](/help/publish-documentation/deploy-and-release-management/).
 
 ### Improvements and fixes
 

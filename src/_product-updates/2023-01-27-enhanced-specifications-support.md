@@ -22,4 +22,4 @@ Email addresses, IBANs and ZIP/Postal codes could be great examples of these fea
 JSON Schema allows defining a property as `readOnly`  or  `writeOnly`.
 Many examples can easily be imagined when used with AsyncAPI or OpenAPI : `readOnly`  timestamp, `writeOnly`  password, etc...
 
-Our [Help Center](/help/specification-support/asyncapi-support/#readonly-and-writeonly-properties) shares more details on how Bump.sh works with this feature and a few examples.
+Our [Help Center](/help/specification-support/json-schema/) shares more details on how Bump.sh works with this feature and a few examples.
