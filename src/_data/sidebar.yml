@@ -67,8 +67,6 @@ help:
     items:
       - label: Changelog
         link: /changes-management/changelog/
-      - label: Changes management
-        link: /changes-management/changes-management/
       - label: Integrations
         link: /changes-management/integrations/
   - type: category

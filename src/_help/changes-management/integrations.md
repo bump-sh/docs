@@ -7,7 +7,7 @@ title: Integrations
 
 ## Slack integration
 
-Integrating Bump.sh with Slack can be done in three steps.
+Bump.sh integration with Slack allows you to notify team members working with your API of its latest changes, through dedicated channels, for example.
 
 1. From your Slack workspace admin, [create a webhook](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks): this allows you to specify where Bump.sh should send change notifications.
 2. Once you have copied the webhook URL, go to the settings of your documentation, in the Integrations tab, enable the Slack option, and provide the previously obtained webhook URL.
@@ -21,7 +21,8 @@ After configuration, remember to test the proper reception of notifications with
 
 You can define as many webhooks as you wish to receive structural changes when they occur on your documentations.
 
-A webhook is a way for an app to get instant notifications from other applications. Webhooks are automated messages (also called payloads) sent to a specific URL. Unlike a classic call to an API, webhooks are more efficient than just polling it.
+A webhook is a way for an app to get instant notifications from other applications. Webhooks are automated messages (also called payloads) sent to a specific URL. Unlike a classic call to an API, webhooks are more efficient than just polling it. <br>
+Webhooks are useful for updating an API client generator, rebuilding an integration, and more, such as through a security suite, etc.
 
 Webhooks help integrate Bump into your current workflows. The chosen URLs will receive an HTTP request automatically when Bump notices a structural change in your documentation.
 

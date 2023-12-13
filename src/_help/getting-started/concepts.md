@@ -43,6 +43,16 @@ The step following a successful deploy. During the [release](/help/publish-docum
 
 An API change refers to a change in the structure of an API. After the release of an API definition, it is represented by a new entry in the [API changelog](/help/changes-management/changelog/).
 
+## Breaking change
+
+Breaking changes are the ones your API consumers should not miss and are highlighted in the changelog. Here is a non-exhaustive list of criteria that help us determine if a change is breaking or not:
+- Renaming/Deleting an endpoint or operation
+- Renaming/Deleting a property (body, parameters, etc...)
+- Changing the "type" attribute of a property
+- Removing polymorphism of a property
+- Marking an existing property as required
+- Add or delete a security requirement
+
 ## Changelog
 
 After each deployment, Bump.sh updates the documentation's [changelog](/help/changes-management/changelog/), listing all API changes between the current deployment and the previous one. If the "Track all changes" option is enabled, the changelog will also display changes in the documentation.
