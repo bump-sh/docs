@@ -34,7 +34,7 @@ bump deploy http://127.0.0.1:8888/openapi.yaml \
   --token my-documentation-token
 ```
 
-If for any reason you are unable to download that `openapi.yaml` from a URL despite being able to access it, it;s likely some odd network proxy settings on your machine or wifi. Grab it directly with wget or similar.
+If for any reason you are unable to download that `openapi.yaml` from a URL despite being able to access it, it's likely some odd network proxy settings on your machine or wifi. Grab it directly with wget or similar.
 
 
 ```bash
