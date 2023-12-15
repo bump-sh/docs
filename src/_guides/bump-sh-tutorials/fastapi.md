@@ -24,7 +24,7 @@ npm install -g bump-cli
 uvicorn main:app --reload
 ```
 
-Note: You might need, depending on how you usually run your Python commands, to prepend them with `python3 -m`.
+**Note:** You might need, depending on how you usually run your Python commands, to prepend them with `python3 -m`.
 
 4. Deploy your doc to Bump.sh with
 
