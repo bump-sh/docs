@@ -4,7 +4,7 @@ authors: phil
 excerpt: Generating OpenAPI for Go APIs
 ---
 
-[Huma](https://fastapi.tiangolo.com/) is a Golang framework that allows you to create APIs, and automatically generates their documentation, based on the OpenAPI specification.
+[Huma](https://huma.rocks/) is a Golang framework that allows you to create APIs, and automatically generates their documentation, based on the OpenAPI specification.
 
 ## Deploying docs from your local machine
 
