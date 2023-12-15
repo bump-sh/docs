@@ -12,4 +12,4 @@ Custom title and description allow you to provide additional context that may no
 
 Detailed release notes can serve as a form of documentation, helping both current and future developers understand the history and evolution of an API.
 
-Learn more in our [Release Management documentation](/help/publish-documentation/release-management/).
+Learn more in our [Release Management documentation](/help/publish-documentation/deploy-and-release-management/).

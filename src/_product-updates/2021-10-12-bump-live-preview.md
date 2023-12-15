@@ -11,4 +11,4 @@ No need for a specific text editor, or any extension, just use the bump CLI to p
 
 ![live-preview.gif](/images/changelog/live-preview.gif)
 
-Learn more about live preview on [our help page](/help/continuous-integration/cli#live-preview). 
+Learn more about live preview on [our help page](/help/continuous-integration/cli/#live-preview). 

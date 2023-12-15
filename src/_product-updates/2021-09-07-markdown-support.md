@@ -9,4 +9,4 @@ As markdown is a standard and a common way to bring more readability into your d
 
 Bump now supports common Markdown syntax, language color syntax highlighting, and information call-outs. Last but not least, Markdown can be included inside your contract file or as an external reference using dedicated Markdown files.
 
-Check [our help page](/help/specification-support/markdown-support/) to start taking advantage of markdown in your API documentation.
+Check [our help page](/help/enhance-documentation-content/markdown-support/) to start taking advantage of markdown in your API documentation.

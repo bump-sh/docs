@@ -20,4 +20,4 @@ The new command will output a quick summary of what has changed between your lat
 
 If you use Github Actions to launch your automation workflows, we have some more good news for you: [we now offer a stable `bump-sh/github-action@v1` action](https://github.com/bump-sh/github-action/releases/tag/v1.0.0). And this latest release includes **automatic API contract changelog pushed as a comment for each pull request**.
 
-Check [our help page](/help/continuous-integration/github-actions/#api-diff-on-pull-requests--deploy-on-push) to get you started with team collaboration on API design.
+Check [our help page](/help/continuous-integration/github-actions/#diff-on-pull-requests-only) to get you started with team collaboration on API design.
