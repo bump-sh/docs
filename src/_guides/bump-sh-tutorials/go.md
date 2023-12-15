@@ -1,5 +1,5 @@
 ---
-title: Deploying docs from FastAPI
+title: Deploying docs from Huma
 authors: phil
 excerpt: Generating OpenAPI for Go APIs
 ---
