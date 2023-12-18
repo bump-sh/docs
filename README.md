@@ -115,4 +115,7 @@ The excerpt is a small description of the guide content that will show on the gu
 
 Images go under [`src/images`](https://github.com/bump-sh/docs/tree/main/src/images) and can be called with `![](/images/guides/<your_image_name>)`.
 
+##### Gotchas
+* Ordered lists: if you need to any kind of blocks in your ordered list item, make sure it immediately follows the numbered paragraph line (no empty line in between). You might also want to [indent your block to line up with the first non-space character after the list item marker](https://stackoverflow.com/questions/34987908/embed-a-code-block-in-a-list-item-with-proper-indentation-in-kramdown). Just do both for safety!
+
 Then you can let your ~~pen~~ keyboard handle the content!
