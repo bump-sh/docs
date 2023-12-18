@@ -6,7 +6,7 @@ canonical_url: https://bump.sh/blog/code-first-openapi
 excerpt: Learn how to generate OpenAPI from an existing codebase.
 ---
 
-API Code-first is the art of building an API, and then popping some annotations or metadata in there to output API documentation in an API description format like OpenAPI. There are a few conceptually different ways to do this, with new tools popping up to help make everything easier, so this guide will show you how those different types of tool work.
+API Code-first is the art of building an API, and then popping some annotations or metadata in there to output API documentation in an API description format like [OpenAPI](https://spec.openapis.org/oas/latest.html). There are a few conceptually different ways to do this, with new tools popping up to help make everything easier, so this guide will show you how those different types of tool work.
 
 For those of you used to the API Code-first here are the three main workflows you should be thinking about going forwards. If you've been documenting your APIs entirely manually with some sort of content management system, wiki, or Word Document, then these ideas might save you from that nightmare.
 
@@ -116,10 +116,10 @@ There are not as many tools that work this way, but this is likely to be a trend
 
 Just like annotations you can usually run a command to extract the OpenAPI document, or you can run the web server and pull it down over HTTP.
 
-```
-$ go run .
+```bash
+go run .
 
-$ bump deploy http://127.0.0.1:8888/openapi.yaml \
+bump deploy http://127.0.0.1:8888/openapi.yaml \
   --doc my-documentation-name \
   --token my-documentation-token
 ```
@@ -128,13 +128,11 @@ $ bump deploy http://127.0.0.1:8888/openapi.yaml \
 
 If there's no annotations approach, and you have an existing codebase which cannot be rebuilt with one of these OpenAPI-aware application frameworks, there is another powerful option: sniffing web traffic. 
 
-There's [a whole category of tools](https://openapi.tools/#learning) popping up, which refer to this functionality as "Recording" or "Learning". 
-
-Basically you run an instance of your API somewhere (could be local, test, staging, or even production) and put as much web traffic through it as possible. It will then learn how all the requests and responses look, and produce the best composite OpenAPI that it possibly can.
+There's [a whole category of tools](https://openapi.tools/#learning) popping up, which refer to this functionality as "Recording" or "Learning". Basically you run an instance of your API somewhere (could be local, test, staging, or even production) and put as much web traffic through it as possible. It will then learn how all the requests and responses look, and produce the best composite OpenAPI that it possibly can.
 
 This is mostly useful as a one-off, a way to produce a bunch of OpenAPI that you then manage and maintain yourself, because running this forever is not a sensible workflow and will generally only get things 90% right. You need to do the work to get to 100%, but at least you didn't have to do all of the work of making that initial OpenAPI for an API that already exists. That's going to be arduous, boring, and likely rife with human error.
 
-## Code-first usually needs enhancing
+## Code-first usually needs enhancing <!-- omit in toc -->
 
 Whether you're generating from annotations, the framework, or HTTP traffic, there's a strong chance that you'll need to put some work in to improve the quality of that OpenAPI. It's going to be missing long form descriptions, the sort of content that tech writers often produce, and depending on the tool used it's probably going to be missing examples too. In order to improve this you can use OpenAPI Overlays to enrich the generated OpenAPI with your own logic, and avoid it being overridden the next time OpenAPI is generated.
 
@@ -166,6 +164,7 @@ Server-side validation with OpenAPI can avoid the need to write lots of request 
 - **PHP**
 	- [openapi-psr7-validator](https://github.com/thephpleague/openapi-psr7-validator)
 - **Ruby**
+	- [openapi_first](https://rubygems.org/gems/openapi_first)
 	- [committee](https://rubygems.org/gems/committee)
 
 Responses can be validated using any existing test suite, with all popular testing frameworks supporting OpenAPI by extension. 
@@ -176,6 +175,6 @@ Responses can be validated using any existing test suite, with all popular testi
 - **PHP**
 	- [Spectator](https://github.com/hotmeteor/spectator)
 - **Ruby**
-	- [rspec-openapi](https://github.com/exoego/rspec-openapi)
+	- [openapi_contracts](https://rubygems.org/gems/openapi_contracts)
 
-Years ago the API Design-first workflow was a rough approach, but thankfully a whole bunch of tooling developers spent those years making things excellent, and now it's easier than ever. Bump.sh adds to that legacy by adding amazing [change detection](/help/changes-management/), helping check the OpenAPI in your git repository for changes that would be breaking for end users, [letting you know in the pull request](/help/continuous-integration/github-actions/) when there's a problem, providing beyond a shadow of a doubt that having your OpenAPI as a source of truth in a git repository along with your source code is not only handy, but probably the best way to go for many teams. 
+Years ago the API Design-first workflow was a rough approach, but thankfully a whole bunch of tooling developers spent those years making things excellent, and now it's easier than ever. Bump.sh adds to that legacy by adding amazing [change detection](/help/changes-management/), helping check the OpenAPI in your git repository for changes that would be breaking for end users, [letting you know in the pull request](/help/continuous-integration/github-actions/) when there's a problem, providing beyond a shadow of a doubt that having your OpenAPI document as a source of truth in a git repository along with your source code is not only handy, but probably the best way to go for many teams. 
