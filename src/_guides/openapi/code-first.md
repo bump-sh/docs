@@ -158,7 +158,7 @@ Server-side validation with OpenAPI can avoid the need to write lots of request 
 	- [openapi-enforcer](https://www.npmjs.com/package/openapi-enforcer)
 	- [openapi-validator-middleware](https://www.npmjs.com/package/openapi-validator-middleware)
 - **Perl**
-	- [JSONSchema::Validator](https://metacpan.org/pod/JSONSchema::Validator)
+	- [JSONSchema Validator](https://metacpan.org/pod/JSONSchema::Validator)
 - **PHP**
 	- [openapi-psr7-validator](https://github.com/thephpleague/openapi-psr7-validator)
 - **Ruby**
