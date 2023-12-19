@@ -63,7 +63,7 @@ type Account struct {
 }
 ```
 
-Once the API, endpoints, and resources have all the appropriate annotations there is usually some sort of command you can run to get OpenAPI out of it, and that machine-readable OpenAPI can be used to deploy documentation to Bump.sh or wherever your API documentation lives.
+Once the API, endpoints, and resources have all the appropriate annotations there is usually some sort of command you can run to get an OpenAPI document out of it, and that machine-readable document can be used to deploy documentation to Bump.sh or wherever your API documentation lives.
 
 ```
 swag init --outputTypes yaml
@@ -73,7 +73,7 @@ bump deploy swagger.yaml \
   --token my-documentation-token
 ```
 
-This approach has been popular for years, with the main selling point being the idea that keeping OpenAPI metadata near the code will hopefully mean developers keep it up to date update as they work on the code. This is not always the case, which is one of a few reasons this practice is dying out. 
+This approach has been popular for years, with the main selling point being the idea that keeping OpenAPI metadata near the code will hopefully mean developers keep it up to date as they work on the code. This is not always the case, which is one of a few reasons this practice is dying out. 
 
 The other is that many of the annotation tools are stuck on older less useful versions of OpenAPI, namely v2.0 instead of v3.0, or the latest and greatest: v3.1.
 
