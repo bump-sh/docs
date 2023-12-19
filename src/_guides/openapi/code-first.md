@@ -140,7 +140,7 @@ With so many of the annotations approaches being outdated, and people usually un
 
 This is not just an opinion. Searching around the Go community for code-first tooling, most of the "How do I do Code-first in Go" search results show people talking about how they moved to API Design-first and massively prefer the approach.
 
-The main idea is that instead of writing loads of code and sprinkling in some annotations later to create docs, you create the OpenAPI before writing any code at all. This is usually in the form of JSON/YAML, but that does not need to be written by hand. There are lots of visual editors to help you build this all up through buttons and forms, with an increasing amount of intelligence to create things. If you're using VS Code then Copilot is actually incredibly good.  
+The main idea is that instead of writing loads of code and sprinkling in some annotations later to create docs, you create the OpenAPI document before writing any code at all. This is usually in the form of JSON/YAML, but that does not need to be written by hand. There are lots of visual editors to help you build this all up through buttons and forms, with an increasing amount of intelligence to create things. If you're using VS Code then Copilot is actually incredibly good for instance.
 
 Once you have the OpenAPI document you can leverage it at every step of the API lifecycle, producing mock APIs for clients to test assumptions with, produce client libraries without writing any code, make really effective contract testing, even generate backend code to get the application teams started once the contract is all signed off. API Design-first is a bit more work up front with a massive payoff in productivity going forwards and forever.
 
