@@ -1,9 +1,9 @@
 ---
 title: "Code-first: How to Generate OpenAPI Descriptions"
 authors: phil
-image: images/guides/ref_advanced_usages.png
-canonical_url: https://bump.sh/blog/openapi-asyncapi-ref-usage-guide
-excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI and AsyncAPI documents.
+# image: 
+# canonical_url: 
+excerpt: Learn how to generate OpenAPI from an existing codebase.
 ---
 
 API Code-first is the art of building an API, and then popping some annotations or metadata in there to output API documentation in an API description format like OpenAPI. There are a few conceptually different ways to do this, with new tools popping up to help make everything easier, so this guide will show you how those different types of tool work.
@@ -89,6 +89,7 @@ The other is that many of the annotation tools are stuck on older less useful ve
 	- [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.WebApi) (OAS 2.0)
 - **Node.JS**
 	- [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) (OAS 3.1, 3.0, & 2.0)
+  - [express-openapi](https://www.npmjs.com/package/express-openapi) (OAS 3.0, & 2.0)
 - **Ruby on Rails**
 	- [rswag](https://github.com/rswag/rswag/) (OAS 3.0 & 2.0)
 	- [OpenAPI-Rails](https://github.com/slate-studio/openapi-rails) (OAS 2.0)
@@ -96,7 +97,6 @@ The other is that many of the annotation tools are stuck on older less useful ve
 	- [drf-spectacular](https://github.com/tfranzel/drf-spectacular) (OAS 3.1 & 3.0)
 	- Django-REST-Swagger (OAS 2.0, abandoned)
 	- Flask-RESTplus (OAS 2.0, abandoned)
-
 - **Spring**
 	- [SpringFox](https://github.com/springfox/springfox) (OAS 3.0)
 
@@ -174,4 +174,4 @@ Responses can be validated using any existing test suite, with all popular testi
 - **Ruby**
 	- [rspec-openapi](https://github.com/exoego/rspec-openapi)
 
-Years ago the API Design-first workflow was a rough approach, but thankfully a whole bunch of tooling developers spent those years making things excellent, and now it's easier than ever. Bump.sh adds to that legacy by adding amazing [change detection](/help/changes-management/), helping check the OpenAPI in your git repository for changes that would be breaking for end users, letting you know in the pull request when there's a problem, providing beyond a shadow of a doubt that having your OpenAPI as a source of truth in a git repository along with your source code is not only handy, but probably the best way to go for many teams. 
+Years ago the API Design-first workflow was a rough approach, but thankfully a whole bunch of tooling developers spent those years making things excellent, and now it's easier than ever. Bump.sh adds to that legacy by adding amazing [change detection](/help/changes-management/), helping check the OpenAPI in your git repository for changes that would be breaking for end users, [letting you know in the pull request](/help/continuous-integration/github-actions/) when there's a problem, providing beyond a shadow of a doubt that having your OpenAPI as a source of truth in a git repository along with your source code is not only handy, but probably the best way to go for many teams. 
