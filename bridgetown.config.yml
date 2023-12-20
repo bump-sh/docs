@@ -50,7 +50,4 @@ collections:
     output: true
     future: true
 
-kramdown:
-  parse_html_blocks: true
-
-markdown: CustomMarkdownConverter
+markdown: Commonmarker
