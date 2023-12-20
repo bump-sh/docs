@@ -53,3 +53,5 @@ collections:
     sort_direction: descending
 kramdown:
   parse_html_blocks: true
+
+markdown: CustomMarkdownConverter
