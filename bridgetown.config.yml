@@ -52,3 +52,5 @@ collections:
 
 kramdown:
   parse_html_blocks: true
+
+markdown: CustomMarkdownConverter
