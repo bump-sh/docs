@@ -1,6 +1,6 @@
 ---
 title: What is OpenAPI?
-authors: Augmenting Generated OpenAPI Descriptions with Filters & Overlays
+authors: Augmenting Generated OpenAPI Documents with Filters & Overlays
 image: images/guides/what-is-openapi.png
 canonical_url: 
 excerpt: Enhance and enrich your OpenAPI descriptions without creating conflicts in the source code using filters and overlays.
@@ -224,12 +224,13 @@ info:
   title: Overlay to customise API for Protect Earth
   version: 0.0.1
 actions:
-  - target: '$.info.contact'
+  - target: '$.info'
     description: Let's have the public contact general support instead of whoever happened to release this API.
     update:
-      name: Protect Earth Support
-      url: https://protect.earth/contact
-      email: help@protect.earth
+      contact:
+        name: Protect Earth Support
+        url: https://protect.earth/contact
+        email: help@protect.earth
 ```
 
 This has done more than just update a string, this has replaced all these properties in an object with the new properties. This can be used to append more properties onto an object too.
