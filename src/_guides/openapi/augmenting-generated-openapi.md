@@ -139,19 +139,19 @@ For teams following an API Design First workflow (where you're managing your des
 
 OpenAPI has a new experimental extension called Overlays, put together by the OAI (OpenAPI Initiative), tooling vendors, and community members that all came together to make a specification. 
 
-It's early days for the standard, but there are a few implementations out there already, so you can use it now! The implementation I've been playing with is part of the [Speakeasy CLI](https://www.speakeasyapi.dev/docs/speakeasy-cli/getting-started), so [install that first](https://github.com/speakeasy-api/speakeasy).
+It's early days for the standard, but Bump.sh added experimental support for Overlays in the Bump CLI, meaning you can use it right now.
 
 ```
-# macOS or linux
-brew install speakeasy-api/homebrew-tap/speakeasy
-
-# Windows
-choco install speakeasy
+npm install -g bump-cli@beta
 ```
 
-Once again I'm looking at a fairly generic `openapi.yaml` published by another team and thinking I could improve that.
+Let's take a look at some example use cases.
 
-```
+### Example: Update API Description with Overlays
+
+Here we have a fairly generic `openapi.yaml` which was published by another team, not really intending it for a public audience.
+
+```yaml
 openapi: 3.1.0
 info:
   title: Tree Tracker API
@@ -189,29 +189,36 @@ Now that we've pointed to the right bit of the OpenAPI document, we can update i
 With the original `openapi.yaml` saved, and this new `overlays.yaml` document, we can run this command to make it all happen.
 
 ```
-$ speakeasy overlay apply -s openapi.yaml -o overlays.yaml > openapi.public.yaml
+$ bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
 ```
 
 Now in `openapi.public.yaml` I can see my handy new description.
 
 ```yaml
+# openapi.yaml
+openapi: 3.1.0
 info:
-    title: Tree Tracker API
-    description: 'Hey everyone this is a really cool for Protect Earth''s Tree Tracker, so you can see what we''ve been planting and restoring all around the UK, and help support our work by directly funding the trees we plant or the sites we restore.
+  title: Tree Tracker API
+  description: >-
+    Protect Earth's Tree Tracker API will let you see what we've been planting
+    and restoring all around the UK, and help support our work by directly
+    funding the trees we plant or the sites we restore.
 
-        To get involved [contact us and ask for an access token](https://protect.earth/contact) then [check out the API documentation](https://protect.earth/api).'
-   
+    To get involved [contact us and ask for an access
+    token](https://protect.earth/contact) then [check out the API
+    documentation](https://protect.earth/api).
 ```
 
-There it is! A public facing description for the public. 
+There, that's a lot more useful!
 
-*The whitespace looks a little funky but don't worry about that, its turned the multiline YAML string from folded and stripped `>-` to a Single-quoted Flow Scalars. [YAML multiline is a whole topic](https://yaml-multiline.info/), but **tl;dr:** this should show up just fine in your documentation tools.*
+A pretty simple example, but hopefully an illustrative one, and the use cases can go as far as your creativity. Let's try some more out.
 
-The use cases get a lot more interesting than just that. 
+### Example: Updating Public Contact Info
 
 Perhaps your API dev teams are putting their own work emails into the contacts. That is great for internal usage, but you probably don't want the entire world emailing that one developer. Let's swap `info.contact` for a more generic email: 
 
-```
+```yaml
+# overlays.yaml
 overlay: 1.0.0
 info:
   title: Overlay to customise API for Protect Earth
@@ -227,9 +234,12 @@ actions:
 
 This has done more than just update a string, this has replaced all these properties in an object with the new properties. This can be used to append more properties onto an object too.
 
+### Example: Adding Descriptions to Tags
+
 Developers not adding descriptions for tags? They're a great place to put a lot more information about what an "Order" or "Organization" is in the context of this API, so let's expand on that.
 
-```
+```yaml
+# overlays.yaml
 overlay: 1.0.0
 info:
   title: Overlay to customise API for Protect Earth
@@ -254,7 +264,9 @@ actions:
 
 Yeah that JSONPath is a bit wild, but by popping the whole OpenAPI description document (converted to JSON) into [the JSONPath Online Evaluator](https://jsonpath.com/) and taking a quick browse of the docs helped me get there.
 
-How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit.
+### Deploy Overlay Changes to Bump
+
+How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use Bump CLI (as overlay support has not been added to the GitHub Action just yet).
 
 ```yaml
 # .github/workflows/bump.yml
@@ -274,18 +286,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
-      - name: Install Overalls dependencies
-        run: |
-          brew install speakeasy-api/homebrew-tap/speakeasy
-
       - name: Apply Overlays to customise OpenAPI
         working-directory: ./api
         run: |
-          speakeasy overlay apply -s openapi.yaml -o overlays.yaml > openapi.public.yaml
+          npx bump-cli@beta overlay openapi.yaml overlays.yaml > openapi.public.yaml
 
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
@@ -295,9 +299,7 @@ jobs:
           file: api/openapi.public.yaml
 ```
 
-
-
-## MOdifying Servers with Overlays
+### Example: Removing Development Servers with Overlays
 
 Before you send OpenAPI-based API documentation out to the public you may want to remove development and staging servers to avoid confusing end-users, and in the past that's been something that has caused conflict with dev teams. Do you force them to remove it from their OpenAPI, despite it being useful for them, or do you try and hack it later? 
 
@@ -335,7 +337,7 @@ actions:
     remove: true
 ```
 
-This action will remove any servers with a `description` of "Development" or "Staging". This approach could also be done with openapi-filters if you pop `x-internal` on there, so there is a bit of crossover.
+This action will remove any servers with a `description` of "Development" or "Staging". This approach could also be done with openapi-filters if you pop `x-internal` on there, so there is a bit of crossover in what can be done.
 
 ## Summary
 
@@ -343,17 +345,4 @@ Filters are a quick and relatively simple way to customize OpenAPI, but they can
 
 Overlays are a lot more advanced and can do both removals and updates. It's a bit harder to work with, and the Speakeasy dependency is not the easiest to install on some computers (especially Continuous Integration environments), but the power is incredible.
 
-Being able to change things however you like and publish that off seamlessly is really handy, and will hopefully be the last time you need to do awkward JSON/YAML hacking on other peoples documents. JSONPath is a tricky thing to learn, but if you can master regex you can master JSONPath.
-
-
-
-## Further Thoughts - not for inclusion
-
-Beware how you split up files, because if your flag lives inside a `$ref` you will need to run the filter on that file directly, and that could lead to confusion. For example when I tried to use this structure I had a invalid $ref error... 
-```
-paths:
-  /upload:
-    $ref: paths/upload.yaml
-```
-
-You can get around this by [bundling first](https://docs.bump.sh/guides/openapi/advanced-ref-usage/), then filtering, then deploying.
+Being able to change things however you like, then publish the changed versions off seamlessly is really handy, and will hopefully be the last time you need to do awkward JSON/YAML hacking on other peoples documents. JSONPath is a tricky thing to learn, but if you can master regex you can master JSONPath, then the world is your oyster.
