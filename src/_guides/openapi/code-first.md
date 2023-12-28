@@ -1,5 +1,5 @@
 ---
-title: "Code-first: How to Generate OpenAPI Descriptions"
+title: "Code-first: How to Generate OpenAPI from Code"
 authors: phil
 # image: 
 # canonical_url: 
@@ -13,6 +13,7 @@ For those of you used to the API Code-first here are the three main workflows yo
 - [Annotations](#annotations)
 - [OpenAPI-aware Frameworks](#openapi-aware-frameworks)
 - [Traffic Sniffing](#traffic-sniffing)
+- [Code-first usually needs enhancing](#code-first-usually-needs-enhancing)
 - [Move to API Design-first](#move-to-api-design-first)
 
 ## Annotations 
@@ -133,6 +134,10 @@ There's [a whole category of tools](https://openapi.tools/#learning) popping up,
 Basically you run an instance of your API somewhere (could be local, test, staging, or even production) and put as much web traffic through it as possible. It will then learn how all the requests and responses look, and produce the best composite OpenAPI that it possibly can.
 
 This is mostly useful as a one-off, a way to produce a bunch of OpenAPI that you then manage and maintain yourself, because running this forever is not a sensible workflow and will generally only get things 90% right. You need to do the work to get to 100%, but at least you didn't have to do all of the work of making that initial OpenAPI for an API that already exists. That's going to be arduous, boring, and likely rife with human error.
+
+## Code-first usually needs enhancing
+
+Whether you're generating from annotations, the framework, or HTTP traffic, there's a strong chance that you'll need to put some work in to improve the quality of that OpenAPI. It's going to be missing long form descriptions, the sort of content that tech writers often produce, and depending on the tool used it's probably going to be missing examples too. In order to improve this you can use OpenAPI Overlays to enrich the generated OpenAPI with your own logic, and avoid it being overridden the next time OpenAPI is generated.
 
 ## Move to API Design-first
 
