@@ -93,7 +93,7 @@ Now whenever anyone commits it'll publish the automatically created filtered `op
 
 You could also use this approach to deploy _two different_ sets of documentation, maybe on different [Bump.sh Hubs](https://bump.sh/api-catalog) for different teams with different permissions. 🙌
 
-**Another scenario:** what if we have been adding some new endpoints which aren't quite ready yet? Let's add the `Beta` tag to tall those operations then filter then out.
+**Another scenario:** what if we have been adding some new endpoints which aren't quite ready yet? Bump.sh users can use the `x-beta: true` [vender extension](/help/specification-support/doc-beta/) and filter that just as you would with `x-internal`. Another approach would be to use tags to mark things as beta, because openapi-filter will let you use tags as flags with the `--checkTags` flag. Here we can look for the `Beta` tag, and filter out any operations that use it.
 
 ```
   '/webhook/orders':
