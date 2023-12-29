@@ -13,7 +13,6 @@ For those of you used to the API Code-first here are the three main workflows yo
 - [Annotations](#annotations)
 - [OpenAPI-aware Frameworks](#openapi-aware-frameworks)
 - [Traffic Sniffing](#traffic-sniffing)
-- [Code-first usually needs enhancing](#code-first-usually-needs-enhancing)
 - [Move to API Design-first](#move-to-api-design-first)
 
 ## Annotations 
