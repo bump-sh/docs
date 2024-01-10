@@ -15,7 +15,7 @@ Bump.sh keeps your API docs always synchronized with your codebase. With this [G
 
 Start with creating a documentation on [Bump.sh](https://bump.sh).
 
-Once you've set up an API Documentation, go to Settings > CI Deployment, copy the access token, then add it to GitHub Settings > Secrets > Actions as a new environment secret called `BUMP_TOKEN`.
+Once you've set up an API Documentation, go to Settings > CI Deployment, copy the access token, then add it to GitHub Settings > Secrets > Actions as a new repository secret called `BUMP_TOKEN`.
 
 Then you can pick from one of the three following API workflow files.
 
