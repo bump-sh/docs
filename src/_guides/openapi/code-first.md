@@ -166,6 +166,7 @@ Server-side validation with OpenAPI can avoid the need to write lots of request 
 - **PHP**
 	- [openapi-psr7-validator](https://github.com/thephpleague/openapi-psr7-validator)
 - **Ruby**
+    - [openapi_first](https://github.com/ahx/openapi_first)
 	- [committee](https://rubygems.org/gems/committee)
 
 Responses can be validated using any existing test suite, with all popular testing frameworks supporting OpenAPI by extension. 
@@ -176,6 +177,6 @@ Responses can be validated using any existing test suite, with all popular testi
 - **PHP**
 	- [Spectator](https://github.com/hotmeteor/spectator)
 - **Ruby**
-	- [rspec-openapi](https://github.com/exoego/rspec-openapi)
+	- [openapi_contracts](https://github.com/mkon/openapi_contracts/)
 
 Years ago the API Design-first workflow was a rough approach, but thankfully a whole bunch of tooling developers spent those years making things excellent, and now it's easier than ever. Bump.sh adds to that legacy by adding amazing [change detection](/help/changes-management/), helping check the OpenAPI in your git repository for changes that would be breaking for end users, [letting you know in the pull request](/help/continuous-integration/github-actions/) when there's a problem, providing beyond a shadow of a doubt that having your OpenAPI as a source of truth in a git repository along with your source code is not only handy, but probably the best way to go for many teams. 
