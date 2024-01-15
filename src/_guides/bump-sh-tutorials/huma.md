@@ -140,7 +140,7 @@ go run . openapi
 go run . openapi > openapi.yaml
 ```
 
-Deploying to Bump.sh automatically through GitHub Actions now only involves running this command and pointing to the OpenAPI you created. This example will do both the deployment and the diff checking, but you can pick one or the other, or keep both.
+Deploying to Bump.sh automatically through [GitHub Actions](https://github.com/marketplace/actions/bump-sh) now only involves running this command and pointing to the OpenAPI you created. This example will do both the deployment and the diff checking, but you can pick one or the other, or keep both.
 
 ```yaml
 name: Check & deploy API documentation
@@ -201,7 +201,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/getting-started/quick-start#customization-options).
+That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/getting-started/quick-start#customization-options). Check out the [Bump.sh GitHub Action](https://github.com/marketplace/actions/bump-sh) or other [continuous integration](https://docs.bump.sh/help/continuous-integration/) options.
 
 ## Sample Code
 
