@@ -198,3 +198,7 @@ jobs:
 ```
 
 That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/getting-started/quick-start#customization-options).
+
+## Sample Code
+
+The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [go-hello-openapi](https://github.com/philsturgeon/go-hello-openapi), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/go-hello-openapi) is over here.
