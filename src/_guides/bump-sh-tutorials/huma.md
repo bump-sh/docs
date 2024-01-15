@@ -34,7 +34,7 @@ The following assumes your local machine is configured with Golang and you have 
 
 Running a web server and deploying that to Bump.sh might be ok locally, but if you'd like to automate everything properly it might become complicated to run an entire server instance on something like GitHub Actions. Let's skip that, and configure Huma to output OpenAPI via a CLI Command.
 
-It's actually designed to do this, and whilst it's not documented currently there is [an example](https://github.com/danielgtaylor/huma/blob/main/examples/spec-cmd/main.go) in the codebase:
+It's actually designed to do this, and whilst it's not documented currently there is [an example](https://github.com/danielgtaylor/huma/blob/3a7da129f4dccc8191b614206f63ebca1fcced1e/examples/spec-cmd/main.go) in the codebase:
 
 Here's the important part:
 
