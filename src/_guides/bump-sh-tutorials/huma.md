@@ -10,25 +10,29 @@ excerpt: Generating OpenAPI for Go APIs
 
 The following assumes your local machine is configured with Golang and you have a Huma app running on your local machine, and that your main file is named `main.go`. If you don't have a Huma app set up, follow their [Your First API guide](https://huma.rocks/tutorial/your-first-api/).
 
-1. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+**Step 1:** [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
 
-2. Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true) as below, or use [alternative options](/help/bump-cli), with
-  ```bash
-  npm install -g bump-cli
-  ```
+**Step 2:** Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true) as below, or use [alternative options](/help/bump-cli)
 
-3. Launch your local server with
-  ```bash
-  go run .
-  ```
-  This will run not only the application, but it will make API documentation available on <http://127.0.0.1:8000/>.
+```bash
+npm install -g bump-cli
+```
 
-4. Deploy your doc to Bump.sh.
-  ```bash
-  bump deploy http://localhost:8888/openapi.yaml \
-    --doc my-documentation-name \
-    --token my-documentation-token
-  ```
+**Step 3:** Launch your local server with
+  
+```bash
+go run .
+```
+
+This will run not only the application, but it will make API documentation available on <http://127.0.0.1:8000/>.
+
+**Step 4:** Deploy your documentation to Bump.sh.
+   
+```bash
+bump deploy http://localhost:8888/openapi.yaml \
+  --doc my-documentation-name \
+  --token my-documentation-token
+```
 
 ## Export OpenAPI for Continuous Integration
 
