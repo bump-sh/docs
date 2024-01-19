@@ -128,7 +128,7 @@ end
 $ rake rswag
 
 Generating Swagger docs ...
-Swagger doc generated at /Users/phil/src/rails-hello-openapi/swagger/v1/swagger.yaml
+Swagger doc generated at /Users/phil/src/rails-code-first/swagger/v1/swagger.yaml
 ```
 
 **Step 7:** OpenAPI being generated means we can deploy it to Bump.sh. # Deploying OpenAPI documentation to Bump.sh. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
@@ -254,4 +254,4 @@ The [RSwag DSL documentation](https://github.com/rswag/rswag/#the-rspec-dsl) can
 
 ## Sample Code
 
-The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [rails-hello-openapi](https://github.com/bump-sh/rails-hello-openapi), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-hello-openapi) is over here.
+The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [rails-code-first](https://github.com/bump-sh/rails-code-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-hello-openapi) is over here.

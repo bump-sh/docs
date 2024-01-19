@@ -191,4 +191,4 @@ It can also power contract testing in your existing test suite, and [openapi_con
 ## Sample Code
 
 The sample code for this design first guide is published on GitHub, so please
-take a look at [rails-design-first](https://github.com/philsturgeon/rails-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/go-hello-openapi) is over here.
+take a look at [rails-design-first](https://github.com/philsturgeon/rails-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-design-first) is over here.
