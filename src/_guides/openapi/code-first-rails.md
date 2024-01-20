@@ -255,3 +255,10 @@ The [RSwag DSL documentation](https://github.com/rswag/rswag/#the-rspec-dsl) can
 ## Sample Code
 
 The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [rails-code-first](https://github.com/bump-sh/rails-code-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-hello-openapi) is over here.
+
+## Honorable Mentions
+
+If rswag is not working out for you, take a look at some of these tools.
+
+- [ZRO: OpenAPI Generator for Rails](https://github.com/zhandao/zero-rails_openapi)
+- [rspec-openapi](https://rubygems.org/gems/rspec-openapi/)
