@@ -26,10 +26,10 @@ Building an API for a bunch of clients is always a tricky one, but by deploying 
 
 ```bash
 $ bump deploy api/openapi.yaml \
-  --doc my-documentation-name \
+  --doc rails-design-first \
   --token my-documentation-token
 
-* Your new documentation version will soon be ready at https://bump.sh/philsturgeon/doc/rails-design-first
+* Your new documentation version will soon be ready at https://bump.sh/bump-examples/hub/code-samples/doc/rails-design-first
 ```
 
 Instead of using the [CLI](https://github.com/bump-sh/cli#bump-deploy-file) you could use [GitHub Actions](https://github.com/marketplace/actions/bump-sh), or a bunch of other [Continuous Integration](https://docs.bump.sh/help/continuous-integration/). 
@@ -78,7 +78,7 @@ Instead of wasting loads of time writing out validation logic in dry or whatever
   $ rails s
   ```
   
-1. Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/philsturgeon/rails-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
+1. Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/bump-sh-examples/rails-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
 
   ```
   $ curl -X POST http://localhost:3000/widgets -H "Content-Type: application/json" -d '{}'  | jq .
@@ -191,4 +191,4 @@ It can also power contract testing in your existing test suite, and [openapi_con
 ## Sample Code
 
 The sample code for this design first guide is published on GitHub, so please
-take a look at [rails-design-first](https://github.com/philsturgeon/rails-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-design-first) is over here.
+take a look at [rails-design-first](https://github.com/bump-sh-examples/rails-design-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-design-first) is over here.
