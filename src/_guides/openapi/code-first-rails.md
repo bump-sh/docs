@@ -133,7 +133,7 @@ Generating Swagger docs ...
 Swagger doc generated at /Users/phil/src/rails-code-first/swagger/v1/swagger.yaml
 ```
 
-**Step 7:** OpenAPI being generated means we can deploy it to Bump.
+**Step 7:** OpenAPI being generated means we can deploy it to Bump.sh.
 
 > Deploying OpenAPI documentation to Bump.sh.
 > - [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
