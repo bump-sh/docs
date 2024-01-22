@@ -23,9 +23,9 @@ The API design-first workflow means you'll need to create your OpenAPI descripti
 
 Alternatively you can grab some sample OpenAPI from the API Guru Marketplace, and click JSON or YAML to download their OpenAPI descriptions.
 
-Either way, once you have some an OpenAPI description document, pop it into your Git repository somewhere like `api/openapi.yaml`. 
+Either way, once you have an OpenAPI description document, pop it into your Git repository somewhere like `api/openapi.yaml`. 
 
-Building an API for a bunch of clients is always a tricky one, but by deploying the documentation first you can see if people like the look of the API before you waste a bunch of time building it. Then as you progress through, especially if you are adding these tools to an existing codebase, you will continue to find mistakes in your OpenAPI or your actual API code, improving both as you go until you have a perfect match that will never again be broken, solving the "docs vs code" drift problem, and every fix will be deployed to Bump.sh with each commit/merge.
+Building an API for a bunch of clients is always a tricky one, but by deploying the documentation first, you can see if people like the look of the API before you waste time building it. Then, as you progress through, especially if you add these tools to an existing codebase, you will continue to find mistakes in your OpenAPI or your actual API code. Improve both as you go until you have a perfect match that will never again be broken, solving the "docs vs code" drift problem, and every fix will be deployed to Bump.sh with each commit/merge.
 
 ```bash
 $ bump deploy api/openapi.yaml \
@@ -316,5 +316,4 @@ It shows how easy it can be to make mistakes and mismatches between your API and
 
 ## Sample Code
 
-The sample code for this design first guide is published on GitHub, so please
-take a look at [laravel-design-first](https://github.com/philsturgeon/laravel-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-design-first) is over here.
+The sample code for this design first guide is published on GitHub, so please take a look at [laravel-design-first](https://github.com/philsturgeon/laravel-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-design-first) is over here.
