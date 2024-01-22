@@ -7,9 +7,11 @@ excerpt: This guide describes, in a code-first approach and RoR codebase, how to
 API Code-first is the art of building an API, and then popping some annotations or metadata in there to output API documentation in an API description format like [OpenAPI](https://spec.openapis.org/oas/latest.html).
 
 The most popular API Code-first approach in Ruby on Rails uses a tool called [RSwag](https://github.com/rswag/rswag/).
-With RSwag you write the OpenAPI for each API endpoint into special tests, which help to confirm your responses are matching the OpenAPI you've just written. 
+With RSwag you write the OpenAPI for each API endpoint into special tests, which help to confirm your responses are matching the OpenAPI you've just written.
 
 ## Creating OpenAPI with RSwag
+
+_This guide assumes you want to use `RSpec` as your testing framework in your application._
 
 **Step 1:** Add the rswag dependencies to the `Gemfile`.
 
@@ -18,12 +20,12 @@ With RSwag you write the OpenAPI for each API endpoint into special tests, which
   gem 'rspec-rails'
   gem 'rswag'
   ```
-  
+
 **Step 2:** Install the new dependencies and run the rswag generator.
   ```bash
   bundle install
   ```
-  You'll need to run the [rspec](https://rspec.info/) generator if you are not already using rspec.
+  You'll need to run the [rspec](https://rspec.info/) generator if it's the first time you use rspec.
   ```
   rails generate rspec:install
   ```
@@ -47,7 +49,7 @@ rails generate rspec:swagger WidgetsController
 ```
 
 **Step 5:** This will create `spec/requests/widgets_spec.rb` which will look like this:
-  
+
 ```ruby
 require 'swagger_helper'
 
@@ -131,10 +133,16 @@ Generating Swagger docs ...
 Swagger doc generated at /Users/phil/src/rails-code-first/swagger/v1/swagger.yaml
 ```
 
-**Step 7:** OpenAPI being generated means we can deploy it to Bump.sh. # Deploying OpenAPI documentation to Bump.sh. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+**Step 7:** OpenAPI being generated means we can deploy it to Bump.
+
+> Deploying OpenAPI documentation to Bump.sh.
+> - [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
+> - Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+{: .info}
+
 
 **Step 8:** Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true).
-  
+
 ```bash
 npm install -g bump-cli
 ```
@@ -164,18 +172,22 @@ It looks like a start, but it's missing a whole lot of the what, and the why, wh
       produces 'application/json'
 
       response 200, 'successful' do
-        header 'Cache-Control', schema: { type: :string }, description: 'This header declares the cacheability of the content so you can skip repeating requests.'
-        
+        header 'Cache-Control', schema: { type: :string }, description: <<~HEADER
+          This header declares the cacheability of the content so you can skip repeating requests.
+
+          Values can be `max-age`, `must-revalidate` and `private`. It can also combine any of those separated by a comma. E.g. `Cache-Control: max-age=604800, must-revalidate`
+        HEADER
+
         schema type: 'array',
           items: {
             type: 'object',
             properties: {
-              id: { 
+              id: {
                 type: 'string',
                 format: 'uuid',
                 example: '123e4567-e89b-12d3-a456-426614174000',
               },
-              title: { 
+              title: {
                 type: 'string',
                 example: 'Neuralyzer',
               },
@@ -198,12 +210,12 @@ It looks like a start, but it's missing a whole lot of the what, and the why, wh
         ]
         run_test!
       end
-      
+
       response 429, 'too many requests' do
         header 'X-Rate-Limit-Limit', schema: { type: :integer }, description: 'The number of allowed requests in the current period'
         header 'X-Rate-Limit-Remaining', schema: { type: :integer }, description: 'The number of remaining requests in the current period'
         header 'X-Rate-Limit-Reset', schema: { type: :integer }, description: 'The number of seconds left in the current period'
-       
+
         run_test!
       end
     end
@@ -213,11 +225,15 @@ This is a lot, but let's walk through some of those changes.
 
 The `produces: application/json` explains that the output is JSON, and seems to fix a bug in rswag where a lot of other OpenAPI won't show up.
 
-Then in the 200 response we've described headers, including this one for cache controls so clients know theycan use [client caching middleware](https://apisyouwonthate.com/blog/http-client-response-caching/) if they want to cut down on wasteful repeat requests.
+Then in the 200 response we've described headers, including this one for cache controls so clients know they can use [client caching middleware](https://apisyouwonthate.com/blog/http-client-response-caching/) if they want to cut down on wasteful repeat requests. Please note we have used a multiline text to describe the header in the OpenAPI document and that it supports Markdown.
 
 ```ruby
 response 200, 'successful' do
-  header 'Cache-Control', schema: { type: :string }, description: 'This header declares the cacheability of the content so you can skip repeating requests.'
+  header 'Cache-Control', schema: { type: :string }, description: <<~HEADER
+    This header declares the cacheability of the content so you can skip repeating requests.
+
+    Values can be `max-age`, `must-revalidate` and `private`. It can also combine any of those separated by a comma. E.g. `Cache-Control: max-age=604800, must-revalidate`
+  HEADER
 ```
 
 The schema block is OpenAPI, but written in Ruby syntax instead of JSON or YAML so we can cut down on some of the parenthesis. This explains what properties can be expected in the response body, and what format they'll use (UUID, date time instead of unix, etc.) You can even provide an example for the property, to help Bump automatically construct an example for the whole response body to avoid needing to do that yourself.
@@ -227,12 +243,12 @@ schema type: 'array',
   items: {
     type: 'object',
     properties: {
-      id: { 
+      id: {
         type: 'string',
         format: 'uuid',
         example: '123e4567-e89b-12d3-a456-426614174000',
       },
-      title: { 
+      title: {
         type: 'string',
         example: 'Neuralyzer',
       },
@@ -248,13 +264,13 @@ schema type: 'array',
   }
 ```
 
-Try making similar changes yourself and running `rake rswag` again to update `swagger/v1/swagger.yaml`. Then either use `bump deploy` to update your hosted documentation, or `bump preview swagger/v1/swagger.yaml` to see how it looks without deploying it.
+Try making similar changes yourself and running `rake rswag` again to update `swagger/v1/swagger.yaml`. Then either use `bump deploy` to update your hosted documentation, or `bump preview --live --open swagger/v1/swagger.yaml` to see how it looks without deploying it everytime your make a change in your spec file.
 
 The [RSwag DSL documentation](https://github.com/rswag/rswag/#the-rspec-dsl) can help you with all sorts of improvements, including creating examples, adding security schemes, and using `$ref` to [reduce repetition in your OpenAPI](/guides/openapi/advanced-ref-usage/).
 
 ## Sample Code
 
-The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [rails-code-first](https://github.com/bump-sh/rails-code-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-hello-openapi) is over here.
+The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [rails-code-first](https://github.com/bump-sh-examples/rails-code-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/rails-hello-openapi) is over here.
 
 ## Honorable Mentions
 
