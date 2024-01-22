@@ -43,7 +43,7 @@ Once Bump.sh is hooked up, let's look at how we'd teach a Laravel API (new, or e
 
 Instead of wasting loads of time writing out validation logic in PHP, why not just point it at an existing OpenAPI description and skip repeating yourself? You don't need to spend forever writing out that name is required, email is also required and looks like an email address, date of birth is a date and optional... that's what your OpenAPI description already says, and because it's in a machine readable format you can just use it as code.
 
-We're working with some [sample code](https://github.com/philsturgeon/laravel-design-first/) in this guide, which has a basic `POST /widgets` endpoint. If I try to create a widget without providing the required description it will give me this database error. 
+We're working with some [sample code](https://github.com/bump-sh-examples/laravel-design-first) in this guide, which has a basic `POST /widgets` endpoint. If I try to create a widget without providing the required description it will give me this database error.
 
 ```
 $ curl -X POST http://localhost:8000/api/widgets \
@@ -106,7 +106,7 @@ The "entry file" that is usually called `openapi.yaml` can live anywhere, but in
 php artisan serve
 ```
 
-**Step 6:** Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/philsturgeon/laravel-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
+**Step 6:** Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/bump-sh-examples/laravel-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
 
 ```
 $ curl -X POST http://localhost:8000/api/widgets \
@@ -316,4 +316,4 @@ It shows how easy it can be to make mistakes and mismatches between your API and
 
 ## Sample Code
 
-The sample code for this design first guide is published on GitHub, so please take a look at [laravel-design-first](https://github.com/philsturgeon/laravel-design-first/), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-design-first) is over here.
+The sample code for this design first guide is published on GitHub, so please take a look at [laravel-design-first](https://github.com/bump-sh-examples/laravel-design-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-design-first) is over here.
