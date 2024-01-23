@@ -15,24 +15,25 @@ _This guide assumes you want to use `RSpec` as your testing framework in your ap
 
 **Step 1:** Add the rswag dependencies to the `Gemfile`.
 
-  ```ruby
-  # Gemfile
-  gem 'rspec-rails'
-  gem 'rswag'
-  ```
+```ruby
+# Gemfile
+gem 'rspec-rails'
+gem 'rswag'
+```
 
 **Step 2:** Install the new dependencies and run the rswag generator.
-  ```bash
-  bundle install
-  ```
-  You'll need to run the [rspec](https://rspec.info/) generator if it's the first time you use rspec.
-  ```
-  rails generate rspec:install
-  ```
-  Then run the rswag generator.
-  ```
-  rails generate rswag:install
-  ```
+
+```bash
+bundle install
+```
+You'll need to run the [rspec](https://rspec.info/) generator if it's the first time you use rspec.
+```
+rails generate rspec:install
+```
+Then run the rswag generator.
+```
+rails generate rswag:install
+```
 
 **Step 3:** You'll need some controllers/models to describe, which your application probably already has. If you need to make some, use the following scaffold command to add everything Rails related.
 

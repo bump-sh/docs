@@ -9,6 +9,7 @@ Ruby on Rails developers are blessed with a bunch of great [OpenAPI](https://spe
 Instead of writing loads of code and sprinkling in some metadata later to create docs, the design-first workflow assumes you create the OpenAPI descriptions before writing any code at all. Once you have the OpenAPI description documents saved in your repository, you can leverage it at every step of the API lifecycle, to produce mock APIs for clients to test assumptions with, build client libraries without writing any code, make really effective contract testing, and even generate backend code to get the application teams started once the contract is all signed off.
 
 This guide is going to look at two specific parts of the API design-first workflow that are most helpful to documentation, and show how to set it up in Rails: request validation automatically, and contract testing responses.
+
 - [Getting OpenAPI \& Bump.sh Setup](#getting-openapi--bumpsh-setup)
 - [Request Validation powered by OpenAPI](#request-validation-powered-by-openapi)
 - [Contract Testing with OpenAPI](#contract-testing-with-openapi)
