@@ -165,61 +165,61 @@ It looks like a start, but it's missing a whole lot of the what, and the why, wh
 
 **Step 11:** Going back to `spec/requests/widgets_spec.rb` we leverage the DSL to improve our tests, and improve our OpenAPI. Lets add some headers, a schema to explain how the object is going to look, and a few error responses.
 
-  ```ruby
-    path '/widgets' do
+```ruby
+  path '/widgets' do
 
-    get 'list widgets'  do
-      produces 'application/json'
+  get 'list widgets'  do
+    produces 'application/json'
 
-      response 200, 'successful' do
-        header 'Cache-Control', schema: { type: :string }, description: <<~HEADER
-          This header declares the cacheability of the content so you can skip repeating requests.
+    response 200, 'successful' do
+      header 'Cache-Control', schema: { type: :string }, description: <<~HEADER
+        This header declares the cacheability of the content so you can skip repeating requests.
 
-          Values can be `max-age`, `must-revalidate` and `private`. It can also combine any of those separated by a comma. E.g. `Cache-Control: max-age=604800, must-revalidate`
-        HEADER
+        Values can be `max-age`, `must-revalidate` and `private`. It can also combine any of those separated by a comma. E.g. `Cache-Control: max-age=604800, must-revalidate`
+      HEADER
 
-        schema type: 'array',
-          items: {
-            type: 'object',
-            properties: {
-              id: {
-                type: 'string',
-                format: 'uuid',
-                example: '123e4567-e89b-12d3-a456-426614174000',
-              },
-              title: {
-                type: 'string',
-                example: 'Neuralyzer',
-              },
-              created_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-              updated_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-            }
+      schema type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'string',
+              format: 'uuid',
+              example: '123e4567-e89b-12d3-a456-426614174000',
+            },
+            title: {
+              type: 'string',
+              example: 'Neuralyzer',
+            },
+            created_at: {
+              type: 'string',
+              format: 'date-time',
+            },
+            updated_at: {
+              type: 'string',
+              format: 'date-time',
+            },
           }
+        }
 
-        example 'application/json', :example_key, [
-          {
-            id: 1,
-            title: 'Neuralyzer',
-          }
-        ]
-        run_test!
-      end
-
-      response 429, 'too many requests' do
-        header 'X-Rate-Limit-Limit', schema: { type: :integer }, description: 'The number of allowed requests in the current period'
-        header 'X-Rate-Limit-Remaining', schema: { type: :integer }, description: 'The number of remaining requests in the current period'
-        header 'X-Rate-Limit-Reset', schema: { type: :integer }, description: 'The number of seconds left in the current period'
-
-        run_test!
-      end
+      example 'application/json', :example_key, [
+        {
+          id: 1,
+          title: 'Neuralyzer',
+        }
+      ]
+      run_test!
     end
-  ```
+
+    response 429, 'too many requests' do
+      header 'X-Rate-Limit-Limit', schema: { type: :integer }, description: 'The number of allowed requests in the current period'
+      header 'X-Rate-Limit-Remaining', schema: { type: :integer }, description: 'The number of remaining requests in the current period'
+      header 'X-Rate-Limit-Reset', schema: { type: :integer }, description: 'The number of seconds left in the current period'
+
+      run_test!
+    end
+  end
+```
 
 This is a lot, but let's walk through some of those changes.
 

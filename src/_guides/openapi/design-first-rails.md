@@ -40,16 +40,16 @@ Once Bump.sh is hooked up, let's look at how we'd teach a Rails API (new, or exi
 
 Instead of wasting loads of time writing out validation logic in dry or whatever other DSL, why not just point it at an existing OpenAPI description document and skip repeating yourself? You don't need to spend forever writing out that name is required, email is also required and an email address, date of birth is a date and optional... that's what your OpenAPI description already says, and because it's in a machine readable format you can just use it as code.
 
-1. Add the [openapi_first](https://rubygems.org/gems/openapi_first) gems to your `Gemfile`.
+**Step 1:** Add the [openapi_first](https://rubygems.org/gems/openapi_first) gems to your `Gemfile`.
 
   ```ruby
   # Gemfile
   gem 'openapi_first', '~> 1.0'
   ```
 
-2. Run `bundle install` in the CLI.
+**Step 2:** Run `bundle install` in the CLI.
 
-3. Add the request validation middleware to the Rails application config.
+**Step 3:** Add the request validation middleware to the Rails application config.
 
   ```ruby
   # config/application.rb
@@ -72,13 +72,13 @@ Instead of wasting loads of time writing out validation logic in dry or whatever
   end
   ```
 
-4. Start your server up and try it out! 
+**Step 4:** Start your server up and try it out! 
 
   ```
   $ rails s
   ```
   
-1. Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/bump-sh-examples/rails-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
+**Step 5:** Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/bump-sh-examples/rails-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
 
   ```
   $ curl -X POST http://localhost:3000/widgets -H "Content-Type: application/json" -d '{}'  | jq .
@@ -119,16 +119,16 @@ So long as you keep deploying OpenAPI changes to Bump using the CLI or GitHub Ac
 
 It can also power contract testing in your existing test suite, and [openapi_contracts](https://rubygems.org/gems/openapi_contracts) can help out.
 
-1. Add the openapi_first gems to your `Gemfile`.
+**Step 1:** Add the openapi_first gems to your `Gemfile`.
 
   ```ruby
   # Gemfile
   gem 'openapi_contracts'
   ```
 
-2. Run `bundle install` in the CLI.
+**Step 2:** Run `bundle install` in the CLI.
 
-3. Add this to `spec/rails_helper.rb` to let openapi_contracts know where your OpenAPI lives in the codebase. If this file does not exist make sure RSpec is setup and installed and run `rails generate rspec:install`.
+**Step 3:** Add this to `spec/rails_helper.rb` to let openapi_contracts know where your OpenAPI lives in the codebase. If this file does not exist make sure RSpec is setup and installed and run `rails generate rspec:install`.
 
   ```ruby
   # spec/rails_helper.rb
@@ -143,50 +143,51 @@ It can also power contract testing in your existing test suite, and [openapi_con
   ```
 
 
-4. The way openapi_contract works is by adding a single assertion that can be used in [Rails Request tests](). Learn more about request tests with [Rails and RSpec with this tutorial](https://medium.com/@qualitytechgirl/ruby-on-rails-testing-with-rspec-requests-92b09c8057a4), but basically it looks a bit like this. 
+**Step 4:** The way openapi_contract works is by adding a single assertion that can be used in [request tests](https://rspec.info/features/6-0/rspec-rails/request-specs/request-spec/). Learn more about request tests with [Rails and RSpec with this tutorial](https://medium.com/@qualitytechgirl/ruby-on-rails-testing-with-rspec-requests-92b09c8057a4), but basically it looks a bit like this. 
 
-  ```ruby
-  # spec/requests/widgets_spec.rb
+```ruby
+# spec/requests/widgets_spec.rb
 
-  require "rails_helper"
+require "rails_helper"
 
-  RSpec.describe 'widgets', type: :request do
-    
-    describe "GET /widgets" do
-      it 'responds with 200 and matches the doc' do
-        get '/widgets'
-        expect(response).to have_http_status(:ok)
-        expect(response).to match_openapi_doc(OPENAPI_DOC)
-      end
+RSpec.describe 'widgets', type: :request do
+  
+  describe "GET /widgets" do
+    it 'responds with 200 and matches the doc' do
+      get '/widgets'
+      expect(response).to have_http_status(:ok)
+      expect(response).to match_openapi_doc(OPENAPI_DOC)
     end
-
   end
-  ```
 
-  All the magic is happening in `expect(response).to match_openapi_doc(OPENAPI_DOC)`, where it's looking at the OpenAPI description, seeing which HTTP method and endpoint to look for, then comparing what it sees against the schema for the defined response. 
+end
+```
 
-  If you get a response back in a test for a status code that is not defined in OpenAPI it will let you know:
+All the magic is happening in `expect(response).to match_openapi_doc(OPENAPI_DOC)`, where it's looking at the OpenAPI description, seeing which HTTP method and endpoint to look for, then comparing what it sees against the schema for the defined response. 
+
+If you get a response back in a test for a status code that is not defined in OpenAPI it will let you know:
 
 
-  ```
-  Failures:
+```
+Failures:
 
-    1) widgets POST /widgets responds with 400 when invalid
-      Failure/Error: expect(response).to match_openapi_doc(OPENAPI_DOC)
-        * Undocumented response for "POST /widgets" with http status Bad Request (400)
-      # ./spec/requests/widgets_spec.rb:18:in `block (3 levels) in <top (required)>'
-  ```
-  
-  
-  Various other problems were noticed, like my documentation saying POST /widgets would return with a 201 and an empty body, but the API was returning the entire object of the resource that was just created for no reason.
+  1) widgets POST /widgets responds with 400 when invalid
+    Failure/Error: expect(response).to match_openapi_doc(OPENAPI_DOC)
+      * Undocumented response for "POST /widgets" with http status Bad Request (400)
+    # ./spec/requests/widgets_spec.rb:18:in `block (3 levels) in <top (required)>'
+```
 
-  ```
-   1) widgets POST /widgets responds with 201 when valid
-     Failure/Error: expect(response).to match_openapi_doc(OPENAPI_DOC)
-       * Expected empty response body
-     # ./spec/requests/widgets_spec.rb:17:in `block (3 levels) in <top (required)>'
+Various other problems were noticed, like my documentation saying POST /widgets would return with a 201 and an empty body, but the API was returning the entire object of the resource that was just created for no reason.
 
-  ```
+```
+  1) widgets POST /widgets responds with 201 when valid
+    Failure/Error: expect(response).to match_openapi_doc(OPENAPI_DOC)
+      * Expected empty response body
+    # ./spec/requests/widgets_spec.rb:17:in `block (3 levels) in <top (required)>'
+
+```
+
+Keep experimenting with your OpenAPI and code responses until you're happy with it all. See if you can break things, see if you can find uncovered endpoints, and keep making your code and OpenAPI better with every tweak.
 
 ## Sample Code
 
