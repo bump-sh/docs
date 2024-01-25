@@ -10,6 +10,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - [Commands](#commands)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Prerequisites
 
@@ -119,3 +120,15 @@ Images go under [`src/images`](https://github.com/bump-sh/docs/tree/main/src/ima
 * Ordered lists: if you need to any kind of blocks in your ordered list item, make sure it immediately follows the numbered paragraph line (no empty line in between). You might also want to [indent your block to line up with the first non-space character after the list item marker](https://stackoverflow.com/questions/34987908/embed-a-code-block-in-a-list-item-with-proper-indentation-in-kramdown). Just do both for safety!
 
 Then you can let your ~~pen~~ keyboard handle the content!
+
+## License
+
+This repository has two main content:
+
+- The codebase making the website display correctly in your browser,
+  which is built on top of the Bridgetown framework. **Those files are
+  [MIT licensed](./LICENSE_MIT)**.
+- The published content : all the markdown files (`*.md` files in
+  `src/_guides`, `src/_help` and `src/_product-updates`
+  directories). Those files are [CC BY-NC-SA
+  4.0](./LICENSE_CC-BY-NC-SA-4.0) licensed.
