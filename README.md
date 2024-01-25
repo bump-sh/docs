@@ -123,7 +123,7 @@ Then you can let your ~~pen~~ keyboard handle the content!
 
 ## License
 
-This repository has two main content:
+This repository has two main parts:
 
 - The codebase making the website display correctly in your browser,
   which is built on top of the Bridgetown framework. **Those files are
