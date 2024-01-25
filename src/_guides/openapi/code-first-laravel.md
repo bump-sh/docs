@@ -1,7 +1,7 @@
 ---
 title: Generating OpenAPI docs for Laravel with Swagger-PHP
 authors: phil
-excerpt: This guide describes, in a code-first approach and laravel codebase, how to generate OpenAPI description documents, enhancing it with contextual information and deploying it to Bump.sh.
+excerpt: This guide describes, in a code-first approach and Laravel codebase, how to generate OpenAPI description documents, enhancing it with contextual information and deploying it to Bump.sh.
 ---
 
 API Code-first is the art of building an API, and then popping some annotations or metadata in there to output API documentation in an API description format like [OpenAPI](https://spec.openapis.org/oas/latest.html).
