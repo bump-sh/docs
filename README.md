@@ -125,8 +125,8 @@ Then you can let your ~~pen~~ keyboard handle the content!
 
 This repository has two main parts:
 
-- The codebase making the website display correctly in your browser,
-  which is built on top of the Bridgetown framework. **Those files are
+- The codebase that makes the website display correctly in your browser
+  is built on top of the Bridgetown framework. **Those files are
   [MIT licensed](./LICENSE_MIT)**.
 - The published content : all the markdown files (`*.md` files in
   `src/_guides`, `src/_help` and `src/_product-updates`
