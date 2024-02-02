@@ -10,7 +10,7 @@ Instead of writing loads of code and sprinkling in some metadata later to create
 
 This guide is going to look at two specific parts of the API design-first workflow that are most helpful to documentation, and show how to set it up in Rails: request validation automatically, and contract testing responses.
 
-- [Getting OpenAPI \& Bump.sh Setup](#getting-openapi--bumpsh-setup)
+- [Getting OpenAPI & Bump.sh Setup](#getting-openapi--bumpsh-setup)
 - [Request Validation powered by OpenAPI](#request-validation-powered-by-openapi)
 - [Contract Testing with OpenAPI](#contract-testing-with-openapi)
 - [Sample Code](#sample-code)
