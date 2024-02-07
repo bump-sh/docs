@@ -1,10 +1,10 @@
 ---
 title: Help Center Remastered
 tags: [Improvement]
-image: /images/changelog/help-center-remastered
+image: /images/changelog/help-center-remastered.jpg
 ---
 
-![help-center-remastered](/images/changelog/help-center-remastered)
+![help-center-remastered.jpg](/images/changelog/help-center-remastered.jpg)
 
 Writing beautiful documentation is something that we deeply care about at Bump.sh. Therefore, we have spent the last few months completely rewriting our product documentation, including a structure overhaul, to address as many questions as possible and to assist you in better understanding and leveraging Bump.sh.
 
