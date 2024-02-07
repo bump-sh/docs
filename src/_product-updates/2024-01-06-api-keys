@@ -1,7 +1,9 @@
 title: API keys
 tags: [Improvement]
-image: /images/changelog/api-keys.png
+image: /images/changelog/api-keys.jpg
 ---
+
+![api-keys.jpg](/images/changelog/api-keys.jpg)
 
 The API key, also known as a token, grants access to our API and allows you to integrate it into your continuous integration workflows.
 Previously specific to a hub or documentation, we are evolving API keys so that they can now operate at the organization level and everything it contains.
