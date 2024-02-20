@@ -89,6 +89,8 @@ help:
         link: /organizations/create-and-manage-organizations/
       - label: Organization Access Management
         link: /organizations/organization-access-management/
+      - label: Personal user account migration
+        link: /organizations/personal-user-account-migration/
   - label: Account
     icon: user
     items:

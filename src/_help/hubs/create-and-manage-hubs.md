@@ -7,9 +7,9 @@ title: Create and manage hubs
 
 ## Create a hub
 
-In your dashboard, click on Hubs then on Create a hub.
+In your dashboard, click on New hub.
 
-![](/images/help/create-hub.png)
+![](/images/help/new-hub.png)
 
 You will be asked to choose a name for the hub, which will be visible to everyone. The slug is the portion of the URL that you can customize but you can also choose to use a custom domain instead:
 - By default, on Bump.sh, your hub will be available on this URL https://bump.sh/hub/<your-own-slug>
