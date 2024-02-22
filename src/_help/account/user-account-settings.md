@@ -11,14 +11,6 @@ From this page, you can modify:
 
 - your first and last name
 - your password
-- your username
-
-## Modify username
-
-Your username serves also as your slug, which is part of the URL of your documentation and hubs except if you use custom domains.
-
-> Changing your username will also change the URL of your documentations. Bump.sh does not automatically redirect after a change, so be sure to inform your API consumers accordingly.
-{: .info}
 
 ## Delete your account
 
@@ -31,9 +23,6 @@ If necessary, you can initiate the deletion of your Bump.sh account from this se
 ![](/images/help/account-settings.png)
 
 ## Organization tab
-
-> [Organizations](/help/organizations) are available starting from our paid plans.
-{: .info}
 
 The Organizations tab shows the list of organizations your account has access to, along with their settings if you are an admin. New organizations can also be created from this section.
 
