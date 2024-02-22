@@ -11,7 +11,7 @@ Publishing your first API documentation on Bump.sh will only take you a few mome
 
 The very first step is to create your Bump.sh account.
 
-Two options are available: using your email address and creating a username, or through your GitHub account.
+Two options are available: using your email address, or through your GitHub account.
 
 ![](/images/help/signup.png)
 
@@ -20,7 +20,7 @@ Two options are available: using your email address and creating a username, or 
 ### Step 1: Create your organization
 
 Now that your Bump.sh account is created, you will immediately be prompted to create your first organization.
-An organization allows you to work alone or collaboratively with your API documentation and hubs (a collection of documentation) within the same workspace.
+An organization allows you to work alone or collaboratively on your API documentation and hubs (a collection of documentation) within the same workspace.
 
 ![](/images/help/org-creation.png)
 
