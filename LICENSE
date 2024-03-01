@@ -1,0 +1,12 @@
+License
+
+=======================================================================
+
+This repository has two main parts:
+
+The codebase that makes the website display correctly in your browser 
+is built on top of the Bridgetown framework. Those files are MIT 
+licensed.
+The published content : all the markdown files (*.md files in
+src/_guides, src/_help and src/_product-updates directories). Those
+files are CC BY-NC-SA 4.0 licensed.
