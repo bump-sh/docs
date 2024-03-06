@@ -130,5 +130,5 @@ This repository has two main parts:
   [MIT licensed](./LICENSE_MIT)**.
 - The published content : all the markdown files (`*.md` files in
   `src/_guides`, `src/_help` and `src/_product-updates`
-  directories). Those files are [CC BY-NC-SA
-  4.0](./LICENSE_CC-BY-NC-SA-4.0) licensed.
+  directories). Those files are [CC BY-SA
+  4.0](./LICENSE_CC-BY-SA-4.0) licensed.
