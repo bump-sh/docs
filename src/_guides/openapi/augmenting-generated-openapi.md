@@ -139,7 +139,7 @@ For teams following an API Design First workflow (where you're managing your des
 
 OpenAPI has a new experimental extension called Overlays, put together by the OAI (OpenAPI Initiative), tooling vendors, and community members that all came together to make a specification. 
 
-It's early days for the standard, but Bump.sh added experimental support for Overlays in the Bump CLI, meaning you can use it right now.
+It's early days for the standard, but Bump.sh has added experimental support for Overlays in the Bump CLI, meaning you can use it right now.
 
 ```
 npm install -g bump-cli@beta
@@ -166,27 +166,25 @@ The way Overlays work is to look up bits of the OpenAPI description using someth
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Overlay to customise API for Protect Earth
+  title: Improve the API's main description
   version: 0.0.1
 actions:
-  - target: '$.info.description'
+  - target: '$.info'
     description: Provide a better introduction for our end users than this techno babble.
-    update: >-
-      Protect Earth's Tree Tracker API will let you see what we've been planting and restoring all 
-      around the UK, and help support our work by directly funding the trees we plant or the sites 
-      we restore.
-
-      To get involved [contact us and ask for an access token](https://protect.earth/contact) then
-      [check out the API documentation](https://protect.earth/api).
+    update:
+      description: >
+        Protect Earth's Tree Tracker API will let you see what we've been planting and restoring all
+        around the UK, and help support our work by directly funding the trees we plant or the sites
+        we restore.
+        To get involved [contact us and ask for an access token](https://protect.earth/contact) then
+        [check out the API documentation](https://protect.earth/api).
 ```
 
 Let's break this down a bit. 
 
-The `target` is `$` (root), then `.info` goes into the `info:` object at the root of our OpenAPI document, and `.description` points to the description property. 
+The `target` is `$` (root), then `.info` goes into the `info:` object at the root of our OpenAPI document. Now that we've pointed to the right bit of the OpenAPI document, we can update it, which in this example will update the object to contain a new `description` property, with a much longer description that's got handy Markdown (CommonMark) in there.
 
-Now that we've pointed to the right bit of the OpenAPI document, we can update it, which in this example will replace the string with the string we're providing, thats a much longer description with handy Markdown (CommonMark) in there.
-
-With the original `openapi.yaml` saved, and this new `overlays.yaml` document, we can run this command to make it all happen.
+Now we've got the original `openapi.yaml` and this new `overlays.yaml` document sitting around, how can we actually get these overlays applied? With the [Bump.sh CLI](https://github.com/bump-sh/cli)! Run this command to make it all happen.
 
 ```
 $ bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
@@ -267,7 +265,7 @@ Yeah that JSONPath is a bit wild, but by popping the whole OpenAPI description d
 
 ### Deploy Overlay Changes to Bump
 
-How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use Bump CLI (as overlay support has not been added to the GitHub Action just yet).
+How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use [Bump CLI](https://github.com/bump-sh/cli) (as overlay support has not been added to the GitHub Action just yet).
 
 ```yaml
 # .github/workflows/bump.yml
@@ -310,7 +308,7 @@ No more arguments, and no more hacks. You can do that with overlays.
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Overlay to customise API for Protect Earth
+  title: Hide Non-Production Servers
   version: 0.0.1
 actions:
   - target: '$.servers.*'
@@ -330,7 +328,7 @@ IF you'd like something more generic:
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Overlay to customise API for Protect Earth
+  title: Remove non-Production Servers
   version: 0.0.1
 actions:
   - target: '$.servers[?(@.description=="Development" || @.description=="Staging")]'
