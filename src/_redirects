@@ -7,6 +7,6 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/publish-documentation/release-management/ /help/publish-documentation/deploy-and-release-management/
 /help/branching /help/publish-documentation/branching/
 /help/access-management/ /help/publish-documentation/documentation-access-management/
-/help/specificiation-support/markdown-support/ /help/enhance-documentation-content/markdown-support/
+/help/specifications-support/markdown-support/ /help/enhance-documentation-content/markdown-support/
 /help/doc-topics/ /help/enhance-documentation-content/topics/
 /help/custom-domains/ /help/customization-options/custom-domains/
