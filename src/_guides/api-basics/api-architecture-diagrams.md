@@ -118,7 +118,7 @@ As mentioned previously, API diagrams are a great way to help a user understand 
 
 [Bump.sh supports markdown](https://docs.bump.sh/help/specifications-support/markdown-support/) descriptions and helps you share your API architecture diagrams via generated documentation based on an [API contract](https://bump.sh/blog/api-contracts-extended-introduction).
 To add an image to any markdown you just need the following syntax `![](https://rb.gy/i0zf0)` where the link is a public URL to your image. More on that, brand new image sizing feature and best practices [in the **Images** section of the documentation](https://docs.bump.sh/help/specifications-support/markdown-support/#images).
-It you want to play even more with markdown, the [`x-topics` property](https://docs.bump.sh/help/specifications-support/markdown-support/#adding-topics-to-your-documentation) makes it easy to add relevant content sections to your documentation for a well-organized, reader-friendly structure.
+It you want to play even more with markdown, the [`x-topics` property](https://docs.bump.sh/help/specification-support/extensions/#add-topics-to-your-documentation-x-topics) makes it easy to add relevant content sections to your documentation for a well-organized, reader-friendly structure.
 
 ## Conclusion
 
