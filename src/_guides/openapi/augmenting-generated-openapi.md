@@ -308,11 +308,11 @@ No more arguments, and no more hacks. You can do that with overlays.
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Hide Non-Production Servers
+  title: Hide Development/Generic Servers
   version: 0.0.1
 actions:
   - target: '$.servers[:1]'
-    description: Pop our server into the empty server array.
+    description: Replace the first server with the one we want.
     update:
       description: "Production"
       url: https://api.protect.earth
@@ -330,7 +330,7 @@ Another approach:
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Remove non-Production Servers
+  title: Remove Development and Staging Servers
   version: 0.0.1
 actions:
   - target: '$.servers[?(@.description=="Development" || @.description=="Staging")]'
