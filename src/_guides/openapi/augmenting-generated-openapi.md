@@ -311,18 +311,20 @@ info:
   title: Hide Non-Production Servers
   version: 0.0.1
 actions:
-  - target: '$.servers.*'
-    description: Remove all other servers so we can add our own.
-    remove: true
-
-  - target: '$.servers'
+  - target: '$.servers[:1]'
     description: Pop our server into the empty server array.
     update:
-      - description: Production
-        url: https://api.protect.earth/
+      description: "Production"
+      url: https://api.protect.earth
+
+  - target: '$.servers[1:]'
+    description: Remove all the other servers.
+    remove: true
 ```
 
-IF you'd like something more generic: 
+This has replaced the first servers entry with Production, and removed all the others. 
+
+Another approach:
 
 ```yaml
 # overlays.yaml
