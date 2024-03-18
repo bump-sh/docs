@@ -265,7 +265,7 @@ Yeah that JSONPath is a bit wild, but by popping the whole OpenAPI description d
 
 ### Deploy Overlay Changes to Bump
 
-How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use [Bump CLI](https://github.com/bump-sh/cli) (as overlay support has not been added to the GitHub Action just yet).
+How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use the [Bump.sh CLI](https://github.com/bump-sh/cli) update with overlay support.
 
 ```yaml
 # .github/workflows/bump.yml
