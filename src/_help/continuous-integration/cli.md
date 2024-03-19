@@ -93,6 +93,7 @@ Head over to your Documentation settings in the “CI deployment” section or y
 * [`bump deploy [FILE]`](#bump-deploy-file)
 * [`bump diff [FILE]`](#bump-diff-file)
 * [`bump preview [FILE]`](#bump-preview-file)
+* [`bump overlay [FILE1] [FILE2] > [FILE3]`](#bump-overlay)
 
 ### `bump deploy [FILE]`
 
@@ -191,7 +192,6 @@ Please check `bump diff --help` for full usage details.
 
 ### `bump preview [FILE]`
 
-
 When writing documentation, you might want to preview how it renders on Bump.sh. This is precisely the goal of the `preview` command: it will create temporary documentation with a unique URL, which will be available for a short period (30 minutes).
 
 Usage from a local OpenAPI or AsyncAPI file
@@ -225,6 +225,27 @@ bump preview --live --open openapi-definition.json
 _Note: the additional `--open` flag helps to automatically open the preview URL in your browser._
 
 Please check `bump preview --help` for more usage details
+
+### `bump overlay [FILE1] [FILE2] > [FILE3]`
+
+> This feature is only compatible with OpenAPI definition files, and support the [Overlay specification](https://github.com/OAI/Overlay-Specification).
+{: .info}
+
+The Overlay specification of OpenAPI makes it possible to modify the content of an OpenAPI definition file by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. 
+
+Technically, the `bump overlay` command will build a [FILE3] file our of the [FILE1] OpenAPI definition and [FILE2] Overlay file, applying the operations described in the [FILE2] Overlay file to the definition file.
+
+For example:
+
+```shell
+bump overlay api-document.yaml overlay-file.yaml > api-overlayed-document.yaml
+```
+
+_Note: you can also apply the overlay during the bump deploy command with the new --overlay flag:_
+
+```shell
+bump deploy api-document.yaml --doc my-doc --token my-token --overlay overlay-file.yaml 
+```
 
 ## Compatible specification types
 
