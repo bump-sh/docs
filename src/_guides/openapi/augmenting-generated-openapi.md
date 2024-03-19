@@ -139,10 +139,10 @@ For teams following an API Design First workflow (where you're managing your des
 
 OpenAPI has a new experimental extension called Overlays, put together by the OAI (OpenAPI Initiative), tooling vendors, and community members that all came together to make a specification. 
 
-It's early days for the standard, but Bump.sh has added support for Overlays in the Bump CLI, meaning you can use it right now.
+It's early days for the standard, but Bump.sh has added experimental support for Overlays in the Bump CLI, meaning you can use it right now.
 
 ```
-npm install -g bump-cli@beta
+npm install -g bump-cli
 ```
 
 Let's take a look at some example use cases.
@@ -288,7 +288,7 @@ jobs:
       - name: Apply Overlays to customise OpenAPI
         working-directory: ./api
         run: |
-          npx bump-cli@beta overlay openapi.yaml overlays.yaml > openapi.public.yaml
+          npx bump-cli overlay openapi.yaml overlays.yaml > openapi.public.yaml
 
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
@@ -311,18 +311,18 @@ info:
   title: Hide Development/Generic Servers
   version: 0.0.1
 actions:
-  - target: '$.servers[:1]'
-    description: Replace the first server with the one we want.
-    update:
-      description: "Production"
-      url: https://api.protect.earth
-
-  - target: '$.servers[1:]'
-    description: Remove all the other servers.
+  - target: '$.servers.*'
+    description: Remove all other servers so we can add our own.
     remove: true
+
+  - target: '$.servers'
+    description: Pop our server into the now empty server array.
+    update:
+      - description: Production
+        url: https://api.protect.earth/
 ```
 
-This has replaced the first servers entry with Production, and removed all the others. 
+This removed all the host entries and added a new production server value in there, so all the generic or development nonsense has been removed, without having to ask developers to clear out servers they might be using in various tools throughout their workflow.
 
 Another approach:
 
