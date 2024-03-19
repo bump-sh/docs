@@ -1,7 +1,6 @@
 ---
 title: Augmenting Generated OpenAPI Documents with Filters & Overlays
 authors: phil
-image: images/guides/what-is-openapi.png
 canonical_url: 
 excerpt: Enhance and enrich your OpenAPI descriptions without creating conflicts in the source code using filters and overlays.
 ---
@@ -58,7 +57,7 @@ Take a look in there and there's no more Upload! Phew. Right, with that sorted h
 ```yaml
 name: Deploy API documentation
 
-# snipped standard Bump deploy GitHib Action...
+# snipped standard Bump.sh deploy GitHub Action...
 
 jobs:
   deploy-doc:
@@ -344,6 +343,6 @@ This action will remove any servers with a `description` of "Development" or "St
 
 Filters are a quick and relatively simple way to customize OpenAPI, but they can really only do the one thing. If you just want to remove some operations, tags, servers, etc., then openapi-filter is probably the way to go.
 
-Overlays are a lot more advanced and can do both removals and updates. It's a bit harder to work with, and the Speakeasy dependency is not the easiest to install on some computers (especially Continuous Integration environments), but the power is incredible.
+Overlays are a lot more advanced and can do both removals and updates. It's a bit harder to work with, but the power is incredible.
 
 Being able to change things however you like, then publish the changed versions off seamlessly is really handy, and will hopefully be the last time you need to do awkward JSON/YAML hacking on other peoples documents. JSONPath is a tricky thing to learn, but if you can master regex you can master JSONPath, then the world is your oyster.
