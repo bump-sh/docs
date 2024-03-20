@@ -39,4 +39,4 @@ You can use the `webhooks` field (introduced in OpenAPI 3.1) to define the API w
 
 ## Overlays support
 
-The [Overlay specification of OpenAPI](https://github.com/OAI/Overlay-Specification/) makes it possible to modify the content of an OpenAPI definition file by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. Please read to the [dedicated documentation page](/help/specification-support/openapi-support/overlays/) for more information.
+The [Overlay specification of OpenAPI](https://github.com/OAI/Overlay-Specification/) makes it possible to modify the content of an OpenAPI definition file by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. Please read to the [dedicated documentation page](/help/specification-support/overlays/) for more information.

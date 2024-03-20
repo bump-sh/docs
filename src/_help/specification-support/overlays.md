@@ -19,4 +19,4 @@ The Bump.sh CLI lets you [merge the files](/help/continuous-integration/cli#bump
 
 The resulting file can then be [deployed and released](/help/publish-documentation/) to Bump.sh as per your usual workflow, whether manually, via our CLI, API or GitHub Action.
 
-Discover our [Overlay and OpenAPI Guides](/guides/openapi/) to learn more about this new OpenAPI feature.
+Discover our [Augmenting Generated OpenAPI Documents with Filters & Overlays](/guides/openapi/augmenting-generated-openapi/) guide to learn more about this new OpenAPI feature.
