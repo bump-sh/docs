@@ -93,7 +93,7 @@ Head over to your Documentation settings in the “CI deployment” section or y
 * [`bump deploy [FILE]`](#bump-deploy-file)
 * [`bump diff [FILE]`](#bump-diff-file)
 * [`bump preview [FILE]`](#bump-preview-file)
-* [`bump overlay [FILE1] [FILE2] > [FILE3]`](#bump-overlay)
+* [`bump overlay [DEFINITION_FILE] [OVERLAY_FILE]](#bump-overlay)
 
 ### `bump deploy [FILE]`
 
@@ -226,22 +226,22 @@ _Note: the additional `--open` flag helps to automatically open the preview URL 
 
 Please check `bump preview --help` for more usage details
 
-### `bump overlay [FILE1] [FILE2] > [FILE3]`
+### `bump overlay [DEFINITION_FILE] [OVERLAY_FILE]`
 
-> This feature is only compatible with OpenAPI definition files, and support the [Overlay specification](https://github.com/OAI/Overlay-Specification).
+> This feature supports the [OpenAPI Overlay specification](https://github.com/OAI/Overlay-Specification). It is also possible to apply an OAS Overlay to an AsyncAPI definition file.
 {: .info}
 
-The Overlay specification of OpenAPI makes it possible to modify the content of an OpenAPI definition file by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. 
+The Overlay specification of OpenAPI makes it possible to modify the content of an API definition file by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition. 
 
-Technically, the `bump overlay` command will build a [FILE3] file our of the [FILE1] OpenAPI definition and [FILE2] Overlay file, applying the operations described in the [FILE2] Overlay file to the definition file.
+Technically, the `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the operations described in the `[OVERLAY_FILE]` Overlay file to the original API document.
 
-For example:
+To redirect the output of the command to a new file you can run:
 
 ```shell
 bump overlay api-document.yaml overlay-file.yaml > api-overlayed-document.yaml
 ```
 
-_Note: you can also apply the overlay during the bump deploy command with the new --overlay flag:_
+_Note: you can also apply the overlay during the [`bump deploy` command]((#bump-deploy-file)) with the new `--overlay` flag:_
 
 ```shell
 bump deploy api-document.yaml --doc my-doc --token my-token --overlay overlay-file.yaml 
