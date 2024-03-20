@@ -15,7 +15,7 @@ The Overlay specification of OpenAPI makes it possible to modify the content of 
 
 From an OpenAPI definition file containing your API description, and an Overlay definition file, you can merge the two into a new definition file that you will deploy on Bump.sh.
 
-The Bump.sh CLI lets you [merge the files](/help/continuous-integration/cli#bump-overlay).
+The Bump.sh CLI lets you [merge the files](/help/continuous-integration/cli/#bump-overlay-definition_file-overlay_file).
 
 The resulting file can then be [deployed and released](/help/publish-documentation/) to Bump.sh as per your usual workflow, whether manually, via our CLI, API or GitHub Action.
 
