@@ -262,7 +262,7 @@ actions:
 
 Yeah that JSONPath is a bit wild, but by popping the whole OpenAPI description document (converted to JSON) into [the JSONPath Online Evaluator](https://jsonpath.com/) and taking a quick browse of the docs helped me get there.
 
-### Deploy Overlay Changes to Bump
+### Deploy Overlay Changes to Bump.sh
 
 How can you automate working with overlays? Same idea as working with openapi-filter but we'll tweak the GitHub Actions a bit to use the [Bump.sh CLI](https://github.com/bump-sh/cli) update with overlay support.
 
