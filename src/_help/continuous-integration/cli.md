@@ -93,7 +93,7 @@ Head over to your Documentation settings in the “CI deployment” section or y
 * [`bump deploy [FILE]`](#bump-deploy-file)
 * [`bump diff [FILE]`](#bump-diff-file)
 * [`bump preview [FILE]`](#bump-preview-file)
-* [`bump overlay [DEFINITION_FILE] [OVERLAY_FILE]](#bump-overlay)
+* [`bump overlay [DEFINITION_FILE] [OVERLAY_FILE]](#bump-overlay-definition_file-overlay_file))
 
 ### `bump deploy [FILE]`
 
