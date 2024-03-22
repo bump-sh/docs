@@ -1,16 +1,23 @@
-# Bridgetown Website README
+# Bump.sh Documentation
 
-Welcome to your new Bridgetown website! You can update this README file to provide additional context and setup information for yourself or other contributors.
+The Bump.sh docs subsite <https://docs.bump.sh> is built using Bridgetown, a Ruby static site generator.
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Install](#install)
-- [Development](#development)
-- [Commands](#commands)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+- [Bump.sh Documentation](#bumpsh-documentation)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Development](#development)
+    - [Commands](#commands)
+  - [Deployment](#deployment)
+  - [Contributing](#contributing)
+    - [Creating a pull request](#creating-a-pull-request)
+    - [Guides](#guides)
+      - [Folder structure](#folder-structure)
+      - [Writing the guide](#writing-the-guide)
+        - [Gotchas](#gotchas)
+  - [License](#license)
 
 ## Prerequisites
 
@@ -27,16 +34,16 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 ## Install
 
 ```sh
-cd bridgetown-site-folder
-bundle install && yarn install
+cd docs
+
+bundle install
+yarn install
 ```
 > Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
 
 ## Development
 
 To start your site in development mode, run `bin/bridgetown start` and navigate to [localhost:4000](https://localhost:4000/)!
-
-Use a [theme](https://github.com/topics/bridgetown-theme) or add some [plugins](https://www.bridgetownrb.com/plugins/) to get started quickly.
 
 ### Commands
 
