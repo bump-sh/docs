@@ -9,8 +9,8 @@ categories:
     description: Find cookbooks that will help you get the most out of Bump.sh, for your specific use case.
   
   - name: Technical Writing
-    long_name: Thing
-    description: Other thing
+    long_name: Guides and tutorials for Tech Writers
+    description: Authoring documentation, beyond editing API definition files, involves many skills and practices. Discover some of those.
     
   - name: OpenAPI
     long_name: OpenAPI specification guides and tutorials
