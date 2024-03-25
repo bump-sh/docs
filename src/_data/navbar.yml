@@ -1,7 +1,7 @@
 left_links:
-  - {title: "Documentation", link: "/help"}
-  - {title: "Product Updates", link: "/product-updates"}
-  - {title: "Guides", link: "/guides"}
+  - {title: "Documentation", link: "/help", collection: "help"}
+  - {title: "Product Updates", link: "/product-updates", collection: "product-updates"}
+  - {title: "Guides", link: "/guides", collection: "guides"}
 right_links:
   - {title: "API Reference", link: "https://developers.bump.sh"}
   - {title: "Bump.sh", link: "https://bump.sh"}
