@@ -25,7 +25,7 @@ Then you can pick from one of the three following API workflow files.
 
 ### Deploy Documentation & Diff on Pull Requests
 
-This is the [recommend workflow](https://help.bump.sh/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
+This is the [recommended workflow](/help/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
 
 `.github/workflows/bump.yml`
 

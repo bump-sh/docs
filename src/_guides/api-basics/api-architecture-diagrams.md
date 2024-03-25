@@ -116,9 +116,9 @@ To promote clarity and readability, it's good practice to use simple, easy-to-un
 
 As mentioned previously, API diagrams are a great way to help a user understand your API. They're a great addition to the “Getting Started” section you’ll find in a lot of API documentation.
 
-[Bump.sh supports markdown](https://docs.bump.sh/help/specifications-support/markdown-support/) descriptions and helps you share your API architecture diagrams via generated documentation based on an [API contract](https://bump.sh/blog/api-contracts-extended-introduction).
-To add an image to any markdown you just need the following syntax `![](https://rb.gy/i0zf0)` where the link is a public URL to your image. More on that, brand new image sizing feature and best practices [in the **Images** section of the documentation](https://docs.bump.sh/help/specifications-support/markdown-support/#images).
-It you want to play even more with markdown, the [`x-topics` property](https://docs.bump.sh/help/specification-support/extensions/#add-topics-to-your-documentation-x-topics) makes it easy to add relevant content sections to your documentation for a well-organized, reader-friendly structure.
+[Bump.sh supports markdown](/help/enhance-documentation-content/markdown-support/) descriptions and helps you share your API architecture diagrams via generated documentation based on an [API contract](https://bump.sh/blog/api-contracts-extended-introduction).
+To add an image to any markdown you just need the following syntax `![](https://rb.gy/i0zf0)` where the link is a public URL to your image. More on that, brand new image sizing feature and best practices [in the **Images** section of the documentation](/help/enhance-documentation-content/markdown-support/#images).
+It you want to play even more with markdown, the [`x-topics` property](/help/specification-support/extensions/#add-topics-to-your-documentation-x-topics) makes it easy to add relevant content sections to your documentation for a well-organized, reader-friendly structure.
 
 ## Conclusion
 
@@ -126,4 +126,4 @@ In this article, you learned how API architecture diagrams can support your prod
 
 Diagrams are just one tool in a developer’s toolbox for providing clarity around their APIs. You’ll also need documentation (which often includes relevant diagrams), an API contract, and a change management system.
 
-If you’re looking for more ways to provide clarity around your API, check out [Bump.sh](https://bump.sh/). Import API contracts into Bump.sh and automatically generate human-readable documentation, with [change-tracking](https://bump.sh/api-change-management) and [notification capabilities](https://docs.bump.sh/help/api-change-management/#changes-notification).
+If you’re looking for more ways to provide clarity around your API, check out [Bump.sh](https://bump.sh/). Import API contracts into Bump.sh and automatically generate human-readable documentation, with [change-tracking](https://bump.sh/api-change-management) and [notification capabilities](/help/api-change-management/#changes-notification).

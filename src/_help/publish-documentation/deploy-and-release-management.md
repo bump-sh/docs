@@ -66,7 +66,7 @@ Select a deployment with the "unreleased" status from the list of your deploymen
 
 ![](/images/help/deployments-list-not-released.png)
 
-The release preparation page will appear, allowing you to add context by adding a title or a brief description, for example, to explain the context of the change. These fields [support Markdown](/help/specification-support/markdown-support/) to make the result more readable.
+The release preparation page will appear, allowing you to add context by adding a title or a brief description, for example, to explain the context of the change. These fields [support Markdown](/help/enhance-documentation-content/markdown-support/) to make the result more readable.
 
 ![](/images/help/deployment-release-form.png)
 

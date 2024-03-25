@@ -13,7 +13,7 @@ Bump.sh does not automatically redirect to the new URL after changing the slug, 
 
 The Custom Domain option allows you to keep your users within your brand experience by fully customizing the URL of your documentation.
 
-> [Custom domain requires additional configuration on your end](/help/custom-domains)
+> [Custom domain requires additional configuration on your end](/help/customization-options/custom-domains)
 {: .warning}
 
 ## Description

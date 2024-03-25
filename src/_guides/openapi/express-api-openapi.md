@@ -671,7 +671,7 @@ Your deployed documentation should open in a new tab, and it should look like th
 
 ### Automate API documentation update with Bump.sh
 
-In order to automatically deploy a new version of your documentation every time you push code changes to a branch, we will add the [Bump Github Action](https://docs.bump.sh/help/continuous-integration/github-actions/) to your repository.
+In order to automatically deploy a new version of your documentation every time you push code changes to a branch, we will add the [Bump Github Action](/help/continuous-integration/github-actions/) to your repository.
 
 To deploy a new version on each push, create a file named `bump-deploy.yml` in the `.github/workflows` folder of your project, then paste the following code into the file:
 

@@ -63,7 +63,7 @@ However, the API does not currently support the following actions:
 
 ## Hub access management
 
-[Access Management](/help/access-management) functions in a similar way for hubs, with a few exceptions.
+[Access Management](/help/publish-documentation/documentation-access-management) functions in a similar way for hubs, with a few exceptions.
 
 The Access Management settings for a hub apply to all the documentations within it.
 Two settings are possible:

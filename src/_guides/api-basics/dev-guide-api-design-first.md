@@ -113,7 +113,7 @@ Observability has come a long way in the past few years, and modern tools allow 
 
 It is worth noting that this API development lifecycle isn’t a one-time process. Like most software projects, you’ll come back to implement changes frequently, so you’ll need to have a plan for implementing, testing, and announcing those changes.
 
-Tools like [Bump.sh](https://bump.sh/api-change-management) can help with this as it can track structural changes to your API to automatically update a [changelog](https://keepachangelog.com/en/1.0.0/) and trigger a [webhook to notify other services](https://docs.bump.sh/help/api-change-management/webhooks/).
+Tools like [Bump.sh](https://bump.sh/api-change-management) can help with this as it can track structural changes to your API to automatically update a [changelog](https://keepachangelog.com/en/1.0.0/) and trigger a [webhook to notify other services](/help/api-change-management/webhooks/).
 
 Finally, this lifecycle isn’t necessarily linear: you may need to move backward before you can move forwards. For example, during the development stage, teams may find that certain requirements must be re-evaluated or redesigned. Or, during the testing stage, they may discover issues that require changes to the API's design or implementation. In such cases, teams may need to go back to a previous stage of the API lifecycle to address these issues before moving forward.
 
