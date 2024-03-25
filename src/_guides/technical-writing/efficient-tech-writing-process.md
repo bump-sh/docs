@@ -7,7 +7,7 @@ excerpt: How can engineering and technical writing teams worth together on creat
 
 The time of APIs being a hot new trend is long gone, and now the vast majority of tech companies are familiar with the process of building and maintaining APIs. The API First movement got teams putting more focus on their public APIs, “dog-fooding” them (using them internally to find kinks and quirks) and throwing huge effort into making documentation as simple as possible for onboarding and integration, but still “partner” or “integration” APIs are often being left behind.
 
-These secondary APIs are no less important, in fact they may well be crucial to the business, but far too often it’s left as a spreadsheet or Google Doc that gets outdated as soon as it has been shared, and trying to improve the content or make sure all the endpoints are covered is a nightmarish job for tech writers. 
+These secondary APIs are no less important, in fact they may well be crucial to the business, but far too often it’s left as a spreadsheet or Google Doc that gets outdated as soon as it has been shared, and trying to improve the content or make sure all the endpoints are covered is a nightmarish job for tech writers.
 
 So what’s the best approach to efficiently creating thorough API documentation?
 
@@ -29,7 +29,7 @@ How exactly do you go about doing this?
 
 ### Option 1.) API Design First
 
-Once you’ve finished whatever white-boarding and requirements gathering from your planning sessions, engineers and product people can start designing the API you’re thinking of building, whether that is using [OpenAPI Editors](https://openapi.tools/#gui-editors), or just opening a text editor and writing OpenAPI by hand. 
+Once you’ve finished whatever white-boarding and requirements gathering from your planning sessions, engineers and product people can start designing the API you’re thinking of building, whether that is using [OpenAPI Editors](https://openapi.tools/#gui-editors), or just opening a text editor and writing OpenAPI by hand.
 
 Another popular new option is to see how far you can get with things like ChatGPT or GitHub Copilot, who can turn a series of prompts like the following into a half-decent OpenAPI starting point.
 
@@ -38,7 +38,7 @@ Another popular new option is to see how far you can get with things like ChatGP
 > move, and seeing the status of the game. Use OAuth 2 authentication and add
 > errors using the RFC 7807 format.
 
-However the editing is done, if the code and OpenAPI are living in the same Git repo, you can use the OpenAPI to power the code, then the technical writers can keep chipping in extra descriptions and improving the situation whilst the engineers keep adding new endpoints and properties over time. 
+However the editing is done, if the code and OpenAPI are living in the same Git repo, you can use the OpenAPI to power the code, then the technical writers can keep chipping in extra descriptions and improving the situation whilst the engineers keep adding new endpoints and properties over time.
 
 We’ve written some guides on how to leverage the design-first workflow in [Laravel PHP](https://docs.bump.sh/guides/openapi/design-first-laravel-php/) and [Ruby on Rails](https://docs.bump.sh/guides/openapi/design-first-rails/), but there are great tools out there to help you with [most popular languages/frameworks](https://docs.bump.sh/guides/openapi/code-first/#move-to-api-design-first).
 
@@ -59,7 +59,7 @@ Most of these tools will export OpenAPI right over the top of the previous OpenA
 
 ## Modifying OpenAPI Descriptions without losing your changes
 
-Regardless of how your OpenAPI is being changed, there are times when you might want to change some things without wanting to (or being able to) change the original. Whether that's the code-first approach exporting OpenAPI, or some engineering teams using API Design First might produce it somewhere the technical writers cannot access, there will be times you need to modify OpenAPI to improve it for various audiences. 
+Regardless of how your OpenAPI is being changed, there are times when you might want to change some things without wanting to (or being able to) change the original. Whether that's the code-first approach exporting OpenAPI, or some engineering teams using API Design First might produce it somewhere the technical writers cannot access, there will be times you need to modify OpenAPI to improve it for various audiences.
 
 A working group at the OpenAPI Initiative have released a new concept called "Overlays". This is [separate specification](https://github.com/OAI/Overlay-Specification) but compatible with OpenAPI, and while it's still experimental it can be considered stable enough for people to start using.
 
@@ -73,8 +73,8 @@ actions:
   - target: '$.info.description'
     description: Provide a better introduction for our end users than this techno babble.
     update: >-
-      Protect Earth's Tree Tracker API will let you see what we've been planting and restoring all 
-      around the UK, and help support our work by directly funding the trees we plant or the sites 
+      Protect Earth's Tree Tracker API will let you see what we've been planting and restoring all
+      around the UK, and help support our work by directly funding the trees we plant or the sites
       we restore.
       To get involved [contact us and ask for an access token](https://protect.earth/contact) then
       [check out the API documentation](https://protect.earth/api).
@@ -82,13 +82,13 @@ actions:
 
 Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, pointing to parts of the original document with [JSONPath](https://jsonpath.com/), then adding or updating your content in. You can add as many actions to these overlays as you like, or make multiple overlays.
 
-To work with Overlays you’ll need a tool that understands them, and that’s not all OpenAPI tools as the concept is still very new. Regardless of what API documentation tool you are using, you can use the [Bump CLI](https://github.com/bump-sh/cli) to apply these overlays, and this will produce a new user-facing document. 
+To work with Overlays you’ll need a tool that understands them, and that’s not all OpenAPI tools as the concept is still very new. Regardless of what API documentation tool you are using, you can use the [Bump CLI](https://github.com/bump-sh/cli) to apply these overlays, and this will produce a new user-facing document.
 
 ```
 $ bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
 ```
 
-You can run these commands in continuous integration, and whatever you would have done with the original you can now do with the new `openapi.public.yaml` (or whatever you decide to name it). 
+You can run these commands in continuous integration, and whatever you would have done with the original you can now do with the new `openapi.public.yaml` (or whatever you decide to name it).
 
 Here’s part of a GitHub Action used to deploy overlay-based improved documentation.
 
@@ -131,17 +131,17 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-_Learn more about [Overlays](http://localhost:4000/guides/openapi/augmenting-generated-openapi/) and using them within Bump.sh._
+_Learn more about [Overlays](/guides/openapi/augmenting-generated-openapi/) and using them within Bump.sh._
 
 ## Adding more context as Technical Writers
 
-Whether you’re using overlays or contributing to the original OpenAPI, what exactly should you be focusing on? 
+Whether you’re using overlays or contributing to the original OpenAPI, what exactly should you be focusing on?
 
 Engineers will often focus very much on the “how”, but leave out some of the “why”, or really explain the “what”, so you can add this in.
 
 ### Tags
 
-Tags are a really useful place to explain some of the concepts being used. For example an Order and an Organization might seem fairly obvious what it is to the engineers working on it, but you could add context to them. 
+Tags are a really useful place to explain some of the concepts being used. For example an Order and an Organization might seem fairly obvious what it is to the engineers working on it, but you could add context to them.
 
 Here’s an example of an overlay you could use to expand the tag. Descriptions with a whole bunch of Markdown, and links to other resources.
 
