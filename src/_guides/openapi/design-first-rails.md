@@ -33,7 +33,7 @@ $ bump deploy api/openapi.yaml \
 * Your new documentation version will soon be ready at https://bump.sh/bump-examples/hub/code-samples/doc/rails-design-first
 ```
 
-Instead of using the [CLI](https://github.com/bump-sh/cli#bump-deploy-file) you could use [GitHub Actions](https://github.com/marketplace/actions/bump-sh), or a bunch of other [Continuous Integration](https://docs.bump.sh/help/continuous-integration/). 
+Instead of using the [CLI](https://github.com/bump-sh/cli#bump-deploy-file) you could use [GitHub Actions](https://github.com/marketplace/actions/bump-sh), or a bunch of other [Continuous Integration](/help/continuous-integration/).
 
 Once Bump.sh is hooked up, let's look at how we'd teach a Rails API (new, or existing) to be able to handle request validation for us.
 

@@ -60,4 +60,4 @@ JSON Schema provides the possibility to declare a property as read or write only
 
 You can add extra information to your documentation by using Bump.sh custom `x-topics`.
 
-Read more in the [Topics section of this documentation](/help/doc-topics).
+Read more in the [Topics section of this documentation](/help/enhance-documentation-content/topics).

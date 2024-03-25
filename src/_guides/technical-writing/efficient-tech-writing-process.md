@@ -195,7 +195,7 @@ Whether you inject `x-topics` with Overlays or directly into OpenAPI in the sour
 
 ### Code Samples
 
-There’s countless other improvements you can make to the source OpenAPI given to you by the engineering teams who have other things to be worrying about, like [adding client-side code samples](https://docs.bump.sh/help/specification-support/doc-code-samples/) with `x-codeSamples`.
+There’s countless other improvements you can make to the source OpenAPI given to you by the engineering teams who have other things to be worrying about, like [adding client-side code samples](/help/specification-support/doc-code-samples/) with `x-codeSamples`.
 
 ```yaml
 paths:

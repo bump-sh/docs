@@ -9,7 +9,7 @@ excerpt: Learn tips and tricks to group related endpoints in a meaningful way.
 OpenAPI Tags are a great way to organize the API endpoints in [your API Contract](https://bump.sh/blog/api-contracts-extended-introduction).
 
 When developing APIs, it's essential to document the API so that other developers, whether internal or external, can use the API effectively. [OpenAPI](https://spec.openapis.org/oas/latest.html) and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) are open source specifications useful when writing API contracts.
-An [API contract describes the API](https://bump.sh/blog/api-contracts-extended-introduction), including its endpoints, data structures, and security constraints. When writing these, you can use [OpenAPI tags](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) and [AsyncAPI tags](https://www.asyncapi.com/docs/reference/specification/v2.0.0#tagsObject) to help you categorize your contract so that it's more readable and easier to understand.
+An [API contract describes the API](https://bump.sh/blog/api-contracts-extended-introduction), including its endpoints, data structures, and security constraints. When writing these, you can use [OpenAPI tags](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) and [AsyncAPI tags](https://www.asyncapi.com/docs/reference/specification/v2.0.0#tagsObject) to help you categorize your contract so that it's more readable and easier to understand.
 
 Let’s see how that works !
 
@@ -79,7 +79,7 @@ The documentation will show the `Diffs` property like this:
 ![Diff attribute in the generated API documentation](/images/guides/diff_attribute.png)
 [*See it live*](https://bump.sh/demo/doc/bump/group/endpoint-diffs)
 
-Note that [you can use markdown](https://docs.bump.sh/help/specifications-support/markdown-support/) in the `description` field to better describe your tags.
+Note that [you can use markdown](/help/enhance-documentation-content/markdown-support/) in the `description` field to better describe your tags.
 
 ### Tags Can Link to Additional Documentation
 
@@ -93,7 +93,7 @@ tags:
     description: Diff summary of changes in the API
     externalDocs:
       description: More details about Diff
-      url: https://docs.bump.sh/help/api-change-management/
+      url: /help/api-change-management/
 ```
 
 When you generate API documentation for the API contract above, you'll see the link rendered like this:
@@ -125,7 +125,7 @@ When you generate API documentation, you'll notice the documentation orders the 
 ![How tags are ordered in generated API documentation](/images/guides/tags_order.png)
 [*See it live*](https://bump.sh/demo/doc/bump)
 
-Note that [Bump.sh helps you order your endpoints and webhooks](https://docs.bump.sh/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
+Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
 
 Now that you understand what tags are and their benefits, you'll see some best practices you should follow when using OpenAPI and AsyncAPI tags in API contracts.
 
