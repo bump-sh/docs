@@ -34,8 +34,6 @@ The Bump.sh docs subsite <https://docs.bump.sh> is built using Bridgetown, a Rub
 ## Install
 
 ```sh
-cd docs
-
 bundle install
 yarn install
 ```
