@@ -93,42 +93,31 @@ You can run these commands in continuous integration, and whatever you would hav
 Here’s part of a GitHub Action used to deploy overlay-based improved documentation.
 
 ```yaml
-name: Deploy
+name: Deploy documentation
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    branches:
-      - main
 
 jobs:
-  deploy-production:
-    name: Deploy Production
+  deploy-doc:
+    name: Deploy API doc on Bump.sh
     runs-on: ubuntu-latest
     steps:
-    
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # ... snipped production deployment steps
-
-      - name: Deploy Documentation
+      - name: Apply overlay to API document
         run: |
           npx bump-cli overlay api/openapi.bundle.yaml api/overlays.yaml > api/openapi.public.yaml
 
-          npx bump-cli deploy api/openapi.public.yaml --token ${{secrets.BUMP_TOKEN}} --doc partner-api
-
-      - name: Comment pull request with API diff
+      - name: Deploy API documentation
         uses: bump-sh/github-action@v1
         with:
           doc: partner-api
           token: ${{secrets.BUMP_TOKEN}}
           file: api/openapi.public.yaml
-          command: diff
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
 _Learn more about [Overlays](/guides/openapi/augmenting-generated-openapi/) and using them within Bump.sh._
