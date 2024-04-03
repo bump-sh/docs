@@ -46,12 +46,12 @@ The Bump.sh CLI supports Overlays. Technically, the `bump overlay` command will 
 
 2. Apply your Overlay document to the original API document with the Bump.sh CLI
 ```shell
-bump overlay api-document.yaml overlay-file.yaml > api-overlayed-document.yaml
+bump overlay docs.json overlay-file.json > api-overlayed-document.json
 ```
 
 3. Deploy the resulting file to Bump.sh
   ```shell
-  bump deploy api-overlayed-document.yaml \
+  bump deploy api-overlayed-document.json \
     --doc my-documentation-name \
     --token my-documentation-token
   ```
