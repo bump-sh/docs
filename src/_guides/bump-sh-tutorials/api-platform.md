@@ -55,3 +55,7 @@ bump overlay api-document.yaml overlay-file.yaml > api-overlayed-document.yaml
     --doc my-documentation-name \
     --token my-documentation-token
   ```
+
+> Note: The diff calculation that Bump.sh performs to display the [API changelog](/help/changes-management/changelog) is done when the resulting file is deployed.
+> If you need to calculate the diff before applying Overlays (for instance when your Overlay document filters out some information), consider using the [`bump diff`](/help/continuous-integration/cli#bump-diff-file) command and the [GitHub Action](/help/continuous-integration/github-actions).
+{: .info}
