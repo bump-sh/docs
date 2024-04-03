@@ -1,7 +1,7 @@
 ---
 title: Deploying docs from API Platform
 authors: chris
-excerpt: Get started with Bump.sh for API Platform projects.
+excerpt: Get started with Bump.sh for API Platform projects. Learn how to publish and enrich OpenAPI definition files, and build great documentation.
 ---
 
 [API Platform](https://api-platform.com/) is an API-first PHP framework that allows you to create REST and GraphQL APIs using PHP classes, and automatically generates their documentation, based on the OpenAPI specification. 
