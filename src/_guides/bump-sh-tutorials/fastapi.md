@@ -40,7 +40,7 @@ By default, FastAPI generates what can be considered a plain technical descripti
 
 FastAPI lets you extend definition files, [using Python](https://fastapi.tiangolo.com/how-to/extending-openapi/). 
 
-You can also accomplish this using OpenAPI's [Overlay specification](https://github.com/OAI/Overlay-Specification/blob/main/versions/1.0.0.md), which can be convenient in all use cases where you do not want to change your PHP code base (e.g. when involving Technical Writers or Product Managers in writing docs).
+You can also accomplish this using OpenAPI's [Overlay specification](https://github.com/OAI/Overlay-Specification/blob/main/versions/1.0.0.md), which can be convenient in all use cases where you do not want to change your Python code base (e.g. when involving Technical Writers or Product Managers in writing docs).
 
 The Bump.sh CLI supports Overlays. Technically, the `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the operations described in the `[OVERLAY_FILE]` Overlay file to the original API document.
 
