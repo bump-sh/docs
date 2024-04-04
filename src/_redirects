@@ -10,3 +10,4 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/specifications-support/markdown-support/ /help/enhance-documentation-content/markdown-support/
 /help/doc-topics/ /help/enhance-documentation-content/topics/
 /help/custom-domains/ /help/customization-options/custom-domains/
+/help/quick-start/ /help/getting-started/
