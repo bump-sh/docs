@@ -42,20 +42,15 @@ You can also accomplish this using OpenAPI's [Overlay specification](https://git
 
 The Bump.sh CLI supports Overlays. Technically, the `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the operations described in the `[OVERLAY_FILE]` Overlay file to the original API document.
 
-1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](/guides/openapi/augmenting-generated-openapi))
+1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](/guides/openapi/augmenting-generated-openapi)), and name it `overlays.json` (YAML and JSON are both supported and input and outputs of the CLI).
 
-2. Apply your Overlay document to the original API document with the Bump.sh CLI
-```shell
-bump overlay docs.json overlays.json > docs.updated.json
-```
-
-3. Deploy the resulting file to Bump.sh
+2. Apply your Overlay document to the original API document and deploy the resulting file to Bump.sh
   ```shell
-  bump deploy docs.updated.json \
+  bump deploy docs.json --overlay overlays.json \
     --doc my-documentation-name \
     --token my-documentation-token
   ```
 
-> Note: The diff calculation that Bump.sh performs to display the [API changelog](/help/changes-management/changelog) is done when the resulting file is deployed.
-> If you need to calculate the diff before applying Overlays (for instance when your Overlay document filters out some information), consider using the [`bump diff`](/help/continuous-integration/cli#bump-diff-file) command and the [GitHub Action](/help/continuous-integration/github-actions).
+> Note: The diff computation performed by Bump.sh to display the [API changelog](/help/changes-management/changelog) is done when the resulting file is deployed.
+> If you need to compute the diff before applying Overlays (for instance when your Overlay document filters out some information), consider using the [`bump diff`](/help/continuous-integration/cli#bump-diff-file) command and the [GitHub Action](/help/continuous-integration/github-actions).
 {: .info}
