@@ -223,7 +223,7 @@ actions:
       description: >
         A new and much more interesting long form description, which has all sorts of 
         Markdown, or more specifically [CommonMark](https://commonmark.org/) which 
-        is _like_ Markdown but **better**, because its an actual standard instead of a 
+        is _like_ Markdown but **better**, because it's an actual standard instead of a 
         series of sometimes vaguely consistent conventions.
 
         Anyway, this is a good place to write all sorts of helpful stuff, link to other
