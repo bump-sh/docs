@@ -78,6 +78,27 @@ Run through any sort of JSONPath tool you'd expect to see these results.
 
 ### Syntax
 
+| Syntax            | Element Description |
+|-------------------|---------------------|
+| `$`               | root node identifier (Section 2.2) |
+| `@`               | current node identifier (Section 2.3.5) (valid only within filter selectors) |
+| `[<selectors>]`   | child segment (Section 2.5.1): selects zero or more children of a node |
+| `.name`           | shorthand for ['name' ] |
+| `.*`              | shorthand for [*] |
+| `..⁠[<selectors>]` | descendant segment (Section 2.5.2): selects zero or more descendants of a node |
+| `..name`          | shorthand for .. [' name' ] |
+| `..*`             | shorthand for ..[*] |
+| `'name'`          | name selector (Section 2.3.1): selects a named child of an object |
+| `*`               | wildcard selector (Section 2.3.2): selects all children of a node |
+| `3`               | index selector (Section 2.3.3): selects an indexed child of an array (from 0) |
+| `0:100:5`         | array slice selector (Section 2.3.4): start:end:step for arrays |
+| `?<logical-expr>` | filter selector (Section 2.3.5): selects particular children using a logical expression |
+| `length(@.foo)`   | function extension (Section 2.4): invokes a function in a filter expression |
+
+_Overview of JSONPath Syntax, from [RFC 9535](https://www.rfc-editor.org/rfc/rfc9535#tbl-overview)._
+
+### Examples
+
 
 | JSONPath               | Intended Result                                        |
 |------------------------|--------------------------------------------------------|
@@ -94,6 +115,8 @@ Run through any sort of JSONPath tool you'd expect to see these results.
 | `$..book[?@.isbn]`       | all books with an ISBN number                          |
 | `$..book[?@.price<10]`   | all books cheaper than 10                              |
 | `$..*`                   | all member values and array elements contained in the input value |
+
+_Example JSONPath Expressions and Their Intended Results When Applied to the Example JSON Value, from [RFC 9535: 1.5. JSONPath Examples](https://www.rfc-editor.org/rfc/rfc9535#name-jsonpath-examples)._
 
 By combining these bits of example syntax together you can do amazing and powerful things with JSONPath, so let's look at how to do those amazing things in OpenAPI.
 
