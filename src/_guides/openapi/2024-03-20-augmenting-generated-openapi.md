@@ -260,7 +260,9 @@ actions:
         and are connected to each of your Orders.
 ```
 
-Yeah that JSONPath is a bit wild, but by popping the whole OpenAPI description document (converted to JSON) into [the JSONPath Online Evaluator](https://jsonpath.com/) and taking a quick browse of the docs helped me get there.
+
+> Learn more about working with JSONPath in our guide [How to work with JSONPath](/guides/openapi/jsonpath).
+{: .info}
 
 ### Deploy Overlay Changes to Bump.sh
 
