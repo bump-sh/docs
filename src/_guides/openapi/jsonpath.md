@@ -12,13 +12,13 @@ You can use [JSONPath for OpenAPI Overlays](https://github.com/OAI/Overlay-Speci
 
 You can use [JSONPath in Spectral](https://docs.stoplight.io/docs/spectral/d3482ff0ccae9-rules#given) to write incredibly advanced linting rules which can power your [automated API Style Guides](https://apisyouwonthate.com/blog/automated-style-guides-for-rest-graphql-grpc/).
 
-You can even use [JSONPath in AWS Step Functions](https://aws.amazon.com/blogs/compute/using-jsonpath-effectively-in-aws-step-functions/)...
+You can even use [JSONPath in AWS Step Functions](https://aws.amazon.com/blogs/compute/using-jsonpath-effectively-in-aws-step-functions/).
 
 JSONPath is popping up all over the the place these days, and if you work with OpenAPI it's definitely a handy tool to have on your belt.
 
 ## How does JSONPath Work?
 
-JSONPath is one of a few query languages which will let you search, filter, and generally query through a chunk of JSON, not just to pull bits out, but to navigate complex data structures, with syntax for getting into specific array indexes, filtering through an objects properties or array values before continuing on to its children.
+JSONPath is one of several query languages which will let you filter, query, and traverse through a chunk of JSON, not just to pull bits out, but to navigate complex data structures, with syntax for getting into specific array indexes, filtering through an objects properties or array values before continuing on to its children.
 
 Here's a sample JSONPath from the RFC.
 
@@ -26,7 +26,10 @@ Here's a sample JSONPath from the RFC.
 $.store.book[?@.price < 10].title
 ```
 
-Now we need some JSON to run it against, and the RFC can help out there:
+> Anyone familiar with XPath in XML will be thinking "hmm, this looks pretty familiar!" and you're spot on, JSONPath is [inspired by XPath](https://www.rfc-editor.org/rfc/rfc9535#inspired-by-xpath). If you've never heard of XPath no worries, we'll start from scratch here.
+{: .info}
+
+To see how this works we'll need some JSON to run it against, so here is an example of some JSON from the RFC.
 
 ``` json
 {
@@ -67,16 +70,18 @@ Now we need some JSON to run it against, and the RFC can help out there:
 }
 ```
 
-Run through any sort of JSONPath tool you'd expect to see these results.
+Now when you run that through any sort of JSONPath tool, you could expect to see these results.
 
 ```json
 [
-  'Sayings of the Century',
-  'Moby Dick'
+  "Sayings of the Century",
+  "Moby Dick"
 ]
 ```
 
 ### Syntax
+
+There is a whole lot of syntax to learn, but once you figure out the constituent pieces you can start to compile them into really advanced queries.
 
 | Syntax            | Element Description |
 |-------------------|---------------------|
@@ -99,6 +104,7 @@ _Overview of JSONPath Syntax, from [RFC 9535](https://www.rfc-editor.org/rfc/rfc
 
 ### Examples
 
+If that isn't making too much sense, here are some examples to help you visualize.
 
 | JSONPath               | Intended Result                                        |
 |------------------------|--------------------------------------------------------|
