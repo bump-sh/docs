@@ -1,0 +1,10 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  list-style-type: none;
+
+  .task-list-item {
+    display: flex;
+  }
+}
