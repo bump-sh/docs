@@ -23,6 +23,7 @@
 
 @import "components/card.css";
 @import "components/search.css";
+@import "components/tasklist.css";
 @import "components/toc.css";
 @import "components/timeline.css";
 @import "components/update.css";
