@@ -64,9 +64,9 @@ As the saying goes, “you only get one chance to make a first impression”, wh
 Congrats - you launched your API! But just because you have launched your API doesn’t mean your documentation efforts are done. Instead, look for ways to improve your documentation based on feedback from your developer community. Keep your documentation updated with upcoming community events, SDKs and libraries that can accelerate the development effort, and examples, tutorials, and reference applications to show what is possible with your API. 
 
 ### 11. **Community Events**
-    - [ ] Information about official or community-driven events, meetups, and webinars.
-    - [ ] Upcoming conferences you are sponsoring or attending
-    - [ ] Videos from recent webinars and events. 
+   - [ ] Information about official or community-driven events, meetups, and webinars.
+   - [ ] Upcoming conferences you are sponsoring or attending
+   - [ ] Videos from recent webinars and events. 
 
 ### 12. **SDKs and Libraries**
    - [ ] List available SDKs or libraries for different programming languages, including those that are coming soon.
