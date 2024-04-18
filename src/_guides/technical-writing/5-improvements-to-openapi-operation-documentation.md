@@ -203,6 +203,8 @@ paths:
         - Order Management
 ```
 
+Refer to our guide, ["Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints"](https://docs.bump.sh/guides/api-basics/openapi-asyncapi-tags-organize-endpoints/) for further details on using tagging in your OpenAPI description. 
+
 ## 5. Improve Consistency in Operation Naming Conventions
 
 Inconsistent naming conventions for operations, parameters, and schema properties can lead to confusion and errors in API integration. Since making changes to these conventions can break your consumers, it is important to take a fresh look at your API operations, parameters, and schema definitions before releasing your API. 
