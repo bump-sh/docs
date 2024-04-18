@@ -35,6 +35,7 @@ As the saying goes, “you only get one chance to make a first impression”, wh
    - [ ] Request examples for each endpoint.
    - [ ] Response models and examples, including status codes and potential error messages.
    - [ ] Authentication requirements for each endpoint.
+   
 ### 5. **Error Handling**
    - [ ] Describe common errors, their causes, and how to resolve them.
    - [ ] Include error response formats and status codes.
