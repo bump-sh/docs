@@ -21,6 +21,12 @@ paths:
   /users:
     get:
       summary: "Get users"
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 10
       responses:
         200:
           description: "OK"
@@ -246,7 +252,7 @@ components:
           type: String
         …
 ```
-## Applying OpenAPI Specification Overlays
+## Bonus: Applying OpenAPI Specification Overlays
 
 For teams that are generating OpenAPI Specification documents [directly from their code](https://docs.bump.sh/guides/openapi/code-first/) using annotations, [technical writers can further benefit](https://docs.bump.sh/guides/technical-writing/efficient-tech-writing-process/) from the use of OpenAPI overlays. Refer to [our article that details using overlays](https://docs.bump.sh/guides/openapi/augmenting-generated-openapi/) to improve your tech writing workflow. 
 
