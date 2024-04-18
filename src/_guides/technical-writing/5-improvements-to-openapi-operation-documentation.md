@@ -158,6 +158,7 @@ responses:
 ```
 
 ## 4. Organize and Tag Your API Operations
+
 While most developers will never look at the underlying YAML for your reference documentation, most documentation rendering frameworks will render operations in the order that they are captured. This means that related operations that are scattered across your OpenAPI document will make it more difficult for the developer to understand how to use your API and what capabilities it offers. 
 
 At a minimum, group your operations so that they render together and in a thoughtful manner that helps with understanding. You may also wish to use tags to group related operations together. Tags are simply a grouping mechanism that helps documentation frameworks organize the display of your API operations. 
