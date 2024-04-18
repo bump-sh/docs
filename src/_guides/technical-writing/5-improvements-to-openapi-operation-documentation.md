@@ -207,7 +207,7 @@ paths:
 
 Inconsistent naming conventions for operations, parameters, and schema properties can lead to confusion and errors in API integration. Since making changes to these conventions can break your consumers, it is important to take a fresh look at your API operations, parameters, and schema definitions before releasing your API. 
 
-To further improve your API design efforts, involve your technical writers earlier in the API design process. This will provide insights regarding improvements that could be made to improve the developer experience. By shifting left your technical writer involvement in the API lifecycle, you also reduce the cost of change due to late feedback. 
+To further improve your API design efforts, involve your technical writers earlier in the API design process. This will provide insights regarding improvements that could be made to improve the developer experience. By shifting your technical writer involvement earlier in the API lifecycle, you also reduce the cost of change due to late feedback. 
 
 ### An Example of Inconsistent or Unclear Naming
 
