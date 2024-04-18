@@ -261,4 +261,4 @@ For teams that are generating OpenAPI Specification documents [directly from the
 
 ## Final Thoughts on Improving Your API Documentation 
 
-Creating a high-quality OpenAPI Specification v3 document requires attention to detail, thoroughness, and a focus on the user's experience. Take the additional time to review your documentation, look for areas to improve, and identify design flaws early so that they can be corrected with minimal impact to developers. Doing so will produce clear, comprehensive, and usable API documentation that results in a better developer experience. 
+Creating a high-quality API document requires attention to detail, thoroughness, and a focus on the user's experience. Take the additional time to review your documentation, look for areas to improve, and identify design flaws early so that they can be corrected with minimal impact to developers. Doing so will produce clear, comprehensive, and usable API documentation that results in a better developer experience. 
