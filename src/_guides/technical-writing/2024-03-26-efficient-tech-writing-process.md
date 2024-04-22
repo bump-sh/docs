@@ -80,7 +80,7 @@ actions:
       [check out the API documentation](https://protect.earth/api).
 ```
 
-Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, pointing to parts of the original document with [JSONPath](https://jsonpath.com/), then adding or updating your content in. You can add as many actions to these overlays as you like, or make multiple overlays.
+Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, pointing to parts of the original document with [JSONPath](/guides/openapi/jsonpath), then adding or updating your content in. You can add as many actions to these overlays as you like, or make multiple overlays.
 
 To work with Overlays you’ll need a tool that understands them, and that’s not all OpenAPI tools as the concept is still very new. Regardless of what API documentation tool you are using, you can use the [Bump CLI](https://github.com/bump-sh/cli) to apply these overlays, and this will produce a new user-facing document.
 
@@ -264,6 +264,9 @@ actions:
     description: Remove anything beta
     remove: true
 ```
+
+> Learn more about working with JSONPath to write powerful targets for your overlays using our guide [How to work with JSONPath](/guides/openapi/jsonpath).
+{: .info}
 
 ## Consolidate multiple APIs and services to one Hub
 
