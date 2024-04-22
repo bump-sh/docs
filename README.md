@@ -96,7 +96,9 @@ The folder name should be the slugified name of your category: `Tips and tricks 
 However, guides can freely be added into subfolders and their url would follow the folder path.
 For example, `src/_guides/bump-sh-tutorials/cli/mastering-bump-command-line.md` will show under `https://docs.bump.sh/guides/bump-sh-tutorials/cli/mastering-bump-command-line`.
 
-#### Writing the guide
+#### Writing a guide
+
+A guide's file name should start with the date it was last updated, such as `YYYY-MM-DD-donde-esta-la-biblioteca.md`. That date will be displayed in the article, under the author card.
 
 Guides should have a frontmatter containing at least a title, a list of authors and an excerpt.
 ```
