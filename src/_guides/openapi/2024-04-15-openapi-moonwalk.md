@@ -1,6 +1,7 @@
 ---
 title: 'OpenAPI v4.0 (A.K.A "Project Moonwalk")'
 authors: phil
+canonical_url: https://bump.sh/blog/openapi-moonwalk
 excerpt: What is coming next for OpenAPI, as v4.0 of the OpenAPI Specification gets closer to being released? What major changes are coming, how easy will it be to upgrade, and how do tooling companies feel about it?
 ---
 
@@ -10,7 +11,7 @@ What is coming next for OpenAPI, as v4.0 of the OpenAPI Specification gets close
 
 OpenAPI has been around for a long time, but only hit the mainstream when OpenAPI v3.0 was released in 2017. It made it a whole lot easier to describe the majority of REST/RESTish APIs, and brought in major investment from tooling developers big and small who jumped at the chance to add value to the community.
 
-OpenAPI v3.1 came out in early 2021, and focused on fixing issues that appeared with this influx of new users in v3.0. A large part of the focus was solving the subtle but problematic [differences between JSON Schema and the OpenAPI Schema Object](https://apisyouwonthate.com/blog/openapi-json-schema-divergence/). These two specifications looked similar enough that many users and (and even tooling) treated them as interchangeable, but OpenAPI Schema Objects were a subset *and* a superset of JSON Schema, which caused confusion for years. OpenAPI v3.1 aligned Schema Objects to be a valid “dialect” of JSON Schema 2020-12, which not only solved this long standing issue, but brought lots of useful new keywords like `if/then/else` to replace awkward nested `allOf` > `oneOf` usage. Other useful functionality like support for Webhooks expanded the type of APIs that could be described.
+OpenAPI v3.1 came out in early 2021, and focused on fixing issues that appeared with this influx of new users in v3.0. A large part of the focus was solving the subtle but problematic [differences between JSON Schema and the OpenAPI Schema Object](https://apisyouwonthate.com/blog/openapi-json-schema-divergence/). These two specifications looked similar enough that many users (and even tooling) treated them as interchangeable, but OpenAPI Schema Objects were a subset *and* a superset of JSON Schema, which caused confusion for years. OpenAPI v3.1 aligned Schema Objects to be a valid “dialect” of JSON Schema 2020-12, which not only solved this long standing issue, but brought lots of useful new keywords like `if/then/else` to replace awkward nested `allOf` > `oneOf` usage. Other useful functionality like support for Webhooks expanded the type of APIs that could be described.
 
 So what is OpenAPI v4.0 about?
 
@@ -270,4 +271,4 @@ Links, can we upgrade the OAS 3 concept of Links from a rarely used or supported
 
 [Proposal for links in OpenAPI v4](https://gist.github.com/mikekistler/1983a8249c0df56a46f94b4df1b7181d)
 
-If you’re interested in Moonwalk, give it a shot. You can try out the concepts on your own OpenAPI documents to see how it looks. You’ll have to do that manually for now as tooling is waiting for the plan to settle, but [Bump.sh](http://Bump.sh) will be keeping an eye on things and adding experimental support as soon as the time feels right. Until then keep getting feedback to the OAI so they can make this as good as possible.
+If you’re interested in Moonwalk, give it a shot. You can try out the concepts on your own OpenAPI documents to see how it looks. You’ll have to do that manually for now as tooling is waiting for the plan to settle, but [Bump.sh](https://bump.sh) will be keeping an eye on things and adding experimental support as soon as the time feels right. Until then keep getting feedback to the OAI so they can make this as good as possible.
