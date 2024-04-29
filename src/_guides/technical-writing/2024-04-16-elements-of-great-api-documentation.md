@@ -1,7 +1,7 @@
 ---
 title: The Elements of Great API Documentation
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/elements-of-great-api-documentation
 excerpt: Let’s explore the different types of API documentation and the role each has to play in helping a developer become proficient in consuming your API. 
 ---
 
