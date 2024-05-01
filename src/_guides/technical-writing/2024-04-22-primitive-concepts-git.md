@@ -365,6 +365,11 @@ two habits will help you collaborate with others over Git:
    Beware of rebases and merge conflicts.
 
 Git is one of those tools that takes minutes to learn and a lifetime to master.
+The story continues in [The Social Life of Git](/guides/technical-writing/social-life-git/),
+where we explore how the daily use of Git produces emergent properties
+that are not immediately obvious,
+especially in larger teams.
+In the meantime:
 
 - The [Git-scm home](https://git-scm.com/) is a good place
   to download a Git client and explore the official documentation.
