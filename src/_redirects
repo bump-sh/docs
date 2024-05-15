@@ -11,3 +11,6 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/doc-topics/ /help/enhance-documentation-content/topics/
 /help/custom-domains/ /help/customization-options/custom-domains/
 /help/quick-start/ /help/getting-started/
+/help/bump-cli /help/continuous-integration/cli/
+/help/github-action /help/continuous-integration/github-actions/
+/help/specifications-support /help/specification-support/
