@@ -29,6 +29,13 @@ We support OpenAPI `securitySchemes` property (`securityDefinitions` with openAP
 
 We do not support `mutualTLS`. To describe a `mutualTLS` authentication method, please use the [`x-topics` property](/help/enhance-documentation-content/topics/) for now.
 
+## Partially supported: XML generated examples
+
+We currently generate request or response examples in both JSON and
+XML format if none are provided in your Schema object
+definitions. However we don't yet support [the `xml:` attribute on
+Schema objects](https://spec.openapis.org/oas/v3.1.0#xml-object).
+
 ## readOnly and writeOnly properties
 
 JSON Schema provides the possibility to declare a property as read or write only. Read more in [the JSON Schema section of this documentation](/help/specification-support/json-schema#readonly-and-writeonly-properties).
