@@ -15,7 +15,7 @@ The Bump.sh CLI is used to interact with your API documentation or hubs hosted o
 
 The Bump.sh CLI is a node package currently distributed via NPM. This means you must have the Node v14+ interpreter installed on your computer or CI servers.
 
-_If you are looking to use Bump.sh in a continuous integration environment you might be interested by [our Github Action](https://github.com/marketplace/actions/bump-sh)._
+_If you are looking to use Bump.sh in a continuous integration environment you might be interested by [our Github Action](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog)._
 
 > You can download a standalone package directly from the latest
 > Github release assets if you don’t use Node.

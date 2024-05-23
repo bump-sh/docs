@@ -223,7 +223,7 @@ The CLI will respond with an URL that, if visited, will let you visualize for a 
 
 When your AsyncAPI file is ready to be deployed, you can follow the simple steps of the [Getting Started](/help/getting-started/) to have your API documentation live and ready to share.
 
-You can also connect the Bump.sh CLI to CI/CD tools, and there is even a GitHub Action you can add to any project. Which will allow you to automatically track and inform about API changes and deploy new versions of your API, among other cool possibilities you can read about on the [Bump.sh page in GitHub marketplace](https://github.com/marketplace/actions/bump-sh)
+You can also connect the Bump.sh CLI to CI/CD tools, and there is even a GitHub Action you can add to any project. Which will allow you to automatically track and inform about API changes and deploy new versions of your API, among other cool possibilities you can read about on the [Bump.sh page in GitHub marketplace](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog)
 
 ## Conclusion
 
