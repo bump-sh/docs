@@ -118,7 +118,7 @@ If you want to automate the update, then you can work with the [APIs.io API](htt
 
 ## Other Uses for APIs.json
 
-APIs.json has been around for a decade, but is only starting picking up steam recently thanks to tooling support starting to support it. Support is still limited, but there are countless potential use cases that can be handled with this specification.
+APIs.json has been around for a decade, but is only starting picking up steam recently thanks to tooling starting to support it. Support is still limited, but there are countless potential use cases that can be handled with this specification.
 
 Bump.sh customers are already using it for quality assurance on their developer portals, making sure all of their internal APIs are published, and available at all times. Using Continuous Integration they can check the generated APIs.json, and make sure their API documentation is there and visible on the expect URLs.
 
