@@ -132,4 +132,4 @@ Bump.sh customers are already using it for quality assurance on their developer 
 
 There are also clear implications for monitoring, if each API can advertise its `/health` endpoints you can pass that to monitoring software, or even just ping each endpoint yourself to look for downtime or issues listed in the [health check](https://apisyouwonthate.com/blog/health-checks-with-kubernetes/).
 
-The days of only have one API to manage are gone, so let's all focus on keeping track of our APIs, and helping end users find documentation, support contacts, and any other information in a sensible scalable way, without having to rely on search engines or begging for help on social media.
+The days of only have one API to manage are gone, and now we're in an age of "[API Sprawl](https://nordicapis.com/api-futures-api-sprawl-to-be-a-pressing-concern-in-2024/)". Let's all get better at keeping track of our APIs, helping end-users find documentation, support contacts, and any other information in a sensible scalable way, without having to rely on search engines or begging for help on social media.
