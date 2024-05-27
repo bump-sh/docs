@@ -30,6 +30,7 @@ The data for that endpoint looks a little something like this.
   "url": "https://demo.bump.sh/apis",
   "created": "2019-12-12",
   "modified": "2024-05-16",
+  "specificationVersion": "0.16",
   "apis": [
     {
       "name": "Train Travel API",
