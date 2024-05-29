@@ -1,7 +1,7 @@
 ---
 title: Enriching Your OpenAPI Info Documentation for Understanding
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/enriching-your-openapi-info-documentation-for-understanding
 excerpt: The importance of a well-crafted OpenAPI info section, including the name, description, and tag description fields.
 ---
 
