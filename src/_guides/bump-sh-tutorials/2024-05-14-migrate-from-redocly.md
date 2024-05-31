@@ -120,16 +120,16 @@ Both Redocly and Bump.sh support vendor extensions, which are non-standard addit
 To help you with your migration, here is a full list of the extensions Redocly support, with suggestions of alternative approaches where they exist.
 
 Location | Extension Keyword | Redocly | Bump.sh | Alternative
-Root Object | `x-servers` | ✅ | ❌ | Use the `servers` keyword added in OAS3.0
-Root Object | `x-tagGroups` | ✅ | ❌ | 
-Tag Group Object | `x-ignoredHeaderParameters` | ✅ | ❌ | 
-Info Object | `x-logo` | ✅ | ❌ | Upload a logo using [customization settings](https://docs.bump.sh/help/customization-options/color-logo-meta-images/).
-Tag Object | `x-traitTag` | ✅ | ❌ | 
-Tag Object | `x-displayName` | ✅ | ❌ | Use human-readable tag names.
-Operation Object | `x-codeSamples` | ✅ | ✅ | 
-Parameter Object | `x-examples` | ✅ | ❌ | Use the `examples` keyword added in OAS3.0.
-Response Object vendor extensions | `x-summary` | ✅ | ❌ | 
-Schema Object | `x-nullable` | ✅ | ❌ | Use the `nullable` keyword added in OAS3.0 or `type: null` added in OAS3.1
-Schema Object | `x-extendedDiscriminator` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
-Schema Object | `x-additionalPropertiesName` | ✅ | ❌ | Both additionalProperties and newer unresolvedProperties now accept a schema that can contain this extra information and more.
-Schema Object | `x-explicitMappingOnly` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
+Root | `x-servers` | ✅ | ❌ | Use the `servers` keyword added in OAS3.0
+Root | `x-tagGroups` | ✅ | ❌ | 
+Tag Group | `x-ignoredHeaderParameters` | ✅ | ❌ | 
+Info | `x-logo` | ✅ | ❌ | Upload a logo using [customization settings](https://docs.bump.sh/help/customization-options/color-logo-meta-images/).
+Tag | `x-traitTag` | ✅ | ❌ | 
+Tag | `x-displayName` | ✅ | ❌ | Use human-readable tag names.
+Operation | `x-codeSamples` | ✅ | ✅ | 
+Parameter | `x-examples` | ✅ | ❌ | Use the `examples` keyword added in OAS3.0.
+Response | `x-summary` | ✅ | ❌ | 
+Schema | `x-nullable` | ✅ | ❌ | Use the `nullable` keyword added in OAS3.0 or `type: null` added in OAS3.1
+Schema | `x-extendedDiscriminator` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
+Schema | `x-additionalPropertiesName` | ✅ | ❌ | Both additionalProperties and newer unresolvedProperties now accept a schema that can contain this extra information and more.
+Schema | `x-explicitMappingOnly` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
