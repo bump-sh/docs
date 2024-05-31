@@ -8,11 +8,11 @@ Redocly is a hosted OpenAPI documentation SaaS which works in a similar way to B
 
 ## Step 1: Find your OpenAPI
 
-Most users will have set Redocly up to pull from GitHub, GitLab, or Bitbucket, making this stage very simple. You already have your OpenAPI in your control. Going to "Settings" > "Source" will remind you exactly which repository, which branch, and which file exactly. 
+Most users will have set Redocly up to pull from GitHub, GitLab, or Bitbucket, making this stage very simple. You already have your OpenAPI in your control. Going to "Settings" > "Source" will remind you exactly which repository, which branch, and which file exactly.
 
 ![](/images/guides/migrating-from-redocly/source-code.png)
 
-If you are using some more complex CI/CD setup and have no idea where your OpenAPI originates, and the people who knew have left the company without a trace, you can export OpenAPI from Redocly. 
+If you are using some more complex CI/CD setup and have no idea where your OpenAPI originates, and the people who knew have left the company without a trace, you can export OpenAPI from Redocly.
 
 ![](/images/guides/migrating-from-redocly/export-from-redocly.png)
 
@@ -34,7 +34,7 @@ git commit -m "docs: imported openapi"
 
 ## Step 2: Publish OpenAPI as Documentation
 
-Instead of installing a GitHub Application, Bump.sh uses a [GitHub Action](https://docs.bump.sh/help/continuous-integration/github-actions/) for deployments. Alternatively you can get creative [with the command-line](https://docs.bump.sh/help/continuous-integration/cli/), using a [Continuous Integration setup](https://docs.bump.sh/help/continuous-integration/ci/), or even [deploying via the Bump.sh API](https://docs.bump.sh/help/continuous-integration/api/). 
+Instead of installing a GitHub Application, Bump.sh uses a [GitHub Action](https://docs.bump.sh/help/continuous-integration/github-actions/) for deployments. Alternatively you can get creative [with the command-line](https://docs.bump.sh/help/continuous-integration/cli/), using a [Continuous Integration setup](https://docs.bump.sh/help/continuous-integration/ci/), or even [deploying via the Bump.sh API](https://docs.bump.sh/help/continuous-integration/api/).
 
 ```yaml
 # .github/workflows/bump.yml
@@ -87,15 +87,15 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-Grab your Doc ID and Access Token from the Automatic Deployment settings, pop the Doc ID into the GitHub Action and put the API specific `BUMP_TOKEN` into the GitHub repository Secrets. 
+Grab your Doc ID and Access Token from the Automatic Deployment settings, pop the Doc ID into the GitHub Action and put the API specific `BUMP_TOKEN` into the GitHub repository Secrets.
 
 ![](/images/guides/migrating-from-redocly/automatic-deployment.png)
 
-This workflow will have Bump.sh make previews on Git branches, then deploy the main version of the documentation when a branch is merged. By doing this the pull requests also get change detection, allowing for warnings about breaking changes, and making a simple list of changes to help with design reviews. 
+This workflow will have Bump.sh make previews on Git branches, then deploy the main version of the documentation when a branch is merged. By doing this the pull requests also get change detection, allowing for warnings about breaking changes, and making a simple list of changes to help with design reviews.
 
 ![](/images/guides/migrating-from-redocly/bump-breaking-change.png)
 
-A side benefit of working this way is that you can defer all configuration about how reviews work, what checks should be involved, who is in charge of approving changes, etc. to the pull request settings of your source control. 
+A side benefit of working this way is that you can defer all configuration about how reviews work, what checks should be involved, who is in charge of approving changes, etc. to the pull request settings of your source control.
 
 Once a guide is published you can view the hosted documentation on Bump.sh, and it will look a little something like this: [Train Travel API Documentation](https://bump.sh/bump-examples/doc/train-travel-api).
 
@@ -119,17 +119,18 @@ Both Redocly and Bump.sh support vendor extensions, which are non-standard addit
 
 To help you with your migration, here is a full list of the extensions Redocly support, with suggestions of alternative approaches where they exist.
 
-Location | Extension Keyword | Redocly | Bump.sh | Alternative
-Root | `x-servers` | ✅ | ❌ | Use the `servers` keyword added in OAS3.0
-Root | `x-tagGroups` | ✅ | ❌ | 
-Tag Group | `x-ignoredHeaderParameters` | ✅ | ❌ | 
-Info | `x-logo` | ✅ | ❌ | Upload a logo using [customization settings](https://docs.bump.sh/help/customization-options/color-logo-meta-images/).
-Tag | `x-traitTag` | ✅ | ❌ | 
-Tag | `x-displayName` | ✅ | ❌ | Use human-readable tag names.
-Operation | `x-codeSamples` | ✅ | ✅ | 
-Parameter | `x-examples` | ✅ | ❌ | Use the `examples` keyword added in OAS3.0.
-Response | `x-summary` | ✅ | ❌ | 
-Schema | `x-nullable` | ✅ | ❌ | Use the `nullable` keyword added in OAS3.0 or `type: null` added in OAS3.1
-Schema | `x-extendedDiscriminator` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
-Schema | `x-additionalPropertiesName` | ✅ | ❌ | Both additionalProperties and newer unresolvedProperties now accept a schema that can contain this extra information and more.
-Schema | `x-explicitMappingOnly` | ✅ | ❌ | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.
+| Location  | Extension Keyword            | Bump.sh | Alternative                                                                                                                    |
+| --------- | ---------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Root      | `x-servers`                  | ❌      | Use the `servers` keyword added in OAS3.0                                                                                      |
+| Root      | `x-tagGroups`                | ❌      |
+| Tag Group | `x-ignoredHeaderParameters`  | ❌      |
+| Info      | `x-logo`                     | ❌      | Upload a logo using [customization settings](https://docs.bump.sh/help/customization-options/color-logo-meta-images/).         |
+| Tag       | `x-traitTag`                 | ❌      |
+| Tag       | `x-displayName`              | ❌      | Use human-readable tag names.                                                                                                  |
+| Operation | `x-codeSamples`              | ✅      |
+| Parameter | `x-examples`                 | ❌      | Use the `examples` keyword added in OAS3.0.                                                                                    |
+| Response  | `x-summary`                  | ❌      |
+| Schema    | `x-nullable`                 | ❌      | Use the `nullable` keyword added in OAS3.0 or `type: null` added in OAS3.1                                                     |
+| Schema    | `x-extendedDiscriminator`    | ❌      | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.                                             |
+| Schema    | `x-additionalPropertiesName` | ❌      | Both additionalProperties and newer unresolvedProperties now accept a schema that can contain this extra information and more. |
+| Schema    | `x-explicitMappingOnly`      | ❌      | Discriminator is confusing, poorly supported, and best avoided. Use oneOf instead.                                             |
