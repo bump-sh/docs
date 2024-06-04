@@ -19,7 +19,7 @@ Improvements:
 - Single change: we worked on the page to remove duplicated information, and put the focus the deployment date and change id, that can both be useful depending on who reads it. We also put some love on the mobile version.
 
 Quality of life:
-- While looking at the automatic deployment settings of a resource (documentation or hub), we now display the API key of the organization by default, instead of asking you to create one specific to this scope.
+- API keys, that let you configure automatic deployments or use the CLI can be set at the organization level, at a Hub level, or at a doc level. By default, you can always use an API key from a parent resource (for instance, the API key of the Hub or the Org that the doc belongs to). We made it clearer in the UI by displaying the parent resource API key in the Automatic Deployment settings page. It still is possible to create a dedicated key for each resource.
 - Deployments page: we removed the tabs allowing to filter between All, Released and Not Released deployments to increase the readability of the page.
 
 Fixes:
