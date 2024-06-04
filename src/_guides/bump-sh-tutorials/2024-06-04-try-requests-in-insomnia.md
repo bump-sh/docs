@@ -68,7 +68,7 @@ This can be fixed by selecting the `_.host` variable.
 
 ![](/images/guides/try-requests-in-insomnia/edit-variable.png)
 
-Doing this for each operation is not ideal, but the Insomnia team have been notified about the error and hopefully this will be resolved soon.
+Doing this for each operation is not ideal, but the Insomnia team are [aware of the problem](https://github.com/Kong/insomnia/issues/6785) and hopefully this will be resolved soon.
 
 ## Step 5) Updating Broken Parameters
 
