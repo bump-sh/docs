@@ -27,6 +27,3 @@ Fixes:
 - We fixed a visual bug on selects, that could make the user think that multiple items were active.
 - We fixed a bug that made the title and description of an more recent change disappear when an user unreleased an older deployment.
 
-
-
-
