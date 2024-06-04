@@ -1,7 +1,7 @@
 ---
 title: Improving Schema Component Documentation in OpenAPI Documents
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/improving-schema-component-documentation-in-openapi-documents
 excerpt: Tips and examples on how to effectively document schema components in OpenAPI specification documents.
 ---
 
