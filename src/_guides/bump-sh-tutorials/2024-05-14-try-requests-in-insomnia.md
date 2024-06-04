@@ -46,7 +46,7 @@ Once the collection is made you can click on the "..." and click "Import".
 
 Then select OpenAPI document.
 
-![](/images/guides/try-requests-in-insomnia/pick-file.png)
+![](/images/guides/try-requests-in-insomnia/pick-a-file.png)
 
 This approach means the collection will get out of date over time, but will help you at least see how this whole thing works, and Git sync can be enabled later if you feel like its worth upgrading. 
 
@@ -139,6 +139,6 @@ The command will return a link, click that and see how the documentation looks.
 
 ![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/images/guides/try-requests-in-insomnia/bump-docs-insomnia-button.png)
 
-When you (or your users) click the new Run in Insomnia button, they'll be asked to import your colleciton to their own workspace, and now they can interact with your API on their own computers making requests with all the parameters and authentication options set up for them! 
+When you (or your users) click the new Run in Insomnia button, they'll be asked to import your collection to their own workspace, and now they can interact with your API on their own computers making requests with all the parameters and authentication options set up for them! 
 
 ![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/images/guides/try-requests-in-insomnia/view-collection-in-insomnia.png)
