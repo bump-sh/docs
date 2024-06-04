@@ -15,7 +15,7 @@ As always, we love to hear about any features you would like to see added to the
 Improvements: 
 - When you are subscribed to an API changelog, the link inside the email notifying about a new change now redirects to the specific change page. 
 - We improved the display of oneOf/anyOf alternatives. When there is a lot of alternatives, we now display the list inside a select instead of a horizontally scrolling tab list.
-- The API/Hub visibility has been reworked, to mitigate the risk of mistakes. The visibility of a documentation inside a private hub is now locked to private.
+- The public or private visibility setting options of hubs and their docs was too flexible and confusing. Docs in private hubs are now necessarily private, and cannot be public. Docs in public hubs can be either public or private.
 - Single change: we worked on the page to remove duplicated information, and put the focus the deployment date and change id, that can both be useful depending on who reads it. We also put some love on the mobile version.
 
 Quality of life:
