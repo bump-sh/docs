@@ -20,7 +20,7 @@ Improvements:
 
 Quality of life:
 - API keys, that let you configure automatic deployments or use the CLI can be set at the organization level, at a Hub level, or at a doc level. By default, you can always use an API key from a parent resource (for instance, the API key of the Hub or the Org that the doc belongs to). We made it clearer in the UI by displaying the parent resource API key in the Automatic Deployment settings page. It still is possible to create a dedicated key for each resource.
-- Deployments page: we removed the tabs allowing to filter between All, Released and Not Released deployments to increase the readability of the page.
+- Deployments page: we removed the tabs allowing to filter between All, Released and Not Released deployments to improve the page's readability. It is still possible to filter deployments by State (Enqueued, Deployiong, Deployed, Errored).
 
 Fixes:
 - Webhook in documentation now display the generic URL https://webhook.example.com.
