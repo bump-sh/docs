@@ -23,7 +23,7 @@ Quality of life:
 - Deployments page: we removed the tabs allowing to filter between All, Released and Not Released deployments to improve the page's readability. It is still possible to filter deployments by State (Enqueued, Deployiong, Deployed, Errored).
 
 Fixes:
-- Webhook in documentation now display the generic URL https://webhook.example.com.
+- Webhooks in documentation now display the generic URL https://webhook.example.com.
 - We fixed a visual bug on selects, that could make the user think that multiple items were active.
 - We fixed a bug that made the title and description of an more recent change disappear when an user unreleased an older deployment.
 
