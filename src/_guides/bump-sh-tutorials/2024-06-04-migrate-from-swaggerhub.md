@@ -44,7 +44,7 @@ Using open-source tooling can provide this exact same experience, easier, cheape
 
 - [OpenAPI Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) by 42Crunch - code navigation, linting, SwaggerUI or ReDoc preview, IntelliSense, schema enforcement and generation, schema definition links, snippets as well as static and dynamic security analysis.
 - [OpenAPI Preview](https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview) by Andreas Zoellner - Preview panel using Stoplight Elements.
-- [OpenAPI Viewer](https://marketplace.visualstudio.com/items?itemName=AndrewButson.vscode-openapi-viewer)by Andrew Butson - Preview panel using RapiDoc.
+- [OpenAPI Viewer](https://marketplace.visualstudio.com/items?itemName=AndrewButson.vscode-openapi-viewer) by Andrew Butson - Preview panel using RapiDoc.
 
 The OpenAPI Editor from 42 Crunch is a powerful choice, offering not just a preview panel but auto-complete and a "explorer" view to help you move around the OpenAPI document. It also has a choice of preview tools, with Swagger UI being the exact same tool used on SwaggerHub. 
 
