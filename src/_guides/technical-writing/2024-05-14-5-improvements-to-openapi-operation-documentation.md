@@ -1,7 +1,7 @@
 ---
 title: 5 Improvements to OpenAPI Operation Documentation
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/5-improvements-to-openapi-operation-documentation
 excerpt: A look at five operation-specific improvements that you can make to deliver on a great developer experience while reducing the support costs of your API. 
 ---
 

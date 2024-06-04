@@ -1,7 +1,7 @@
 ---
 title: API Documentation Checklist
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/api-documentation-checklist
 excerpt: A checklist to help you identify the documentation you will need for launching your API.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: The Role of Technical Writer in API Documentation
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/the-role-of-technical-writer-in-api-documentation
 excerpt: Explore the new role of technical writers, the skills they need to participate in writing API documentation, and the challenges they may encounter as they collaborate with development teams.
 ---
 
