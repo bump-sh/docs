@@ -1,6 +1,7 @@
 ---
 title: "Make your APIs Discoverable with APIs.json"
 authors: phil
+canonical_url: https://bump.sh/blog/make-your-apis-discoverable-with-apis-json
 excerpt: You've built a brilliant API, and you've taken the time to document it, now leverage API specifications to help share this API on API marketplaces.
 --- 
 
