@@ -1,10 +1,10 @@
 ---
 title: Easily share your API changes
 tags: [New]
-image: /images/changelog/single-change.png
+image: /images/changelog/changelog-entry-page.png
 ---
 
-![single-change.png](/images/changelog/single-change.png)
+![single-change.png](/images/changelog/changelog-entry-page.png)
 
 The changelog allows the consumers of your API documentation to track changes as your documentation evolves. We have recently improved it with several new features, such as the [changelog diff](https://docs.bump.sh/product-updates/2023/11/02/changelog-diff/) to track for example the differences between two changes.
 
