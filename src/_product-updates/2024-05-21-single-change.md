@@ -1,5 +1,5 @@
 ---
-title: Single Change
+title: Easily share your API changes
 tags: [New]
 image: /images/changelog/single-change.png
 ---
