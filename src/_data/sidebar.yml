@@ -42,6 +42,9 @@ help:
       - type: page
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
+      - type: page
+        label: SEO
+        link: /publish-documentation/seo/
   - type: category
     label: Enhance your documentation content
     link: /enhance-documentation-content/
