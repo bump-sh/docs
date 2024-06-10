@@ -4,7 +4,7 @@ authors: phil
 excerpt: Move your OpenAPI out of Redocly and into your own source control, so you can control more of the workflow with all the same benefits.
 ---
 
-Redocly is a hosted OpenAPI documentation SaaS which works in a similar way to Bump.sh: you work on OpenAPI wherever you want, then publish it up to Redocly via various Git hosting providers or Continuous Integration. They fact that it works so similarly means you can switch from Redocly easily, and start getting all the extra benefits of breaking change detection and an API changelog with minimal effort.
+Redocly is a hosted OpenAPI documentation SaaS which works in a similar way to Bump.sh: you work on OpenAPI wherever you want, then publish it up to Redocly via various Git hosting providers or Continuous Integration. The fact that it works so similarly means you can switch from Redocly easily, and start getting all the extra benefits of breaking change detection and an API changelog with minimal effort.
 
 ## Step 1: Find your OpenAPI
 
