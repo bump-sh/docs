@@ -49,6 +49,7 @@ collections:
     name: Guides
     output: true
     future: true
-
+    sort_by: date
+    sort_direction: descending
 kramdown:
   parse_html_blocks: true
