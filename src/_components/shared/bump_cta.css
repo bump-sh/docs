@@ -1,0 +1,25 @@
+bump-cta {
+  border: var(--border-default);
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+
+  p {
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  a {
+    --button-color: var(--gradient-blue);
+    --button-color-hover: var(--gradient-blue);
+    color: var(--white);
+    height: auto;
+    transition: all ease-in 0.2s;
+
+    &:hover {
+      gap: var(--spacing-4);
+    }
+  }
+}
