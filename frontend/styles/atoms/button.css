@@ -10,7 +10,7 @@
   --button-border-color-hover: var(--button-color-hover);
 
   align-items: center;
-  background-color: var(--button-color);
+  background: var(--button-color);
   display: inline-flex;
   border: 1px solid var(--button-border-color);
   border-radius: var(--border-radius-medium);
@@ -25,8 +25,7 @@
   padding: var(--spacing-2) var(--spacing-3);
   text-align: center;
   text-decoration: none;
-  transition: background-color var(--base-duration) var(--base-timing),
-    border-color var(--base-duration) var(--base-timing);
+  transition: all var(--base-duration) var(--base-timing);
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
