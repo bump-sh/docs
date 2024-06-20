@@ -18,6 +18,15 @@ guide-list {
       background-color: var(--bg-color);
       box-sizing: border-box;
       min-height: 270px;
+
+      p {
+        flex-grow: 1;
+      }
+
+      time {
+        color: var(--gray-50);
+        font-size: 0.875rem;
+      }
     }
   }
 
