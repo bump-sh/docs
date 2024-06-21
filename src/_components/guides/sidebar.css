@@ -13,4 +13,9 @@ guide-sidebar {
       margin: 0;
     }
   }
+
+  bump-cta {
+    position: sticky;
+    top: var(--spacing-28);
+  }
 }
