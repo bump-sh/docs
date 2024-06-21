@@ -1,7 +1,7 @@
 ---
 title: Git Workflows for API Technical Writers
 authors: james
-canonical_url: 
+canonical_url: https://bump.sh/blog/git-workflows-for-api-technical-writers
 excerpt: Explore the challenges and solutions of keeping your docs in sync with an evolving API design using git workflows.
 ---
 
