@@ -6,5 +6,6 @@ class Guides::Sidebar < Bridgetown::Component
     @tags = @data.tags
     @update = @data.date.strftime("%B %d, %Y")
     @relative_path = relative_path
+    @slug = @data.slug
   end
 end
