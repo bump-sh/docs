@@ -149,7 +149,7 @@ Training and Resources: Provide training sessions and resources to familiarize d
 Style Guide Enforcement: Consider utilizing tools or checklists to ensure documentation adheres to the guidelines during the development process. This can help maintain consistency and quality.
 ```
 
-This example will help you get started. Of course, you can add RFC 2119 language to make these more formalized and enforceable. Remember, the specific content and details will vary depending on your organization's needs and the complexity of your APIs, so be sure to spend some time reviewing and adjusting these recommendations. 
+This example will help you get started. Of course, you can add [RFC 2119 language](https://datatracker.ietf.org/doc/html/rfc2119) to make these more formalized and enforceable. Remember, the specific content and details will vary depending on your organization's needs and the complexity of your APIs, so be sure to spend some time reviewing and adjusting these recommendations. 
 
 ## Conclusion
 Integrating comprehensive documentation guidelines into your API style guide enhances not only the usability of your APIs but also their acceptance and longevity in the market. A detailed API documentation guideline helps ensure consistency, fosters trust, and enhances user experience, all of which are crucial for the successful deployment and adoption of APIs. By following these recommendations and tailoring them to your specific context, you can cultivate clear, consistent, and user-friendly API documentation that empowers developers and fosters a thriving API ecosystem.
