@@ -41,7 +41,7 @@ While deprecation is a strategic decision, its execution hinges on effective pro
 
 **Support Resources**: Offer additional support resources, such as migration guides, FAQs, and a dedicated communication channel for API consumers during the deprecation period. This demonstrates a commitment to helping developers through the transition.
 
-**Use the HTTP Sunset Header**: RFC 8594 provides a machine-readable method of noting the deprecation of an API by including the sunset date. API monitoring solutions are beginning to support this header as a way to detect, log, and notify an API’s sunset date for those that might not notice it via other communication methods.
+**Use the HTTP Sunset Header**: [RFC 8594](https://datatracker.ietf.org/doc/html/rfc8594) provides a machine-readable method of noting the deprecation of an API by including the sunset date. API monitoring solutions are beginning to support this header as a way to detect, log, and notify an API’s sunset date for those that might not notice it via other communication methods.
 
 Since many of these changes involve documentation updates, you may want to consider applying a [branching strategy](https://docs.bump.sh/help/publish-documentation/branching/) to help you perform updates to all of your content and roll it out at once when ready. Also consider taking advantage of [automatic or manual release processes](https://docs.bump.sh/help/publish-documentation/deploy-and-release-management/) to manage the rollout of your announcement when you are ready. 
 
