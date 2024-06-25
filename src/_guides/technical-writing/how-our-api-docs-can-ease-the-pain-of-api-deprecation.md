@@ -35,7 +35,7 @@ While deprecation is a strategic decision, its execution hinges on effective pro
 
 **Deprecation Warnings**: Include clear warnings within the API documentation about deprecated features and functionalities. Warn developers about the upcoming removal and the recommended replacement within the new API. 
 
-**OpenAPI Deprecation Flags**: The OpenAPI Specification’s deprecation boolean flag can be applied to each or all operations, helping to generate warnings from within code generated helper libraries and SDKs. 
+**OpenAPI Deprecation Flags**: The OpenAPI Specification’s [deprecation boolean flag](https://spec.openapis.org/oas/latest.html#operation-object) can be applied to each or all operations, helping to generate warnings from within code generated helper libraries and SDKs. 
 
 **Sample Code Migration**: Provide sample code snippets demonstrating the migration process from the old API to the new one. This can significantly reduce development time and effort required for API consumers.
 
