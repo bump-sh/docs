@@ -69,7 +69,7 @@ Now that we understand the importance of documentation guidelines, let's explore
 
 ### **Tooling and Resources:**
 
-**Recommended Tools:** Suggest tools that can be used to generate and manage API documentation (e.g., Swagger, OpenAPI). This may include adding the API to an internal API catalog and/or external API marketplace. 
+**Recommended Tools:** Suggest tools that can be used to generate and manage API documentation (e.g., Swagger, OpenAPI). This may include adding the API to an internal API catalog and/or external API marketplace (for instance, by [using APIs.json](https://docs.bump.sh/guides/bump-sh-tutorials/make-your-apis-discoverable-with-apisjson/)). 
 
 **Links and References:** Provide a list of relevant resources, such as the official API style guide and external documentation standards, if available.
 
