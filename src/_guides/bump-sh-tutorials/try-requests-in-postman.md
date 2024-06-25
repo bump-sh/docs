@@ -2,6 +2,7 @@
 title: Try HTTP Requests with Postman
 authors: phil
 excerpt: Integrate your OpenAPI-powered documentation with Postman to let customers try your API out, right from the API docs.
+date: 2024-05-14
 ---
 
 Seeing how an API works is the first step in an end-users journey to using the API, and the second step is making some test requests to get a feel for how it works. Some people like to do this with code, so code samples will be a good start for them, especially if you have an SDL. Other people like to do this with interactive HTTP clients, like [Postman](https://postman.com/).
@@ -10,17 +11,17 @@ Postman is one of the original modern API consoles. Users can create or import "
 
 This guide will go through getting started with Postman, creating a "Postman Collection" from the same OpenAPI that powers your documentation, to finally getting a "Run in Postman" button into your Bump.sh API docs.
 
-## Step 1: Install Postman
+## Step 1) Install Postman
 
 [Download](https://www.postman.com/downloads/) and install Postman on your computer and load it up.
 
-## Step 2: Create a Postman account
+## Step 2) Create a Postman account
 
 Create a new account (it's free). If you're doing this for a business or organization other than yourself you can create a workspace your collections to live in.
 
 ![Create your workspace view, with a list of templates that can be used for the workspace, "API demos" template is selected.](/images/guides/try-requests-in-postman/postman-create-workspace.png)
 
-## Step 3: Connect your API to Git version control
+## Step 3) Connect your API to Git version control
 
 On the left sidebar click APIs, and you should see the option to create a new API. If this option is missing open up Workspace settings and configure the sidebar to add the APIs option.
 
@@ -38,7 +39,7 @@ It's possibly sat in the root of your repository, but if you're not sure, you ca
 
 Click "Connect Repository" when it's all done and you'll be taken to the API overview page.
 
-## Step 4: Setup Postman in the Repository
+## Step 4) Setup Postman in the Repository
 
 Before you can publish this API to the world, we need to help Postman identify the specific API being described. If you hover over the Publish button it will suggest some changes, which it can commit for you.
 
@@ -50,7 +51,7 @@ If you'd like to see what it looks like, take a look at the [Train Travel API pu
 
 When this is done, Postman will be all set up to work with your API in your repository.
 
-## Step 5: Generate a Postman Collection
+## Step 5) Generate a Postman Collection
 
 Postman is now aware of your OpenAPI document, but in order to share a collection you'll need to generate a collection from your OpenAPI.
 
@@ -64,7 +65,7 @@ Almost done! The collection lives in the APIs panel under our API, but in order 
 
 ![The API definition contains the collection, but it needs to be copied to Collections tab by right clicking and selecting Copy to collections](/images/guides/try-requests-in-postman/copy-to-collections.png)
 
-## Step 6: Integrate the Run in Postman button to Bump.sh
+## Step 6) Integrate the Run in Postman button to Bump.sh
 
 Finally, this collection is ready to rock, and we can embed the Run in Postman button into our Bump.sh documentation. 
 

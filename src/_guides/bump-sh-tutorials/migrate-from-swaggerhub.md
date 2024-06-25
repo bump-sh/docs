@@ -2,6 +2,7 @@
 title: Migrate from SwaggerHub
 authors: phil
 excerpt: Move your OpenAPI out of SwaggerHub and into your own source control, so you can control more of the workflow with all the same benefits.
+date: 2024-06-25
 ---
 
 Tools like SwaggerHub provide an editing and hosting experience for OpenAPI documents, allowing teams to fork APIs, add new versions, diff, and compare, which was pretty handy back in the day. These days it can feel like recreating Git with a walled-garden, needing to be imported and exported, or joined together with "integrations" that involve manually setting up webhooks to ping your other tools when there are changes. Many teams are starting to question how useful that is.
