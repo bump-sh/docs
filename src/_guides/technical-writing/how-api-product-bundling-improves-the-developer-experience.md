@@ -60,34 +60,35 @@ For organizations that wish to create their own API product bundles, several act
 
 1. **Establish API Hubs and Categorize Documentation**
 
-Creating [centralized API hubs](https://docs.bump.sh/help/hubs/) is essential for managing multiple API product bundles effectively. These hubs serve as the entry point for developers and partners, offering a comprehensive overview of available APIs. 
+   Creating [centralized API hubs](https://docs.bump.sh/help/hubs/) is essential for managing multiple API product bundles effectively. These hubs serve as the entry point for developers and partners, offering a comprehensive overview of available APIs. 
 
-In some cases, you may have documentation that belongs in one or more portals. In this case, consider [assigning topics](https://docs.bump.sh/help/enhance-documentation-content/topics/) to your documentation that can then be used to publish related documentation to the proper portals. 
+   In some cases, you may have documentation that belongs in one or more portals. In this case, consider [assigning topics](https://docs.bump.sh/help/enhance-documentation-content/topics/) to your documentation that can then be used to publish related documentation to the proper portals. 
 
 2. **Implement User Access Management**
 
-Managing user access at both the portal and document levels is crucial for maintaining security and ensuring that developers only see the APIs they are authorized to use.
+   Managing user access at both the portal and document levels is crucial for maintaining security and ensuring that developers only see the APIs they are authorized to use.
 
    - **Per Portal Management**: Set up different portals or access points for various audiences, such as internal developers, partners, or third-party developers. Each portal should display only the relevant API bundles and documentation.
    - **Per Doc Management**: Within these portals, control access at the individual document level. This ensures that sensitive or advanced API functionalities are only accessible to authorized users. FYI, this would have helped us reduce the number of API portals that we required. 
 
 3. **Utilize OpenAPI Specification Overlays**
 
-OpenAPI Specification (OAS) overlays are a powerful tool for extending and modifying API definitions without changing the underlying OAS document. They enable more flexible and dynamic documentation and API management.
-Use OAS overlays to customize the documentation view for different audiences. This can include adding additional descriptions, usage examples, or constraints that are specific to a particular bundle or user segment.
+   OpenAPI Specification (OAS) overlays are a powerful tool for extending and modifying API definitions without changing the underlying OAS document. They enable more flexible and dynamic documentation and API management.
+
+   Use OAS overlays to customize the documentation view for different audiences. This can include adding additional descriptions, usage examples, or constraints that are specific to a particular bundle or user segment.
 
 4. **Support for APIs.json**
 
-APIs.json is a discovery format for APIs that [makes it easier for developers](https://bump.sh/blog/make-your-apis-discoverable-with-apis-json) to find and understand available APIs. Supporting APIs.json can enhance the visibility and usability of your API bundles.
+   APIs.json is a discovery format for APIs that [makes it easier for developers](https://bump.sh/blog/make-your-apis-discoverable-with-apis-json) to find and understand available APIs. Supporting APIs.json can enhance the visibility and usability of your API bundles.
 
-Create an APIs.json file that lists all your API bundles and includes metadata such as titles, descriptions, and links to documentation. This file should be kept up-to-date and easily accessible to ensure developers can quickly discover the APIs they need.
+   Create an APIs.json file that lists all your API bundles and includes metadata such as titles, descriptions, and links to documentation. This file should be kept up-to-date and easily accessible to ensure developers can quickly discover the APIs they need.
 
-Combining these actions forms a holistic approach to creating and managing API bundles:
+   Combining these actions forms a holistic approach to creating and managing API bundles:
 
-- **Centralized Hubs**: Establish API hubs as the go-to resource for developers, with well-organized documentation and clear navigation.
-- **Access Management**: Implement robust user access controls to safeguard sensitive information and ensure developers only see what they need.
-- **Dynamic Documentation**: Leverage OAS overlays to keep documentation dynamic and relevant, accommodating different user needs and API versions.
-- **Discovery Format**: Utilize APIs.json to enhance discoverability and streamline access to your API offerings.
+   - **Centralized Hubs**: Establish API hubs as the go-to resource for developers, with well-organized documentation and clear navigation.
+   - **Access Management**: Implement robust user access controls to safeguard sensitive information and ensure developers only see what they need.
+   - **Dynamic Documentation**: Leverage OAS overlays to keep documentation dynamic and relevant, accommodating different user needs and API versions.
+   - **Discovery Format**: Utilize APIs.json to enhance discoverability and streamline access to your API offerings.
 
 ## Conclusion
 
