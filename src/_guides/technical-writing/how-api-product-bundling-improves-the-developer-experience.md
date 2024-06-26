@@ -77,7 +77,7 @@ Use OAS overlays to customize the documentation view for different audiences. Th
 
 4. **Support for APIs.json**
 
-APIs.json is a discovery format for APIs that makes it easier for developers to find and understand available APIs. Supporting APIs.json can enhance the visibility and usability of your API bundles.
+APIs.json is a discovery format for APIs that [makes it easier for developers](https://bump.sh/blog/make-your-apis-discoverable-with-apis-json) to find and understand available APIs. Supporting APIs.json can enhance the visibility and usability of your API bundles.
 
 Create an APIs.json file that lists all your API bundles and includes metadata such as titles, descriptions, and links to documentation. This file should be kept up-to-date and easily accessible to ensure developers can quickly discover the APIs they need.
 
