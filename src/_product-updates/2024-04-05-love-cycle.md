@@ -1,10 +1,10 @@
 ---
-title: Love Cycle
+title: Love Cycle - April 24
 tags: [Improvement]
-image: /images/changelog/love-cycle.png
+image: /images/changelog/love-cycle-april-2024.png
 ---
 
-![new-dashboard-2024.jpg](/images/changelog/love-cycle.png)
+![love-cycle.png](/images/changelog/love-cycle-april-2024.png)
 
 We have a tradition of scheduling what we call Love Cycles between our development cycles: times dedicated to improving Bump.sh, responding to specific user requests that we find relevant, and providing a general polish.
 
