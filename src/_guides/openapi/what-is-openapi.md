@@ -123,14 +123,14 @@ There are many tools to help you get the most out of OpenAPI, at every step of t
 ### Editors
 
 * [OpenAPI-GUI](https://mermade.github.io/openapi-gui/)
-* [Stoplight studio](https://stoplight.io/studio/)
-* [Swagger editor](https://editor.swagger.io/)
+* [Stoplight Studio](https://stoplight.io/studio/)
+* [Swagger Editor](https://editor.swagger.io/)
 * [Insomnia](https://insomnia.rest/)
 
 ### Linters
 
-* [Speccy](https://github.com/wework/speccy)
 * [Spectral](https://github.com/stoplightio/spectral)
+* [Vacuum](https://quobix.com/vacuum/)
 
 ### Documentation
 
@@ -142,7 +142,8 @@ There are many tools to help you get the most out of OpenAPI, at every step of t
 ### Mocking
 
 * [Prism](https://github.com/stoplightio/prism)
-* [APISprout](https://github.com/danielgtaylor/apisprout)
+* [Microcks](https://microcks.io/)
+* [Wiretap](https://pb33f.io/wiretap/)
 
 ### Testing
 
