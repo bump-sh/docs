@@ -33,3 +33,29 @@ This example shows three API servers, for the common dev, staging, and productio
 
 > info
 > The `x-internal` is not strictly part of the specification, but it is a commonly used extension, which will help hide these servers from most tools when publishing your documentation, so you can keep those URLs hidden from documentation views to avoid confusing end-users with details about your internal setups.
+
+
+## Server Variables
+
+Server variables offer a convenient way to modify server URLs, covering simple patterns such as environment names, geographical regions, or covering wildcards like user-generated subdomains. These variables are part of the server object, and allow for more flexible API configurations without hardcoding every possible server option.
+
+For instance, consider an API that is deployed across multiple regions, such as the United States, Europe, and Asia. Instead of listing each server URL separately, you can use a server variable to represent the region. 
+
+```yaml
+servers:
+  - url: https://{region}.api.example.com
+    description: Regional Production Server
+    variables:
+      region:
+        default: eu
+        description: Regions
+        enum:
+          - us
+          - eu
+          - asia
+```
+
+In this example, `{region}` is a server variable, and the `enum` restricts this to three possible values: `us`, `eu`, and `asia`. The default value is `eu`, which means if the region is not specified, tooling can know which value to use. This setup allows clients to dynamically select the appropriate regional server by substituting the `{region}` variable in the URL template, resulting in `https://asia.api.example.com`.
+
+> warn
+> Some people try to use server variables for handling API Versions (v1, v2, v3) in a single OpenAPI document. This is a poor fit for server variables, because far more than the server URL will change between major versions. Server variables help when just the server is changing, but the other operations and components are the same.
