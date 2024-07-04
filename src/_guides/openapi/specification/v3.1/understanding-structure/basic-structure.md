@@ -96,7 +96,9 @@ The `paths` object is probably the most important section for your API. It lists
 
 Here the `operationId` helps us spot the two different operations, and give them a unique name which can be useful for all sorts of tools. The summary then gives a human readable title that will often be used in documentation tools.
 
-Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads, but we'll get to that.
+Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads. 
+
+Learn more about [paths & operations](/guides/openapi/specification/v3.1/understanding-structure/paths-operations).
 
 ### 5. Components Object
 
