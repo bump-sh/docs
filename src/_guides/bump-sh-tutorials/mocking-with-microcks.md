@@ -5,11 +5,11 @@ excerpt:
 date: 2024-06-27
 ---
 
-Mocking has a lot of meanings in computing, but in the world of APIs it's specifically about simulating an API. Simulating API's can have many uses, from stubbing out difficult systems from end-to-end testing to proviging a harmless playground for users to make requests from documentation without having to build a whole new "sandbox" environment. The main use case is allowing API clients and stakeholders the ability to play around with an API before wasting time writing code that might not be helpful, and the process can be sped up massively using OpenAPI-based mocking tools like Microcks.
+Mocking has a lot of meanings in computing, but in the world of APIs it's specifically about simulating an API. Simulating API's can have many uses, from stubbing out difficult systems from end-to-end testing to providing a harmless playground for users to make requests from documentation without having to build a whole new "sandbox" environment. The main use case is allowing API clients and stakeholders the ability to play around with an API before wasting time writing code that might not be helpful, and the process can be sped up massively using OpenAPI-based mocking tools like Microcks.
 
 Mocking is often a very simplistic version of the API, focused more on the structure of the data than the specific data being sent. This can mean a mock API gives out static responses regardless of the request, but that in itself is pretty helpful. For example, making sure clients are integrating with the right expectations around data types: not mixing up integers and numeric strings, and help ensure the responses are being used properly in the user interface.
 
-This guide will show you how to take the same OpenAPI documents that power your Bump.sh documentation and create mock APIs with Microcoks, that can be stored run locally, in continuous integration environments, or hosted on a web server.
+This guide will show you how to take the same OpenAPI documents that power your Bump.sh documentation and create mock APIs with Microcks, that can be stored run locally, in continuous integration environments, or hosted on a web server.
 
 
 ## Step 1: Set up Microcks locally
