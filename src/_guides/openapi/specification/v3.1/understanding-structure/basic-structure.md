@@ -69,7 +69,7 @@ servers:
     description: Staging server
 ```
 
-It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](https://docs.bump.sh/guides/openapi/augmenting-generated-openapi/).
+It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](/src/_guides/openapi/augmenting-generated-openapi/).
 
 ### 4. Paths Object
 
@@ -98,7 +98,7 @@ Here the `operationId` helps us spot the two different operations, and give them
 
 Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads. 
 
-Learn more about [paths & operations](/guides/openapi/specification/v3.1/understanding-structure/paths-operations).
+**Learn more about [paths & operations](./paths-operations.md).**
 
 ### 5. Components Object
 
@@ -208,7 +208,7 @@ security:
     - write
 ```
 
-You can get into path specific overrides and various complex "and" situations with more [advanced security functionality](/guides/openapi/specification/v3.1/advanced/security).
+You can get into path specific overrides and various complex "and" situations with more [advanced security functionality](../advanced/security.md).
 
 ### 7. Webhooks Object
 
