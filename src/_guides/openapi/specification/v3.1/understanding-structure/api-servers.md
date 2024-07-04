@@ -31,9 +31,8 @@ servers:
 
 This example shows three API servers, for the common dev, staging, and production environments. Perhaps the local environment is on localhost and perhaps its a virtual machine on the cloud somewhere, but the idea is that same, you have all the different places an API might be. 
 
-> info
-> The `x-internal` is not strictly part of the specification, but it is a commonly used extension, which will help hide these servers from most tools when publishing your documentation, so you can keep those URLs hidden from documentation views to avoid confusing end-users with details about your internal setups.
-
+> The `x-internal` is not strictly part of the specification, but it is a commonly used extension. Any tools that support it will hide these servers, removing them from user facing documentation for example. This lets you can keep handy development and testing information in OpenAPI, but avoid confusing end-users with details about your internal setup.
+{: .info}
 
 ## Server Variables
 
@@ -43,7 +42,7 @@ For instance, consider an API that is deployed across multiple regions, such as 
 
 ```yaml
 servers:
-  - url: https://{region}.api.example.com
+  - url: "https://{region}.api.example.com"
     description: Regional Production Server
     variables:
       region:
@@ -57,5 +56,5 @@ servers:
 
 In this example, `{region}` is a server variable, and the `enum` restricts this to three possible values: `us`, `eu`, and `asia`. The default value is `eu`, which means if the region is not specified, tooling can know which value to use. This setup allows clients to dynamically select the appropriate regional server by substituting the `{region}` variable in the URL template, resulting in `https://asia.api.example.com`.
 
-> warn
 > Some people try to use server variables for handling API Versions (v1, v2, v3) in a single OpenAPI document. This is a poor fit for server variables, because far more than the server URL will change between major versions. Server variables help when just the server is changing, but the other operations and components are the same.
+{: .warning}
