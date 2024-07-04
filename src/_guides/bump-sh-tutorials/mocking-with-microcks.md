@@ -1,8 +1,8 @@
 ---
 title: Mocking APIs with Microcks
 authors: phil
-excerpt: 
-date: 2024-06-27
+excerpt: Create powerful API mocks to speed up client development using Microcks.
+date: 2024-07-04
 ---
 
 Mocking has a lot of meanings in computing, but in the world of APIs it's specifically about simulating an API. Simulating API's can have many uses, from stubbing out difficult systems from end-to-end testing to providing a harmless playground for users to make requests from documentation without having to build a whole new "sandbox" environment. The main use case is allowing API clients and stakeholders the ability to play around with an API before wasting time writing code that might not be helpful, and the process can be sped up massively using OpenAPI-based mocking tools like Microcks.
