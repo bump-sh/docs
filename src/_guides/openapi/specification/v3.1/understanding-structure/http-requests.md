@@ -1,7 +1,7 @@
 ---
 title: HTTP Requests
 authors: phil
-excerpt: Learn your way around the OpenAPI description format for HTTP APIs by learning the basic structure.
+excerpt: Define HTTP requests in your OpenAPI to help users know the rules on what to send and how.
 date: 2024-07-09
 ---
 
@@ -101,3 +101,11 @@ The `schema` then defines the structure of the request body, which demonstrates 
 If multiple properties could be updated, you would define all the properties that could be updated, then show off some examples for common use cases of things users might want to do.
 
 <!-- TODO link to examples -->
+
+## Uploading a File 
+
+TODO
+
+## Multipart Forms
+
+TODO
