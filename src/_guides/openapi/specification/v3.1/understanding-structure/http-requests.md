@@ -98,14 +98,8 @@ Here the `PATCH` method is used to update the one specific field that needs upda
 
 The `schema` then defines the structure of the request body, which demonstrates that only the `seat_preference` property can be updated.
 
-If multiple properties could be updated, you would define all the properties that could be updated, then show off some examples for common use cases of things users might want to do.
+If multiple properties could be updated, you would define all the properties that could be updated, then show off some [examples](../data-models/examples.md) for common use-cases of things users might want to do.
 
-<!-- TODO link to examples -->
+## File Uploads & Multipart Forms
 
-## Uploading a File 
-
-TODO
-
-## Multipart Forms
-
-TODO
+HTTP requests can also cover more advanced scenarios like [file uploads](../advanced/file-uploads.md) and [multipart form data](../advanced/multipart-form-data.md), which have their own guides in the advanced section.
