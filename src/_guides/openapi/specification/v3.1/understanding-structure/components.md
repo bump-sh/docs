@@ -158,8 +158,8 @@ Hopefully this gives an idea of how `$ref` can be used, and if you'd like to lea
 
 ## Create "Design Libraries" of Shared Components
 
-An OpenAPI document can contain both `paths` and `components`, or it could just be a `components` object with nothing else.
+An OpenAPI document does not need to contain `paths` or `webhooks`, it could be just a `components` object with nothing else.
 
-One of more of these documents could then be shared around forming a rudimentary "design library", helping teams reuse data models and various other bits across multiple APIs, multiple departments, or even externally to your organization. 
+One of more of these "components only" documents could then be shared around forming a rudimentary "design library", helping teams reuse data models and various other bits across multiple APIs, multiple departments, or even externally to your organization. 
 
 There are various proprietary tools out there to help with this, but the concept can be achieved by just sharing these `openapi-components.yaml` or similar on your network drive, Git repository, intranet, or public website. 
