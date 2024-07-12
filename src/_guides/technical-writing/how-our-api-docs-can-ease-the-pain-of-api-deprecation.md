@@ -1,7 +1,9 @@
 ---
 title: How Our API Docs Can Ease the Pain of API Deprecation
 authors: james
-excerpt: 
+canonical_url: https://bump.sh/blog/how-our-api-docs-can-ease-the-pain-of-api-deprecation
+excerpt: API become deprecated for a variety of reasons. Discover good practices to plan and communicate about deprecations, and minimize disruptions
+date: 2024-07-04
 ---
 
 APIs are not static, as new operations are added and existing operations are improved as API usage grows. As customer and business needs evolve, APIs need to adapt as well. This often leads to the inevitable process of API deprecation – the gradual phasing out of an old API in favor of a newer, improved version.
