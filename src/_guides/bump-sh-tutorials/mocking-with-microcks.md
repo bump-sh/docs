@@ -2,29 +2,30 @@
 title: Mocking APIs with Microcks
 authors: phil
 excerpt: Create powerful API mocks to speed up client development using Microcks.
-date: 2024-07-04
+date: 2024-07-15
 ---
 
-Mocking has a lot of meanings in computing, but in the world of APIs it's specifically about simulating an API. Simulating API's can have many uses, from stubbing out difficult systems from end-to-end testing to providing a harmless playground for users to make requests from documentation without having to build a whole new "sandbox" environment. The main use case is allowing API clients and stakeholders the ability to play around with an API before wasting time writing code that might not be helpful, and the process can be sped up massively using OpenAPI-based mocking tools like Microcks.
+You've created beautiful documentation for your API with Bump.sh, powered by OpenAPI, what's next? If you've been following the [API design-first workflow](../api-basics/dev-guide-api-design-first.md) the next phase is gathering feedback on the proposed design before investing loads of time building it. 
 
-Mocking is often a very simplistic version of the API, focused more on the structure of the data than the specific data being sent. This can mean a mock API gives out static responses regardless of the request, but that in itself is pretty helpful. For example, making sure clients are integrating with the right expectations around data types: not mixing up integers and numeric strings, and help ensure the responses are being used properly in the user interface.
+Sharing the documentation is a good start, but you can get even better feedback by giving stakeholders a mock server to interact with. A mock server simulates an API, allowing stakeholders to see if all the data they need is available, and give feedback on how easily their workflows can be solved based on the endpoints in the API. This can be thought of like a study group, something user researchers are used to doing for frontends, but is just as valuable for APIs.
 
-This guide will show you how to take the same OpenAPI documents that power your Bump.sh documentation and create mock APIs with Microcks, that can be stored run locally, in continuous integration environments, or hosted on a web server.
+This used to be done with "prototypes" or manually made mock servers, but seeing as Bump.sh users have already got the API described entirely by OpenAPI already, setting up mock servers is a whole lot easier using OpenAPI-powered tools like Microcks to do the hard work for you. Using OpenAPI instead of code means changes can be made to the mock server far quicker than getting the API developments to change loads of code.
 
+Let's take a look at using Microcks specifically, and see how we can tie it into your existing Bump.sh documentation.
 
 ## Step 1: Set up Microcks locally
 
-You don't have to run Microcks locally, but it never hurts to get a good understanding of software before trying to deploy it somewhere else. Microcks is built with Sprint Boot, but you can avoid thinking about that by using either [Docker](http://docker.io/) or [Podman](https://podman.io/) to install Microcks within a container.
+Microcks is a Java (Spring Boot) application, which comes packaged as a Docker container, so it can be deployed anywhere either of those environments are happy. Setting it up locally is probably the first step to see how it works.
+
+Whether you use [Docker](http://docker.io/) or prefer [Podman](https://podman.io/), grab one of those applications to install Microcks within a container.
 
 Assuming you've got Docker installed and running, you can use following command to get Microcks running on your computer.
-
-<!-- TODO after end of july 2024 change latest to latest-native -->
  
 ```
-docker run -p 8585:8080 -it --rm quay.io/microcks/microcks-uber:latest
+docker run -p 8585:8080 -it --rm quay.io/microcks/microcks-uber:latest-native
 ```
 
-When that's done open a browser tab and point to the <http://localhost:8585> endpoint, changing the port if you picked a different one.
+When that's done, open a browser tab and point to the <http://localhost:8585> endpoint, changing the port if you picked a different one.
 
 ![](/images/guides/mocking-with-microcks/microcks-dashboard.png)
 
@@ -290,24 +291,14 @@ Once this is done we can replace the manual uploads with some automatic solution
 
 ## Step 6: Automate Mock Updates
 
-Whatever your work flow, the last thing you want to be doing is manually uploading OpenAPI documents whenever there are changes. There are two approaches you can take to keep your Microcks mocks up-to-date with your API as it evolves. 
+Most Bump.sh users use some form of Continuous Integration (CircleCI, GitHub Actions, Jenkins, etc.) to push changes to their API documentation whenever the source code is changed, and you can work this way with Microcks, or there are some alternatives you can try out.
 
-### Option 1: Pull from Git
+### Update Mocks with Continuous Integration
 
-The Importer can be configured to poll a public URL to see if there are any changes to the OpenAPI.
+Below is the standard GitHub Action used to deploy API changes to Bump.sh with one modification to also deploy changes to your Microcks server.
 
-![](/images/guides/mocking-with-microcks/importer-step1.png)
- 
-Learn more about the [Microcks Scheduler](https://microcks.io/documentation/guides/usage/importing-content/#2-import-content-via-importer)
-
-### Option 2: Push with CLI, GitHub Actions, or API
-
-Using the CLI on your continuous integration server, or using a GitHub Action, is probably how you are deploying to Bump.sh already, so it might make sense to do this with Microcks too. 
-
-For example, if you've got Bump.sh deploying with GitHub Actions, you can add one more action after it to get it also pushing changes to Microcks.
-
-```
-# .github/workflows/bump.yml
+```yaml
+# .github/workflows/deploy-docs.yml
 name: Deploy API documentation
 
 on:
@@ -339,6 +330,22 @@ jobs:
           keycloakClientSecret:  ${{ secrets.MICROCKS_SERVICE_ACCOUNT_CREDENTIALS }}
 ```
 
-You'll need to set up some secrets on your repository for that microcks service account, but then you're done.
+You'll need to set up some secrets on your repository for that Microcks service account, but then you're done! A fully functioning mock server running on the cloud, which you can interact with internally or externally depending on how you set it up.
 
-_Learn more about [Microcks Automation](https://microcks.io/documentation/guides/automation/)._
+> Learn more about [Microcks Automation](https://microcks.io/documentation/guides/automation/) to see how to push updates to Microcks using other CI systems, via the API, or using the CLI elsewhere. You can also use the [Microcks Scheduler](https://microcks.io/documentation/guides/usage/importing-content/#2-import-content-via-importer) instead, to pull content from a repo on a regular schedule instead of pushing.
+{: .info }
+
+## Step 7: Add Mock Server to API Documentation
+
+Once the mock server is up and running, you can help make it easier to find by adding it to your Bump.sh API documentation. To do this, we can add the server URL into the servers list like this:
+
+```yaml
+servers:
+  - url: https://api.example.com
+    description: Production
+    x-internal: false
+  
+  - url: https://mocks.example.com/rest
+    description: Mock Server
+    x-internal: false
+```
