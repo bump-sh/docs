@@ -5,7 +5,7 @@ excerpt: Define HTTP requests in your OpenAPI to help users know the rules on wh
 date: 2024-07-09
 ---
 
-Any API handling use-cases more advanced that purely fetching data will need to define a HTTP request body. `POST`, `PATCH`, `PUT`, all allow a HTTP client to send a body: often JSON or XML. This allows more information can be sent than just query parameters, which have limits. 
+Any API handling use-cases more advanced that purely fetching data will need to define a HTTP request body. `POST`, `PATCH`, `PUT`, all allow a HTTP client to send a body: often JSON or XML. This allows for more information to be sent rather than just query parameters, which have limits. 
 
 The request body can be used for:
 
@@ -63,11 +63,11 @@ Here the `requestBody` object defines two important properties:
   
 - `content` - specifies that the request body should be in `application/json` format with the following `schema`.
 
-The schema defines the structure of the request body, including properties like passenger_name, train_id, `date`, and `seat_preference`. This can be defined inline like this example, or it can use `components` to share an [existing schema](../data-models/schema-and-data-types.md) and reduce repetition. 
+The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this example, or it can use `components` to share an [existing schema](../data-models/schema-and-data-types.md) and reduce repetition. 
 
 ### Updating a Resource
 
-If a user wants to update their booking (e.g.: change the seat preference), the API can define a PUT or PATCH response, to allow updating the entire booking, or part of the booking. Either way, they need to send the updated data in the request body. Here’s how to define it:
+If a user wants to update their booking (e.g.: change the seat preference), the API can define a PUT or PATCH response, to allow updating the entire booking, or part of the booking  respectively. Either way, they need to send the updated data in the request body. Here’s how to define it:
 
 ```yaml
 paths:
@@ -94,7 +94,7 @@ paths:
                   example: "aisle"
 ```
 
-Here the `PATCH` method is used to update the one specific field that needs updating in the existing booking. The `required: true` says the `requestBody` is mandatory, and the only media type defined is `application/json` so that says the request must be in that format.
+Here the `PATCH` method is used to describe an operation that can update one specific field from an existing booking. The `required: true` says the `requestBody` is mandatory, and the only media type defined is `application/json` so that says the request must be in that format.
 
 The `schema` then defines the structure of the request body, which demonstrates that only the `seat_preference` property can be updated.
 

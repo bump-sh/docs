@@ -55,7 +55,7 @@ info:
     identifier: CC-BY-NC-SA-4.0
 ```
 
-It can also contain the license details of your OpenAPI (note, that's different to the license details of your API which would be licensed through source control with a `LICENSE.txt`.)
+It can also contain the license details of your OpenAPI document (note, that's different to the license details of your API which would be licensed through source control with a `LICENSE.txt`.)
 
 ### 3. Servers Object
 
@@ -94,7 +94,7 @@ The `paths` object is probably the most important section for your API. It lists
             description: Booking successful
 ```
 
-Here the `operationId` helps us spot the two different operations, and give them a unique name which can be useful for all sorts of tools. The summary then gives a human readable title that will often be used in documentation tools.
+Here the `operationId` helps us spot the two different operations, and give them a unique name which can be useful for all sorts of tools. The `summary` gives a human readable title that will often be used in documentation tools.
 
 Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads. 
 
@@ -136,7 +136,6 @@ Components can also contain reusable parameters, request bodies, responses, and 
 
 ```yaml
 components:
-
   requestBodies:
     TripRequest:
       description: A request body for creating a new trip.
@@ -198,7 +197,7 @@ This is just a few examples of various types of security schemes that can be def
 
 ### 6. Security Object
 
-The top-level `security` object specifies the security schemes that apply globally to the API, so if an entire API uses an API key or OAuth2 you might have:
+The top-level `security` list specifies the security schemes that apply globally to the API, so if an entire API uses an API key or OAuth2 you might have:
 
 ```yaml
 security:

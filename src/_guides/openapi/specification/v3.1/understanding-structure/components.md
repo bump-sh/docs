@@ -48,9 +48,6 @@ components:
       bearerFormat: JWT
 ```
 
-The full list of objects which can be defined in components is: 
-The Components object in OpenAPI allows you to create reusable bits of OpenAPI that can then be pieced together like Lego to build a better API description. This keeps things nice and tidy, and you can even spread them across multiple documents to share components between multiple APIs, or at least just keep your file sizes down.
-
 The full list of objects which can be defined in components is:
 
 - `callbacks` - Define callback objects that send outgoing requests.
