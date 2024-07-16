@@ -38,7 +38,7 @@ This is required, so that tooling knows which version you are working with. The 
 
 ### 2. Info Object
 
-The `info` object provides general metadata about the API, such as the title, version, description, and contact information.
+The `info` object holds general metadata about the API, such as the title, version, description, and contact information.
 
 ```yaml
 info:
@@ -55,7 +55,18 @@ info:
     identifier: CC-BY-NC-SA-4.0
 ```
 
-It can also contain the license details of your OpenAPI document (note, that's different to the license details of your API which would be licensed through source control with a `LICENSE.txt`.)
+Only the following fields are **required**:
+
+- `title` - Your API probably has a name, and if not perhaps now is a good time to think of one thats useful for public consumption.
+- `version` - The version of your OpenAPI document, which does not have to related to the API version, or the OpenAPI Specification version. 
+
+Updating the version number when you make changes is pretty common, and keeping it seperate from the API version at first feels a little bit odd, but soon makes sense. After all, you can fix issues with the OpenAPI document that produce no change whatsoever in the API, and vice-versa. 
+
+These other fields are **optional**: 
+
+- `description` - A handy place to put general information, especially introductory topics like where to find access tokens or links to various Postman/Insomnia Collections, or SDKs. This can be done using CommonMark (Markdown) to get as advanced as you want.
+- `contact` - Help your APIs users find the help they need instead of wandering off to use another API.
+- `license` - A chance to explain the license details of your API description. Note, that is very different from the license you use for your API source code, which would be licensed through source control with a `LICENSE.txt` or similar.
 
 ### 3. Servers Object
 
@@ -81,12 +92,16 @@ The `paths` object is probably the most important section for your API. It lists
       get:
         operationId: get-bookings
         summary: List existing bookings
+        tags:
+        - Bookings
         responses:
           '200':
             description: A list of bookings                 
       post:
         operationId: create-booking
         summary: Create a booking
+        tags:
+        - Bookings
         requestBody:
           required: true
         responses:
@@ -103,8 +118,6 @@ Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `r
 ### 5. Components Object
 
 The `components` object is where various types of reusable objects live. The main thing people use here is `schemas`, which some people call "data models" but that doesn't exist anywhere in the specification, thats just a nickname.you might hear. 
-
-These components can be referenced throughout the API specification to avoid duplication.
 
 ```yaml
 components:
@@ -132,7 +145,7 @@ components:
           description: The date and time when the trip arrives
 ```
 
-Components can also contain reusable parameters, request bodies, responses, and security schemes. 
+The schemas defined in `components.schemas` let you describe common data structures used throughout your API, allowing them to be referenced via `$ref` whenever a `schema` is required: whether that is a request body, response body, parameter, or header. 
 
 ```yaml
 components:
@@ -145,12 +158,19 @@ components:
           schema:
             $ref: '#/components/schemas/Trip'
 
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: header
-      name: X-API-KEY
+  responses:
+    TripResponse:
+      description: A single Trip returned as a response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Trip'
+```
 
+Components can also define parameters which can be used across multiple endpoints:
+
+```yaml
+components:
   parameters:
     pageParam:
       in: query
@@ -162,11 +182,39 @@ components:
         description: The page number for pagination.
 ```
 
-Understanding `$ref` is a large topic, and we'll get into it later, but just understand for now that this is where reusable components of all sorts are stored.
+Or common headers that can be returned across multiple endpoints:
 
-<!-- TODO Link advanced / splitting documents into multiple parts -->
+```yaml
+components:
+  headers:
+    RateLimit:
+      description: |
+        The RateLimit header communicates quota policies. It contains a `limit` to
+        convey the expiring limit, `remaining` to convey the remaining quota units,
+        and `reset` to convey the time window reset time.
+      schema:
+        type: string
+        examples:
+          - limit=10, remaining=0, reset=10
 
-Another important type of component is the `securitySchemes` section. OpenAPI supports several authentication types, but here are a few examples:
+    Retry-After:
+      description: | 
+        The Retry-After header indicates how long the user agent should wait before making a follow-up request. 
+        The value is in seconds and can be an integer or a date in the future. 
+        If the value is an integer, it indicates the number of seconds to wait. 
+        If the value is a date, it indicates the time at which the user agent should make a follow-up request. 
+      schema:
+        type: string
+      examples:
+        integer:
+          value: '120'
+          summary: Retry after 120 seconds
+        date:
+          value: 'Fri, 31 Dec 2021 23:59:59 GMT'
+          summary: Retry after the specified date
+```
+
+Or `securitySchemes` which will be called with the `security` keyword. OpenAPI supports several authentication types, but here are a few examples:
 
 ```yaml
 components:
@@ -175,6 +223,10 @@ components:
       type: apiKey
       in: header
       name: X-API-Key
+
+    BearerToken:
+      type: http
+      scheme: bearer
     
     JWT:
       type: http
