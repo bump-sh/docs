@@ -9,7 +9,7 @@ You've created beautiful documentation for your API with Bump.sh, powered by Ope
 
 Sharing the documentation is a good start, but you can get even better feedback by giving stakeholders a mock server to interact with. A mock server simulates an API, allowing stakeholders to see if all the data they need is available, and give feedback on how easily their workflows can be solved based on the endpoints in the API. This can be thought of like a study group, something user researchers are used to doing for frontends, but is just as valuable for APIs.
 
-This used to be done with "prototypes" or manually made mock servers, but seeing as Bump.sh users have already got the API described entirely by OpenAPI already, setting up mock servers is a whole lot easier using OpenAPI-powered tools like Microcks to do the hard work for you. Using OpenAPI instead of code means changes can be made to the mock server far quicker than getting the API developments to change loads of code.
+This used to be done with "prototypes" or manually made mock servers, but seeing as Bump.sh users have already got the API described entirely by OpenAPI already, setting up mock servers is a whole lot easier using OpenAPI-powered tools like [Microcks](https://microcks.io/) to do the hard work for you. Using OpenAPI instead of code means changes can be made to the mock server far quicker than getting the API developments to change loads of code.
 
 Let's take a look at using Microcks specifically, and see how we can tie it into your existing Bump.sh documentation.
 
