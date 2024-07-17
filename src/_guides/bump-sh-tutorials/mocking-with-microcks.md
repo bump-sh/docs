@@ -27,7 +27,7 @@ docker run -p 8585:8080 -it --rm quay.io/microcks/microcks-uber:latest-native
 
 When that's done, open a browser tab and point to the <http://localhost:8585> endpoint, changing the port if you picked a different one.
 
-![](/images/guides/mocking-with-microcks/microcks-dashboard.png)
+![Microcks dashboard in a browser window running on http://localhost:8585](/images/guides/mocking-with-microcks/microcks-dashboard.png)
 
 ## Step 2: Add Your First API
 
@@ -35,21 +35,21 @@ There are several ways to get OpenAPI into Microcks, but for the sake of simplic
 
 Once we've got Microcks loaded in the browser, click on "Importers", and click the "Upload" button.
 
-![](/images/guides/mocking-with-microcks/upload-modal.png)
+![The "Direct upload artifact" modal window](/images/guides/mocking-with-microcks/upload-modal.png)
 
-The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](/guides/bump-sh-tutorials/try-requests-in-postman/) and other "API description documents". We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you use to deploy to Bump.sh.
+The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](/guides/bump-sh-tutorials/try-requests-in-postman/) and other "API description documents". We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
 
 The question about primary or secondary artifacts can be ignored for now.
 
-![](/images/guides/mocking-with-microcks/microcks-api-view.png)
+![The API View contains the title and version of the uploaded API, a list of endpoints, and shows whether it found "samples" (examples)](/images/guides/mocking-with-microcks/microcks-api-view.png)
 
-Once you've uploaded, go to "APIs | Services" and click on your new API, which should have the same name as whatever was in the `info.title` of your OpenAPI. Below it you'll see a bunch of operations, which are all the endpoints that Microcks found in your OpenAPI.
+Once you've uploaded, go to "APIs / Services" and click on your new API, which should have the same name as whatever was in the `info.title` of your OpenAPI. Below it you'll see a bunch of operations, which are all the endpoints that Microcks found in your OpenAPI.
 
 ## Step 3: Try out the Mock Endpoints
 
 Open up one of the operations and see what Microcks thinks about it.
 
-![](/images/guides/mocking-with-microcks/get-bookings.png)
+![The API view further down has a list of operations, which have been expanded to reveal more information about the mock URL and sample response](/images/guides/mocking-with-microcks/get-bookings.png)
 
 You should see a URL which you can copy, and the sample JSON it has pulled from the OpenAPI `examples` object.
 
@@ -185,7 +185,7 @@ That's somewhat handy, but it's showing me a generic response instead of the dat
 
 ## Step 4: Customizing Responses
 
-Mocks can be made just thats little bit more powerful with [dynamic mocking](https://microcks.io/documentation/explanations/dynamic-content/), made is possible through the [templating system](https://microcks.io/documentation/references/templates/) Microcks offers. Using a combination of predefined variables, built-in functions, and some JSON Pointers, we can provide a dynamic example in OpenAPI which put together a more useful response.
+Mocks can be made more powerful with [dynamic mocking](https://microcks.io/documentation/explanations/dynamic-content/), which is made possible through Microcks' [templating system](https://microcks.io/documentation/references/templates/). Using a combination of predefined variables, built-in functions, and some JSON Pointers, we can provide a dynamic example in OpenAPI which put together a more useful response.
 
 ```yaml
 responses:
@@ -214,7 +214,7 @@ responses:
 Go back to Importers, Upload the `openapi.yaml` document again, and it will merge changes into API so we can see how they look.
 
 ```
- curl -X POST 'http://localhost:8585/rest/Train+Travel+API/1.0.0/bookings' \
+**curl** -X POST 'http://localhost:8585/rest/Train+Travel+API/1.0.0/bookings' \
   -H 'Accept: application/json' \
   -H 'Content-type: application/json' \
   -d '{"passenger_name":"New Passenger","has_bicycle":false,"has_dog":false,"trip_id":"4f4e4e1-c824-4d63-b37a-d8d698862f1d"}'
@@ -277,9 +277,9 @@ Working with Microcks locally was an OK way to get the hang of it, and could be 
 
 You can deploy Microcks anywhere that takes Docker/Kubernetes instances, and they have lots of documentation on your [deployment options for Microcks](https://microcks.io/documentation/explanations/deployment-options/). 
 
-One approach is to stick the Docker container into a managed Kubernetes cluster on Google Kubernetes Engine, which has free trials and free tiers to ease you into the process. 
+One approach is to deploy the Docker container into a managed Kubernetes cluster on [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster), which has free trials and free tiers to ease you into the process. 
 
-![](/images/guides/mocking-with-microcks/gke-setup.png)
+![A screenshot showing Google Cloud's Kubernetes Engine section, on the Create a deployment page](/images/guides/mocking-with-microcks/gke-setup.png)
 
 This puts Microcks behind a publicly accessible load balancer, so you can stick some DNS on it and have everyone able to call the hosted version of the mock server.
 
@@ -350,11 +350,11 @@ servers:
 
 Adding this second server URL will offer users a dropdown menu in the Bump.sh documentation.
 
-![](/images/guides/mocking-with-microcks/multiple-servers.png)
+![The select box apears on the Bump.sh API documentation allowing users to pick between servers based on server name](/images/guides/mocking-with-microcks/multiple-servers.png)
 
 The mock server is now an option, and all of the URLs and example HTTP requests will show up using the chosen server URL.
 
-![](/images/guides/mocking-with-microcks/bump-mock-server-curl.png)
+![A screenshot of the API documentation updated to contain the mocks.example.com after mock server has been selected](/images/guides/mocking-with-microcks/bump-mock-server-curl.png)
 
 If there's no production API only the mock server is ready then only define that:
 
