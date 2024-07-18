@@ -199,4 +199,4 @@ For more information on JSON Schema validation keywords, you can refer to the [J
 
 ### Learn more about JSON Schema
 
-There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](./json-schema.md), or head over to the [JSON Schema Tutorials](https://json-schema.org/learn/getting-started-step-by-step) and [JSON Schema reference docs](https://json-schema.org/learn/glossary). 
+There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](./json-schema.md).

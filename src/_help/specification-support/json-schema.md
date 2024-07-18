@@ -5,7 +5,7 @@ title: JSON Schema support
 - TOC
 {:toc}
 
-Both OpenAPI and AsyncAPI specifications supports JSON Schema to define input and output data types, identified as a Schema Object:
+Both OpenAPI and AsyncAPI specifications use JSON Schema to define input and output data types, identified as a Schema Object:
 Most of the time, a Schema Object is defined with keyword `schema`, and each child property can also be defined as a Schema object (as per definition of the JSON Schema specification).
 
 ```javascript

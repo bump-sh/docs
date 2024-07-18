@@ -63,7 +63,7 @@ Here the `requestBody` object defines two important properties:
   
 - `content` - specifies that the request body should be in `application/json` format with the following `schema`.
 
-The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this example, or it can use `components` to share an [existing schema](../data-models/schema-and-data-types.md) and reduce repetition. 
+The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this, or it can use `components` to share an [existing schema](../data-models/schema-and-data-types.md) and reduce repetition. 
 
 ### Updating a Resource
 
@@ -91,7 +91,8 @@ paths:
                 seat_preference:
                   type: string
                   enum: [window, aisle, any]
-                  example: "aisle"
+                  examples: 
+                  - aisle
 ```
 
 Here the `PATCH` method is used to describe an operation that can update one specific field from an existing booking. The `required: true` says the `requestBody` is mandatory, and the only media type defined is `application/json` so that says the request must be in that format.
