@@ -1,13 +1,15 @@
 ---
-title: Examples
+title: Examples & Defaults
 authors: phil
-excerpt: Examples of OpenAPI Examples so you can add Examples for your APIs.
+excerpt: Use examples and defaults in OpenAPI to demonstrate API inputs and outputs.
 date: 2024-07-10
 ---
 
-Examples are a change to demonstrate some potential values for a parameter, header, request, response, and various other bits of OpenAPI. Examples are handy for creating API documentation, because tools can pop those examples into requests/response samples like you can imagine in the classic Stripe-like API documentation. They can also be read by tools and libraries for other purposes, like an [API mocking tool][microcks] can use sample values to generate mock requests.
+Examples and defaults are a change to demonstrate some potential input and output values. Examples are particularly useful at showing off parameters, headers, requests, responses, and various other bits of OpenAPI, which is handy for creating API documentation. These They can also be read by tools and libraries for other purposes, like an [API mocking tool][microcks] can use sample values to generate mock requests.
 
-There are three main types of examples.
+# Examples
+
+There are three main types of examples:
 
 - Schema Examples
 - Media Type Examples
@@ -51,7 +53,7 @@ responses:
 
 This uses the JSON Schema keyword `examples` to provide an examples. Seeing as these examples are an array of values, the YAML `-` syntax is used as an array of one, but you can provide multiple examples if you like.
 
-> In OpenAPI v3.0 you may have used the `example` keyword with a single value, but this was deprecated in OpenAPI v3.1 and whilst it is generally still supported it is recommended you use the `examples` keyword and make it a list with one value.
+> In OpenAPI v3.0 you may have used the `example` keyword with a single value, but this was deprecated in OpenAPI v3.1 and whilst it is generally still supported it is recommended you use the `examples` keyword.
 {: .warning }
 
 Here's an example of the same schema `examples` keyword being used to provide an example for an entire object. 
@@ -308,3 +310,34 @@ Hopefully this will help you create useful examples that can be used by all sort
 {: .info }
 
 [microcks]: ../../../../bump-sh-tutorials/mocking-with-microcks.md
+
+# Defaults
+
+There's one more thing to consider: sometimes an example is not needed, because a default is more appropriate as a validation rule which then can also be used as an example. 
+
+In the schema object examples we had this property: 
+
+```yaml
+  schema:
+    properties:
+      completed: 
+        type: boolean
+        examples: 
+        - false
+```
+
+A boolean has two options, `true` and `false`, so an example of that seems redundant. 
+
+What are we trying to achieve in doing this? We want the docs and mocks to have a useful value to work with, but most tools know what to do here just from the boolean alone, so we could remove the example, or we could do something more useful.
+
+```yaml
+  schema:
+    properties:
+      completed: 
+        type: boolean
+        default: false
+```
+
+This lets tools know that false is the default state for this property, which will make documentation more clear, help mock servers act more consistently, and can even make any code generated from OpenAPI work as expected.
+
+The `default` keyword is therefore quite similar to `examples` within a schema object, as it can introduce concrete values into the schema which can be used for all sorts of tooling, but it's more functional.

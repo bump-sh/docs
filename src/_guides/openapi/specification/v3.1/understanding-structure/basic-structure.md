@@ -214,6 +214,44 @@ components:
           summary: Retry after the specified date
 ```
 
+
+Or examples, so multiple requests, responses, or parameters could share one or more examples.
+
+```yaml
+components:
+  examples:
+    Card:
+      summary: Card Payment
+      value:
+        amount: 49.99
+        currency: gbp
+        source:
+          object: card
+          name: J. Doe
+          number: '4242424242424242'
+          cvc: 123
+          exp_month: 12
+          exp_year: 2025
+          address_line1: 123 Fake Street
+          address_line2: 4th Floor
+          address_city: London
+          address_country: gb
+          address_post_code: N12 9XX
+    Bank:
+      summary: Bank Account Payment
+      value:
+        amount: 100.5
+        currency: gbp
+        source:
+          object: bank_account
+          name: J. Doe
+          number: '00012345'
+          sort_code: '000123'
+          account_type: individual
+          bank_name: Starling Bank
+          country: gb
+```
+
 Or `securitySchemes` which will be called with the `security` keyword. OpenAPI supports several authentication types, but here are a few examples:
 
 ```yaml
@@ -245,7 +283,7 @@ components:
           refreshUrl: https://example.com/oauth/refresh
 ```
 
-This is just a few examples of various types of security schemes that can be defined, but defining them alone doesn't do anything. They need to be referenced by the `security` object.
+This is just a few of the many types of security schemes that can be defined, but defining them alone doesn't do anything. They need to be referenced by the `security` object.
 
 ### 6. Security Object
 
