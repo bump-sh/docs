@@ -7,7 +7,7 @@ title: Operations and navigation
 
 Bump.sh offers several methods for sorting your API operations to provide a smooth and coherent reading structure based on tags or operation names and URLs.
 
-This setting is available under the "Customize UI" settings tab of a doc or under the "Customize UI" settings tab of the doc's Hub.
+From the “Customize UI” tab in your documentation settings, you can select a custom operations & navigation grouping mode between either “Automatic”, “By Path” or “By Tag”.
 
 ## Automatic
 
