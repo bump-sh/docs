@@ -5,7 +5,9 @@ title: Operations and navigation
 - TOC
 {:toc}
 
-Bump.sh offers several methods for sorting your API operations to provide a smooth and coherent reading structure, based on either the tags or operation names and URLs.
+Bump.sh offers several methods for sorting your API operations to provide a smooth and coherent reading structure based on tags or operation names and URLs.
+
+This setting is available under the "Customize UI" settings tab of a doc or under the "Customize UI" settings tab of the doc's Hub.
 
 ## Automatic
 
@@ -17,7 +19,7 @@ If first-level field `tags` are present at the [root of your OpenAPI document ob
 
 ## Group operations by path
 
-When `Group operations by path`` is chosen, Bump.sh deduces group names from related paths. The first part of the path is extracted to generate the group name, and every operation related to it will be grouped together.
+When `Group operations by path` is chosen, Bump.sh deduces group names from related paths. The first part of the path is extracted to generate the group name, and every operation related to it will be grouped together.
 
 ![](/images/help/group-by-path.png)
 
