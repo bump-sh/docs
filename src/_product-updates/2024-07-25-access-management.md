@@ -6,7 +6,7 @@ image: /images/changelog/changelog-access-management.png
 
 ![changelog-entry-page.png](/images/changelog/changelog-access-management.png)
 
-It's been a while since we added the first pillar of our access management system. It gave admins a way to precisely manage their users' access.
+It's been a while since we added the first pillar of our access management system. It gave documentation maintainers a way to grant access to internal users ("members") and external users ("guests").
 
 As we work with increasingly larger companies, the way we handled user administration needed to evolve.
 
