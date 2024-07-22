@@ -1,8 +1,9 @@
 ---
 title: How API Product Bundling Improves the Developer Experience
 authors: james
+canonical_url: https://bump.sh/blog/how-api-product-bundling-improves-the-developer-experience
 excerpt: How to package API products to empower a specific role or audience while improving the developer experience.
-date: 2024-03-26
+date: 2024-07-22
 ---
 
 Developer experience (DX) is a critical element of any API product. A well-designed and intuitive API not only attracts developers but also empowers them to build innovative applications and integrations. In some cases, organizations may have a large number of APIs that address the needs of multiple audiences. This article explores how API product bundling, a strategic approach to packaging APIs, can significantly enhance DX.
