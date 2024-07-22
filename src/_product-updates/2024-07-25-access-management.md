@@ -15,4 +15,6 @@ The new table shows more users per page and is easier to scan than before. You c
 
 On another note, we know that SSO can be very handy for companies with a lot of users. We now support SSO as a login method, a feature we developed by working closely with our clients. The SSO login page can now be customized with your company's logo, providing a seamless experience for your users. [Learn more about SSO here →](https://docs.bump.sh/help/organizations/organization-access-management/#sso)
 
-We hope these improvements will make it easier for you to manage access to the platform. As always, we welcome your feedback!
+We hope these improvements will make it easier for you to manage access to the platform. 
+
+As always, we warmly welcome your feedback!
