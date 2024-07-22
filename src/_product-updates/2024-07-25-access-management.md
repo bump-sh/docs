@@ -8,7 +8,7 @@ image: /images/changelog/changelog-access-management.png
 
 It's been a while since we added the first pillar of our access management system. It gave documentation maintainers a way to grant access to internal users ("members") and external users ("guests").
 
-As we work with increasingly larger companies, the way we handled user administration needed to evolve.
+As our customers' documentation reader bases grew, the way we handled user administration needed to evolve.
 
 Say hello to the improved access management page, designed to easily manage members and guests from a single place. 
 The new table shows more users per page and is easier to scan than before. You can also see which resources guests have access to directly from this table and globally remove their access.
