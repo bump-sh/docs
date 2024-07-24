@@ -2,7 +2,7 @@
 title: Schemas and Data Types
 authors: phil
 excerpt: "Learn about the most important part of OpenAPI: schemas, and data types."
-date: 2024-07-10
+date: 2024-07-18
 ---
 
 One of the most important parts of OpenAPI is the `schema` object. Schema objects are used to describe HTTP request and response bodies, parameters, headers, and all sorts of other data, whether its JSON, XML, or primitive types like integers and strings. 
@@ -142,7 +142,87 @@ You can also define your own custom formats, which tooling will not understand, 
 
 ## Validation
 
-In addition to defining data types and formats, JSON Schema provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
+In addition to defining data types and formats, [JSON Schema](./json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
+
+## const & enum
+
+Restricting a value down to one or more potential values can be done with the `const` or `enum` keywords. 
+
+First, a look at `enum`, as that keyword has been around longer and is more used:
+
+```yaml
+type: string
+enum:
+  - pending
+  - fulfilled
+  - archived
+```
+
+This says the string can't just be any old string, it has to be one of the approved values listed in `enum`.
+
+> Learn more about const on [JSON-Schema.org: Enumerated Values](https://json-schema.org/understanding-json-schema/reference/enum).
+{: .info }
+
+OpenAPI v3.1 gained the `const` keyword added in modern JSON Schema, which helps with describing something that can only ever be one value.
+
+The JSON Schema tutorial uses the example of having a country field where you only support shipping to the United States for export reasons:
+
+```yaml
+properties:
+  country:
+    const: United States of America
+```
+
+That's one way to use it, but another is to act as a switch in a `oneOf`.
+
+```yaml
+oneOf:
+  - title: Card
+    properties:
+      object:
+        type: string
+        const: card
+      number:
+        type: string
+      cvc:
+        type: integer
+      exp_month:
+        type: integer
+      exp_year:
+        type: integer
+  
+  - title: Bank Account
+    type: object
+    properties:
+      object:
+        const: bank_account
+        type: string
+      number:
+        type: string
+      sort_code:
+        type: string
+```
+
+In this example the `object` could be `card` or `bank_account`, but instead of defining that as an enum and the other properties all have to figure out whether they relate to cards or bank accounts, we use the `const` to help match the subschema.
+
+> Learn more about `const` on [JSON-Schema.org: Constant Values](https://json-schema.org/understanding-json-schema/reference/const), and read our guide on [Schema Composition](./schema-composition.md) to learn more about `oneOf`.
+{: .info }
+
+
+## default 
+
+Setting a `default` lets people and code know what to do when a value has not been provided. 
+
+```
+type: string
+enum:
+  - pending
+  - fulfilled
+  - archived
+```
+
+
+
 
 ### minimum and maximum
 
