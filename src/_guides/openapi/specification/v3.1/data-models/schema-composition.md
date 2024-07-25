@@ -145,4 +145,17 @@ schema:
 
 This basically declares a schema which has a lot of generic payment fields, then adds specific fields from the bank account type, to avoid declaring generic fields like "name" and "number" in both. 
 
+Feel free to mix and match a `$ref` and an inline subschema, which is a handy way to pop some extra content into a generic shared schema like HATEOAS links:
+
+```yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: '#/components/schemas/Booking'
+        - properties:
+            links:
+              $ref: '#/components/schemas/Links-Self'
+```
+
 These schema composition keywords provide flexibility and allow you to define complex data structures and validation rules in OpenAPI v3.1 and JSON Schema, which becomes more useful as you start to [improve reuse across one or more API](../advanced/splitting-documents-with-ref.md).
