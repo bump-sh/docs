@@ -11,7 +11,7 @@ For a long time JSON Schema and OpenAPI Schema Objects were similar but differen
 
 The best places to start learning about JSON Schema is via the documentation, which comes in a few forms.
 
-- [JSON Schema Tutorials](https://json-schema.org/learn/getting-started-step-by-step) - Getting started guides, and tutorials focusing in on particular bits like the differences between required and optional properties, nesting shemas, using composition with anyOf, allOf, and oneOf, etc. 
+- [JSON Schema Tutorials](https://json-schema.org/learn/getting-started-step-by-step) - Getting started guides, and tutorials focusing in on particular bits like the differences between required and optional properties, nesting schemas, using composition with anyOf, allOf, and oneOf, etc. 
 - [JSON Schema Glossary](https://json-schema.org/learn/glossary) - There's a lot of terminology to wrap your head around depending on how deep you want to go, such as dialect, vocabulary, instance, subschema, composition, etc. This page explains it all and links off to more information on each.
 - [Lean JSON Schema](https://www.learnjsonschema.com/2020-12/) - A mixture between specification and tutorial, with lots of examples explaining how various keywords work.
 
