@@ -18,11 +18,11 @@ A long time ago, communication between applications or services required you to 
 
 At first, almost every API had its own way of working and communicating. And if documentation was missing or outdated, it would quickly become a mess. Different standards were built, but one of them ultimately rose to the top: OpenAPI.
 
-OpenAPI (previously called Swagger until version 3.0) has been the most popular choice for REST APIs, solving documentation problems and creating a good standard. Now part of the Linux Foundation, we covered OpenAPI recently in [another blog post](https://bump.sh/blog/what-is-openapi). We even have a fantastic example [right here](https://developers.bump.sh).
+OpenAPI (previously called Swagger until version 3.0) has been the most popular choice for REST APIs, solving documentation problems and creating a good standard. Now part of the Linux Foundation, you can learn all about OpenAPI [right here](../openapi/specification/v3.1/introduction/what-is-openapi.md), or check out our example [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement).
 
 ## What about asynchronous APIs?
 
-Choosing between a synchronous or an ansynchronous API is basically an architectural decision. If classic synchronous APIs are helpful when you expect a response to any request you make, asynchronous APIs can be useful in other situations like telling application that some event occurred without expecting a callback or storing data on a device with connection issues.
+Choosing between a synchronous or an asynchronous API is basically an architectural decision. If classic synchronous APIs are helpful when you expect a response to any request you make, asynchronous APIs can be useful in other situations like telling application that some event occurred without expecting a callback or storing data on a device with connection issues.
 
 For example, we could think of a chef working in a restaurant. An asynchronous API (here, the waiter) would suit this perfectly as the kitchen just need to get the dishes and the table they belong to. You can even imagine richer messages, including food allergies or meat cooking requests. You do not expect a reply from the kitchen every time.
 

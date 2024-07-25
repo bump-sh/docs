@@ -135,7 +135,7 @@ For simplicity, you can use this [create, read, update, and delete (CRUD)](https
 
 `express-openapi` is an un-opinionated OpenAPI framework for Express, which supports OpenAPI versions 2.x and 3.0 at the time of writing. Configuration can be done in JavaScript or from a YAML string/file. In this project, you'll be using a JavaScript object.
 
-`express-openapi` allows you to keep the OpenAPI definition in sync with the code. Basically, you will provide an OpenAPI definition file with empty paths and they will be populated from your code. Doing this ensures the OpenAPI file will be exactly reflecting how the code behaves, updated as the code is. It also allows you if you go play around with the tool to validate your schemas, automatically provide `res.validateResponse` tailored to a particular route, helps with your API security management, and so much more I can’t list them all now. The whole purpose of this framework is to stay as close as possible to express while leveraging the power of OpenAPI.
+`express-openapi` allows you to keep the OpenAPI documents in sync with the code. Basically, you will provide an OpenAPI document with empty paths and they will be populated from your code. Doing this ensures the OpenAPI document will be exactly reflecting how the code behaves, updated as the code is. It also allows you if you go play around with the tool to validate your schemas, automatically provide `res.validateResponse` tailored to a particular route, helps with your API security management, and so much more I can’t list them all now. The whole purpose of this framework is to stay as close as possible to express while leveraging the power of OpenAPI.
 
 To get started, run this command in your terminal to install the package:
 
@@ -602,7 +602,7 @@ To do so, copy the following script into a new file named `contract.js`:
 import OpenAPIFramework from "openapi-framework";
 
 // Use OpenAPIFramework similarly than in the express-openapi library
-// to generate the OpenAPI definition file of our API
+// to generate the OpenAPI document of our API
 const framework = new OpenAPIFramework.default({
   featureType: 'middleware',
   name: "express-openapi",
@@ -611,7 +611,7 @@ const framework = new OpenAPIFramework.default({
 });
 await framework.initialize({});
 
-// Output OpenAPI definition
+// Output OpenAPI documents
 console.log(JSON.stringify(framework.apiDoc))
 ```
 
@@ -623,7 +623,7 @@ So if you run the following command:
 node contract.js > doc/api-definition.json
 ```
 
-You will be able to snapshot the current OpenAPI definition file inside the `doc/api-definition.json` file.
+You will be able to snapshot the current OpenAPI documents file inside the `doc/api-definition.json` file.
 
 
 ## Using Bump.sh for Documenting Your Express APIs
