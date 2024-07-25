@@ -29,7 +29,7 @@ An API document refers to the file containing an API definition.
 
 Specifications are the official standards that define a format for describing an API, such as OpenAPI or AsyncAPI. These standards outline a set of elements and rules to follow when writing an API definition.
 
-To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](https://docs.bump.sh/guides/openapi/what-is-openapi/) and [AsyncAPI](https://docs.bump.sh/guides/asyncapi/what-is-asyncapi/).
+To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi) and [AsyncAPI](https://docs.bump.sh/guides/asyncapi/what-is-asyncapi/).
 
 ## Deployment
 
