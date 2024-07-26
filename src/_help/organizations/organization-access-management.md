@@ -28,6 +28,12 @@ Bump.sh supports Single Sign-On through your identity providers, to ease who in 
 
 Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
 
+Once an SSO connection is set up, a link pointing to a login page is available in the dashboard, allowing you to easily share it.
+
+This page can be customized with a logo and specific button labels (contact us in this latter case).
+
+The login page will systematically appear when attempting to access via the direct URL of a documentation or a hub behind this SSO, if one is not already authenticated.
+
 > SSO is a feature available from our Business plan.
 {: .info}
 
