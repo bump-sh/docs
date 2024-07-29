@@ -1,3 +1,7 @@
+nav-item.active {
+  text-decoration: underline;
+}
+
 nav-item :is(a, a:visited, a:focus) {
   border-radius: var(--border-radius-medium);
   color: var(--text-color);
