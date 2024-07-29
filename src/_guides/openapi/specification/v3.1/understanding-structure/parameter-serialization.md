@@ -61,7 +61,7 @@ array  -> ["fedora"]
 object -> {"type":"fedora"}
 ```
 
-### Path Parameters
+## Path Parameters
 
 For parameters `in:path` there are three defined values for `style`:
 
@@ -75,7 +75,8 @@ The defaults `in:path` are:
 
 Every `style` `in:path` follows [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) so the effects of `explode` are well-defined by [RFC6570's Variable Expansion](https://datatracker.ietf.org/doc/html/rfc6570#section-3.2.1). 
 
-#### Simple
+### Simple
+
 `style:simple` with its default of `explode:false`, would serialize your parameters like this:
 
 | `empty` | `bool` | `int` | `string` | `array`    | `object`       |
@@ -96,7 +97,7 @@ If you set `explode:true`, then the seperator used is also a comma: ",":
 - Surprisingly, an `array` with multiple values seems unchanged. Though it treated each value as a separate parameter, it still had to separate them with a comma. So it still ends up as a comma-delimited list.
 - To understand what happened for an `object` looking back at the rules on [`explode`](#explode) we see it concatenates key-value pairs into their own parameters as "key=value". Then it has to separate each parameter with a comma.
 
-#### Label
+### Label
 
 `style:label` with its default of `explode:false`, would  serialize your parameters like this:
 
@@ -116,7 +117,7 @@ If you set `explode:true`, then the seperator used is a period: ".":
 - An `array` becomes a period-delimited list.
 - An `object` concatenates key-value pairs into their own parameters as "key=value". Then it separates each parameter with a period.
 
-#### Matrix
+### Matrix
 
 `style:matrix` with its default of `explode:false`, would  serialize your parameters like this:
 
@@ -136,7 +137,7 @@ If you set `explode:true`, then the seperator used is a semicolon: ";".
 - An `array` has its values treated as separate parameters. Because they're now treated separately, every value is prefixed with ";pets="
 - An `object` is the exception, it does not get prefixed with "pets=", but it still has to separated by a semicolon: ";".
 
-### Query Parameters
+## Query Parameters
 
 For parameters `in:query` there are four defined values for `style`.
 
@@ -158,7 +159,7 @@ An informal, general rule of thumb is:
 Just be aware that `spaceDelimited`, `pipeDelimited` and `deepObject` are not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750).
 There are caveats to their usage, if you intend to use them, make sure you read their sections carefully.
 
-#### Form
+### Form
 
 With `style:form`, if you set `explode:false`, would serialize your parameters like this:
 
@@ -184,7 +185,7 @@ Both "pets" and "hats" would be considered unique parameters, but they both have
 
 This conflict is entirely avoided if you explicitly set `explode:false` on parameters of `type:object`, but if that's not an option, remain vigil for possible conflicts.
 
-#### Space Delimited
+### Space Delimited
 
 `style:spaceDelimited` with its default of `explode:false`, would  serialize your parameters like this:
 
@@ -199,7 +200,7 @@ You'll notice there are no examples for any `type` that would be a single value.
 
 `style:spaceDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behaviour for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
 
-#### Pipe Delimited
+### Pipe Delimited
 
 `style:pipeDelimited` with its default of `explode:false`, would  serialize your parameters like this:
 
@@ -208,17 +209,32 @@ You'll notice there are no examples for any `type` that would be a single value.
 | ?pets=cat%7Cdog             | ?pets=age%7C2%7Ctype%7Cdog                    |
 | ?pets=cat%7Cdog&hats=fedora | ?pets=age%7C2%7Ctype%7Cdog&hats=type%7Cfedora |
 
-It's basically identical to `style:form` with `explode:false`. The difference being, the separator used is not a comma, but a percent-encoded pipe "%7C". You may be able to use a normal pipe "|" but it is not in the list of [RFC3986's Unreserved Characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.3). As such, it may work in some environments, and not in others.
+It's basically identical to `style:form` with `explode:false`. The difference being, the separator used is not a comma, but a percent-encoded pipe "%7C". 
+
+You may be able to use a normal pipe "|" but it is not in the list of [RFC3986's Unreserved Characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.3). As such, it may work in some environments, and not in others.  
+If you still choose to use non-percent-encoded pipes, it would look like this:
+
+| `array`                    | `object`                                  |
+|----------------------------|-------------------------------------------|
+| ?pets=cat\|dog             | ?pets=age\|2\|type\|dog                   |
+| ?pets=cat\|dog&hats=fedora | ?pets=age\|2\|type\|dog&hats=type\|fedora |
 
 You'll notice there are no examples for any `type` that would be a single value. This is because its behaviour is undefined for single values. One could assume it would be identical to `style:form`, but if your parameter is going to be a single value, there is no need to explicitly define it as `spaceDelimited`.
 
 `style:pipeDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behaviour for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
 
-#### Deep Object
+### Deep Object
 
 `style:deepObject` is undefined for its default of `explode:false`. You must explicitly specify `explode:true` for any defined behaviour.
 
-You may be able to use a normal square brackets "[" and "]" but they are in the list of [RFC3986's Reserved Characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2). As such, it may not work in some environments. For maximum interoperability it is safer to have them percent-encoded:
+You may be able to use a normal square brackets "[" and "]" but they are in the list of [RFC3986's Reserved Characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2). As such, it may not work in some environments. 
+
+| `object`                                      |
+|-----------------------------------------------|
+| ?pets[age]=2&pets[type]=dog                   |
+| ?pets[age]=2&pets[type]=dog&hats[type]=fedora |
+
+For maximum interoperability it is safer to have them percent-encoded:
 - "%5B" for "[" 
 - "%5D" for "]".
 
@@ -231,7 +247,7 @@ Unsurprisingly, it only has defined behaviour for an `object`. This `style` is q
 
 Just bear in mind the name is misleading, despite being called a `deepObject`, there is no defined behaviour for nested arrays or objects. This is the same for every `style` `in:query`.
 
-### Header Parameters
+## Header Parameters
 
 For parameters `in:header` there is only one defined value for `style`: `simple`. 
 
@@ -244,7 +260,7 @@ For this reason it is not recommended to rely on `style`, `explode` and `schema`
 
 For parameters `in:header` it is recommended to make use of the parameter's `content` field instead of `schema`. Then use a media type such as `text/plain` and require the application to assemble the correct string. This will be the recommended approach as of OpenAPI Version 3.1.1, with more detail available in Appendix D: Serializing Headers and Cookies.
 
-### Cookie Parameters
+## Cookie Parameters
 
 For parameters `in:cookie` there is only one defined value for `style`: `form`.
 
@@ -259,3 +275,158 @@ It is the [same definition as it would be `in:query`](#form) except there are se
 As such `style:form` `in:cookie` is somewhat confusing, and less accurate the more parameters you have to serialize. For this reason it is not recommended to rely on `style`, `explode` and `schema`. 
 
 For parameters `in:cookie` it is recommended to make use of the parameter's `content` field instead of `schema`. Then use a media type such as `text/plain` and require the application to assemble the correct string. This will be the recommended approach as of OpenAPI Version 3.1.1, with more detail available in Appendix D: Serializing Headers and Cookies.
+
+## Examples and Recommendations
+
+### General Guide Lines
+
+#### Location
+
+If a parameter is needed across many `paths`, or contains sensitive information; it may be sensible to include `in:header` or `in:cookie`.
+  - If the parameter needs to persist across sessions, keep it `in:cookie`.
+
+If a parameter is only needed in specific `paths`, it may be sensible include `in:path` or `in:query`.
+
+It is easier to provide parameters in a URL. Requiring `headers`, `cookies` or a `requestBody` generally make requests more difficult.  
+Keep it simple; if it's sensible to include a parameter `in:path` or `in:query`, do so.
+
+#### Style
+
+For parameters `in:path` or `in:query`; the defaults exist for a reason, they're well-defined, versatile and simple. 
+
+For parameters `in:header` or `in:cookie`; the defaults work to an extent, but the variations on their syntax are beyond the scope of the OpenAPI Specification and what can be described through `style`. The recommended approach is to forgo `style` and `schema` in favour of using `content` with a media type such as `text/plain`.
+
+### Optional Boolean
+
+Looking at the [Train Travel API](https://bump.sh/bump-examples/doc/train-travel-api), we can make a `GET` request to find available trips, based on our criteria:
+
+```yaml
+/trips:
+  get:
+  ...
+  parameters:
+    ...
+    - name: dogs
+    in: query
+    description: Only return trips where dogs are known to be allowed
+    required: false
+    schema:
+      type: boolean
+      default: false
+```
+
+The parameter is simple, it could be formatted anywhere without issue.  
+
+It doesn't need to persist between sessions, so it doesn't need to be `in:cookie`.  
+It's specific to this path, so there's not much benefit in sticking it `in:header`.  
+It's optional, so it cannot be `in:path`.  
+
+No `style` has been mentioned, nor `explode`. But the parameter is `in:query` so we know the default is `style:form` and `explode:true`. We would expect a URLs like this:
+
+User without a dog: `/trips`  
+User with a dog: `/trips?dogs=true`
+
+We could set `explode:false` but [Explode](#explode) has no effect on parameters that are not arrays or objects. This would be extra documentation with no gain, leaving it as the default keeps your specification concise.
+
+We could not use any other `style` available to [Query Parameters](#query-parameters) as only `style:form` can be used with parameters that are not arrays or objects.
+
+### Required String
+
+Looking at the [Train Travel API](https://bump.sh/bump-examples/doc/train-travel-api) once more, we can get the details of specific bookings:
+
+```yaml
+/bookings/{bookingId}:
+  parameters:
+    - name: bookingId
+      in: path
+      required: true
+      description: The ID of the booking to retrieve.
+      schema:
+        type: string
+        format: uuid
+        example: 1725ff48-ab45-4bb5-9d02-88745177dedb
+  get:
+    ...
+```
+
+Again the parameter is simple, it could be formatted anywhere without issue.  
+
+It doesn't need to persist between sessions, so it doesn't need to be `in:cookie`.  
+It's specific to this path, so there's not much benefit in sticking it `in:header`.  
+It's required, so it could be `in:path` or `in:query`.  
+
+Because parameters `in:path` are always `required:true`, it is the most intuitive place to stick a `required` parameter.
+
+By default this be `style:simple` and `explode:false`, looking like this: `/bookings/1725ff48-ab45-4bb5-9d02-88745177dedb`
+
+It could have a different `style` like so:
+
+- `style:label` : `bookings/.1725ff48-ab45-4bb5-9d02-88745177dedb`
+- `style:matrix` : `bookings/;bookingId=1725ff48-ab45-4bb5-9d02-88745177dedb`
+
+
+### List of Strings
+
+What if we could filter trips that stop at a specified list of stations?
+
+It's specific to this path, so we should keep it in the URL for simplicity. That means `in:path` or `in:query`.
+Not every user knows the station they want, they may simply be looking for the closest stop to their actual destination. This parameter should be optional, so it cannot be `in:path`.
+
+We could put it `in:path` and it would look like so:
+
+```yaml
+/trips:
+  get:
+  ...
+    parameters:
+      ...
+      - name: stations
+        in: query
+        description: Only return trips that stop at these stations
+        required: false,
+        schema:
+          type: array
+          items:
+            type: string
+```
+
+Now our URL will look like this:
+
+- Users with specific station in mind: `/trips?stations=gatwick&stations=london`
+- Users with only one station in mind: `/trips?stations=london`
+
+### AnyOf Object or String
+
+```yaml
+/trips:
+  get:
+  ...
+    parameters:
+      ...
+      - name: station
+        description: Only return trips that stop at your preferred station, if none, use to fallback if provided.
+        in: query
+      style: deepObject
+      explode: true
+      required: false
+      schema:
+        anyOf: 
+          - type: object
+            required:
+              - preferred
+            properties:
+              preferred:
+                type: string
+              fallback:
+                type: string
+          - type: string
+```
+
+Here I've stated that my `schema` can be `anyOf` the following: an object or a string, in `style:deepObject`. You may have spotted the problem already:
+
+- If our user specifies an object, this works as expected: `/trips?station[preferred]=gatwick&station[fallback]=london`.  
+- What if our user specifies a string? It's undefined, `deepObject` only has defined behaviour for objects.
+
+You cannot apply `style` on a per-`schema` basis. Your `style` needs to work for all possible variations of your parameter.  
+If you intend to use `anyOf`, `allOf` or `oneOf` make doubly sure your choice of `style` works for every option.  
+As always, the best option is to minimise your use of complex parameters, keep it simple.
