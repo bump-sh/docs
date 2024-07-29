@@ -46,4 +46,6 @@ Bridgetown.configure do |config|
   init :"bridgetown-sitemap"
   init :"bridgetown-svg-inliner"
   init :bridgetown_internal_markdown_links
+
+  config.internal_markdown_links.collections = ["pages", "help", "guides", "product-updates"]
 end

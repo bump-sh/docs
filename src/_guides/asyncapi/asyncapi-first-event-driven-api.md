@@ -38,7 +38,7 @@ Before we begin the process of implementing a Node.js event-driven API described
 
 - [Node.js](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
-- **Optional:** [Mosquitto](https://mosquitto.org/), an open-source message broker that 				implements the [MQTT protocol](https://mqtt.org/mqtt-specification/); this tutorial uses the [public test server](​​https://test.mosquitto.org/)
+- **Optional:** [Mosquitto](https://mosquitto.org/), an open-source message broker that 				implements the [MQTT protocol](https://mqtt.org/mqtt-specification/); this tutorial uses the [public test server](https://test.mosquitto.org/)
  
 Once you have these installed, you can follow the steps below to implement your event-driven API.
 
