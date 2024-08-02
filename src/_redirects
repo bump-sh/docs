@@ -13,4 +13,7 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/quick-start/ /help/getting-started/
 /help/bump-cli /help/continuous-integration/cli/
 /help/github-action /help/continuous-integration/github-actions/
-/help/specifications-support /help/specification-support/
+/help/specifications-support/ /help/specification-support/
+/help/meta-images/ /help/customization-options/color-logo-meta-images/
+/continuous-integration/github-actions/ /help/continuous-integration/github-actions/
+/bump-cli/ /help/continuous-integration/cli/

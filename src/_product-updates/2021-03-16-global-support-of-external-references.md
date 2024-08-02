@@ -8,7 +8,7 @@ As your API grows, your specification becomes more and more complex. At some poi
 We have just released full external references support  by updating:
 * our web app
 * our CLI ([version 0.7 is out](https://github.com/bump-sh/bump-cli/releases/tag/v0.7.0))
-* our GitHub action ([version 0.2 is out](https://github.com/marketplace/actions/api-documentation-on-bump))
+* our GitHub action ([version 0.2 is out](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog))
 
 Now, no matter the channel you use to deploy a specification, Bump will resolve all references (when possible) and import their content into your documentation.
 

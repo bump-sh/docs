@@ -352,4 +352,4 @@ There is a lot more work to be done until 100% of your API is covered, but you c
 
 ## Sample Code
 
-The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [laravel-code-first](https://github.com/bump-sh/laravel-code-first), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-code-first) is over here.
+The sample code for this guide is published on GitHub so you can try that if you're having trouble adding it to your application: [laravel-code-first](https://github.com/bump-sh/laravel-api-with-documentation), and the [deployed documentation](https://bump.sh/bump-examples/hub/code-samples/doc/laravel-code-first) is over here.

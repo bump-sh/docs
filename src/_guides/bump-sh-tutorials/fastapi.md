@@ -33,7 +33,7 @@ The following assumes your local machine is configured with Python and FastAPI, 
     --token my-documentation-token
   ```
 
-That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/getting-started/quick-start#customization-options).
+That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/customization-options/).
 
 ## Enriching documents
 

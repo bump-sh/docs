@@ -8,6 +8,6 @@ We recently released a new social network feature, that helps you create beautif
 
 You can now upload your own image or leave the work to us to generate a nice one. Sharing your documentation link on social networks will now display your own visual, making it more appealing.
 
-Find out more in our [Help Center](/help/meta-images/)!
+Find out more in our [Help Center](/help/customization-options/color-logo-meta-images/)!
 
 ![metaimage-forto.png](/images/changelog/metaimage-forto.png)
