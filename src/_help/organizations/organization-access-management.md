@@ -30,7 +30,7 @@ Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of i
 
 Once an SSO connection is set up, a link pointing to a login page is available in the dashboard, allowing you to easily share it.
 
-This page can be customized with a logo and specific button labels (contact us in this latter case).
+This page can be customized with a logo and specific button labels and descriptions (contact us in this latter case).
 
 The login page will systematically appear when attempting to access via the direct URL of a documentation or a hub behind this SSO, if one is not already authenticated.
 
