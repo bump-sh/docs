@@ -48,3 +48,9 @@ The configuration step for your identity provider depends on the specific provid
 > By default, all users who get access to Bump.sh via the configured SSO will have the “Viewer” Role/Permission.
 {: .info}
 
+### Operation with Bump.sh
+
+Once the SSO connection(s) are set up, your private documentation or hubs will only be accessible to authenticated users. You will find the link to the SSO login page in the settings of your organization.
+This SSO login link redirects to the dashboard.
+
+The login page will be displayed each time an unauthenticated user attempts to access a private documentation or hub.
