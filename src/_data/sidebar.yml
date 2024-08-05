@@ -63,6 +63,8 @@ help:
         link: /customization-options/custom-domains/
       - label: Color, logo and meta images
         link: /customization-options/color-logo-meta-images/
+      - label: Login page
+        link: /customization-options/login/
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
   - type: category
