@@ -2,7 +2,7 @@
 title: Callbacks and Webhooks
 authors: phil
 excerpt: Dive into the world of API file uploads in OpenAPI.
-date: 2024-08-06
+date: 2024-08-07
 ---
 
 REST/HTTP APIs are often considered to be a simple request and response model, but they have always been a lot more asynchronous than that, and OpenAPI can capture two types of asynchronous HTTP event using `callbacks` and `webhooks`.
