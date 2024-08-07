@@ -2,7 +2,7 @@
 title: Multiple Content Types with OpenAPI
 authors: phil
 excerpt: 
-date: 2024-07-24
+date: 2024-08-07
 ---
 
 Let's dive into the nitty-gritty of describing multiple content types in OpenAPI. If you’ve ever needed to handle JSON, XML, CSV, and maybe even images in your API, you’re in the right place. This tutorial will guide you through setting up your OpenAPI document to gracefully handle multiple different formats.

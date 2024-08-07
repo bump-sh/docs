@@ -2,7 +2,7 @@
 title: Uploading a File
 authors: phil
 excerpt: Dive into the world of API file uploads in OpenAPI.
-date: 2024-08-06
+date: 2024-08-07
 ---
 
 APIs can handle file uploads in a variety of ways, and OpenAPI can help you describe any of them. The two most common methods are directly accepting the file based on the content-type of the request, e.g.: a HTTP request with `image/png`, `image/jpeg`, `text/csv`, etc., or a HTTP request with a `multipart/form-data` content type which allows you to combine text and file data in a single request. 
