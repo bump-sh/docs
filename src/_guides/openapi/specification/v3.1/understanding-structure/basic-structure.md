@@ -87,26 +87,26 @@ It's fine to put any development and testing servers in here because you can alw
 The `paths` object is probably the most important section for your API. It lists all the available API endpoints, with each path being a key in the object. Then the object is further broken down by the specific HTTP methods supported by each endpoint. The object in each of these HTTP methods is another object which describes the "operation", which is a term in OpenAPI to describe a specific combination of path and method.
 
 ```yaml
-  paths:
-    /bookings:
-      get:
-        operationId: get-bookings
-        summary: List existing bookings
-        tags:
-        - Bookings
-        responses:
-          '200':
-            description: A list of bookings                 
-      post:
-        operationId: create-booking
-        summary: Create a booking
-        tags:
-        - Bookings
-        requestBody:
-          required: true
-        responses:
-          '201':
-            description: Booking successful
+paths:
+  /bookings:
+    get:
+      operationId: get-bookings
+      summary: List existing bookings
+      tags:
+      - Bookings
+      responses:
+        '200':
+          description: A list of bookings                 
+    post:
+      operationId: create-booking
+      summary: Create a booking
+      tags:
+      - Bookings
+      requestBody:
+        required: true
+      responses:
+        '201':
+          description: Booking successful
 ```
 
 Here the `operationId` helps us spot the two different operations, and give them a unique name which can be useful for all sorts of tools. The `summary` gives a human readable title that will often be used in documentation tools.
