@@ -1,68 +1,73 @@
 ---
-title: Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints
-authors: Ivan Kahl
+title: Using OpenAPI Tags to Better Organize API Endpoints
+authors: phil
 image: images/guides/openapi-asyncapi-tags-organize-endpoints.png
-canonical_url: https://bump.sh/blog/openapi-tags-organize-endpoints
 excerpt: Learn tips and tricks to group related endpoints in a meaningful way.
-date: 2024-03-25
+date: 2024-08-07
 ---
 
-OpenAPI Tags are a great way to organize the API endpoints in [your API Contract](https://bump.sh/blog/api-contracts-extended-introduction).
+Tags are a great way to organize the API endpoints in your OpenAPI documents.
 
-When developing APIs, it's essential to document the API so that other developers, whether internal or external, can use the API effectively. [OpenAPI](https://spec.openapis.org/oas/latest.html) and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) are open source specifications useful when writing API contracts.
-An [API contract describes the API](https://bump.sh/blog/api-contracts-extended-introduction), including its endpoints, data structures, and security constraints. When writing these, you can use [OpenAPI tags](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) and [AsyncAPI tags](https://www.asyncapi.com/docs/reference/specification/v2.0.0#tagsObject) to help you categorize your contract so that it's more readable and easier to understand.
-
-Let’s see how that works !
-
-## Tag Example
-
-Typically, OpenAPI and AsyncAPI tags are used to group related endpoints in a meaningful way, such as by business function or logical objects. When using tags, you define an array of tags at the root of your document, like this:
+Typically, OpenAPI tags are used to group related endpoints in a meaningful way, such as by business function or logical objects. When using tags, you define an array of tags at the root of your document, like this:
 
 ```yaml
 tags:
-  - name: Clients
-    description: Create, update and retrieve client information.
+  - name: Stations
+    description: | 
+      Find and filter train stations across Europe, including their location
+      and local timezone.
     externalDocs:
       description: Read more
-      url: http://docs.example.com/api/clients
-  - name: Notifications
-    description: Manage notifications for the current user
+      url: http://docs.example.com/guides/stations
+  - name: Trips
+    description: | 
+      Timetables and routes for train trips between stations, including pricing
+      and availability.
+  - name: Bookings
+    description: | 
+      Create and manage bookings for train trips, including passenger details
+      and optional extras.
+  - name: Payments
+    description: |
+      Pay for bookings using a card or bank account, and view payment
+      status and history.
+
+      > warn
+      > Bookings usually expire within 1 hour so you'll need to make your payment
+      > before the expiry date 
 ```
 
 Once you've created these tags, you can use them to group related endpoints in your API using the `tags` property on the endpoint as follows:
 
 ```yaml
 paths:
-  /clients:
+  /stations:
     get:
+      summary: Get a list of train stations
       tags:
-        - Clients
-      summary: Retrieve all clients.
-      description: Retrieves all clients the user has access to.
-  /notifications/unread:
+        - Stations
+  /trips:
     get:
+      summary: Get available train trips
       tags:
-        - Notifications
-      summary: Retrieves all unread notifications.
-      description: Retrieves all unread notifications for the current user.
+        - Trips
 ```
 
-You can also apply multiple tags to an endpoint, as shown in the code snippet below:
+You can also apply multiple tags to an operation:
 
 ```yaml
 paths:
-  /clients/{clientId}/notifications:
-    get:
+  /bookings/{bookingId}/payment:
+    post:
+      summary: Pay for a Booking
       tags:
-        - Clients
-        - Notifications
-      summary: Retrieve all the notifications for a particular client.
-      description: Retrieves all the notifications for a particular client that the user has access to.
+        - Bookings
+        - Payments
 ```
 
-## Benefits of OpenAPI and AsyncAPI Tags
+## Benefits of OpenAPI Tags
 
-Tags are a powerful tool for improving the usability of your API contract. Below are some of the ways using tags can help keep your API contract organized.
+Tags are a powerful tool for improving the usability of your OpenAPI document. Below are some of the ways using tags can help keep your OpenAPI document organized.
 
 ### Tags Can Describe Endpoint Groups
 
@@ -128,7 +133,7 @@ When you generate API documentation, you'll notice the documentation orders the 
 
 Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
 
-Now that you understand what tags are and their benefits, you'll see some best practices you should follow when using OpenAPI and AsyncAPI tags in API contracts.
+Now that you understand what tags are and their benefits, you'll see some best practices you should follow when using OpenAPI tags in API contracts.
 
 ## OpenAPI Tags Best Practices
 
@@ -307,9 +312,4 @@ By doing this, your documentation will display the endpoint groups in the correc
 
 ## Conclusion
 
-In this article, you learned more about OpenAPI and AsyncAPI tags and their value in an API contract. You also learned that you can add descriptions and external documentation links to the tag. This article has also shown you some best practices to follow when using tags that can improve the quality of your generated documentation.
-
-Bump.sh [OpenAPI](https://bump.sh/openapi) and [AsyncAPI documentation generator](https://bump.sh/asyncapi) implement tags to help you keep your API documentation organized. Bump also [detects and notifies you of breaking changes](https://bump.sh/api-change-management) when deploying a new version of your API.
-
-Bump.sh is the simplest way to automatically create [API portals for internal, partner, and public APIs](https://bump.sh/api-catalog). Discover it by [signing up](https://bump.sh/users/sign_up).
-
+In this article, you learned more about OpenAPI tags and their value in an API contract. You also learned that you can add descriptions and external documentation links to the tag. This article has also shown you some best practices to follow when using tags that can improve the quality of your generated documentation.
