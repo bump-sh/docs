@@ -14,3 +14,6 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/bump-cli /help/continuous-integration/cli/
 /help/github-action /help/continuous-integration/github-actions/
 /help/specifications-support /help/specification-support/
+
+# Cribbed for the OpenAPI Specification Tutorial (but could be duplicated)
+/guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/
