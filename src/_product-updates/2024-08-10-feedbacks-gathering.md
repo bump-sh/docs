@@ -15,7 +15,10 @@ By letting you redirect this button to any link, we want to give you the freedom
 - A nicely designed form, 
 - An email to the support team, ...
 
+[Check our dedicated help page →](https://docs.bump.sh/help/specification-support/extensions/)
+
 ![feedback-button-mockup.png](/images/changelog/feedback-button-mockup.png)
 
 As always, don't hesitate to let us know what you think of this feature! You can even use our "feedback" button on our dashboard!
+
 
