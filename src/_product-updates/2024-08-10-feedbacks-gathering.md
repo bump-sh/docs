@@ -8,7 +8,7 @@ image: /images/changelog/feedback-button.png
 
 Because feedback from real-life users is the best way to improve your documentation, our last update introduces a new "Give feedback" button.
 
-The `x-feedbackLink` object can be added directly in your API definition file.  
+The `x-feedbackLink` object can be added directly in the `info` object of your API definition file. 
 
 By letting you redirect this button to any link, we want to give you the freedom to choose the type of feedback you want:
 - A pre-filled issue in your GitHub repository using a template,
