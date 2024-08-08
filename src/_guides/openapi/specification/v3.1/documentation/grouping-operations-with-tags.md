@@ -1,9 +1,9 @@
 ---
-title: Using OpenAPI Tags to Better Organize API Endpoints
+title: Organize API Endpoints with OpenAPI Tags
 authors: phil
-image: images/guides/openapi-asyncapi-tags-organize-endpoints.png
+image: images/guides/tags-organize-endpoints.png
 excerpt: Learn tips and tricks to group related endpoints in a meaningful way.
-date: 2024-08-07
+date: 2024-08-08
 ---
 
 Tags are a great way to organize the API endpoints in your OpenAPI documents.
