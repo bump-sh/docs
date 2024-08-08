@@ -1,11 +1,13 @@
 ---
-Title: Specification extensions
+title: Specification Extensions in OpenAPI
+authors: phil
+excerpt: Using extensions allows you to customize and integrate various tools through OpenAPI.
+date: 2024-03-20
 ---
 
-- TOC
-{:toc}
+OpenAPI v3.1 has a concept of [Specification Extensions](https://spec.openapis.org/oas/v3.1.0#specification-extensions) which are additional properties not specified by the OpenAPI specification. These are a chance to customize and integrate tools from documentation to API gateways, all hooking into the OpenAPI document and storing information important to them in the form of extra properties that will be ignored by other tooling. 
 
-These additional properties are not specified by the OpenAPI or the AsyncAPI specifications but can help you customize your documentation content. All those properties start with the x- naming convention to be identified as “eXternal” from the OpenAPI or AsyncAPI specification.
+All those properties start with the `x-` naming convention to be identified as “eXternal” from the OpenAPI specification.
 
 ## Add topics to your documentation (`x-topics`)
 
@@ -21,5 +23,4 @@ We added a custom property, not supported by OpenAPI, so you can add your own co
 ## Expose your beta features (`x-beta`)
 
 This custom property allows you to identify some components of your
-documentation as beta. Find out more in our [dedicated
-section](/help/specification-support/doc-beta).
+documentation as beta. Find out more in our [dedicated section](/help/specification-support/doc-beta).
