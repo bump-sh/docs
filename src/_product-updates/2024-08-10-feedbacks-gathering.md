@@ -1,5 +1,5 @@
 ---
-title: Documentation feedback 
+title: Get feedback from users 
 tags: [New]
 image: /images/changelog/feedback-button.png
 ---
