@@ -15,7 +15,7 @@ If you are new to API Platform, check out [their getting started guide](https://
 
 The following assumes your local machine is configured with PHP and API Platform.
 
-1. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+1. [Create and name](/help/getting-started/upload-your-first-definition/) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
 
 2. Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true) as below, or use [alternative options](/help/continuous-integration/cli), with
   ```shell

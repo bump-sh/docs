@@ -141,10 +141,10 @@ paths:
           description: Success
 ```
 
-**Step 4:** OpenAPI being generated means we can deploy it to Bump.sh. # Deploying OpenAPI documentation to Bump.sh. [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+**Step 4:** OpenAPI being generated means we can deploy it to Bump.sh. # Deploying OpenAPI documentation to Bump.sh. [Create and name](/help/getting-started/upload-your-first-definition/) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
 
 **Step 5:** Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true).
-  
+
 ```bash
 npm install -g bump-cli
 ```

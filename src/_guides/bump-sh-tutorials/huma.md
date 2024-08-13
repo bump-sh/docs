@@ -11,7 +11,7 @@ date: 2024-03-25
 
 The following assumes your local machine is configured with Golang and you have a Huma app running on your local machine, and that your main file is named `main.go`. If you don't have a Huma app set up, follow their [Your First API guide](https://huma.rocks/tutorial/your-first-api/).
 
-**Step 1:** [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
+**Step 1:** [Create and name](/help/getting-started/upload-your-first-definition/) your first API documentation. Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
 
 **Step 2:** Install the Bump.sh CLI with [npm](https://docs.npmjs.com/cli/v9/configuring-npm/install?v=true) as below, or use [alternative options](/help/bump-cli)
 

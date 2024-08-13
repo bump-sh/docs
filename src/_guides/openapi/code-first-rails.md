@@ -138,7 +138,7 @@ Swagger doc generated at /Users/phil/src/rails-code-first/swagger/v1/swagger.yam
 **Step 7:** OpenAPI being generated means we can deploy it to Bump.sh.
 
 > Deploying OpenAPI documentation to Bump.sh.
-> - [Create and name](https://bump.sh/docs/new?utm_source=bump&utm_medium=content_hub&utm_campaign=getting_started) your first API documentation.
+> - [Create and name](/help/getting-started/upload-your-first-definition/) your first API documentation.
 > - Then, retrieve the name and token of this documentation from the _CI deployment_ settings page.
 {: .info}
 
