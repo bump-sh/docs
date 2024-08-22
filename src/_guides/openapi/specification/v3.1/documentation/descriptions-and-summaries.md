@@ -109,7 +109,7 @@ Here we have a `format: date-time` which should be displayed to users in API doc
 
 ## Adding Descriptions to Tags
 
-Tags are often underutilized, but they are a great way to [group operations](./grouping-operations-with-tags.md) for more structured navigation in most API documentation tools. These tags are also a great place to write longer form context on what these tags actually mean in your domain specifically. For example, the word "Account" can mean 10 different things inside a large organization depending on the department and the function, so it's good to be super clear about what they are.
+Tags are often underutilized, but they are a great way to [group operations](grouping-operations-with-tags.md) for more structured navigation in most API documentation tools. These tags are also a great place to write longer form context on what these tags actually mean in your domain specifically. For example, the word "Account" can mean 10 different things inside a large organization depending on the department and the function, so it's good to be super clear about what they are.
 
 ```yaml
 tags:

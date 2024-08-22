@@ -136,7 +136,7 @@ components:
 
 This approach is one of many you could take, but essentially what we're doing here is using one generic schema, then providing a tailored example for each type of error, with the types of error corresponding so far to the HTTP status codes likely to be returned. 
 
-You could get more specific and get into application-level errors here, but they might be better off left as examples and the specific errors all defined elsewhere, the same place thats being linked to with these `href` values.
+You could get more specific and get into application-level errors here, but they might be better off left as examples and the specific errors all defined elsewhere, the same place that is being linked to with these `href` values.
 
 ## Other Error Formats
 
