@@ -51,6 +51,8 @@ The configuration step for your identity provider depends on the specific provid
 ### Operation with Bump.sh
 
 Once the SSO connection(s) are set up, your private documentation or hubs will only be accessible to authenticated users. You will find the link to the SSO login page in the settings of your organization.
-This SSO login link redirects to the dashboard.
+This SSO login link redirects to the dashboard. 
 
 The login page will be displayed each time an unauthenticated user attempts to access a private documentation or hub.
+
+The will always redirect to the initially targeted URL (for example, if a logged-out user uses a URL to access a specific documentation, they will be redirected to that documentation after authentication via SSO).
