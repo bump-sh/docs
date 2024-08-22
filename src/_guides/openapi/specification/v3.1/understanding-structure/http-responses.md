@@ -114,7 +114,7 @@ Some HTTP responses will not have a body. For example 204 No Content is often us
 
 To describe HTTP responses with no body in OpenAPI you simply leave the `content` object out. 
 
-```
+```yaml
 paths:
   /example:
     get:

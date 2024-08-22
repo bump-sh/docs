@@ -11,7 +11,7 @@ The request body can be used for:
 
 - Creating new resources (e.g.: booking a train ticket)
 - Updating existing resources (e.g.: updating that booking)
-- Uploading files (e.g.: uploading an avatar to a user profile)
+- Uploading files (e.g.: uploading an image to your railcard)
 
 ## Structure of Request Bodies
 
@@ -67,7 +67,7 @@ The schema defines the structure of the request body, including properties like 
 
 ### Updating a Resource
 
-If a user wants to update their booking (e.g.: change the seat preference), the API can define a PUT or PATCH response, to allow updating the entire booking, or part of the booking  respectively. Either way, they need to send the updated data in the request body. Here’s how to define it:
+If a user wants to update their booking (e.g.: change the seat preference), the API can define a `PUT` or `PATCH` operation, to allow updating the entire booking, or part of the booking respectively. Either way, they need to send the updated data in the request body. Here’s how to define it:
 
 ```yaml
 paths:

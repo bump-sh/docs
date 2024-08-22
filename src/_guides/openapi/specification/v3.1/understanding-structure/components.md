@@ -1,11 +1,11 @@
 ---
 title: OpenAPI Components
 authors: phil
-excerpt: Learn your way around the OpenAPI description format for HTTP APIs by learning the basic structure.
+excerpt: Reduce repetition in your OpenAPI documents with shared components.
 date: 2024-07-02
 ---
 
-The Components object in OpenAPI allows you to create reusable bits of OpenAPI that can then be pieced together like Lego to build a better API description. This keeps things nice and tidy, and you can even spread them across multiple documents to share components between multiple APIs, or at least just keep your file sizes down.
+The Components object in OpenAPI allows you to create reusable bits of OpenAPI that can then be pieced together like Lego blocks to build a better API description. This keeps things nice and tidy, and you can even spread them across multiple documents to share components between multiple APIs, or at least just keep your file sizes down.
 
 ```yaml
 components:

@@ -7,7 +7,7 @@ date: 2024-07-02
 
 The OpenAPI Specification (OAS) is an "API Description Format", providing a standard format for describing REST APIs, making it easier to design, document, and consume them.
 
-In this tutorial we'll explore the structure of an OpenAPI document, focusing on the main sections and important elements, so that you can get a feel for where everything is, without having to go through the whole OpenAPI Specification yourself, as that's meant more for tooling developers than users like yourself.
+In this tutorial we'll explore the structure of an OpenAPI document, focusing on the main sections and important elements, so that you can get a feel for where everything is, without having to scan through the whole OpenAPI Specification yourself.
 
 ## The OpenAPI Document
 
@@ -34,7 +34,7 @@ The root of the OpenAPI document is the `openapi` object, which specifies the ve
 openapi: 3.1.1
 ```
 
-This is required, so that tooling knows which version you are working with. The `3.1` part is the important bit, and the patch number doesn't really matter as those "patch" versions only add clarifications to the specification and never change meaning, but it's helpful to know what version somebody was reading when they wrote the OpenAPI.
+This is required, so that tooling knows which version you are working with. The `3.1` part is the important bit. The patch number (`3.1.1`) doesn't really matter as those "patch" versions only add clarifications to the specification and never change meaning, but it's helpful to know what version somebody was reading when they wrote the OpenAPI.
 
 ### 2. Info Object
 
@@ -80,7 +80,7 @@ servers:
     description: Staging server
 ```
 
-It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](/src/_guides/openapi/augmenting-generated-openapi/).
+It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](../extending/overlays.md).
 
 ### 4. Paths Object
 

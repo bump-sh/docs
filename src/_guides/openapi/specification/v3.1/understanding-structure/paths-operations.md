@@ -111,7 +111,7 @@ paths:
                 123,2023-04-01T10:00:00Z,2023-04-01T15:00:00Z,TrainCo,59.99
 ```
 
-The responses are then broken down by status code, and again all the responses can have multiple content types. Then the content can be further described by a `schema`, and an `example` (or `examples`).
+The responses are then broken down by status code, and again all the responses can have [multiple content types](../advanced/multiple-content-types.md). Then the content can be further described by a `schema`, and an `example` (or `examples`).
 
 For both request and response, `schema` is optional, but is massively helpful and worth putting in the work to define, because this is where all of the HTTP body information exists, which can contain validation rules, potential values, examples, and useful context like "why" and "how" instead of just "what". 
 

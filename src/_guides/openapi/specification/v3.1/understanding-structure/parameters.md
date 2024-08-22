@@ -14,7 +14,7 @@ Parameters fall into one of a few types:
 - **Header Parameters:** Included in the request header, e.g., `Acme-Custom-Header: Value`.
 - **Cookie Parameters:** Passed in the request cookies.
 
-> In previous versions of OpenAPI the entire request body and form data would all be sent as parameters, but since OpenAPI v3.0 this has been moved to the content object. We cover this more in [HTTP Requests](./http-requests.md).
+> In previous versions of OpenAPI the entire request body and form data would all be sent as parameters, but since OpenAPI v3.0 this has been moved to the content object. Learn more in [HTTP Requests](./http-requests.md).
 {: .info }
 
 Each parameter in OpenAPI is defined with specific attributes such as `name`, `in` (location), `required`, `description`, and `schema` (for defining data types and validation rules). Defining parameters with these keywords allows documentation to show example how HTTP requests should be constructed making life easier for the client, but also make sure machines know what to do with it, making SDKs and server-side validation a whole lot more powerful.

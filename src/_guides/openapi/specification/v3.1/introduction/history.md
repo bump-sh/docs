@@ -1,13 +1,13 @@
 ---
-title: "A bit of history: From Swagger to OpenAPI"
+title: "A brief history of OpenAPI"
 authors: phil
 excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs work together, generate client code, create tests, apply design standards, deploy documentation, and much more.
 date: 2024-07-25
 ---
 
-To avoid any misunderstanding, we may have to explain the difference between OpenAPI and Swagger. Until version 3.0, this specification was still called "Swagger", before being renamed to "OpenAPI" in 2016.
+The OpenAPI Specification started off life with another name, and this can cause a bit of confusion. Until version 3.0, the specification was still called "Swagger", before being renamed to "OpenAPI" in 2016. It's actually a "retroactive" rename, so even v2.0 and earlier are called OpenAPI now.
 
-At that time, the OpenAPI specification became a separate project from Swagger, now supervised by the [OpenAPI Initiative](https://www.openapis.org/), an open-source project under the [Linux Foundation](https://linuxfoundation.org/).
+The OpenAPI Specification is now supervised by the [OpenAPI Initiative](https://www.openapis.org/), an open-source project under the [Linux Foundation](https://linuxfoundation.org/).
 
 The name Swagger is still popular, and many of the tools have the word Swagger in, but generally speaking you are better of searching for "OpenAPI tools" than "Swagger tools" because those are mostly old outdated tools which don't work with modern versions of OpenAPI.
 
