@@ -45,6 +45,9 @@ help:
       - type: page
         label: SEO
         link: /publish-documentation/seo/
+      - type: page
+        label: Get feedback from users
+        link: /publish-documentation/feedback/
   - type: category
     label: Enhance your documentation content
     link: /enhance-documentation-content/

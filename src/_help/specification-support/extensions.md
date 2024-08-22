@@ -23,3 +23,8 @@ We added a custom property, not supported by OpenAPI, so you can add your own co
 This custom property allows you to identify some components of your
 documentation as beta. Find out more in our [dedicated
 section](/help/specification-support/doc-beta).
+
+## Get feedback from users (`x-feedbackLink`)
+
+This custom property allows you to add a button to your documentation that enables you to collect feedback from your users. Find out more in our [dedicated
+section](/help/publish-documentation/feedback).
