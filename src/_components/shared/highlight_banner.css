@@ -1,0 +1,30 @@
+highlight-banner {
+  background-image: linear-gradient(90deg, white, white), linear-gradient(90deg, rgba(25, 174, 255, 0.4) 0.3%, rgba(255, 255, 255, 0.2) 25.92%, rgba(1, 92, 213, 0.4) 46.89%, rgba(25, 174, 255, 0.4) 88.32%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: solid 1px transparent;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+
+  .wrapper {
+    background-color: var(--blue-10);
+    padding: var(--spacing-10);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6);
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
+    margin-block: 0 var(--spacing-6);
+  }
+
+  a {
+    margin-block-start: var(--spacing-8);
+  }
+
+  .image {
+    min-width: 157px;
+  }
+}
