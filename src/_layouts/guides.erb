@@ -9,10 +9,10 @@ layout: default
   <div class="double-pane">
     <%= render Categories::Sidebar.new(categories: @categories) %>
     <guide-list class="section-container">
+      <%= yield %>
       <% @categories.each do |category| %>
         <%= render Guides::Category::Section.new(category: category) %>
       <% end %>
     </guide-list>
-    <%= yield %>
   </div>
 </main>
