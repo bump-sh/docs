@@ -79,7 +79,7 @@ Finally, you should define any key roles or processes your team will use while b
 
 Next, you will outline the API's design and structure. Based on the performance, scalability, security, and other requirements outlined in the _Define_ stage, you will need to make decisions like whether to use [REST, GraphQL, or gRPC](https://blog.logrocket.com/graphql-vs-grpc-vs-rest-choosing-right-api/), how to authenticate and authorize consumers, and how to report and track errors.
 
-During this stage, you can create API contracts that provide clear guidelines for the API's behavior. Assuming an HTTP API, developers will often use a standard specification like [OpenAPI](../openapi/specification/v3.1/introduction/what-is-openapi.md) or [AsyncAPI](https://bump.sh/blog/what-is-asyncapi) to define the [API’s operations (verb and URL)](https://www.ibm.com/docs/en/amoc/3.0.1?topic=operations-defining-rest-api) and response format. Having contracts like this allows developers to properly implement the API, and it lets consumers mock the API so they can build downstream applications.
+During this stage, you can create API contracts that provide clear guidelines for the API's behavior. Assuming an HTTP API, developers will often use a standard specification like [OpenAPI](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md) or [AsyncAPI](https://bump.sh/blog/what-is-asyncapi) to define the [API’s operations (verb and URL)](https://www.ibm.com/docs/en/amoc/3.0.1?topic=operations-defining-rest-api) and response format. Having contracts like this allows developers to properly implement the API, and it lets consumers mock the API so they can build downstream applications.
 
 ### Develop and Document
 

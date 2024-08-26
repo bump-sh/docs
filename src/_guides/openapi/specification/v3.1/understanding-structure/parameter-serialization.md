@@ -5,7 +5,7 @@ excerpt: Follow through examples of how your parameters will be serialized.
 date: 2024-07-04
 ---
 
-[Parameters](parameters.md) not only define what inputs your API accepts, they also define the format your API expects to receive them in, i.e. how you would like it serialized.
+[Parameters](_guides/openapi/specification/v3.1/understanding-structure/parameters.md) not only define what inputs your API accepts, they also define the format your API expects to receive them in, i.e. how you would like it serialized.
 
 There are two keywords concerning serialization:
 

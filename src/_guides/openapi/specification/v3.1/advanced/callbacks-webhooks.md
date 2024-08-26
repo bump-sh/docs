@@ -152,7 +152,7 @@ These then don't need to be tied to paths. In fact, you can have an OpenAPI docu
 
 If you are using a few webhooks in an API which is largely otherwise driven by request/response, OpenAPI will be just fine for you with callbacks and webhooks helping as needed. 
 
-However if you are building an API that is entirely asynchronous, you are using technologies like WebSockets, or are working with any other event-driven API protocols, you should consider using [AsyncAPI](../../../../asyncapi/what-is-asyncapi.md) for describing those parts of the architecture. 
+However if you are building an API that is entirely asynchronous, you are using technologies like WebSockets, or are working with any other event-driven API protocols, you should consider using [AsyncAPI](_guides/asyncapi/what-is-asyncapi.md) for describing those parts of the architecture.
 
 ## Examples
 

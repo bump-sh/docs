@@ -17,7 +17,7 @@ There are three main types of examples:
 
 ## Schema Examples
 
-The [schema object](schema-and-data-types.md) is used all over in OpenAPI, for requests and responses, parameters, and headers. A schema in OpenAPI v3.1 can add an example for an entire schema, part of a schema, or a single specific property, which is either confusing or flexible, depending on how you see the world.
+The [schema object](_guides/openapi/specification/v3.1/data-models/schema-and-data-types.md) is used all over in OpenAPI, for requests and responses, parameters, and headers. A schema in OpenAPI v3.1 can add an example for an entire schema, part of a schema, or a single specific property, which is either confusing or flexible, depending on how you see the world.
 
 Here's an example of the `examples` keyword being used for specific properties inside an object.
 
@@ -306,10 +306,10 @@ paths:
 
 Hopefully this will help you create useful examples that can be used by all sorts of tooling. 
 
-> If you are working with generated OpenAPI documents that you cannot edit, you can use [Overlays to add the examples in later](../../../augmenting-generated-openapi.md).
+> If you are working with generated OpenAPI documents that you cannot edit, you can use [Overlays to add the examples in later](_guides/openapi/augmenting-generated-openapi.md).
 {: .info }
 
-[microcks]: ../../../../bump-sh-tutorials/mocking-with-microcks.md
+[microcks]: _guides/bump-sh-tutorials/mocking-with-microcks.md
 
 # Defaults
 

@@ -14,7 +14,7 @@ Parameters fall into one of a few types:
 - **Header Parameters:** Included in the request header, e.g., `Acme-Custom-Header: Value`.
 - **Cookie Parameters:** Passed in the request cookies.
 
-> In previous versions of OpenAPI the entire request body and form data would all be sent as parameters, but since OpenAPI v3.0 this has been moved to the content object. Learn more in [HTTP Requests](./http-requests.md).
+> In previous versions of OpenAPI the entire request body and form data would all be sent as parameters, but since OpenAPI v3.0 this has been moved to the content object. Learn more in [HTTP Requests](_guides/openapi/specification/v3.1/understanding-structure/http-requests.md).
 {: .info }
 
 Each parameter in OpenAPI is defined with specific attributes such as `name`, `in` (location), `required`, `description`, and `schema` (for defining data types and validation rules). Defining parameters with these keywords allows documentation to show example how HTTP requests should be constructed making life easier for the client, but also make sure machines know what to do with it, making SDKs and server-side validation a whole lot more powerful.
@@ -39,7 +39,7 @@ The first type of parameter to get the hang of is path parameters.
           example: 1725ff48-ab45-4bb5-9d02-88745177dedb
 ```
 
-Here is one required path parameter, `bookingId`, with its `name` matching `{bookingId}`. The `schema` can contain anything you'd [expect to find in schema](../data-models/schema-and-data-types.md), from data types to other validations.
+Here is one required path parameter, `bookingId`, with its `name` matching `{bookingId}`. The `schema` can contain anything you'd [expect to find in schema](_guides/openapi/specification/v3.1/data-models/schema-and-data-types.md), from data types to other validations.
 
 > Path parameters have to be marked as `required: true` because they're in the path, and if its missing it would break especially if the variable was between two other segments, e.g: `/bookings/{bookingId}/payment` would become `/bookings//payment` if the value was empty and that's going to be confusing.
 {: .warning }
@@ -124,9 +124,9 @@ Try to clearly explain not just what the header does, but in what scenarios a cl
 
 Cookie parameters are sent in the HTTP request through the [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) functionality available in all web browsers and some HTTP clients. 
 
-Cookie parameters can be any primitive values, arrays and objects. Arrays and objects are serialized using the form style. For more information, see [Parameter Serialization](../understanding-structure/parameter-serialization.md).
+Cookie parameters can be any primitive values, arrays and objects. Arrays and objects are serialized using the form style. For more information, see [Parameter Serialization](_guides/openapi/specification/v3.1/understanding-structure/parameter-serialization.md).
 
-The first thought might be to use cookie for authentication, but for that you would be better off using [API keys](../advanced/security.md). Cookie parameters are reserved for other things, like tracking and analytics, locale preferences, or other session related information which does not fit into the HTTP specification with dedicated headers.
+The first thought might be to use cookie for authentication, but for that you would be better off using [API keys](_guides/openapi/specification/v3.1/advanced/security.md). Cookie parameters are reserved for other things, like tracking and analytics, locale preferences, or other session related information which does not fit into the HTTP specification with dedicated headers.
 
 ```yaml
 paths:

@@ -216,7 +216,7 @@ There are still lots of ongoing discussions occurring, and things are likely to 
 
 **Replacing $ref with “imports”**
 
-The `$ref` keyword is [incredibly powerful](../openapi/specification/v3.1/advanced/splitting-documents-with-ref.md), and can be used to “include” bits of OpenAPI and JSON Schema via a filepath, or a URL. This not only helps avoid repetition in a single OpenAPI document, but can be used to share components between multiple APIs, and can enable schema reuse across an entire organization (or even be published publicly and shared to others).
+The `$ref` keyword is [incredibly powerful](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md), and can be used to “include” bits of OpenAPI and JSON Schema via a filepath, or a URL. This not only helps avoid repetition in a single OpenAPI document, but can be used to share components between multiple APIs, and can enable schema reuse across an entire organization (or even be published publicly and shared to others).
 
 Sadly `$ref` has a history of not quite doing what people expect, not quite lining up with JSON Schema, and trying to keep up with changing expectations as those communities all continue to evolve. The reliance on the filesystem structure makes it hard to share documents with $ref, and lots of tools either don’t understand them, only support some of the functionality, or implement things incorrectly…
 
