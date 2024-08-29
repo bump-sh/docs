@@ -1,0 +1,16 @@
+indepth-post-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .author {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+  }
+}

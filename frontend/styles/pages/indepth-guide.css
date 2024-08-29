@@ -1,0 +1,25 @@
+.indepth-guide {
+  .guide-content {
+    h1 {
+      margin-block-end: 0;
+    }
+
+    indepth-post-info {
+      margin-block-end: var(--spacing-7);
+    }
+  }
+
+  side-bar {
+    .item {
+      padding-inline: 0;
+    }
+
+    .sidebar-sublist {
+      margin-inline-start: 0;
+    }
+  }
+
+  bump-cta {
+    margin-block-start: var(--spacing-6);
+  }
+}
