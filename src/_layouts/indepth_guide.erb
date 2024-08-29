@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<%= render Shared::Sidebar.new(data: site.data.guides_sidebar[resource.data.sidebar_name], current: resource) do |sidebar| %>
+  <% sidebar.slot :before do %>
+    <h1>
+      <%= resource.data.sidebar_title %>
+      <span class="version"><%= resource.data.sidebar_version %></span>
+    </h1>
+  <% end %>
+  <% sidebar.slot :after do %>
+    <%= render Shared::BumpCta.new(slug: site.data.slug) %>
+  <% end %>
+<% end %>
+<main class="guide-content wrapper" data-wrapper-size="small">
+  <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">
+    Show menu <svg width="11" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10 6 .543.517a.75.75 0 0 0 0-1.034L10 6ZM0 6.75h10v-1.5H0v1.5Zm10.543-1.267-4.762-5-1.086 1.034 4.762 5 1.086-1.034Zm-1.086 0-4.762 5 1.086 1.034 4.762-5-1.086-1.034Z" fill="#025FD7"/></svg>
+  </button>
+  <h1><%= data.title %></h1>
+  <%= render Guides::InDepth::PostInfo.new(authors: data.authors, last_update: data.date) %>
+  <%= yield %>
+</main>
