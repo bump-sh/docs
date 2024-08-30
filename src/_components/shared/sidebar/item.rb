@@ -1,4 +1,4 @@
-class Help::Sidebar::Item < Bridgetown::Component
+class Shared::Sidebar::Item < Bridgetown::Component
   def initialize(page:, current:)
     @page = page
     @current = current
