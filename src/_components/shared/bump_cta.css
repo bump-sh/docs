@@ -16,6 +16,7 @@ bump-cta {
     --button-color-hover: var(--gradient-blue);
     color: var(--white);
     height: auto;
+    justify-content: center;
     transition: all ease-in 0.2s;
 
     &:hover {
