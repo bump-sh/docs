@@ -11,7 +11,7 @@
       </a>
     <% end %>
     <% if @items.present? %>
-      <button data-button-style="secondary" data-button-size="xsmall" aria-controls="<%= category_id %>" data-action="sidebar#toggle">
+      <button data-button-style="secondary" data-button-size="xsmall" aria-controls="<%= category_id %>" data-action="sidebar#toggle" aria-label="<%= @is_current ? "Expand list" : "Hide list" %>">
         <%= svg "images/icons/caret-right.svg" %>
       </button>
     <% end %>
