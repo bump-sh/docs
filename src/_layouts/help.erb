@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<%= render Help::Sidebar.new(metadata: site.metadata, current: resource) %>
+<%= render Shared::Sidebar.new(data: site.data.help_sidebar, current: resource) %>
 <main>
   <div class="main-content">
     <button data-button-style="secondary" data-button-size="small" data-toggle-target="button" data-action="toggle#click">

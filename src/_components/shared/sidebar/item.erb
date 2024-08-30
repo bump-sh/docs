@@ -20,7 +20,7 @@
     <ul class="sidebar-sublist">
       <% @items.each do |item| %>
         <li>
-          <%= render Help::Sidebar::Item.new(page: item, current: @current) %>
+          <%= render Shared::Sidebar::Item.new(page: item, current: @current) %>
         </li>
       <% end %>
     </ul>

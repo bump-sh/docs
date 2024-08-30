@@ -5,9 +5,9 @@
       Hide menu
     </button>
     <ul class="sidebar-list" data-controller="sidebar">
-      <% @site.data.help_sidebar.each do |page| %>
+      <% @data.each do |page| %>
         <li>
-          <%= render Help::Sidebar::Item.new(page: page, current: @current) %>
+          <%= render Shared::Sidebar::Item.new(page: page, current: @current) %>
         </li>
       <% end %>
     </ul>
