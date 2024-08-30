@@ -13,8 +13,15 @@ export default class Sidebar extends Controller {
 
   toggle(event) {
     event.preventDefault()
-    const targetId = event.currentTarget.getAttribute("aria-controls")
+    const button = event.currentTarget
+    const targetId = button.getAttribute("aria-controls")
     const target = document.getElementById(targetId)
-    target.getAttribute("aria-expanded") === "true" ? target.setAttribute("aria-expanded", false) : target.setAttribute("aria-expanded", true)
+    if (target.getAttribute("aria-expanded") === "true") {
+      target.setAttribute("aria-expanded", false)
+      button.setAttribute("aria-label", "Hide list")
+    } else {
+      target.setAttribute("aria-expanded", true)
+      button.setAttribute("aria-label", "Expand list")
+    }
   }
 }
