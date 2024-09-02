@@ -5,7 +5,7 @@ excerpt: Make sure your APIs are doing what you expect them too with contract te
 date: 2024-08-24
 ---
 
-After you've gone through planning and designing an excellent API, published your documentation to Bump.sh, got loads of useful feedback from stakeholders by [mocking your API](mocking-with-microcks.md), and built (or generated) an API implementation, you're pretty close to releasing the API into the wild.
+After you've gone through planning and designing an excellent API, published your documentation to Bump.sh, got loads of useful feedback from stakeholders by [mocking your API](_guides/bump-sh-tutorials/mocking-with-microcks.md), and built (or generated) an API implementation, you're pretty close to releasing the API into the wild.
 
 Before you send this API out into the world, how do you know that the documentation and the API are actually... correct? Is the API doing something the documentation doesn't mention? Is the documentation saying the API works differently to how it actually works? 
 
@@ -21,7 +21,7 @@ Even if you’re not using the API design first workflow, if you have OpenAPI an
 
 ## Step 1: Set up Microcks
 
-First you'll need to get Microcks set up, and that can be done with Docker, or it could be a hosted installation that lets your whole team/organization work with it. Setting Microcks up for testing is the same process as setting [Microcks up for mocking](mocking-with-microcks.md), so follow that guide and come back here when you're done.
+First you'll need to get Microcks set up, and that can be done with Docker, or it could be a hosted installation that lets your whole team/organization work with it. Setting Microcks up for testing is the same process as setting [Microcks up for mocking](_guides/bump-sh-tutorials/mocking-with-microcks.md), so follow that guide and come back here when you're done.
 
 [](/images/guides/mocking-with-microcks/microcks-api-view.png)
 
