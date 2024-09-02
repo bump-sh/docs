@@ -13,7 +13,7 @@ Bump.sh does not automatically redirect to the new URL after changing the slug, 
 
 The Custom Domain option allows you to keep your users within your brand experience by fully customizing the URL of your documentation.
 
-> [Custom domain requires additional configuration on your end](/help/customization-options/custom-domains)
+> [Custom domain requires additional configuration on your end](_help/customization-options/custom-domains)
 {: .warning}
 
 ## Description
@@ -38,4 +38,4 @@ You can also customize the general color scheme of your hub.
 
 Finally, you can choose to apply a general sorting parameter to all the documentations in your hub with the Group by operations (by path or tag) and Navigation options.
 
-![](/images/help/operations-navigations.png)
+![](/images/help/operations.png)

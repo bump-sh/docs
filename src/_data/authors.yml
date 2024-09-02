@@ -2,21 +2,21 @@ jay:
   name: Jay Cormier
   title: Developer Experience Engineer at Bump.sh
   github: https://github.com/jay-ku
-  image_url: https://bump.sh/packs/static/8ff1fac949fbf2a8f3c3.jpg
+  image_url: https://bump.sh/packs/static/jay-8ff1fac949fbf2a8f3c3.jpg
   email: jay@bump.sh
 
 chris:
   name: Christophe Dujarric
   title: Head of PM
   github: https://github.com/ChristopheDujarric
-  image_url: https://bump.sh/packs/static/ee8962c988131c701834.png
+  image_url: https://bump.sh/packs/static/chris-dujarric-ee8962c988131c701834.png
   email: christophe@bump.sh
 
 polo:
   name: Paul Monseu de Bodinat
   title: Backend engineer
   github: https://github.com/polo2
-  image_url: https://bump.sh/packs/static/d07e1af8fe843b6a6599.png
+  image_url: https://bump.sh/packs/static/polo-d07e1af8fe843b6a6599.png
   email: polo@bump.sh
 
 valeriane:
