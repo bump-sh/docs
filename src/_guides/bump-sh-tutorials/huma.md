@@ -202,7 +202,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](_help/customization-options). Check out the [Bump.sh GitHub Action](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog) or other [continuous integration](_help/continuous-integration/) options.
+That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [customize it to your needs](/help/customization-options). Check out the [Bump.sh GitHub Action](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog) or other [continuous integration](/help/continuous-integration/) options.
 
 ## Sample Code
 

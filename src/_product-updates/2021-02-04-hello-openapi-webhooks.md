@@ -9,4 +9,4 @@ tags: [New]
 
 We are glad to announce today that webhooks are now supported by Bump, as you can see in this [live example](https://bump.sh/bump/doc/webhook-example).
 
-We hope you'll enjoy this new feature, don't hesitate to have a look to our [technical documentation](_help/specification-support/openapi-support/webhooks/) if necessary.
+We hope you'll enjoy this new feature, don't hesitate to have a look to our [technical documentation](/help/specification-support/openapi-support/webhooks/) if necessary.
