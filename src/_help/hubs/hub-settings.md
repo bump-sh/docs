@@ -38,4 +38,4 @@ You can also customize the general color scheme of your hub.
 
 Finally, you can choose to apply a general sorting parameter to all the documentations in your hub with the Group by operations (by path or tag) and Navigation options.
 
-![](/images/help/operations-navigations.png)
+![](/images/help/operations.png)

@@ -1,7 +1,7 @@
 ---
 title: 'OpenAPI v4.0 (A.K.A "Project Moonwalk")'
 authors: phil
-canonical_url: https://bump.sh/blog/openapi-moonwalk
+canonical_url: https://bump.sh/blog/openapi-v4-moonwalk
 excerpt: What is coming next for OpenAPI, as v4.0 of the OpenAPI Specification gets closer to being released? What major changes are coming, how easy will it be to upgrade, and how do tooling companies feel about it?
 date: 2024-04-15
 ---
