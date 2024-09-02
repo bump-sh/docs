@@ -17,7 +17,7 @@ We’ll start with a simple OpenAPI document for an endpoint that supports JSON,
 
 ### Operation Definition
 
-In [Understanding Structure > Paths & Operations](../understanding-structure/paths-operations.md) we learned how to create a simple API with both `application/json` and `text/csv`, so lets take that example and expand it a little.
+In [Understanding Structure > Paths & Operations](_guides/openapi/specification/v3.1/understanding-structure/paths-operations.md) we learned how to create a simple API with both `application/json` and `text/csv`, so lets take that example and expand it a little.
 
 
 ```yaml
@@ -84,7 +84,7 @@ The XML it would look like this:
 </Bookings>
 ```
 
-The API documentation tool has named the XML tag `<Bookings>` from the component name, but you can change that if [learn about the `xml` keyword](../data-models/representing-xml.md), which can also handle more advanced XML syntax.
+The API documentation tool has named the XML tag `<Bookings>` from the component name, but you can change that if [learn about the `xml` keyword](_guides/openapi/specification/v3.1/data-models/representing-xml.md), which can also handle more advanced XML syntax.
 
 ### Schemas & Examples
 

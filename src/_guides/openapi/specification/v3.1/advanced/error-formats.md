@@ -349,4 +349,4 @@ The fact that the schema is an array does not change the previous approach for d
                   parameter: "Authorization"
 ```
 
-If you need to handle errors responses in multiple content types, you can learn about [Multiple Content Types](./multiple-content-types.md) and it's all the same.
+If you need to handle errors responses in multiple content types, you can learn about [Multiple Content Types](_guides/openapi/specification/v3.1/advanced/multiple-content-types.md) and it's all the same.

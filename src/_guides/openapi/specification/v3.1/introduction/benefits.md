@@ -15,7 +15,7 @@ Onboarding new developers is made a lot more efficient with OpenAPI. The detaile
 
 ### API Design-First
 
-In an [API design-first world](../../../../api-basics/dev-guide-api-design-first.md), OpenAPI allows you to describe your whole API from endpoints to examples before even writing the first line of code.
+In an [API design-first world](_guides/api-basics/dev-guide-api-design-first.md), OpenAPI allows you to describe your whole API from endpoints to examples before even writing the first line of code.
 
 Using this approach, OpenAPI becomes the cornerstone of your API, and becomes the single source of truth in your organization. Code is based on what has been validated during the design phase, and the documentation is generated and synced with the OpenAPI document by deploying updated docs when new commits are merged.
 
@@ -85,4 +85,4 @@ Now that you know what OpenAPI is, try it out with one of the following OpenAPI 
 * [Train Travel API](https://raw.githubusercontent.com/bump-sh-examples/train-travel-api/main/openapi.yaml)
 * [Bump API](https://developers.bump.sh/source.json)
 
-Or why not learn to make your own, heading over to the next section: **[Understanding the Structure of OpenAPI](../understanding-structure/basic-structure.md).**
+Or why not learn to make your own, heading over to the next section: **[Understanding the Structure of OpenAPI](_guides/openapi/specification/v3.1/understanding-structure/basic-structure.md).**

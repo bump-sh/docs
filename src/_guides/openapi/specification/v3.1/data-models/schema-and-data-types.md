@@ -142,7 +142,7 @@ You can also define your own custom formats, which tooling will not understand, 
 
 ## Validation
 
-In addition to defining data types and formats, [JSON Schema](./json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
+In addition to defining data types and formats, [JSON Schema](_guides/openapi/specification/v3.1/data-models/json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
 
 ## const & enum
 
@@ -205,7 +205,7 @@ oneOf:
 
 In this example the `object` could be `card` or `bank_account`, but instead of defining that as an enum and the other properties all have to figure out whether they relate to cards or bank accounts, we use the `const` to help match the subschema.
 
-> Learn more about `const` on [JSON-Schema.org: Constant Values](https://json-schema.org/understanding-json-schema/reference/const), and read our guide on [Schema Composition](./schema-composition.md) to learn more about `oneOf`.
+> Learn more about `const` on [JSON-Schema.org: Constant Values](https://json-schema.org/understanding-json-schema/reference/const), and read our guide on [Schema Composition](_guides/openapi/specification/v3.1/data-models/schema-composition.md) to learn more about `oneOf`.
 {: .info }
 
 
@@ -279,4 +279,4 @@ For more information on JSON Schema validation keywords, you can refer to the [J
 
 ### Learn more about JSON Schema
 
-There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](./json-schema.md).
+There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](_guides/openapi/specification/v3.1/data-models/json-schema.md).

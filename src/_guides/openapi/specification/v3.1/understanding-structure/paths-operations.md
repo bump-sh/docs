@@ -26,7 +26,7 @@ The path defines the relative path of the API endpoint from wherever the server 
 - `https://api.example.com/bookings/{bookingId}`
 - `https://api.example.com/bookings/{bookingId}/payment`
 
-Paths can store variables, a little bit like the concept of [server variables](./api-servers.md), using curly braces `{}` as a placeholder for a parameter which will be defined within the operation.
+Paths can store variables, a little bit like the concept of [server variables](_guides/openapi/specification/v3.1/understanding-structure/api-servers.md), using curly braces `{}` as a placeholder for a parameter which will be defined within the operation.
  
 ### Defining Paths
 
@@ -111,9 +111,9 @@ paths:
                 123,2023-04-01T10:00:00Z,2023-04-01T15:00:00Z,TrainCo,59.99
 ```
 
-The responses are then broken down by status code, and again all the responses can have [multiple content types](../advanced/multiple-content-types.md). Then the content can be further described by a `schema`, and an `example` (or `examples`).
+The responses are then broken down by status code, and again all the responses can have [multiple content types](_guides/openapi/specification/v3.1/advanced/multiple-content-types.md). Then the content can be further described by a `schema`, and an `example` (or `examples`).
 
 For both request and response, `schema` is optional, but is massively helpful and worth putting in the work to define, because this is where all of the HTTP body information exists, which can contain validation rules, potential values, examples, and useful context like "why" and "how" instead of just "what". 
 
-- Learn more about defining [HTTP requests](./http-requests.md) and [HTTP responses](./http-responses.md).
-- Learn more about [schemas and data types](../data-models/schema-and-data-types.md).
+- Learn more about defining [HTTP requests](_guides/openapi/specification/v3.1/understanding-structure/http-requests.md) and [HTTP responses](_guides/openapi/specification/v3.1/understanding-structure/http-responses.md).
+- Learn more about [schemas and data types](_guides/openapi/specification/v3.1/data-models/schema-and-data-types.md).

@@ -31,7 +31,7 @@ servers:
 
 This example shows three API servers, for the common dev, staging, and production environments. Perhaps the local environment is on localhost and perhaps its a virtual machine on the cloud somewhere, but the idea is that same, you have all the different places an API might be. 
 
-> The `x-internal` is not strictly part of the specification, but it is a popular [extension](../extending/extensions.md). Any tools that support it will hide these servers, removing them from user facing documentation for example. This lets you can keep handy development and testing information in OpenAPI, but avoid confusing end-users with details about your internal setup.
+> The `x-internal` is not strictly part of the specification, but it is a popular [extension](_guides/openapi/specification/v3.1/extending/extensions.md). Any tools that support it will hide these servers, removing them from user facing documentation for example. This lets you can keep handy development and testing information in OpenAPI, but avoid confusing end-users with details about your internal setup.
 {: .info}
 
 ## Server Variables

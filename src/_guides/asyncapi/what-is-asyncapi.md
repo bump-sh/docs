@@ -18,7 +18,7 @@ A long time ago, communication between applications or services required you to 
 
 At first, almost every API had its own way of working and communicating. And if documentation was missing or outdated, it would quickly become a mess. Different standards were built, but one of them ultimately rose to the top: OpenAPI.
 
-OpenAPI (previously called Swagger until version 3.0) has been the most popular choice for REST APIs, solving documentation problems and creating a good standard. Now part of the Linux Foundation, you can learn all about OpenAPI [right here](../openapi/specification/v3.1/introduction/what-is-openapi.md), or check out our example [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement).
+OpenAPI (previously called Swagger until version 3.0) has been the most popular choice for REST APIs, solving documentation problems and creating a good standard. Now part of the Linux Foundation, you can learn all about OpenAPI [right here](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md), or check out our example [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement).
 
 ## What about asynchronous APIs?
 

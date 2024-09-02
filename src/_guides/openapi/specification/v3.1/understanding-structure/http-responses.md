@@ -51,7 +51,7 @@ Here's an example from the [Train Travel API](https://bump.sh/blog/modern-openap
             $ref: '#/components/schemas/Problem'
 ```
 
-> These responses contain shared schemas which are referenced via the [components section](./components.md) to keep the relevant parts of the example clear, but you can [learn more about schemas](../data-models/schema-and-data-types.md) to see what else could go in there. 
+> These responses contain shared schemas which are referenced via the [components section](_guides/openapi/specification/v3.1/understanding-structure/components.md) to keep the relevant parts of the example clear, but you can [learn more about schemas](_guides/openapi/specification/v3.1/data-models/schema-and-data-types.md) to see what else could go in there.
 {: .info }
 
 The key parts that define a response:

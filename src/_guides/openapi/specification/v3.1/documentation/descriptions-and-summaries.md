@@ -109,7 +109,7 @@ Here we have a `format: date-time` which should be displayed to users in API doc
 
 ## Adding Descriptions to Tags
 
-Tags are often underutilized, but they are a great way to [group operations](grouping-operations-with-tags.md) for more structured navigation in most API documentation tools. These tags are also a great place to write longer form context on what these tags actually mean in your domain specifically. For example, the word "Account" can mean 10 different things inside a large organization depending on the department and the function, so it's good to be super clear about what they are.
+Tags are often underutilized, but they are a great way to [group operations](_guides/openapi/specification/v3.1/documentation/grouping-operations-with-tags.md) for more structured navigation in most API documentation tools. These tags are also a great place to write longer form context on what these tags actually mean in your domain specifically. For example, the word "Account" can mean 10 different things inside a large organization depending on the department and the function, so it's good to be super clear about what they are.
 
 ```yaml
 tags:
@@ -201,7 +201,7 @@ Generally, a common practice is to keep descriptions short, and you can go two w
           description: Forbidden from seeing list of bookings
 ```
 
-This all seems a bit redundant, because the operation happy path is described at the top, and it's really the errors that need more explaining. Depending on [how you have errors set up](../advanced/error-formats.md), they should be explaining themselves, so this is really either the place for context which could not exist anywhere else, or a chance to just keep it simple.
+This all seems a bit redundant, because the operation happy path is described at the top, and it's really the errors that need more explaining. Depending on [how you have errors set up](_guides/openapi/specification/v3.1/advanced/error-formats.md), they should be explaining themselves, so this is really either the place for context which could not exist anywhere else, or a chance to just keep it simple.
 
 ```yaml
   /bookings:

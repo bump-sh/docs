@@ -66,7 +66,7 @@ jobs:
           file: api/openapi.public.yaml
 ```
 
-**Learn more about [Overlays](../../../augmenting-generated-openapi.md)** and using them within Bump.sh.
+**Learn more about [Overlays](_guides/openapi/augmenting-generated-openapi.md)** and using them within Bump.sh.
 
 ## Adding more context with Overlays
 

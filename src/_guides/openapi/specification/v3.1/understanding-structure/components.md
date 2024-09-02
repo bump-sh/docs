@@ -151,7 +151,7 @@ components:
           $ref: "#/components/schemas/board"
 ```
 
-Hopefully this gives an idea of how `$ref` can be used, and if you'd like to learn more check out our advanced guide: [Splitting Documents with $ref](../advanced/splitting-documents-with-ref.md).
+Hopefully this gives an idea of how `$ref` can be used, and if you'd like to learn more check out our advanced guide: [Splitting Documents with $ref](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md).
 
 ## Create "Design Libraries" of Shared Components
 

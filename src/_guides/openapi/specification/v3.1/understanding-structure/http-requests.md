@@ -22,7 +22,7 @@ In OpenAPI 3.x, the request body is defined using the `requestBody` object. This
 - Whether the request body is required or optional.
 - Descriptions for these requests to add context to API documentation.
 
-Let's consider the [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), which allows users to book train tickets. 
+Let's consider the [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), which allows users to book train tickets.
 
 ### Creating a Resource
 
@@ -63,7 +63,7 @@ Here the `requestBody` object defines two important properties:
   
 - `content` - specifies that the request body should be in `application/json` format with the following `schema`.
 
-The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this, or it can use `components` to share an [existing schema](../data-models/schema-and-data-types.md) and reduce repetition. 
+The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this, or it can use `components` to share an [existing schema](_guides/openapi/specification/v3.1/data-models/schema-and-data-types.md) and reduce repetition. 
 
 ### Updating a Resource
 
@@ -99,8 +99,8 @@ Here the `PATCH` method is used to describe an operation that can update one spe
 
 The `schema` then defines the structure of the request body, which demonstrates that only the `seat_preference` property can be updated.
 
-If multiple properties could be updated, you would define all the properties that could be updated, then show off some [examples](../data-models/examples.md) for common use-cases of things users might want to do.
+If multiple properties could be updated, you would define all the properties that could be updated, then show off some [examples](_guides/openapi/specification/v3.1/data-models/examples.md) for common use-cases of things users might want to do.
 
 ## File Uploads & Multipart Forms
 
-HTTP requests can also cover more advanced scenarios like [file uploads](../advanced/file-uploads.md) and [multipart form data](../advanced/multipart-form-data.md), which have their own guides in the advanced section.
+HTTP requests can also cover more advanced scenarios like [file uploads](_guides/openapi/specification/v3.1/advanced/file-uploads.md) and [multipart form data](_guides/openapi/specification/v3.1/advanced/multipart-form-data.md), which have their own guides in the advanced section.

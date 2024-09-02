@@ -132,7 +132,7 @@ schema:
     - $ref: '#/components/schemas/BankAccount'
 ```
 
-This says that the schema can be either one of these schemas stored as [shared components](../understanding-structure/components.md).
+This says that the schema can be either one of these schemas stored as [shared components](_guides/openapi/specification/v3.1/understanding-structure/components.md).
 
 Due to the way `allOf` works, you can essentially reference multiple schemas and say "I want all of the validation rules and criteria from all of these schemas to apply here", providing a sort of merge-like functionality.
 
@@ -158,4 +158,4 @@ content:
               $ref: '#/components/schemas/Links-Self'
 ```
 
-These schema composition keywords provide flexibility and allow you to define complex data structures and validation rules in OpenAPI v3.1 and JSON Schema, which becomes more useful as you start to [improve reuse across one or more API](../advanced/splitting-documents-with-ref.md).
+These schema composition keywords provide flexibility and allow you to define complex data structures and validation rules in OpenAPI v3.1 and JSON Schema, which becomes more useful as you start to [improve reuse across one or more API](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md).
