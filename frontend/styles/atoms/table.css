@@ -17,6 +17,12 @@ table {
       }
     }
   }
+
+  &.word-break {
+    td {
+      word-break: break-all;
+    }
+  }
 }
 
 thead {
@@ -34,6 +40,10 @@ thead {
     &:last-child {
       border-right: var(--border-default);
       border-top-right-radius: var(--border-radius-large);
+    }
+
+    code {
+      white-space: nowrap;
     }
   }
 }
