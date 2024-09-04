@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<%= render Shared::Sidebar.new(data: site.data.guides_sidebar[resource.data.sidebar_name], current: resource) do |sidebar| %>
+<% @entries = site.data.guides_sidebar[resource.data.sidebar_name] %>
+<%= render Shared::Sidebar.new(data: @entries, current: resource) do |sidebar| %>
   <% sidebar.slot :before do %>
     <h1>
       <%= resource.data.sidebar_title %>
@@ -20,4 +21,5 @@ layout: default
   <h1><%= data.title %></h1>
   <%= render Guides::InDepth::PostInfo.new(authors: data.authors, last_update: data.date) %>
   <%= yield %>
+  <%= render Shared::PageNavigation.new(entries: @entries, current: resource) %>
 </main>
