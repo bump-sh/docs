@@ -37,7 +37,7 @@ Once we've got Microcks loaded in the browser, click on "Importers", and click t
 
 ![The "Direct upload artifact" modal window](/images/guides/mocking-with-microcks/upload-modal.png)
 
-The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](_guides/bump-sh-tutorials/try-requests-in-postman.md) and other "API description documents". We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
+The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](_guides/bump-sh-tutorials/try-requests-in-postman.md) and [other API description documents](https://microcks.io/documentation/references/artifacts/). We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
 
 The question about primary or secondary artifacts can be ignored for now.
 
@@ -99,7 +99,7 @@ Running this command will then return the sample Microcks was showing the web in
 
 Getting a collection is a handy first example, but next lets try working with resources. 
 
-Microcks uses examples with a particular naming contention, pairing up request examples and response examples with the same name. The naming convention is is `<resource>_<id>`, so sticking with the Train Travel API, we could do this:
+Microcks uses examples with a particular naming convention, pairing up request examples and response examples with the same name. As a best practice, the naming convention could `<resource>_<id>`, so sticking with the Train Travel API, we could do this:
 
 ```yaml
  /bookings/{bookingId}:
@@ -181,7 +181,7 @@ curl -X POST 'http://localhost:8585/rest/Train+Travel+API/1.0.0/bookings' \
 }
 ```
 
-That's somewhat handy, but it's showing me a generic response instead of the data sent in the POST request. Named examples would not help here, as we want to use client data from the request body and not just show predetermined examples. How can we New Passenger instead of John Doe, and how can we see the actual `trip_id` instead of the default one?
+That's somewhat handy, but it's showing me a generic response instead of the data sent in the POST request. Named examples would not help here, as we want to use client data from the request body and not just show predetermined examples. How can we have `New Passenger` instead of `John Doe`, and how can we see the actual `trip_id` instead of the default one?
 
 ## Step 4: Customizing Responses
 
