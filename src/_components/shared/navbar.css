@@ -34,6 +34,7 @@ header {
     .nav-group {
       align-items: center;
       display: flex;
+      gap: var(--spacing-1);
     }
   }  
 

@@ -1,0 +1,16 @@
+<indepth-post-info>
+  <div class="author">
+    By
+    <% @authors.each do |author| %>
+      <%= author_name(author) %>
+      <% if !is_guest?(author) && github_link(author).present? %>
+        <%= link_to github_link(author), "aria-label": "Go to GitHub" do %>
+          <%= svg "images/icons/github.svg" %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="last-update">
+    <%= "Last update on #{@last_update.strftime("%B %d, %Y")}" %>
+  </div>
+</indepth-post-info>

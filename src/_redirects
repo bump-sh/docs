@@ -13,7 +13,18 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/quick-start/ /help/getting-started/
 /help/bump-cli /help/continuous-integration/cli/
 /help/github-action /help/continuous-integration/github-actions/
-/help/specifications-support /help/specification-support/
+/help/specifications-support/ /help/specification-support/
+/help/meta-images/ /help/customization-options/color-logo-meta-images/
+/continuous-integration/github-actions/ /help/continuous-integration/github-actions/
+/bump-cli/ /help/continuous-integration/cli/
+https://help.bump.sh/meta-images /help/customization-options/color-logo-meta-images/#social-media-image
+https://help.bump.sh/continuous-integration/github-actions /help/continuous-integration/github-actions/
+https://help.bump.sh/bump-cli /help/continuous-integration/cli/
+https://help.bump.sh/references /help/specification-support/references/
+https://help.bump.sh/branching /help/publish-documentation/branching/
+https://help.bump.sh/organizations /help/organizations/
+https://help.bump.sh/api-change-management/webhooks /help/api-change-management/webhooks/
+https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 
-# Cribbed for the OpenAPI Specification Tutorial (but could be duplicated)
+# Cribbed for the OpenAPI Specification Tutorial
 /guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/

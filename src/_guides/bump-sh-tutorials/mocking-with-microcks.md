@@ -37,7 +37,7 @@ Once we've got Microcks loaded in the browser, click on "Importers", and click t
 
 ![The "Direct upload artifact" modal window](/images/guides/mocking-with-microcks/upload-modal.png)
 
-The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](/guides/bump-sh-tutorials/try-requests-in-postman/) and other "API description documents". We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
+The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](_guides/bump-sh-tutorials/try-requests-in-postman.md) and other "API description documents". We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
 
 The question about primary or secondary artifacts can be ignored for now.
 

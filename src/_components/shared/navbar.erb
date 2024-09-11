@@ -7,7 +7,7 @@
     <nav-links data-toggle-target="item">
       <div class="nav-group">
         <% @site.data.navbar.left_links.each do |item| %>
-          <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
+          <%= render Shared::Nav::Item.new(title: item.title, link: item.link, active: current_item?(item)) %>
         <% end %>
       </div>
       <div class="nav-group">
@@ -16,7 +16,7 @@
         <% end %>
       </div>
     </nav-links>
-    <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…" %>
+    <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…", display_collection: true %>
     <%= render Shared::Nav::Button.new %>
   </nav>
 </header>

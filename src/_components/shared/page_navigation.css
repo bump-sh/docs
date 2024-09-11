@@ -1,0 +1,23 @@
+page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-6);
+  justify-content: end;
+  margin-block: var(--spacing-28) var(--spacing-4);
+
+  a {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .previous svg {
+    rotate: 180deg;
+  }
+}

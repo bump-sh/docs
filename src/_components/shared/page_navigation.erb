@@ -1,0 +1,14 @@
+<page-navigation>
+  <% if @previous.present? %>
+    <%= link_to @previous.resource.relative_url, class: "previous" do %>
+      <%= svg "images/icons/arrow-right.svg" %>
+      <%= @previous.label %>
+    <% end %>
+  <% end %>
+  <% if @next.present? %>
+    <%= link_to @next.resource.relative_url do %>
+      <%= @next.label %>
+      <%= svg "images/icons/arrow-right.svg" %>
+    <% end %>
+  <% end %>
+</page-navigation>

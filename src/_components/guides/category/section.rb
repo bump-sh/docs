@@ -7,9 +7,9 @@ class Guides::Category::Section < Bridgetown::Component
     @category_name = category.name
     @description = category.description
     @resources = @site.collections.guides.resources.select do |guide|
-      guide.data.categories.find do |category|
+      !guide.data.skip_listing && guide.data.categories.find { |category|
         Bridgetown::Utils.slugify(category) == Bridgetown::Utils.slugify(@category_name)
-      end
+      }
     end
     @remaining_count = @resources.count - 3
   end

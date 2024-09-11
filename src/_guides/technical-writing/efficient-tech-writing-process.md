@@ -177,7 +177,7 @@ x-topics:
       $ref: ./docs/getting-started.md
 ```
 
-In [Bump.sh](http://Bump.sh) this will create a new navigation entry, and insert the Markdown content from the reference guide right into the main documentation.
+In [Bump.sh](https://bump.sh) this will create a new navigation entry, and insert the Markdown content from the reference guide right into the main documentation.
 
 ![Untitled](/images/guides/efficient-tech-writing-process/bump-x-topics.png)
 
