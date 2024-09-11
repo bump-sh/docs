@@ -5,7 +5,7 @@ title: References
 - TOC
 {:toc}
 
-References are the JSON schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.
+References are the JSON Schema system to not repeat common parts of your API contracts. Bump supports internal references and external ones.
 
 ## What is a reference?
 
@@ -79,4 +79,3 @@ Bump does support external references from any channel, so you can deploy a spec
 > 
 > If you need to deploy a specification using this kind of external references, please use [our CLI](/help/continuous-integration/cli) or our [GitHub Action](/help/continuous-integration/github-actions)
 {: .warning}
-

@@ -7,7 +7,7 @@
     <nav-links data-toggle-target="item">
       <div class="nav-group">
         <% @site.data.navbar.left_links.each do |item| %>
-          <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
+          <%= render Shared::Nav::Item.new(title: item.title, link: item.link, active: current_item?(item)) %>
         <% end %>
       </div>
       <div class="nav-group">

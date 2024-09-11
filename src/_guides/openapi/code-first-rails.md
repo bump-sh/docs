@@ -268,7 +268,7 @@ schema type: 'array',
 
 Try making similar changes yourself and running `rake rswag` again to update `swagger/v1/swagger.yaml`. Then either use `bump deploy` to update your hosted documentation, or `bump preview --live --open swagger/v1/swagger.yaml` to see how it looks without deploying it everytime your make a change in your spec file.
 
-The [RSwag DSL documentation](https://github.com/rswag/rswag/#the-rspec-dsl) can help you with all sorts of improvements, including creating examples, adding security schemes, and using `$ref` to [reduce repetition in your OpenAPI](/guides/openapi/advanced-ref-usage/).
+The [RSwag DSL documentation](https://github.com/rswag/rswag/#the-rspec-dsl) can help you with all sorts of improvements, including creating examples, adding security schemes, and using `$ref` to [reduce repetition in your OpenAPI](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md).
 
 ## Sample Code
 

@@ -46,11 +46,11 @@ There are many ways to describe your REST API but one of the most popular soluti
 
 Learn more on [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
-## OpenAPI specification
+## OpenAPI Specification
 
 While REST APIs were growing on the main stage, several actors worked hard to push this forward. One of the main issues was standardizing how APIs should be described. Swagger was one of these neutral description formats and eventually joined the Linux Foundation. The name changed as well to OpenAPI. Now the most popular standard to describe REST APIs, its community greatly supports OpenAPI specification.
 
-Learn more on [OpenAPI](https://bump.sh/blog/what-is-openapi).
+Learn more on [OpenAPI](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md).
 
 ## GraphQL
 

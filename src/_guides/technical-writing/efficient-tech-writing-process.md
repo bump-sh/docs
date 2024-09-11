@@ -10,7 +10,7 @@ The time of APIs being a hot new trend is long gone, and now the vast majority o
 
 These secondary APIs are no less important, in fact they may well be crucial to the business, but far too often it’s left as a spreadsheet or Google Doc that gets outdated as soon as it has been shared, and trying to improve the content or make sure all the endpoints are covered is a nightmarish job for tech writers.
 
-So what’s the best approach to efficiently creating thorough API documentation?
+So what’s the best approach to efficiently create thorough API documentation?
 
 ## Who Should Document APIs?
 
