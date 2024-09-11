@@ -1,7 +1,3 @@
-nav-item.active {
-  text-decoration: underline;
-}
-
 nav-item :is(a, a:visited, a:focus) {
   border-radius: var(--border-radius-medium);
   color: var(--text-color);
@@ -9,7 +5,8 @@ nav-item :is(a, a:visited, a:focus) {
   text-decoration: none;
 }
 
-nav-item :is(a:hover) {
+nav-item :is(a:hover),
+nav-item[aria-current=true] a {
   background-color: var(--bg-color-selected);
   color: var(--base-color);
 }
