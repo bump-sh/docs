@@ -1,7 +1,6 @@
 class Shared::HighlightBanner < Bridgetown::Component
-  def initialize(title:, description: "", image: "", link_url: "", link_label: "", link_icon: "")
+  def initialize(title:, image: "", link_url: "", link_label: "", link_icon: "")
     @title = title
-    @description = description
     @image = image
     @link_url = link_url
     @link_label = link_label
