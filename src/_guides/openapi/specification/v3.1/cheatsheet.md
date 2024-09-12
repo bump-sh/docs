@@ -22,4 +22,4 @@ Here are the current sections:
 * Polymorphism
 * Grouping and sorting
 
-For any feedback and suggestions, please open an issue [on this site's GitHub Repository](https://github.com/bump-sh/docs/issues). We are currently working on ubilding a web version of the Cheat Sheet, so that anyone can directly contribute to it with a Pull Request.
+For any feedback and suggestions, please open an issue [on this site's GitHub Repository](https://github.com/bump-sh/docs/issues). We are currently working on building a web version of the Cheat Sheet, so that anyone can directly contribute to it with a Pull Request.
