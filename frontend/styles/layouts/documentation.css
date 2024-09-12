@@ -16,7 +16,7 @@
     justify-content: center;
     overflow-y: scroll;
     padding: var(--spacing-8) var(--spacing-10);
-    width: calc(100vw - var(--doc-sidebar-width) - var(--doc-sidebar-padding));
+    width: calc(100vw - var(--doc-sidebar-width));
 
     button {
       display: none;

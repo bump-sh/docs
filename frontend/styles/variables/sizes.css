@@ -1,6 +1,5 @@
 :root {
   --doc-sidebar-width: 300px;
-  --doc-sidebar-padding: var(--spacing-16);
   --doc-content-width: 80ch;
 
   --gap-xsmall: var(--spacing-1);
