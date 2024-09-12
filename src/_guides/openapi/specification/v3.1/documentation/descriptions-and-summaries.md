@@ -5,6 +5,9 @@ excerpt: Deliver on a great developer experience with improved OpenAPI descripti
 date: 2024-08-07
 ---
 
+- TOC
+{:toc}
+
 Often, API documentation is left to the end of the schedule, which can lead to a rushed set of API reference documentation. This results in terse outlines of what endpoints and parameters exist, but leave out the specifics of your well-designed and implemented API operation. One of the major ways to improve the developer experience is to upgrade your OpenAPI from being a quick list of parameters into a store of import context and human knowledge with expanding descriptions and summaries.
 
 ## Example of Incomplete Documentation

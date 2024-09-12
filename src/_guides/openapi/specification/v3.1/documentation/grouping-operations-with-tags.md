@@ -6,6 +6,9 @@ excerpt: Learn tips and tricks to group related endpoints in a meaningful way.
 date: 2024-08-08
 ---
 
+- TOC
+{:toc}
+
 Tags are a great way to organize the API endpoints in your OpenAPI documents.
 
 Typically, OpenAPI tags are used to group related endpoints in a meaningful way, such as by business function or logical objects. When using tags, you define an array of tags at the root of your document, like this:

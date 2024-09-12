@@ -5,6 +5,9 @@ excerpt: Link OpenAPI documentation with other guides and tutorials.
 date: 2024-08-08
 ---
 
+- TOC
+{:toc}
+
 While the `description` property is excellent for giving a little more information about a specific tag, you might need to provide additional documentation if the business logic by a part of the API is complex, or there are lists of possible values defined outside of the API. 
 
 If anything requires further explanation, you can provide a link to an external web page where you offer a more detailed explanation using the `externalDocs` property.

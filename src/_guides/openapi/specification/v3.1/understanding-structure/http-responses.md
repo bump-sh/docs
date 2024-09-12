@@ -5,6 +5,9 @@ excerpt:
 date: 2024-07-09
 ---
 
+- TOC
+{:toc}
+
 HTTP responses outline what an API user could expect to receive in response to a HTTP request. In OpenAPI responses described in the `responses` object, broken down by expected media-types and status codes.
 
 ```yaml

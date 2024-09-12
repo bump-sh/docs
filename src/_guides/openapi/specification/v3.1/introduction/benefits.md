@@ -5,6 +5,9 @@ excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs wor
 date: 2024-07-25
 ---
 
+- TOC
+{:toc}
+
 OpenAPI is a game-changer for saving your team time and money. By automating routine tasks like creating detailed API documentation, generating client libraries and generating chunks of server-side code, even automating the checking of the API against style guides, it frees up your developers to focus on more important work. This means faster development and fewer hours spent on repetitive coding, which saves time and money as better quality APIs can be delivered quicker.
 
 It also makes collaboration smoother and more efficient. With OpenAPI, you have a clear, consistent description of your API that everyone can follow. This reduces misunderstandings and miscommunications between different teams—whether they're front-end, back-end, or QA. Fewer mix-ups mean less time fixing errors and more time building great features.
