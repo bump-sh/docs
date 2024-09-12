@@ -1,4 +1,7 @@
-layout: indepth_guide
-page_class: guide indepth-guide with-sidebar
+layout: documentation
+page_class: documentation
 sidebar_title: OpenAPI Specification
 skip_listing: true
+display_authors: true
+display_pagination: true
+display_cta: true
