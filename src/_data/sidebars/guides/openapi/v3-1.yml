@@ -73,3 +73,5 @@ resources:
         link: /extending/extensions/
       - label: Enriching OpenAPI with Overlays
         link: /extending/overlays/
+  - label: The Cheat Sheet
+    link: /cheatsheet/
