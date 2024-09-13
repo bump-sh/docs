@@ -53,6 +53,8 @@ Forwarding                    https://8eab-81-187-79-196.ngrok-free.app -> http:
 
 Copy that `https://8eab-81-187-79-196.ngrok-free.app` (which will change each time you run ngrok) and we can use that to point Microcks at where to test. 
 
+> There’s a simpler alternative when your API runs on `localhost`. You just have to tell Microcks it is running on `host.docker.internal`. This is because Microcks is running into a Docker container and specific network - from its point of view `localhost` routes to itself. `host.docker.internal` is the alias of your host machine (ie. your laptop).
+
 Of course if you have your API deployed already then you can just take that URL which might be `https://api-beta.example.com/`.
 
 ## Step 3: Trigger a Test Run
@@ -154,3 +156,59 @@ This is especially useful if you have defined request and response pairs, by pro
 Microcks knows that both the names `Card` are the same for a request and response, and so it can provide a more accurate score for whether those examples are accurate. 
 
 If they're not accurate, then either the OpenAPI is wrong, or the API is wrong, and you can decide on the which one needs to be updated.
+
+## Automate Testing
+
+Below is the standard GitHub Action used to deploy API changes to Bump.sh with one modification to also deploy changes to a Microcks server (which we assume was set up following instructions for [mocking with Microcks](./mocking-with-microcks.md)).
+
+```yaml
+# .github/workflows/deploy-docs.yml
+name: Deploy API documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-openapi:
+    if: ${{ github.event_name == 'push' }}
+    name: Deploy API documentation on Bump.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          doc: 68ac0647-184a-4e9d-accc-682a5b1f7189
+          token: ${{secrets.BUMP_TOKEN}}
+          file: api/openapi.yaml
+
+      - uses: microcks/import-github-action@v1
+        with:
+          specificationFiles: 'api/openapi.yaml:true'
+          microcksURL: 'https://mocks.example.com/api/'
+          keycloakClientId:  ${{ secrets.MICROCKS_SERVICE_ACCOUNT }}
+          keycloakClientSecret:  ${{ secrets.MICROCKS_SERVICE_ACCOUNT_CREDENTIALS }}
+
+      # run the tests
+      - uses: microcks/test-github-action@v1
+        with:
+          apiNameAndVersion: 'Train Travel API:1.0.0'
+          testEndpoint: 'http://api-testing.example.com'
+          runner: OPEN_API_SCHEMA
+          microcksURL: 'https://mocks.example.com/api/'
+          keycloakClientId:  ${{ secrets.MICROCKS_SERVICE_ACCOUNT }}
+          keycloakClientSecret:  ${{ secrets.MICROCKS_SERVICE_ACCOUNT_CREDENTIALS }}
+          waitFor: '10sec'
+```
+
+Now you have three steps in your workflow, that keep everything all up to date. 
+
+1. Deploy the OpenAPI to Bump.sh documentation.
+2. Update the mock servers.
+3. Run Microcks testing to make sure the API matches the expected contract. 
+
+You can play around with doing various combinations of these actions for complex workflows based on different branches and pull requests, and you can do it with any CI/CD setup like Jenkins, GitLab, Tekton, etc. Learn more about [Microcks Automation](https://microcks.io/documentation/guides/automation/) to see how to use Microcks with other CI/CD systems, via the API, or using the CLI elsewhere. You can also use the [Microcks Scheduler](https://microcks.io/documentation/guides/usage/importing-content/#2-import-content-via-importer) instead, to pull content from a repo on a regular schedule instead of pushing.
