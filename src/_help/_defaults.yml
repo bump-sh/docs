@@ -1,5 +1,5 @@
-layout: help
+layout: documentation
 sidebar: true
-page_class: help with-sidebar
+page_class: documentation
 sitemap_change_frequency: weekly
-hide_footer: true
+sidebar_name: help

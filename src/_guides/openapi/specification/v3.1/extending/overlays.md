@@ -5,6 +5,9 @@ excerpt: Use OpenAPI Overlays to enrich you API descriptions without creating co
 date: 2024-03-20
 ---
 
+- TOC
+{:toc}
+
 However you make OpenAPI descriptions for your APIs, there are all sorts of scenarios where you might want to customize it for different audiences. Perhaps your tech writers want to add amazing longer descriptions but they are locked out of the source code, or you want to hide some internal endpoints from your OpenAPI before publishing. Is it possible to do all this without awkwardly managing multiple similar-but-different OpenAPI documents?
 
 The OpenAPI Initiative have released a new concept called "Overlays". This is [separate specification](https://github.com/OAI/Overlay-Specification) but compatible with OpenAPI, and while it's labelled "experimental" its a v1.0.0, with support in a variety of tooling including [Bump.sh](https://bump.sh). 

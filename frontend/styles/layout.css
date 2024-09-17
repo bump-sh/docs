@@ -24,50 +24,6 @@ body > footer {
   grid-area: footer;
 }
 
-body.with-sidebar {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
-
-  main {
-    box-sizing: border-box;
-    padding: var(--spacing-8) var(--spacing-10);
-    width: calc(100vw - var(--doc-sidebar-width) - var(--doc-sidebar-padding));
-
-    button {
-      display: none;
-      width: fit-content;
-    }
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  @media(max-width: 800px) {
-    main {
-      grid-column: 1 / -1;
-      width: 100%;
-
-      button {
-        display: inline-flex;
-      }
-    }
-  }
-
-  @container main (width < 800px) {
-    .main-content {
-      grid-template-columns: 1fr;
-    }
-
-    #markdown-toc {
-      display: none;
-    }
-  }
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: 1fr min(var(--page-content-width), calc(100% - var(--spacing-20))) 1fr;

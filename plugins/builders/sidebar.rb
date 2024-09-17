@@ -1,11 +1,11 @@
 class Builders::Sidebar < SiteBuilder
   def build
     generator do
-      site.data.help_sidebar = build_resources(@site.data.sidebars.help.resources, @site.data.sidebars.help.collection_name, @site.data.sidebars.help.root)
-      site.data.guides_sidebar = {}
+      site.data.sidebar_entries = {}
+      site.data.sidebar_entries.help = build_resources(@site.data.sidebars.help.resources, @site.data.sidebars.help.collection_name, @site.data.sidebars.help.root)
       site.data.sidebars.guides.each do |specification_name, list|
         list.each do |version_name, attributes|
-          site.data.guides_sidebar["#{specification_name}_#{version_name}"] = build_resources(attributes.resources, attributes.collection_name, attributes.root)
+          site.data.sidebar_entries["#{specification_name}_#{version_name}"] = build_resources(attributes.resources, attributes.collection_name, attributes.root)
         end
       end
     end

@@ -5,6 +5,9 @@ excerpt: Learn how to build OpenAPI descriptions using path and operations.
 date: 2024-07-04
 ---
 
+- TOC
+{:toc}
+
 OpenAPI has the concept of "paths" and "operations", which is two parts of what people would think of as an "endpoint". The path covers the URL and the operation covers the rest of it. 
 
 Here are a list of paths in the [Train Travel API example](https://bump.sh/blog/modern-openapi-petstore-replacement).

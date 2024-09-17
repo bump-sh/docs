@@ -5,6 +5,9 @@ excerpt: Teach OpenAPI all about the headers, query params, and path parameters 
 date: 2024-07-04
 ---
 
+- TOC
+{:toc}
+
 Parameters in OpenAPI v3.1 are a fundamental part of creating an API specification, allowing you to define the inputs your API can accept. 
 
 Parameters fall into one of a few types:

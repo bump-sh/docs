@@ -5,6 +5,9 @@ excerpt: Learn about the API Servers section of the OpenAPI Specification.
 date: 2024-07-02
 ---
 
+- TOC
+{:toc}
+
 The servers section in an OpenAPI specification serves as a roadmap, detailing the various environments your API is accessible from. It's a straightforward yet powerful way to communicate the base URLs of your API across different stages of its lifecycle, or in different environments the end-users might be interested in like a mocking server, or a sandbox for interacting with the API without real-world consequences. 
 
 Here is an example of how you can define API servers in your OpenAPI specification:

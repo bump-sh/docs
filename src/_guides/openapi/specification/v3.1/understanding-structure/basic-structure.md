@@ -5,6 +5,9 @@ excerpt: Learn your way around the OpenAPI description format for HTTP APIs by l
 date: 2024-07-02
 ---
 
+- TOC
+{:toc}
+
 The OpenAPI Specification (OAS) is an "API Description Format", providing a standard format for describing REST APIs, making it easier to design, document, and consume them.
 
 In this tutorial we'll explore the structure of an OpenAPI document, focusing on the main sections and important elements, so that you can get a feel for where everything is, without having to scan through the whole OpenAPI Specification yourself.

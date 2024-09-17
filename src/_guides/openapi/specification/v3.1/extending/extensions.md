@@ -5,6 +5,9 @@ excerpt: Using extensions allows you to customize and integrate various tools th
 date: 2024-03-20
 ---
 
+- TOC
+{:toc}
+
 OpenAPI v3.1 has a concept of [Specification Extensions](https://spec.openapis.org/oas/v3.1.0#specification-extensions) which are additional properties not specified by the OpenAPI specification. These are a chance to customize and integrate tools from documentation to API gateways, all hooking into the OpenAPI document and storing information important to them in the form of extra properties that will be ignored by other tooling. 
 
 All those properties start with the `x-` naming convention to be identified as “eXternal” from the OpenAPI specification.

@@ -5,6 +5,9 @@ excerpt: Use oneOf, anyOf, and allOf in OpenAPI & JSON Schema for polymorphism a
 date: 2024-07-24
 ---
 
+- TOC
+{:toc}
+
 In OpenAPI v3.1 and JSON Schema, you can use `oneOf`, `allOf`, and `anyOf` keywords to handle composition, which is the concept of combining multiple schemas and subschemas in various ways to handle polymorphism, or "extending" other schemas to add more criteria.
 
 ## What are oneOf, anyOf, and allOf?
