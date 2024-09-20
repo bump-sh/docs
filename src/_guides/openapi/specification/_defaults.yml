@@ -5,3 +5,4 @@ skip_listing: true
 display_authors: true
 display_pagination: true
 display_cta: true
+exclude_from_pagination: true
