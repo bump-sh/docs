@@ -17,6 +17,8 @@ help:
     link: /continuous-integration/
     icon: terminal
     items:
+      - label: Azure Devops
+        link: /continuous-integration/azure-devops/
       - label: Github Action
         link: /continuous-integration/github-actions/
       - label: CI
