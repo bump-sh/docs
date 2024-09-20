@@ -19,7 +19,7 @@ Seeing as YAML Pipelines are the newer approach, and many people may have never 
 
 ### Step 1: Setup Azure Organization & Project
 
-**Sign in** to your Azure organization if you have one, or **[sign up](https://azure.microsoft.com/en-us/free)**
+**Sign in** to your Azure organization if you have one, or **[sign up](https://azure.microsoft.com/en-us/free)**.
 
 Then navigate to an existing project, or create a new one if you need to.
 
