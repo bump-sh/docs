@@ -5,6 +5,9 @@ excerpt: Learn how JSON Schema and OpenAPI Schema are similar and how they are d
 date: 2024-07-17
 ---
 
+- TOC
+{:toc}
+
 For a long time JSON Schema and OpenAPI Schema Objects were similar but different. OpenAPI was inspired by JSON Schema, then they both evolved separately, but finally in OpenAPI v3.1 with lots of work from both teams, the specifications realigned on JSON Schema Draft 2020-12. This means you can learn more about OpenAPI Schema Objects by learning more about JSON Schema.
 
 ## JSON Schema Documentation

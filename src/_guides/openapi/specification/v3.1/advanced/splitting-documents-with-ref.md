@@ -7,6 +7,9 @@ excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI 
 date: 2024-07-10
 ---
 
+- TOC
+{:toc}
+
 After using OpenAPI for a while, you might notice your description documents have become a rather unwieldy mess of YAML and JSON. You end up with a whole lot of repetition, and this huge mess just loves to trigger merge conflicts as multiple developers change different things but Git seems none the wiser.
 
 You can avoid this pain by splitting description documents up with `$ref`, using various reusable components, but how exactly you go about doing that can be a tricky one to work out.

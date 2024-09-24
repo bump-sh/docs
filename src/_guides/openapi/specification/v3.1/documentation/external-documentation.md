@@ -5,7 +5,10 @@ excerpt: Link OpenAPI documentation with other guides and tutorials.
 date: 2024-08-08
 ---
 
-While the `description` property is excellent for giving a little more information about a specific tag, you might need to provide additional documentation if the business logic by a part of the API is complex, or there are lists of possible values defined outside of the API. 
+- TOC
+{:toc}
+
+While the `description` property is excellent for giving a little more information about a specific tag, you might need to provide additional documentation if the business logic by a part of the API is complex, or there are lists of possible values defined outside of the API.
 
 If anything requires further explanation, you can provide a link to an external web page where you offer a more detailed explanation using the `externalDocs` property.
 
@@ -28,21 +31,21 @@ This is not limited to tags, `externalDocs` can be used on:
 - Operation Object
 - Schema Object
 
-Here's all of them being used all at once! 
+Here's all of them being used all at once!
 
 ```yaml
 openapi: 3.1.0
-info: 
-  title: External Docs Everywhere! 
-  versions: "1.0.0"
+info:
+  title: External Docs Everywhere!
+  version: "1.0.0"
 
-externalDocs: 
+externalDocs:
   description: Guides & Tutorials
   url: https://docs.bump.sh/guides/
 
 paths:
   /diffs:
-    get: 
+    get:
       externalDocs:
         description: Learn more about Operations
         url: https://docs.bump.sh/guides/openapi/specification/v3.1/understanding-structure/paths-operations/
@@ -57,7 +60,7 @@ tags:
 components:
   schemas:
     Diffs:
-      externalDocs: 
+      externalDocs:
         url: https://docs.bump.sh/guides/openapi/specification/v3.1/data-models/schema-and-data-types/
 
 ```

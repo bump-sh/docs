@@ -5,6 +5,9 @@ excerpt: Dive into the world of API file uploads in OpenAPI.
 date: 2024-08-06
 ---
 
+- TOC
+{:toc}
+
 Multipart form data is a content type used for HTTP requests to send a combination of text and file data in a single request, allowing for one or more uploaded files to be sent with other form fields. 
 
 In the context of an API, using multipart form data enables clients to send files to the server as part of a single API request, avoiding the need for metadata to be uploaded as one request then linking it back to the file somehow. This is handy when building resources that might have an avatar or a cover image, or sending a PDF that needs a name, description, and list of recipients.

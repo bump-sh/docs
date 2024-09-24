@@ -12,6 +12,7 @@ How to integrate your documentation deployment to your Continuous Integration (C
 There are multiple ways to integrate with Bump.sh:
 
 - Using the [Github Action](/help/continuous-integration/github-actions)
+- Using [Azure DevOps](/help/continuous-integration/azure-devops)
 - Using other [CI examples](/help/continuous-integration/ci)
 - Manually using the [CLI](/help/continuous-integration/cli)
 - More advanced usage can be done with the [API](/help/continuous-integration/api)
@@ -69,6 +70,3 @@ Note that if you don't want to keep the private token and documentation id in yo
 - `BUMP_ID`: your documentation public slug or id
 - `BUMP_TOKEN`: your documentation private token
 - `BUMP_HUB_ID`: if [using hubs](/help/hubs), your hub public slug or id
-
-
-

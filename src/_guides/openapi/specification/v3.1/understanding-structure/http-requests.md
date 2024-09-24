@@ -5,6 +5,9 @@ excerpt: Define HTTP requests in your OpenAPI to help users know the rules on wh
 date: 2024-07-09
 ---
 
+- TOC
+{:toc}
+
 Any API handling use-cases more advanced that purely fetching data will need to define a HTTP request body. `POST`, `PATCH`, `PUT`, all allow a HTTP client to send a body: often JSON or XML. This allows for more information to be sent rather than just query parameters, which have limits. 
 
 The request body can be used for:

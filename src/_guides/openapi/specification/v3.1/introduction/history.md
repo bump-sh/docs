@@ -5,6 +5,9 @@ excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs wor
 date: 2024-07-25
 ---
 
+- TOC
+{:toc}
+
 The OpenAPI Specification started off life with another name, and this can cause a bit of confusion. Until version 3.0, the specification was still called "Swagger", before being renamed to "OpenAPI" in 2016. It's actually a "retroactive" rename, so even v2.0 and earlier are called OpenAPI now.
 
 The OpenAPI Specification is now supervised by the [OpenAPI Initiative](https://www.openapis.org/), an open-source project under the [Linux Foundation](https://linuxfoundation.org/).

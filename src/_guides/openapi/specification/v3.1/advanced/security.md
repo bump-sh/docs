@@ -5,6 +5,9 @@ excerpt: Learn how OpenAPI describes authentication and authorization schemes fo
 date: 2024-08-07
 ---
 
+- TOC
+{:toc}
+
 OpenAPI uses the term "security scheme" to cover both authentication and authorization schemes. 
 
 - **Authentication:** Who is this user, are they who they say they are.

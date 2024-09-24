@@ -1,18 +1,6 @@
-<!doctype html>
-<html lang="<%= site.locale %>">
-  <head>
-    <%= render "head", metadata: site.metadata, title: data.title %>
-  </head>
-  <body class="<%= data.page_class %>"data-controller="copy <% if data.sidebar %>toggle<% end %>">
-    <%= render Shared::Navbar.new(
-      metadata: site.metadata,
-      resource: resource,
-      collection: data.paginate&.collection || data.prototype&.collection
-    ) %>
+---
+layout: application
+---
 
-    <%= yield %>
-
-    <%= render Shared::Footer.new(hide: data.hide_footer) %>
-    <%= render Shared::ThirdParties.new %>
-  </body>
-</html>
+<%= yield %>
+<%= render Shared::Footer.new(hide: data.hide_footer) %>

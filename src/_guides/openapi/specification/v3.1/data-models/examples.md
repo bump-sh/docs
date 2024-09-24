@@ -5,6 +5,9 @@ excerpt: Use examples and defaults in OpenAPI to demonstrate API inputs and outp
 date: 2024-07-10
 ---
 
+- TOC
+{:toc}
+
 Examples and defaults are a change to demonstrate some potential input and output values. Examples are particularly useful at showing off parameters, headers, requests, responses, and various other bits of OpenAPI, which is handy for creating API documentation. These They can also be read by tools and libraries for other purposes, like an [API mocking tool][microcks] can use sample values to generate mock requests.
 
 # Examples

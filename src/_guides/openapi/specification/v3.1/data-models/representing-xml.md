@@ -5,6 +5,9 @@ excerpt: OpenAPI can describe XML APIs with a little work, learn how!
 date: 2024-07-24
 ---
 
+- TOC
+{:toc}
+
 OpenAPI is set up with the assumption that you're most likely describing JSON, because that's what over 80% of APIs are using, but XML is still in the game and you could be using both in the same API. OpenAPI supports this with the `xml` keyword, which helps when XML output is using XML-specific syntax like attributes and wrapped arrays.
 
 By combining [schema composition](_guides/openapi/specification/v3.1/data-models/schema-composition.md) and [references](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md), it's possible to create reusable components that be used for both JSON and XML output, like this simplistic example below.
