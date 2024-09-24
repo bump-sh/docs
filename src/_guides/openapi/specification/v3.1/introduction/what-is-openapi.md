@@ -5,11 +5,13 @@ excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs wor
 date: 2024-07-25
 ---
 
-OpenAPI is a standard for describing an API (Application Programming Interface). The OpenAPI Specification (OAS) defines an open and independent description format for HTTP API services, which allows both humans and computers to discover and understand how an API works and how to interact with it, without the need to look at the source code. 
+OpenAPI is a standard for describing an API (Application Programming Interface), managed by the [OpenAPI Initiative](https://www.openapis.org/) (OAI). The [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0) (OAS) defines an open and independent description format for HTTP API services, which allows both humans and computers to discover and understand how an API works and how to interact with it, without the need to look at the source code. 
 
 OpenAPI provides a machine-readable structured data format which can be also be read and written by people, allowing for tooling to help API developers, API product managers, technical writers, and governance teams, all the way through the API lifecycle.
 
-![](/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
+![A flow diagram showing Requirements > Design > Configure / Publish / Develop, then Deploy and Test.](/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
+
+_Diagram created by [OpenAPI Initiative](https://www.openapis.org/)._
 
 ## Concepts
 
