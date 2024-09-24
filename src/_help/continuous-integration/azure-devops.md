@@ -112,13 +112,11 @@ Now we should be good to go!
 
 Make sure the pipeline file is saved as `azure-pipelines.yml` in the root of your repository, commit, and push.
 
-When pushing to a branch other than main, you should see output like this:
+When pushing to a branch other than main, you should see output like this in the Pipelines section of the Azure Devops interface, letting you know if the OpenAPI was valid or not. 
 
 ![](/images/guides/azure-devops/doc-validation.png)
 
-Once the YAML file is in the repository, Azure DevOps will automatically detect it and run the pipeline, based on the branch configuration. Seeing as we've set this file to trigger on the `main` branch, make sure you are pushing commits there.
-
-Head over to **Pipelines** and click on the latest commit, you might see the pipeline still running, and when its done you will see whether it worked or not. If it worked, you'll see a green tick, and can click on each step to see what happened. The step that runs `bump deploy` should look like this:
+When pushing to the `main` you will trigger the deploy job, which will update your hosted Bump.sh documentation if any changes are detected, which will look like this:
 
 ![](/images/guides/azure-devops/doc-deploy-first.png)
 
