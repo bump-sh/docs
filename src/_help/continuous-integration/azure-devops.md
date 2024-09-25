@@ -47,33 +47,45 @@ Either way, let's update `azure-pipelines.yml` with the following:
 ```yaml
 # azure-pipelines.yml
 trigger:
-- main
+  branches:
+    include:
+    - '*'
+
 variables: 
 - group: bumpsh
+
 pool:
   vmImage: 'ubuntu-latest'
-steps:
-- task: UseNode@1
-  inputs:
-    version: '20.x'
-  displayName: 'Install Node.js'
-- script: |
-    npm install bump-cli
-  displayName: 'Install Bump CLI'
-- script: |
-    npm exec -- bump deploy "openapi.yaml" --doc "azure-demo" --token "$(BUMP_TOKEN)"
-  displayName: 'Deploy API Documentation'
+  demands: 
+  - npm
+
+jobs:
+- job: validate_doc
+  # Only run this task if build was triggered by a commit to a branch other than main
+  condition: and(succeeded(), ne(variables['build.sourceBranch'], 'refs/heads/main'))
+  steps:
+    - script: npx bump-cli deploy --dry-run "openapi.yaml" --doc "azure-demo" --token="$BUMP_TOKEN"
+      displayName: 'Validate API'
+
+- job: deploy_doc
+  # Only run this task if build was triggered by a commit to the main branch
+  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/main'))
+  steps:
+  - script: |
+      npx bump-cli deploy "openapi.yaml" --doc "azure-demo" --token="$BUMP_TOKEN"
+    displayName: 'Deploy API Documentation'
 ```
 
-### **Step-by-Step Breakdown**
-1. **Trigger**: This pipeline triggers automatically whenever there are changes to the `main` branch.
-   
-2. **Pool**: Specifies that the pipeline should use the latest available Ubuntu agent.   
-3. **Steps**:
-   - **UseNode Task**: Installs Node.js using the `UseNode` task. The `version: '20.x'` line ensures that Node.js version 20.x is installed.
-   - **npm install**: Installs the npm packages defined in your `package.json` file.
-   - **CLI command**: The `bump deploy` command is a placeholder for any CLI command you want to run. Replace `mycli` with the actual command you need (e.g., `npm run build` or `az --version`).
+Let's walk through a few key bits here. 
 
+1. **Trigger**: This pipeline triggers automatically whenever changes are made to any branch. Later conditions will decide which jobs to do.
+2. **Pool**: Specifies that the pipeline should use the latest available Ubuntu agent, and it'll need to have npm installed.
+3. **Jobs**: Jobs have a condition, and if it passes it will run the steps. In this example we're making sure the branch is main, and running deployment, or checking the branch is something else, and running a "validation.
+
+Deployment is handled by the command `npx bump-cli deploy` which uses NPM's `npx` command to avoid needing to run `npm install` in each step, and will grab the [bump-cli NPM package](https://www.npmjs.com/package/bump-cli) so you can use the CLI on the fly. The `deploy` command then takes your `openapi.yaml` document, which you can change if the file is called anything else or stored in another directory.
+
+Then you need to update `--doc "azure-demo"` which your own documentation slug or ID, which can be found in the Bump.sh API Settings page, and finally pass in the environment token which we'll set next.
+ 
 ### Step 3: Setup Environment Variables
 
 Azure DevOps handles environment variables a little differently to other CI/CD tools, but it's ok when you know how.
@@ -100,13 +112,15 @@ Now we should be good to go!
 
 Make sure the pipeline file is saved as `azure-pipelines.yml` in the root of your repository, commit, and push.
 
-Once the YAML file is in the repository, Azure DevOps will automatically detect it and run the pipeline, based on the branch configuration. Seeing as we've set this file to trigger on the `main` branch, make sure you are pushing commits there.
+When pushing to a branch other than main, you should see output like this in the Pipelines section of the Azure Devops interface, letting you know if the OpenAPI was valid or not. 
 
-Head over to **Pipelines** and click on the latest commit, you might see the pipeline still running, and when its done you will see whether it worked or not. If it worked, you'll see a green tick, and can click on each step to see what happened. The step that runs `bump deploy` should look like this:
+![](/images/guides/azure-devops/doc-validation.png)
 
-![](/images/guides/azure-devops/first-run.png)
+When pushing to the `main` you will trigger the deploy job, which will update your hosted Bump.sh documentation if any changes are detected, which will look like this:
 
-Here we can see the documentation has been created, and there's even a link to go and see it. 
+![](/images/guides/azure-devops/doc-deploy-first.png)
+
+Here we can see the documentation has been created, and there's even a link to go and see it.
 
 ## Troubleshooting 
 
