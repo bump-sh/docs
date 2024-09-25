@@ -21,7 +21,9 @@ The first thing to learn about a schema is the `type` keyword, which can be one 
 - array
 - number
 - string
-- integer (matches any number with a zero fractional part)
+
+> You can also use "integer" for the sake of convenience, but "integer" and "number" are basically identical because JSON itself does not make that distinction. Since there is no distinct JSON integer type, JSON Schema defines integers mathematically. This means that both 1 and 1.0 are equivalent, and are both considered to be integers.
+{: .info }
 
 A schema object looks like this:
 
@@ -147,7 +149,7 @@ You can also define your own custom formats, which tooling will not understand, 
 
 In addition to defining data types and formats, [JSON Schema](_guides/openapi/specification/v3.1/data-models/json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
 
-## const & enum
+### const & enum
 
 Restricting a value down to one or more potential values can be done with the `const` or `enum` keywords. 
 
@@ -212,7 +214,7 @@ In this example the `object` could be `card` or `bank_account`, but instead of d
 {: .info }
 
 
-## default 
+### default 
 
 Setting a `default` lets people and code know what to do when a value has not been provided. 
 
@@ -227,7 +229,7 @@ enum:
 
 
 
-### minimum and maximum
+### minimum & maximum
 
 The `minimum` and `maximum` keywords allow you to specify the minimum and maximum values for numeric properties. For example:
 
@@ -280,6 +282,6 @@ This schema mandates that the properties "name" and "age" must be present in the
 For more information on JSON Schema validation keywords, you can refer to the [JSON Schema Validation documentation](https://json-schema.org/learn/validation.html).
 
 
-### Learn more about JSON Schema
+## Learn more about JSON Schema
 
 There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](_guides/openapi/specification/v3.1/data-models/json-schema.md).
