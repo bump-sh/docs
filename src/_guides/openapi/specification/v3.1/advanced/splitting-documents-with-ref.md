@@ -253,7 +253,7 @@ Is that a good thing or a bad thing? It can be both depending on the scenario, b
 
 ## Tools for Bundling & Splitting 
 
-Bundling is usually only needed if you are working with older or strange tools which do not support $ref properly (or at all). If you are working with Bump.sh CLI you won’t need to bundle, but if a tool wants you to import a single `openapi.yaml` document you might need to bundle.
+Bundling is usually only needed if you are working with older or strange tools which do not support `$ref` properly (or at all). If you are working with Bump.sh CLI you won’t need to bundle, but if a tool wants you to import a single `openapi.yaml` document you might need to bundle.
 
 ```
 $ redocly bundle openapi.yaml -o openapi-bundled.yaml
@@ -264,6 +264,7 @@ bundling openapi.yaml...
 This will grab all of the `$ref`'s that use "external files" or URLs and move the contents into the relevant subsection of `components` in the `openapi-bundled.yaml` document.
 
 Splitting does the opposite. If you have a massive painful document (maybe generated from HTTP or converted from Postman) you can split it down into multiple documents with a sensible folder structure, ditch the original, commit all that to Git, and push it up to Bump.sh with all the `$ref`'s intact.
+
 ```
 redocly split generated-openapi.json --outDir api/
 
