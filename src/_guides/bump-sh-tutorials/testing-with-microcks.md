@@ -159,7 +159,7 @@ If they're not accurate, then either the OpenAPI is wrong, or the API is wrong, 
 
 ## Automate Testing
 
-Below is the standard GitHub Action used to deploy API changes to Bump.sh with one modification to also deploy changes to a Microcks server (which we assume was set up following instructions for [mocking with Microcks](src/_guides/bump-sh-tutorials/mocking-with-microcks.md)).
+Below is the standard GitHub Action used to deploy API changes to Bump.sh with one modification to also deploy changes to a Microcks server (which we assume was set up following instructions for [mocking with Microcks](_guides/bump-sh-tutorials/mocking-with-microcks.md)).
 
 ```yaml
 # .github/workflows/deploy-docs.yml
