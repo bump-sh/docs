@@ -13,7 +13,9 @@ There are multiple ways to integrate with Bump.sh:
 
 - Using the [Github Action](/help/continuous-integration/github-actions)
 - Using [Azure DevOps](/help/continuous-integration/azure-devops)
-- Using other [CI examples](/help/continuous-integration/ci)
+- Using [Circle CI](/help/continuous-integration/circle-ci)
+- Using [Gitlab CI](/help/continuous-integration/gitlab-ci)
+- Using [Travis CI](/help/continuous-integration/travis-ci)
 - Manually using the [CLI](/help/continuous-integration/cli)
 - More advanced usage can be done with the [API](/help/continuous-integration/api)
 

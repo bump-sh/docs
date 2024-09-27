@@ -25,6 +25,7 @@ https://help.bump.sh/branching /help/publish-documentation/branching/
 https://help.bump.sh/organizations /help/organizations/
 https://help.bump.sh/api-change-management/webhooks /help/api-change-management/webhooks/
 https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
+/help/continuous-integration/ci/ /help/continuous-integration/index/
 
 # Cribbed for the OpenAPI Specification Tutorial
 /guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/

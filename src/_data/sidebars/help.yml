@@ -19,12 +19,16 @@ resources:
     link: /continuous-integration/
     icon: terminal
     items:
-      - label: Azure Devops
-        link: /continuous-integration/azure-devops/
       - label: Github Action
         link: /continuous-integration/github-actions/
-      - label: CI
-        link: /continuous-integration/ci/
+      - label: Azure Devops
+        link: /continuous-integration/azure-devops/
+      - label: Circle CI
+        link: /continuous-integration/circle-ci/
+      - label: Gitlab CI
+        link: /continuous-integration/gitlab-ci/
+      - label: Travis CI
+        link: /continuous-integration/travis-ci/
       - label: CLI
         link: /continuous-integration/cli/
       - label: API (advanced)
