@@ -5,7 +5,7 @@ title: Circle CI
 - TOC
 {:toc}
 
-## Bump.sh CI integration examples
+## Bump.sh continuous integration examples
 
 Bump.sh offers a lot of flexibility to let you configure how it should interact with your CI pipelines.
 
