@@ -109,8 +109,8 @@ For more information on improving your `info` section, refer to the article titl
 
 Next, let’s capture some basic operation details. This will include the paths and HTTP methods our API will offer, along with some summary and description details. We will expand the operations further in the final phase. For now, focus on identifying all of the operations you will need to capture. 
 
-> [!TIP]  
 > You may be thinking that the next step is to capture schema components. However, I’ve found that taking a breadth-based approach to the operations first offers a better opportunity to identify all necessary schema components without getting too deep too quickly. 
+{: .info}
 
 ### Step 2.1: Capture Paths and HTTP Methods
 
