@@ -244,12 +244,7 @@ Refer to our guide, [“Using OpenAPI and AsyncAPI Tags to Better Organize API E
 paths:
   /tasks:
     get:
-      summary: List available tasks on the TODO list
-      description: 
-        Lists tasks that have been created, with a default filter of 'new' and 'in progress' tasks unless specified otherwise
-      operationId: listTasks
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
       parameters: 
       - name: status
         in: query
@@ -259,11 +254,7 @@ paths:
           type: string
     post:
       summary: Add a new task to the TODO list
-      description:
-        Adds a new task to the TODO list and sets the status to 'new'
-      operationId: addTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
   /tasks/{taskId}:
     parameters:
       - name: taskId
@@ -274,25 +265,13 @@ paths:
           type: integer
     get:
       summary: Retrieve the details for a task on the TODO list
-      description:
-        Returns the details for a task from the TODO list by identifier
-      operationId: getTask
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
     delete:
       summary: Remove a task from the TODO list
-      description:
-        Permanently removes a task from the TODO list. If a task was completed, use `PUT /tasks/{taskId}` to update its status to 'completed'
-      operationId: removeTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
     put:
       summary: Update a task on the TODO list
-      description:
-        Updates a specific task's details and/or status
-      operationId: updateTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
 ```
 
 ### Step 2.5: Document Expected Responses
@@ -306,56 +285,27 @@ paths:
   /tasks:
     get:
       summary: List available tasks on the TODO list
-      description: 
-        Lists tasks that have been created, with a default filter of 'new' and 'in progress' tasks unless specified otherwise
-      operationId: listTasks
-      tags:
-        - View Tasks
-      parameters: 
-      - name: status
-        in: query
-        required: false
-        description: Filters the list of tasks by the status provided
-        schema:
-          type: string
+      # ... hidden for readability ...
       responses:
         '200':
           description: Returns a list of Tasks, with any request filters applied
     post:
       summary: Add a new task to the TODO list
-      description:
-        Adds a new task to the TODO list and sets the status to 'new'
-      operationId: addTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       responses:
         '201':
           description: Task created successfully
   /tasks/{taskId}:
-    parameters:
-      - name: taskId
-        in: path
-        required: true
-        description: The ID of the task to operate on
-        schema:
-          type: integer
+    # ... hidden for readability ...
     get:
       summary: Retrieve the details for a task on the TODO list
-      description:
-        Returns the details for a task from the TODO list by identifier
-      operationId: getTask
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
       responses:
         '200':
           description: Returns the details of the retrieved task
     delete:
       summary: Remove a task from the TODO list
-      description:
-        Permanently removes a task from the TODO list. If a task was completed, use `PUT /tasks/{taskId}` to update its status to 'completed'
-      operationId: removeTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       responses:
         '204':
           description: Task deleted successfully
@@ -363,11 +313,7 @@ paths:
           description: Task not found by the ID provided
     put:
       summary: Update a task on the TODO list
-      description:
-        Updates a specific task's details and/or status
-      operationId: updateTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       responses:
         '200':
           description: Task updated successfully
@@ -498,18 +444,7 @@ paths:
   /tasks:
     get:
       summary: List available tasks on the TODO list
-      description: 
-        Lists tasks that have been created, with a default filter of 'new' and 'in progress' tasks unless specified otherwise
-      operationId: listTasks
-      tags:
-        - View Tasks
-      parameters: 
-      - name: status
-        in: query
-        required: false
-        description: Filters the list of tasks by the status provided
-        schema:
-          type: string
+      # ... hidden for readability ...
       responses:
         '200':
           description: Returns a list of Tasks, with any request filters applied
@@ -521,11 +456,7 @@ paths:
                   $ref: '#/components/schemas/Task'
     post:
       summary: Add a new task to the TODO list
-      description:
-        Adds a new task to the TODO list and sets the status to 'new'
-      operationId: addTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       responses:
         '201':
           description: Task created successfully
@@ -534,20 +465,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Task'
   /tasks/{taskId}:
-    parameters:
-      - name: taskId
-        in: path
-        required: true
-        description: The ID of the task to operate on
-        schema:
-          type: integer
+    # ... hidden for readability ...
     get:
       summary: Retrieve the details for a task on the TODO list
-      description:
-        Returns the details for a task from the TODO list by identifier
-      operationId: getTask
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
       responses:
         '200':
           description: Returns the details of the retrieved task
@@ -557,11 +478,7 @@ paths:
                 $ref: '#/components/schemas/Task'
     delete:
       summary: Remove a task from the TODO list
-      description:
-        Permanently removes a task from the TODO list. If a task was completed, use `PUT /tasks/{taskId}` to update its status to 'completed'
-      operationId: removeTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       responses:
         '204':
           description: Task deleted successfully
@@ -569,11 +486,7 @@ paths:
           description: Task not found by the ID provided
     put:
       summary: Update a task on the TODO list
-      description:
-        Updates a specific task's details and/or status
-      operationId: updateTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       requestBody:
         required: true
         content:
@@ -631,132 +544,43 @@ paths:
   /tasks:
     get:
       summary: List available tasks on the TODO list
-      description: 
-        Lists tasks that have been created, with a default filter of 'new' and 'in progress' tasks unless specified otherwise
-      operationId: listTasks
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
       security:
         - oauth2:
             - task:read
-      parameters: 
-      - name: status
-        in: query
-        required: false
-        description: Filters the list of tasks by the status provided
-        schema:
-          type: string
-      responses:
-        '200':
-          description: Returns a list of Tasks, with any request filters applied
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Task'
+      # ... hidden for readability ...
     post:
       summary: Add a new task to the TODO list
-      description:
-        Adds a new task to the TODO list and sets the status to 'new'
-      operationId: addTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       security:
         - oauth2:
             - task:create
-      responses:
-        '201':
-          description: Task created successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Task'
+      # ... hidden for readability ...
   /tasks/{taskId}:
-    parameters:
-      - name: taskId
-        in: path
-        required: true
-        description: The ID of the task to operate on
-        schema:
-          type: integer
+    # ... hidden for readability ...
     get:
       summary: Retrieve the details for a task on the TODO list
-      description:
-        Returns the details for a task from the TODO list by identifier
-      operationId: getTask
-      tags:
-        - View Tasks
+      # ... hidden for readability ...
       security:
         - oauth2:
             - task:read
-      responses:
-        '200':
-          description: Returns the details of the retrieved task
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Task'
+      # ... hidden for readability ...
     delete:
       summary: Remove a task from the TODO list
-      description:
-        Permanently removes a task from the TODO list. If a task was completed, use `PUT /tasks/{taskId}` to update its status to 'completed'
-      operationId: removeTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       security:
         - oauth2:
             - task:delete
-      responses:
-        '204':
-          description: Task deleted successfully
-        '404':
-          description: Task not found by the ID provided
+      # ... hidden for readability ...
     put:
       summary: Update a task on the TODO list
-      description:
-        Updates a specific task's details and/or status
-      operationId: updateTask
-      tags:
-        - Manage Tasks
+      # ... hidden for readability ...
       security:
         - oauth2:
             - task:update
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Task'
-      responses:
-        '200':
-          description: Task updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Task'
-        '404':
-          description: Task not found by the ID provided
+      # ... hidden for readability ...
 components:
-  schemas:
-    Task:
-      type: object
-      description: Represents a task with a status indicating its progression.
-      properties:
-        id:
-          type: integer
-          description: The unique identifier for a task.
-        description:
-          type: string
-          description: A brief summary of the task.
-        status:
-          type: string
-          description: The current status of the task, which can be 'new', 'in progress', or 'completed'.
-          enum:
-            - new
-            - in progress
-            - completed
-          default: new
+  # ... hidden for readability ...
   securitySchemes:
     oauth2:
       type: oauth2
@@ -777,39 +601,11 @@ components:
 **Example:**
 
 ```yaml
-openapi: 3.0.0
-info:
-  title: Personal TODO List API
-  version: 1.0.0
-  description: 
-    This API allows an individual to manage a simple list of tasks. 
-    
-    Tasks have a status of 'new' when first created and should be moved to 'in progress' when the task has begun and 'completed' once the task is finished.
-  contact:
-    email: api-support@todolist.local
-  license:
-    name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: https://onlinestore.com/terms    
-servers: 
-  - url: 'https://api.todolist.local/v1'
-tags:
-  - name: Manage Tasks
-    description: Supports task management such as adding, updating, and deleting tasks
-  - name: View Tasks
-    description: Lists all tasks or retrieves the details for a specific task
 paths:
   /tasks:
     get:
       summary: List available tasks on the TODO list
-      description: 
-        Lists tasks that have been created, with a default filter of 'new' and 'in progress' tasks unless specified otherwise
-      operationId: listTasks
-      tags:
-        - View Tasks
-      security:
-        - oauth2:
-            - task:read
+      # ... hidden for readability ...
       parameters: 
       - name: status
         in: query
@@ -838,14 +634,7 @@ paths:
                       status: "in progress"
     post:
       summary: Add a new task to the TODO list
-      description:
-        Adds a new task to the TODO list and sets the status to 'new'
-      operationId: addTask
-      tags:
-        - Manage Tasks
-      security:
-        - oauth2:
-            - task:create
+      # ... hidden for readability ...
       responses:
         '201':
           description: Task created successfully
@@ -861,23 +650,10 @@ paths:
                     status: "new"
   /tasks/{taskId}:
     parameters:
-      - name: taskId
-        in: path
-        required: true
-        description: The ID of the task to operate on
-        schema:
-          type: integer
-          example: 3
+      # ... hidden for readability ...
     get:
       summary: Retrieve the details for a task on the TODO list
-      description:
-        Returns the details for a task from the TODO list by identifier
-      operationId: getTask
-      tags:
-        - View Tasks
-      security:
-        - oauth2:
-            - task:read
+      # ... hidden for readability ...
       responses:
         '200':
           description: Returns the details of the retrieved task
@@ -893,44 +669,10 @@ paths:
                     status: "new"
     delete:
       summary: Remove a task from the TODO list
-      description:
-        Permanently removes a task from the TODO list. If a task was completed, use `PUT /tasks/{taskId}` to update its status to 'completed'
-      operationId: removeTask
-      tags:
-        - Manage Tasks
-      security:
-        - oauth2:
-            - task:delete
-      responses:
-        '204':
-          description: Task deleted successfully
-        '404':
-          description: Task not found by the ID provided
+      # ... hidden for readability ...
     put:
       summary: Update a task on the TODO list
-      description:
-        Updates a specific task's details and/or status
-      operationId: updateTask
-      tags:
-        - Manage Tasks
-      security:
-        - oauth2:
-            - task:update
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Task'
-      responses:
-        '200':
-          description: Task updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Task'
-        '404':
-          description: Task not found by the ID provided
+      # ... hidden for readability ...
 components:
   schemas:
     Task:
@@ -955,17 +697,7 @@ components:
           default: new
           example: "new"
   securitySchemes:
-    oauth2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://api.todolist.local/oauth/authorize
-          tokenUrl: https://api.todolist.local/oauth/token
-          scopes:
-            task:read: Authorization to Read tasks
-            task:create: Authorization to Create tasks
-            task:update: Authorization to Update tasks
-            task:delete: Authorization to Delete tasks
+    # ... hidden for readability ...
 ```
 
 ### Step 3.5: Review and Validate
