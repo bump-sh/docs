@@ -177,7 +177,7 @@ paths:
       operationId: updateTask
 ```
 
-Refer to the guide [“https://docs.bump.sh/guides/technical-writing/5-improvements-to-openapi-operation-documentation/”](https://docs.bump.sh/guides/technical-writing/5-improvements-to-openapi-operation-documentation/) for tips on improving your API operation documentation. 
+Refer to the guide [“5 Improvements to OpenAPI Operation Documentation”](https://docs.bump.sh/guides/technical-writing/5-improvements-to-openapi-operation-documentation/) for tips on improving your API operation documentation. 
 
 ### Step 2.3: Assign Tags to Group Operations
 - **Objective:** Identify a few tags that will group API operations
