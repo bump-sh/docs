@@ -1,7 +1,9 @@
 ---
 title: Writing an OpenAPI Document from the Ground Up
 authors: james
-excerpt: A step-by-step guide for authoring OpenAPI documents, starting from the essentials and expanding upon the details of your API. 
+canonical_url: https://bump.sh/blog/openapi-from-ground-up
+excerpt: A step-by-step guide for authoring OpenAPI documents, starting from the essentials and expanding upon the details of your API.
+date: 2024-10-01
 ---
 
 Composing an OpenAPI document can be daunting, especially during the early stages of API design. Your API design will need to evolve as you learn more about the problem space. To avoid needing to re-write large portions of your OpenAPI document, [I recommend a phased approach](https://addrprocess.com) to designing and documenting your API. The process starts with a breadth-first approach, capturing the essentials of the API including purpose and scope, then adding high-level operational descriptions. Finally, add more detail as you gain insights and receive feedback, until your OpenAPI document is complete. 
@@ -699,6 +701,8 @@ components:
   securitySchemes:
     # ... hidden for readability ...
 ```
+
+This example is available in the [Bump.sh GitHub repository](https://github.com/bump-sh/examples/blob/main/apis/todo-example-openapi-source.yaml).
 
 ### Step 3.5: Review and Validate
 - **Objective:** Ensure the accuracy and completeness of the OpenAPI document.
