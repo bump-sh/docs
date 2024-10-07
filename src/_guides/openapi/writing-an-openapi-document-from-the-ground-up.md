@@ -702,7 +702,7 @@ components:
     # ... hidden for readability ...
 ```
 
-This example is available in the [Bump.sh GitHub repository](https://github.com/bump-sh/examples/blob/main/apis/todo-example-openapi-source.yaml).
+This OpenAPI document example is available in the [Bump.sh examples GitHub repository](https://github.com/bump-sh/examples/blob/main/apis/todo-example-openapi-source.yaml). Here's a preview of how [this definition would render on Bump.sh](https://bump.sh/demo/doc/todo-example/).
 
 ### Step 3.5: Review and Validate
 - **Objective:** Ensure the accuracy and completeness of the OpenAPI document.
