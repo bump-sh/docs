@@ -12,7 +12,7 @@ The OpenAPI Specification started off life with another name, and this can cause
 
 The OpenAPI Specification is now supervised by the [OpenAPI Initiative](https://www.openapis.org/), an open-source project under the [Linux Foundation](https://linuxfoundation.org/).
 
-The name Swagger is still popular, and many of the tools have the word Swagger in, but generally speaking you are better of searching for "OpenAPI tools" than "Swagger tools" because those are mostly old outdated tools which don't work with modern versions of OpenAPI.
+The name Swagger is still popular, and many of the tools have the word Swagger in, but generally speaking you are better off searching for "OpenAPI tools" than "Swagger tools" because those are mostly old outdated tools which don't work with modern versions of OpenAPI.
 
 ## Major differences between OpenAPI 2.0, 3.0, 3.1
 
@@ -24,7 +24,7 @@ In the 2.0 specification, a property called `swagger` indicated which version of
 
 ### Structural changes
 
-The following image sums up the main structural changes between 2.0 and 3.0. As you can see a simplification effort has been made to group each concern in a more logical way.
+The following image sums up the main structural changes between 2.0 and 3.0. As you can see, a simplification effort has been made to group each concern in a more logical way.
 
 ![openapi 2 versus openapi 3](https://storage.googleapis.com/bump-blog-resources/what-is-openapi/OpenAPI-2-versus-OpenAPI-3.png)
 
