@@ -1,6 +1,7 @@
 ---
 title: Accelerating your OpenAPI Spec Generation with TypeSpec 
 authors: james
+canonical_url: https://bump.sh/blog/accelerating-your-openapi-spec-generation-with-typespec
 excerpt: Let's explore TypeSpec, an alternative to the OpenAPI Specification for capturing the details of your API definition, with support for OpenAPI, gRPC, and JSON Schema output formats.
 ---
 
