@@ -160,6 +160,18 @@ This is powered by the wonderful [PR Comment Task](https://marketplace.visualstu
 
 You may need to add **Contribute to pull requests** permission to your **Project Collection Build Service Accounts** from **Project Settings** > **Repositories** > **Security**, then you should be good to go.
 
+If you don't want to have the change detection comments, just delete the following section from `azure-pipeline.yaml`.
+
+```yaml
+  - script: npx bump-cli diff --format markdown $(openApiDoc) --doc $(bumpDoc) --token="$BUMP_TOKEN" > bump-diff.md
+    displayName: Diff OpenAPI
+
+  - task: PullRequestComment@1
+    inputs:
+      markdownFile: $(Build.SourcesDirectory)/bump-diff.md
+    displayName: PR Comment
+```
+
 ## Troubleshooting 
 
 If this is a new Azure DevOps account you might have problems with: 
