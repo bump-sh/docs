@@ -27,7 +27,7 @@ First you'll need to get Microcks set up, and that can be done with Docker, or i
 
 Once Microcks knows about your API(s), we are almost ready to run compliance/contract testing. This means comparing the OpenAPI and the real API implementation, which of course means we'll need to have the API running on a URL where Microcks can access it.
 
-## Step 2: (Optional) Make Local APIs Available for Testing
+## Step 2: Make Local APIs Available for Testing (Optional)
 
 If you already have your API deployed then you are well on your way, but when if your API is running on localhost then Microcks might have a rough time finding it. To fix this I used [ngrok](https://ngrok.com/), a free and amazing tool which allows you to expose local HTTP servers to traffic anywhere via a HTTP tunnel. 
 

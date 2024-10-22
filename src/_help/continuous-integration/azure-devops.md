@@ -49,48 +49,76 @@ Either way, let's update `azure-pipelines.yml` with the following:
 trigger:
   branches:
     include:
-    - '*'
+      - '*'
 
 variables: 
 - group: bumpsh
 
+  # Set to the location of the main OpenAPI document relative to repo root
+- name: openApiDoc
+  value: openapi.yaml
+
+  # The Documentation ID or Slug found in Bump.sh API Settings
+- name: bumpDoc
+  value: azure-demo
+
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
   demands: 
-  - npm
+    - npm
 
 jobs:
-- job: validate_doc
-  # Only run this task if build was triggered by a commit to a branch other than main
-  condition: and(succeeded(), ne(variables['build.sourceBranch'], 'refs/heads/main'))
-  steps:
-    - script: npx bump-cli deploy --dry-run "openapi.yaml" --doc "azure-demo" --token="$BUMP_TOKEN"
-      displayName: 'Validate API'
+  - job: openapi_diff
+    # Only run this task if build was triggered by a commit to a branch other than main
+    condition: and(succeeded(), ne(variables['build.sourceBranch'], 'refs/heads/main'))
+    steps:
+      - script: npx bump-cli deploy --dry-run $(openApiDoc) --doc $(bumpDoc) --token="$BUMP_TOKEN"
+        displayName: Validate OpenAPI
 
-- job: deploy_doc
-  # Only run this task if build was triggered by a commit to the main branch
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/main'))
-  steps:
-  - script: |
-      npx bump-cli deploy "openapi.yaml" --doc "azure-demo" --token="$BUMP_TOKEN"
-    displayName: 'Deploy API Documentation'
+      - script: npx bump-cli diff --format markdown $(openApiDoc) --doc $(bumpDoc) --token="$BUMP_TOKEN" > bump-diff.md
+        displayName: Diff OpenAPI
+
+      - task: PullRequestComment@1
+        inputs:
+          markdownFile: $(Build.SourcesDirectory)/bump-diff.md
+        displayName: PR Comment
+
+  - job: openapi_deploy
+    # Only run this task if build was triggered by a commit to the main branch
+    condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/main'))
+    steps:
+      - script: |
+          npx bump-cli deploy  $(openApiDoc) --doc $(bumpDoc) --token="$BUMP_TOKEN"
+        displayName: Deploy API Documentation
 ```
 
 Let's walk through a few key bits here. 
 
 1. **Trigger**: This pipeline triggers automatically whenever changes are made to any branch. Later conditions will decide which jobs to do.
 2. **Pool**: Specifies that the pipeline should use the latest available Ubuntu agent, and it'll need to have npm installed.
-3. **Jobs**: Jobs have a condition, and if it passes it will run the steps. In this example we're making sure the branch is main, and running deployment, or checking the branch is something else, and running a "validation.
+3. **Jobs**: Jobs have a condition, and if it passes it will run the steps. In this example we're making the condition check the branch is main and running deployment, or checking the branch is something else, and doing a diff on the OpenAPI to check for breaking changes.
 
-Deployment is handled by the command `npx bump-cli deploy` which uses NPM's `npx` command to avoid needing to run `npm install` in each step, and will grab the [bump-cli NPM package](https://www.npmjs.com/package/bump-cli) so you can use the CLI on the fly. The `deploy` command then takes your `openapi.yaml` document, which you can change if the file is called anything else or stored in another directory.
+Deployment is handled by the command `npx bump-cli deploy` which uses NPM's `npx` command to avoid needing to run `npm install` in each step, and will grab the [bump-cli NPM package](https://www.npmjs.com/package/bump-cli) so you can use the CLI on the fly. 
 
-Then you need to update `--doc "azure-demo"` which your own documentation slug or ID, which can be found in the Bump.sh API Settings page, and finally pass in the environment token which we'll set next.
  
-### Step 3: Setup Environment Variables
+### Step 3: Setup Variables
 
-Azure DevOps handles environment variables a little differently to other CI/CD tools, but it's ok when you know how.
+Variables can be set several ways in Azure DevOps, and we're using two different approaches for publicly knowable variables and secrets. Here we're setting a variable called `openApiDoc` to point to the main OpenAPI document, and `bumpDoc` which contains the ID or slug of the API Documentation on Bump.sh to be deployed to or checked against.
 
-Firstly, pop over to **Pipelines > Library** and click on **\+ Variable Groups**. 
+```
+variables: 
+- group: bumpsh
+
+  # Set to the location of the main OpenAPI document relative to repo root
+- name: openApiDoc
+  value: openapi.yaml
+
+  # The Documentation ID or Slug found in Bump.sh API Settings
+- name: bumpDoc
+  value: azure-demo
+```
+
+The variable group in there refers to a group of environment variables, and these are defined in the Azure DevOps interface: **Pipelines > Library** and click on **\+ Variable Groups**. 
 
 ![](/images/guides/azure-devops/add-variable-group.png)
 
@@ -121,6 +149,28 @@ When pushing to the `main` you will trigger the deploy job, which will update yo
 ![](/images/guides/azure-devops/doc-deploy-first.png)
 
 Here we can see the documentation has been created, and there's even a link to go and see it.
+
+### Step 5: Diff Detection Comments
+
+One of the most powerful features in Bump.sh is the automated changelog, and this logic can be used to speed up API Design Reviews by showing people clearly in a single comment what has changed in a pull request. Instead of having to look at lots of YAML, you can see a summary of all meaningful changes added as a comment.
+
+![](/images/guides/azure-devops/diff-comment.png)
+
+This is powered by the wonderful [PR Comment Task](https://marketplace.visualstudio.com/items?itemName=TommiLaukkanen.pr-comment-extension) **which you will need to install for your Azure DevOps Organization**.
+
+You may need to add **Contribute to pull requests** permission to your **Project Collection Build Service Accounts** from **Project Settings** > **Repositories** > **Security**, then you should be good to go.
+
+If you don't want to have the change detection comments, just delete the following section from `azure-pipeline.yaml`.
+
+```yaml
+  - script: npx bump-cli diff --format markdown $(openApiDoc) --doc $(bumpDoc) --token="$BUMP_TOKEN" > bump-diff.md
+    displayName: Diff OpenAPI
+
+  - task: PullRequestComment@1
+    inputs:
+      markdownFile: $(Build.SourcesDirectory)/bump-diff.md
+    displayName: PR Comment
+```
 
 ## Troubleshooting 
 
