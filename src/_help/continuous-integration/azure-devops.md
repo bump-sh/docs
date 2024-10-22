@@ -150,7 +150,7 @@ When pushing to the `main` you will trigger the deploy job, which will update yo
 
 Here we can see the documentation has been created, and there's even a link to go and see it.
 
-## Step 5: Diff Detection Comments
+### Step 5: Diff Detection Comments
 
 One of the most powerful features in Bump.sh is the automated changelog, and this logic can be used to speed up API Design Reviews by showing people clearly in a single comment what has changed in a pull request. Instead of having to look at lots of YAML, you can see a summary of all meaningful changes added as a comment.
 
