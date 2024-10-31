@@ -44,8 +44,6 @@ Add the `x-feedbackLink` property under the `info` section and paste in your fee
 Here’s an example of what this might look like in your OpenAPI YAML file:
 
 ```yaml
-# openapi.yaml
-
 openapi: 3.1.0
 info:
   title: Your Amazing API
@@ -67,6 +65,69 @@ Now, go to your API documentation on Bump.sh to confirm the feedback form is emb
 ![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/images/help/feedback-button.png)
 
 When you click that the form you set up should appear. Then you can send a test submission, to make sure it works as expected. When you do this it's best to do it in a private window to flush out any odd permissions issues, because you want to emulate an end-user, and they won't be logged in to the form builder software either.
+
+## Alternative Idea: GitHub Issues as Feedback
+
+If you're using GitHub, and the audience using the API have access to this repository, you might want to consider using [GitHub Issue Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) instead of a custom form on one of these other services.
+
+GitHub has it's own form builder which you can use to create something very similar.
+
+![Text-boxes embedded in a a new Github issue using the GitHub Form syntax](/images/guides/feedback/github-forms.png)
+
+Create a new file `.github/ISSUE_TEMPLATE/feedback.yaml`, and use this example to start you off:
+
+```yaml
+name: Feedback
+description: Help us improve this API with constructive feedback.
+title: "[Feedback]: "
+labels: ["feedback"]
+assignees:
+  - philsturgeon # change this to whoever should be in charge of handling feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to help us improve!
+  - type: textarea
+    id: doing-well
+    attributes:
+      label: What are we doing well?
+      description: Help us know where energy has been well invested so we can keep that up.
+    validations:
+      required: true
+  - type: textarea
+    id: could-improve
+    attributes:
+      label: What would you like to see improved?
+      description: Help us learn what you'd like to see done better so we can make life easier for more users.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: "eg: email@example.com"
+    validations:
+      required: false
+```
+
+When you have committed that and pushed it to your default branch (probably `main`), you can go to **GitHub** > **Issues** > **New**, and the **Feedback** option should have appeared. 
+
+Copy this URL out of your browsers' address bar, e.g.: `https://github.com/bump-sh-examples/train-travel-api/issues/new/choose`. Paste that URL into `x-feedbackLink.url`:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: Your Amazing API
+  version: 1.0.0
+  description: "API documentation with integrated feedback form"
+  x-feedbackLink:
+    label: Give feedback
+    url: "https://github.com/bump-sh-examples/train-travel-api/issues/new/choose"
+```
+
+That's it! 
 
 ## Tips for Effective Feedback Collection
 
