@@ -18,8 +18,8 @@ It requires two elements:
 ```yaml
 info:
   x-feedbackLink:
-    label: Share a feedback
+    label: Give feedback
     url: https://my-company.com/feedback
 ```
 
-![](/images/help/feedback-button.png)
+![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/images/help/feedback-button.png)
