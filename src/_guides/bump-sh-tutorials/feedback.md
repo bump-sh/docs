@@ -70,9 +70,9 @@ When you click that the form you set up should appear. Then you can send a test 
 
 If you're using GitHub, and the audience using the API have access to this repository, you might want to consider using [GitHub Issue Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) instead of a custom form on one of these other services.
 
-GitHub has it's own form builder which you can use to create something very similar.
+GitHub has its own form builder which you can use to create something very similar.
 
-![Text-boxes embedded in a a new Github issue using the GitHub Form syntax](/images/guides/feedback/github-forms.png)
+![Text-boxes embedded in a new Github issue using the GitHub Form syntax](/images/guides/feedback/github-forms.png)
 
 Create a new file `.github/ISSUE_TEMPLATE/feedback.yaml`, and use this example to start you off:
 
