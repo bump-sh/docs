@@ -11,7 +11,7 @@ This guide will show you how to set up a feedback form using Google Forms or Typ
 
 ## Step 1: Create Your Feedback Form
 
-First, choose your preferred form tool—either Google Forms or Typeform. Both options are excellent, but here’s a quick overview:
+First, choose your preferred form building tool, such as Google Forms, Typeform, or even Notion. All of these options are excellent and there are many more, but here’s a quick overview:
 
 - **Google Forms** is free, simple, and perfect for straightforward surveys.
 - **Typeform** offers a more visually engaging experience and may work better if you want an interactive form with a modern look.
@@ -23,7 +23,7 @@ Once you’ve chosen a tool:
 - **For Typeform**: Head to [Typeform](https://typeform.com), log in, and click "Create a typeform." Set up your questions, keeping them focused on the feedback you need to improve your API.
 - **For Notion**: Go to [Notion](https://www.notion.so), and once you have a workspace, add a New Page somewhere, and look for the "Form" option under "Getting started..."
 
-The tools all have a different form building, but the Notion builder should look like this.
+The tools all have a slightly different approach to form building, but just to illustrate the idea, the Notion builder looks like this.
 
 ![A few text boxes with questions asking "What are we doing well?", "What would you like to see improved?", and "Email"](/images/guides/feedback/notion-form-builder.png)
 
@@ -64,7 +64,7 @@ Now, go to your API documentation on Bump.sh to confirm the feedback form is emb
 
 ![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/images/help/feedback-button.png)
 
-When you click that the form you set up should appear. Then you can send a test submission, to make sure it works as expected. When you do this it's best to do it in a private window to flush out any odd permissions issues, because you want to emulate an end-user, and they won't be logged in to the form builder software either.
+Click the link that has appeared, and try sending a test submission to make sure it works as expected. When you do this it's best to do it in a private window to flush out any odd permissions issues, because you want to emulate an end-user, and they won't be logged in to the form builder software either.
 
 ## Alternative Idea: GitHub Issues as Feedback
 
