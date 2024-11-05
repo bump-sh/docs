@@ -2,7 +2,7 @@
 title: Improve Your API with User Feedback
 authors: phil
 excerpt: Make your API better by listening to the people who use it probably more than you do.
-date: 2024-10-31
+date: 2024-11-05
 ---
 
 Gathering user feedback is essential to improving your API and ensuring it meets users' needs. With Bump.sh, you can integrate feedback forms directly into your OpenAPI documentation by embedding a link to a form using [`x-feedbackLink` extension](/help/publish-documentation/feedback/). 
