@@ -1,138 +1,128 @@
 ---
-title: A Developer's Guide to API-First Design
-authors: Alex Doukas
+title: A Developer's Guide to API Design-First
+authors: phil
 image: images/guides/api-first-design-guide.png
 canonical_url: https://bump.sh/blog/dev-guide-api-design-first
-excerpt: Learn about the principles of API-first design and how it can benefit your organization.
-date: 2024-03-25
+excerpt: Learn about the principles of API design-first and how it can benefit your organization.
+date: 2024-11-15
 ---
 
-API-first design is a software development approach built around the idea that the application programming interfaces (APIs) should be the primary focus of the development process, with other system components, such as the user interface (UI) being developed later.
+API Design-First, also called schema-first or contract-first, is all about designing the interface of an API before writing any code. It's about planning the [API contract](https://bump.sh/blog/api-contracts-extended-introduction) first, and defining what the API does and how it works so everyone's on the same page before implementation starts. This approach has been around for a while, and over time, it's evolved to meet the needs of different technologies. These days, OpenAPI has become the defacto standard for designing REST APIs, and it can make life easier for everyone the whole way through the lifecycle of an API.
 
-API-first design is becoming increasingly important as more and more organizations are turning to microservices and other architectural patterns to improve their ability to scale, innovate, and adapt to changing business needs. This approach enables the development of flexible and modular systems that can be easily integrated with diverse systems and services.
 
-In this article, you'll learn about the principles of API-first design and how it can benefit your organization. You'll understand how API-first design works and learn about the different stages of the API design process. By the end of this article, you'll have a comprehensive understanding of the benefits of API-first design, and how [Bump.sh](https://bump.sh/) can serve as the single source of truth for all your APIs.
+## A Brief History
 
-## Why Is API-first Design Important?
+To understand why design-first is such a big deal, it helps to know where it came from.
 
-As mentioned, API-first design is a specific methodology for building software systems, where the API is designed and developed before any other system components. APIs are emphasized as a core part of the software development process rather than as an afterthought. In short, the API is considered the backbone of the software, and the rest of the system is built around it.
+- **The early days: WSDL and SOAP**: In the late 90s and early 2000s, SOAP web services were popular, and people used the XML-based WSDL (Web Services Description Language) to describe them. WSDL files outlined all the operations and payloads in a verbose XML format. It was powerful, but many felt it was overly complex. Developers creating, maintaining, and using the APIs felt the frustration of working with them.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Code First v.s. API First - A change of software development philosophy.<br><br>The diagram below shows the differences between code-first development and API-first development. Why do we want to consider API first design?<br><br>1 of 10 <a href="https://t.co/HKgSGYLOf9">pic.twitter.com/HKgSGYLOf9</a></p>&mdash; Alex Xu (@alexxubyte) <a href="https://twitter.com/alexxubyte/status/1592921944818491394?ref_src=twsrc%5Etfw">November 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+- **REST APIs take over**: REST, introduced in the early 2000s, focused on simplicity and scalability. Unlike SOAP, REST didn't have a standard way of describing APIs. Many developers relied on manual documentation, example cURL commands, or tools like Postman collections. It worked, but it was messy, inconsistent, and could easily diverge from the implementation of the API.
 
-<!-- ![API first design benefits](https://i.imgur.com/fHMwqTe.png) -->
+- **The OpenAPI era**: Around 2011, Swagger (later renamed OpenAPI) arrived to help describe REST APIs. It introduced a standard machine-readable format for defining operations, parameters, payloads, and validation rules, all using JSON or YAML. There were a few other similar projects (mainly RAML, API Blueprint) but they all fell out of use, and OpenAPI became the champion.
 
-API-first design is commonly applied in API-centric products. For example, companies like Stripe or Twilio offer their APIs as a core offering to customers, so they have to design them to be intuitive and user-friendly.
+## What Is API Design-First?
 
-Companies using or moving to a microservice architecture will also often adopt an API-first design approach. Because APIs are so important in microservices, developing standards and a well-thought-out workflow through API-first design is very important.
+API Design-First means you define the API's contract before writing any application code. This contract includes things like:
 
-When done well, API-first design offers a number of benefits:
+- The endpoints (URLs) and their HTTP methods (GET, POST, etc.)
+- The structure and validation rules of resources and collections.
+- Authentication rules (like API keys, OAuth 2.x, OpenID).
+- Errors that could be expected, and an example of their structure.
 
-### Faster Development Times
+At first this all seems like extra work, but much like writing tests for an application, it will eventually speed up the delivery of APIs, saving everyone time and money, and reduce costly rewrites onces not-quite-right APIs make it to beta, or even worse get into production.
 
-By designing the API first, development teams can more easily work in parallel on different parts of an application. Having a well-documented API means that teams can stub out specific endpoints to test and build their own systems without having to have a running instance of every API on their machine.
+## Why Design-First?
 
-Similarly, this improves coordination between frontend and backend teams. Frontend developers can build based on the assumption that the backend will adhere to the established documentation, allowing backend developers to work in parallel with them.
+Here's why design-first is worth the effort:
 
-Finally, API-first design makes it easier to reuse endpoints and logic throughout the system. For example, if you’re building an e-commerce application, several parts of the application may need to estimate shipping costs (e.g., pricing page, checkout workflow, returns workflow, invoice generation, etc.). If there’s a single, documented endpoint available, you can ensure that each time it is called, the results will be the same.
+1. **Clear communication**: Everyone – from frontend developers to testers to external users – knows what the API does.
+2. **Parallel work**: Frontend and backend teams can work at the same time. Mock APIs can be set up using the design, so development doesn't have to wait.
+3. **Consistency**: It's easier to enforce standards when the contract is agreed upon first.
+4. **Automation**: You can auto-generate documentation, code snippets, and even parts of the implementation using tools.
+5. **Version control**: It's easier to track and manage changes to the API over time.
 
-### Improved Developer Experience
+## OpenAPI and How It Helps
 
-It’s often easy to tell when a system wasn’t built with the API in mind because it uses clunky or non-standard endpoints. For example, I recently ran across an API that used the following endpoint to edit a user object:
+Describing an API is the most important part of the API design-first workflow after planning is done, and for anyone building a REST/RESTish API, the API description format of choice is OpenAPI.
 
+OpenAPI documents are written in JSON or YAML, making them machine-readable, and somewhat human-readable too. They contain all the information needed to describe the interface of an API: requests, responses, reusable components, etc.
+
+```yaml
+openapi: 3.0.0
+info:
+  title: Example API
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      summary: Get a list of users
+      responses:
+        '200':
+          description: A list of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
 ```
-POST http://api.example.com/v1/user/edit
+
+This snippet describes an API endpoint `/users` that responds with a list of users when a client sends a GET request. It then describes the responses a client could expect to see, with the status codes (e.g.: 200), content types (e.g.: `application/json`), then gets stuck into the `schema` which will outline the shape of the JSON.
+
+If you're just getting started with OpenAPI, we're here to help you on your journey. We've put together a guide to help you [learn OpenAPI from scratch](https://docs.bump.sh/guides/openapi/specification/v3.1/understanding-structure/basic-structure/), starting from the basic structure and going through every part of the functionality.
+
+## Comparing Design-first and Code-first
+
+For years the API Code-first approach was the way to build an API. You'd sketch out the API you want to build on a whiteboard, then before that was even done somebody would be generating controllers and views in their favourite programming language and firing JSON around. The goal was always to get coding as fast as possible, so that clients could start integrating with it as soon as a prototype was ready. 
+
+The rush to get coding often meant the first version clients get to see is not really anything like what they want, so a lot of time gets lost and wasted recoding controllers and doing database migrations. At some point everyone runs out of time and they have to go to production with whatever they have, even if it's a mess for clients to work with, and everyone just agrees to fix it all later in v2.0...
+
+When OpenAPI is utilized in this approach, it is usually as annotations or code comments, popped into the application somewhere near the code it's describing, with the hope being that a developer will remember to update both at the same time. These annotations can then be exported to an `openapi.yaml` document which can be displayed as documentation or generate SDKs.
+
+```java
+class UserController {
+  @OpenApi(
+      path = "/users",
+      method = HttpMethod.POST,
+      // ...
+  )
+  public static void createUser(Context ctx) {
+      // ...
+  }
+}
 ```
 
-While this approach technically works, it’s not common. Typically, in a REST API, modification of an object [would use a `PUT` or `PATCH` request and include the object’s ID in the URL](https://restfulapi.net/rest-put-vs-post/). So, consumers of this API must now very carefully read through all the documentation to be sure they use your API properly.
+Sadly this approach relies entirely on conflating proximity with accuracy. The annotations and code just a few lines below would often tell two completely different stories.
 
-Whether API consumers are internal or external, systems designed with the API in mind first will almost always provide a better experience to developers. They’re more likely to use established standards which make them much easier and less frustrating to use.
+Anyone who has been building APIs for more than a few years has probably done this and felt the pain, which is why so many API teams are starting to leverage the API design-first workflow.
 
-### Better Collaboration and Communication
+Here's a quick look at the two workflows for comparison.
 
-Ultimately, all the advantages of API-first design come down to making communication and collaboration better.
+![](/images/guides/design-first/code-first-design-first.png)
 
-When your API is clearly defined and agreed upon up-front, multiple teams can work in parallel, engineers can move from working with one API to another seamlessly, and errors in the implementation or consumption of APIs are more clear.
+Whilst there are a few more steps, the time invested on agreeing a contract early on brings massive time benefits through the rest of the API lifecycle.
 
-### When is API-First the Wrong Approach?
+Combining the API-Design-first workflow with OpenAPI specifically allows for amazing benefits:
 
-Just because there are advantages to API-first design doesn’t mean it’s a panacea. For example, if you’re building a traditional server-rendered application without plans to offer an API, adding extra layers is a waste of time. API-first design can also hamper nascent projects that aren’t sure exactly how the data model will look when they’re finished.
+1. **Readable by humans and machines**: The YAML/JSON format means it's clear for developers and allows for API design reviews / governance with teams that don't have to read multiple programming languages.
+2. **Interactive docs**: API Documentation generators like Bump.sh turn OpenAPI documents into interactive documentation, showing off parameters and examples, so clients can quickly and easily work with the API.
+3. **Mock servers**: Tools like Microcks and Wiretap can use the OpenAPI document to simulate the API, allowing parallel development of API and client applications, and allowing feedback to come in early and often.
+4. **Server-side Validation**: Instead of rewriting all of your validation logic in docs and code, you can use the OPenAPI document to power your application, making absolute certain the the documentation matches the implementation and reducing time spent writing code.
+5. **Contract Testing**: Use automated tools to probe your API implementation based off the OpenAPI document, and add assertions to existing test suites saying "does this response match what it says in OpenAPI", further ensuring the two are in agreement and saving time writing complicated contract testing by hand.
+6. **Code generation**: Many tools generate client libraries or server stubs directly from an OpenAPI document, saving loads of time.
+7. **API Style Guides**: Style guides are hard to enforce against code, developers need to check them manually, but with OpenAPI you can enforce standards on the API from the very first endpoint that is described.
 
-[Overengineering is a common problem in software development](https://solidstudio.io/blog/origin-of-overengineering), and API-first design approaches are no different.
+Anyone who has written API documentation by hand knows that it takes forever and is usually bad and outdated very quickly, so the fact that you have entirely accurate documentation from the start is a huge benefit for most teams. 
 
-## The API-First Design and Development Process
+These other benefits may not have ever been considered, they were just things that you spent infinite time doing by hand and had never even considered automating, but when you combine them altogether in a single workflow your team becomes unstoppable. 
 
-Now that you've seen some of the advantages an API-first process provides, let's get into the practical aspects—what does API-first design look like?
+Speed and accuracy both go through the roof, reducing time, cost and client frustration with your API.
 
-As the name implies, API-first design dictates that you plan your API as part of the application development process, but like all software, your API needs to be open to change as the system around it changes.
+## Wrapping Up
 
-Typically, a new API will undergo the following stages:
-
-### Define
-
-This is the initial stage of the API lifecycle, where you’ll define and establish the API's overall goals, requirements, and constraints. This stage is critical for setting the scope of the project and ensuring that the final API will meet the needs of its intended users and stakeholders.
-
-At this point, you should consider the technical and service-level requirements, the data format users will prefer (JSON, XML, etc.), the [data structure](https://medium.com/back-to-the-napkin/the-next-step-to-build-better-apis-consistent-data-structure-38667444f37e), and the downstream systems that rely on your API. You should also consider the audience for this API. Will it be publicly available? For private or internal use only? Or limited to verified partners?
-
-Finally, you should define any key roles or processes your team will use while building and maintaining the API. You’ll need to decide on the tools you’re going to use to design and document the API as well as a plan for change management.
-
-### Design
-
-Next, you will outline the API's design and structure. Based on the performance, scalability, security, and other requirements outlined in the _Define_ stage, you will need to make decisions like whether to use [REST, GraphQL, or gRPC](https://blog.logrocket.com/graphql-vs-grpc-vs-rest-choosing-right-api/), how to authenticate and authorize consumers, and how to report and track errors.
-
-During this stage, you can create API contracts that provide clear guidelines for the API's behavior. Assuming an HTTP API, developers will often use a standard specification like [OpenAPI](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md) or [AsyncAPI](https://bump.sh/blog/what-is-asyncapi) to define the [API’s operations (verb and URL)](https://www.ibm.com/docs/en/amoc/3.0.1?topic=operations-defining-rest-api) and response format. Having contracts like this allows developers to properly implement the API, and it lets consumers mock the API so they can build downstream applications.
-
-### Develop and Document
-
-In the next stage, you will implement the API, and create the necessary documentation.
-
-Traditionally, documentation has been a manual process, but API tooling has come a long way, and now you can use tools like [Bump.sh](https://bump.sh/) to automatically generate your API documentation from your contract defined during the design phase. This allows your developers to focus on implementing the API and building internal business logic without having to worry if they’re keeping their documentation up to date.
-
-As in building any web application, you’ll need to make decisions about the internal architecture of the API (framework, language, database, etc.), the ancillary services needed (message queues, notifications, etc.), and deployment options. If you’re in an established organization, many of these decisions might be mandated externally, but in greenfield projects, there’s often a lot of leeway.
-
-### Test
-
-Before deploying an API, it's important to thoroughly test it to ensure that it behaves as expected, meets the outlined spec, and will continue to behave as expected as the API changes. Typically, this includes unit testing, integration testing, and load testing. While [automated testing should comprise the bulk of your API tests](https://www.infoworld.com/article/3286529/test-automation-comes-of-age.html) you’ll likely want to do some manual QA as well to catch any unexpected behaviors before you launch.
-
-After launch, testing is equally important, so focus on building repeatable testing practices: run them as part of your CI pipeline, keep an eye on code coverage metrics, and don’t let test debt pile up. As you might imagine, these tests will be invaluable once your API starts changing and growing.
-
-### Secure
-
-While security should have been considered at the design stage, this point is important enough to check again after implementation. You want to prevent any unauthorized use or abuse of your API to ensure that sensitive data is protected. Encryption, access controls, user authentication, and other security measures should all be tested and verified before deployment. All the security checks that can be repeated should also be included in your CI processes so they are conducted continuously.
-
-Most high-stakes API projects will have penetration tests conducted by internal or external auditors. If you’re new to API security, familiarize yourself with [the OWASP API Security Top 10](https://owasp.org/www-project-api-security/) and make sure you’re covered.
-
-
-### Deploy
-
-After testing and securing the API, you can deploy it for use by its intended audience. Obviously, the specifics of this step vary greatly depending on your tech and infrastructure stack, but most companies use multiple environments to ensure their API can be deployed and that changes don’t cause unintended consequences when they’re released.
-
-### Observe
-
-Observability has come a long way in the past few years, and modern tools allow you to easily track your API's usage, performance, access logs, and errors. Instrumentation should let you catch issues and help you understand how consumers are using the API.
-
-### Evolve
-
-It is worth noting that this API development lifecycle isn’t a one-time process. Like most software projects, you’ll come back to implement changes frequently, so you’ll need to have a plan for implementing, testing, and announcing those changes.
-
-Tools like [Bump.sh](https://bump.sh/api-change-management) can help with this as it can track structural changes to your API to automatically update a [changelog](https://keepachangelog.com/en/1.0.0/) and trigger a [webhook to notify other services](/help/api-change-management/webhooks/).
-
-Finally, this lifecycle isn’t necessarily linear: you may need to move backward before you can move forwards. For example, during the development stage, teams may find that certain requirements must be re-evaluated or redesigned. Or, during the testing stage, they may discover issues that require changes to the API's design or implementation. In such cases, teams may need to go back to a previous stage of the API lifecycle to address these issues before moving forward.
-
-## Developer API Tools
-
-I’ve hinted at tooling a couple of times in this piece, but because it’s such an important part of building a great API, I’ll dig deeper here. There are a few categories of tools that are important when designing and building APIs, including:
-
-- [**Documentation tools**](https://bump.sh/blog/the-best-api-documentation-tools-for-dev-teams) range from presentation-only tools to automatic doc generation tools. In any case, you’ll definitely need some way to document your API and manage changes.
-- **Mocking tools** allow you to stub all or part of your API so consumers can work without a deployed version.
-- **Testing tools** come in many different shapes and sizes but most will allow you to automatically run and call endpoints with various parameters to ensure the results match your expectations.
-- An **API browser** can be helpful for browsing and troubleshooting endpoints or testing specific requests.
-
-Finding the right mix of tools often comes down to personal preference, cost, and ease of use or implementation. Ultimately, what works for one company might not work for another, so it’s important to evaluate all the options in your unique context.
-
-## Conclusion
-
-API-first design is a powerful way of building software that prioritizes APIs and their consumers. Development teams can create better products and more efficient workflows by designing APIs first and then building the rest of the application around them.
-
-Additionally, by thinking about the API from the beginning of the development process, teams can better anticipate the needs of third-party developers and create a more user-friendly experience for them. Overall, API-first design is a key strategy for creating high-quality, effective APIs that are well-suited to the needs of modern software development.
-
-Getting your API-first design efforts off the ground can be made easier with Bump.sh. Bump.sh is the simplest way to automatically create API documentation portals for internal, partners, and public APIs. Feel free to look at our [solution](https://bump.sh/users/sign_up), and please reach out to us if you have any feedback, comments, or suggestions you'd like to share. We're always listening.
+API Design-First is all about getting the API's design nailed down before jumping into coding. It helps teams work faster, stay consistent, and avoid costly mistakes later on. OpenAPI has become the standard for REST APIs, making it easy to design, document, and manage APIs. While other technologies like GraphQL offer alternatives, the simplicity and reliability of REST, combined with OpenAPI's ecosystem, make it a solid choice for most teams.
