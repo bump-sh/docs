@@ -1,6 +1,7 @@
 ---
 title: Improve Your API with User Feedback
 authors: phil
+canonical_url: https://bump.sh/blog/improve-your-api-with-user-feedback
 excerpt: Make your API better by listening to the people who use it probably more than you do.
 date: 2024-11-05
 ---
