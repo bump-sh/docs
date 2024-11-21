@@ -7,11 +7,11 @@ title: API Explorer (Beta)
 
 The API Explorer is a new feature in beta with limited access. You can request access by following this link.
 
-## **What is the API Explorer?**
+## What is the API Explorer?
 
 The API Explorer allows you to test an API in real-world conditions directly from its documentation. It facilitates API discovery by enabling you to try out specific API calls on any server listed in your definition file. It helps you get started quickly without a testing environment or share a specific use case for discovery, support, or debugging purposes.
 
-## **How to use the API Explorer?**
+## How to use the API Explorer?
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
@@ -25,7 +25,7 @@ We identify the required fields directly from the definition file, making it eas
 
 [screenshot of a response]
 
-### **Sharing**
+### Sharing
 
 It’s possible to share a request setup, which is useful for showing an example in a demo or for support purposes. The share button generates a URL that includes the pre-filled request parameters.
 
@@ -39,12 +39,12 @@ If the API documentation has been updated after the share URL was generated, you
 > The curl commands generated when filling out the form are copyable.
 {: .tip}
 
-## **Security**
+## Security
 
 > To ensure maximum security and confidentiality of requests, Bump.sh does not collect or store any confidential data during API Explorer use.
 {: .warning}
 
-### **Proxy**
+### Proxy
 
 To ensure optimal compatibility and total confidentiality, we chose to let the user’s browser process the requests rather than our main servers. Despite the obvious advantages, requests sent from a browser are sometimes poorly received by servers and result in what are known as CORS errors.
 
@@ -54,7 +54,7 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 For more on our approach and the decisions behind its creation, we’ve prepared a more detailed article: [link to the blog post].
 
-### **Authentication**
+### Authentication
 
 We support authentication for APIs that require prior authentication. Two options are available: via HTTP (Basic/Bearer) or via API keys.
 
@@ -63,7 +63,7 @@ We support authentication for APIs that require prior authentication. Two option
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
 
-## **Known Limitations of the Beta**
+## Known Limitations of the Beta
 
 The API Explorer is currently in closed beta. As such, not all features are yet available. Here is a non-exhaustive list of its current limitations:
 
