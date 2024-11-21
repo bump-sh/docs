@@ -58,9 +58,9 @@ help:
       - label: API Explorer
         link: /documentation-experience/api-explorer/
       - label: Markdown support
-        link: /enhance-documentation-content/markdown-support/
+        link: /documentation-experience/markdown-support/
       - label: Topics
-        link: /enhance-documentation-content/topics/
+        link: /documentation-experience/topics/
   - type: category
     label: Customization Options
     link: /customization-options/
