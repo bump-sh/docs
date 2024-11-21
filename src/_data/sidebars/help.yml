@@ -57,14 +57,16 @@ resources:
         label: Get feedback from users
         link: /publish-documentation/feedback/
   - type: category
-    label: Enhance your documentation content
-    link: /enhance-documentation-content/
+    label: Documentation experience
+    link: /documentation-experience/
     icon: pencil-line
     items:
+      - label: API Explorer
+        link: /documentation-experience/api-explorer/
       - label: Markdown support
-        link: /enhance-documentation-content/markdown-support/
+        link: /documentation-experience/markdown-support/
       - label: Topics
-        link: /enhance-documentation-content/topics/
+        link: /documentation-experience/topics/
   - type: category
     label: Customization Options
     link: /customization-options/
