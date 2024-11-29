@@ -5,7 +5,7 @@ title: API Explorer (Beta)
 - TOC
 {:toc}
 
-> The API Explorer is a new feature in beta with limited access. You can request access by following this link.
+> The API Explorer is a new feature in beta with limited access. You can request access by [contacting our team](mailto:hello@bump.sh).
 {: .info}
 
 ## What is the API Explorer?
