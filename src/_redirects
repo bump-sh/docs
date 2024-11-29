@@ -1,4 +1,4 @@
-https://help.bump.sh/markdown-support https://docs.bump.sh/help/enhance-documentation-content/markdown-support/
+https://help.bump.sh/markdown-support https://docs.bump.sh/help/documentation-experience/markdown-support/
 https://help.bump.sh/references https://docs.bump.sh/help/specifications-support/references/
 https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 / /help/ 302
@@ -7,8 +7,8 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/publish-documentation/release-management/ /help/publish-documentation/deploy-and-release-management/
 /help/branching /help/publish-documentation/branching/
 /help/access-management/ /help/publish-documentation/documentation-access-management/
-/help/specifications-support/markdown-support/ /help/enhance-documentation-content/markdown-support/
-/help/doc-topics/ /help/enhance-documentation-content/topics/
+/help/specifications-support/markdown-support/ /help/documentation-experience/markdown-support/
+/help/doc-topics/ /help/documentation-experience/topics/
 /help/custom-domains/ /help/customization-options/custom-domains/
 /help/quick-start/ /help/getting-started/
 /help/bump-cli /help/continuous-integration/cli/
