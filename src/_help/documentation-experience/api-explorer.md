@@ -5,7 +5,8 @@ title: API Explorer (Beta)
 - TOC
 {:toc}
 
-The API Explorer is a new feature in beta with limited access. You can request access by following this link.
+> The API Explorer is a new feature in beta with limited access. You can request access by following this link.
+{: .info}
 
 ## What is the API Explorer?
 
@@ -15,15 +16,15 @@ The API Explorer allows you to test an API in real-world conditions directly fro
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
-[screenshot of the button]
+![](/images/help/explorer-button.png)
 
 If you haven’t opened the API Explorer from a specific operation, you can select one from the corresponding menu.
 
-[screenshot of the API Explorer]
+![](/images/help/explorer-operation-selection.png)
 
 We identify the required fields directly from the definition file, making it easier for you to fill out the request, detecting whether it’s a boolean, date, etc. Fill in the expected information to execute the request and receive a response.
 
-[screenshot of a response]
+![](/images/help/explorer-response.png)
 
 ### Sharing
 
@@ -32,9 +33,9 @@ It’s possible to share a request setup, which is useful for showing an example
 > This URL will never share your authentication parameters or the response.
 {: .info}
 
-[screenshot of sharing]
+![](/images/help/explorer-share.png)
 
-If the API documentation has been updated after the share URL was generated, you will be notified when attempting to use it. You will then have the option to switch to an updated version of the operation. Note that in this case, new elements will no longer be pre-filled.
+If the API documentation has been updated after the share URL was generated, the Explorer will notify you that the pre-filled fields may have changed and display a link to the API changelog for a more detailed review of the changes.
 
 > The curl commands generated when filling out the form are copyable.
 {: .tip}
@@ -50,15 +51,13 @@ To ensure optimal compatibility and total confidentiality, we chose to let the u
 
 To avoid this situation, we created our own proxy, designed to ensure that requests sent from a browser are processed without error by an API’s servers, all while maintaining confidentiality and security: **cors toujours**.
 
-This proxy is hosted outside our infrastructure to ensure data security. Its open-source code is available via this GitHub repository: [link to the repo].
-
-For more on our approach and the decisions behind its creation, we’ve prepared a more detailed article: [link to the blog post].
+This proxy is hosted outside our infrastructure to ensure data security. Its open-source code will soon be made available to the community.
 
 ### Authentication
 
 We support authentication for APIs that require prior authentication. Two options are available: via HTTP (Basic/Bearer) or via API keys.
 
-[screenshot of the button and field to fill in]
+![](/images/help/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
