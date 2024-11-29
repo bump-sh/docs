@@ -9,6 +9,8 @@ https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 /help/access-management/ /help/publish-documentation/documentation-access-management/
 /help/specifications-support/markdown-support/ /help/documentation-experience/markdown-support/
 /help/doc-topics/ /help/documentation-experience/topics/
+/help/enhance-documentation-content/markdown-support/ /help/documentation-experience/markdown-support/
+/help/enhance-documentation-content/topics/ /help/documentation-experience/topics/
 /help/custom-domains/ /help/customization-options/custom-domains/
 /help/quick-start/ /help/getting-started/
 /help/bump-cli /help/continuous-integration/cli/
