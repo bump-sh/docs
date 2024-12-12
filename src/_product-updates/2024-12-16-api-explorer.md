@@ -25,7 +25,7 @@ Pre-defining and sharing a request can be really valuable for API maintainers, t
 - detect inconsistencies between the API definition and the live API,
 - help debugging, …
 
-API consumers now have a one-click sharing option, providing a unique link that will autofill the request form with the shared values, in the API Explorer.
+API Explorer users have a one-click sharing option, providing a unique link that will autofill the request form with the shared values. Let people reproduce the exact behavior you wanted to show them.
 
 Only the request is shared (the authentication method and the response are not).
 
