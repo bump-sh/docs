@@ -54,4 +54,4 @@ Try it now with the [name of the API.](https://bump.sh)
 
 The API Explorer is currently in beta. [You can request access here.](https://survey.typeform.com/to/RRACql9G)
 
-And last, but not least, you can now interact with the Bump.sh API [through the Explorer](https://developers.bump.sh/explorer)!
+And last, but not least, you can now interact with the Bump.sh API [through the Explorer!](https://developers.bump.sh/explorer)
