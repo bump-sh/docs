@@ -19,7 +19,7 @@ Readability is key in a context of discovery. A dedicated view for the API Explo
 ![api-explorer-request.png](/images/changelog/api-explorer-request.png)
 
 ## Request sharing
-The request can be really valuable for API maintainers, to: 
+Pre-defining and sharing a request can be really valuable for API maintainers, to: 
 - onboard new clients with a ready-to-play getting started,
 - facilitate customer support,
 - detect inconsistencies between the API definition and the live API,
