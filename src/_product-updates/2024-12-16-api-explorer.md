@@ -12,7 +12,7 @@ Sending a first request is the last mile of an API discovery. As setting up an A
 With the API Explorer, enable your users to go from API discovery to API usage, in one place.
 
 ## Send requests, right next to the API documentation
-It can be difficult for API consumers to understand the complete behavior of an API, that’s one of the reasons we make documentation. To ease the API’s discoverability in the Explorer, the request form is automatically generated with the right fields, based on the OpenAPI definition. No more Lorem Ipsum inside a date picker.
+It can be difficult for API consumers to understand the complete behavior of an API, that’s one of the reasons we make documentation. To ease the API’s discoverability in the Explorer, the request form is automatically generated with the right field types, based on the OpenAPI definition. No more Lorem Ipsum inside a date picker.
 
 Readability is key in a context of discovery. A dedicated view for the API Explorer next to the documentation means focusing on what’s important: the customer’s request, and the API’s response, while keeping the documentation just one click away. 
 
