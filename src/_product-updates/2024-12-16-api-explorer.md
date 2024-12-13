@@ -50,8 +50,6 @@ Interested in setting up mock servers for your APIs? [Contact us!](mailto:hello@
 ## What it means for us
 We are really proud of the first version of the API Explorer. It’s a new pillar in our vision: to create a next generation documentation platform that brings multiple tools together with one goal: to provide the smoothest API adoption possible for API consumers.
 
-Try it now with the [name of the API.](https://bump.sh)
-
 The API Explorer is currently in beta. [You can request access here.](https://survey.typeform.com/to/RRACql9G)
 
-And last, but not least, you can now interact with the Bump.sh API [through the Explorer!](https://developers.bump.sh/explorer)
+And last, but not least, you can discover it now with the [name of the API!](https://bump.sh) 
