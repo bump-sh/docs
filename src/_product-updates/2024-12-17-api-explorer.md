@@ -18,6 +18,9 @@ Readability is key in a context of discovery. A dedicated view for the API Explo
 
 ![api-explorer-request.png](/images/changelog/api-explorer-request.png)
 
+## Deep support of OpenAPI
+Your [API definition file is a contract](https://bump.sh/blog/how-openapi-ensures-reliable-api-communication) between you and your users. That's why we went all-in on supporting the OpenAPI specification in our API Explorer. From simple properties such as strings and booleans, to more complex ones such as arrays of objects or oneOf/anyOf, try any sort of request, based on any API design.
+
 ## Request sharing
 Pre-defining and sharing a request can be really valuable for API maintainers, to: 
 - onboard new clients with a ready-to-play getting started,
@@ -40,7 +43,7 @@ For APIs that don’t allow [CORS requests](https://developer.mozilla.org/fr/doc
 
 Everything remains between the API consumer and the API itself.
 
-## Help your leads discover your APIs with mock servers
+## Help your users discover your APIs with mock servers
 [Our freshly announced partnership with Microcks](https://bump.sh/blog/microcks-bump-sh-testing-mocking-docs) gives a hint about our next focus: we are looking into ways of enhancing the discovery experience by streamlining mocking capabilities. 
 
 A mocking server creates a playground to deeply play with the API, without the hassle of setting up a demo server or impacting the production server.
