@@ -32,7 +32,7 @@ API Explorer users have a one-click sharing option, providing a unique link that
 
 Only the request is shared (the authentication method and the response are not).
 
-When your API evolves, [Bump.sh](http://bump.sh) automatically detects if a shared request has become obsolete, alert your users of possible field changes, and provide them with a diff summary comparing the two versions.
+When your API evolves, [Bump.sh](http://bump.sh) automatically detects if a shared request has become obsolete, alerts your users of possible field changes, and provides them with a diff summary comparing the two versions.
 
 ![api-explorer-share.png](/images/changelog/api-explorer-share.png)
 
