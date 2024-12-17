@@ -55,4 +55,4 @@ We are really proud of the first version of the API Explorer. It’s a new pilla
 
 The API Explorer is currently in beta. [You can request access here.](https://survey.typeform.com/to/RRACql9G)
 
-And last, but not least, you can discover it now with the [name of the API!](https://bump.sh) 
+And last, but not least, you can discover it now with [our demo API!](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser) 
