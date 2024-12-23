@@ -1,7 +1,7 @@
 ---
 title: Generate SDKs with Speakeasy
 authors: phil
-excerpt: Improve the integration experience for your API users with SDKs in every major.
+excerpt: Help users integrate with your API quicker using client-code in their favourite language.
 date: 2024-12-17
 ---
 
