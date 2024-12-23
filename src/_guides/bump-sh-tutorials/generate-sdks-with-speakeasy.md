@@ -134,17 +134,19 @@ jobs:
 
 ```
 
-Notice it is still using the SPEAKEASY_API_KEY that we used in the generate workflow, but now there's a `NPM_TOKEN` we'll need to add. Grab that from your NPM account under Access Tokens, make sure it has write permission for packages, and save it as `NPM_TOKEN` in your repo GitHub repository Actions secrets.
+Notice it is still using the `SPEAKEASY_API_KEY` that we used in the generate workflow, but now there's a `NPM_TOKEN` we'll need to add. Grab that from your [NPM account](https://www.npmjs.com/login) under Access Tokens, make sure it has write permission for packages, and save it as `NPM_TOKEN` in your repo GitHub repository Actions secrets.
 
-Now if you push to main or merge a PR it will automatically publish to npm, and if its an automated change it will bump the version number for you so you don't have to! 
+Now if you push commits your main branch or merge a pull request, this GitHub Action will automatically help publish a new version of the SDK. 
 
 ![](/images/guides/generate-sdks-speakeasy/npm-new-version.png)
 
-From here, if you change anything relevant in the SDK repo, it'll publish a new SDK, and if the central OpenAPI changes it will also publish a new SDK. Everything is entirely automated now, so let's leave the SDK to itself, and figure out how to tell everyone about how amazing it is.
+From here, if you change anything relevant in the SDK repo, it'll publish a new SDK, and if the central OpenAPI changes it will also publish a new SDK. This solves a lot of the frustrations with managing packages too, such as manually bumping version numbers and figuring out if it should be major, minor, or patch, or setting up confusing conventions for automatically doing it like Semantic Release. Speakeasy and GitHub Actions (or similar) can just do all that for you as changes are merged.
+
+With everything be entirely automated we can leave the SDK to itself, and the DevRel team can focus on tell everyone about how amazing it is.
 
 ## Step 5: Integrating Code Samples into OpenAPI with Overlays
 
-In the past people would either have completely seperate "API Docs" and "SDK Docs", or they would spend countless hours copying and pasting SDK examples into the API Docs. 
+In the past people would either have completely separate "API Docs" and "SDK Docs", or they would spend countless hours copying and pasting SDK examples into the API Docs. 
 
 No more! 
 
