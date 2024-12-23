@@ -5,11 +5,13 @@ excerpt: Help users integrate with your API quicker using client-code in their f
 date: 2024-12-17
 ---
 
-The quicker a customer can integrate with your API, the quicker your business will be making money or solving problems. Some users will be happy to integrate directly with the API, but many prefer the ease of working within the programming language through Software Development Kits (SDKs). These can be a lot of work to build and keep up to date, but if you've got OpenAPI you really don't need to do all that manually. Generate them automatically with Speakeasy, and publish the code samples to your Bump.sh API documentation! 
+The quicker a customer can integrate with your API, the quicker your business will be making money or solving problems. Some users will be happy to integrate directly with the API, but many prefer the ease of working within the programming language through Software Development Kits (SDKs). 
+
+These can be a lot of work to build and keep up to date, but if you've got OpenAPI you really don't need to do all that manually. Generate them automatically with Speakeasy, and publish the code samples to your [Bump.sh API documentation](https://bump.sh/api-documentation)! 
 
 ## What is Speakeasy
 
-Speakeasy is Software-as-a-Service similar to Bump.sh, but instead of focusing on documentation they focus on SDK generation. In the past you'd have to use cumbersome Java-based open-source tooling and generally develop your own templates, but with Speakeasy you can simply upload an OpenAPI description document and get type-safe SDKs that your team will be proud of: include OAuth2.0, retries, pagination, custom code, and more.
+[Speakeasy](https://www.speakeasy.com/) is Software-as-a-Service similar to Bump.sh, but instead of focusing on documentation they focus on SDK generation. In the past you'd have to use cumbersome Java-based open-source tooling and generally develop your own templates, but with Speakeasy you can simply upload an OpenAPI description document and get type-safe SDKs that your team will be proud of: include OAuth2.0, retries, pagination, custom code, and more.
 
 ## Step 1: Set up Speakeasy
 
