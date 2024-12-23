@@ -17,7 +17,7 @@ To understand why design-first is such a big deal, it helps to know where it cam
 
 - **REST APIs take over**: REST, introduced in the early 2000s, focused on simplicity and scalability. Unlike SOAP, REST didn't have a standard way of describing APIs. Many developers relied on manual documentation, example cURL commands, or tools like Postman collections. It worked, but it was messy, inconsistent, and could easily diverge from the implementation of the API.
 
-- **The OpenAPI era**: Around 2011, Swagger (later renamed OpenAPI) arrived to help describe REST APIs. It introduced a standard machine-readable format for defining operations, parameters, payloads, and validation rules, all using JSON or YAML. There were a few other similar projects (mainly RAML, API Blueprint) but they all fell out of use, and OpenAPI became the champion.
+- **The OpenAPI era**: Around 2011, Swagger (later renamed OpenAPI) arrived to help describe REST APIs. It introduced a standard machine-readable format for defining operations, parameters, payloads, and validation rules, all using JSON or YAML. There were a few other similar projects (mainly RAML, API Blueprint) but they all fell out of use, and OpenAPI became the champion, especially with v3.0 and v3.1 improved on this base.
 
 - **AsyncAPI**: In 2017, AsyncAPI released a v1.0 of a new specification to help event-driven architectures describe their APIs in a similar way to OpenAPI, in fact it was a fork. It includes support for common message brokers such as Apache Kafka and RabbitMQ amongst many others.
 
@@ -44,7 +44,7 @@ Here's why design-first is worth the effort:
 
 ## API Description Formats and How They Help
 
-Describing an API is the most important part of the API design-first workflow after planning is done, and for anyone building a REST/RESTish API, the API description format of choice is OpenAPI. For anyone working with event-driven architectures the format of choice is AsyncAPI.
+Describing an API is the most important part of the API design-first workflow after planning is done, and for anyone building REST/RESTish APIs, the API description format of choice is OpenAPI. For anyone working with event-driven architectures the format of choice is AsyncAPI.
 
 OpenAPI documents are written in JSON or YAML, making them machine-readable, and somewhat human-readable too. They contain all the information needed to describe the interface of an API: requests, responses, reusable components, etc.
 
@@ -144,6 +144,18 @@ Anyone who has written API documentation by hand knows that it takes forever and
 These other benefits may not have ever been considered, they were just things that you spent infinite time doing by hand and had never even considered automating, but when you combine them altogether in a single workflow your team becomes unstoppable. 
 
 Speed and accuracy both go through the roof, reducing time, cost and client frustration with your API.
+
+## TypeSpec Making OpenAPI Easier
+
+If you're looking at this thinking "I want all of those benefits, but writing up a lot of YAML sounds annoying" then take a look at [TypeSpec](../openapi/accelerating-youropenapi-spec-generation-with-typespec.md). Released by Microsoft, TypeSpec is a TypeScript-based DSL (Domain-Specific Language) for designing HTTP APIs. 
+
+The main goal of TypeSpec is to split the language used for "design" and "description" in two. The design phase is more about ideating and things change quicker, and the description is more of an artifact of that process, but OpenAPI was essentially one language for both.
+
+OpenAPI is more verbose than any DSL could be, because it's written in JSON/YAML and that has limitations. You end up with a lot of text files, and the more you split your API description into multiple documents, the trickier it can be to rename things and keep all references up to date. 
+
+Having the design phase handled with TypeScript allows rapid change to the whole model, with autocomplete, bulk renaming, and type-strict modelling of all your data. 
+
+Later when it comes time to deploy documentation, run mock servers, do security checks, lint with style guides, etc. then TypeSpec does not have anywhere near as much tooling as OpenAPI, so you can say "ok, that design looks good, export OpenAPI" and run it through all of those tools, getting the best of both worlds.
 
 ## Wrapping Up
 
