@@ -147,7 +147,7 @@ Speed and accuracy both go through the roof, reducing time, cost and client frus
 
 ## TypeSpec Making OpenAPI Easier
 
-If you're looking at this thinking "I want all of those benefits, but writing up a lot of YAML sounds annoying" then take a look at [TypeSpec](/guides/openapi/accelerating-youropenapi-spec-generation-with-typespec/). Released by Microsoft, TypeSpec is a TypeScript-based DSL (Domain-Specific Language) for designing HTTP APIs. 
+If you're looking at this thinking "I want all of those benefits, but writing up a lot of YAML sounds annoying" then take a look at [TypeSpec](_guides/openapi/accelerating-youropenapi-spec-generation-with-typespec.md). Released by Microsoft, TypeSpec is a TypeScript-based DSL (Domain-Specific Language) for designing HTTP APIs. 
 
 The main goal of TypeSpec is to split the language used for "design" and "description" in two. The design phase is more about ideating and things change quicker, and the description is more of an artifact of that process, but OpenAPI was essentially one language for both.
 
