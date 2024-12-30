@@ -63,7 +63,7 @@ The output can get quite large, as Vacuum comes with a lot of useful rules baked
 
 ### Step 3: Configure Rules/Rulesets
 
-If there is anything fundamentally broken with the API description then Vacuum will consider that an "Error", but in this instance it looks like the Train Travel API is missing quite a few `examples`. Maybe that's not something I'm too worried about if I'm not using this OpenAPI document for API documentation or [mock servers](./mocking-with-microcks.md), and if that's the case for you you can turn off that rule.
+If there is anything fundamentally broken with the API description then Vacuum will consider that an "Error", but in this instance it looks like the Train Travel API is missing quite a few `examples`. Maybe that's not something I'm too worried about if I'm not using this OpenAPI document for API documentation or [mock servers](_guides/bump-sh-tutorials/mocking-with-microcks.md), and if that's the case for you you can turn off that rule.
 
 To configure Vacuum, create a `.vacuum.conf.yaml` file in your working directory (ideally the root of a Git repository).
 
