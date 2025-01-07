@@ -9,7 +9,7 @@ We are happy to announce the launch of our API Explorer, our clients' most reque
 
 Sending a first request is the last mile of an API discovery. As setting up an API client or using cURL in a CLI can be an endeavour for API users, we made things easier, by integrating the API Explorer into your documentation portal. 
 
-With the API Explorer, enable your users to go from API discovery to API usage, in one place.
+With the API Explorer, enable your users to go from API discovery to API usage, in a single place.
 
 ## Send requests, right next to the API documentation
 It can be difficult for API consumers to understand the complete behavior of an API, that’s one of the reasons we make documentation. To ease the API’s discoverability in the Explorer, the request form is automatically generated with the right field types, based on the OpenAPI definition. No more Lorem Ipsum inside a date picker.
