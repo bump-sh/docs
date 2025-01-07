@@ -5,7 +5,7 @@ image: /images/changelog/api-explorer.png
 ---
 ![api-explorer.png](/images/changelog/api-explorer.png)
 
-We are happy to announce the launch of our API Explorer, our client’s most requested feature.
+We are happy to announce the launch of our API Explorer, our clients' most requested feature.
 
 Sending a first request is the last mile of an API discovery. As setting up an API client or using cURL in a CLI can be an endeavour for API users, we made things easier, by integrating the API Explorer into your documentation portal. 
 
