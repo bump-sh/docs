@@ -5,7 +5,7 @@ title: AsyncAPI Support
 - TOC
 {:toc}
 
-We support the latest major version (v2) of [AsyncAPI specification](https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject). This pages describes some specificities related to our support for this specification.
+We currently support [AsyncAPI specification](https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject) up to version 2.6. If you’re interested in support for version 3.0, feel free to reach out to us directly via [email](mailto:hello@bump.sh). This pages describes some specificities related to our support for this specification.
 
 ## Minimal mandatory fields
 
