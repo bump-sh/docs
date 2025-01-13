@@ -109,7 +109,7 @@ Adding a new GitHub Action can help us do this, and we don't need to get things 
 # .github/workflows/lint.yml
 name: Lint
 
-"on":
+on:
   pull_request: {}
   push:
     branches: [main]
