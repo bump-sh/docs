@@ -56,3 +56,8 @@ We are really proud of the first version of the API Explorer. It’s a new pilla
 The API Explorer is currently in beta. [You can request access here.](https://survey.typeform.com/to/RRACql9G)
 
 And last, but not least, you can discover it now with [our demo API!](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser) 
+
+## Live demo
+Yoan Gross, our Product Manager/Designer, made a demo to explain our vision and approach.
+
+[![api-explorer-demo.png](/images/changelog/api-explorer-demo.png)](https://youtu.be/mNnNbumbz08)
