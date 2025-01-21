@@ -313,12 +313,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
         with:
-          doc: 68ac0647-184a-4e9d-accc-682a5b1f7189
+          doc: <your-doc-id-or-slug>
           token: ${{secrets.BUMP_TOKEN}}
           file: api/openapi.yaml
 
