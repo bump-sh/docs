@@ -7,7 +7,7 @@ title: Bump CLI
 
 The Bump.sh CLI is used to interact with API documentation and hubs hosted on Bump.sh from your choice of popular API description formats: OpenAPI, Swagger, or AsyncAPI.
 
-Using [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2.x), you can do any of the following:
+Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2.x), you can do any of the following:
 
 - Validate an API document before publishing to your documentation.
 - Publish an API document to your Bump.sh documentation or hubs.
@@ -99,7 +99,7 @@ Head over to your Documentation settings in the “CI deployment” section or y
 * [`bump preview [FILE]`](#the-preview-command)
 * [`bump overlay [DEFINITION_FILE] [OVERLAY_FILE]`](#the-overlay-command)
 
-### The `deploy` command
+### The deploy command
 
 When an API is updated, the documentation should be updated at the same time. This is what the deploy command is for.
 
@@ -158,7 +158,7 @@ bump deploy path/to/api-document.yml --dry-run --doc my-documentation --token $D
 
 Please check `bump deploy --help` for more usage details.
 
-### The `diff` command
+### The diff command
 
 Using the `diff` command can help to spot differences between the local API
 document and the latest deployed version. 
@@ -180,10 +180,6 @@ By default the command will always exit with a successful return code. If you
 want to use this command in a CI environment and want the command to fail **in
 case of a breaking change**, you will need to add the `--fail-on-breaking` flag
 to your diff command. 
-
-By default if the environment variable `CI=1` is present (in most continuous
-integration environment), the flag will be enabled. In that case you can disable
-the failures with `--no-fail-on-breaking` flag.
 
 You can also test this feature in our dedicated web application at
 <https://api-diff.io/>.
@@ -213,7 +209,7 @@ bump diff path/to/your/file.yml path/to/your/next-file.yml --doc my-documentatio
 
 Please check `bump diff --help` for full usage details.
 
-### The `preview` command
+### The preview command
 
 When writing documentation, you might want to preview how it renders on Bump.sh.
 This is precisely the goal of the `preview` command: it will create temporary
@@ -251,7 +247,7 @@ bump preview --live --open api-document.yaml
 
 Please check `bump preview --help` for more usage details
 
-### The `overlay` command
+### The overlay command
 
 The [Overlay Specification](https://spec.openapis.org/overlay/v1.0.0.html) from the OpenAPI Initiative makes it possible to modify the content of an API definition by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition. 
 
@@ -273,7 +269,7 @@ You can also apply the overlay using the [`deploy` command](#the-deploy-command)
 bump deploy api-document.yaml --doc my-doc --token my-token --overlay overlay.yaml
 ```
 
-If there are multiple overlays which need to be applied, the `--overlay` can be passed multiple times.
+If there are multiple overlays which need to be applied, the `--overlay` parameter can be passed multiple times.
 
 ```shell
 bump deploy api-document.yaml \
