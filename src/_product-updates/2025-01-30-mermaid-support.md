@@ -34,7 +34,7 @@ This example would render the following diagram [(see it live)](https://bump.sh/
 ![Mermaid example](/images/changelog/mermaid-diagram.png)
 
 
-The support of Mermaid is part of our global Markdown support. [Learn more about it in our help center](https://docs.bump.sh/help/documentation-experience/markdown-support/)
+The support of Mermaid is part of our global Markdown support. [Learn more about it in our help center.](https://docs.bump.sh/help/documentation-experience/markdown-support/)
 
 As always, don't hesitate to reach out if you have feedback about this feature!
 
