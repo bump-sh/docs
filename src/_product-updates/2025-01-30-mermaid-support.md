@@ -10,7 +10,7 @@ Sometimes, the best way to explain something about your API is to do it visually
 
 Diagrams and charts are powerful tools, that can be used to share updates on your API development roadmap or give key information on data processing flow, for example.
 
-To generate one, add a code block declared as ```mermaid``` inside a ```description``` or ```content``` property:
+To generate one, add a code block declared as `mermaid` inside a `description` or `content` property:
 
 ```yaml
   get:
