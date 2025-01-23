@@ -8,7 +8,9 @@ image: /images/changelog/mermaid.png
 
 Sometimes, the best way to explain something about your API is to do it visually. That's why we're announcing Mermaid support!
 
-Diagrams and charts are powerful tools, that can be used to share updates on your API development roadmap or give key information on data processing flow, for example.
+Diagrams and charts are powerful tools, that can be used to share updates on your API development roadmap or give key information on data processing flow, for example. 
+
+Discover the full list of diagrams and charts supported by Mermaid [here](https://mermaid.js.org/syntax/flowchart.html).
 
 To generate one, add a code block declared as `mermaid` inside a `description` or `content` property:
 
@@ -31,9 +33,8 @@ This example would render the following diagram [(see it live)](https://bump.sh/
 
 ![Mermaid example](/images/changelog/mermaid-diagram.png)
 
-Discover the full list of diagrams and charts supported by Mermaid [here](https://mermaid.js.org/syntax/flowchart.html).
 
-[Learn more about our Mermaid integration in our help center →](https://docs.bump.sh/help/publish-documentation/feedback/)
+The support of Mermaid is part of our global Markdown support. [Learn more about it in our help center](https://docs.bump.sh/help/documentation-experience/markdown-support/)
 
 As always, don't hesitate to reach out if you have feedback about this feature!
 
