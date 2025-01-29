@@ -1,14 +1,14 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "esbuild": "node esbuild.config.js --minify",
     "esbuild-dev": "node esbuild.config.js --watch"
   },
   "devDependencies": {
     "cssnano": "^6.0.1",
-    "esbuild": "^0.17.19",
+    "esbuild": "^0.19.2",
     "glob": "^10.2.6",
     "postcss": "^8.4.23",
     "postcss-color-mod-function": "^3.0.3",
