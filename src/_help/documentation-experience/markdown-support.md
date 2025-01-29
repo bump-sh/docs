@@ -70,7 +70,34 @@ will render:
 > this is an important information to **standout**.
 {: .info}
 
-### Images
+## Diagrams and charts (Mermaid Support)
+
+The direct integration of Mermaid via our Markdown support allows you to display diagrams and charts to visually illustrate key information, making it easier to understand. You can find the full list of diagrams supported by Mermaid on [this page](https://mermaid.js.org/syntax/flowchart.html).
+
+To create your diagram or chart, we recommend referring to Mermaid’s syntax guide, available [in their documentation](https://mermaid.js.org/intro/syntax-reference.html). It provides detailed syntax instructions for each type.
+
+To generate one, add a code block declared as `mermaid` inside a `description` or `content` property:
+
+```yaml
+  get:
+    description: |
+      ```mermaid
+      erDiagram
+        CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+        CUSTOMER ||--o{ ORDER : places
+        CUSTOMER ||--o{ INVOICE : "liable for"
+        DELIVERY-ADDRESS ||--o{ ORDER : receives
+        INVOICE ||--|{ ORDER : covers
+        ORDER ||--|{ ORDER-ITEM : includes
+        PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+        PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+      ```
+```
+This example would render the following diagram [(see it live)](https://bump.sh/demo/doc/mermaid-demo/operation/operation-get-booking-parameter):
+
+![Mermaid example](/images/help/mermaid-diagram.png)
+
+## Images
 
 Use the following syntax to add images in your markdown:
 ```
@@ -79,7 +106,7 @@ Use the following syntax to add images in your markdown:
 
 Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attribute#Usage) to your images: this description helps make them accessible to all your readers.
 
-#### Image sizing
+### Image sizing
 
 If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
 ```
