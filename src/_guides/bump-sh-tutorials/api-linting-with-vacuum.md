@@ -1,8 +1,10 @@
 ---
 title: API Linting with vacuum
 authors: phil
+image: image/guides/api-linting-with-vacuum/api-linting-with-vacuum.png
+canonical_url: https://bump.sh/blog/api-linting-with-vacuum
 excerpt: Validate API descriptions against rules and policies before releasing new versions in Bump.sh.
-date: 2025-01-07
+date: 2025-01-30
 ---
 
 Whether just starting to build an API and looking for feedback, or improving auditing an old API to see if it's secure, consistent, and up to scratch, the approach is likely the same: API linting.
@@ -27,7 +29,7 @@ This was obviously not ideal, so folks set out to automate the process, and over
 
 ## What is vacuum?
 
-Vacuum is completely free and open-source, built in Go and engineered from the ground up to be performant, avoiding some of the tricky legacy decisions that lead to Spectral not exactly being a race horse. Whilst there are other linters around, vacuum has the best of both worlds, it's very quick, and it supports Spectral "rulesets", so giving the best portability for rulesets being created or [reused from elsewhere](https://github.com/stoplightio/spectral-rulesets).
+vacuum is completely free and open-source, built in Go and engineered from the ground up to be performant, avoiding some of the tricky legacy decisions that lead to Spectral not exactly being a race horse. Whilst there are other linters around, vacuum has the best of both worlds, it's very quick, and it supports Spectral "rulesets", so giving the best portability for rulesets being created or [reused from elsewhere](https://github.com/stoplightio/spectral-rulesets).
 
 ## Using vacuum to improve Bump.sh API documentation
 
