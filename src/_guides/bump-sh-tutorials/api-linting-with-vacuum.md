@@ -1,7 +1,6 @@
 ---
 title: API Linting with vacuum
 authors: phil
-image: image/guides/api-linting-with-vacuum/api-linting-with-vacuum.png
 canonical_url: https://bump.sh/blog/api-linting-with-vacuum
 excerpt: Validate API descriptions against rules and policies before releasing new versions in Bump.sh.
 date: 2025-01-30
