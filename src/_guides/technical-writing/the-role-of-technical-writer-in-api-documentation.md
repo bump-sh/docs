@@ -24,6 +24,8 @@ For technical writers who have a software developer background, the transition t
 
 Technical writers also benefit from learning how to use API client tools, such as Postman, Insomnia, and Hoppscotch. Command-line tools such as cURL may also be useful but aren’t always necessary as it depends on the preferences of the intended audience that will use the API.
 
+> Bump.sh now includes its own [API Explorer](https://docs.bump.sh/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try !](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
+
 They also benefit from learning source control systems such as git or platforms such as GitHub and GitLab to better manage their artifacts and integrate with continuous integration pipelines. Understanding workflows around these systems is also important, including branching and forking documentation for upcoming releases without negatively impacting existing documentation.
 
 In some cases, it can be beneficial for technical writers to learn one or more of the following languages: Java, Python, GoLang, Ruby, JavaScript, Objective-C, Swift, and PHP. However, this isn’t necessary as development teams can help compose examples in these languages to be included in API documentation. 
