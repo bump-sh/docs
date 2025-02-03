@@ -41,7 +41,7 @@ The login page will systematically appear when attempting to access via the dire
 
 Enabling SSO typically involves two steps: one on the Bump.sh side and one on your identity provider's side.
 
-To activate SSO for your organization, the organization's owner must contact our support team, who will send them a configuration email.
+To activate SSO for your organization, the organization's owner must contact our support team.
 
 The configuration step for your identity provider depends on the specific provider you are using. You can refer to the [various guides provided by WorkOS](https://workos.com/docs/integrations) to follow the necessary steps.
 
