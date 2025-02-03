@@ -80,7 +80,7 @@ Congrats - you launched your API! But just because you have launched your API do
    - [ ] Step-by-step tutorials for common workflows or use cases.
    - [ ] Link to Postman collection or similar tool for API exploration and testing.
 
-> Bump.sh now includes its own [API Explorer](https://docs.bump.sh/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try !](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
+> Bump.sh now includes its own [API Explorer](https://docs.bump.sh/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try!](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
 
 ### 14. **Reference Applications**
    - [ ] Provide sample applications or integrations that use the API.

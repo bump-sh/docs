@@ -67,7 +67,6 @@ There are many tools to help you get the most out of OpenAPI, at every step of t
 
 ### Testing
 
-* [Bump.sh](https://bump.sh/api-documentation) 💙
 * [Microcks](https://microcks.io/)
 * [Postman](https://www.postman.com/api-platform/api-testing/)
 

@@ -22,9 +22,7 @@ I’ve personally experienced tremendous value by involving technical writers ea
 
 For technical writers who have a software developer background, the transition to API documentation is seamless. However, technical writers who have been more product or user-focused may find themselves quickly learning the essentials of APIs. This may include learning how HTTP works, how to leverage YAML and the OpenAPI Specification to capture API reference details, and how to author with asciidoc or markdown rather than XML-based authoring tools such as oXygen. 
 
-Technical writers also benefit from learning how to use API client tools, such as Postman, Insomnia, and Hoppscotch. Command-line tools such as cURL may also be useful but aren’t always necessary as it depends on the preferences of the intended audience that will use the API.
-
-> Bump.sh now includes its own [API Explorer](https://docs.bump.sh/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try !](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
+Technical writers also benefit from learning how to use API client tools, such as Bump.sh, Postman, Insomnia, and Hoppscotch. Command-line tools such as cURL may also be useful but aren’t always necessary as it depends on the preferences of the intended audience that will use the API.
 
 They also benefit from learning source control systems such as git or platforms such as GitHub and GitLab to better manage their artifacts and integrate with continuous integration pipelines. Understanding workflows around these systems is also important, including branching and forking documentation for upcoming releases without negatively impacting existing documentation.
 
