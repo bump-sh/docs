@@ -5,8 +5,6 @@ title: Badges
 - TOC
 {:toc}
 
-## Badges 
-
 Add badges to your endpoints/operations for a quick visual indication of their status.
 Some operations may require specific context to clarify their usage, such as “Technical Preview” or “Soon deprecated.”
 
@@ -39,8 +37,12 @@ paths:
                     Current definition URL. It should be accessible through HTTP by Bump.sh servers.
 ```
 
-Adding or removing this property is a structural change and is considered as breaking, as it can significantly impact API usage..
-When combined with the `x-beta` (see below), the `x-state` replaces its value, but keeps the beta behavior: a change in a beta component is never identified as a breaking change.
+Adding or removing the `x-state` property (displaying or removing the badge) is not considered a breaking change in the changelog, as it does not affect the integrity or structure of the API.
+
+Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a breaking change event.
+
+Exception: The `x-beta` property.
+Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence).
 
 The documentation displays custom tags on the operation and property:
 
@@ -51,7 +53,6 @@ The documentation displays custom tags on the operation and property:
 Use the `x-beta` property inside an operation, a schema or a parameter object to identify it as beta.
 The `x-beta` property is a boolean.
 
-Adding or removing this property is a structural change.
 A change in a beta component is never identified as a breaking change.
 
 ### Example usage
