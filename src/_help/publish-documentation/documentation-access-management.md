@@ -29,6 +29,9 @@ Inviting a colleague or teammate to become a member of [your organization](/help
 
 ### Invite external guests
 
+> Only admin and maintainer roles can invite external guests.
+> { :info}
+
 To invite people from outside of your organization to access a private documentation, click on the `Share Access` button, which is visible in the settings of that documentation.
 
 ![](/images/help/share-access-button.png)
