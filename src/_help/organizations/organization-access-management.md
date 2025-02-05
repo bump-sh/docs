@@ -15,6 +15,7 @@ The roles allow you to precisely choose which permissions to assign to members o
 | Hubs access              | ✓     | ✓          | ✓      |
 | Documentation management | ✓     | ✓          |        |
 | Hubs management          | ✓     | ✓          |        |
+| Invite external guests   | ✓     | ✓          |        |
 | Organization management  | ✓     |            |        |
 | Member management        | ✓     |            |        |
 
