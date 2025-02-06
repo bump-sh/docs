@@ -8,12 +8,12 @@ title: Badges
 Add badges to your endpoints/operations for a quick visual indication of their status.
 Some operations may require specific context to clarify their usage, such as “Technical Preview” or “Soon deprecated.”
 
-`x-state` is a custom property can be added inside an operation or a property to identify it with a custom badge.
+`x-state` is a custom property which can be added inside an operation or a schema to identify it with a custom badge.
 The `x-state` property is a string.
 
 ### Example usage
 
-Here under is an example of an operation and a property with a `x-state`.
+Here under is an example of an operation and a schema with an `x-state`.
 
 ```yaml
 paths:
@@ -31,7 +31,7 @@ paths:
                 url:
                   type: string
                   format: uri
-                  x-state: Still unstable # x-state flag at the object property level
+                  x-state: Still unstable # x-state flag at the schema level
                   description: |
                     **Required** if `definition` is not present.
                     Current definition URL. It should be accessible through HTTP by Bump.sh servers.
@@ -39,10 +39,10 @@ paths:
 
 Adding or removing the `x-state` property (displaying or removing the badge) is not considered a breaking change in the changelog, as it does not affect the integrity or structure of the API.
 
-Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a breaking change event.
+Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a potential breaking change event.
 
-Exception: The `x-beta` property.
-Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence).
+Exception: Usage together with the [`x-beta` property](#beta).
+Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). Only one visual badge will be visible in the documentation: the one with the `x-state` value.
 
 The documentation displays custom tags on the operation and property:
 
@@ -76,7 +76,7 @@ paths:
                 url:
                   type: string
                   format: uri
-                  x-beta: true # Beta flag at the object property level
+                  x-beta: true # Beta flag at the schema level
                   description: |
                     **Required** if `definition` is not present.
                     Current definition URL. It should be accessible through HTTP by Bump.sh servers.
