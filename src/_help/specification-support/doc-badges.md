@@ -5,6 +5,8 @@ title: Badges
 - TOC
 {:toc}
 
+## State
+
 Add badges to your endpoints/operations for a quick visual indication of their status.
 Some operations may require specific context to clarify their usage, such as “Technical Preview” or “Soon deprecated.”
 
