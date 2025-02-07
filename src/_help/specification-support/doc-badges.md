@@ -43,7 +43,7 @@ Adding or removing the `x-state` property (displaying or removing the badge) is 
 
 Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a potential breaking change event.
 
-Exception: Usage together with the [`x-beta` property](#beta).
+Exception: Usage together with the [`x-beta`](#beta) property.
 Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). Only one visual badge will be visible in the documentation: the one with the `x-state` value.
 
 The documentation displays custom tags on the operation and property:
