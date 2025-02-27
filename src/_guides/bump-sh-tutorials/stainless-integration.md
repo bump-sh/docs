@@ -5,21 +5,21 @@ excerpt: Drive faster API integration, broader adoption, with robust and polishe
 date: 2025-02-26
 ---
 
-Every developer wants to get up and running with an API as quickly as possible, and that means seeing code examples in their preferred language. With Stainless SDK integration in your bump.sh docs, you can automatically display idiomatic SDK code samples alongside your API reference documentation.
+Every developer wants to get up and running with an API as quickly as possible, and that means seeing code examples in their preferred language. With an integration between [Stainless](https://www.stainless.com/) and your Bump.sh docs, you can automatically display idiomatic SDK code samples alongside your API reference documentation.
 
-This guide will walk you through connecting Stainless-generated SDKs with your bump.sh documentation to create a seamless developer experience.
+This guide will walk you through connecting Stainless-generated SDKs with your Bump.sh documentation to create a seamless developer experience.
 
 ## Understanding Stainless SDK Integration
 
 Stainless is a platform that generates ergonomic, idiomatic client libraries from your OpenAPI
-specification. When integrated with bump.sh, Stainless can automatically inject code samples showing exactly how to call
+specification. When integrated with Bump.sh, Stainless can automatically inject code samples showing exactly how to call
 each endpoint using your official SDKs.
 
 Here's what the integration looks like:
 
 1. Stainless analyzes your OpenAPI specification and generates SDKs
 2. Stainless decorates your OpenAPI with code samples for each endpoint
-3. bump.sh renders these samples in your API reference documentation
+3. Bump.sh renders these samples in your API reference documentation
 
 The result is an interactive documentation that shows both raw HTTP requests and language-specific SDK examples developers can copy-paste and
 adapt to their need.
@@ -94,14 +94,14 @@ such as a password manager.
 Now go to the GitHub repository where your OpenAPI spec is located, and add a GitHub secret named `STAINLESS_API_KEY`,
 with the key as value.
 
-## Connecting Stainless with bump.sh
+## Connecting Stainless with Bump.sh
 
 The most efficient way to keep your SDK in sync with your documentation is through CI/CD automation.
 Stainless provides a
 [GitHub Action](https://github.com/marketplace/actions/stainless-upload-openapi-specification) to simplify that process:
 
 ```yaml
-name: Upload OpenAPI spec to Stainless and bump.sh
+name: Upload OpenAPI spec to Stainless and Bump.sh
 
 on:
   push:
