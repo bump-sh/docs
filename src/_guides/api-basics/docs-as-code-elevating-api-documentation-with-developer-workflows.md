@@ -35,7 +35,7 @@ Automated testing is a key aspect of ensuring documentation quality. While commo
 - **Link checkers** to validate internal and external links
 - **Schema validation tools** to ensure API documentation aligns with actual API definitions
 - **Spell checkers and grammar checkers** to catch errors before publication
-- **OpenAPI linters** (e.g., [Vacuum](https://bump.sh/blog/api-linting-with-vacuum)) to enforce compliance with your organization’s API style guide. 
+- **OpenAPI linters** (e.g., [vacuum](https://bump.sh/blog/api-linting-with-vacuum)) to enforce compliance with your organization’s API style guide. 
 
 By automating quality control, documentation teams can catch issues early in the writing process and reduce manual proofreading efforts.
 
