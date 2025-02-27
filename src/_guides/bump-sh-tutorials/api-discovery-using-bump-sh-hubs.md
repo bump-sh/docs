@@ -1,6 +1,7 @@
 ---
 title: Unlocking API Discovery with Bump.sh Hubs in Your Platform Engineering Strategy
 authors: james
+canonical_url: https://bump.sh/blog/api-discovery-with-bump-sh-hubs
 excerpt: By serving as a unified API catalog, Bump.sh Hubs help enterprises streamline API discovery, governance, and collaboration across teams.
 date: 2025-02-24
 ---
