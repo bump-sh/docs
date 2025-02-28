@@ -7,7 +7,7 @@ date: 2025-02-28
 
 Showing developers how to use your API in their preferred programming language dramatically reduces integration time and
 friction. [Stainless](https://www.stainless.com) transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
-actually want to use. By connecting these SDKs with your API documentation, you create a seamless workflow:
+actually want to use. By connecting these SDKs with your [Bump.sh](https://bump.sh) API documentation, you create a seamless workflow:
 
 1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating robust and polished client libraries
 2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
@@ -22,7 +22,7 @@ This guide will walk you through the setup process to create this seamless devel
 Before starting, make sure you have:
 
 - An account on [Stainless](https://app.stainless.com/signup)
-- An existing [Bump.sh](https://Bump.sh/) documentation project
+- An existing [Bump.sh](https://bump.sh/) documentation project
 - Your OpenAPI specification
 
 ## Setting Up Stainless for Your API
