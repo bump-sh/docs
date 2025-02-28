@@ -25,7 +25,7 @@ This approach bridges the gap between documentation and implementation, reducing
 
 Before starting, make sure you have:
 
-- An account on [Stainless](https://app.stainless.com/)
+- An account on [Stainless](https://app.stainless.com/signup)
 - An existing [Bump.sh](https://Bump.sh/) documentation project
 - Your OpenAPI specification
 
