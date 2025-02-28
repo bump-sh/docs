@@ -41,30 +41,11 @@ The Stainless Studio provides an immediate preview of your SDK structure based o
 
 ![Stainless SDK Studio showing SDK preview](/images/guides/stainless-integration/studio-preview.png)
 
-### Configure Your SDK Resources
+When first created, Stainless organizes your API into logical resources, but the exact names and hierarchy is up to you,
+allowing you to create the most intuitive experience for your users.
 
-Stainless automatically organizes your API into logical resources, but you may want to adjust this organization to create the most intuitive experience for your users.
-
-In the Studio, you can customize:
-
-- Resource grouping and naming
-- Method organization
-- Model definitions
-- Authentication mechanisms
-- Auto-pagination
-- and way more!
-
-For example, if you have an endpoint `GET /users/{user_id}/posts`, Stainless might structure this as:
-
-```typescript
-// Default structure
-client.users.posts.list(userId);
-
-// Or you might prefer
-client.posts.listByUser(userId);
-```
-
-The Studio lets you reorganize these resources to match your preferred SDK structure independently from your API endpoints.
+The Studio lets you customize everything from resource naming to authentication schemes - dive into the [configuration
+guide](https://app.stainless.com/docs/guides/configure) to learn how to prepare SDKs developers will love.
 
 ### Generate Code Examples
 
@@ -75,7 +56,8 @@ openapi:
   code_samples: "bump.sh"
 ```
 
-This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format Bump.sh can render.
+This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format Bump.sh can
+render. For advanced integration options and support for other documentation platforms, explore the [documentation integration guide](https://app.stainless.com/docs/guides/integrate-docs).
 
 ### Create an API key
 
