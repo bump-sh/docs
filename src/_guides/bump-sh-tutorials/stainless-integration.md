@@ -5,9 +5,9 @@ excerpt: Accelerate adoption of your API with native SDK examples automatically 
 date: 2025-02-28
 ---
 
-Showing developers how to use your API in their preferred programming language dramatically reduces integration time and
-friction. [Stainless](https://www.stainless.com) transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
-actually want to use. By connecting these SDKs with your [Bump.sh](https://bump.sh) API documentation, you create a seamless workflow:
+[Stainless](https://www.stainless.com) transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
+actually want to use. You can connect these SDKs with your [Bump.sh](https://bump.sh) API documentation to create a
+seamless workflow:
 
 1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating robust and polished client libraries
 2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
