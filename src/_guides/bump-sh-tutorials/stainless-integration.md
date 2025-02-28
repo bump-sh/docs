@@ -6,7 +6,7 @@ date: 2025-02-28
 ---
 
 Showing developers how to use your API in their preferred programming language dramatically reduces integration time and
-friction. Stainless transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
+friction. [Stainless](https://www.stainless.com) transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
 actually want to use. By connecting these SDKs with your API documentation, you create a seamless workflow:
 
 1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating robust and polished client libraries
