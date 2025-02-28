@@ -1,13 +1,15 @@
 ---
 title: Integrate Stainless with bump.sh API docs
-authors: dgellow
-excerpt: Drive faster API integration, broader adoption, with robust and polished SDKs
-date: 2025-02-26
+authors: stainless-sam
+excerpt: Accelerate adoption of your API with native SDK examples automatically integrated into your API documentation
+date: 2025-02-28
 ---
 
-Every developer wants to get up and running with an API as quickly as possible, and that means seeing code examples in their preferred language. With an integration between [Stainless](https://www.stainless.com/) and your Bump.sh docs, you can automatically display idiomatic SDK code samples alongside your API reference documentation.
+Showing developers how to use your API in their preferred programming language dramatically reduces integration time and friction. By connecting [Stainless SDKs](https://www.stainless.com) with your API documentation, you transform standard reference material into an interactive implementation guide.
 
-This guide will walk you through connecting Stainless-generated SDKs with your Bump.sh documentation to create a seamless developer experience.
+This integration automatically injects idiomatic code samples for each endpoint, giving developers exactly what they
+need: copy-paste-ready examples that demonstrate your API in action using your official client libraries. This guide
+will walk you through the setup process to create this seamless developer experience.
 
 ## Understanding Stainless SDK Integration
 
