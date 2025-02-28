@@ -71,7 +71,7 @@ Note: the API key should be considered secret and will only be shown once, be su
 such as a password manager.
 
 Now go to the GitHub repository where your OpenAPI spec is located, and add a GitHub secret named `STAINLESS_API_KEY`,
-with the key as value.
+with the API key as value.
 
 ## Connecting Stainless with Bump.sh
 
@@ -80,38 +80,75 @@ Stainless provides a
 [GitHub Action](https://github.com/marketplace/actions/stainless-upload-openapi-specification) to simplify that process:
 
 ```yaml
+# File .github/workflows/ci.yml
+
 name: Upload OpenAPI spec to Stainless and Bump.sh
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
-  stainless:
+  update-docs:
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Push spec and config to Stainless, output spec extended with code examples
+      - name: Push spec file to Stainless
         uses: stainless-api/upload-openapi-spec-action@main
         with:
           stainless_api_key: ${{ secrets.STAINLESS_API_KEY }}
-          input_path: "path/to/my-company-openapi.json" # your original spec
-          output_path: "path/to/my-company-openapi.documented.json" # will be the extended spec
           project_name: <your-stainless-project-name>
+          # Note: this should be the path to your specification file
+          input_path: "path/to/my-company-openapi.json"
+          # Note: this file will be your spec extended with code samples
+          output_path: "./openapi-with-code-samples.json"
 
-      - name: Deploy API documentation
+      - name: Deploy API docs to Bump.sh
         uses: bump-sh/github-action@v1
         with:
           doc: <your-bump-doc-id>
           token: ${{secrets.BUMP_TOKEN}}
-          file: "path/to/my-company-openapi.documented.json" # be sure to point to the extended spec
+          # Note: be sure this is pointing to the extended spec file
+          file: "./openapi-with-code-samples.json"
+
+api-diff:
+  if: ${{ github.event_name == 'pull_request' }}
+  name: Check API diff with Bump.sh
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Comment pull request with API diff
+      uses: bump-sh/github-action@v1
+      with:
+        doc: <your-bump-doc-id>
+        token: ${{secrets.BUMP_TOKEN}}
+        # Note: this should be the path to your specification file
+        file: "path/to/my-company-openapi.json"
+        command: diff
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-This workflow:
+This workflow will do 2 things:
 
-1. Upload your OpenAPI specification file to Stainless, triggering new builds of your SDKs
-2. Deploys the extended specification file to Bump.sh
+1. Whenever a Pull Request is created or updated, Bump.sh will generate a diff and submit a PR comment
+2. When commits are pushed to your `main` branch, your OpenAPI spec file is uploaded to Stainless, triggering a new
+   update to your SDKs. And a copy of your specification file extended with code samples is submitted to Bump.sh, to
+   ensure your docs are in sync.
 
 By combining Stainless's SDK generation with Bump.sh's documentation capabilities, you're providing developers with a seamless experience from discovery to implementation.
