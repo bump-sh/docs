@@ -11,20 +11,15 @@ This integration automatically injects idiomatic code samples for each endpoint,
 need: copy-paste-ready examples that demonstrate your API in action using your official client libraries. This guide
 will walk you through the setup process to create this seamless developer experience.
 
-## Understanding Stainless SDK Integration
+## How the Integration Works
 
-Stainless is a platform that generates ergonomic, idiomatic client libraries from your OpenAPI
-specification. When integrated with Bump.sh, Stainless can automatically inject code samples showing exactly how to call
-each endpoint using your official SDKs.
+Stainless transforms your OpenAPI specification into powerful, ergonomics SDKs that developers actually want to use. The integration with Bump.sh creates a unified workflow:
 
-Here's what the integration looks like:
+1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating safe, robust and polished client libraries
+2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
+3. **Live Documentation**: Developers see exactly how to call your API using your official SDKs alongside the raw HTTP details
 
-1. Stainless analyzes your OpenAPI specification and generates SDKs
-2. Stainless decorates your OpenAPI with code samples for each endpoint
-3. Bump.sh renders these samples in your API reference documentation
-
-The result is an interactive documentation that shows both raw HTTP requests and language-specific SDK examples developers can copy-paste and
-adapt to their need.
+This approach bridges the gap between documentation and implementation, reducing the "translation work" developers typically face when moving from API reference to working code. As your API evolves, both your SDKs and documentation automatically stay in sync.
 
 ## Prerequisites
 
