@@ -5,21 +5,17 @@ excerpt: Accelerate adoption of your API with native SDK examples automatically 
 date: 2025-02-28
 ---
 
-Showing developers how to use your API in their preferred programming language dramatically reduces integration time and friction. By connecting [Stainless SDKs](https://www.stainless.com) with your API documentation, you transform standard reference material into an interactive implementation guide.
+Showing developers how to use your API in their preferred programming language dramatically reduces integration time and
+friction. Stainless transforms your OpenAPI specification into powerful, future proof, and ergonomic SDK client libraries that developers
+actually want to use. By connecting these SDKs with your API documentation, you create a seamless workflow:
 
-This integration automatically injects idiomatic code samples for each endpoint, giving developers exactly what they
-need: copy-paste-ready examples that demonstrate your API in action using your official client libraries. This guide
-will walk you through the setup process to create this seamless developer experience.
-
-## How the Integration Works
-
-Stainless transforms your OpenAPI specification into powerful, ergonomics SDKs that developers actually want to use. The integration with Bump.sh creates a unified workflow:
-
-1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating safe, robust and polished client libraries
+1. **SDK Generation**: Your OpenAPI spec becomes the source of truth for generating robust and polished client libraries
 2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
 3. **Live Documentation**: Developers see exactly how to call your API using your official SDKs alongside the raw HTTP details
 
-This approach bridges the gap between documentation and implementation, reducing the "translation work" developers typically face when moving from API reference to working code. As your API evolves, both your SDKs and documentation automatically stay in sync.
+This integration automatically injects idiomatic code samples for each endpoint, bridging the gap between documentation and implementation. Developers get exactly what they need: copy-paste-ready examples that demonstrate your API in action. As your API evolves, both your SDKs and documentation automatically stay in sync.
+
+This guide will walk you through the setup process to create this seamless developer experience.
 
 ## Prerequisites
 
