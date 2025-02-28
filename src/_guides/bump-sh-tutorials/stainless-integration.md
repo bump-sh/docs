@@ -1,5 +1,5 @@
 ---
-title: Integrate Stainless with bump.sh API docs
+title: Integrate Stainless with Bump.sh API docs
 authors: stainless-sam
 excerpt: Accelerate adoption of your API with native SDK examples automatically integrated into your API documentation
 date: 2025-02-28
@@ -31,7 +31,7 @@ adapt to their need.
 Before starting, make sure you have:
 
 - An account on [Stainless](https://app.stainless.com/)
-- An existing [bump.sh](https://bump.sh/) documentation project
+- An existing [Bump.sh](https://Bump.sh/) documentation project
 - Your OpenAPI specification
 
 ## Setting Up Stainless for Your API
@@ -80,7 +80,7 @@ openapi:
   code_samples: "bump.sh"
 ```
 
-This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format bump.sh can render.
+This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format Bump.sh can render.
 
 ### Create an API key
 
@@ -135,6 +135,6 @@ jobs:
 This workflow:
 
 1. Upload your OpenAPI specification file to Stainless, triggering new builds of your SDKs
-2. Deploys the expetend specification file to bump.sh
+2. Deploys the extended specification file to Bump.sh
 
-By combining Stainless's SDK generation with bump.sh's documentation capabilities, you're providing developers with a seamless experience from discovery to implementation.
+By combining Stainless's SDK generation with Bump.sh's documentation capabilities, you're providing developers with a seamless experience from discovery to implementation.
