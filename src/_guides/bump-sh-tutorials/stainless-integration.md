@@ -144,7 +144,7 @@ api-diff:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-This workflow will do 2 things:
+This workflow will do two things:
 
 1. Whenever a Pull Request is created or updated, Bump.sh will generate a diff and submit a PR comment
 2. When commits are pushed to your `main` branch, your OpenAPI spec file is uploaded to Stainless, triggering a new
