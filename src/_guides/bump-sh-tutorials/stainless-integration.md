@@ -55,9 +55,7 @@ openapi:
 This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format Bump.sh can
 render. For advanced integration options and support for other documentation platforms, explore the [documentation integration guide](https://app.stainless.com/docs/guides/integrate-docs).
 
-## 3. Create an API key
-
-For the next step, you will need an API key to be able to interact with Stainless' API.
+## 3. Create a Stainless API key
 
 Go to your Stainless org page, select the "API Keys" tab, and create a new key.
 
@@ -66,7 +64,7 @@ Go to your Stainless org page, select the "API Keys" tab, and create a new key.
 Note: the API key should be considered secret and will only be shown once, be sure to copy and store it to a safe location,
 such as a password manager.
 
-Now go to the GitHub repository where your OpenAPI spec is located, and add a GitHub secret named `STAINLESS_API_KEY`,
+You can now navigate to the GitHub repository where your OpenAPI spec is located, and add a GitHub secret named `STAINLESS_API_KEY`,
 with the API key as value.
 
 ## 4. Connect Stainless with Bump.sh
