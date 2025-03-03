@@ -27,9 +27,7 @@ Before starting, make sure you have:
 - An existing [Bump.sh](https://bump.sh/) documentation project
 - Your OpenAPI specification
 
-## Setting Up Stainless for Your API
-
-### Create Your SDKs in the Studio
+## 1. Create Your SDKs in the Studio
 
 1. Log in to the [Stainless dashboard](https://app.stainless.com/)
 2. Click "New Project" and upload your OpenAPI specification
@@ -45,7 +43,7 @@ allowing you to create the most intuitive experience for your users.
 The Studio lets you customize everything from resource naming to authentication schemes - dive into the [configuration
 guide](https://app.stainless.com/docs/guides/configure) to learn how to prepare SDKs developers will love.
 
-### Generate Code Examples
+## 2. Generate Code Examples
 
 In the Studio, add the following to your Stainless configuration file:
 
@@ -57,7 +55,7 @@ openapi:
 This tells Stainless to create a copy of your OpenAPI file extended with SDK code examples, in a format Bump.sh can
 render. For advanced integration options and support for other documentation platforms, explore the [documentation integration guide](https://app.stainless.com/docs/guides/integrate-docs).
 
-### Create an API key
+## 3. Create an API key
 
 For the next step, you will need an API key to be able to interact with Stainless' API.
 
@@ -71,7 +69,7 @@ such as a password manager.
 Now go to the GitHub repository where your OpenAPI spec is located, and add a GitHub secret named `STAINLESS_API_KEY`,
 with the API key as value.
 
-## Connecting Stainless with Bump.sh
+## 4. Connect Stainless with Bump.sh
 
 The most efficient way to keep your SDK in sync with your documentation is through CI/CD automation.
 Stainless provides a
