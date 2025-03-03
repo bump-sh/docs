@@ -29,13 +29,13 @@ Before starting, make sure you have:
 
 ## Setting Up Stainless for Your API
 
-### Create Your SDK in Stainless Studio
+### Create Your SDKs in the Studio
 
 1. Log in to the [Stainless dashboard](https://app.stainless.com/)
 2. Click "New Project" and upload your OpenAPI specification
 3. Stainless will analyze your API and create an initial SDK configuration
 
-The Stainless Studio provides an immediate preview of your SDK structure based on your API's resources, endpoints, and models.
+The SDK Studio provides an immediate preview of your SDK structure based on your API's resources, methods, and models.
 
 ![Stainless SDK Studio showing SDK preview](/images/guides/stainless-integration/studio-preview.png)
 
