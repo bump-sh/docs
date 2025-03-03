@@ -13,6 +13,8 @@ seamless workflow:
 2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
 3. **Live Documentation**: Developers see exactly how to call your API using your official SDKs alongside the raw HTTP details
 
+![Python code example rendered by Bump.sh API docs](/images/guides/stainless-integration/bump-sh-code-example.png)
+
 This integration automatically injects idiomatic code samples for each endpoint, bridging the gap between documentation and implementation. Developers get exactly what they need: copy-paste-ready examples that demonstrate your API in action. As your API evolves, both your SDKs and documentation automatically stay in sync.
 
 This guide will walk you through the setup process to create this seamless developer experience.
