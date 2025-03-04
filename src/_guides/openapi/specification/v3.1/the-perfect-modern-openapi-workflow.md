@@ -198,7 +198,7 @@ when they’re sharing a single source of truth like this.
 
 ## Phase 2: API Governance
 
-API Governance is the framework or making great, consistent, reliable, and
+API Governance is the framework for making great, consistent, reliable, and
 consumable APIs. Over the last decade, API governance has gone from some vague
 concept being mentioned at conferences, to being a beautifully solved problem
 with a plethora of tooling. 
@@ -350,7 +350,7 @@ jobs:
 ### Contract Testing
 
 Contract testing used to be complicated, with dedicated testing tools running in
-isolation that had know knowledge of what the contract was meant to be until you
+isolation that had no knowledge of what the contract was meant to be until you
 told it. 
 
 How would a testing tool know what properties were meant to be returned by any
@@ -650,7 +650,7 @@ Another key part of API governance is discoverability, which usually takes the
 form of "API Catalogs". Infinite awkward solutions have been employed in the
 past. API teams have bodged together infinite awkward solutions with miles of
 duct-tape, but Bump.sh makes this easy with [Bump.sh
-Hubs](https://bump.sh/api-catalog).
+Hubs](https://docs.bump.sh/guides/bump-sh-tutorials/api-discovery-using-bump-sh-hubs/).
 
 Each API that has been added to Bump.sh's hosted documentation can be grouped
 together into various Hubs, which could be for "Public" and "Internal" usage.
@@ -671,7 +671,7 @@ interactive HTTP clients, like [Postman](https://postman.com/).
 Postman is able to import OpenAPI and create an API collection from it. You can
 manually do this step via the Postman interface, then pop a [Run in
 Postman](https://learning.postman.com/docs/publishing-your-api/run-in-postman/creating-run-button/)
-but into the Bump.sh API documentation to help API consumers find and use that
+button into the Bump.sh API documentation to help API consumers find and use that
 collection in their Postman application.
 
 Keeping it up-to-date as the API evolves via [Postman's Git
