@@ -2,8 +2,12 @@
 title: The Perfect Modern OpenAPI Workflow
 authors: phil
 # canonical_url: 
-excerpt: TODO
-date: 2025-02-10
+excerpt: >
+  Discover how OpenAPI can revolutionize your API development process with a
+  streamlined, Git-centric workflow. Learn about design, governance, and automated
+  deployment of documentation, mocks, and SDKs, all while maintaining a single
+  source of truth.
+date: 2025-03-04
 ---
 
 For decades designing and building APIs felt incredibly repetitive, because the
@@ -595,9 +599,10 @@ over HTTP directly.
 SDK generation tools have been around for a long time, but in the past the best
 offering was a cumbersome Java-based open-source tool where you generally had to
 develop your own templates. Modern tooling like
-[Speakeasy](_guides/bump-sh-tutorials/generate-sdks-with-speakeasy.md) allows
-API providers to point to an OpenAPI document, and produce type-safe SDKs that
-your team will be proud of. These will handle tricky functionality like OAuth 2,
+[Speakeasy](_guides/bump-sh-tutorials/generate-sdks-with-speakeasy.md) and
+[Stainless](src/_guides/bump-sh-tutorials/stainless-integration.md) allow API
+providers to point to an OpenAPI document, and produce type-safe SDKs that your
+team will be proud of. These will handle tricky functionality like OAuth 2,
 retries, pagination, and even allow for adding custom code to the generated
 output.
 
