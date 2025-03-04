@@ -691,6 +691,17 @@ Explorer.
 
 ![](/images/guides/the-perfect-modern-openapi-workflow/api-explorer-request.png)
 
+Whatever you use for an API client, during the design phase when you have no real API to work with, you can point the API client to the mock server so people can still experiment with the API. Then when a sandbox or production server is available you can add that too.
+
+```yaml
+servers:
+  - url: https://try.microcks.io/rest/Train+Travel+API/1.0.0
+    description: Mock Server
+
+  - url: https://api.example.com
+    description: Production
+```
+
 ## Summary
 
 The API Design first workflow is often considered to be "more work", but it's
