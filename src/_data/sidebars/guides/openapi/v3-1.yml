@@ -73,5 +73,7 @@ resources:
         link: /extending/extensions/
       - label: Enriching OpenAPI with Overlays
         link: /extending/overlays/
+  - label: The Perfect Modern OpenAPI Workflow
+    link: /the-perfect-modern-openapi-workflow/
   - label: The Cheat Sheet
     link: /cheatsheet/
