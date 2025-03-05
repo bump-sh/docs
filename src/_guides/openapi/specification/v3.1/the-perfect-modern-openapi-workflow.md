@@ -10,6 +10,9 @@ excerpt: >
 date: 2025-03-04
 ---
 
+- TOC
+{:toc}
+
 For decades designing and building APIs felt incredibly repetitive, because the
 whole job seemed to be repeating the "I" in API (Interface) over and over again
 in various formats. Every APIs would define all the endpoints, properties, data
