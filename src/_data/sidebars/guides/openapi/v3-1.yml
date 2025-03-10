@@ -49,6 +49,8 @@ resources:
         link: /advanced/multiple-content-types/
       - label: Multipart Form Data
         link: /advanced/multipart-form-data/
+      - label: File Uploads
+        link: /advanced/file-uploads/
       - label: Handling Error Formats
         link: /advanced/error-formats/
       - label: Security Definitions (Authentication and Authorization)
