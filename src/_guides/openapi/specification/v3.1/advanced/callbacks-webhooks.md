@@ -159,4 +159,6 @@ However if you are building an API that is entirely asynchronous, you are using 
 
 ## Examples
 
-There's a full example in either [Bump.sh's Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), or OpenAPI v3.1 Specification has a [Petstore example](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.yaml).
+There's a full example in either [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), or [Bump.sh API](https://developers.bump.sh/operation/operation-webhookdocstructurechange): every structural change on API documentation generates a new request to this webhook.
+
+You can also find more information about documenting webhooks in [this blog post](https://bump.sh/blog/documenting-your-OpenAPI-webhooks).
