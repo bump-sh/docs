@@ -33,13 +33,13 @@ Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, p
 
 To work with Overlays you’ll need a tool that understands them, and that’s not all OpenAPI tools as the concept is still very new. Regardless of what API documentation tool you are using, you can use the [Bump CLI](https://github.com/bump-sh/cli) to apply these overlays, and this will produce a new user-facing document.
 
-```
-$ bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
+```shell
+bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
 ```
 
 You can run these commands in continuous integration, and whatever you would have done with the original you can now do with the new `openapi.public.yaml` (or whatever you decide to name it).
 
-Here’s part of a GitHub Action used to deploy overlay-based improved documentation.
+When deploying a document to Bump.sh using the GitHub Action or the CLI, you can skip a step and point the deploy command at the overlay.
 
 ```yaml
 name: Deploy documentation
@@ -57,16 +57,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Apply overlay to API document
-        run: |
-          npx bump-cli overlay api/openapi.bundle.yaml api/overlays.yaml > api/openapi.public.yaml
-
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
         with:
           doc: partner-api
           token: ${{secrets.BUMP_TOKEN}}
-          file: api/openapi.public.yaml
+          file: api/openapi.bundle.yaml
+          overlay: api/overlays.yaml
 ```
 
 **Learn more about [Overlays](_guides/openapi/augmenting-generated-openapi.md)** and using them within Bump.sh.

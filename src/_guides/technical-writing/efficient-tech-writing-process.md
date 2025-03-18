@@ -41,7 +41,7 @@ Another popular new option is to see how far you can get with things like ChatGP
 
 However the editing is done, if the code and OpenAPI are living in the same Git repo, you can use the OpenAPI to power the code, then the technical writers can keep chipping in extra descriptions and improving the situation whilst the engineers keep adding new endpoints and properties over time.
 
-We’ve written some guides on how to leverage the design-first workflow in [Laravel PHP](https://docs.bump.sh/guides/openapi/design-first-laravel-php/) and [Ruby on Rails](https://docs.bump.sh/guides/openapi/design-first-rails/), but there are great tools out there to help you with [most popular languages/frameworks](https://docs.bump.sh/guides/openapi/code-first/#move-to-api-design-first).
+We’ve written some guides on how to leverage the design-first workflow in [Laravel PHP](_guides/openapi/design-first-laravel-php.md) and [Ruby on Rails](_guides/openapi/design-first-rails.md), but there are great tools out there to help you with [most popular languages/frameworks](/guides/openapi/code-first/#move-to-api-design-first).
 
 ### Option 2.) Use a OpenAPI-aware framework
 
@@ -54,7 +54,7 @@ Using these modern OpenAPI-aware frameworks, the engineering team can start to b
 go run . openapi > openapi.yaml
 ```
 
-This example from the Go framework [Huma](https://docs.bump.sh/guides/bump-sh-tutorials/huma/) is just one modern [OpenAPI-aware framework](https://docs.bump.sh/guides/openapi/code-first/#openapi-aware-frameworks) that can do this, but you can also consider [API Platform](https://docs.bump.sh/guides/bump-sh-tutorials/api-platform/) for PHP, or [FastAPI](https://docs.bump.sh/guides/bump-sh-tutorials/fastapi/) if Python is more your cup of tea.
+This example from the Go framework [Huma](/guides/bump-sh-tutorials/huma/) is just one modern [OpenAPI-aware framework](/guides/openapi/code-first/#openapi-aware-frameworks) that can do this, but you can also consider [API Platform](/guides/bump-sh-tutorials/api-platform/) for PHP, or [FastAPI](/guides/bump-sh-tutorials/fastapi/) if Python is more your cup of tea.
 
 Most of these tools will export OpenAPI right over the top of the previous OpenAPI, overriding any previous changes. This is not ideal, and it’s likely these tools will eventually start offering “merge” functionality, but in the meantime how can you add valuable content to OpenAPI contributions without having it vanish on the next build?
 
@@ -77,21 +77,20 @@ actions:
       Protect Earth's Tree Tracker API will let you see what we've been planting and restoring all
       around the UK, and help support our work by directly funding the trees we plant or the sites
       we restore.
-      To get involved [contact us and ask for an access token](https://protect.earth/contact) then
-      [check out the API documentation](https://protect.earth/api).
+      To get involved [contact us and ask for an access token](https://protect.earth/contact).
 ```
 
-Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, pointing to parts of the original document with [JSONPath](/guides/openapi/jsonpath), then adding or updating your content in. You can add as many actions to these overlays as you like, or make multiple overlays.
+Using OpenAPI Overlays you can effectively “patch” an OpenAPI description, pointing to parts of the original document with [JSONPath](_guides/openapi/jsonpath.md), then adding or updating your content in. You can add as many actions to these overlays as you like, or make multiple overlays.
 
 To work with Overlays you’ll need a tool that understands them, and that’s not all OpenAPI tools as the concept is still very new. Regardless of what API documentation tool you are using, you can use the [Bump CLI](https://github.com/bump-sh/cli) to apply these overlays, and this will produce a new user-facing document.
 
-```
-$ bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
+```shell
+bump overlay openapi.yaml overlays.yaml > openapi.public.yaml
 ```
 
 You can run these commands in continuous integration, and whatever you would have done with the original you can now do with the new `openapi.public.yaml` (or whatever you decide to name it).
 
-Here’s part of a GitHub Action used to deploy overlay-based improved documentation.
+When deploying a document to Bump.sh, whether using the GitHub Action or the CLI, you can skip a step and point the deploy command at the overlay to have it handled automatically.
 
 ```yaml
 name: Deploy documentation
@@ -109,19 +108,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Apply overlay to API document
-        run: |
-          npx bump-cli overlay api/openapi.bundle.yaml api/overlays.yaml > api/openapi.public.yaml
-
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
         with:
           doc: partner-api
           token: ${{secrets.BUMP_TOKEN}}
-          file: api/openapi.public.yaml
+          file: api/openapi.bundle.yaml
+          overlay: api/overlays.yaml
 ```
 
-_Learn more about [Overlays](/guides/openapi/augmenting-generated-openapi/) and using them within Bump.sh._
+**Learn more about [Overlays](_guides/openapi/augmenting-generated-openapi.md)** and using them within Bump.sh.
 
 ## Adding more context as Technical Writers
 
@@ -266,7 +262,7 @@ actions:
     remove: true
 ```
 
-> Learn more about working with JSONPath to write powerful targets for your overlays using our guide [How to work with JSONPath](/guides/openapi/jsonpath).
+> Learn more about working with JSONPath to write powerful targets for your overlays using our guide [How to work with JSONPath](_guides/openapi/jsonpath.md).
 {: .info}
 
 ## Consolidate multiple APIs and services to one Hub

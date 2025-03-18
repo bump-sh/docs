@@ -41,22 +41,18 @@ By default, FastAPI generates what can be considered a plain technical descripti
 
 FastAPI lets you extend documents, [using Python](https://fastapi.tiangolo.com/how-to/extending-openapi/). 
 
-You can also accomplish this using OpenAPI's [Overlay specification](https://github.com/OAI/Overlay-Specification/blob/main/versions/1.0.0.md), which can be convenient in all use cases where you do not want to change your Python code base (e.g. when involving Technical Writers or Product Managers in writing docs).
+You can also accomplish this using OpenAPI's [Overlay specification](https://spec.openapis.org/overlay/v1.0.0.html), which can be convenient in all use cases where you do not want to change your Python code base (e.g. when involving Technical Writers or Product Managers in writing docs).
 
-The Bump.sh CLI supports Overlays. Technically, the `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the operations described in the `[OVERLAY_FILE]` Overlay file to the original API document.
+The Bump.sh CLI supports Overlays. The `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the changes described in the `[OVERLAY_FILE]` overlay file to the original API document. The `bump deploy` command can also take an `--overlay` parameter to skip the extra step.
 
-1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](/guides/openapi/augmenting-generated-openapi)), and name it `overlays.json` (YAML and JSON are both supported as inputs for the CLI).
+1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](_guides/openapi/augmenting-generated-openapi.md)), and name it `overlays.yaml` (JSON is also supported).
 
-2. Apply your Overlay document to the original API document
+2. Deploy the documentation (with overlays included) to Bump.sh.
   ```shell
-  bump overlay http://127.0.0.1:8000/openapi.json overlays.json > openapi.updated.json
-  ```
-
-3. Deploy the resulting file to Bump.sh
-  ```shell
-  bump deploy openapi.updated.json \
+  bump deploy http://127.0.0.1:8000/openapi.json \
     --doc my-documentation-name \
     --token my-documentation-token
+    --overlay overlays.yaml
   ```
 
 > Note: The diff computation performed by Bump.sh to display the [API changelog](/help/changes-management/changelog) is done when the resulting file is deployed.

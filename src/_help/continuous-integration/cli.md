@@ -7,11 +7,12 @@ title: Bump CLI
 
 The Bump.sh CLI is used to interact with API documentation and hubs hosted on Bump.sh from your choice of popular API description formats: OpenAPI, Swagger, or AsyncAPI.
 
-Using [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2.x), you can do any of the following:
+Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2.x), you can do any of the following:
 
 - Validate an API document before publishing to your documentation.
 - Publish an API document to your Bump.sh documentation or hubs.
 - Compare two API documents to generate a human-readable diff from your API definition.
+
 Under the hood, it uses the API of [developers.bump.sh](https://developers.bump.sh). And is built with the [`oclif`](https://oclif.io) framework in Typescript.
 
 ## Installation
@@ -255,7 +256,7 @@ Please check `bump preview --help` for more usage details
 
 The [Overlay Specification](https://spec.openapis.org/overlay/v1.0.0.html) from the OpenAPI Initiative makes it possible to modify the content of an API definition by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition. 
 
-The `bump overlay` command takes an original API document, applies the changes from the overlay document, and outputs a modified version. No changes are made directly to the original document.
+The `bump overlay` command takes an original API document (an OpenAPI or AsyncAPI document), applies the changes from the overlay document, and outputs a modified version. No changes are made directly to the original document.
 
 ```shell
 bump overlay api-document.yaml overlay.yaml
@@ -273,7 +274,7 @@ You can also apply the overlay using the [`deploy` command](#the-deploy-command)
 bump deploy api-document.yaml --doc my-doc --token my-token --overlay overlay.yaml
 ```
 
-If there are multiple overlays which need to be applied, the `--overlay` can be passed multiple times.
+If multiple overlay documents need to be applied, the `--overlay` parameter can be passed multiple times.
 
 ```shell
 bump deploy api-document.yaml \
