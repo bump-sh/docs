@@ -41,7 +41,7 @@ Another popular new option is to see how far you can get with things like ChatGP
 
 However the editing is done, if the code and OpenAPI are living in the same Git repo, you can use the OpenAPI to power the code, then the technical writers can keep chipping in extra descriptions and improving the situation whilst the engineers keep adding new endpoints and properties over time.
 
-We’ve written some guides on how to leverage the design-first workflow in [Laravel PHP](_guides/openapi/design-first-laravel-php.md) and [Ruby on Rails](_guides/openapi/design-first-rails.md), but there are great tools out there to help you with [most popular languages/frameworks](_guides/openapi/code-first.md#move-to-api-design-first).
+We’ve written some guides on how to leverage the design-first workflow in [Laravel PHP](_guides/openapi/design-first-laravel-php.md) and [Ruby on Rails](_guides/openapi/design-first-rails.md), but there are great tools out there to help you with [most popular languages/frameworks](/guides/openapi/code-first/#move-to-api-design-first).
 
 ### Option 2.) Use a OpenAPI-aware framework
 
