@@ -240,11 +240,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy API documentation
-        run: |
-          npx bump-cli deploy openapi.yaml \
-            --doc <your-doc-id-or-slug> \
-            --token "${{secrets.BUMP_TOKEN}}" \
-            --overlay https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-typescript-code-samples
+        uses: bump-sh/github-action@v1
+        with:
+          doc: <your-doc-id-or-slug>
+          token: ${{secrets.BUMP_TOKEN}}
+          file: openapi.yaml
+          overlay: https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-typescript-code-samples
 ```
 
 Commit that, and you'll be generating and deploying OpenAPI-based API Reference Documentation with the very latest version of the code samples.
@@ -255,7 +256,21 @@ See how they look here on the hosted [Train Travel API documentation](https://bu
 
 **Documenting Multiple SDKs**
 
-To generate multiple SDK languages just repeat the process, to create another SDK on Speakeasy, with another repo, get that repo automated, then in the central repository containing the OpenAPI update your GitHub Action to pass in multiple overlays, one for each SDK language.
+To generate multiple SDK languages just repeat the process, to create another SDK on Speakeasy, with another repository to contain it, and get that repository automated in the same way. 
+
+Then in the "central repository" containing the OpenAPI update your GitHub Action to pass in multiple overlays, one for each SDK language, with a comma separating each one.
+
+```yaml
+  - name: Deploy API documentation
+    uses: bump-sh/github-action@v1
+    with:
+      doc: <your-doc-id-or-slug>
+      token: ${{secrets.BUMP_TOKEN}}
+      file: openapi.yaml
+      overlay: https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-typescript-code-samples,https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-php-code-samples
+```
+
+When using any other continuous integration, the CLI deploy command can be passed multiple overlay documents by repeating the `--overlay` parameter.
 
 ```yaml
   - name: Deploy API documentation
@@ -267,8 +282,8 @@ To generate multiple SDK languages just repeat the process, to create another SD
         --overlay https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-php-code-samples
 ```
 
-These overlays will be applied in order, and you can combine them with other overlays from technical writers or other tooling.
+These overlay documents will be applied in order, and you can combine them with other overlays from technical writers or other tooling.
 
 **Including SDK Setup Instructions**
 
-If you'd like to add some extra documentation about how to install these SDKs for your users, check out our guides on [Topics](https://docs.bump.sh/help/documentation-experience/topics/), or update the existing OpenAPI with [overlays of your own](https://docs.bump.sh/guides/technical-writing/efficient-tech-writing-process/).
+If you'd like to add some extra documentation about how to install these SDKs for your users, check out our guides on [Topics](/help/documentation-experience/topics/), or update the existing OpenAPI with [overlays of your own](_guides/technical-writing/efficient-tech-writing-process.md).

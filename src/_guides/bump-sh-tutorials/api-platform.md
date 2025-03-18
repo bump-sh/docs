@@ -35,26 +35,22 @@ That's it! Enjoy the comfort of Bump.sh to browse through your API doc, and [cus
 
 ## Enriching documents
 
-By default, API Platform generates what can be considered a plain technical description of your API. Although it is robust and complete, it's not enough for people discovering your API without any upfront knowledge about it, access to the code, or ability to test it extensively. Such documents require contextual information, and any appropriate adjustements.
+By default, API Platform generates what can be considered a plain technical description of your API. Although it is robust and complete, it's not enough for people discovering your API without any upfront knowledge about it, access to the code, or ability to test it extensively. Such documents require contextual information, and any appropriate adjustments.
 
 API Platform lets you override, enrich and filter the generated OpenAPI documents, [using PHP](https://api-platform.com/docs/core/openapi/). 
 
-You can also accomplish this using OpenAPI's [Overlay specification](https://github.com/OAI/Overlay-Specification/blob/main/versions/1.0.0.md), which can be convenient in all use cases where you do not want to change your PHP code base (e.g. when involving Technical Writers or Product Managers in writing docs).
+You can also accomplish this using OpenAPI's [Overlay specification](https://spec.openapis.org/overlay/v1.0.0.html), which can be convenient in all use cases where you do not want to change your PHP code base (e.g. when involving Technical Writers or Product Managers in writing docs).
 
-The Bump.sh CLI supports Overlays. Technically, the `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the operations described in the `[OVERLAY_FILE]` Overlay file to the original API document.
+The Bump.sh CLI supports Overlays. The `bump overlay` command will output a modified version of the `[DEFINITION_FILE]` (an OpenAPI or AsyncAPI document) by applying the changes described in the `[OVERLAY_FILE]` overlay file to the original API document. The `bump deploy` command can also take an `--overlay` parameter to skip the extra step.
 
-1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](/guides/openapi/augmenting-generated-openapi)), and name it `overlays.json` (YAML and JSON are both supported as inputs for the CLI).
+1. Create your Overlay document (see example use cases in [Augmenting Generated OpenAPI Documents with Filters & Overlays](_guides/openapi/augmenting-generated-openapi.md)), and name it `overlays.yaml` (JSON is also supported).
 
-2. Apply your Overlay document to the original API document
+2. Deploy the documentation (with overlays included) to Bump.sh.
   ```shell
-  bump overlay https://localhost/docs.json overlays.json > docs.updated.json
-  ```
-
-3. Deploy the resulting file to Bump.sh
-  ```shell
-  bump deploy docs.updated.json \
+  bump deploy https://localhost/docs.json \
     --doc my-documentation-name \
-    --token my-documentation-token
+    --token my-documentation-token \
+    --overlay overlays.yaml
   ```
 
 > Note: The diff computation performed by Bump.sh to display the [API changelog](/help/changes-management/changelog) is done when the resulting file is deployed.

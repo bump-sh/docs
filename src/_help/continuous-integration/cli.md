@@ -100,9 +100,9 @@ Head over to your Documentation settings in the “CI deployment” section or y
 * [`bump preview [FILE]`](#the-preview-command)
 * [`bump overlay [DEFINITION_FILE] [OVERLAY_FILE]`](#the-overlay-command)
 
-### `bump deploy [FILE]`
+### The `deploy` command
 
-When you update your API, you also want its documentation to be up to date for your API users. This is what the deploy command is for.
+When an API is updated, the documentation should be updated at the same time. This is what the deploy command is for.
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
@@ -159,19 +159,15 @@ bump deploy path/to/api-document.yml --dry-run --doc my-documentation --token $D
 
 Please check `bump deploy --help` for more usage details.
 
-### `bump diff [FILE]`
+### The `diff` command
 
-_If you want to receive automatic `bump diff` results on your Github Pull Requests you might be interested by [our Github Action](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog#deploy-documentation--diff-on-pull-requests) diff command._
-
-Please note that by default the command will always exit with a
-successful return code. If you want to use this command in a CI
-environment and want the command to fail **in case of a breaking
-change**, you will need to add the `--fail-on-breaking` flag to your
-diff command.
+Using the `diff` command can help to spot differences between the local API
+document and the latest deployed version. 
 
 #### Public API diffs
 
-From any two API documents or URLs, you can retrieve a comprehensive changelog of what has changed between them.
+From any two API documents or URLs, you can retrieve a comprehensive changelog
+of what has changed between them.
 
 ```shell
 $ bump diff path/to/your/file.yml path/to/your/second_file.yml
@@ -180,13 +176,15 @@ Modified: GET /consommations
   Response modified: 200
     [Breaking] Body attribute modified: energie
 ```
-> You can create as many diffs as you like without being authenticated. This is a **free and unlimited service** provided as long as you use the service fairly.
-{: .info}
 
 By default the command will always exit with a successful return code. If you
 want to use this command in a CI environment and want the command to fail **in
 case of a breaking change**, you will need to add the `--fail-on-breaking` flag
 to your diff command. 
+
+By default if the environment variable `CI=1` is present (in most continuous
+integration environment), the flag will be enabled. In that case you can disable
+the failures with `--no-fail-on-breaking` flag.
 
 You can also test this feature in our dedicated web application at
 <https://api-diff.io/>.
@@ -200,7 +198,9 @@ which has support for the diff command.
 
 #### Authenticated diffs related to your Bump.sh documentation
 
-From an existing Bump.sh documentation, the `diff` command will retrieve a comparison changelog between your latest published documentation and the given file or URL:
+From an existing Bump.sh documentation, the `diff` command will retrieve a
+comparison changelog between your latest published documentation and the given
+file or URL:
 
 ```shell
 bump diff path/to/your/file.yml --doc my-documentation --token $DOC_TOKEN
@@ -214,17 +214,20 @@ bump diff path/to/your/file.yml path/to/your/next-file.yml --doc my-documentatio
 
 Please check `bump diff --help` for full usage details.
 
-### `bump preview [FILE]`
+### The `preview` command
 
-When writing documentation, you might want to preview how it renders on Bump.sh. This is precisely the goal of the `preview` command: it will create temporary documentation with a unique URL, which will be available for a short period (30 minutes).
+When writing documentation, you might want to preview how it renders on Bump.sh.
+This is precisely the goal of the `preview` command: it will create temporary
+documentation with a unique URL, which will be available for a short period (30
+minutes).
 
-Usage from a local OpenAPI or AsyncAPI file
+Usage from a local OpenAPI or AsyncAPI document:
 
 ```shell
 bump preview path/to/file.json
 ```
 
-You can also preview a file available from a URL
+You can also preview a document available via a URL:
 
 ```shell
 bump preview https://developers.bump.sh/source.yaml
@@ -237,20 +240,19 @@ By using the `--live` flag you can stay focused on API design (OpenAPI or AsyncA
 - Launch the live preview command in your terminal
 
 ```shell
-bump preview --live --open openapi-definition.json
+bump preview --live --open api-document.yaml
 ```
 
-- Edit your `openapi-definition.json` file in your favorite text editor
+- Edit your `api-document.yaml` file in your favorite text editor.
 - Watch the live preview being updated each time you save your file.
+- The additional `--open` flag helps to automatically open the preview URL in your browser.
 
 > You can create as many previews as you like without being authenticated. This is a **free and unlimited service**.
 {: .info}
 
-_Note: the additional `--open` flag helps to automatically open the preview URL in your browser._
-
 Please check `bump preview --help` for more usage details
 
-### The overlay command
+### The `overlay` command
 
 The [Overlay Specification](https://spec.openapis.org/overlay/v1.0.0.html) from the OpenAPI Initiative makes it possible to modify the content of an API definition by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition. 
 
