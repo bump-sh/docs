@@ -267,7 +267,7 @@ Then in the "central repository" containing the OpenAPI update your GitHub Actio
       doc: <your-doc-id-or-slug>
       token: ${{secrets.BUMP_TOKEN}}
       file: openapi.yaml
-      overlay: https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-typescript-code-samples,https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-php-code-samples
+      overlay: "https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-typescript-code-samples,https://spec.speakeasy.com/bumpsh/bumpsh/train-travel-api-php-code-samples"
 ```
 
 When using any other continuous integration, the CLI deploy command can be passed multiple overlay documents by repeating the `--overlay` parameter.
