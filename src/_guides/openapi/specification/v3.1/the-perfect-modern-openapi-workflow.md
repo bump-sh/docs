@@ -210,8 +210,7 @@ consumable APIs. Over the last decade, API governance has gone from some vague
 concept being mentioned at conferences, to being a beautifully solved problem
 with a plethora of tooling. 
 
-Whilst API governance is a massive
-topic,
+Whilst [API governance is a massive topic](_guides/openapi/leveraging-the-openapi-specification-for-api-governance.md),
 a few key parts can be handled with OpenAPI tooling, speeding up and partially
 automating "API Design Reviews", simplifying change detection, automation of
 "API style guides", and creating an API Catalog that can help keep track of all

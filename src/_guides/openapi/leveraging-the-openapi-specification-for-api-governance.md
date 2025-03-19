@@ -1,6 +1,7 @@
 ---
 title: Leveraging the OpenAPI Specification for API Governance
 authors: james
+canonical_url: https://bump.sh/blog/leveraging-openapi-specification-api-governance
 excerpt: By leveraging OpenAPI, organizations can enhance their API governance efforts, streamline design reviews, automate compliance checks, and create a culture of continuous improvement.
 date: 2025-02-24
 ---
