@@ -12,9 +12,9 @@ layout: application
       </h1>
     <% end %>
   <% end %>
-  <% if resource.data.sidebar_title.present? %>
+  <% if resource.data.display_cta.present? %>
     <% sidebar.slot :after do %>
-      <%= render Shared::BumpCta.new(slug: site.data.slug) %>
+      <%= render Shared::BumpCta.new(slug: resource.data.slug) %>
     <% end %>
   <% end %>
 <% end %>

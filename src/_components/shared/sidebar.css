@@ -41,6 +41,7 @@ side-bar {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-1);
+    margin-bottom: var(--spacing-8); /* please don't trust me here */
   }
 
   .sidebar-sublist {
