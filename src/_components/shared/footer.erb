@@ -6,7 +6,7 @@
   </div>
   <div class="bottom">
     <div class="bottom-column">
-      <div class="copyright">© 2023 Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+      <div class="copyright">© <%= Time.now.year %> Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
       <% @site.data.footer.bottom.each do |entry| %>
         <a class="link" href="<%= entry.link %>"><%= entry.label %></a>
       <% end %>
