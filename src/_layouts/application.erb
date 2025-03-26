@@ -3,7 +3,7 @@
   <head>
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
-  <body class="<%= data.page_class %>"data-controller="copy <% if data.sidebar %>toggle<% end %>">
+  <body class="<%= data.page_class %>" data-controller="copy <% if data.sidebar %>toggle<% end %>">
     <%= render Shared::Navbar.new(
       metadata: site.metadata,
       resource: resource,
