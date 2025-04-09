@@ -1,11 +1,7 @@
 ---
-title: Love Cycle - March 25
+title: Love cycle - March 25
 tags: [Improvement]
-image: /images/changelog/love-cycle-april-2025.png
 ---
-
-![love-cycle.png](/images/changelog/love-cycle-april-2025.png)
-
 Every now and then between larger product cycles, the whole team gets together to polish the product by working on small enhancements and user requests, in a time called "Love cycle".
 
 Here's a list of what's been worked on.
