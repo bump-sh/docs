@@ -1,5 +1,5 @@
 ---
-title: Love cycle - March 25
+title: Love cycle - April 25
 tags: [Improvement]
 ---
 Every now and then between larger product cycles, the whole team gets together to polish the product by working on small enhancements and user requests, in a time called "Love cycle".
