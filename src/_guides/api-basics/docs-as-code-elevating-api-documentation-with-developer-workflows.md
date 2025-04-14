@@ -1,6 +1,7 @@
 ---
 title: Elevating API Documentation with Developer Workflows Using Docs as Code
 authors: james
+canonical_url: https://bump.sh/blog/api-discovery-with-bump-sh-hubs
 excerpt: Docs as Code has emerged as a powerful methodology that aligns documentation processes with software development workflows, treating documentation as a first-class citizen in the development lifecycle.
 date: 2025-02-24
 ---
