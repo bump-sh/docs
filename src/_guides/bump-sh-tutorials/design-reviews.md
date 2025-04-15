@@ -265,7 +265,8 @@ comment back with concerns, or use GitHub Suggestions to make improvements.
 If everything is fine then reviewers can hit Approve on the pull request. When
 API code and API descriptions are in the same repository can be a little
 confusing as it feels like a technical writer is approving a code change, but
-this can be solved with Code Owners in GitHub.
+this can be solved with [Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) 
+in GitHub.
 
 By assigning the API descriptions to the appropriate review teams, and the code
 is assigned to the code, you can make sure both relevant groups have approved
