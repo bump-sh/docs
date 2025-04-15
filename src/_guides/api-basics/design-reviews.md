@@ -1,7 +1,7 @@
 ---
 title: API Design Reviews Don’t Have to be Hard
 authors: phil
-excerpt: 
+excerpt: Learn how to simplify API design reviews with practical tips, automation tools like Bump.sh so you can focus on building great software.
 date: 2025-03-06
 ---
 
@@ -9,23 +9,44 @@ An API Design Review is one of a few parts of a larger API Governance program, w
 
 Design reviews are generally done for an API overall when its first form is created, then with following iterations as new endpoints and other changes are made. Beyond the basic tire-kicking, a design review is important to ensure the API is well-designed, compliant with standards and style guides, meets the needs of its consumers, and does not introduce problems to the wider ecosystem.
 
-- **Consistency and Standards Compliance** - Ensure the API follows established design standards and conventions, covering naming conventions, Hypermedia formats, authentication strategies, etc.
+- **Consistency and Standards Compliance** - Ensure the API follows established
+  design standards and conventions, covering naming conventions, Hypermedia
+  formats, authentication strategies, etc.
 
-- **Clarity** - Verify that the API endpoints, parameters, and responses are clearly documented. Ensure descriptions are meaningful and useful for developers of both the API and its consumers.
+- **Clarity** - Verify that the API endpoints, parameters, and responses are
+  clearly documented. Ensure descriptions are meaningful and useful for
+  developers of both the API and its consumers.
 
-- **Functionality and Usability** - Make sure the API endpoints provide the necessary functionality, evaluating the ease of use for developers integrating with the API.
+- **Functionality and Usability** - Make sure the API endpoints provide the
+  necessary functionality, evaluating the ease of use for developers integrating
+  with the API.
 
-- **Performance and Scalability** - Evaluate the API design for potential performance bottlenecks. Are consumers going to need to load 1,000 endpoints to solve the main use-case, or is data being computed on load which might slow things down? 
+- **Performance and Scalability** - Evaluate the API design for potential
+  performance bottlenecks. Are consumers going to need to load 1,000 endpoints
+  to solve the main use-case, or is data being computed on load which might slow
+  things down? 
 
-- **Backward Compatibility** - Identify any breaking changes that could affect existing consumers of the API. Ensure that changes are backward compatible or properly versioned.
+- **Backward Compatibility** - Identify any breaking changes that could affect
+  existing consumers of the API. Ensure that changes are backward compatible or
+  properly versioned.
 
-- **Forwards Compatibility** - Is this change going to work properly and fit in with future changes that are either planned to happen, or likely to happen within the wider ecosystem, to avoid conflicts or duplication.
+- **Forwards Compatibility** - Is this change going to work properly and fit in
+  with future changes that are either planned to happen, or likely to happen
+  within the wider ecosystem, to avoid conflicts or duplication.
 
-- **Security and Privacy** - Check that authentication and authorization mechanisms are present and appropriate for the task at hand, and personal/private information is not being leaked by URL fiddling.
+- **Security and Privacy** - Check that authentication and authorization
+  mechanisms are present and appropriate for the task at hand, and
+  personal/private information is not being leaked by URL fiddling.
 
-- **Error Handling and Responses** - Ensure that error responses are sensible, following the right standards, and are both meaningful and insightful for developers and potentially any end-users who end up seeing the error messages directly.
+- **Error Handling and Responses** - Ensure that error responses are sensible,
+  following the right standards, and are both meaningful and insightful for
+  developers and potentially any end-users who end up seeing the error messages
+  directly.
 
-- **Impact on Documentation** - Determine how changes will affect existing documentation (reference docs, guiders, tutorials, etc). Ensure that documentation is updated to reflect any changes in the API before the change is made to avoid anything getting out of sync. 
+- **Impact on Documentation** - Determine how changes will affect existing
+  documentation (reference docs, guiders, tutorials, etc). Ensure that
+  documentation is updated to reflect any changes in the API before the change
+  is made to avoid anything getting out of sync. 
 
 It seems like a whole lot to think about but that is why design reviews pull in
 multiple people from various departments or walks of life. Getting all these
