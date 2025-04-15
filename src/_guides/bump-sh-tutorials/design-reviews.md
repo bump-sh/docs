@@ -109,25 +109,39 @@ Some changes in OpenAPI documents have no impact on API consumers, such as:
 
 - [Splitting larger documents](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md) into smaller pieces with `$ref`.
 - Renaming referenced files.
-- Renaming component names (e.g. renaming `components.schemas.Something` which does not change the actual API)
-- Reformatting YAML for consistency because some documents were an awkward mixture of 2 spaces and 4 spaces. 🤢
+- Renaming component names (e.g. renaming `components.schemas.Something` which
+  does not change the actual API)
+- Reformatting YAML for consistency because some documents were an awkward
+  mixture of 2 spaces and 4 spaces. 🤢
 
-These modifications might make the OpenAPI documents cleaner, but do not alter the API’s behavior. The huge wall of changes would look like loads of change is happening, and maybe some changes have been sprinkled into what was otherwise just a formatting change. 
+These modifications might make the OpenAPI documents cleaner, but do not alter
+the API’s behavior. The huge wall of changes would look like loads of change is
+happening, and maybe some changes have been sprinkled into what was otherwise
+just a formatting change. 
 
-Here's a change which looks like it's probably not going to break anything, it's just moving an inline definition of a parameter into a reference, and adding a new optional parameter.
+Here's a change which looks like it's probably not going to break anything, it's
+just moving an inline definition of a parameter into a reference, and adding a
+new optional parameter.
 
 ![](/images/guides/design-reviews/replaced-with-ref.png)
 
-Unfortunately when copying and pasting some of the reusable parameter definitions elsewhere something was changed, and that would be hard to spot without having both definitions open on two different monitors and comparing the two closely. Thankfully Bump.sh can handle that tedious work for you.
+Unfortunately when copying and pasting some of the reusable parameter
+definitions elsewhere something was changed, and that would be hard to spot
+without having both definitions open on two different monitors and comparing the
+two closely. Thankfully Bump.sh can handle that tedious work for you.
 
 ![](/images/guides/design-reviews/breaking-change-detected.png)
 
 Bump.sh automatically filters out inconsequential YAML/JSON changes and automates all of the following:
 
-- **See only relevant changes** – Filtering out noise from YAML/JSON restructuring and internal updates.
-- **Get automatic pull request comments** – Highlighting meaningful updates directly in pull requests.
-- **Be alerted to breaking changes** – Clearly identifying changes that impact API consumers.
-- **Track API history over time** – Keep a clear record of modifications without manually digging into commits.
+- **See only relevant changes** – Filtering out noise from YAML/JSON
+  restructuring and internal updates.
+- **Get automatic pull request comments** – Highlighting meaningful updates
+  directly in pull requests.
+- **Be alerted to breaking changes** – Clearly identifying changes that impact
+  API consumers.
+- **Track API history over time** – Keep a clear record of modifications without
+  manually digging into commits.
 
 ## Handling API Design Reviews
 
@@ -135,7 +149,11 @@ Ok so we've got the theory down, how do you actually do this?
 
 ### 1. Get Bump.sh into Pull Requests
 
-First of all lets get Bump.sh running on pull requests. Bump.sh users working with GitHub may already have a `.github/workflows/bump.yml` workflow, but if not add one. Other [continuous integration](_help/continuous-integration/index.md) providers are supported but we'll stick to [GitHub Actions](_help/continuous-integration/github-actions.md) for this guide.
+First of all lets get Bump.sh running on pull requests. Bump.sh users working
+with GitHub may already have a `.github/workflows/bump.yml` workflow, but if not
+add one. Other [continuous integration](_help/continuous-integration/index.md)
+providers are supported but we'll stick to [GitHub
+Actions](_help/continuous-integration/github-actions.md) for this guide.
 
 
 ```yaml
@@ -187,13 +205,22 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-The `deploy-docs` job is doing what it suggests, deploying API documentation when merged to `main`. That's the standard workflow and can be removed if you don't need that right now. 
+The `deploy-docs` job is doing what it suggests, deploying API documentation
+when merged to `main`. That's the standard workflow and can be removed if you
+don't need that right now. 
 
-The important part here is the `api-diff` job. Once you've updated `<BUMP_DOC_ID>` to the ID found in the Bump.sh API settings page, popped in the `token` hopefully via the Secrets interface on GitHub, and pointed the `file: openapi.yaml` to where the OpenAPI or AsyncAPI document lives, Bump.sh will start adding summaries of changes to pull requests as comments.
+The important part here is the `api-diff` job. Once you've updated
+`<BUMP_DOC_ID>` to the ID found in the Bump.sh API settings page, popped in the
+`token` hopefully via the Secrets interface on GitHub, and pointed the `file:
+openapi.yaml` to where the OpenAPI or AsyncAPI document lives, Bump.sh will
+start adding summaries of changes to pull requests as comments.
 
 ### 2. Reviewing Changes
 
-Whenever a pull request is made, or changes are pushed to that pull request, Bump.sh will automatically scan the changes being made to the OpenAPI/AsyncAPI documents. Any consequential changes will be highlighted in the summary of changes.
+Whenever a pull request is made, or changes are pushed to that pull request,
+Bump.sh will automatically scan the changes being made to the OpenAPI/AsyncAPI
+documents. Any consequential changes will be highlighted in the summary of
+changes.
 
 - New endpoints or properties.
 - New query string parameters added.
@@ -204,31 +231,48 @@ Breaking changes will be flagged so they're hard to miss.
 - Making an optional property required.
 - Altering response structures.
 
-Raising breaking change warnings like this can help system architects and other reviewers decide on a level of panic. It could well be that property has been deprecated for a long time and everyone knows no consumers are actually using it any more, so Panic Level 0, carry on.
+Raising breaking change warnings like this can help system architects and other
+reviewers decide on a level of panic. It could well be that property has been
+deprecated for a long time and everyone knows no consumers are actually using it
+any more, so Panic Level 0, carry on.
 
-If the summary flags up something that's not immediately clear, adds a new endpoint that needs more review, etc. then the Preview feature can be used.
+If the summary flags up something that's not immediately clear, adds a new
+endpoint that needs more review, etc. then the Preview feature can be used.
 
 ### 3. Preview changes
 
-When Bump.sh comments on a pull request with the summary of changes, there is also a little link on there marked Preview and this is pretty magical. 
+When Bump.sh comments on a pull request with the summary of changes, there is
+also a little link on there marked Preview and this is pretty magical. 
 
 ![](/images/guides/design-reviews/preview.png)
 
-Instead of just reviewing the YAML changes and hoping the docs look good when you merge, you can go and review the docs to make sure all is good before you merge. 
+Instead of just reviewing the YAML changes and hoping the docs look good when
+you merge, you can go and review the docs to make sure all is good before you
+merge. 
 
-Technical writers can use this to make sure descriptions are good enough, or if developers won't do it tech writers can make sure their [overlays are improving descriptions](_guides/openapi/augmenting-generated-openapi.md) correctly.
+Technical writers can use this to make sure descriptions are good enough, or if
+developers won't do it tech writers can make sure their [overlays are improving
+descriptions](_guides/openapi/augmenting-generated-openapi.md) correctly.
 
-System architects can make sure that new endpoints look solid, with appropriate data being accepted and returned to solve the needs for clients.
+System architects can make sure that new endpoints look solid, with appropriate
+data being accepted and returned to solve the needs for clients.
 
-Everyone can all review the parts of the changes they are interested in, and comment back with concerns, or use GitHub Suggestions to make improvements.
+Everyone can all review the parts of the changes they are interested in, and
+comment back with concerns, or use GitHub Suggestions to make improvements.
 
 ### 4. Approve Changes
 
-If everything is fine then reviewers can hit Approve on the pull request. When API code and API descriptions are in the same repository can be a little confusing as it feels like a technical writer is approving a code change, but this can be solved with Code Owners in GitHub.
+If everything is fine then reviewers can hit Approve on the pull request. When
+API code and API descriptions are in the same repository can be a little
+confusing as it feels like a technical writer is approving a code change, but
+this can be solved with Code Owners in GitHub.
 
-By assigning the API descriptions to the appropriate review teams, and the code is assigned to the code, you can make sure both relevant groups have approved the changes to stop problems squeaking by.
+By assigning the API descriptions to the appropriate review teams, and the code
+is assigned to the code, you can make sure both relevant groups have approved
+the changes to stop problems squeaking by.
 
-Create a new file called `CODEOWNERS` in `.github/` or the root of the repository, and use the following syntax.
+Create a new file called `CODEOWNERS` in `.github/` or the root of the
+repository, and use the following syntax.
 
 ```yaml
 # CODEOWNERS
@@ -238,20 +282,40 @@ docs/* @org/review-team
 src/* @org/dev-team
 ```
 
-This says that changes made to `docs/openapi.yaml` or any of the other referenced bits of description should be approved by the review team, and any code changes will need to be made by the dev team. You can then go into branch settings and make sure that pull reviews are approved by code owners before progressing.
+This says that changes made to `docs/openapi.yaml` or any of the other
+referenced bits of description should be approved by the review team, and any
+code changes will need to be made by the dev team. You can then go into branch
+settings and make sure that pull reviews are approved by code owners before
+progressing.
 
-You can get as creative as you like with this, and have all stakeholders involved so there system architects and the governance teams all get their say before things progress. 
+You can get as creative as you like with this, and have all stakeholders
+involved so there system architects and the governance teams all get their say
+before things progress. 
 
-Make sure its possible to bypass this in emergencies, like pushing a hotfix, but generally speaking this should help to make sure things always get better and things don't sneak through.
+Make sure its possible to bypass this in emergencies, like pushing a hotfix, but
+generally speaking this should help to make sure things always get better and
+things don't sneak through.
 
 ### 5. Linting to reduce repetition
 
-These reviews can end up with a fair amount of repetition, with folks arguing over things like which naming conventions to use or whether there should be full stops at the end of descriptions or not. Everything is far more efficient when rules are written down, and that tedious stuff can be automated away with [API linting](_guides/bump-sh-tutorials/api-linting-with-vacuum.md) using tools like vacuum so that its already handled before even getting humans involved with the design review.
+These reviews can end up with a fair amount of repetition, with folks arguing
+over things like which naming conventions to use or whether there should be full
+stops at the end of descriptions or not. Everything is far more efficient when
+rules are written down, and that tedious stuff can be automated away with [API
+linting](_guides/bump-sh-tutorials/api-linting-with-vacuum.md) using tools like
+vacuum so that its already handled before even getting humans involved with the
+design review.
 
 ![Screenshot from GitHub.com, showing the "GitHub Actions / API Lint Results" check result outputting annotations.](/images/guides/api-linting-with-vacuum/vacuum-annotations.png)
 
-With Bump.sh spotting changes and offering previews, vacuum highlighting concerns automatically, API design reviews should be a pretty simple afair. 
+With Bump.sh spotting changes and offering previews, vacuum highlighting
+concerns automatically, API design reviews should be a pretty simple affair. 
 
-API design reviews don’t have to be a struggle for tech writers. With Bump.sh, you can automate the process of detecting relevant changes, stay on top of breaking updates, and manage API documentation efficiently. All of this can be done without needing to deep dive into YAML or complex IDEs. 
+API design reviews don’t have to be a struggle for tech writers. With Bump.sh,
+you can automate the process of detecting relevant changes, stay on top of
+breaking updates, and manage API documentation efficiently. All of this can be
+done without needing to deep dive into YAML or complex IDEs. 
 
-Let machines do the heavy lifting so you can focus on delivering great documentation, and steer the evolution of your APIs to make them useful and profitable.
+Let machines do the heavy lifting so you can focus on delivering great
+documentation, and steer the evolution of your APIs to make them useful and
+profitable.
