@@ -5,9 +5,6 @@ canonical_url: https://bump.sh/blog/api-discovery-with-bump-sh-hubs
 excerpt: Docs as Code has emerged as a powerful methodology that aligns documentation processes with software development workflows, treating documentation as a first-class citizen in the development lifecycle.
 date: 2025-02-24
 ---
-
-# Elevating API Documentation with Developer Workflows Using Docs as Code
-
 [Docs as code](https://www.writethedocs.org/guide/docs-as-code/) is a powerful methodology that aligns documentation processes with software development workflows.  It treats documentation as a first-class citizen in the development lifecycle by applying a similar approach to the standard development process. Let’s explore what it is, how it works, and how you can get started. 
 
 ## What is Docs as Code?
