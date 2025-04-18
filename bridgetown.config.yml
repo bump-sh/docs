@@ -55,5 +55,8 @@ collections:
     future: true
     sort_by: date
     sort_direction: descending
+  compare:
+    name: Compare
+    output: true
 kramdown:
   parse_html_blocks: true
