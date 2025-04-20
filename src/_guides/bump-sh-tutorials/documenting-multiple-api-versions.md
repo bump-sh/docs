@@ -1,9 +1,8 @@
 ---
 title: Documenting Multiple API Versions
 authors: phil
-excerpt: 
-date: 2025-05-19
-# When you release a new version of of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. Keep maintaining the docs, avoiding breaking changes with our change detection, and keep customers happy.
+excerpt: When you release a new version of of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
+date: 2025-05-22
 ---
 
 
