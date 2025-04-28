@@ -4,12 +4,16 @@ authors: phil
 excerpt: Learn how to simplify API design reviews with practical tips, automation tools like Bump.sh so you can focus on building great software.
 date: 2025-03-06
 ---
+
 - TOC
 {:toc}
+
 An API Design Review is one of a few parts of a larger API Governance program, where various people review changes to an API to make sure its a good choice for the architecture and wider ecosystem. This often involves a wide variety of persona, including API designers, API developers, technical writers, system architects, and maybe even a dedicated [governance team](_guides/openapi/leveraging-the-openapi-specification-for-api-governance.md).
 
 Design reviews are generally done for an API overall when its first form is created, then with following iterations as new endpoints and other changes are made. Beyond the basic tire-kicking, a design review is important to ensure the API is well-designed, compliant with standards and style guides, meets the needs of its consumers, and does not introduce problems to the wider ecosystem.
+
 ## What happens during a design review
+
 - **Consistency and Standards Compliance** - Ensure the API follows established
   design standards and conventions, covering naming conventions, Hypermedia
   formats, authentication strategies, etc.
@@ -77,6 +81,7 @@ popularity and added the
 [git-request-pull](https://git-scm.com/docs/git-request-pull) command, that
 eventually ended up in GitHub as a Pull Request and the whole code review
 process matured.
+
 ### Reviews done right with Pull Requests
 As the pull request matured it became the home for everything, allowing everyone
 can see a summary of changes, view source code if they want, see previews,
@@ -94,7 +99,9 @@ Only the developers should be worrying about the code, the system architects,
 governance teams, and technical writers want to have a higher level view instead
 of having to learn every single teams' favourite web application frameworks
 conventions and syntax.
+
 ### The role of API specifications
+
 This is where API descriptions like OpenAPI and AsyncAPI come in. When stored
 together with the source code (and used for this like contract testing to ensure
 the code and description match perfectly) it means these discussions can be had
@@ -104,8 +111,9 @@ over the source code.
 A huge step in the right direction, but reviewing hundreds of lines of YAML
 changes is not easy or fun. Some tooling has appeared trying to move the whole
 API design review process into a rough approximation of Git that's all trapped
-in their walled garden and requires constant syncing, but Bump.sh instead
-focuses on allowing design reviews happen in the pull request.
+in their walled garden and requires constant syncing. Bump.sh instead focuses on
+allowing design reviews happen in the pull request, and we'll see how to handle
+that below.
 
 ## Diffs Aren't Design Reviews
 
