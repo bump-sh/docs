@@ -77,7 +77,7 @@ popularity and added the
 [git-request-pull](https://git-scm.com/docs/git-request-pull) command, that
 eventually ended up in GitHub as a Pull Request and the whole code review
 process matured.
-
+### Reviews done right with Pull Requests
 As the pull request matured it became the home for everything, allowing everyone
 can see a summary of changes, view source code if they want, see previews,
 comment on specific lines, suggest changes, and people could checkout the
@@ -94,7 +94,7 @@ Only the developers should be worrying about the code, the system architects,
 governance teams, and technical writers want to have a higher level view instead
 of having to learn every single teams' favourite web application frameworks
 conventions and syntax.
-
+### The role of API specifications
 This is where API descriptions like OpenAPI and AsyncAPI come in. When stored
 together with the source code (and used for this like contract testing to ensure
 the code and description match perfectly) it means these discussions can be had
