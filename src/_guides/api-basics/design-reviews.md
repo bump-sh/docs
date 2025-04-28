@@ -4,7 +4,8 @@ authors: phil
 excerpt: Learn how to simplify API design reviews with practical tips, automation tools like Bump.sh so you can focus on building great software.
 date: 2025-03-06
 ---
-
+- TOC
+{:toc}
 An API Design Review is one of a few parts of a larger API Governance program, where various people review changes to an API to make sure its a good choice for the architecture and wider ecosystem. This often involves a wide variety of persona, including API designers, API developers, technical writers, system architects, and maybe even a dedicated [governance team](_guides/openapi/leveraging-the-openapi-specification-for-api-governance.md).
 
 Design reviews are generally done for an API overall when its first form is created, then with following iterations as new endpoints and other changes are made. Beyond the basic tire-kicking, a design review is important to ensure the API is well-designed, compliant with standards and style guides, meets the needs of its consumers, and does not introduce problems to the wider ecosystem.
