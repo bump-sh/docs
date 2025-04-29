@@ -1,16 +1,14 @@
 ---
 title: Documenting Multiple API Versions
 authors: phil
-excerpt: When you release a new version of of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
+excerpt: When you release a new version of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
 date: 2025-05-22
 ---
 
 
-Versioning an API can be incredibly difficult, but working out how to handle documentation for multiple APIs can be even more of a challenge. When you release a new version of of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. 
+Versioning an API can be incredibly difficult, but working out how to handle documentation for multiple APIs can be even more of a challenge. When you release a new version of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. Thankfully Bump.sh makes it as simple and flexible as you could hope for. 
 
-Thankfully Bump.sh makes it as simple and flexible as you could hope for. 
-
-## Different Workflows
+## Different workflows
 
 First of all, where and how is the API source code stored? 
 
@@ -50,7 +48,7 @@ bump deploy --doc "twilio-chat" \
 
 This example assumed that both versions of the API were in the same repository and used the CLI, but we can now look at a few more examples that might feel more familiar to your setup.
 
-## Example: One Directory per API Version
+### Example: One directory per API version
 
 This setup involves one GitHub repository, but each version of the API exists in a sub-directory. This means a single GitHub Action can be used, with two similar deployment steps so that both APIs can be deployed from the same workflow.
 
@@ -87,8 +85,7 @@ jobs:
           branch: v3
 ```
 
-
-## Example: One Git Branch per API Version
+### Example: One Git branch per API version
 
 This setup involves one GitHub repository. Each version of the API is in its own
 Git branch, a `v2` and `v3`. In this instance, you could use GitHub Actions,
@@ -166,6 +163,18 @@ git commit -m "docs: deploy v3 docs to bump"
 git push origin v3
 ```
 
-## Example: One Repository for each API Version
+### Example: One repository for each API version
 
 This would look exactly the same as the previous example just pushing the workflows to two different repos instead of two different branches.
+
+## Deprecating old API versions
+
+When a new API version is created, and you create a new Bump.sh branch for the API documentation to match, at some point you will want new users to start using it. 
+
+Announcements to users by email are a common soft-touch start, letting users know all the brilliant new functionality available in the new version of the API so they want to go and upgrade, but that won't get them all, and we also want to make sure new users aren't picking up the old version. 
+
+The "carrot" of dangling a new shiny default version works best when deployed alongside a stick, and for API versioning that stick is deprecation. 
+
+The basic premise of deprecation for APIs is giving people a heads up that an operation is going away and is best avoided. This would make a new API user think twice about using that operation, or that entire version if all the operations are deprecated, and helps point them towards the new version.
+
+Bump.sh [eases the pain of API deprecation in several ways](_guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation.md), with automatic changelogs showing people whats changed, highlighting deprecations in the documentation, and alerting subscribers about upcoming changes.
