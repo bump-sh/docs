@@ -90,8 +90,10 @@ help:
     items:
       - label: Create and manage hubs
         link: /hubs/create-and-manage-hubs/
-      - label: Hub settings
+      - label: General hub settings
         link: /hubs/hub-settings/
+      - label: Hub UI customization
+        link: /hubs/customize-ui
   - type: category
     label: Organizations
     link: /organizations/
