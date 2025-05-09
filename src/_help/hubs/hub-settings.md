@@ -37,13 +37,3 @@ Access management can be configured either at the [documentation level](/help/pu
 {: .note}
 
 Activating the feature on a hub will activate the feature for all docs in the hub.
-
-## Documentation listing
-
-This setting is useful when you have multiple API docs that you want to publish in a same Hub, and consider grouping them under categories.
-
-Categories can be, for instance, groups of API that belong to a same business domain.
-
-Categories must be specified for each doc in the hub. When the "Group documentation by category" setting is selected, any documentation with no specified category will not be displayed in the Hub.
-
-![](/images/help/hub-doc-categories.png)
