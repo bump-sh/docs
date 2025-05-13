@@ -2,12 +2,12 @@
 title: Documenting Multiple API Versions
 authors: phil
 excerpt: When you release a new version of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
-date: 2025-05-22
+date: 2025-06-12
 ---
 - TOC
 {:toc}
 
-Versioning an API can be incredibly difficult, but working out how to handle documentation for multiple APIs can be even more of a challenge. When you release a new version of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. Thankfully Bump.sh makes it as simple and flexible as you could hope for. 
+Versioning an API can be incredibly difficult, but working out how to handle documentation for multiple API versions can be even more of a challenge. When you release a new version of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. Thankfully Bump.sh makes it as simple and flexible as you could hope for. 
 
 ## Different workflows
 
@@ -168,6 +168,14 @@ git push origin v3
 
 This would look exactly the same as the previous example just pushing the workflows to two different repos instead of two different branches.
 
+## Branch names
+
+The branch names are important, and should be chosen carefully. The default branch is the one that will be shown to users when they first visit the API documentation. When there is only one active version there will be no need to pick a version, but as soon as there are two or more versions the user will be prompted to pick a version.
+
+Some API maintainers decide to name branches after major versions like v1, v2, v3. Some maintainers prefer branching based on release dates, especially when using [API evolution](https://apisyouwonthate.com/blog/api-evolution-for-rest-http-apis/) or date-based versions.
+
+Some API maintainers prefer to use terms like "beta" and "next" for their branches, which can be useful when the API is in a state of flux and the version numbers are not yet stable. 
+
 ## Deprecating old API versions
 
 When a new API version is created, and you create a new Bump.sh branch for the API documentation to match, at some point you will want new users to start using it. 
@@ -178,4 +186,4 @@ The "carrot" of dangling a new shiny default version works best when deployed al
 
 The basic premise of deprecation for APIs is giving people a heads up that an operation is going away and is best avoided. This would make a new API user think twice about using that operation, or that entire version if all the operations are deprecated, and helps point them towards the new version.
 
-Bump.sh [eases the pain of API deprecation in several ways](_guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation.md), with automatic changelogs showing people whats changed, highlighting deprecations in the documentation, and alerting subscribers about upcoming changes.
+Bump.sh [eases the pain of API deprecation in several ways](_guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation.md), with automatic changelogs showing people what has changed, highlighting deprecations in the documentation, and alerting subscribers about meaningful changes.
