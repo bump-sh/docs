@@ -87,7 +87,7 @@ In the above example, the `source` property will be an object either way, but th
 
 ### anyOf
 
-The `anyOf` keyword is very similar to `oneOf` but a little less restrictive. `oneOf` is more like a XOR in programming, where one or the other can match, but never both. anyOf is more like a regular OR, which allows one or another or both. 
+The `anyOf` keyword is very similar to `oneOf` but a little less restrictive. `oneOf` is more like a XOR in programming, where one or the other can match, but never both. `anyOf` is more like a regular OR, which allows one or another or both. 
 
 Just like `oneOf`, you can use `anyOf` when you have multiple valid options for a particular field. The validation will pass if the value matches one or more of the listed subschemas.
 
@@ -103,7 +103,7 @@ The values **1, 2, 4, 7, 8, 11, 13, 14** would all be rejected for not being mul
 
 The values **3, 5, 6, 9, 10, 12** would be valid for being multiples of 3 or 5.
 
-The value **15** is valid because it is multiples of both 3 and 5, and anyOf is fine with that.
+The value **15** is valid because it is multiples of both 3 and 5, and `anyOf` is fine with that.
 
 ### allOf
 
