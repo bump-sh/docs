@@ -10,4 +10,4 @@ Thanks to this new feature, you can now share and highlight anything in your API
 
 ![share_highlight.gif](/images/changelog/share_highlight.gif)
 
-Give it a try: [https://developers.bump.sh/#post-previews-body](https://developers.bump.sh/#post-previews-body)
+Give it a try: [https://developers.bump.sh/operation/operation-post-previews](https://developers.bump.sh/operation/operation-post-previews)
