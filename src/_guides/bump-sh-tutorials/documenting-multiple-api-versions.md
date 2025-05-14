@@ -1,8 +1,9 @@
 ---
 title: Documenting Multiple API Versions
 authors: phil
+canonical_url: https://bump.sh/blog/multiple-api-versions-documentation
 excerpt: When you release a new version of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
-date: 2025-06-12
+date: 2025-05-13
 ---
 - TOC
 {:toc}
@@ -170,7 +171,7 @@ This would look exactly the same as the previous example just pushing the workfl
 
 ## Branch names
 
-The branch names are important, and should be chosen carefully. The default branch is the one that will be shown to users when they first visit the API documentation. When there is only one active version there will be no need to pick a version, but as soon as there are two or more versions the user will be prompted to pick a version.
+The branch names are important, and should be chosen carefully. The default branch is the one that will be shown to users when they first visit the API documentation. When there is only one branch there will be no need to pick a branch, but as soon as there are two or more branches the user will be prompted to pick a branch.
 
 Some API maintainers decide to name branches after major versions like v1, v2, v3. Some maintainers prefer branching based on release dates, especially when using [API evolution](https://apisyouwonthate.com/blog/api-evolution-for-rest-http-apis/) or date-based versions.
 
@@ -186,4 +187,4 @@ The "carrot" of dangling a new shiny default version works best when deployed al
 
 The basic premise of deprecation for APIs is giving people a heads up that an operation is going away and is best avoided. This would make a new API user think twice about using that operation, or that entire version if all the operations are deprecated, and helps point them towards the new version.
 
-Bump.sh [eases the pain of API deprecation in several ways](_guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation.md), with automatic changelogs showing people what has changed, highlighting deprecations in the documentation, and alerting subscribers about meaningful changes.
+Bump.sh [eases the pain of API deprecation in several ways](https://docs.bump.sh/guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation/), with automatic changelogs showing people what has changed, highlighting deprecations in the documentation, and alerting subscribers about meaningful changes.
