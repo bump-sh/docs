@@ -5,8 +5,6 @@ canonical_url: https://bump.sh/blog/multiple-api-versions-documentation
 excerpt: When you release a new version of an API you’re going to need to keep the old one around for a while, and keep the documentation up to date until it can be retired.
 date: 2025-05-13
 ---
-- TOC
-{:toc}
 
 Versioning an API can be incredibly difficult, but working out how to handle documentation for multiple API versions can be even more of a challenge. When you release a new version of an API you’re going to need to keep the old one around for a while, and manage it as its own project until it can be retired. Thankfully Bump.sh makes it as simple and flexible as you could hope for. 
 
