@@ -5,7 +5,7 @@ tags: [Improvement]
 Following feedback, we have improved the experience of the Explorer API response module.
 
 ### Increased readability
-The response module can now be expanded, making long responses easier to discover.
+The response module can now be expanded, making it easier to read long responses.
 
 ![api-explorer-enhancements-response-expandable.png](/images/changelog/api-explorer-enhancements-response-expandable.png)
 
