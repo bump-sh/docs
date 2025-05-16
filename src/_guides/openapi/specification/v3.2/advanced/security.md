@@ -366,3 +366,27 @@ write_customers
 read_customer_payment_methods
 write_customer_payment_methods
 ```
+
+## Deprecating Security Schemes
+
+As APIs evolve over time and security practices change, the authorization methods and security schemes change with them. 
+
+Creating a new major version for an API purely to ditch security schemes is heavy handed and unnecessary. Instead you can add a new security scheme as an option, then deprecate the unwanted scheme to steer new users away from it. 
+
+OpenAPI v3.2 introduced the `deprecated` keyword for security schemes to help make this easier to document, and it works the same as other deprecatable objects like operations, headers, and parameters.
+
+```yaml
+components:
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      deprecated: true
+
+    HttpBearerToken:
+      type: http
+      scheme: bearer
+```
+
+This example would help steer users away from the custom `X-API-Key`, and would help returning users notice they should probably update. Other deprecation tricks exist, but this is a handy way to clearly mark it as deprecated on API documentation and other tooling.
