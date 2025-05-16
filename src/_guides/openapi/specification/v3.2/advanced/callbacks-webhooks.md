@@ -118,7 +118,7 @@ Technically callbacks are actually [HTTP Webhooks](https://www.redhat.com/en/top
 They are defined in a similar way to paths, but with a name instead of a URL. 
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Train Travel API
   version: 1.0.0

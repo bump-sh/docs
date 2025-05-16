@@ -13,7 +13,7 @@ APIs can handle file uploads in a variety of ways, and OpenAPI can help you desc
 Here's an example of accepting a CSV file being directly passed in the request body, showing how the HTTP request would look, then how that would be described in OpenAPI v3.1.
 
 ```http
-GET /upload HTTP/1.1
+GET /upload HTTP/2
 Host: api.example.org
 Content-Type: text/csv
 
