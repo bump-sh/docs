@@ -28,7 +28,7 @@ paths:
       summary: Get the whole board
       description: Retrieves the current state of the board and the winner.
       tags:
-        - Gameplay
+        - gameplay
       operationId: get-board
       responses:
         "200":
@@ -130,7 +130,7 @@ This convention splits each type of `components` into their own subdirectory, an
 Now the `openapi.yaml` is a whole lot lighter.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Tic Tac Toe
   description: |
@@ -138,7 +138,7 @@ info:
     and requesting the state of the board or of individual squares.
   version: 1.0.0
 tags:
-  - name: Gameplay
+  - name: gameplay
 paths:
   /board:
     $ref: paths/board.yaml
@@ -153,7 +153,7 @@ get:
   summary: Get the whole board
   description: Retrieves the current state of the board and the winner.
   tags:
-    - Gameplay
+    - gameplay
   operationId: get-board
   responses:
     '200':
