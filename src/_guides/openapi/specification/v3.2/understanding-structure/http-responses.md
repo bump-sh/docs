@@ -59,7 +59,7 @@ Here's an example from the [Train Travel API](https://bump.sh/blog/modern-openap
 
 The key parts that define a response:
 
-**description**: A short, descriptive text about the response which is mandatory. It explains the meaning of the response in the context of the API operation. This is often just the status code text, so 200 would be "Ok", 201 would be "Success", but it can be anything you think makes sense.
+**description**: A short, optional, descriptive text about the response. It explains the meaning of the response in the context of the API operation. This is often just the status code text, so 200 would be "Ok", 201 would be "Success", but it can be anything you think makes sense.
 
 **headers**: An optional map of headers that can be sent by the response. Each header is itself described by an object, which defines the name as a key, then has an object with a description of its own and a schema to describe the header. then `Cache-Controls`, RFC headers like `RateLimit` or custom headers like `'X-Rate-Limit'`.
 
