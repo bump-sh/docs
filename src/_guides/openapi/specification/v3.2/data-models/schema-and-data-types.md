@@ -2,7 +2,7 @@
 title: Schemas and Data Types
 authors: phil
 excerpt: "Learn about the most important part of OpenAPI: schemas, and data types."
-date: 2024-07-18
+date: 2025-05-16
 ---
 
 - TOC
@@ -120,7 +120,6 @@ The full list of formats defined in the JSON Schema Validation that OpenAPI v3.1
 
 - idn-hostname:  As defined by either [RFC 1123](https://datatracker.ietf.org/doc/html/rfc1123) as for hostname, or an internationalized hostname as defined by RFC 5890, section 2.3.2.3 [RFC5890](https://datatracker.ietf.org/doc/html/rfc5890).
 
-
 - ipv4:  An IPv4 address according to the "dotted-quad" ABNF syntax as defined in RFC 2673, section 3.2 [RFC2673](https://datatracker.ietf.org/doc/html/rfc2673).
       
 - ipv6:  An IPv6 address as defined in RFC 4291, section 2.2 [RFC4291](https://datatracker.ietf.org/doc/html/rfc4291).
@@ -139,7 +138,7 @@ The full list of formats defined in the JSON Schema Validation that OpenAPI v3.1
 
 - json-pointer:  A string instance is valid against this attribute if it is a valid JSON string representation of a JSON Pointer, according to RFC 6901, section 5 [RFC6901](https://datatracker.ietf.org/doc/html/rfc6901).
 
-- relative-json-pointer: A string instance is valid against this attribute if it is a valid Relative JSON Pointer [relative-json-pointer](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-00#ref-relative-json-pointer).
+- relative-json-pointer: A string instance is valid against this attribute if it is a valid Relative JSON Pointer [relative-json-pointer](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01#section-7.3.7-1).
 
 - regex - A regular expression, which SHOULD be valid according to the ECMA-262 ecma262 regular expression dialect
 
@@ -147,7 +146,7 @@ You can also define your own custom formats, which tooling will not understand, 
 
 ## Validation
 
-In addition to defining data types and formats, [JSON Schema](_guides/openapi/specification/v3.1/data-models/json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
+In addition to defining data types and formats, [JSON Schema](_guides/openapi/specification/v3.2/data-models/json-schema.md) provides several validation keywords to enforce specific constraints on the data. Here are a few popular validation keywords:
 
 ### const & enum
 
@@ -210,7 +209,7 @@ oneOf:
 
 In this example the `object` could be `card` or `bank_account`, but instead of defining that as an enum and the other properties all have to figure out whether they relate to cards or bank accounts, we use the `const` to help match the subschema.
 
-> Learn more about `const` on [JSON-Schema.org: Constant Values](https://json-schema.org/understanding-json-schema/reference/const), and read our guide on [Schema Composition](_guides/openapi/specification/v3.1/data-models/schema-composition.md) to learn more about `oneOf`.
+> Learn more about `const` on [JSON-Schema.org: Constant Values](https://json-schema.org/understanding-json-schema/reference/const), and read our guide on [Schema Composition](_guides/openapi/specification/v3.2/data-models/schema-composition.md) to learn more about `oneOf`.
 {: .info }
 
 
@@ -218,7 +217,7 @@ In this example the `object` could be `card` or `bank_account`, but instead of d
 
 Setting a `default` lets people and code know what to do when a value has not been provided. 
 
-```
+```yaml
 type: string
 default: pending
 enum:
@@ -320,4 +319,4 @@ This same approach extends to example request/responses of JSON data generated b
 
 ## Learn more about JSON Schema
 
-There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](_guides/openapi/specification/v3.1/data-models/json-schema.md).
+There is a lot more to JSON Schema and OpenAPI Schema Objects than we've covered here, but this will hopefully get you off to a good start. If you need to learn more, you can read our guide on [JSON Schema in OpenAPI](_guides/openapi/specification/v3.2/data-models/json-schema.md).
