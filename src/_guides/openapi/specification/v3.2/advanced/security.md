@@ -384,7 +384,7 @@ components:
       scheme: bearer
 ```
 
-This example references the `HttpBearerToken` security scheme defined in the `components` section. This is useful for keeping an OpenAPI document DRY (Don't Repeat Yourself), especially when the components are [spread across multiple documents](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md/).
+This example references the `HttpBearerToken` security scheme defined in the `components` section. This is useful for keeping an OpenAPI document DRY (Don't Repeat Yourself), especially when the components are [spread across multiple documents](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md).
 
 ## Deprecating Security Schemes
 
