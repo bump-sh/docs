@@ -13,7 +13,7 @@ OpenAPI is set up with the assumption that you're most likely describing JSON, b
 By combining [schema composition](_guides/openapi/specification/v3.2/data-models/schema-composition.md) and [references](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md), it's possible to create reusable components that be used for both JSON and XML output, like this simplistic example below.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Representing XML
   description: An API that supports advanced XML

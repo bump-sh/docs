@@ -2,7 +2,7 @@
 title: Security
 authors: phil
 excerpt: Learn how OpenAPI describes authentication and authorization schemes for your API.
-date: 2024-08-07
+date: 2025-05-16
 ---
 
 - TOC
@@ -84,7 +84,7 @@ API Keys in headers are often stored in some arbitrary header name like `X-API-K
 That would describe a request that looks like this: 
 
 ```
-GET /bookings
+GET /bookings HTTP/2
 Host: api.example.com
 X-API-Key: <your-api-key>
 ```
@@ -97,7 +97,7 @@ X-API-Key: <your-api-key>
 API Keys in `query` are also common, but best avoided for other reasons: it's incredibly insecure.
 
 ```
-GET /bookings?key=<your-api-key>
+GET /bookings?key=<your-api-key> HTTP/2
 Host: api.example.com
 ```
 
@@ -121,8 +121,8 @@ HttpBasicAuth:
 
 To make a request using Basic Authentication, the `Authorization` header would look like this:
 
-```
-GET /bookings
+```http
+GET /bookings HTTP/2
 Host: api.example.com
 Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 ```
@@ -141,8 +141,8 @@ HttpBearerToken:
 
 To make a request using Bearer Token Authentication, the `Authorization` header would look like this:
 
-```
-GET /bookings
+```http
+GET /bookings HTTP/2
 Host: api.example.com
 Authorization: Bearer <your-token-here>
 ```
@@ -165,7 +165,7 @@ In OpenAPI a JWT security scheme is actually just Bearer Token Authentication ag
 To make a request using JWT Authentication, the `Authorization` header would look similar to Bearer Token Authentication:
 
 ```
-GET /bookings
+GET /bookings HTTP/2
 Host: api.example.com
 Authorization: Bearer <your-jwt-here>
 ```
@@ -250,7 +250,7 @@ This is basically just a flag to let clients know they'll need to set up Mutual 
 The security schemes are just setting there until they are applied to paths in your OpenAPI document. You can use the `security` keyword at the path level to do this:
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 paths:
   /bookings:
     get:
@@ -261,7 +261,7 @@ paths:
 In this example, the `/bookings` path requires the `HttpBearerToken` security scheme for all requests.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 paths:
   /bookings:
     get:
@@ -275,7 +275,7 @@ In this example either the `ApiKeyHeader` or `HttpBearerToken` security schemes,
 Security schemes can also be applied as an `AND`:
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 paths:
   /bookings:
     get:
@@ -291,7 +291,7 @@ This example would only pass if **both** the `ApiKeyHeader` and `HttpBearerToken
 To avoid needing to set similar `security` keywords on every path (and possibly missing a few) you can apply security globally. 
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 security:
   - HttpBearerToken: []
 paths:
@@ -307,7 +307,7 @@ This will now be applied to all paths unless turned off.
 Globally applied rules can be overridden with a path-level security keyword.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 security:
   - HttpBearerToken: []
 paths:
@@ -367,6 +367,25 @@ read_customer_payment_methods
 write_customer_payment_methods
 ```
 
+## Referencing Security Schemes
+
+You can reference security schemes in OpenAPI v3.2 using the `$ref` keyword, just like you would with other components. This allows you to reuse security schemes across different paths or operations.
+
+```yaml
+paths:
+  /bookings:
+    get:
+      security:
+        - $ref: '#/components/securitySchemes/HttpBearerToken'
+components:
+  securitySchemes:
+    HttpBearerToken:
+      type: http
+      scheme: bearer
+```
+
+This example references the `HttpBearerToken` security scheme defined in the `components` section. This is useful for keeping an OpenAPI document DRY (Don't Repeat Yourself), especially when the components are [spread across multiple documents](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md/).
+
 ## Deprecating Security Schemes
 
 As APIs evolve over time and security practices change, the authorization methods and security schemes change with them. 
@@ -378,6 +397,7 @@ OpenAPI v3.2 introduced the `deprecated` keyword for security schemes to help ma
 ```yaml
 components:
   securitySchemes:
+
     ApiKeyHeader:
       type: apiKey
       in: header

@@ -257,7 +257,7 @@ Some mocking tools [like Microcks][microcks] might prefer you use named examples
 Let's go on an adventure through all the types of examples available in OpenAPI v3.1, with a bunch of Adventure Time characters with random coordinates of their last known locations.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Example of All Examples
   version: 1.0.0
