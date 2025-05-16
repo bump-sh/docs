@@ -26,9 +26,8 @@ HTTP API errors usually involve some sort of JSON payload which explains a few k
 
 The most basic API error might look a bit like this, with something for the humans to read, a specific error code for a machine to read that should describe a more specific situation to them (perhaps its documented somewhere), and/or a unique link to a specific error which can help a machine recognize the exact application-level problem from a predefined list.
 
-
 ```http
-HTTP/1.1 400 Bad Request
+HTTP/2 400 Bad Request
 Content-Type: application/json
 
 {
