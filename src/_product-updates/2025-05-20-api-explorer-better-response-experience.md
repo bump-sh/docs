@@ -2,7 +2,7 @@
 title: API Explorer - Better response experience
 tags: [Improvement]
 ---
-Following feedback, we have improved the experience of the Explorer API response module.
+Following feedback, we have improved the experience of the API Explorer response module.
 
 ### Increased readability
 The response module can now be expanded, making it easier to read long responses.
