@@ -49,9 +49,6 @@ The Deployments section of your documentation provides access to the history of 
 
 ### Manual Release
 
->The Manual Release mode is still in beta. Please don't hesitate to [contact us](mailto: hello@bump.sh) if you have any questions.
-{: .info}
-
 The Manual Release mode is an option that allows you to separate the processing step from the releasing step of your API definition.
 
 ![](/images/help/manual-release-toggle.png)
