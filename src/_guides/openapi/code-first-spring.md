@@ -11,7 +11,7 @@ or metadata in there to output API documentation in an API description format
 like [OpenAPI](https://spec.openapis.org/oas/latest.html).
 
 The most popular API Code-first approach in Spring uses a tool called
-[Springdoc](https://springdoc.org/), which can generate OpenAPI v3.0 from any
+[Springdoc](https://springdoc.org/), which can generate OpenAPI v3.1 from any
 Spring-based application (Boot, Web MVC, Webflux, etc). A basic skeleton will be
 generated with absolutely no work whatsoever, then adding annotations will keep
 improving the usefulness of the generated OpenAPI.
@@ -106,11 +106,9 @@ Hibernate and Spring Data JPA to make life a little easier.
 # src/main/java/com/bumpsh/demo/EmployeeController.java
 import java.util.List;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
