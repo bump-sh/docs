@@ -6,7 +6,9 @@ excerpt: "OpenAPI Format is a brilliant tool for helping teams get started with 
 date: 2025-05-22
 ---
 
-Overlays for OpenAPI and AsyncAPI are all the rage, helping all sorts of users improve OpenAPI by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. The OpenAPI Format Playground aims to make things easier with a graphical interface on building and applying overlays, so let’s take a look at how it works.
+[Overlays for OpenAPI](/guides/openapi/specification/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve OpenAPI by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
+
+The OpenAPI Format Playground aims to make things easier with a graphical interface on building and applying overlays, so let’s take a look at how it works.
 
 ## What is OpenAPI Format
 
@@ -16,7 +18,7 @@ Recently OpenAPI Format got the ability to apply overlays to OpenAPI documents, 
 
 ## Introducing OpenAPI-Format Playground
 
-The maintainers of OpenAPI-Format built a Playground, a web interface to help folks work with overlays in a visual way. 
+The maintainers of OpenAPI-Format built a Playground, a [web interface to help folks work with overlays in a visual way](https://openapi-format-playground.vercel.app/). 
 
 Overlays are essentially a series of “actions” which can be applied to a document, in order to create a new document with the resulting changes. Actions need a target defined as a [JSONPath](/guides/openapi/jsonpath/) to point to a particular part of an OpenAPI document, and an action type of of “update” or “remove”. These actions can be used in combination to add new content, replace content, or filter out bits that aren’t wanted.
 
@@ -28,7 +30,7 @@ Figuring out how to do all of this just from staring into an empty text editor c
 
 Copy in some OpenAPI into the box on the left. If you don’t have any handy why not use the [Train Travel API](https://github.com/bump-sh-examples/train-travel-api) by Bump.sh.
 
-![](new-openapi-in/images/guides/openapi-format-overlays/new-openapi-in-playground.png)
+![](images/guides/openapi-format-overlays/new-openapi-in-playground.png)
 
 ### Step 2.) Open the Overlay section
 
@@ -48,7 +50,8 @@ When you type in a JSONPath in the Target field, the Target Preview will update,
 
 ![](/images/guides/openapi-format-overlays/overlay-target.png)
 
-To update a specific tag, JSONPath supports filters, which use a `?(condition)` syntax. Here I am looking through an array of objects for the one which has a name property equal to “Stations”:
+To update a specific tag, JSONPath supports filters, which use a `?(condition)` syntax. Here I am looking through an array of objects for the one which has a name property equal to “Stations”: `$.tags[?(@.name == "Stations")]`
+
 
 ![](/images/guides/openapi-format-overlays/overlay-target-better.png)
 
@@ -62,11 +65,11 @@ Update is basically a merge, taking the value provided and updating the target t
 
 To add/override the description for a specific tag, we can pass a new `description` property, along with any other properties from the [tags object](/guides/openapi/specification/v3.1/documentation/grouping-operations-with-tags/).
 
-![](OpenAPI%20Format%20A/images/guides/openapi-format-overlays/overlay-update.png)
+![](/images/guides/openapi-format-overlays/overlay-update.png)
 
 Remove will not need to take a value, it just removes the target object entirely. For example, removing the tag Payments.
 
-![](OpenAPI%20Format%20A/images/guides/openapi-format-overlays/overlay-remove.png)
+![](/images/guides/openapi-format-overlays/overlay-remove.png)
 
 There’s a whole lot more than can be done than just mess with tags, but instead of getting stuck into advanced overlaying, let’s see how these two actions run.
 
