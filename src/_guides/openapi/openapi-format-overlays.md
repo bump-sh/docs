@@ -3,10 +3,10 @@ title: "OpenAPI Format: A GUI for Overlays"
 authors: phil
 canonical_url: 
 excerpt: "OpenAPI Format is a brilliant tool for helping teams get started with overlays, without forcing them to stare into an empty text-editor and try to learn Overlays and JSONPath all at once."
-date: 2025-05-22
+date: 2025-06-12
 ---
 
-[Overlays for OpenAPI](/guides/openapi/specification/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve OpenAPI by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
+[Overlays for OpenAPI](/guides/openapi/specification/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve API descriptions by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
 
 The OpenAPI Format Playground aims to make things easier with a graphical interface on building and applying overlays, so let’s take a look at how it works.
 
@@ -50,12 +50,11 @@ When you type in a JSONPath in the Target field, the Target Preview will update,
 
 ![](/images/guides/openapi-format-overlays/overlay-target.png)
 
-To update a specific tag, JSONPath supports filters, which use a `?(condition)` syntax. Here I am looking through an array of objects for the one which has a name property equal to “Stations”: `$.tags[?(@.name == "Stations")]`
-
+To update a specific tag, JSONPath supports filters, which use a `?(condition)` syntax. Here I am looking through an array of objects for the one which has a name property equal to “Stations”: `$.tags[?(@.name == "Stations")]`.
 
 ![](/images/guides/openapi-format-overlays/overlay-target-better.png)
 
-The syntax worked, I can see the tag object is there in the target preview. Now to work on the action.
+The JSONPath worked, I can see the tag object is there in the target preview. Now to work on the action.
 
 ### Step 4:) Create the first Action
 
@@ -85,6 +84,10 @@ The main screen has OpenAPI input on the left and OpenAPI output on the right. T
 2. The Payments tag has vanished entirely.
 
 ![](/images/guides/openapi-format-overlays/output-difference.png)
+
+If its hard to see what has changed and you really want to be sure, you can click the *Show Diff* button to see the difference between the original OpenAPI document on the left, and the one with overlay changes on the right. Keep in mind that this will also show formatting changes, so there might be more changes than just the ones you made with the overlay.
+
+![](/images/guides/openapi-format-overlays/overlay-show-diff.png)
 
 Now you can keep iterating on the overlays you want to build, keep trying them out in this playground, then when its working nicely go back to the Overlay screen and click *“Download Overlay”*.
 
