@@ -51,7 +51,9 @@ To ensure optimal compatibility and total confidentiality, we chose to let the u
 
 To avoid this situation, we created our own proxy, designed to ensure that requests sent from a browser are processed without error by an API’s servers, all while maintaining confidentiality and security: **cors toujours**.
 
-This proxy is hosted outside our infrastructure to ensure data security. Its open-source code will soon be made available to the community.
+This proxy is hosted outside our infrastructure to ensure data security. Its open-source code is available [on GitHub](https://github.com/bump-sh/cors-toujours).
+
+You can also learn more about it in our [dedicated blog post](https://bump.sh/blog/releasing-cors-proxy-opensource/).
 
 ### Authentication
 
