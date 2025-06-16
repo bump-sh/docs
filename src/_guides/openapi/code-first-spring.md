@@ -513,32 +513,44 @@ To automate the deployment of the OpenAPI description to Bump.sh, you can add a
 step in your CI/CD pipeline to run the `bump deploy` command every time a pull
 request is merged. This way, the OpenAPI description will always be up-to-date
 and available on Bump.sh.
+
 You can use a CI/CD tool like GitHub Actions, GitLab CI, or Jenkins to run the
 deployment command automatically.
+
 For example, if you are using GitHub Actions, you can create a workflow file
-`.github/workflows/deploy-openapi.yml` with the following content:
+`.github/workflows/bump.yml` with the following content:
 
 ```yaml
-name: Deploy OpenAPI to Bump.sh
+
+name: Check & deploy API documentation
+permissions:
+  contents: read
+  pull-requests: write
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 jobs:
-  deploy:
+  deploy-doc:
+    if: ${{ github.event_name == 'push' }}
+    name: Deploy API documentation on Bump.sh
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
+          distribution: 'temurin'
           java-version: '21'
 
       - name: Build and run the application
         run: |
-          ./mvnw clean package spring-boot:run &
+          mvn clean spring-boot:run &
 
       - name: Wait for the application to start
         run: sleep 30
@@ -546,17 +558,17 @@ jobs:
       - name: Deploy API documentation
         uses: bump-sh/github-action@v1
         with:
-          doc: <BUMP_DOC_ID>
+          doc: spring-code-first
           token: ${{secrets.BUMP_TOKEN}}
           file: http://localhost:8080/openapi
 ```
 
 This workflow will run every time a commit is pushed to the `main` branch, build
-the application, wait for it to start, and then deploy the OpenAPI description to
-Bump.sh using the `bump deploy` command. Make sure to set the `BUMP_TOKEN` secret
-in your GitHub repository settings with the token you retrieved from the Bump.sh
-CI deployment settings page.
+the application, wait for it to start, and then deploy the OpenAPI description
+to Bump.sh using the `bump deploy` command. 
 
+Make sure to set the `BUMP_TOKEN` secret in your GitHub repository settings with
+the token you retrieved from the Bump.sh CI deployment settings page.
 
 ## Sample Code
 
