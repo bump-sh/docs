@@ -10,9 +10,7 @@ title: Provide links to external resources
 
 External resources, such as tutorials or guides that don't belong inside the API documentation can be linked in your documentation using `x-externalLinks`.
 
-The `x-externalLinks` array can be added at the root of your API document, which will add link(s) to the resource(s) of your choice, displayed in your documentation navigation bar.
-
-Each object requires two elements:
+The `x-externalLinks` array can be added at the root of your API document, which will add link(s) to the resource(s) of your choice, displayed in your documentation navigation bar. Each object requires two elements:
 - `label`: the text that will appear on the link,
 - `url`: the URL the link will point to.
 

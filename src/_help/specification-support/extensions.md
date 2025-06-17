@@ -33,4 +33,4 @@ This custom property allows you to add a button to your documentation that enabl
 
 ## Add links to external resources (`x-externalLinks`)
 
-This custom property lets you add links to the navigation bar of your documentation, redirecting users to external resources. Find out more in our [dedicated section](/help/publish-documentation/external-links)
+This custom property lets you add links to the navigation bar of your documentation, redirecting users to external resources. Find out more in our [dedicated section](/help/publish-documentation/external-links).
