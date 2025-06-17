@@ -24,4 +24,4 @@ x-externalLinks:
     url: https://my-company.com/my-resource-2
 ```
 
-![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/images/help/x-externalLinks.png)
+![Screenshot of an example API Documentation on Bump.sh, with the external links highlighted at the top right of the screen.](/images/help/x-externalLinks.png)
