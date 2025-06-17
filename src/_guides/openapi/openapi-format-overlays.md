@@ -26,13 +26,13 @@ Figuring out how to do all of this just from staring into an empty text editor c
 
 ## Creating Overlays with OpenAPI-Format Playground
 
-### Step 1.) Add an OpenAPI document
+### Step 1 - Add an OpenAPI document
 
 Copy in some OpenAPI into the box on the left. If you don’t have any handy why not use the [Train Travel API](https://github.com/bump-sh-examples/train-travel-api) by Bump.sh.
 
 ![](images/guides/openapi-format-overlays/new-openapi-in-playground.png)
 
-### Step 2.) Open the Overlay section
+### Step 2 - Open the Overlay section
 
 Click the “*OpenAPI Overlay”* button and it will go to a different section. In here you can give your Overlay a name, something that describes what we are trying to do. 
 
@@ -40,7 +40,7 @@ For example: “Add descriptions to tags” is pretty clear about what is going 
 
 ![](/images/guides/openapi-format-overlays/overlay-name.png)
 
-### Step 3.) Play with JSONPath
+### Step 3 - Play with JSONPath
 
 JSONPath is hard and scary at first, but much like RegEx it can be mastered, especially with the help of a handy tool like this. 
 
@@ -56,7 +56,7 @@ To update a specific tag, JSONPath supports filters, which use a `?(condition)` 
 
 The JSONPath worked, I can see the tag object is there in the target preview. Now to work on the action.
 
-### Step 4:) Create the first Action
+### Step 4 - Create the first Action
 
 Overlay actions come in two flavours: “update” or “remove”.
 
@@ -72,7 +72,7 @@ Remove will not need to take a value, it just removes the target object entirely
 
 There’s a whole lot more than can be done than just mess with tags, but instead of getting stuck into advanced overlaying, let’s see how these two actions run.
 
-### Step 5:) Compare the output
+### Step 5 - Compare the output
 
 Click the *“Apply Overlay”* button and it’s back to the main Playground screen.
 
