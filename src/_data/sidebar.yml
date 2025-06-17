@@ -48,6 +48,9 @@ help:
         label: SEO
         link: /publish-documentation/seo/
       - type: page
+        label: Provide links to external resources
+        link: /publish-documentation/external-links/
+      - type: page
         label: Get feedback from users
         link: /publish-documentation/feedback/
   - type: category

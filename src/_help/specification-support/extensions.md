@@ -29,5 +29,8 @@ This custom property allows you to identify some components of your documentatio
 
 ## Get feedback from users (`x-feedbackLink`)
 
-This custom property allows you to add a button to your documentation that enables you to collect feedback from your users. Find out more in our [dedicated
-section](/help/publish-documentation/feedback).
+This custom property allows you to add a button to your documentation that enables you to collect feedback from your users. Find out more in our [dedicated section](/help/publish-documentation/feedback).
+
+## Add links to external resources (`x-externalLinks`)
+
+This custom property lets you add links to the navigation bar of your documentation, redirecting users to external resources. Find out more in our [dedicated section](/help/publish-documentation/external-links)
