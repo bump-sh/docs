@@ -3,6 +3,7 @@ title: Generating OpenAPI docs for Java with Spring Boot
 authors: phil
 excerpt: Learn how to generate OpenAPI documentation for your Spring Boot application using Springdoc and Swagger Annotations.
 date: 2025-06-19
+canonical_url: https://bump.sh/blog/generating-openapi-docs-for-java-with-spring-boot/
 ---
 
 API Code-first is the art of building an API, and then popping some annotations
