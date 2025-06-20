@@ -83,6 +83,8 @@ resources:
         link: /customization-options/login/
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
+      - label: Embed mode
+        link: /customization-options/embed-mode/
   - type: category
     label: Changes management
     link: /changes-management/
