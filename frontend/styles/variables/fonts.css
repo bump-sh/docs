@@ -1,6 +1,8 @@
 :root {
-  --font-text: "Avenir Next";
-
+  --font-text: Saans, "Saans Fallback", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Saans Mono", "Saans Fallback", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --text-color: var(--gray-70);
   --text-color-disabled: var(--gray-40);
   --text-color-secondary: var(--slate-70);
@@ -15,12 +17,12 @@
   --gap-default: var(--spacing-6);
 
   --font-weight-normal: 500;
-  --font-weight-semibold: 600;
+  --font-weight-semibold: 580;
   --font-weight-bold: 700;
 
   --text-xxs: 0.625rem;
   --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
+  --text-sm: 0.92rem;
   --text-base: 1rem;
   --text-l: 1.125rem;
   --text-xl: 1.25rem;

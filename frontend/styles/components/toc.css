@@ -5,6 +5,7 @@
   grid-row: 1 / 1000;
   position: sticky;
   top: var(--spacing-8);
+  font-size: var(--text-sm);
 }
 
 #markdown-toc,

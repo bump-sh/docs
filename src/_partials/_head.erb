@@ -3,6 +3,7 @@
 <%= seo %>
 <link rel="shortcut icon" type="image/svg+xml" href="<%= relative_url site.config["metadata"]["favicon_light"] %>" media="(prefers-color-scheme: light)">
 <link rel="shortcut icon" type="image/svg+xml" href="<%= relative_url site.config["metadata"]["favicon_dark"] %>" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/website<%= asset_path "fonts/saans-uprights-variable-subset.woff2" %>" as="font" type="font/woff2" crossorigin fetchpriority="high">
 <link rel="stylesheet" href="<%= webpack_path :css %>" />
 <% if data.canonical_url.present? %>
   <link rel="canonical" href="<%= data.canonical_url %>" />
