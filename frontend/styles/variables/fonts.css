@@ -29,4 +29,6 @@
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
   --text-5xl: 3rem;
+
+  --text-line-height: 1.7;
 }
