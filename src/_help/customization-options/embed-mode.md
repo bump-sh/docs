@@ -27,7 +27,7 @@ It’s designed for larger teams and companies who need their docs to look and f
 
 Here’s a high-level view of how requests and rendering flow in Embed Mode:
 
-[Schema: User requests a doc URL → hits client proxy → proxy adds headers → Bump.sh renders → proxy injects branding → content shown in the portal]
+![Embed Mode Flow](/images/help/embed-mode-workflow.png)
 
 ### Step-by-step flow
 
