@@ -1,5 +1,6 @@
-@import "../fonts/avenir.css";
+@import "fonts.css";
 
+@import "variables/fonts.css";
 @import "variables/spacings.css";
 @import "variables/sizes.css";
 @import "variables/colors.css";

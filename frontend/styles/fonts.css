@@ -1,0 +1,60 @@
+/* see ../fonts/README.md for details on how to handle the font */
+@font-face {
+  font-family: "Saans";
+  src: url("../fonts/saans-uprights-variable-subset.woff2")
+    format("woff2-variations");
+  font-display: swap;
+  unicode-range: U+20-23, U+25-5D, U+5F-7B, U+7D, U+A0, U+A9, U+AB, U+B0, U+BB,
+    U+C0, U+C6, U+C7, U+C9-CB, U+CF, U+D4, U+D7, U+E0, U+E2, U+E4, U+E7-EB, U+EE,
+    U+EF, U+F4, U+F7, U+F9, U+FB, U+152, U+153, U+2DA, U+2019, U+201C, U+201D,
+    U+2022, U+2026, U+20AC, U+2122, U+2190-2193, U+2196-2199, U+221A, U+2264,
+    U+2265;
+}
+
+@font-face {
+  font-family: "Saans Mono";
+  src: url("../fonts/saans-mono-regular-subset.woff2") format("woff2");
+  font-weight: 380;
+  font-display: swap;
+  unicode-range: U+20-23, U+25-5D, U+5F-7B, U+7D, U+A0, U+A9, U+AB, U+B0, U+BB,
+    U+C0, U+C6, U+C7, U+C9-CB, U+CF, U+D4, U+D7, U+E0, U+E2, U+E4, U+E7-EB, U+EE,
+    U+EF, U+F4, U+F7, U+F9, U+FB, U+152, U+153, U+2DA, U+2019, U+201C, U+201D,
+    U+2022, U+2026, U+20AC, U+2122, U+2190-2193, U+2196-2199, U+221A, U+2264,
+    U+2265;
+}
+
+@font-face {
+  font-family: "Saans Mono";
+  src: url("../fonts/saans-mono-semibold-subset.woff2") format("woff2");
+  font-weight: 670;
+  font-display: swap;
+  unicode-range: U+20-23, U+25-5D, U+5F-7B, U+7D, U+A0, U+A9, U+AB, U+B0, U+BB,
+    U+C0, U+C6, U+C7, U+C9-CB, U+CF, U+D4, U+D7, U+E0, U+E2, U+E4, U+E7-EB, U+EE,
+    U+EF, U+F4, U+F7, U+F9, U+FB, U+152, U+153, U+2DA, U+2019, U+201C, U+201D,
+    U+2022, U+2026, U+20AC, U+2122, U+2190-2193, U+2196-2199, U+221A, U+2264,
+    U+2265;
+}
+
+/*
+  Fallback font for Saans. This helps diminushing Cumulative Layout Shift a bit.
+  Values got by running a node script with capsize:
+
+  ```
+  import { createFontStack } from "@capsizecss/core";
+  import { fromFile } from "@capsizecss/unpack";
+
+  import arialMetrics from "@capsizecss/metrics/arial";
+  const saans = await fromFile("saans-variable-subset.woff2");
+
+  const { fontFaces } = createFontStack([saans, arialMetrics]);
+  console.log(fontFaces);
+  ```
+*/
+@font-face {
+  font-family: "Saans Fallback";
+  src: local("Arial"), local("ArialMT");
+  ascent-override: 91.3691%;
+  descent-override: 22.5913%;
+  line-gap-override: 0%;
+  size-adjust: 99.5961%;
+}
