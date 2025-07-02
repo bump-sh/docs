@@ -80,30 +80,27 @@ Content-Type: application/json
 
 ## Customizing Mocks with Rules
 
-While Beeceptor generates life-like mock responses from your OpenAPI spec by default, real-world testing often demands finer control — responses that change based on headers, query parameters, request bodies, or even session context.
+While Beeceptor generates life-like mock responses from your OpenAPI spec by default, real-world testing often demands finer control. E.g. a response that changes based on headers, query parameters, request bodies, or even session context.
 
 This is where Mock Rules come in.
 
-Mock rules are evaluated top-down, and the first matching rule wins. Once matched, Beeceptor sends the defined response and bypasses the default OpenAPI mock logic. This gives you complete control over mocking behavior.
+Mock rules are evaluated top-down, and the first matching rule wins. Once matched, Beeceptor sends the pre-defined response and bypasses the default OpenAPI mock logic. This gives you complete control over mocking behavior.
 
 ### Key Capabilities
 
-- Priority Handling: Rules always take precedence over the auto-generated OpenAPI responses.
-- Flexible Matching: Match on HTTP method, path, query params, headers, and body content (exact or regex).
-- Network Behavior Simulation: Add artificial delays (e.g., delay: 2000ms) or drop connections to test edge cases.
-- Error Simulation: Easily return `500`/`401`/4`29 responses under specific test conditions.
-- Dynamic Personalization: Define responses per user or role, e.g.:
-
-```text
-GET /products
-
+- **Priority Handling**: Rules always take precedence over the auto-generated OpenAPI responses.
+- **Flexible Matching**: Match on HTTP method, path, query params, headers, and body content (exact or regex).
+- **Network Behavior Simulation**: Add artificial delays (e.g., delay: 2000ms) or drop connections to test edge cases.
+- **Error Simulation**: Easily return `500` / `401` / `429` responses under specific test conditions.
+- **Dynamic Personalization**: Define responses per user or role. E.g.: When hitting `GET /products`, the response changes based on who logged in.
+```
 Header: X-User-ID: userA → returns products [A,B]
 Header: X-User-ID: userB → returns products [B,C]
 ```
 
 ## Build Stateful Mocks
 
-Mocking in 2025 isn’t just about static JSON anymore — it’s about behavior. Today's applications are dynamic, multi-step, and interactive. To simulate such behavior, stateful mocking becomes essential. Beeceptor does this by offering state-aware constructs, powered by an internal, persistent state engine.
+Mocking in 2025 isn’t just about static JSON anymore. Today it is about 'behaviors'. Today's applications are dynamic, multi-step, and interactive. To simulate such behavior, stateful mocking becomes essential. Beeceptor does this by offering state-aware constructs, powered by an internal, persistent state engine.
 
 With Beeceptor, your mock endpoints can:
 
@@ -168,4 +165,4 @@ Stateful mocks turn the mock server from a “static response generator” into 
 
 ---
 
-Mocking today is about realism and developer speed, not just about sending 200 OKs with dummy JSON. How fast all the stakeholders are enabled is a key success metric for Developer Experience (DX). If you're looking to improve developer onboarding, shift QA left, or remove test dependency bottlenecks, adding a mock server from OpenAPI spec. This is radically simple yet powerful solution, without managing infra, writing scripts, or defining examples by hand.
+Mocking today is about realism and developer speed, not just about sending 200 OKs with dummy JSON. How fast all the stakeholders are enabled is a key success metric for Developer Experience (DX). If you're looking to improve developer onboarding, shift QA left, or remove test dependency bottlenecks, consider adding a intelligent mock server in your API documentation. This is radically simple yet powerful solution, without managing infra, writing scripts, or defining examples by hand.
