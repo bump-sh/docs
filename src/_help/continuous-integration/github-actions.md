@@ -149,7 +149,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Make sure you change the name of the branch your pull request will target, aka your destination branch (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your pull request will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
 ## Inputs
