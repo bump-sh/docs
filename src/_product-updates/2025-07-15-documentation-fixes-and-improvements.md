@@ -10,7 +10,7 @@ Improvements:
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
 - The real-time tracking of the platform has been improved and can be followed on [status.bump.sh](https://status.bump.sh),
 - Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
-- Enums support in query parameters have been deepen to support complex combinations,
+- Enums support in query parameters have been deepen to handle complex combinations,
 - The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
 - [Mermaid diagrams and charts](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
