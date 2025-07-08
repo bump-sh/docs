@@ -8,7 +8,7 @@ Improvements:
 - You can now add more than one additional link to the navigation bar by using [our new custom extension](https://docs.bump.sh/help/publish-documentation/external-links/) called `x-externalLinks` instead of the `externalDocs` property,
 - When the link to an operation or group no longer exists, it now returns a 404 page instead of redirecting to the top of the documentation, providing a clearer feedback,
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
-- The real-time tracking of the platform has been improved and can be followed on [status.bump.sh](https://status.bump.sh),
+- We’ve updated our status page and how we communicate through it, to share precise information about the production status in real-time. It can be followed on [status.bump.sh](https://status.bump.sh),
 - Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
 - Enums support in query parameters have been deepen to handle complex combinations,
 - The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
