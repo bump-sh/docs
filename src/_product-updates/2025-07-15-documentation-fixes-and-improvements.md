@@ -9,7 +9,7 @@ Improvements:
 - When the link to an operation or group no longer exists, it now returns a 404 page instead of redirecting to the top of the documentation, providing a clearer feedback,
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
 - The real-time status of the platform can now be followed on [status.bump.sh](https://status.bump.sh),
-- Meta descriptions are now context-specific (topic, operation, webhook, ...),
+- Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
 - Enums are now displayed in query parameters,
 - The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
