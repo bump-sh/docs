@@ -12,7 +12,7 @@ Improvements:
 - We’ve updated our status page and how we communicate through it, to share precise information about the production status in real-time. It can be followed on [status.bump.sh](https://status.bump.sh),
 - Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
 - Enums support in query parameters has been deepened to handle complex combinations,
-- The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
+- The sharing module appearing on hover no longer prevents from easily copying operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
 - [Mermaid diagrams and charts](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
 - The switch between oneOfs now displays the discriminator mapping name instead of the component name: the mapping name value generally gives more information about the real use of an API consumer.
