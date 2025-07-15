@@ -11,7 +11,7 @@ Improvements:
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
 - We’ve updated our status page and how we communicate through it, to share precise information about the production status in real-time. It can be followed on [status.bump.sh](https://status.bump.sh),
 - Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
-- Enums support in query parameters have been deepen to handle complex combinations,
+- Enums support in query parameters has been deepened to handle complex combinations,
 - The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
 - [Mermaid diagrams and charts](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
@@ -20,7 +20,7 @@ Improvements:
 
 Fixes:
 - Revamped the navigation bar architecture to ensure its stability in every context (with or without logo, inside a hub or as a standalone documentation, in the documentation, API Explorer, changelog, ...),
-- Reworked the copy button of the code sample module to keep it visible when the path is longer than the module, and make sure it alway copies the active content when multiple code samples are defined,
+- Reworked the copy button of the code sample module to keep it visible when the path is longer than the module, and make sure it always copies the active content when multiple code samples are defined,
 - Reworked oneOfs support to ensure the right titles and content are always displayed and clickable,
 - Fixed an issue where selecting a different content-type returned an empty body,
 - Fixed missing required badges in advanced oneOf contexts,
