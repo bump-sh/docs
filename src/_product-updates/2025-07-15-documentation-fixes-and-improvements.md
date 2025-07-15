@@ -7,11 +7,12 @@ Even if our product grows with new features, taking the time to maintain, enhanc
 Improvements:
 - You can now add more than one additional link to the navigation bar by using [our new custom extension](https://docs.bump.sh/help/publish-documentation/external-links/) called `x-externalLinks` instead of the `externalDocs` property,
 - When the link to an operation or group no longer exists, it now returns a 404 page instead of redirecting to the top of the documentation, providing a clearer feedback,
+- When switching from one branch to another, the active operation is maintained if it also exists in the target branch,
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
-- The real-time status of the platform can now be followed on [status.bump.sh](https://status.bump.sh),
-- Meta descriptions are now context-specific (topic, operation, webhook, ...),
-- Enums are now displayed in query parameters,
-- The sharing module appearing on hover no longer prevents from easily copying of operation and property names,
+- We’ve updated our status page and how we communicate through it, to share precise information about the production status in real-time. It can be followed on [status.bump.sh](https://status.bump.sh),
+- Meta descriptions are now context-specific (topic, endpoint, channel, operation, webhook...),
+- Enums support in query parameters has been deepened to handle complex combinations,
+- The sharing module appearing on hover no longer prevents from easily copying operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
 - [Mermaid diagrams and charts](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
 - The switch between oneOfs now displays the discriminator mapping name instead of the component name: the mapping name value generally gives more information about the real use of an API consumer.
@@ -19,7 +20,7 @@ Improvements:
 
 Fixes:
 - Revamped the navigation bar architecture to ensure its stability in every context (with or without logo, inside a hub or as a standalone documentation, in the documentation, API Explorer, changelog, ...),
-- Reworked the copy button of the code sample module to keep it visible when the path is longer than the module, and make sure it alway copies the active content when multiple code samples are defined,
+- Reworked the copy button of the code sample module to keep it visible when the path is longer than the module, and make sure it always copies the active content when multiple code samples are defined,
 - Reworked oneOfs support to ensure the right titles and content are always displayed and clickable,
 - Fixed an issue where selecting a different content-type returned an empty body,
 - Fixed missing required badges in advanced oneOf contexts,
