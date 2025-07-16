@@ -78,7 +78,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Make sure you adapt the name of the branch your pull request/deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy documentation only
@@ -110,7 +110,7 @@ jobs:
           file: doc/api-documentation.yml
 ```
 
-> Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Diff on pull requests only
@@ -149,7 +149,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Make sure you adapt the name of the branch your pull request will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy a single documentation on a hub
@@ -183,7 +183,7 @@ jobs:
           file: doc/api-documentation.yml
 ```
 
-> Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy multiple documentation at once on a hub
@@ -221,11 +221,11 @@ jobs:
 
 ## Inputs
 
-* `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/docs
+* `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/dashboard
 
 * `token` (required): Do not add your documentation token here, but create an [encrypted secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) that holds your documentation token.
 
-  * Your Bump.sh token can be found in the documentation settings on [your API dashboard](https://bump.sh/docs). Copy it for later usage.
+  * Your Bump.sh token can be found in the documentation settings on [your API dashboard](https://bump.sh/dashboard). Copy it for later usage.
   * In your GitHub repository, go to your “Settings”, and then “Secrets”.
   * Click the button “New repository secret”, name the secret `BUMP_TOKEN` and paste your Bump.sh token in the value field.
 
