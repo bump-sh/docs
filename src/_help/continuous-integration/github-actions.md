@@ -155,7 +155,7 @@ jobs:
 ### Deploy a single documentation on a hub
 
 You can deploy a documentation inside a hub by adding a `hub` slug or id. 
-Note that the documentation will be automatically created if it doesn't exist, either by using the slug you defined, or generating one from the filename.
+Note that the documentation will be automatically created if it doesn't exist by using the slug you defined with the `doc:` input.
 
 `.github/workflows/bump-deploy.yml`
 
