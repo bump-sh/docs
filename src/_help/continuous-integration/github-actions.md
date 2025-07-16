@@ -19,11 +19,11 @@ Once you've set up an API Documentation, go to Settings > CI Deployment, copy th
 
 Then you can pick from one of the three following API workflow files.
 
-- **Recommended:** [Deploy Documentation & Diff on Pull Requests](#deploy-documentation--diff-on-pull-requests)
-- [Deploy Documentation only](#deploy-documentation-only)
-- [Diff on Pull Requests only](#diff-on-pull-requests-only)
+- **Recommended:** [Deploy documentation & diff on pull requests](#deploy-documentation--diff-on-pull-requests)
+- [Deploy documentation only](#deploy-documentation-only)
+- [Diff on pull requests only](#diff-on-pull-requests-only)
 
-### Deploy Documentation & Diff on Pull Requests
+### Deploy documentation & diff on pull requests
 
 This is the [recommended workflow](/help/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
 
@@ -81,7 +81,7 @@ jobs:
 > Make sure you adapt the name of the branch your pull request/deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
-### Deploy Documentation only
+### Deploy documentation only
 
 If you only need to deploy documentation changes on push, then you can use this workflow instead:
 
@@ -152,9 +152,76 @@ jobs:
 > Make sure you adapt the name of the branch your pull request will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
+### Deploy a single documentation on a hub
+
+You can deploy a documentation inside a hub by adding a `hub` slug or id. 
+Note that the documentation will be automatically created if it doesn't exist, either by using the slug you defined, or generating one from the filename.
+
+`.github/workflows/bump-deploy.yml`
+
+```yaml
+name: Deploy documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-doc:
+    name: Deploy API doc on Bump.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          doc: <BUMP_DOC_ID>
+          hub: <BUMP_HUB_ID>
+          token: ${{secrets.BUMP_TOKEN}}
+          file: doc/api-documentation.yml
+```
+
+> Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document (`doc/api-documentation.yml`).
+{: .warning}
+
+### Deploy multiple documentation on a hub
+
+You can deploy multiple documentation inside a hub by adding a `hub` slug or id. Note that documentation will be automatically created if they don't exist.
+
+`.github/workflows/bump-deploy.yml`
+
+```yaml
+name: Deploy documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-doc:
+    name: Deploy API doc on Bump.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          hub: <BUMP_HUB_ID>
+          token: ${{secrets.BUMP_TOKEN}}
+          file: docs/
+```
+
+> Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document folder (`docs/`).
+{: .warning}
+
+
 ## Inputs
 
-* `doc` (required): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/docs
+* `doc` (required unless it's deployed on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/docs
 
 * `token` (required): Do not add your documentation token here, but create an [encrypted secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) that holds your documentation token.
 
