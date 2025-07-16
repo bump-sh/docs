@@ -186,9 +186,9 @@ jobs:
 > Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document (`doc/api-documentation.yml`).
 {: .warning}
 
-### Deploy multiple documentation on a hub
+### Deploy multiple documentation at once on a hub
 
-You can deploy multiple documentation inside a hub by adding a `hub` slug or id. Note that documentation will be automatically created if they don't exist.
+You can deploy multiple documentation inside a hub from a **source directory** by adding a `hub` slug or id and specifying a directory name in the `file:` input. Note that documentation will be automatically created if they don't exist.
 
 `.github/workflows/bump-deploy.yml`
 
@@ -215,13 +215,13 @@ jobs:
           file: docs/
 ```
 
-> Make sure you adapt the name of the branch your deploy will target, aka your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document folder (`docs/`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document folder (`docs/`).
 {: .warning}
 
 
 ## Inputs
 
-* `doc` (required unless it's deployed on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/docs
+* `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/docs
 
 * `token` (required): Do not add your documentation token here, but create an [encrypted secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) that holds your documentation token.
 
