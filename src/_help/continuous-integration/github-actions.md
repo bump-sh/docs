@@ -78,7 +78,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API definition file (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy documentation only
@@ -110,7 +110,7 @@ jobs:
           file: doc/api-documentation.yml
 ```
 
-> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API definition file (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Diff on pull requests only
@@ -149,7 +149,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, and point `file:` to your local API definition file (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy a single documentation on a hub
@@ -183,7 +183,7 @@ jobs:
           file: doc/api-documentation.yml
 ```
 
-> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document (`doc/api-documentation.yml`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_DOC_ID>` with your Bump.sh documentation slug or id, `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API definition file (`doc/api-documentation.yml`).
 {: .warning}
 
 ### Deploy multiple documentation at once on a hub
@@ -215,7 +215,7 @@ jobs:
           file: docs/
 ```
 
-> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API description document folder (`docs/`).
+> Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API definition file folder (`docs/`).
 {: .warning}
 
 
@@ -229,7 +229,7 @@ jobs:
   * In your GitHub repository, go to your “Settings”, and then “Secrets”.
   * Click the button “New repository secret”, name the secret `BUMP_TOKEN` and paste your Bump.sh token in the value field.
 
-* `file`: Relative path to the documentation file. _Default: `api-contract.yml`_
+* `file`: Relative path to the API definition file or the API definition file folder. _Default: `api-contract.yml`_
 
 * `hub` (optional): Hub slug or id. Needed when deploying to documentation in a Hub. Can be found in the hub settings on https://bump.sh
 
@@ -239,7 +239,7 @@ jobs:
 
   * `deploy`: deploy a new version of the documentation
   * `diff`: automatically comment your pull request with the API diff
-  * `dry-run`: dry-run a deployment of the documentation file
+  * `dry-run`: dry-run a deployment of the API definition file
   * `preview`: create a temporary preview
 
 * `expires` (optional): Specify a longer expiration date for **public diffs** (defaults to 1 day). Use iso8601 format to provide a date, or you can use `never` to keep the result live indefinitely.
