@@ -47,6 +47,5 @@ paths:
   <meta name="First root tag" content="First root tag content" />
   <meta name="Second root tag" content="Second root tag content" />
   <meta name="Operation tag" content="Operation tag content" />
-
 </head>
 ```
