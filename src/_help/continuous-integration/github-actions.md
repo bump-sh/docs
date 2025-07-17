@@ -221,7 +221,7 @@ jobs:
 
 ## Inputs
 
-* `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on https://bump.sh/dashboard
+* `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on [your API dashboard](https://bump.sh/dashboard).
 
 * `token` (required): Do not add your documentation token here, but create an [encrypted secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) that holds your documentation token.
 
@@ -231,7 +231,7 @@ jobs:
 
 * `file`: Relative path to the API definition file or the API definition file folder. _Default: `api-contract.yml`_
 
-* `hub` (optional): Hub slug or id. Needed when deploying documentation in a Hub. Can be found in the hub settings on https://bump.sh/dashboard
+* `hub` (optional): Hub slug or id. Needed when deploying documentation in a Hub. Can be found in the hub settings on [your API dashboard](https://bump.sh/dashboard).
 
 * `branch` (optional): Branch name used during `deploy` or `diff` commands. This can be useful to maintain multiple API reference history and make it available in your API documentation.
 
