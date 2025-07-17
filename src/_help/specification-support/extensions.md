@@ -34,3 +34,7 @@ This custom property allows you to add a button to your documentation that enabl
 ## Add links to external resources (`x-externalLinks`)
 
 This custom property lets you add links to the navigation bar of your documentation, redirecting users to external resources. Find out more in our [dedicated section](/help/publish-documentation/external-links).
+
+## Add custom meta tags (`x-metaTags`)
+
+This custom property lets you add custom meta tags in the <head> tag of your documentation pages. Find out more in our [dedicated section](/help/specification-support/meta-tags).
