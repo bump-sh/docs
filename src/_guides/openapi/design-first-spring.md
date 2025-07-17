@@ -335,8 +335,7 @@ public class EmployeeApiTest {
     void notFoundResponseBodyMismatch() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/employees/22").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound())
-                // actually, this is the json that will be returned by the endpoint, but it doesn't match the openapi description
-                // due to the missing "id" property, so the test fails
+                // actually, this is the json that will be returned by the endpoint, but it doesn't match the openapi description because it is missing the "message" property
                 .andExpect(content().json("""
                         {
                             "message": "Could not find employee 22"
