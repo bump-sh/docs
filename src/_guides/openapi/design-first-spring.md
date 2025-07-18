@@ -20,9 +20,9 @@ Instead of rushing into the code, we can build OpenAPI descriptions before
 writing any code at all, like creating a blueprint before building a house. Once
 you have the OpenAPI description documents saved (ideally in your source code
 repository), you can leverage it at every step of the API lifecycle, to produce
-[mock APIs for clients](src/_guides/bump-sh-tutorials/mocking-with-microcks.md)
+[mock APIs for clients](_guides/bump-sh-tutorials/mocking-with-microcks.md)
 to test assumptions with, build [client libraries without writing any
-code](src/_guides/bump-sh-tutorials/generate-sdks-with-speakeasy.md), make
+code](_guides/bump-sh-tutorials/generate-sdks-with-speakeasy.md), make
 really effective contract testing, and even generate backend code to get the
 application teams started once the contract is all signed off.
 
@@ -46,7 +46,7 @@ editors](https://openapi.tools/#text-editors), or [traffic
 sniffing](/guides/openapi/code-first/#traffic-sniffing), or
 [AI](https://create-api.dev/) to generate this OpenAPI, and you can use our
 [ultimate OpenAPI
-Guide](src/_guides/openapi/specification/v3.1/introduction/what-is-openapi.md)
+Guide](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md)
 to help you get started writing and updating OpenAPI.
 
 If you are switching from code first and getting on the design first train, you
