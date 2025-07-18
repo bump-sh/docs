@@ -5,7 +5,7 @@ title: Custom meta tags
 - TOC
 {:toc}
 
-The x-metaTags extension allows to add `meta` tags to the `head` of a documentation page.
+The x-metaTags extension allows to add `meta` tags to the `head` of a documentation page. For example, to enhance your own global search with more precise filtering through facets, thanks to custom meta tags retrieved by your internal crawler.
 
 `x-metaTags` can be added at different levels: root, topic, tag ([when grouping by tag](/help/customization-options/operations-navigation/#group-operations-by-tag)), operation, webhook, message, ...
 
