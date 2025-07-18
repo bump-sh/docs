@@ -31,9 +31,9 @@ It reports on any active event, current and past. Statuses and metrics are detai
 
 Metrics are available in real time from our monitoring systems.
 
-If any event occur, our team is warned directly and will most of the time be working on it (and potentiall have fixed it) by the time you might realize it.
+If any event occurs, our team is warned directly and will most of the time be working on it (and potentiall have fixed it) by the time you might realize it.
 
-In rare cases, for events that may last longer, or for any scheduled maintenances that may impact our services, we will post announcements via this page.
+In rare cases, for events that may last longer, or for any scheduled maintenances that may impact our services, we will post announcements via that page.
 
 ### Status notifications
 
