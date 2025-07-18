@@ -7,7 +7,7 @@ title: Custom meta tags
 
 The x-metaTags extension allows to add `meta` tags to the `head` of a documentation page.
 
-`x-metaTags` can be added at different levels: root, topic, tag ([when grouping by tag](/help/customization-options/operations-navigation/#group-operations-by-tag)), operation, webhook, ...
+`x-metaTags` can be added at different levels: root, topic, tag ([when grouping by tag](/help/customization-options/operations-navigation/#group-operations-by-tag)), operation, webhook, message, ...
 
 Tags added to the root of the API definition file will be added to every page of the documentation. Tags added at any other level will only be added to the corresponding pages.
 
