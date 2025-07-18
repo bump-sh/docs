@@ -124,10 +124,6 @@ help:
     items:
       - label: Common elements
         items:
-          - label: Badges
-            link: /specification-support/doc-badges/
-          - label: Custom meta tags
-            link: /specification-support/meta-tags/
           - label: JSON Schema
             link: /specification-support/json-schema/
           - label: Multiple servers
@@ -140,6 +136,10 @@ help:
             link: /specification-support/references/
           - label: Specification extensions
             link: /specification-support/extensions/
+          - label: Badges
+            link: /specification-support/doc-badges/
+          - label: Custom meta tags
+            link: /specification-support/meta-tags/
       - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
