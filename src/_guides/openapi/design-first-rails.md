@@ -20,7 +20,7 @@ This guide is going to look at two specific parts of the API design-first workfl
 
 The API design-first workflow means you'll need to create your OpenAPI description before you start writing all your code, so if you don't have an `openapi.yaml` already that is probably the first step. You can use a wide variety of [graphical editors](https://openapi.tools/#gui-editors), [text editors](https://openapi.tools/#text-editors), or [traffic sniffing](/guides/openapi/code-first/#traffic-sniffing) to generate this OpenAPI, and there is lots of documentation and guides to help you. 
 
-Alternatively you can grab some sample OpenAPI from the API Guru Marketplace, and click JSON or YAML to download their OpenAPI descriptions.
+Alternatively you can grab some sample OpenAPI from the [API Guru marketplace](https://apis.guru/), and download various OpenAPI descriptions in YAML or JSON format.
 
 Either way, once you have some an OpenAPI description document, pop it into your Git repository somewhere like `api/openapi.yaml`. 
 
@@ -76,14 +76,14 @@ Instead of wasting loads of time writing out validation logic in dry or whatever
 
 **Step 4:** Start your server up and try it out! 
 
-  ```
-  $ rails s
+  ```shell
+  rails s
   ```
   
 **Step 5:** Now using your favourite HTTP client you can try interacting with your API, to see how it works. Presuming you've got an endpoint, if not quickly make some sample controller (or grab ours from the [sample code](https://github.com/bump-sh-examples/rails-design-first)) and make sure the model has some required properties. A basic test is to try sending a request that misses out a required property, to see if that allows the request through or fails it.
 
   ```
-  $ curl -X POST http://localhost:3000/widgets -H "Content-Type: application/json" -d '{}'  | jq .
+  curl -X POST http://localhost:3000/widgets -H "Content-Type: application/json" -d '{}'  | jq .
 
   {
     "title": "Bad Request Body",
@@ -168,7 +168,6 @@ end
 All the magic is happening in `expect(response).to match_openapi_doc(OPENAPI_DOC)`, where it's looking at the OpenAPI description, seeing which HTTP method and endpoint to look for, then comparing what it sees against the schema for the defined response. 
 
 If you get a response back in a test for a status code that is not defined in OpenAPI it will let you know:
-
 
 ```
 Failures:

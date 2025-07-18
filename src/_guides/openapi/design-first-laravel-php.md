@@ -22,7 +22,7 @@ This guide is going to look at two specific parts of the API design-first workfl
 
 The API design-first workflow means you'll need to create your OpenAPI description before you start writing all your code, so if you don't have an `openapi.yaml` already that is probably the first step. You can use a wide variety of [graphical editors](https://openapi.tools/#gui-editors), [text editors](https://openapi.tools/#text-editors), or [traffic sniffing](/guides/openapi/code-first/#traffic-sniffing) to generate this OpenAPI, and there is lots of documentation and guides to help you. 
 
-Alternatively you can grab some sample OpenAPI from the API Guru Marketplace, and click JSON or YAML to download their OpenAPI descriptions.
+Alternatively you can grab some sample OpenAPI from the [API Guru marketplace](https://apis.guru/), and click JSON or YAML to download their OpenAPI descriptions.
 
 Either way, once you have an OpenAPI description document, pop it into your Git repository somewhere like `api/openapi.yaml`. 
 
