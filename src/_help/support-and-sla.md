@@ -27,7 +27,7 @@ Since we want to offer utmost transparency as of the status of our services, we 
 
 Our status page is available at [https://status.bump.sh/](https://status.bump.sh/).
 
-If reports on any active event, current and past components and system status and metrics.
+It reports on any active event, current and past. Statuses and metrics are detailed for each service (API portal, deployment queue, ...).
 
 Metrics are available in real time from our monitoring systems.
 
