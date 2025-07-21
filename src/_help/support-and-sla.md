@@ -37,7 +37,7 @@ In rare cases, for events that may last longer, or for any scheduled maintenance
 
 ### Status notifications
 
-"Pull" is great, "push" is sometimes critical. You may subscribe to events notifications via the status page.
+"Pull" mechanisms are commonly used, but "push" notifications can be essential in certain cases. You can subscribe to event notifications through the status page to stay informed in real time.
 
 Such notifications may be delivered via:
 
