@@ -160,3 +160,6 @@ resources:
   - label: FAQ
     link: /faq/
     icon: help-circle
+  - label: Support and SLA
+    link: /support-and-sla/
+    icon: heart-plus
