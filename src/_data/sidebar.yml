@@ -128,6 +128,8 @@ help:
             link: /specification-support/json-schema/
           - label: Multiple servers
             link: /specification-support/multiple-servers/
+          - label: Overlays
+            link: /specification-support/overlays/
           - label: Polymorphism
             link: /specification-support/polymorphism/
           - label: References
@@ -136,8 +138,8 @@ help:
             link: /specification-support/extensions/
           - label: Badges
             link: /specification-support/doc-badges/
-          - label: Overlays
-            link: /specification-support/overlays/
+          - label: Custom meta tags
+            link: /specification-support/meta-tags/
       - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
