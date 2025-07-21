@@ -156,7 +156,7 @@ mv openapi.yaml src/main/resources/api/openapi.yaml
 
 Kappa is a library that integrates OpenAPI with Spring Boot, allowing you to validate requests against your OpenAPI description without needing to generate code. It acts as a middleware that intercepts requests and checks them against the OpenAPI schema before they reach your controllers.
 
-Kappa can be installed as a servlet using the `kappa-servlet-adapter` dependency, which would let us write a bit of code to [create a middleware](https://medium.com/@sharmapraveen91/understanding-api-middleware-in-spring-boot-a-deep-dive-79a03fc899c9). Thankfully there's an even easier tighter integration using the `kappa-spring` module, which will cut down the setup drastically.
+Kappa can be installed using the `kappa-spring` dependency, which provides tight integration with Spring Boot and removes the need for us to [create our own HTTP middleware](https://medium.com/@sharmapraveen91/understanding-api-middleware-in-spring-boot-a-deep-dive-79a03fc899c9).
 
 To install `kappa-spring` with Maven, pop it into `pom.xml`.
 
@@ -335,7 +335,7 @@ public class EmployeeApiTest {
     void notFoundResponseBodyMismatch() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/employees/22").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound())
-                // actually, this is the json that will be returned by the endpoint, but it doesn't match the openapi description because it is missing the "message" property
+                // actually, this is the json that will be returned by the endpoint, but it doesn't match the openapi description because of the missing "id" property
                 .andExpect(content().json("""
                         {
                             "message": "Could not find employee 22"
