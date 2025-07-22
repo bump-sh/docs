@@ -23,7 +23,7 @@ Beeceptor is optimized for quick adoption for developers, testers, and solution 
 
 ## From OpenAPI to Life-Like Responses
 
-[Beeceptor](https://beeceptor.com/openapi-mock-server/) can take either a `YAML` or `JSON` OpenAPI file. If your spec is hosted publicly (e.g., on [Bump.sh](https://bump.sh/), Github, or internal HTTP server), you can provide a public URL directly, and Beeceptor will fetch and parse it.
+[Beeceptor](https://beeceptor.com/openapi-mock-server/) can take either a `YAML` or `JSON` OpenAPI file. If your spec is hosted publicly (on [Bump.sh](https://bump.sh/) or Github), you can provide a public URL directly, and Beeceptor will fetch and parse it.
 
 Once imported, Beeceptor expands the following on a dedicated mock server page:
 - All the defined paths, methods, and operationIds
