@@ -40,7 +40,7 @@ You can open the mock server's dashboard to review the specification's path, req
 
 ![Expanding API paths and payload in Beeceptor](/images/guides/mock-with-beeceptor/beeceptor-openapi-paths-expanded.gif)
 
-Here is a sample API response when invoking the Get All Products API. Instead of placeholder values, you get domain-specific values without any extra configuration.
+Here is a sample API response when invoking the Get All Products API. Instead of placeholder values, you get domain-specific values without any extra configuration. Checkout the following response payload and refer to the `name`, `price`, `stock`, and `created_at` for the generated values.
 
 ```json
 GET /products
@@ -76,13 +76,11 @@ Content-Type: application/json
 
 ## Customizing Mocks with Rules
 
-While Beeceptor generates mock responses from your OpenAPI spec, real-world testing often demands more control, like responses that change based on headers, query parameters, request bodies, or session context.
+While Beeceptor generates mock responses from your OpenAPI spec, real-world testing often demands more control, like responses that change based on headers, query parameters, request bodies, or session context. This is where Mock Rules come in.
 
-This is where Mock Rules come in.
+At Beeceptor, the mock rules are evaluated top-down, and the first matching rule is applied. When a rule is matched, Beeceptor sends the defined response and bypasses the default OpenAPI mock logic. This gives you complete control over the mocking behavior.
 
-Mock rules are evaluated top-down, and the first matching rule is applied. When a rule is matched, Beeceptor sends the defined response and bypasses the default OpenAPI mock logic. This gives you complete control over the mocking behavior.
-
-### Key Capabilities
+#### Key Capabilities
 
 - **Priority Handling**: Rules always take precedence over the auto-generated OpenAPI responses.
 - **Flexible Matching**: Match on HTTP method, path, query params, headers, and body content (exact or regex).
@@ -105,13 +103,13 @@ With stateful mocks, your mock endpoints can:
 - Track counters (e.g., order IDs, session steps)
 - Emulate queue-like flows (e.g., shopping cart, job queues)
 
-Beeceptor achieves this through:
+Beeceptor achieves this through three fundamental operators:
 
-- Step Counters – for sequential values or stage tracking
-- Data Stores – for key-value persistence
-- Lists – for collections like carts, to-do lists, message queues
+- Step Counters – for sequential values or stage tracking. E.g. counting page views, or total orders.
+- Data Stores – for key-value persistence. E.g. storing current logged in user name.
+- Lists – for storing a collection of items. E.g. shopping cart, to-do lists, etc.
 
-This is configured in response templates using a simple syntax, without requiring a backend or scripting.
+You should user these in the response templates using a simple _Handlebars_ syntax. This syntax replaces scripting.
 
 
 ### Example: Add to Cart and View Cart
