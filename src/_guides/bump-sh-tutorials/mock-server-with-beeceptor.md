@@ -2,7 +2,7 @@
 title: Mocking APIs with Beeceptor
 authors: ankit
 excerpt: Create dynamic, stateful API mocks using Beeceptor. Import OpenAPI specs, simulate real-world workflows, and test with context-aware responses.
-date: 2025-07-02
+date: 2025-07-22
 ---
 
 When building distributed software systems, from an e-commerce storefront to a logistics API, each component is deeply tied to others. In this setup, waiting for dependencies can slow down engineering productivity. If the backend isn’t ready, the frontend team stalls. If partner APIs are flaky or have no sandbox, QA engineers can't write tests.
