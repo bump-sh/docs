@@ -89,7 +89,7 @@ tags:
       > before the expiry date 
 ```
 
-![Diff attribute in the generated API documentation](/images/guides/openapi/specification/v3.2/bump-tag-description.png)
+![The payments tag is showing the summary "Payments" in a header, with a HTML rendered description and warning box for the warn quote block.](/images/guides/openapi/specification/v3.2/bump-tag-description.png)
 [*See it live*](https://bump.sh/bump-examples/doc/train-travel-api/operation/operation-create-booking-payment)
 
 Note that [you can use Markdown](/help/enhance-documentation-content/markdown-support/) in the `description` field to better describe your tags.
@@ -102,12 +102,11 @@ In the code snippet below, the `externalDocs` property provides a link to a URL 
 
 ```yaml
 tags:
-  - name: diffs
-    summary: Diffs
-    description: Diff summary of changes in the API
+  - name: stations
+    description: Find and filter train stations across Europe, including their location and local timezone.
     externalDocs:
-      description: More details about Diff
-      url: /help/api-change-management/
+      description: Working with Stations
+      url: /docs/guides/working-with-stations
 ```
 
 When you generate API documentation for the API contract above, you'll see the link rendered like this:
@@ -116,28 +115,26 @@ When you generate API documentation for the API contract above, you'll see the l
 
 ## Tags Ordering Groups in Documentation
 
-When specifying your OpenAPI or AsyncAPI tags in the root of your API contract, the order in which you list the tags will define the order in which they appear in the generated documentation. This ordering lets you sort the tags meaningfully.
+When specifying OpenAPI tags in the root of your API contract, the order in which you list the tags will define the order in which they appear in the generated documentation. This ordering lets you sort the tags meaningfully.
 
 ```yaml
 tags:
-  - name: diffs
-    summary: Diffs
-    description: Diff summary of changes in the API
-  - name: ping
-    summary: Ping
-    description: Monitoring status endpoints
-  - name: previews
-    summary: Previews
-    description: Preview for documentation file
-  - name: versions
-    summary: Versions
-    description: Deploy your API contracts
-  - name: validations
-    summary: Validations
-    description: Check & validate your API contracts
-  - name: hubs
-    summary: Hubs
-    description: Interact with your Hubs
+  - name: stations
+    summary: Stations
+    description: Find and filter train stations across Europe, including their location and local timezone.
+  - name: trips
+    summary: Trips
+    description: Timetables and routes for train trips between stations, including pricing and availability.
+  - name: bookings
+    summary: Bookings
+    description: Create and manage bookings for train trips, including passenger details and optional extras.
+  - name: payments
+    summary: Payments
+    description: Pay for bookings using a card or bank account, and view payment status and history.
+
+      > warn
+      > Bookings usually expire within 1 hour so you'll need to make your payment
+      > before the expiry date
 ```
 
 When you generate API documentation, you'll notice the documentation orders the endpoint groups in the same way:
