@@ -145,11 +145,11 @@ This API needs more validation.
 
 **Bringing OpenAPI into the Spring Boot Application**
 
-If we're going to teach Spring Boot and OpenAPI to get along, let's first move OpenAPI somewhere Spring Boot is expecting it and de-clutter our root in the process. A great place for this is the `src/main/resources/api/` directory.
+If we're going to teach Spring Boot and OpenAPI to get along, let's first move OpenAPI somewhere Spring Boot is expecting it and de-clutter our root in the process. A great place for this is the `src/main/resources/openapi/` directory.
 
 ```shell
-mkdir -p src/main/resources/api
-mv openapi.yaml src/main/resources/api/openapi.yaml
+mkdir -p src/main/resources/openapi
+mv openapi.yaml src/main/resources/openapi/openapi.yaml
 ```
 
 **Installing Kappa**
@@ -194,7 +194,7 @@ public class DemoApplication {
 	public KappaSpringConfiguration kappaSpringConfiguration() {
 		KappaSpringConfiguration kappaConfig = new KappaSpringConfiguration();
 		var pathPatternToOpenapiDescription = new LinkedHashMap<String, String>();
-		pathPatternToOpenapiDescription.put("/**", "/api/openapi.yaml");
+		pathPatternToOpenapiDescription.put("/**", "/openapi/openapi.yaml");
 		kappaConfig.setOpenapiDescriptions(pathPatternToOpenapiDescription);
 		return kappaConfig;
 	}
@@ -359,8 +359,8 @@ A common error for a contract test is a test not sending a required field. That 
 [ERROR]   EmployeeApiTest.responseCodeMismatch:37 Invalid request.
 required properties are missing: thirdThing
 instance location: $request.body (line 1, position 1)
-schema location: file:/Users/bump/spring-design-first/target/classes/api/openapi.yaml#/components/schemas/Employee/required
-	evaluated on dynamic path: file:/Users/bump/spring-design-first/target/classes/api/openapi.yaml#/$ref/required
+schema location: target/classes/openapi/openapi.yaml#/components/schemas/Employee/required
+	evaluated on dynamic path: target/classes/openapi/openapi.yaml#/$ref/required
 ```
 
 This error message indicates that the request body is missing a required property `thirdThing`, which is defined in the OpenAPI description. The test will fail, and you can then go back to your API implementation to fix the issue.
@@ -372,7 +372,7 @@ Another common problem contract testing helps surface is content type or respons
 [ERROR]   EmployeeApiTest.notFoundResponseBodyMismatch:54 Invalid response.
 could not parse HTTP entity: unexpected character C
 instance location: $request.body (line 1, position 1)
-schema location: file:/Users/bump/spring-design-first/target/classes/api/openapi.yaml#/paths/~1employees~1{id}/get/responses/404/content
+schema location: target/classes/openapi/openapi.yaml#/paths/~1employees~1{id}/get/responses/404/content
 ```
 
 Having the OpenAPI description (and therefore API documentation) show JSON errors but sending plain text errors would be embarrassing and problematic, but Kappa caught this mismatch and failed the test. OpenAPI-based contract testing tools are not just looking at the shape of the data being returned, but the whole response, including the content type and status code.
