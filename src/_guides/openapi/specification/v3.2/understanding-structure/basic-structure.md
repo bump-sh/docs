@@ -77,12 +77,12 @@ The `servers` object specifies one or more server URLs where the API is hosted. 
 
 ```yaml
 servers:
-- url: https://api.example.com/v1
-  name: Production server
+- name: Production
+  url: https://api.example.com/v1
   description: The main production server for the API.
 
-- url: https://staging-api.example.com/v1
-  name: Staging server
+- name: Staging
+  url: https://staging-api.example.com/v1
   description: A staging server for testing purposes.
 ```
 
