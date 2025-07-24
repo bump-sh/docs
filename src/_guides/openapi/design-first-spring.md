@@ -164,7 +164,7 @@ To install `kappa-spring` with Maven, pop it into `pom.xml`.
   <dependency>
     <groupId>com.github.erosb</groupId>
     <artifactId>kappa-spring</artifactId>
-    <version>2.0.0-RC15</version>
+    <version>2.0.0-RC16</version>
   </dependency>
 ```
 
@@ -196,6 +196,7 @@ public class DemoApplication {
 		var pathPatternToOpenapiDescription = new LinkedHashMap<String, String>();
 		pathPatternToOpenapiDescription.put("/**", "/openapi/openapi.yaml");
 		kappaConfig.setOpenapiDescriptions(pathPatternToOpenapiDescription);
+    kappaConfig.setValidationFailureSender(ValidationFailureSender.rfc9457Sender());
 		return kappaConfig;
 	}
 
