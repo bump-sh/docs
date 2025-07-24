@@ -2,7 +2,7 @@
 title: Pagination
 authors: phil
 excerpt: Learn how to implement pagination in OpenAPI.
-date: 2024-08-07
+date: 2025-07-22
 ---
 
 Pagination is a common requirement in APIs that return large sets of data. It allows clients to retrieve a subset of a collection, which helps manage the load on servers and improves the user experience by not overwhelming clients with too much data at once.
