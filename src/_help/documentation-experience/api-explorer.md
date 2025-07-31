@@ -16,15 +16,15 @@ The API Explorer allows you to test an API in real-world conditions directly fro
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
-![](/images/help/explorer-button.png)
+![](/images/help/explorer/explorer-button.png)
 
 If you haven’t opened the API Explorer from a specific operation, you can select one from the corresponding menu.
 
-![](/images/help/explorer-operation-selection.png)
+![](/images/help/explorer/explorer-operation-selection.png)
 
 We identify the required fields directly from the definition file, making it easier for you to fill out the request, detecting whether it’s a boolean, date, etc. Fill in the expected information to execute the request and receive a response.
 
-![](/images/help/explorer-response.png)
+![](/images/help/explorer/explorer-response.png)
 
 ### Sharing
 
@@ -33,7 +33,7 @@ It’s possible to share a request setup, which is useful for showing an example
 > This URL will never share your authentication parameters or the response.
 {: .info}
 
-![](/images/help/explorer-share.png)
+![](/images/help/explorer/explorer-share.png)
 
 If the API documentation has been updated after the share URL was generated, the Explorer will notify you that the pre-filled fields may have changed and display a link to the API changelog for a more detailed review of the changes.
 
@@ -57,12 +57,35 @@ You can also learn more about it in our [dedicated blog post](https://bump.sh/bl
 
 ### Authentication
 
-We support authentication for APIs that require prior authentication. Two options are available: via HTTP (Basic/Bearer) or via API keys.
+We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
 
-![](/images/help/explorer-auth.png)
+![](/images/help/explorer/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
+
+#### Details about OAuth2 flows
+
+For now we partially support the “Implicit” OAuth2 grant type for automatic access token retrieval. To enable this feature you will need to include an `x-client-id` vendor extension in the API definition file, in the OAuth2 implicit flow object. This value should be the ID of a dedicated OAuth client application created on your Authorization server to identify your API consumers.
+
+E.g. for example:
+```yaml
+components:
+  securitySchemes:
+    "OAuth2 implicit flow":
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: "https://auth.example.org/oauth"
+          scopes: {}
+          x-client-id: "123456abcdef"
+```
+
+![Image of the authorization box with an implicit oauth2 flow and the “Get token” button](/images/help/explorer/oauth-automatic-implicit-flow.png)
+
+All other OAuth2 flows are partially supported and will display an input field for the user to enter an access token manually (similarly to the **HTTP authorization** security scheme).
+
+![Image of the authorization box with a partially supported oauth2 flow and the access token field](/images/help/explorer/oauth-access-token-field.png)
 
 ## Known Limitations of the Beta
 
