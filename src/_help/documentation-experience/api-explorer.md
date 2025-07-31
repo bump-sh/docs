@@ -55,12 +55,35 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 ### Authentication
 
-We support authentication for APIs that require prior authentication. Two options are available: via HTTP (Basic/Bearer) or via API keys.
+We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
 
 ![](/images/help/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
+
+#### Details about OAuth2 flows
+
+For now we partially support the “Implicit” OAuth2 grant type for automatic access token retrieval. To enable this feature you will need to include an `x-client-id` vendor extension in the API definition file, in the OAuth2 implicit flow object. This value should be the ID of a dedicated OAuth client application created on your Authorization server to identify your API consumers.
+
+E.g. for example:
+```yaml
+components:
+  securitySchemes:
+    "OAuth2 implicit flow":
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: "https://auth.example.org/oauth"
+          scopes: {}
+          x-client-id: "123456abcdef"
+```
+
+![Image of the authorization box with an implicit oauth2 flow and the “Get token” button](/images/help/explorer/oauth-automatic-implicit-flow.png)
+
+All other OAuth2 flows are partially supported and will display an input field for the user to enter an access token manually (similarly to the **HTTP authorization** security scheme).
+
+![Image of the authorization box with a partially supported oauth2 flow and the access token field](/images/help/explorer/oauth-access-token-field.png)
 
 ## Known Limitations of the Beta
 
