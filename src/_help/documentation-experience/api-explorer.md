@@ -16,15 +16,15 @@ The API Explorer allows you to test an API in real-world conditions directly fro
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
-![](/images/help/explorer-button.png)
+![](/images/help/explorer/explorer-button.png)
 
 If you haven’t opened the API Explorer from a specific operation, you can select one from the corresponding menu.
 
-![](/images/help/explorer-operation-selection.png)
+![](/images/help/explorer/explorer-operation-selection.png)
 
 We identify the required fields directly from the definition file, making it easier for you to fill out the request, detecting whether it’s a boolean, date, etc. Fill in the expected information to execute the request and receive a response.
 
-![](/images/help/explorer-response.png)
+![](/images/help/explorer/explorer-response.png)
 
 ### Sharing
 
@@ -33,7 +33,7 @@ It’s possible to share a request setup, which is useful for showing an example
 > This URL will never share your authentication parameters or the response.
 {: .info}
 
-![](/images/help/explorer-share.png)
+![](/images/help/explorer/explorer-share.png)
 
 If the API documentation has been updated after the share URL was generated, the Explorer will notify you that the pre-filled fields may have changed and display a link to the API changelog for a more detailed review of the changes.
 
@@ -57,7 +57,7 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
 
-![](/images/help/explorer-auth.png)
+![](/images/help/explorer/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
