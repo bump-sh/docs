@@ -55,7 +55,7 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 You can also learn more about it in our [dedicated blog post](https://bump.sh/blog/releasing-cors-proxy-opensource/).
 
-A future update will allow for the proxy deactivation (meaning you'll have to properly set up your CORS settings to use the API Explorer if you deactivate it).
+A future update will add an option to disable the proxy (meaning you'll have to properly set up your CORS settings to use the API Explorer if you disable it).
 
 ### Authentication
 
