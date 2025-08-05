@@ -55,9 +55,13 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 You can also learn more about it in our [dedicated blog post](https://bump.sh/blog/releasing-cors-proxy-opensource/).
 
+A future update will add an option to disable the proxy (meaning you'll have to properly set up your CORS settings to use the API Explorer if you disable it).
+
 ### Authentication
 
 We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
+
+The authentication information are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
 
 ![](/images/help/explorer/explorer-auth.png)
 
@@ -87,10 +91,43 @@ All other OAuth2 flows are partially supported and will display an input field f
 
 ![Image of the authorization box with a partially supported oauth2 flow and the access token field](/images/help/explorer/oauth-access-token-field.png)
 
+## Server variables
+
+We support server variables in the API Explorer. Servers defined in the OpenAPI definition with variables in their paths are translated into enums and strings to be filled by the user of the API Explorer. It can be useful, for example, to choose between multiple server regions or to send requests to a subdomain that is specific to each API user.
+
+A default value can be set for each variable. If no value has been defined, the variable field is filled with the variable's name. Variable descriptions are displayed as tooltips above variables to guide the user into filling fields with the right information.
+
+The server variables are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
+
+> If the domain is not clearly defined in the definition (for example by having ```https://{my-variable}``` instead of ```https://{my-variable}.my-domain.com```), our proxy will block the request. More details about why we use a proxy [here](/help/documentation-experience/api-explorer/#proxy).
+{: .warning}
+
+Learn more about server variables in our [OpenAPI guide](/guides/openapi/specification/v3.1/understanding-structure/api-servers/#server-variables).
+
+### Example usage
+
+By defining two variables, `region` and `docId`, in the OpenAPI definition:
+```yaml
+servers:
+  - url: https://{region}.bump.sh/{docId}
+    description: The production API server
+    variables:
+      docId:
+        description: Can be found in your documentation settings.
+      region:
+        enum:
+          - "east-eu"
+          - "west-eu"
+        default: "east-eu"
+```
+
+The API Explorer renders a dynamic path with a select for the `region`, and an input for the `docId`:
+
+![Image of the topbar of the API Explorer that displays the verb, path, and the server variables to be filled by the user](/images/help/explorer/explorer-server-variables-global-display.png)
+
 ## Known Limitations of the Beta
 
 The API Explorer is currently in closed beta. As such, not all features are yet available. Here is a non-exhaustive list of its current limitations:
 
-- Branches are not yet supported: it works from the default branch of your documentation.
 - When multiple servers are mentioned in the definition file, all of them are accessible via the API Explorer (and the user can choose which one to use for their requests). It is not possible to hide some of them.
 - Rich responses are not yet supported: responses will display text only.
