@@ -16,6 +16,9 @@ Embed Mode lets you integrate Bump.sh-generated documentation inside your own fr
 
 It’s designed for larger teams and companies who need their docs to look and feel like a native part of their platform or developer experience.
 
+> The Embed mode is only available starting from the Enterprise plan. If your current plan doesn’t include access, feel free to [contact us](mailto:hello@bump.sh) so we can assist you.
+{: .info}
+
 ### Benefits
 
 - Looks and feels like your own docs site
