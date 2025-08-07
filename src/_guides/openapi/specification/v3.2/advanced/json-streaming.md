@@ -12,13 +12,22 @@ Streaming data allows API servers to send and receive data in real-time or in ch
 
 ## JSON Streaming in OpenAPI
 
-OpenAPI v3.x has been able to stream binary data for a while, but struggled to support JSON streaming formats as there was no standard way to define the **schema of individual events** in a stream, You could add media types like `text/event-stream` and `application/x-ndjson` which were line-delimited or multipart, but OpenAPI assumed they were single-message payloads.
+JSON streaming is a way to send and receive JSON data in a continuous flow, rather than as a single, complete response. This is particularly useful for APIs that need to deliver large amounts of data or real-time updates, such as logs, events, or notifications.
 
-As of OpenAPI v3.2.0, there are several new features related to JSON streaming, that allow requests and responses to be described in a way that reflects the nature of streaming data. The two main keywords introduced are `itemSchema` and `itemEncoding`.
+This is an example of JSONL, one of several streaming formats:
 
-These keywords allow you to define the structure of each item in a stream, and how those items are serialized, respectively.
+```json
+{"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
+{"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
+```
 
-## itemSchema
+This format allows each line to be a valid JSON object, making it easy to parse and process in a streaming manner. Other formats like Server-Sent Events (SSE) or NDJSON (Newline Delimited JSON) follow similar principles, allowing for continuous data flow.
+
+OpenAPI v3.x has been able to stream binary data for a while, but struggled to support JSON streaming formats as there was no standard way to define the **schema of individual events** in a stream. People were trying, and a common approach was to add media types like `text/event-stream` and `application/x-ndjson`. This was a helpful hint, but not enough, because any OpenAPI based tooling that wanted to work with streams would have to build in some conventions of their own, and tooling like documentation which would generate response examples of a JSON instance instead of a stream of JSON objects. The above example would trick a validator as it's not valid JSON. 
+
+All these problems and more motivated the OpenAPI team to get proper JSON Streaming support into OpenAPI v3.2.0, which introduces new keywords to describe the structure of streaming data in a more standardized way. The two main keywords introduced are `itemSchema` and `itemEncoding`, allowing you to define the structure of each item in a stream, and how those items are serialized, respectively.
+
+### itemSchema
 
 Specifies the **schema for individual items** in a streaming response body. Used **instead of `schema`** when the response body is a sequence of items (like in NDJSON, SSE, or multipart).
 
@@ -26,7 +35,7 @@ Supported Media Types**: `text/event-stream`, `application/x-ndjson`, `multipart
 
 <!-- TODO link to registry when online https://github.com/OAI/OpenAPI-Specification/pull/4808 -->
 
-```
+```yaml
 content:
   text/event-stream:
     itemSchema:
@@ -67,7 +76,7 @@ This allows you to specify how each item in the stream should be serialized, inc
 
 They all work a little different, but they share the common goal of allowing data to be sent in a continuous stream rather than as a single, complete response.
 
-## Example: JSON Lines
+### Example: JSON Lines
 
 Working with a data format like JSON Lines in OpenAPI is surprisingly similar to working with plain JSON. THe main differences being the `application/jsonl` content type and the `itemSchema` keyword usage.
 
@@ -104,22 +113,66 @@ paths:
                     {"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
 ```
 
-Another difference is that example, which might help to illustrate how JSONL is subtly different from JSON. Instead of being a single JSON object and therefore being describable with YAML as usual, JSONL is actually a series of JSON objects with a newline between them. This can only be described as a YAML multi-line string, but it shows how that would be going over the wire.
+The example once again shows JSONL as a series of JSON objects with a newline between them. This can only be described as a string, in this case a YAML multi-line string, because JSONL cannot be described with JSON or YAML due to the newline characters.
+
+### Example: Server-Sent Events (SSE)
+
+Server-Sent Events (SSE) is a standard for sending real-time updates from a server to a client over HTTP. In OpenAPI, you can define SSE streams using the `text/event-stream` media type and the `itemSchema` and `itemEncoding` keywords to describe the structure of the events being sent.
+
+```yaml
+paths:
+  /events:
+    get:
+      summary: Stream of server-sent events
+      responses:
+        '200':
+          description: |
+            A stream of server-sent events that can be read
+            for as long as the application is running, and is available
+            in the `text/event-stream` media type.
+          content:
+            text/event-stream:
+              itemSchema:
+                type: object
+                properties:
+                  event:
+                    type: string
+                    description: The type of event being sent.
+                  data:
+                    type: string
+                    description: The data associated with the event, typically a JSON string.
+              itemEncoding:
+                event:
+                  contentType: text/plain
+                data:
+                  contentType: application/json
+              examples:
+                SSE:
+                  summary: Server-sent events
+                  description: |
+                    Server-sent events are sent as a stream of text/event-stream.
+                    Each event is a JSON object with an `event` and `data` field.
+                  value: |
+                    event: message
+                    data: {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
+
+                    event: message
+                    data: {"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
+```
 
 ## Sentinel Events
 
-Some streaming systems do not always send all events the same way, they might be polymorphic objects, or there could be some special events that come through to say the stream is closed. Instead of trying to model all these edge cases, OpenAPI allows you to use the usual JSON Schema keywords to model these variations. 
-
+Some streaming systems do not always send all events the same way, they might be polymorphic objects, or there could be some special events that come through to say the stream is closed. Instead of trying handle all of these edge cases with special new keywords, OpenAPI allows you to use the standard JSON Schema keywords to model these variations.
 
 ```yaml
 text/event-stream:
   itemSchema:
     oneOf:
     - {your normal event schema}
-    - const: {data: "[DONE]"}
+    - const: { data: "[DONE]" }
 ```
 
-This allows you to define a schema that can handle different types of events in the stream, including special sentinel events that indicate the end of the stream or other significant states.
+Whatever the schema is, it can be defined using the standard JSON Schema keywords like `oneOf`, `anyOf`, or `allOf` to handle variations in the event structure. This allows you to define a flexible schema that can accommodate different types of events in the stream.
 
 ## Read the Specification
 
