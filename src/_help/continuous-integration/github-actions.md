@@ -218,7 +218,7 @@ jobs:
 > Make sure you adapt the name of the branch your deployment will target, _aka_ your destination branch if relevant (`main` in the example above), replace `<BUMP_HUB_ID>` with your Bump.sh hub slug or id and point `file:` to your local API definition file folder (`docs/`).
 {: .warning}
 
-Please note, by default, only files named `{slug}-api.[format]` are published. Where `{slug}` is a name for your API and `[format]` is either `yaml` or `json`. A future update will allow you to customize this pattern.
+Please note, by default, only files named `{slug}-api.[format]` are deployed. Where `{slug}` is a name for your API and `[format]` is either `yaml` or `json`. Adjust to your file naming convention using the `filename_pattern:` input.
 
 Note that it _can_ include `*` wildcard special character, but **must** include the `{slug}` filter to extract your documentation’s slug from the filename. The pattern can also have any other optional fixed characters.
 
@@ -233,10 +233,20 @@ path/to/apis
 └─ README.md
 ```
 
-In order to deploy the 3 services API definition files from this folder (`private-api-users-service.json`, `partner-api-payments-service.yml` and `public-api-contracts-service.yml`), you can execute the following command:
+In order to deploy the 3 services API definition files from this folder (`private-api-users-service.json`, `partner-api-payments-service.yml` and `public-api-contracts-service.yml`), you can set call the action like this:
 
 ```
-bump deploy path/to/apis/ --hub my-hub --filename-pattern '*-api-{slug}-service'
+[...]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          hub: <BUMP_HUB_ID>
+          token: ${{secrets.BUMP_TOKEN}}
+          file: docs/
+          filename_pattern: '*-api-{slug}-service'
 ```
 
 ## Inputs
