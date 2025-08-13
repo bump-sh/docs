@@ -6,7 +6,7 @@ image: /images/changelog/api-explorer-server-variables.png
 
 ![api-explorer-server-variables.png](/images/changelog/api-explorer-server-variables.png)
 
-Server variables enable API Explorer users to customize the request server with predefined enums or custom strings. It's useful to specify a server region or a client specific instance, for example.
+Server variables enable [API Explorer](/help/documentation-experience/api-explorer/) users  to customize the request server with predefined enums or custom strings. It's useful to specify a server region or a client specific instance, for example.
 
 Variables are defined in a server object: 
 ```yaml
