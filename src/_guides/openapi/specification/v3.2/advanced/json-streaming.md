@@ -1,84 +1,177 @@
 ---
 title: JSON Streaming
 authors: phil
-excerpt: "Streaming data in OpenAPI v3.2.0 with itemSchema and itemEncoding"
+excerpt: "Streaming data in OpenAPI v3.2.0 with itemSchema."
 date: 2025-07-23
 ---
 
 - TOC
 {:toc}
 
-Streaming data allows API servers to send and receive data in real-time or in chunks, rather than waiting for the entire response to be ready. This is increasingly useful as expectations around big data, data science, and AI continue to grow, and various formats have emerged to expand JSON beyond. OpenAPI v3.2.0 introduces new keywords to help describe these streaming formats, making it easier to work with APIs that provide data in a continuous stream.
+Streaming data allows API servers to send and receive data in real-time or in
+chunks, rather than waiting for the entire response to be ready. This is already
+how browsers handle HTML, images, and other media, and now it can be done for
+large responses with lots of data, or for sending a stream of events from server
+to client in realtime without polling or adding the complexity of Webhooks or
+WebSockets. 
 
-## JSON Streaming in OpenAPI
+Streaming JSON in particular is increasingly useful as expectations around big
+data, data science, and AI continue to grow. JSON on its own does not stream
+very well, but a few standards and conventions have popped up to expand JSON
+into a streamable format, and OpenAPI v3.2 introduces keywords to describe data
+in these stream formats.
 
-JSON streaming is a way to send and receive JSON data in a continuous flow, rather than as a single, complete response. This is particularly useful for APIs that need to deliver large amounts of data or real-time updates, such as logs, events, or notifications.
+## Streaming in OpenAPI
 
-This is an example of JSONL, one of several streaming formats:
+Streaming sends data in "chunks", and that could be a single line at a time of
+any number of lines at a time, so that clients can work with each chunk as it
+comes in. Doing this with JSON would get a little confusing and no standard JSON
+tools would work, because sending only part of a JSON instance would result in
+invalid syntax.
+
+```json
+{
+  {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"},
+```
+
+This would trip up most tooling, but we can use something like JSON Lines (aka
+JSONL) to send one JSON instance per line.
 
 ```json
 {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
-{"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
+{"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Hows it hangin?"}
+{"timestamp": "1985-04-12T23:20:53.29Z", "level": 1, "message": "Bye!"}
 ```
 
-This format allows each line to be a valid JSON object, making it easy to parse and process in a streaming manner. Other formats like Server-Sent Events (SSE) or NDJSON (Newline Delimited JSON) follow similar principles, allowing for continuous data flow.
+This format allows each line to be a valid JSON object, making it easy to parse
+with standard native tooling and a `for` loop. There are a bunch of other
+streaming formats you might want to work with in your API like [Newline
+Delimited JSON](https://github.com/ndjson/ndjson-spec) (NDJSON), [JSON Text
+Sequence](https://www.rfc-editor.org/rfc/rfc7464.html), [GeoJSON Text
+Sequence](https://datatracker.ietf.org/doc/html/rfc8142). Thankfully the
+approach to describing any of them is very similar.
 
-OpenAPI v3.x has been able to stream binary data for a while, but struggled to support JSON streaming formats as there was no standard way to define the **schema of individual events** in a stream. People were trying, and a common approach was to add media types like `text/event-stream` and `application/x-ndjson`. This was a helpful hint, but not enough, because any OpenAPI based tooling that wanted to work with streams would have to build in some conventions of their own, and tooling like documentation which would generate response examples of a JSON instance instead of a stream of JSON objects. The above example would trick a validator as it's not valid JSON. 
+OpenAPI v3.0 & v3.1 are able to stream binary data, but struggled to support
+JSON streaming formats as there was no standard way to define the **schema of
+individual events** in a stream. People would try to describe things as an
+array:
 
-All these problems and more motivated the OpenAPI team to get proper JSON Streaming support into OpenAPI v3.2.0, which introduces new keywords to describe the structure of streaming data in a more standardized way. The two main keywords introduced are `itemSchema` and `itemEncoding`, allowing you to define the structure of each item in a stream, and how those items are serialized, respectively.
+```yaml
+content:
+  application/jsonl:
+    schema:
+      type: array
+      items: 
+        type: object
+        properties:
+          timestamp:
+            type: string
+            format: date-time
+          level: 
+            type: integer
+          message:
+            type: string
+```
+
+You might see this sort of thing around, but it's not valid, and will confuse
+tooling. A stream cannot be described as a single array, it's a stream of
+multiple objects on new lines. Some tools could spot the `application/jsonl`
+content type and figure that out, but we don't need awkward hacks anymore
+because the OpenAPI team have solved the problem. 
+
+OpenAPI v3.2 introduces two new keywords to describe streamed data and events:
+
+- `itemSchema` - define the structure of each item in a stream.
+- `itemEncoding` - define how those items are encoded (or serialized), as text, JSON, binary, etc.
+
 
 ### itemSchema
 
-Specifies the **schema for individual items** in a streaming response body. Used **instead of `schema`** when the response body is a sequence of items (like in NDJSON, SSE, or multipart).
+Describing a stream with `itemSchema` works just like `schema` with one
+difference: it will be applied to each item in the stream, instead of the entire
+response. 
 
-Supported Media Types**: `text/event-stream`, `application/x-ndjson`, `multipart/*`, and others.
+Consider an example like the train travel API running a stream of tickets: 
 
-<!-- TODO link to registry when online https://github.com/OAI/OpenAPI-Specification/pull/4808 -->
+
+```
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/jsonl; charset=utf-8
+Transfer-Encoding: chunked
+Date: Tue, 19 Aug 2025 18:36:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"train":"ICE 123","from":"Berlin","to":"Munich","price":79.9}
+{"train":"TGV 456","from":"Paris","to":"Lyon","price":49.5}
+{"train":"EC 789","from":"Zurich","to":"Milan","price":59}
+```
+
+To describe this stream of items, we can use the `itemSchema` keyword:
 
 ```yaml
 content:
-  text/event-stream:
+  application/jsonl:
     itemSchema:
       type: object
       properties:
-        event: { type: string }
-        data: { type: string }
+        train:
+          type: string
+        from:
+          type: string
+        to:
+          type: string
+        price:
+          type: number
+          format: float
 ```
+
+Tooling now has two important switches it can use to figure out how to handle
+the response. The `itemSchema` makes it clear the response is a stream, and the
+`application/jsonl` content type lets tooling decide how to present that.
+
+For streaming formats that just handle streams of JSON, the `itemSchema` is
+often sufficient to describe the structure of each item in the stream. For more
+complicated formats, additional encoding information may be needed.
 
 ### itemEncoding
 
-Specifies how each item in a stream is serialized, similar to how `encoding` works for multipart/form-data. Used with `itemSchema` to define how each property in the item should be encoded. Structure is very similar to the `encoding` keyword, it maps **property names** to serialization information.
+The `itemEncoding` keyword allows you to specify how each item in the stream
+should be encoded, with the same encoding object as the `encoding` keyword.
+
+Using `itemEncoding` is only possible for `multipart/*` responses, so it is not very useful for
+an API that's streaming JSON, unless you were streaming a mixture of JSON and assets/images on a single response.
 
 ```yaml
-content:
-  multipart/mixed:
-    itemSchema:
-      type: object
-      properties:
-        file: { type: string, format: binary }
-        metadata: { type: object }
-    itemEncoding:
-      file:
-        contentType: application/octet-stream
-      metadata:
-        contentType: application/json
-
+multipart/mixed:
+  itemSchema:
+    $comment: A single data image from the device
+  itemEncoding:
+    contentType: image/jpg
 ```
 
-This allows you to specify how each item in the stream should be serialized, including content type and other serialization options, supporting a wide range of streaming formats.
+Let's ignore itemEncoding for now and focus on the major use case of streams for APIs: streaming data and events.
 
-## Common Streaming Formats
+## Popular Streaming Formats
 
 - [JSON Lines](https://jsonlines.org/)
 - [NDJSON](https://github.com/ndjson/ndjson-spec)
 - [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464)
 - [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 
-They all work a little different, but they share the common goal of allowing data to be sent in a continuous stream rather than as a single, complete response.
+They all work a little different, but they share the common goal of allowing
+data to be sent in a continuous stream rather than as a single, complete
+response.
 
-### Example: JSON Lines
+### JSON Lines & NDJSON
 
-Working with a data format like JSON Lines in OpenAPI is surprisingly similar to working with plain JSON. THe main differences being the `application/jsonl` content type and the `itemSchema` keyword usage.
+Working with JSON Lines or NDJSON is basically identical in OpenAPI, and feels
+very much like working with plain JSON responses just with a different header
+and a bit of `itemSchema` usage.
+
+If using JSONL use content type `application/jsonl`, and if using NDJSON use
+content type `application/x-ndjson`. 
 
 ```yaml
 paths:
@@ -110,70 +203,143 @@ paths:
                   description: JSONL examples are. just a string where each line is a valid JSON object.
                   value: |
                     {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
-                    {"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
+                    {"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Hows it hangin?"}
+                    {"timestamp": "1985-04-12T23:20:53.29Z", "level": 1, "message": "Bye!"}
 ```
 
-The example once again shows JSONL as a series of JSON objects with a newline between them. This can only be described as a string, in this case a YAML multi-line string, because JSONL cannot be described with JSON or YAML due to the newline characters.
+The example once again shows JSONL as a series of JSON objects with a newline character `\n` (0x0A) between them. This can only be described as a [YAML multiline string](https://yaml-multiline.info/), because JSONL/NDJSON cannot be described as plain JSON/YAML due to the newline characters.
 
-### Example: Server-Sent Events (SSE)
+> Remember to use `value: |`, because the pipe will allow newlines to be passed through. USing `value: >` would remove newlines and put each JSON instance onto the same line. 
+{: .warning }
 
-Server-Sent Events (SSE) is a standard for sending real-time updates from a server to a client over HTTP. In OpenAPI, you can define SSE streams using the `text/event-stream` media type and the `itemSchema` and `itemEncoding` keywords to describe the structure of the events being sent.
+The sample code for either of these formats could look a bit like this:
+
+```js
+app.get("/tickets", async (_, res) => {
+  res.setHeader("Content-Type", "application/jsonl; charset=utf-8");
+  res.setHeader("Transfer-Encoding", "chunked");
+
+  for (const ticket of tickets) {
+    res.write(JSON.stringify(ticket) + "\n");
+  }
+
+  res.end();
+});
+```
+
+### JSON Text Sequence 
+
+A third JSON streaming format which would be identical other than a weird little complication. The other two formats are just a newline character `\n` (0x0A) at the end of the line, but [RFC 7464: JSON Text Sequence](https://www.rfc-editor.org/rfc/rfc7464.html) requires a control character at the start ASCII Record Separator (0x1E). This is not a visible character in most contexts, but it will be in there like this:
+
+```
+0x1E{"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
+0x1E{"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Hows it hangin?"}
+0x1E{"timestamp": "1985-04-12T23:20:53.29Z", "level": 1, "message": "Bye!"}
+```
+
+The `0x1E` (ASCII Record Separator) indicates the start of a new JSON object in the stream. Control characters are a bit magical and invisible to most text editors so it can be a little confusing. Working with JSON Text Sequence tooling for both producing the stream and reading the stream can solve this problem, letting the tooling insert and read out the control characters without you needing to worry.
+
+```js
+import { Generator } from "json-text-sequence";
+
+// ... snip express setup ...
+
+app.get("/tickets", async (_, res) => {
+  res.setHeader("Content-Type", "application/json-seq");
+
+  const g = new Generator();
+  g.pipe(res);
+
+  for (const ticket of tickets) {
+    g.write(ticket);
+  }
+
+  res.end();
+});
+```
+
+The [json-text-sequence](https://www.npmjs.com/package/json-text-sequence) package makes this easier and provides a simple method for generating and consuming JSON Text Sequences.
+
+### Server-Sent Events (SSE)
+
+Streaming JSON as chunks of data is only one way that JSON gets streamed. What about sending events, with some JSON being passed along as attributes?
+
+[Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) (SSE) can handle this, as a standard for sending real-time updates from a server to a client over HTTP. In OpenAPI, you can define SSE streams using the `text/event-stream` content type and the `itemSchema` keyword to describe the structure of the events being sent.
 
 ```yaml
-paths:
-  /events:
-    get:
-      summary: Stream of server-sent events
-      responses:
-        '200':
-          description: |
-            A stream of server-sent events that can be read
-            for as long as the application is running, and is available
-            in the `text/event-stream` media type.
-          content:
-            text/event-stream:
-              itemSchema:
+content:
+  description: A request body to add a stream of typed data.
+  required: true
+  content:
+    text/event-stream:
+      itemSchema:
+        type: object
+        properties:
+          event:
+            type: string
+          data:
+            type: string
+          retry:
+            type: integer
+        required: [event]
+        # Define event types and specific schemas for the corresponding data
+        oneOf:
+        - properties:
+            event:
+              const: addString
+        - properties:
+            event:
+              const: addInt64
+            data:
+              format: int64
+        - properties:
+            event:
+              const: addJson
+            data:
+              contentMediaType: application/json
+              contentSchema:
                 type: object
+                required: [foo]
                 properties:
-                  event:
-                    type: string
-                    description: The type of event being sent.
-                  data:
-                    type: string
-                    description: The data associated with the event, typically a JSON string.
-              itemEncoding:
-                event:
-                  contentType: text/plain
-                data:
-                  contentType: application/json
-              examples:
-                SSE:
-                  summary: Server-sent events
-                  description: |
-                    Server-sent events are sent as a stream of text/event-stream.
-                    Each event is a JSON object with an `event` and `data` field.
-                  value: |
-                    event: message
-                    data: {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
-
-                    event: message
-                    data: {"timestamp": "1985-04-12T23:20:51.37Z", "level": 1, "message": "Bye!"}
+                  foo:
+                    type: integer
 ```
+
+The `oneOf` is optional, but a handy use of [polymorphism](_guides/openapi/specification/v3.2/data-models/schema-composition.md) to describe different schemas for each event - which can really help with documentation and validation.
+
+Valid events to come through this stream might look like:
+
+```
+event: addString
+data: This data is formatted
+data: across two lines
+retry: 5
+
+event: addInt64
+data: 1234.5678
+unknownField: this is ignored
+
+event: addJSON
+data: {"foo": 42}
+```
+
 
 ## Sentinel Events
 
-Some streaming systems do not always send all events the same way, they might be polymorphic objects, or there could be some special events that come through to say the stream is closed. Instead of trying handle all of these edge cases with special new keywords, OpenAPI allows you to use the standard JSON Schema keywords to model these variations.
+Some streaming systems do not always send all data or events in the exact same way. The items in a stream could be polymorphic objects, or there could be some special events that come through to say the stream is closed (also known as sentinel events).
+
+Instead of trying handle all of these edge cases with special new keywords, OpenAPI allows you to use the standard JSON Schema keywords to model these variations.
 
 ```yaml
 text/event-stream:
   itemSchema:
     oneOf:
-    - {your normal event schema}
+    - <your normal data/event schema>
     - const: { data: "[DONE]" }
 ```
 
 Whatever the schema is, it can be defined using the standard JSON Schema keywords like `oneOf`, `anyOf`, or `allOf` to handle variations in the event structure. This allows you to define a flexible schema that can accommodate different types of events in the stream.
 
-## Read the Specification
+## Further Reading
 
-You can find details in the **OpenAPI Specification v3.2.0** under [Media Types Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.2.0.md#media-type-object). Look for `itemSchema` and `itemEncoding`.
+You can find details in the **OpenAPI Specification v3.2.0** under [Media Types Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.2.0.md#media-type-object) and look for `itemSchema`.
