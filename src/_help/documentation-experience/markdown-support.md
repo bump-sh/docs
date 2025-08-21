@@ -1,5 +1,9 @@
 ---
 title: Markdown support
+# We use a string variable here as it doesn't seem to be interpreted
+# correctly when used in the document below in a markdown code block.
+image_sizing_markdown: |
+  ![Alt text](/path/to/image.jpg =dimension)
 ---
 
 - TOC
@@ -109,9 +113,8 @@ Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attr
 ### Image sizing
 
 If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
-```
-![Alt text](/path/to/image.jpg "Image title" =dimension)
-```
+
+pre><code><%= resource.data.image_sizing_markdown %></code></pre>
 
 `=dimension` uses the following syntax:
 ```
