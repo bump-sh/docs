@@ -17,6 +17,9 @@ Switching from one API definition to another in the documentation can be done in
 
 ![](/images/help/version-selector.png)
 
+> Branches are available in our [paid plans](https://bump.sh/pricing/).
+{: .info}
+
 ## Create a branch
 
 From the documentation settings, the Branches section allows you to create branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.

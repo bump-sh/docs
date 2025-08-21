@@ -49,6 +49,9 @@ The Deployments section of your documentation provides access to the history of 
 
 ### Manual Release
 
+> Manual Release is available starting from our [Enterprise plan](https://bump.sh/pricing/).
+{: .info}
+
 The Manual Release mode is an option that allows you to separate the processing step from the releasing step of your API definition.
 
 ![](/images/help/manual-release-toggle.png)
@@ -68,6 +71,9 @@ The release preparation page will appear, allowing you to add context by adding 
 ![](/images/help/deployment-release-form.png)
 
 ### Unrelease an API definition
+
+> Unrelease a version is available in our [paid plans](https://bump.sh/pricing/).
+{: .info}
 
 It is possible to "unrelease" any previously released deployment. By clicking on the deployment, you will find the "Unrelease" option under the "..." button.
 

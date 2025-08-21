@@ -5,6 +5,9 @@ title: Organization Access Management
 - TOC
 {:toc}
 
+> The Access Management features available depend on the [subscribed plan](https://bump.sh/pricing/).
+{: .info}
+
 ## Roles
 
 The roles allow you to precisely choose which permissions to assign to members of your organization. The details of permissions by role are available below:
@@ -35,7 +38,7 @@ This page can be customized with a logo and specific button labels and descripti
 
 The login page will systematically appear when attempting to access via the direct URL of a documentation or a hub behind this SSO, if one is not already authenticated.
 
-> SSO is a feature available from our Business plan.
+> SSO is a feature available from our Enterprise plan.
 {: .info}
 
 ### How to setup SSO
