@@ -101,14 +101,14 @@ AsyncAPI has gained more and more popularity since its version 2.0. Great tools 
 ### Mocking & Testing
 
 - [Microrocks](https://microcks.io/)
-- [Virtualan](https://virtualan.io/)
+- [Beeceptor](https://beeceptor.com/)
 
 ### Documentation
 
 - [Bump.sh](https://bump.sh) 💙
 - [AsyncAPI Generator](https://github.com/asyncapi/generator)
 
-AsyncAPI has a fantastic list of valuable tools that make the difference for most use cases, you may want to [check it out](https://www.asyncapi.com/docs/community/tooling).
+AsyncAPI has a fantastic list of valuable tools that make a difference for most use cases. You may want to [check it out](https://www.asyncapi.com/docs/community/tooling).
 
 ## More resources
 
