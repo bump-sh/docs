@@ -114,7 +114,7 @@ Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attr
 
 If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
 
-pre><code><%= resource.data.image_sizing_markdown %></code></pre>
+<pre><code><%= resource.data.image_sizing_markdown %></code></pre>
 
 `=dimension` uses the following syntax:
 ```
