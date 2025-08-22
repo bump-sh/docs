@@ -3,7 +3,7 @@ title: Markdown support
 # We use a string variable here as it doesn't seem to be interpreted
 # correctly when used in the document below in a markdown code block.
 image_sizing_markdown: |
-  ![Alt text](/path/to/image.jpg =dimension)
+  ![Alt text](/path/to/image.jpg "Image title" =dimension)
 ---
 
 - TOC
