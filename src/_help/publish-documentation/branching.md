@@ -80,3 +80,11 @@ The Branches section allows you to edit the name of a branch, set it as the defa
 
 > Deleting a branch is definitive: you will lose the branch, its content and deployment history.
 {: .warning}
+
+## Sort branches
+
+By default, branches are sorted alphabetically by name (from A to Z) in the branch selector of an API documentation. You can reverse that order using with "Sorting order" select. Please note that the default branch is always displayed at the top of the list.
+
+![Sorting order select in the branch settings of a documentation](/images/help/branch-sorting.png)
+
+
