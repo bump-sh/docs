@@ -33,7 +33,4 @@ Access management can be configured either at the [documentation level](/help/pu
 
 ## API Explorer
 
-> This feature is currently in Beta test. If you are not a Beta tester, it may not appear in your Hub settings.
-{: .note}
-
 Activating the feature on a hub will activate the feature for all docs in the hub.

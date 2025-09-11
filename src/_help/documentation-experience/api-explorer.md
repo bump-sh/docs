@@ -1,11 +1,11 @@
 ---
-title: API Explorer (Beta)
+title: API Explorer
 ---
 
 - TOC
 {:toc}
 
-> The API Explorer is a new feature in beta with limited access. You can request access by [contacting our team](mailto:hello@bump.sh).
+> The API Explorer is available in our [paid plans](https://bump.sh/pricing/).
 {: .info}
 
 ## What is the API Explorer?
@@ -124,10 +124,3 @@ servers:
 The API Explorer renders a dynamic path with a select for the `region`, and an input for the `docId`:
 
 ![Image of the topbar of the API Explorer that displays the verb, path, and the server variables to be filled by the user](/images/help/explorer/explorer-server-variables-global-display.png)
-
-## Known Limitations of the Beta
-
-The API Explorer is currently in closed beta. As such, not all features are yet available. Here is a non-exhaustive list of its current limitations:
-
-- When multiple servers are mentioned in the definition file, all of them are accessible via the API Explorer (and the user can choose which one to use for their requests). It is not possible to hide some of them.
-- Rich responses are not yet supported: responses will display text only.
