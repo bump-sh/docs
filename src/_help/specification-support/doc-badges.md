@@ -46,9 +46,23 @@ Important: The `x-state` property does not alter the changelog behavior of the c
 Exception: Usage together with the [`x-beta`](#beta) property.
 Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). Only one visual badge will be visible in the documentation: the one with the `x-state` value.
 
-The documentation displays custom tags on the operation and property:
+The documentation displays custom badges on the operation and property:
 
-![doc-beta.png](/images/help/doc-x-state.png)
+![Image of badges applied to operations and properties](/images/help/doc-x-state.png)
+
+### Custom color
+
+The default color can be overrided. To do so, you can define 2 elements inside the `x-state` object:
+- `label`: the text that will appear on the badge,
+- `color`: the color of the text inside the badge. The background color will be generated based on the text's color, to ensure its readability.
+
+```yaml
+x-state:
+  label: "Experimental"
+  color: "#FF6B35"
+```
+
+![Image of a custom color applied to a badge](/images/help/doc-x-state-custom-color.png)
 
 ## Beta
 
@@ -86,4 +100,5 @@ paths:
 
 The documentation displays a “Beta” flag on the components:
 
-![doc-beta.png](/images/help/doc-beta.png)
+![Image of a beta tag applied to an operation](/images/help/doc-beta.png)
+
