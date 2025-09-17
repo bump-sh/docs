@@ -25,6 +25,6 @@ Will apply the tags in the HTML of your documentation page:
 </head>
 ````
 
-You can apply it at different levels of your API definition: root, topic, operation, ... [Learn more about it in our help center](/help/specification-support/meta-tags/)
+You can apply it at different levels of your API definition: root, topic, operation, ... [See the full list in our help center](/help/specification-support/meta-tags/)
 
 Any feedback or requests? Don't hesitate to reach out at [hello@bump.sh](mailto:hello@bump.sh)!
