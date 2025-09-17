@@ -12,19 +12,25 @@ title: API Explorer
 
 The API Explorer allows you to test an API in real-world conditions directly from its documentation. It facilitates API discovery by enabling you to try out specific API calls on any server listed in your definition file. It helps you get started quickly without a testing environment or share a specific use case for discovery, support, or debugging purposes.
 
+## How to activate the API Explorer?
+
+The API Explorer can be activated for a documentation or a whole hub through an option in its “Settings” tab. 
+
+![Image of the setting to activate the API Explorer](/images/help/explorer/explorer-activation-option.png)
+
 ## How to use the API Explorer?
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
-![](/images/help/explorer/explorer-button.png)
+![Image of the API Explorer link in the navigation of a documentation](/images/help/explorer/explorer-button.png)
 
 If you haven’t opened the API Explorer from a specific operation, you can select one from the corresponding menu.
 
-![](/images/help/explorer/explorer-operation-selection.png)
+![Image of the operation selector inside the API Explorer](/images/help/explorer/explorer-operation-selection.png)
 
 We identify the required fields directly from the definition file, making it easier for you to fill out the request, detecting whether it’s a boolean, date, etc. Fill in the expected information to execute the request and receive a response.
 
-![](/images/help/explorer/explorer-response.png)
+![Image of the response module of the API Explorer](/images/help/explorer/explorer-response.png)
 
 ### Sharing
 
@@ -33,7 +39,7 @@ It’s possible to share a request setup, which is useful for showing an example
 > This URL will never share your authentication parameters or the response.
 {: .info}
 
-![](/images/help/explorer/explorer-share.png)
+![Image of the sharing modal of the API Explorer](/images/help/explorer/explorer-share.png)
 
 If the API documentation has been updated after the share URL was generated, the Explorer will notify you that the pre-filled fields may have changed and display a link to the API changelog for a more detailed review of the changes.
 
@@ -63,7 +69,7 @@ We support authentication for APIs that require prior authentication. Three opti
 
 The authentication information are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
 
-![](/images/help/explorer/explorer-auth.png)
+![Image of the authentication module of the API Explorer](/images/help/explorer/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
