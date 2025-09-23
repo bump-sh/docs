@@ -182,7 +182,7 @@ tags:
     kind: audience
 ```
 
-A [registry of the most commonly used values](https://spec.openapis.org/registry/tag-kind/) is available here but more common conventions will appear over time.
+A [registry of the most commonly used values](https://spec.openapis.org/registry/tag-kind/) is available here, and more conventions will appear over time.
 
 ## Nested Tag Structures
 
