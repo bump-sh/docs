@@ -13,7 +13,7 @@ Enhancements:
 - When using groups to categorize your API documentation inside your hub, you now have the option to only display the ones from the same category in the documentation selector of a documentation,
 - The browser window.title is now automatically updated when scrolling between operations to display the current navigation context,
 - Highlights now work for subtitles inside x-topics, and global/operation descriptions,
-- [x-feedbackLink](/help/publish-documentation/feedback/) now works with Swagger 2.0 documentation,
+- [x-feedbackLink](/help/publish-documentation/feedback/) now works with Swagger 2.0 definition files,
 - Groups in the navigation bar are now collapsible, to facilitate the navigation between groups containing many operations,
 - The "add custom domain" module has been reworked to provide better explanations and error messages,
 - Branches can now be [sorted alphabetically in ascending and descending order](/help/publish-documentation/branching/#sort-branches),
