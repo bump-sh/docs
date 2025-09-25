@@ -21,7 +21,7 @@ Enhancements:
 - x-state badges can now have [custom colors](/help/specification-support/doc-badges/#custom-color),
 - Accordions can now be added in Markdown using `<details>` and `<summary>` tags,
 - A logo dedicated to dark mode can now be added to ensure brand consistency,
-- The API Explorer is no longer in beta.
+- The API Explorer beta is completed. 🎉 Thanks a lot to all of our testers. Your feedback has been invaluable and helped us build an even better feature for all.
 
 Fixes:
 - Fixed wrong breaking changes when the case of an HTTP header was modified but not its value,
