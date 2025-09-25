@@ -10,7 +10,7 @@ Enhancements:
 - In Embed mode, the search placeholders now specify their context (« Search API documentation » vs « Search hub »), so users can differentiate the global search from the documentaion portal search, 
 - A confirmation modal has been added to the API Explorer before sending destructive requests to avoid unwanted losses,
 - The scrolling experience has been globally reworked to ensure its stability,
-- When using groups to categorize your API documentation inside your hub, you now have the option to only display the ones from the same category in the documentation selector of a documentation,
+- Hub categories can now filter the documentation selector in the top navigation bar. This way, readers only see relevant docs from the same category, improving navigation for them and giving admins clearer control over doc organization,
 - The browser window.title is now automatically updated when scrolling between operations to display the current navigation context,
 - Highlights now work for subtitles inside x-topics, and global/operation descriptions,
 - [x-feedbackLink](/help/publish-documentation/feedback/) now works with Swagger 2.0 definition files,
