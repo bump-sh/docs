@@ -45,24 +45,22 @@ resources:
   - type: category
     label: Advanced OpenAPI Specification
     items:
-      - label: Splitting OpenAPI into Multiple Documents
-        link: /advanced/splitting-documents-with-ref/
+      - label: Supporting Multiple Content Types
+        link: /advanced/multiple-content-types/
       - label: Multipart Form Data
         link: /advanced/multipart-form-data/
       - label: Pagination
         link: /advanced/pagination/
       - label: File Uploads
         link: /advanced/file-uploads/
-      - label: Supporting Multiple Content Types
-        link: /advanced/multiple-content-types/
       - label: Handling Error Formats
         link: /advanced/error-formats/
-      - label: Security (Authentication and Authorization)
+      - label: Security Definitions (Authentication and Authorization)
         link: /advanced/security/
       - label: Callbacks and Webhooks
         link: /advanced/callbacks-webhooks/
-      - label: JSON Streaming
-        link: /advanced/json-streaming/
+      - label: Splitting OpenAPI into Multiple Documents
+        link: /advanced/splitting-documents-with-ref/
   - type: category
     label: Documenting APIs
     items:
