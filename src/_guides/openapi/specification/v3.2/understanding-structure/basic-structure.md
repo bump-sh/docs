@@ -99,7 +99,7 @@ paths:
       operationId: get-bookings
       summary: List existing bookings
       tags:
-      - bookings
+      - Bookings
       responses:
         '200':
           description: A list of bookings                 
@@ -107,7 +107,7 @@ paths:
       operationId: create-booking
       summary: Create a booking
       tags:
-      - bookings
+      - Bookings
       requestBody:
         required: true
       responses:
@@ -315,7 +315,7 @@ webhooks:
       description: |
         Subscribe to new bookings being created, to update integrations for your users.  Related data is available via the links provided in the request.
       tags:
-        - bookings
+        - Bookings
       requestBody:
         content:
           application/json:
@@ -328,7 +328,7 @@ webhooks:
 
 ### 8. Tags Object
 
-You may have spotted the `tags` keyword in the paths and webhooks, and those are referencing tags defined in the top-level `tags` object. The tag name is used to group related operations together. Each tag needs a `name`, with optional `summary` and `description`.
+You may have spotted the `tags` keyword in the paths and webhooks, and those are referencing tags defined in the top-level `tags` object. The tag name is used to group related operations together. Each tag needs a `name`, with optional `summary` and `description` properties for human readable titles and longer descriptions.
 
 ```yaml
 tags:
@@ -348,7 +348,7 @@ tags:
       > before the expiry date 
 ```
 
-The `name` is more like a variable name so should be camelCase or similar. The `summary` is short and in human-readable for documentation so its best to make it "Title Case", and the `description` is Markdown (CommonMark) which can be quite long - think paragraphs not sentences, explaining what this concept is to the user as that will also show up in most documentation tools.
+The name is often displayed to users in human-readable documentation so its best to make it "Title Case", and the description can be quite long, think paragraphs not sentences, explaining what this concept is to the user as that will also show up in most documentation tools.
 
 ## Example OpenAPI Document
 
