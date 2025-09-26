@@ -91,11 +91,11 @@ OpenAPI v3.2 expanded this list to allow:
 - `query` (as defined in [draft-ietf-httpbis-safe-method-w-body-08](https://www.ietf.org/archive/id/draft-ietf-httpbis-safe-method-w-body-08.html) or later)
 - anything else via "additional properties".
 
-Anything that you are using as a HTTP method could be used in an operation in capitals, so you could use the following examples: 
+Anything that you are using as a HTTP method could be used in an operation, so you could use the following examples: 
 
-- `CONNECT` - used by proxies to establish a tunnel.
-- `COPY` - old WebDAV method for copying resources. 
-- `LOCK` - another old WebDAV method for locking a resource to prevent further editing.
+- `connect` - used by proxies to establish a tunnel.
+- `copy` - old WebDAV method for copying resources. 
+- `lock` - another old WebDAV method for locking a resource to prevent further editing.
 
 Tempting as it is to use those old WebDAV methods, it's probably not a great idea, but the fact that OpenAPI v3.2 lets you document _any_ HTTP method you like is certainly an upgrade on previous versions.
 

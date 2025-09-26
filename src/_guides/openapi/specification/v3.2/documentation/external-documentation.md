@@ -2,7 +2,7 @@
 title: External Documentation
 authors: phil
 excerpt: Link OpenAPI documentation with other guides and tutorials.
-date: 2025-05-15
+date: 2024-08-08
 ---
 
 - TOC
@@ -16,7 +16,7 @@ The `externalDocs` property is two things, a URL using the `url` property, and a
 
 ```yaml
 tags:
-  - name: diffs
+  - name: Diffs
     description: Diff summary of changes in the API
     externalDocs:
       description: More details about Diff
@@ -34,7 +34,7 @@ This is not limited to tags, `externalDocs` can be used on:
 Here's all of them being used all at once!
 
 ```yaml
-openapi: 3.2.0
+openapi: 3.1.0
 info:
   title: External Docs Everywhere!
   version: "1.0.0"
@@ -51,7 +51,7 @@ paths:
         url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/paths-operations/
 
 tags:
-  - name: diffs
+  - name: Diffs
     description: Diff summary of changes in the API
     externalDocs:
       description: More details about Diff
