@@ -697,15 +697,11 @@ Whatever you use for an API client, during the design phase when you have no rea
 
 ```yaml
 servers:
-  - name: Mock Server
-    url: https://try.microcks.io/rest/Train+Travel+API/1.0.0
-    description: >
-      This is a mock server provided by Microcks, which allows you to try out the API without needing to set up your own server.
+  - url: https://try.microcks.io/rest/Train+Travel+API/1.0.0
+    description: Mock Server
 
-  - name: Production
-    url: https://api.example.com
-    description: >
-      This is the production server for the Train Travel API, which is used to book train tickets and check schedules.
+  - url: https://api.example.com
+    description: Production
 ```
 
 ## Summary

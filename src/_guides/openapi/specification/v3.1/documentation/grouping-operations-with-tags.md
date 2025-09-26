@@ -15,26 +15,22 @@ Typically, OpenAPI tags are used to group related endpoints in a meaningful way,
 
 ```yaml
 tags:
-  - name: stations
-    summary: Stations
+  - name: Stations
     description: | 
       Find and filter train stations across Europe, including their location
       and local timezone.
     externalDocs:
       description: Read more
       url: http://docs.example.com/guides/stations
-  - name: trips
-    summary: Trips
-    description: |
+  - name: Trips
+    description: | 
       Timetables and routes for train trips between stations, including pricing
       and availability.
-  - name: bookings
-    summary: Bookings
+  - name: Bookings
     description: | 
       Create and manage bookings for train trips, including passenger details
       and optional extras.
-  - name: payments
-    summary: Payments
+  - name: Payments
     description: |
       Pay for bookings using a card or bank account, and view payment
       status and history.
@@ -44,16 +40,6 @@ tags:
       > before the expiry date 
 ```
 
-The `name` property is required and must be unique across all tags in the document. It is used to reference the tag in the `tags` property of an endpoint, and is generally considered as a variable name for the tag.  
-
-OpenAPI v3.2 introduced the `summary` property, which is a human-readable short description of the tag. Often this is just a Case Title version of the `name` but it can be anything, just keep it short so it fits nicely into API reference documentation navigation menus as that's generally what it's used for.
-
-The `description` property can be used to provide more detailed information about the tag. This can be really in depth and fully explain what the concept means, because e.g: Account or Unit could mean infinite different things in different domains. 
-
-You can also link to external documentation using the `externalDocs` property.
-
-## Referencing Tags in Endpoints
-
 Once you've created these tags, you can use them to group related endpoints in your API using the `tags` property on the endpoint as follows:
 
 ```yaml
@@ -61,11 +47,13 @@ paths:
   /stations:
     get:
       summary: Get a list of train stations
-      tags: [ stations ]
+      tags:
+        - Stations
   /trips:
     get:
       summary: Get available train trips
-      tags: [ trips ]
+      tags:
+        - Trips
 ```
 
 You can also apply multiple tags to an operation:
@@ -75,7 +63,9 @@ paths:
   /bookings/{bookingId}/payment:
     post:
       summary: Pay for a Booking
-      tags: [ bookings, payments ]
+      tags:
+        - Bookings
+        - Payments
 ```
 
 ## Benefits of OpenAPI Tags
@@ -85,17 +75,15 @@ Tags are a powerful tool for improving the usability of your OpenAPI document. B
 ### Tags Can Describe Endpoint Groups
 
 When specifying your tags in the root level of your API contract, you can give context to the tag using the `description` property.
-
 Let’s take [Bump.sh API documentation](https://bump.sh/demo/doc/bump). Here is how the `Diffs` tag is created and described in [Bump.sh API Contract](https://developers.bump.sh):
 
 ```yaml
 tags:
-  - name: diff
-    summary: Diffs
+  - name: Diffs
     description: Diff summary of changes in the API
 ```
 
-The documentation will show the `diff` tag like this:
+The documentation will show the `Diffs` property like this:
 
 ![Diff attribute in the generated API documentation](/images/guides/diff_attribute.png)
 [*See it live*](https://bump.sh/demo/doc/bump/group/endpoint-diffs)
@@ -110,7 +98,7 @@ In the code snippet below, the `externalDocs` property provides a link to a URL 
 
 ```yaml
 tags:
-  - name: diff
+  - name: Diffs
     description: Diff summary of changes in the API
     externalDocs:
       description: More details about Diff
@@ -127,23 +115,17 @@ When specifying your OpenAPI or AsyncAPI tags in the root of your API contract, 
 
 ```yaml
 tags:
-  - name: diff
-    summary: Diffs
+  - name: Diffs
     description: Diff summary of changes in the API
-  - name: ping
-    summary: Ping
+  - name: Ping
     description: Monitoring status endpoints
-  - name: preview
-    summary: Previews
+  - name: Previews
     description: Preview for documentation file
-  - name: version
-    summary: Versions
+  - name: Versions
     description: Deploy your API contracts
-  - name: validation
-    summary: Validations
+  - name: Validations
     description: Check & validate your API contracts
-  - name: hub
-    summary: Hubs
+  - name: Hubs
     description: Interact with your Hubs
 ```
 
@@ -161,19 +143,18 @@ Now that you understand what tags are and their benefits, you'll see some best p
 ### Tag Everything
 
 When using tags, make sure you tag all your endpoints.
-
-Notice how all diff-related endpoints are tagged with the `diffs` tag in this snippet:
+Notice how all diff-related endpoints are tagged with the `Diffs` tag in this snippet:
 
 ```yaml
 paths:
   /diffs:
     post:
-      tags: [ diff ]
+      tags: [ Diffs ]
       summary: Create a diff
       [...]
   /diffs/{id}:
     get:
-      tags: [ diff ]
+      tags: [ Diffs ]
       summary: Fetch detailed information from an existing diff
       [...]
 ```
@@ -190,25 +171,22 @@ To ensure your endpoints remain logically grouped and ordered, always tag every 
 
 When defining the list of tags in the root of your API contract, make sure not to duplicate tag names. Since the tag's `name` property links an endpoint to a tag, duplicate names are likely to confuse developers looking at the API contract.
 
-The code snippet below contains the root Tag Object in an API contract. Notice how the `validation` tag has been duplicated, and the second definition contains a different description to the first:
+The code snippet below contains the root Tag Object in an API contract. Notice how the `Validations` tag has been duplicated, and the second definition contains a different description to the first:
 
 ```yaml
 tags:
-  - name: diff
-    summary: Diffs
-    description: Diff summary of changes in the API.
-  - name: version
-    summary: Versions
-    description: Deploy your API contracts.
-  - name: validation
-    summary: Validations
-    description: Check & validate your API contracts.
-  - name: documentation_change
-    summary: Documentation Change
-    description: Check & validate your API contracts.
-  - name: validation
-    summary: Validations
-    description: Validate your API status.
+  - name: Diffs
+    description: Diff summary of changes in the API
+  - name: Versions
+    description: Deploy your API contracts
+  - name: Validations
+    description: Check & validate your API contracts
+  - name: Hubs
+    description: Interact with your Hubs
+  - name: "Documentation change"
+    description: Check & validate your API contracts
+  - name: Validations
+    description: Validate your API status
 ```
 
 These duplicate tags would confuse anyone trying to understand your API contract, as they wouldn't know which of the two tag definitions an endpoint belongs to.
@@ -217,18 +195,16 @@ Instead, make sure you define and describe every tag only once in the root Tag O
 
 ```yaml
 tags:
-  - name: diff
-    summary: Diffs
-    description: Diff summary of changes in the API.
-  - name: version
-    summary: Versions
-    description: Deploy your API contracts.
-  - name: validation
-    summary: Validations
-    description: Check & validate your API contracts.
-  - name: documentation_change
-    summary: Documentation Change
-    description: Check & validate your API contracts.
+  - name: Diffs
+    description: Diff summary of changes in the API
+  - name: Versions
+    description: Deploy your API contracts
+  - name: Validations
+    description: Check & validate your API contracts
+  - name: Hubs
+    description: Interact with your Hubs
+  - name: "Documentation change"
+    description: Check & validate your API contracts
 ```
 
 ### Define All Your OpenAPI Tags in the Root Tag Object
