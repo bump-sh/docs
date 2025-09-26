@@ -209,37 +209,3 @@ To use the shared parameter, you can reference it in your path or operation like
 ```
 
 This way, you can maintain consistency and avoid duplicating parameter definitions across your API description.
-
-## Reserved Keywords in Parameters
-
-Some characters are reserved for use in URI paths, query and header parameters, and this can lead to confusion when you want to use them literally in your parameter values. OpenAPI allows you to define parameters that can include these reserved characters without percent-encoding them via the `allowReserved` keyword to `path`, `query`, `header`, and `cookie` parameters. 
-
-> The `allowReserved` keyword only added support for `header` parameters in OpenAPI v3.2.
-{: .info }
-
-When `allowReserved` is set to `true`, the parameter value can include reserved characters without percent-encoding them. This is particularly useful for parameters that need to include characters like `/`, `?`, or `#` in their values, such as file paths or URLs. For example, `/` is encoded as `%2F` (or `%2f`), so that the parameter value `photos/cat.jpg` would be sent as:
-
-```
-GET /files?path=photos%2Fcat.jpg
-```
-
-This rules for encoding are known as "reserved expansion", which is defined by [RFC 6570](https://www.rfc-editor.org/rfc/rfc6570). Basically, it allows [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986)'s reserved character set `:/?#[]@!$&'()*+,;=`, as well as percent-encoded triples. These can all pass through unchanged, but everything else will be percent-encoding (including % outside of percent-encoded triples).
-
-Here's how `allowReserved: true` looks in action:
-
-```yaml
-parameters:
-  - in: query
-    name: path
-    schema:
-      type: string
-    allowReserved: true
-```
-
-This allows you to send a request like this without percent-encoding the path:
-
-```
-GET /files?path=photos/cat.jpg
-```
-
-Learn more about reserved characters in the [OpenAPI v3.2 specification](https://github.com/OAI/OpenAPI-Specification/blob/v3.2-dev/src/oas.md#delimiters-in-parameter-values).
