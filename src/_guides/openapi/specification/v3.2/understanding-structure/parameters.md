@@ -212,9 +212,7 @@ This way, you can maintain consistency and avoid duplicating parameter definitio
 
 ## Reserved Keywords in Parameters
 
-Some characters are reserved for use in URI paths, query and header parameters, and this can lead to confusion when you want to use them literally in your parameter values. 
-
-OpenAPI allows you to define parameters that can include these reserved characters without percent-encoding them via the `allowReserved` keyword to `path`, `query`, `header`, and `cookie` parameters. 
+Some characters are reserved for use in URI paths, query and header parameters, and this can lead to confusion when you want to use them literally in your parameter values. OpenAPI allows you to define parameters that can include these reserved characters without percent-encoding them via the `allowReserved` keyword to `path`, `query`, `header`, and `cookie` parameters. 
 
 > The `allowReserved` keyword only added support for `header` parameters in OpenAPI v3.2.
 {: .info }
@@ -244,4 +242,4 @@ This allows you to send a request like this without percent-encoding the path:
 GET /files?path=photos/cat.jpg
 ```
 
-Learn more about reserved characters in the [OpenAPI v3.2 specification](https://spec.openapis.org/oas/v3.2.0#delimiters-in-parameter-values).
+Learn more about reserved characters in the [OpenAPI v3.2 specification](https://github.com/OAI/OpenAPI-Specification/blob/v3.2-dev/src/oas.md#delimiters-in-parameter-values).
