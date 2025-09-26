@@ -220,14 +220,14 @@ Setting a `default` lets people and code know what to do when a value has not be
 
 ```
 type: string
-default: pending
 enum:
   - pending
   - fulfilled
   - archived
 ```
 
-This is useful for properties that have a common or expected value, allowing you to avoid having to specify it every time.
+
+
 
 ### minimum & maximum
 
