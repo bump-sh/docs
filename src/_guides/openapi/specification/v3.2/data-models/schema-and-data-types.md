@@ -2,7 +2,7 @@
 title: Schemas and Data Types
 authors: phil
 excerpt: "Learn about the most important part of OpenAPI: schemas, and data types."
-date: 2025-05-16
+date: 2024-07-18
 ---
 
 - TOC
@@ -120,6 +120,7 @@ The full list of formats defined in the JSON Schema Validation that OpenAPI v3.1
 
 - idn-hostname:  As defined by either [RFC 1123](https://datatracker.ietf.org/doc/html/rfc1123) as for hostname, or an internationalized hostname as defined by RFC 5890, section 2.3.2.3 [RFC5890](https://datatracker.ietf.org/doc/html/rfc5890).
 
+
 - ipv4:  An IPv4 address according to the "dotted-quad" ABNF syntax as defined in RFC 2673, section 3.2 [RFC2673](https://datatracker.ietf.org/doc/html/rfc2673).
       
 - ipv6:  An IPv6 address as defined in RFC 4291, section 2.2 [RFC4291](https://datatracker.ietf.org/doc/html/rfc4291).
@@ -217,7 +218,7 @@ In this example the `object` could be `card` or `bank_account`, but instead of d
 
 Setting a `default` lets people and code know what to do when a value has not been provided. 
 
-```yaml
+```
 type: string
 default: pending
 enum:

@@ -2,7 +2,7 @@
 title: Defining API Servers
 authors: phil
 excerpt: Learn about the API Servers section of the OpenAPI Specification.
-date: 2025-05-16
+date: 2024-07-02
 ---
 
 - TOC
@@ -13,7 +13,7 @@ The servers section in an OpenAPI specification serves as a roadmap, detailing t
 Here is an example of how you can define API servers in your OpenAPI specification:
 
 ```yaml
-openapi: 3.2.0
+openapi: 3.1.0
 info:
   title: Example API
   version: 1.0.0
@@ -70,18 +70,5 @@ servers:
 
 In this example, `{region}` is a server variable, and the `enum` restricts this to three possible values: `us`, `eu`, and `asia`. The default value is `eu`, which means if the region is not specified, tooling can know which value to use. This setup allows clients to dynamically select the appropriate regional server by substituting the `{region}` variable in the URL template, resulting in `https://asia.api.example.com`.
 
-## Best Practices
-
-### Versioning APIs
-
-Some people try to use server variables for handling API Versions (v1, v2, v3) in a single OpenAPI document. This is a poor fit for server variables, because far more than the server URL will change between major versions. Server variables help when just the server is changing, but the other operations and components are the same.
-
-It's better to consider two different versions of an API as two different APIs, and use the `servers` section to document them separately. This way, you can have a clear separation of concerns and avoid confusion for users who may be working with multiple versions of your API.
-
-### Using Descriptive Names
-
-When defining servers, use descriptive names that clearly indicate the purpose of each server. This helps users quickly identify the server they need to interact with.
-
-### Avoiding Sensitive Information
-
-Avoid including sensitive information in server URLs, such as API keys or credentials. Server variables can help with this by allowing you to define placeholders for sensitive data, which can be populated at runtime.
+> Some people try to use server variables for handling API Versions (v1, v2, v3) in a single OpenAPI document. This is a poor fit for server variables, because far more than the server URL will change between major versions. Server variables help when just the server is changing, but the other operations and components are the same.
+{: .warning}
