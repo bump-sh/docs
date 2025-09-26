@@ -20,7 +20,7 @@ OpenAPI v3.1 lets you describe APIs protected using the following security schem
   - Bearer
   - Digest
   - OAuth (1.0)
-  - others defined in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) and [HTTP Authentication Scheme Registry](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+  - others defined in [RFC 7235](https://www.rfc-editor.org/rfc/rfc7235.html) and [HTTP Authentication Scheme Registry](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 - API keys in headers, query string or cookies
 - OAuth 2.x
 - OpenID Connect Discovery
@@ -187,9 +187,7 @@ OAuth2ReadWrite:
       refreshUrl: https://example.com/oauth/refresh
 ```
 
-In this example, the `OAuth2ReadWrite` security scheme represents OAuth 2 authentication. It uses the `authorizationCode` flow, which is one of the most common flows in OAuth 2, but there is also `clientCredentials`, `implicit`, `password`, and `deviceAuthorization` flows.
-
-The `scopes` section defines the available scopes for this security scheme, such as `read` and `write`. The `authorizationUrl` specifies the URL where users can authorize the application, the `tokenUrl` is used to obtain access tokens, and the `refreshUrl` is used to refresh expired tokens.
+In this example, the `OAuth2ReadWrite` security scheme represents OAuth 2 authentication. It uses the `authorizationCode` flow, which is one of the most common flows in OAuth 2. The `scopes` section defines the available scopes for this security scheme, such as `read` and `write`. The `authorizationUrl` specifies the URL where users can authorize the application, the `tokenUrl` is used to obtain access tokens, and the `refreshUrl` is used to refresh expired tokens.
 
 To apply OAuth 2 authentication to a specific operation, you can use the `security` keyword and specify the security scheme and scopes:
 
@@ -238,7 +236,7 @@ Mutual TLS (Transport Layer Security) is an authentication type in OpenAPI that 
 
 With mutual TLS authentication, the client presents its own certificate to the server during the TLS handshake process. The server then verifies the client's certificate against its trusted certificate authority (CA) to ensure the client's identity. Similarly, the server presents its own certificate to the client, and the client verifies the server's certificate.
 
-There's not much to it, you just need to define the security scheme in your OpenAPI document:
+There's not much to it in OpenAPI v3.1.
 
 ```yaml
 MutualTLS:
@@ -394,7 +392,7 @@ As APIs evolve over time and security practices change, the authorization method
 
 Creating a new major version for an API purely to ditch security schemes is heavy handed and unnecessary. Instead you can add a new security scheme as an option, then deprecate the unwanted scheme to steer new users away from it. 
 
-OpenAPI v3.2 introduced the `deprecated` keyword for security schemes to help make this easier to document, and it works the same as other deprecable objects like operations, headers, and parameters.
+OpenAPI v3.2 introduced the `deprecated` keyword for security schemes to help make this easier to document, and it works the same as other deprecatable objects like operations, headers, and parameters.
 
 ```yaml
 components:
