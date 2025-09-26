@@ -11,13 +11,9 @@ date: 2025-07-23
 Streaming data allows API servers to send and receive data in real-time or in
 chunks, rather than waiting for the entire response to be ready. This is already
 how browsers handle HTML, images, and other media, and now it can be done for
-APIs working with JSON.
-
-This can improve responses with lots of data, or be used to send events from
-server to client in realtime without polling or adding the complexity of
-Webhooks or WebSockets. Streaming works by sending "chunks", which clients can
-then work with individually instead of waiting for the entire response to be
-ready.
+large responses with lots of data, or for sending a stream of events from server
+to client in realtime without polling or adding the complexity of Webhooks or
+WebSockets. 
 
 Streaming JSON in particular is increasingly useful as expectations around big
 data, data science, and AI continue to grow. JSON on its own does not stream
@@ -25,18 +21,21 @@ very well, but a few standards and conventions have popped up to expand JSON
 into a streamable format, and OpenAPI v3.2 introduces keywords to describe data
 in these stream formats.
 
-## JSON Streaming
+## Streaming in OpenAPI
 
-Streaming JSON is a bit tricky because JSON is not designed to be streamed. A
-naive approach might look like this:
+Streaming sends data in "chunks", and that could be a single line at a time of
+any number of lines at a time, so that clients can work with each chunk as it
+comes in. Doing this with JSON would get a little confusing and no standard JSON
+tools would work, because sending only part of a JSON instance would result in
+invalid syntax.
 
 ```json
 {
   {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"},
 ```
 
-This would trip up most tooling, but we can use something like [JSON
-Lines](https://jsonlines.org/) (a.k.a JSONL) to send one JSON instance per line.
+This would trip up most tooling, but we can use something like JSON Lines (aka
+JSONL) to send one JSON instance per line.
 
 ```json
 {"timestamp": "1985-04-12T23:20:50.52Z", "level": 1, "message": "Hi!"}
@@ -49,12 +48,10 @@ with standard native tooling and a `for` loop. There are a bunch of other
 streaming formats you might want to work with in your API like [Newline
 Delimited JSON](https://github.com/ndjson/ndjson-spec) (NDJSON), [JSON Text
 Sequence](https://www.rfc-editor.org/rfc/rfc7464.html), [GeoJSON Text
-Sequence](https://datatracker.ietf.org/doc/html/rfc8142). Thankfully they are
-all quite similar and working with them in OpenAPI is almost identical.
+Sequence](https://datatracker.ietf.org/doc/html/rfc8142). Thankfully the
+approach to describing any of them is very similar.
 
-## Streaming with OpenAPI
-
-OpenAPI v3.0 & v3.1 were able to stream binary data, but struggled to support
+OpenAPI v3.0 & v3.1 are able to stream binary data, but struggled to support
 JSON streaming formats as there was no standard way to define the **schema of
 individual events** in a stream. People would try to describe things as an
 array:
@@ -77,10 +74,10 @@ content:
 ```
 
 You might see this sort of thing around, but it's not valid, and will confuse
-tooling. A stream cannot be described as a single array, and it is a sequence of
-multiple objects on new lines which is rather different. Some tools could spot
-the `application/jsonl` content type and figure that out, but we don't need
-awkward hacks anymore because the OpenAPI team have solved the problem. 
+tooling. A stream cannot be described as a single array, it's a stream of
+multiple objects on new lines. Some tools could spot the `application/jsonl`
+content type and figure that out, but we don't need awkward hacks anymore
+because the OpenAPI team have solved the problem. 
 
 OpenAPI v3.2 introduces two new keywords to describe streamed data and events:
 
@@ -143,21 +140,18 @@ complicated formats, additional encoding information may be needed.
 The `itemEncoding` keyword allows you to specify how each item in the stream
 should be encoded, with the same encoding object as the `encoding` keyword.
 
-Using `itemEncoding` is only possible for `multipart/*` responses, so it is not
-very useful for an API that's streaming JSON, unless you were streaming a
-mixture of JSON and assets/images on a single response.
+Using `itemEncoding` is only possible for `multipart/*` responses, so it is not very useful for
+an API that's streaming JSON, unless you were streaming a mixture of JSON and assets/images on a single response.
 
 ```yaml
-content:
-  multipart/mixed:
-    itemSchema:
-      $comment: A single data image from the device
-    itemEncoding:
-      contentType: image/jpg
+multipart/mixed:
+  itemSchema:
+    $comment: A single data image from the device
+  itemEncoding:
+    contentType: image/jpg
 ```
 
-Let's ignore itemEncoding for now and focus on the major use case of streams for
-APIs: streaming data and events.
+Let's ignore itemEncoding for now and focus on the major use case of streams for APIs: streaming data and events.
 
 ## Popular Streaming Formats
 
