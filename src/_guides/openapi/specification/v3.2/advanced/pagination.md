@@ -385,4 +385,4 @@ When implementing pagination in your OpenAPI specification, consider the followi
 
 * Use `$ref` for shared pagination metadata and parameters.
 * Be consistent with naming (`meta`, `links`, `cursor`, etc.)
-* Document the pagination method clearly in your API documentation, using operation descriptions and/or [topics](_help/documentation-experience/topics.md).
+* Document the pagination method clearly in your API documentation, using operation descriptions and/or [topics](src/_help/documentation-experience/topics.md).
