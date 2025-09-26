@@ -114,7 +114,7 @@ Here’s the tag description rendered in Bump.sh.
 There are quite a few handy “vendor extensions” around which you can add more power to any tooling that knows how to respond to them. One particularly useful one is `x-topics`, which allows tech writers (or anyone else messing with this sort of work known as “doc ops” or “spec ops”) to expand on just the API Reference Documentation, and start introducing end-users to other guides and content.
 
 ```yaml
-openapi: 3.2.0
+openapi: 3.1.0
 
 x-topics:
   - title: Getting started

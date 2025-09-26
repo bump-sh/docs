@@ -108,7 +108,7 @@ components:
 Here’s the complete OpenAPI document:
 
 ```yaml
-openapi: 3.2.0
+openapi: 3.1.0
 info:
   title: Multi-Content API
   description: An API that supports JSON, XML, and CSV
