@@ -2,7 +2,7 @@
 title: Descriptions and Summaries
 authors: phil
 excerpt: Deliver on a great developer experience with improved OpenAPI descriptions and summaries.
-date: 2025-05-15
+date: 2024-08-07
 ---
 
 - TOC
@@ -28,8 +28,8 @@ paths:
             type: integer
             default: 10
       responses:
-        '200':
-          description: OK
+        200:
+          description: "OK"
 ```
 
 This is barely useful. The summary is repeating "Get bookings" like thats not clear from the "get" and the "/bookings" which would be displayed in most documentation tools by default. The summary is a chance to add more human information, like an alt tag or a caption, for things that aren't already there. 
@@ -54,8 +54,8 @@ paths:
             Used for pagination, the offset parameter allows you to skip 
             through the dataset to load the next set of records.
       responses:
-        '200':
-          description: A paginated list of bookings with detailed information.
+        200:
+          description: "A paginated list of bookings with detailed information."
           content:
             application/json:
               schema:
@@ -116,19 +116,19 @@ Tags are often underutilized, but they are a great way to [group operations](_gu
 
 ```yaml
 tags:
-  - name: stations
+  - name: Stations
     description: | 
       Find and filter train stations across Europe, including their location
       and local timezone.
-  - name: trips
+  - name: Trips
     description: | 
       Timetables and routes for train trips between stations, including pricing
       and availability.
-  - name: bookings
+  - name: Bookings
     description: | 
       Create and manage bookings for train trips, including passenger details
       and optional extras.
-  - name: payments
+  - name: Payments
     description: |
       Pay for bookings using a card or bank account, and view payment
       status and history.
@@ -139,6 +139,7 @@ tags:
 ```
 
 Here not only are we explaining the words, but we are helping people find where particular information lives, and providing important context, like that `Bookings usually expire within 1 hour` which would not have been known to the client otherwise.
+
 
 ## Operations
 

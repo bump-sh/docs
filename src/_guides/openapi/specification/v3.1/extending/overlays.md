@@ -103,7 +103,7 @@ actions:
 
 These descriptions (which can be much longer and full of even more Markdown) will then show up in API Documentation, pride of place, ready to explain the concepts to the user before they get stuck into what specific endpoints are about.
 
-![A screenshot of Bump.sh generated API documentation on the Operations tag page, with the Markdown from the above example rendered as HTML including a link to the contact us page.](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
+![Untitled](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
 
 Here’s the tag description rendered in Bump.sh.
 

@@ -76,27 +76,25 @@ Engineers will often focus very much on the “how”, but leave out some of the
 
 Tags are a really useful place to explain some of the concepts being used. For example an Order and an Organization might seem fairly obvious what it is to the engineers working on it, but you could add context to them.
 
-Here’s an example of an overlay you could use to expand the tag, adding human-readable summaries to improve navigation in documentation, and adding descriptions with a whole bunch of Markdown to help people find out more information.
+Here’s an example of an overlay you could use to expand the tag. Descriptions with a whole bunch of Markdown, and links to other resources.
 
 ```yaml
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Expand Tag Display Names & Descriptions
+  title: Expand Tag Descriptions
   version: 0.0.1
 actions:
-  - target: '$.tags[?(@.name=="order")]'
-    description: Provide more information for order tag.
+  - target: '$.tags[?(@.name=="Order")]'
+    description: Provide more information for Order tag.
     update:
-      summary: Order
       description: >
         The Order resource represents a single order for trees, which can be fulfilled by one or more
         deliveries. Orders are created by the [Protect Earth team](https://protect.earth/contact) and
         are used to track the progress of your order from creation to delivery.
-  - target: '$.tags[?(@.name=="organization")]'
-    description: Provide more information for organization tag.
+  - target: '$.tags[?(@.name=="Organization")]'
+    description: Provide more information for Organization tag.
     update:
-      summary: Organization
       description: >
         The Organization resource represents a single organization, which can be a charity, business,
         or other entity. Organizations are created by the [Protect Earth team](https://protect.earth/contact)
@@ -105,7 +103,7 @@ actions:
 
 These descriptions (which can be much longer and full of even more Markdown) will then show up in API Documentation, pride of place, ready to explain the concepts to the user before they get stuck into what specific endpoints are about.
 
-![A screenshot of Bump.sh generated API documentation on the Operations tag page, with the Markdown from the above example rendered as HTML including a link to the contact us page.](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
+![Untitled](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
 
 Here’s the tag description rendered in Bump.sh.
 
@@ -164,8 +162,7 @@ You could add `externalDocs` to point them to tutorials hosted elsewhere.
 
 ```yaml
 tags:
-  - name: stations
-    summary: Train Stations
+  - name: Stations
     description: Train Stations all over Europe, using a bunch of standards defined elsewhere.
     externalDocs:
       url: https://train-travel.example.com/docs/stations
