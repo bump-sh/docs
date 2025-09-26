@@ -113,9 +113,9 @@ If you're struggling to remember which HTTP status codes to use for any scenario
 
 ## Empty status body
 
-Some HTTP responses do not have a response body. 
+Some HTTP responses will not have a body. For example 204 No Content is often used after something has been deleted and therefore there is nothing to return. Another common one is 304 Not Modified, which lets clients know they can [reuse previous cached responses](https://apisyouwonthate.com/blog/http-client-response-caching/) because nothing has changed on the server.
 
-For example, 204 No Content is often used after something has been deleted and therefore there is nothing to return. 
+To describe HTTP responses with no body in OpenAPI you simply leave the `content` object out. 
 
 ```yaml
 paths:
@@ -128,9 +128,5 @@ paths:
           # No 'content' field here
 ```
 
-Another common one is 304 Not Modified, which lets clients know they can [reuse previous cached responses](https://apisyouwonthate.com/blog/http-client-response-caching/) because nothing has changed on the server.
-
-To describe HTTP responses with no body in OpenAPI you simply leave the `content` object out.
-
-> Before OpenAPI v3.2 this behavior was unclear. Missing out the `content` object could have meant not response, or it could have meant that it was simply undocumented. OpenAPI v3.2 clarified that no `content` means no response body should be returned.
-{: .info }
+> If you are using OpenAPI for contract testing then most tools will understand this, but they will get confused if you are omitting content for responses which do actually return content. Make your OpenAPI be more accurate by describing the return body content of anything which does return, and only omitting content for responses which legitimately do not return content. 
+{: .warning }
