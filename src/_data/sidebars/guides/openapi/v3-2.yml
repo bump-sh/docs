@@ -1,0 +1,85 @@
+collection_name: guides
+root: /guides/openapi/specification/v3.2
+resources:
+  - type: category
+    label: Introduction to OpenAPI
+    items:
+      - label: What is OpenAPI?
+        link: /introduction/what-is-openapi/
+      - label: History and Evolution of OpenAPI
+        link: /introduction/history/
+      - label: Benefits of Using OpenAPI
+        link: /introduction/benefits/
+  - type: category
+    label: Understanding OpenAPI Structure
+    items:
+      - label: Basic Structure
+        link: /understanding-structure/basic-structure/
+      - label: Defining API Servers
+        link: /understanding-structure/api-servers/
+      - label: Paths and Operations
+        link: /understanding-structure/paths-operations/
+      - label: Parameters (Path, Query, Header, and Cookie)
+        link: /understanding-structure/parameters/
+      - label: Parameter Serialization
+        link: /understanding-structure/parameter-serialization/
+      - label: HTTP Requests
+        link: /understanding-structure/http-requests/
+      - label: HTTP Responses
+        link: /understanding-structure/http-responses/
+      - label: Components Section
+        link: /understanding-structure/components/
+  - type: category
+    label: Defining Data Models
+    items:
+      - label: Schema and Data Types
+        link: /data-models/schema-and-data-types/
+      - label: JSON Schema in OpenAPI
+        link: /data-models/json-schema/
+      - label: Examples and Default Values
+        link: /data-models/examples/
+      - label: Schema Composition
+        link: /data-models/schema-composition/
+      - label: Representing XML
+        link: /data-models/representing-xml/
+  - type: category
+    label: Advanced OpenAPI Specification
+    items:
+      - label: Splitting OpenAPI into Multiple Documents
+        link: /advanced/splitting-documents-with-ref/
+      - label: Multipart Form Data
+        link: /advanced/multipart-form-data/
+      - label: Pagination
+        link: /advanced/pagination/
+      - label: File Uploads
+        link: /advanced/file-uploads/
+      - label: Supporting Multiple Content Types
+        link: /advanced/multiple-content-types/
+      - label: Handling Error Formats
+        link: /advanced/error-formats/
+      - label: Security (Authentication and Authorization)
+        link: /advanced/security/
+      - label: Callbacks and Webhooks
+        link: /advanced/callbacks-webhooks/
+      - label: JSON Streaming
+        link: /advanced/json-streaming/
+  - type: category
+    label: Documenting APIs
+    items:
+      - label: Adding Descriptions and Summaries
+        link: /documentation/descriptions-and-summaries/
+      - label: Grouping Operations with Tags
+        link: /documentation/grouping-operations-with-tags/
+      - label: Linking to External Documentation
+        link: /documentation/external-documentation/
+  - type: category
+    label: Extending OpenAPI
+    items:
+      - label: Custom Extensions and Vendor Extensions
+        link: /extending/extensions/
+      - label: Enriching OpenAPI with Overlays
+        link: /extending/overlays/
+  - label: The Perfect Modern OpenAPI Workflow
+    link: /the-perfect-modern-openapi-workflow/
+  - label: The Cheat Sheet
+    link: /cheatsheet/

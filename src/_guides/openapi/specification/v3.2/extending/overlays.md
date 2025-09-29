@@ -76,25 +76,27 @@ Engineers will often focus very much on the “how”, but leave out some of the
 
 Tags are a really useful place to explain some of the concepts being used. For example an Order and an Organization might seem fairly obvious what it is to the engineers working on it, but you could add context to them.
 
-Here’s an example of an overlay you could use to expand the tag. Descriptions with a whole bunch of Markdown, and links to other resources.
+Here’s an example of an overlay you could use to expand the tag, adding human-readable summaries to improve navigation in documentation, and adding descriptions with a whole bunch of Markdown to help people find out more information.
 
 ```yaml
 # overlays.yaml
 overlay: 1.0.0
 info:
-  title: Expand Tag Descriptions
+  title: Expand Tag Display Names & Descriptions
   version: 0.0.1
 actions:
-  - target: '$.tags[?(@.name=="Order")]'
-    description: Provide more information for Order tag.
+  - target: '$.tags[?(@.name=="order")]'
+    description: Provide more information for order tag.
     update:
+      summary: Order
       description: >
         The Order resource represents a single order for trees, which can be fulfilled by one or more
         deliveries. Orders are created by the [Protect Earth team](https://protect.earth/contact) and
         are used to track the progress of your order from creation to delivery.
-  - target: '$.tags[?(@.name=="Organization")]'
-    description: Provide more information for Organization tag.
+  - target: '$.tags[?(@.name=="organization")]'
+    description: Provide more information for organization tag.
     update:
+      summary: Organization
       description: >
         The Organization resource represents a single organization, which can be a charity, business,
         or other entity. Organizations are created by the [Protect Earth team](https://protect.earth/contact)
@@ -112,7 +114,7 @@ Here’s the tag description rendered in Bump.sh.
 There are quite a few handy “vendor extensions” around which you can add more power to any tooling that knows how to respond to them. One particularly useful one is `x-topics`, which allows tech writers (or anyone else messing with this sort of work known as “doc ops” or “spec ops”) to expand on just the API Reference Documentation, and start introducing end-users to other guides and content.
 
 ```yaml
-openapi: 3.1.0
+openapi: 3.2.0
 
 x-topics:
   - title: Getting started
@@ -162,7 +164,8 @@ You could add `externalDocs` to point them to tutorials hosted elsewhere.
 
 ```yaml
 tags:
-  - name: Stations
+  - name: stations
+    summary: Train Stations
     description: Train Stations all over Europe, using a bunch of standards defined elsewhere.
     externalDocs:
       url: https://train-travel.example.com/docs/stations
