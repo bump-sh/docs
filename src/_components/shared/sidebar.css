@@ -6,17 +6,18 @@ side-bar {
 
   aside {
     padding: var(--spacing-14) var(--spacing-4);
-  
+
     > button {
       display: none;
     }
   }
 
-  :is(h1) {
+  :is(h2) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: var(--text-l);
+    align-items: baseline;
+    font-size: var(--text-xl);
     margin-block-end: var(--spacing-4);
 
     span {

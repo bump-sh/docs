@@ -6,10 +6,11 @@ layout: application
 <%= render Shared::Sidebar.new(data: @entries, current: resource) do |sidebar| %>
   <% if resource.data.sidebar_title.present? %>
     <% sidebar.slot :before do %>
-      <h1>
+      <h2>
         <%= resource.data.sidebar_title %>
+        <% # TODO: replace by select with version v3.2 %>
         <span class="version"><%= resource.data.sidebar_version %></span>
-      </h1>
+      </h2>
     <% end %>
   <% end %>
   <% if resource.data.display_cta.present? %>
