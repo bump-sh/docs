@@ -14,7 +14,7 @@ In this tutorial we'll explore the structure of an OpenAPI document, focusing on
 
 ## The OpenAPI Document
 
-An OpenAPI document is typically written in either YAML or JSON format, usually called `openapi.yaml` or `openapi.json`, but it could have any name.
+An OpenAPI document is typically formatted as either YAML or JSON ([RFC8259](https://www.rfc-editor.org/rfc/rfc8259)). The document itself is usually named `openapi.yaml` or `openapi.json`, but it could have any name.
 
 It consists of several key sections that describe the API's endpoints, requests, responses, data models, and more. Here is an outline of the main sections:
 
@@ -34,10 +34,10 @@ Let's look at each of these objects to see what's going on.
 The root of the OpenAPI document is the `openapi` object, which specifies the version of the OpenAPI Specification being used. For example:
 
 ```yaml
-openapi: 3.1.1
+openapi: 3.2.0
 ```
 
-This is required, so that tooling knows which version you are working with. The `3.1` part is the important bit. The patch number (`3.1.1`) doesn't really matter as those "patch" versions only add clarifications to the specification and never change meaning, but it's helpful to know what version somebody was reading when they wrote the OpenAPI.
+This is required, so that tooling knows which version you are working with. The `3.2` part is the important bit. The patch number (`3.2.0`) doesn't really matter as those "patch" versions only add clarifications to the specification and never change meaning, but it's helpful to know what version somebody was reading when they wrote the OpenAPI.
 
 ### 2. Info Object
 
@@ -73,17 +73,20 @@ These other fields are **optional**:
 
 ### 3. Servers Object
 
-The `servers` object specifies one or more server URLs where the API is hosted. Each server can have a URL and optional description.
+The `servers` object specifies one or more server URLs where the API is hosted. Each server can have a URL, a name, and an optional description.
 
 ```yaml
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: https://staging-api.example.com/v1
-    description: Staging server
+- name: Production
+  url: https://api.example.com/v1
+  description: The main production server for the API.
+
+- name: Staging
+  url: https://staging-api.example.com/v1
+  description: A staging server for testing purposes.
 ```
 
-It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](_guides/openapi/specification/v3.1/extending/overlays.md).
+It's fine to put any development and testing servers in here because you can always flag them as internal or [strip them out with overlays later](_guides/openapi/specification/v3.2/extending/overlays.md).
 
 ### 4. Paths Object
 
@@ -96,7 +99,7 @@ paths:
       operationId: get-bookings
       summary: List existing bookings
       tags:
-      - Bookings
+      - bookings
       responses:
         '200':
           description: A list of bookings                 
@@ -104,7 +107,7 @@ paths:
       operationId: create-booking
       summary: Create a booking
       tags:
-      - Bookings
+      - bookings
       requestBody:
         required: true
       responses:
@@ -114,9 +117,9 @@ paths:
 
 Here the `operationId` helps us spot the two different operations, and give them a unique name which can be useful for all sorts of tools. The `summary` gives a human readable title that will often be used in documentation tools.
 
-Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads. 
+Any HTTP request which has a body (e.g.: `POST`, `PUT`, `PATCH`, `QUERY`) can define a `requestBody`, and the responses are broken down by status code. This is a bit of a skeleton at the moment and ignores the media types and payloads. 
 
-**Learn more about [paths & operations](_guides/openapi/specification/v3.1/understanding-structure/paths-operations.md).**
+**Learn more about [paths & operations](_guides/openapi/specification/v3.2/understanding-structure/paths-operations.md).**
 
 ### 5. Components Object
 
@@ -217,7 +220,6 @@ components:
           summary: Retry after the specified date
 ```
 
-
 Or examples, so multiple requests, responses, or parameters could share one or more examples.
 
 ```yaml
@@ -268,12 +270,12 @@ components:
     BearerToken:
       type: http
       scheme: bearer
-    
+
     JWT:
       type: http
       scheme: bearer
       bearerFormat: JWT
-   
+
     OAuth2ReadWrite:
       type: oauth2
       flows:
@@ -300,7 +302,7 @@ security:
     - write
 ```
 
-You can get into path specific overrides and various complex "and" situations with more [advanced security functionality](_guides/openapi/specification/v3.1/advanced/security.md).
+You can get into path specific overrides and various complex "and" situations with more [advanced security functionality](_guides/openapi/specification/v3.2/advanced/security.md).
 
 ### 7. Webhooks Object
 
@@ -313,7 +315,7 @@ webhooks:
       description: |
         Subscribe to new bookings being created, to update integrations for your users.  Related data is available via the links provided in the request.
       tags:
-        - Bookings
+        - bookings
       requestBody:
         content:
           application/json:
@@ -326,15 +328,17 @@ webhooks:
 
 ### 8. Tags Object
 
-You may have spotted the `tags` keyword in the paths and webhooks, and those are referencing tags defined in the top-level `tags` object. The tag name is used to group related operations together. Each tag has a name and an optional description.
+You may have spotted the `tags` keyword in the paths and webhooks, and those are referencing tags defined in the top-level `tags` object. The tag name is used to group related operations together. Each tag needs a `name`, with optional `summary` and `description`.
 
 ```yaml
 tags:
-  - name: Bookings
+  - name: bookings
+    summary: Bookings
     description: | 
       Create and manage bookings for train trips, including passenger details
       and optional extras.
-  - name: Payments
+  - name: payments
+    summary: Payments
     description: |
       Pay for bookings using a card or bank account, and view payment
       status and history.
@@ -344,14 +348,14 @@ tags:
       > before the expiry date 
 ```
 
-The name is often displayed to users in human-readable documentation so its best to make it "Title Case", and the description can be quite long, think paragraphs not sentences, explaining what this concept is to the user as that will also show up in most documentation tools.
+The `name` is more like a variable name so should be camelCase or similar. The `summary` is short and in human-readable for documentation so its best to make it "Title Case", and the `description` is Markdown (CommonMark) which can be quite long - think paragraphs not sentences, explaining what this concept is to the user as that will also show up in most documentation tools.
 
 ## Example OpenAPI Document
 
 Putting it all together, here is a simple example of an OpenAPI document:
 
 ```yaml
-openapi: 3.1.1
+openapi: 3.2.0
 info:
   title: Sample API
   description: A sample API to illustrate OpenAPI concepts.
@@ -361,8 +365,10 @@ info:
     url: http://www.example.com/support
     email: support@example.com
 servers:
-  - url: https://api.example.com/v1
-    description: Production
+  - name: Production
+    url: https://api.example.com/v1
+    description: The main production server for the API.
+
 paths:
   /users:
     get:
@@ -403,7 +409,8 @@ security:
   - api_key: []
 tags:
   - name: users
-    description: Operations related to users
+    summary: Users
+    description: Manage users in the system.
 ```
 
 For a more advanced example, take a look at the [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), the modern OpenAPI example from Bump.sh.
