@@ -6,10 +6,19 @@ layout: application
 <%= render Shared::Sidebar.new(data: @entries, current: resource) do |sidebar| %>
   <% if resource.data.sidebar_title.present? %>
     <% sidebar.slot :before do %>
-      <h1>
+      <h2>
         <%= resource.data.sidebar_title %>
-        <span class="version"><%= resource.data.sidebar_version %></span>
-      </h1>
+        <%# TODO: move in dedicated component %>
+        <% if resource.data.sidebar_versions.any? %>
+          <select class="version" name="version">
+            <% resource.data.sidebar_versions.each do |selectable_sidebar_version| %>
+              <option value=<%= selectable_sidebar_version %> <%= "selected" if selectable_sidebar_version == resource.data.sidebar_version%>><%= selectable_sidebar_version %></option>
+            <% end %>
+          </select>
+        <% else %>
+          <span class="version"><%= resource.data.sidebar_version %></span>
+        <% end %>
+      </h2>
     <% end %>
   <% end %>
   <% if resource.data.display_cta.present? %>
