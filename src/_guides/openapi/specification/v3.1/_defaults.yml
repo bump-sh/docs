@@ -1,2 +1,6 @@
 sidebar_version: "v3.1"
+sidebar_versions:
+  - "v3.1"
+  - "v3.2"
 sidebar_name: openapi_v3-1
+sidebar_title: OpenAPI Specification
