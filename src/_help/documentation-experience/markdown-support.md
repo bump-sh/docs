@@ -71,8 +71,25 @@ E.g.
 
 will render:
 
+
 > this is an important information to **standout**.
 {: .info}
+
+### Accordions
+
+Bump.sh support of accordions offers you a way to hide large content by default, for example if you need to share large tables.
+
+E.g.
+
+```markdown
+<details><summary>My accordion title</summary>
+My content
+</details>
+```
+
+will render:
+
+![Markdown accordion example](/images/help/markdown-accordion.gif)
 
 ## Diagrams and charts (Mermaid Support)
 
