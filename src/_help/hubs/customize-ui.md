@@ -30,4 +30,10 @@ Categories can be, for instance, groups of API that belong to a same business do
 
 When the "Group documentation by category" setting is selected, any documentation with no specified category will not be displayed in the Hub. 
 
-![](/images/help/hub-doc-categories.png)
+![Hub doc sorting option](/images/help/hub-doc-categories.png)
+
+## Filter documentation selector based on categories
+
+Hub categories can filter the documentation selector in the top navigation bar of a documentation, so readers only see relevant docs from the same category, improving navigation.
+
+![Doc quick access menu filtering option](/images/help/hub-doc-quick-access-menu.png)
