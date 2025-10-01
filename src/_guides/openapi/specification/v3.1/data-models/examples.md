@@ -2,6 +2,7 @@
 title: Examples & Defaults
 authors: phil
 excerpt: Use examples and defaults in OpenAPI to demonstrate API inputs and outputs.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/data-models/examples/
 date: 2024-07-10
 ---
 

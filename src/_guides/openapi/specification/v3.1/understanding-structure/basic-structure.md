@@ -2,6 +2,7 @@
 title: Basic Structure
 authors: phil
 excerpt: Learn your way around the OpenAPI description format for HTTP APIs by learning the basic structure.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/basic-structure/
 date: 2024-07-02
 ---
 

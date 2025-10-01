@@ -2,6 +2,7 @@
 title: Representing XML
 authors: phil
 excerpt: OpenAPI can describe XML APIs with a little work, learn how!
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/data-models/representing-xml/
 date: 2024-07-24
 ---
 

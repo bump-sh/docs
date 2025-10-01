@@ -2,6 +2,7 @@
 title: Descriptions and Summaries
 authors: phil
 excerpt: Deliver on a great developer experience with improved OpenAPI descriptions and summaries.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/documentation/descriptions-and-summaries/
 date: 2024-08-07
 ---
 

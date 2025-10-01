@@ -2,6 +2,7 @@
 title: Defining Parameters
 authors: phil
 excerpt: Teach OpenAPI all about the headers, query params, and path parameters in your API.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/parameters/
 date: 2024-07-04
 ---
 

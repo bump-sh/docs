@@ -2,6 +2,7 @@
 title: Handling Error Formats
 authors: phil
 excerpt: Describing HTTP errors efficiently in OpenAPI v3.1.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/error-formats/
 date: 2024-08-07
 ---
 

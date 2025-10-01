@@ -2,7 +2,7 @@
 title: "A brief history of OpenAPI"
 authors: phil
 excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs work together, generate client code, create tests, apply design standards, deploy documentation, and much more.
-date: 2024-07-25
+date: 2025-09-19
 ---
 
 - TOC
@@ -29,3 +29,5 @@ The following image sums up the main structural changes between 2.0 and 3.0. As 
 ![openapi 2 versus openapi 3](https://storage.googleapis.com/bump-blog-resources/what-is-openapi/OpenAPI-2-versus-OpenAPI-3.png)
 
 If you want to get more into the details about what changed between OpenAPI 3.0 and 3.1, you can have a look at our dedicated article [here](https://bump.sh/blog/changes-in-openapi-3-1).
+
+The changes between version 3.1 and 3.2 also have their [own article](https://bump.sh/blog/openapi-3-2-what-to-expect/).

@@ -2,7 +2,7 @@
 title: Schema Composition
 authors: phil
 excerpt: Use oneOf, anyOf, and allOf in OpenAPI & JSON Schema for polymorphism and composition.
-date: 2024-07-24
+date: 2025-07-24
 ---
 
 - TOC

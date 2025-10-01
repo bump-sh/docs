@@ -2,6 +2,7 @@
 title: Multiple Content Types with OpenAPI
 authors: phil
 excerpt: 
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/multiple-content-types/
 date: 2024-08-07
 ---
 

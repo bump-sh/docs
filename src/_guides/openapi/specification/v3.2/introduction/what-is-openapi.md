@@ -2,7 +2,7 @@
 title: What is OpenAPI?
 authors: phil
 excerpt: OpenAPI describes how an Application Programming Interface (API) works, how a sequence of APIs work together, generate client code, create tests, apply design standards, deploy documentation, and much more.
-date: 2024-07-25
+date: 2025-07-22
 ---
 
 - TOC

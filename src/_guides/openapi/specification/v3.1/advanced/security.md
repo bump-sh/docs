@@ -2,6 +2,7 @@
 title: Security
 authors: phil
 excerpt: Learn how OpenAPI describes authentication and authorization schemes for your API.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/security/
 date: 2024-08-07
 ---
 

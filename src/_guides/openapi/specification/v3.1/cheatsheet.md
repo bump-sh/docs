@@ -3,6 +3,7 @@ title: OpenAPI 3.1 - The Cheat Sheet
 authors: chris
 excerpt: Everything you need to keep in mind when writing an OpenAPI contract, on a one-pager.
 date: 2024-09-12
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/cheatsheet/
 ---
 
 Now that you've roamed through the Complete Guide, let's make long stories short. We have listed the key elements you should always keep in mind when writing a new OpenAPI contract, or maintaining existing ones.

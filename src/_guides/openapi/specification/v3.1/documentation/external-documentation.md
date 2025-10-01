@@ -2,6 +2,7 @@
 title: External Documentation
 authors: phil
 excerpt: Link OpenAPI documentation with other guides and tutorials.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/documentation/external-documentation/
 date: 2024-08-08
 ---
 

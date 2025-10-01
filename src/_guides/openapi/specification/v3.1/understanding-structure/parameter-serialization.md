@@ -2,6 +2,7 @@
 title: Parameter Serialization
 authors: John Charman
 excerpt: Follow through examples of how your parameters will be serialized.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/parameter-serialization/
 date: 2024-07-04
 ---
 

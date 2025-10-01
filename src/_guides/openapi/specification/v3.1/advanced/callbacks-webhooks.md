@@ -2,6 +2,7 @@
 title: Callbacks and Webhooks
 authors: phil
 excerpt: Dive into the world of API file uploads in OpenAPI.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/callbacks-webhooks/
 date: 2024-08-07
 ---
 

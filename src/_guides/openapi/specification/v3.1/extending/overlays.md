@@ -2,6 +2,7 @@
 title: Extending OpenAPI Documents with Overlays
 authors: phil
 excerpt: Use OpenAPI Overlays to enrich you API descriptions without creating conflicts in the source code.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/extending/overlays/
 date: 2024-03-20
 ---
 
