@@ -2,7 +2,7 @@
 title: Representing XML
 authors: phil
 excerpt: OpenAPI can describe XML APIs with a little work, learn how!
-date: 2024-07-24
+date: 2025-07-24
 ---
 
 - TOC

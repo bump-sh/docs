@@ -2,6 +2,7 @@
 title: Uploading a File
 authors: phil
 excerpt: Dive into the world of API file uploads in OpenAPI.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/file-uploads/
 date: 2024-08-07
 ---
 

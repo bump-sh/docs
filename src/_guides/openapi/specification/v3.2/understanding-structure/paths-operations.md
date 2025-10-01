@@ -2,7 +2,7 @@
 title: Paths and Operations
 authors: phil
 excerpt: Learn how to build OpenAPI descriptions using path and operations.
-date: 2024-07-04
+date: 2025-07-04
 ---
 
 - TOC

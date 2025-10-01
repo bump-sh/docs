@@ -2,7 +2,7 @@
 title: Defining Parameters
 authors: phil
 excerpt: Teach OpenAPI all about the headers, query params, and path parameters in your API.
-date: 2024-07-04
+date: 2025-07-04
 ---
 
 - TOC

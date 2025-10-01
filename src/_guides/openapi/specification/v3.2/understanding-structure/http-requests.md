@@ -2,7 +2,7 @@
 title: HTTP Requests
 authors: phil
 excerpt: Define HTTP requests in your OpenAPI to help users know the rules on what to send and how.
-date: 2024-07-09
+date: 2025-07-09
 ---
 
 - TOC

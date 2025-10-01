@@ -1,7 +1,7 @@
 ---
 title: The Perfect Modern OpenAPI Workflow
 authors: phil
-# canonical_url: 
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/the-perfect-modern-openapi-workflow/
 excerpt: >
   Discover how OpenAPI can revolutionize your API development process with a
   streamlined, Git-centric workflow. Learn about design, governance, and automated

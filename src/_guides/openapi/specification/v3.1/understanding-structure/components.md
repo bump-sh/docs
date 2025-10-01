@@ -2,6 +2,7 @@
 title: OpenAPI Components
 authors: phil
 excerpt: Reduce repetition in your OpenAPI documents with shared components.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/components/
 date: 2024-07-02
 ---
 

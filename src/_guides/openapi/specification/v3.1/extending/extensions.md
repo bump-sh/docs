@@ -2,6 +2,7 @@
 title: Specification Extensions in OpenAPI
 authors: phil
 excerpt: Using extensions allows you to customize and integrate various tools through OpenAPI.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/extending/extensions/
 date: 2024-03-20
 ---
 

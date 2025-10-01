@@ -2,7 +2,7 @@
 title: Basic Structure
 authors: phil
 excerpt: Learn your way around the OpenAPI description format for HTTP APIs by learning the basic structure.
-date: 2024-07-02
+date: 2025-07-02
 ---
 
 - TOC

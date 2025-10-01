@@ -2,6 +2,7 @@
 title: HTTP Responses
 authors: phil
 excerpt: 
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/http-responses/
 date: 2024-07-09
 ---
 

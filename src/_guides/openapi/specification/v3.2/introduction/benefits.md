@@ -2,7 +2,7 @@
 title: OpenAPI Benefits
 authors: phil
 excerpt: OpenAPI allows to describe how an API works, how a sequence of APIs work together, generate client code, create tests, apply design standards, deploy documentation, and much more.
-date: 2024-07-25
+date: 2025-07-25
 ---
 
 - TOC
