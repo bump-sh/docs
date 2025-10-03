@@ -18,6 +18,7 @@ side-bar {
     justify-content: space-between;
     align-items: baseline;
     font-size: var(--text-xl);
+    margin-block-start: 0;
     margin-block-end: var(--spacing-4);
 
     span {
