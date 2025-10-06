@@ -13,7 +13,7 @@ From the “Customize UI” tab in your documentation settings, you can select a
 
 By default, Bump.sh analyzes your API definition and suggests the most suitable sorting mode, either by paths or by tags.
 
-If first-level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behaviour.
+If first-level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behavior.
 
 ![](/images/help/operations.png)
 
