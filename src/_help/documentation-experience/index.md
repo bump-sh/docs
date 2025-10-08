@@ -12,3 +12,5 @@ The [API Explorer](/help/documentation-experience/api-explorer/) allows you to t
 To help you enrich your API documentation, Bump.sh supports [Markdown](/help/documentation-experience/markdown-support/), offering better formatting and the ability to add your own images.
 
 We also offer [topics](/help/documentation-experience/topics/): an exclusive custom property that allows you to add extra information to your documentation.
+
+Content of [your API documentation can be feed into your own search](/help/documentation-experience/search-integration/) to provide a seamless discovery experience from your own platform.
