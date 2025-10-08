@@ -7,7 +7,7 @@ Since we started providing dark mode, we applied filters to make your light mode
 
 The option is available in your hub/documentation settings, under "Customize UI".
 
-![Dark mode settings](/images/changelog/dark-mode.png)
+![Dark mode settings](/images/changelog/dark-mode-settings.png)
 
 It's not mandatory: we'll keep applying filters if you don't want/need to customize it, but it gives you flexibility. 
 
