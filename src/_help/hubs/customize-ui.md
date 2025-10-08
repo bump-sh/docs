@@ -10,17 +10,23 @@ It is also possible to modify the settings of a documentation within a hub to cu
   
 You can customize the visual appearance of your hub and its documentation by adding your logo and favicon directly from this section. By default, Bump.sh automatically generates a social media visual for you (when you share the URL of your hub or documentation on one of them). However, you can still choose your own image by uploading it at this step.
 
-![](/images/help/hubs-customization.png)
+![Light mode color settings](/images/help/hubs-customization.png)
 
 You can also customize the general color scheme of your hub.
 
-![](/images/help/color-scheme.png)
+![Light mode color settings](/images/help/light-mode-settings.png)
+
+## Dark mode
+
+By default, we apply filters to make your light mode color and logo blend in dark mode. To ensure brand consistency, you can define a custom logo and color dedicated to dark mode.
+
+![Dark mode settings](/images/help/dark-mode-settings.png)
 
 ## Operations sorting
 
 Finally, you can choose to apply a general sorting parameter to all the documentations in your hub with the Group by operations (by path or tag) and Navigation options.
 
-![](/images/help/operations.png)
+![Operations sorting settings](/images/help/operations.png)
 
 ## Documentation listing
 
