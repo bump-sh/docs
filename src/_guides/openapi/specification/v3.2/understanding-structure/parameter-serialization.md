@@ -8,7 +8,7 @@ date: 2024-07-04
 - TOC
 {:toc}
 
-[Parameters](_guides/openapi/specification/v3.2/understanding-structure/parameters.md) not only define what inputs your API accepts, they also define the format your API expects to receive them in, i.e. how you would like it serialized.
+[Parameters](_guides/openapi/specification/v3.2/understanding-structure/parameters.md) not only define what inputs your API accepts, they also define the format your API expects to receive them in, i.e. how those parameters should serialized.
 
 There are two keywords concerning serialization:
 
@@ -199,9 +199,9 @@ This conflict is entirely avoided if you explicitly set `explode:false` on param
 
 It's basically identical to `style:form` with `explode:false`. The difference being, the separator used is not a comma, but a percent-encoded space "%20".
 
-You'll notice there are no examples for any `type` that would be a single value. This is because its behaviour is undefined for single values. One could assume it would be identical to `style:form`, but if your parameter is going to be a single value, there is no need to explicitly define it as `spaceDelimited`.
+You'll notice there are no examples for any `type` that would be a single value. This is because its behavior is undefined for single values. One could assume it would be identical to `style:form`, but if your parameter is going to be a single value, there is no need to explicitly define it as `spaceDelimited`.
 
-`style:spaceDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behaviour for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
+`style:spaceDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behavior for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
 
 ### Pipe Delimited
 
@@ -222,13 +222,13 @@ If you still choose to use non-percent-encoded pipes, it would look like this:
 | ?pets=cat\|dog             | ?pets=age\|2\|type\|dog                   |
 | ?pets=cat\|dog&hats=fedora | ?pets=age\|2\|type\|dog&hats=type\|fedora |
 
-You'll notice there are no examples for any `type` that would be a single value. This is because its behaviour is undefined for single values. One could assume it would be identical to `style:form`, but if your parameter is going to be a single value, there is no need to explicitly define it as `spaceDelimited`.
+You'll notice there are no examples for any `type` that would be a single value. This is because its behavior is undefined for single values. One could assume it would be identical to `style:form`, but if your parameter is going to be a single value, there is no need to explicitly define it as `spaceDelimited`.
 
-`style:pipeDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behaviour for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
+`style:pipeDelimited` is not defined by [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) and there is no defined behavior for `explode:true`. You could assume it would be identical to the well-defined `in:query` default of `style:form` with `explode:true`. That said, if you're making that assumption, you're better off leaving it on the well-defined default.
 
 ### Deep Object
 
-`style:deepObject` is undefined for its default of `explode:false`. You must explicitly specify `explode:true` for any defined behaviour.
+`style:deepObject` is undefined for its default of `explode:false`. You must explicitly specify `explode:true` for any defined behavior.
 
 You may be able to use a normal square brackets "[" and "]" but they are in the list of [RFC3986's Reserved Characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2). As such, it may not work in some environments. 
 
@@ -246,9 +246,9 @@ For maximum interoperability it is safer to have them percent-encoded:
 | ?pets%5Bage%5D=2&pets%5Btype%5D=dog                       |
 | ?pets%5Bage%5D=2&pets%5Btype%5D=dog&hats%5Btype%5D=fedora |
 
-Unsurprisingly, it only has defined behaviour for an `object`. This `style` is quite different from any other, even with `explode:true` the `name`, key and value are all specified. This makes it useful for avoiding the potential name conflicts objects could cause with `style:form`, `explode:true`. 
+Unsurprisingly, it only has defined behavior for an `object`. This `style` is quite different from any other, even with `explode:true` the `name`, key and value are all specified. This makes it useful for avoiding the potential name conflicts objects could cause with `style:form`, `explode:true`. 
 
-Just bear in mind the name is misleading, despite being called a `deepObject`, there is no defined behaviour for nested arrays or objects. This is the same for every `style` `in:query`.
+Just bear in mind the name is misleading, despite being called a `deepObject`, there is no defined behavior for nested arrays or objects. This is the same for every `style` `in:query`.
 
 ## Header Parameters
 
@@ -428,8 +428,14 @@ Now our URL will look like this:
 Here I've stated that my `schema` can be `anyOf` the following: an object or a string, in `style:deepObject`. You may have spotted the problem already:
 
 - If our user specifies an object, this works as expected: `/trips?station[preferred]=gatwick&station[fallback]=london`.  
-- What if our user specifies a string? It's undefined, `deepObject` only has defined behaviour for objects.
+- What if our user specifies a string? It's undefined, `deepObject` only has defined behavior for objects.
 
 You cannot apply `style` on a per-`schema` basis. Your `style` needs to work for all possible variations of your parameter.  
 If you intend to use `anyOf`, `allOf` or `oneOf` make doubly sure your choice of `style` works for every option.  
 As always, the best option is to minimise your use of complex parameters, keep it simple.
+
+### Switching DeepObject to Querystring Parameters
+
+In OpenAPI v3.2, a new parameter location was added: `in: querystring` to help avoid complexity in `deepObject` parameters. Instead of trying to fit everything into a single parameter, you can now define multiple parameters in the querystring using the same `schema`, which can even have different content types.
+
+**Learn more about [Querystring Parameters](_guides/openapi/specification/v3.2/understanding-structure/parameters.md#querystring-parameters).**

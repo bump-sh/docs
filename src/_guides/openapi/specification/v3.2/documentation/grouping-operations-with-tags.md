@@ -142,7 +142,7 @@ When you generate API documentation, you'll notice the documentation orders the 
 ![How tags are ordered in generated API documentation](/images/guides/tags_order.png)
 [*See it live*](https://bump.sh/demo/doc/bump)
 
-Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
+Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behavior of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
 
 Now that you understand what tags are and their benefits, you'll see some best practices you should follow when using OpenAPI tags in API contracts.
 
