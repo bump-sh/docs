@@ -8,7 +8,7 @@ date: 2025-07-24
 - TOC
 {:toc}
 
-In OpenAPI v3.1 and JSON Schema, you can use `oneOf`, `allOf`, and `anyOf` keywords to handle composition, which is the concept of combining multiple schemas and subschemas in various ways to handle polymorphism, or "extending" other schemas to add more criteria.
+From OpenAPI v3.1, you can use the JSON Schema keywords `oneOf`, `allOf`, and `anyOf` to handle composition, which is the concept of combining multiple schemas and subschemas in various ways to handle polymorphism, or "extending" other schemas to add more criteria.
 
 ## What are oneOf, anyOf, and allOf?
 
@@ -161,4 +161,4 @@ content:
               $ref: '#/components/schemas/Links-Self'
 ```
 
-These schema composition keywords provide flexibility and allow you to define complex data structures and validation rules in OpenAPI v3.1 and JSON Schema, which becomes more useful as you start to [improve reuse across one or more API](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md).
+These schema composition keywords provide flexibility and allow you to define complex data structures and validation rules in OpenAPI and JSON Schema, which becomes more useful as you start to [improve reuse across one or more API](_guides/openapi/specification/v3.2/advanced/splitting-documents-with-ref.md).

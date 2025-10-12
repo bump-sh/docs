@@ -257,7 +257,7 @@ tags:
 
 ### Define All Your OpenAPI Tags Before Use
 
-The OpenAPI specification [doesn't require you to define all your tags in the root Tag Object of your API contract](https://spec.openapis.org/oas/v3.1.0#:~:text=A%20list%20of,MUST%20be%20unique). This means you can add a tag to an endpoint without listing it in the root Tag Object, but this is a bad idea. You won't be able to control what order the OpenAPI tags should appear in, and you won't be able to add a description or provide a link to external documentation for that tag. It can also confuse developers browsing the API documentation as they won't see a list of all the tags used in the API description.
+The OpenAPI specification [doesn't require you to define all your tags in the root Tag Object of your API contract](https://spec.openapis.org/oas/v3.2.0#:~:text=A%20list%20of,MUST%20be%20unique). This means you can add a tag to an endpoint without listing it in the root Tag Object, but this is a bad idea. You won't be able to control what order the OpenAPI tags should appear in, and you won't be able to add a description or provide a link to external documentation for that tag. It can also confuse developers browsing the API documentation as they won't see a list of all the tags used in the API description.
 
 As an example, consider the code snippet below where the `Previews` and the `Ping` tags has not been included in the root Tag Object:
 
