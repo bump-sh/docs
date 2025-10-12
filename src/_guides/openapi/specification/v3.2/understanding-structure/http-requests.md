@@ -8,12 +8,27 @@ date: 2025-07-09
 - TOC
 {:toc}
 
-Any API handling use-cases more advanced that purely fetching data will need to define a HTTP request body. `POST`, `PATCH`, `PUT`, `QUERY`, etc. all allow a HTTP client to send a body: often JSON or XML. This allows for more information to be sent rather than just query string parameters, which have limits.
+HTTP requests are a fundamental part of any API. They allow clients to send data to the server, whether that’s creating new resources, updating existing ones, or performing complex queries.
 
-The request body can be used for:
+OpenAPI 3.x provides a robust way to define these requests, and OpenAPI v3.2 introduces even more capabilities to handle a wider range of scenarios.
+
+Supported HTTP Methods: 
+
+- `GET`
+- `PATCH`
+- `POST`
+- `PUT`
+- `DELETE`
+- `HEAD`
+- `OPTIONS`
+- `TRACE`
+- `QUERY`
+- Additional custom methods via `additionalOperations`
+
+The HTTP request can also include a body: usually JSON or XML. The request body can be used for:
 
 - Creating new resources (e.g.: booking a train ticket)
-- Updating existing resources (e.g.: updating that booking)
+- Updating existing resources (e.g.: updating or cancelling that booking)
 - Uploading files (e.g.: uploading an image to your railcard)
 
 ## Structure of Request Bodies
@@ -63,7 +78,6 @@ paths:
 Here the `requestBody` object defines two important properties:
 
 - `required: true` - indicates that the request body is mandatory for this operation.
-
 - `content` - specifies that the request body should be in `application/json` format with the following `schema`.
 
 The schema defines the structure of the request body, including properties like `passenger_name`, `train_id`, `date`, and `seat_preference`. This can be defined inline like this, or it can use `components` to share an [existing schema](_guides/openapi/specification/v3.2/data-models/schema-and-data-types.md) and reduce repetition.
@@ -103,6 +117,108 @@ Here the `PATCH` method is used to describe an operation that can update one spe
 The `schema` then defines the structure of the request body, which demonstrates that only the `seat_preference` property can be updated.
 
 If multiple properties could be updated, you would define all the properties that could be updated, then show off some [examples](_guides/openapi/specification/v3.2/data-models/examples.md) for common use-cases of things users might want to do.
+
+## Query Requests
+
+OpenAPI 3.2 adds native support for the `QUERY` HTTP method, which is designed to support complex queries that don’t fit neatly in URL query strings.
+
+Prior to the HTTP Query method it was common for people to add infinite query string parameters like  `?origin=london&destination=paris&has_dogs=true`, or to try and create some sort of query syntax using a standard or home-grown DSL like `?filter=origin:london,destination:paris,has_dogs:true`, but these syntaxes struggle when it comes to `is null`, `not null`, or `>=10`. Putting the query into the body allows for more advanced structures using JSON for example.
+
+```yaml
+paths:
+  /products:
+    query:
+      summary: Product search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  required: [field, value]
+                  properties: 
+                    field:
+                      type: string
+                      examples: [id]
+                    value:
+                      type: string
+                      examples: [abc123]
+                    operator:
+                      type: string
+                      example: "!="
+                sort:
+                  type: object
+                  description: A hash of field names as keys, and direction as a value (asc or desc).
+                  additionalProperties:
+                    type: string
+                    enum: [asc, desc]
+                  examples:
+                    - price: "desc"
+                      published: "desc"
+
+      responses:
+        '200':
+          description: Search results
+```
+
+Within a simple structure like this, searching and filtering can be handled with a more useful 
+
+```http
+QUERY /feed 
+Content-Type: application/json
+
+{ 
+  "q": "foo", 
+  "limit": 10, 
+  "sort": {
+    "price": "desc",
+    "published": "asc"
+  }, 
+   "filter": [
+    {
+      "field": "origin",
+      "value": "london"
+    },
+    { 
+      "field": "destination",
+      "value": "paris"
+    },
+    {
+      "field": "price",
+      "value": "60.00",
+      "operator": "<="
+    }
+  ]
+}
+```
+
+## Additional HTTP Methods
+
+Use `additionalOperations` for HTTP methods not covered by standard OpenAPI operations. 
+
+For example, maybe an API is using the `PURGE` HTTP method to remove cached resources from the an API behind a cache proxy like [Varnish](https://varnish-cache.org/docs/3.0/tutorial/purging.html).
+
+```yaml
+paths:
+  /tickets/{ticketId}:
+    parameters:
+      - name: ticketId
+        in: path
+        required: true
+        schema:
+          type: string
+    additionalOperations:
+      PURGE:
+        summary: Purge a ticket from the cache
+        responses:
+          '204':
+            description: Ticket purged from cache
+```
+
+This allows for full support of any HTTP method you can think of, allowing OpenAPI v3.2 to go beyond only supporting the core HTTP methods.
 
 ## File Uploads & Multipart Forms
 
