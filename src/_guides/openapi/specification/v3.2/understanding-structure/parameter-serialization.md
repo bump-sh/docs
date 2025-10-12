@@ -438,4 +438,4 @@ As always, the best option is to minimise your use of complex parameters, keep i
 
 In OpenAPI v3.2, a new parameter location was added: `in: querystring` to help avoid complexity in `deepObject` parameters. Instead of trying to fit everything into a single parameter, you can now define multiple parameters in the querystring using the same `schema`, which can even have different content types.
 
-**Learn more about [Querystring Parameters](_guides/openapi/specification/v3.2/understanding-structure/parameters.md#querystring-parameters).**
+**Learn more about Querystring Parameters in the [HTTP Parameters guide](_guides/openapi/specification/v3.2/understanding-structure/parameters.mds).**

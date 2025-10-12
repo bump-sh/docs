@@ -8,7 +8,7 @@ date: 2025-07-04
 - TOC
 {:toc}
 
-Parameters in OpenAPI v3.1 are a fundamental part of creating an API specification, allowing you to define the inputs your API can accept. 
+Parameters in OpenAPI are a fundamental part of creating an API specification, allowing you to define the inputs your API can accept. 
 
 Parameters fall into one of a few types:
 
@@ -19,16 +19,15 @@ Parameters fall into one of a few types:
 
 Each parameter in OpenAPI is defined with specific attributes such as `name`, `in` (location), `required`, `description`, and `schema` (for defining data types and validation rules). Defining parameters with these keywords allows documentation to show example how HTTP requests should be constructed making life easier for the client, but also make sure machines know what to do with it, making SDKs and server-side validation a whole lot more powerful.
 
-
 ## Parameter Types
 
-There are four main types of parameters in OpenAPI v3.1, each serving a different purpose in the context of an HTTP request.
+There are five main types of parameters in OpenAPI v3.2, each serving a different purpose in the context of an HTTP request.
 
 - Path Parameters - `in: path`
 - Query Parameters -`in: query`
 - Header Parameters - `in: header`
 - Cookie Parameters - `in: cookie`
-- OpenAPI 3.2 also added Querystring Parameters `in: querystring`
+- OpenAPI 3.2 added Querystring Parameters `in: querystring`
 
 That new addition is a little confusing as the names are so similar, but we'll cover that in a bit.
 
@@ -55,7 +54,7 @@ Here is one required path parameter, `bookingId`, with its `name` matching `{boo
 > Path parameters have to be marked as `required: true` because they're in the path, and if its missing it would break especially if the variable was between two other segments, e.g: `/bookings/{bookingId}/payment` would become `/bookings//payment` if the value was empty and that's going to be confusing.
 {: .warning }
 
-OpenAPI v3.1 is very particular about allowed characters:
+OpenAPIis very particular about allowed characters:
 
 > The value for these path parameters MUST NOT contain any unescaped "generic syntax" characters described by RFC3986: forward slashes (/), question marks (?), or hashes (#).
 
@@ -191,7 +190,8 @@ paths:
 In HTTP that would look like this:
 
 ```http
-GET /search?filters[origin]=london&filters[destination]=paris&filters[has_dogs]=true&sorting[]=price&sorting[]=duration
+GET /search?filters[origin]=london&filters[destination]=paris
+  &filters[has_dogs]=true&sorting[]=price&sorting[]=duration
 ```
 
 It also allows for JSON encoded query strings:
