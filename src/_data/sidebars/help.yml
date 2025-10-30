@@ -83,6 +83,8 @@ resources:
         link: /customization-options/login/
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
+      - label: Custom CSS & head injection
+        link: /customization-options/custom-css-head-injection/
       - label: Embed mode
         link: /customization-options/embed-mode/
   - type: category
