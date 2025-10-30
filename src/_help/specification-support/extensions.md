@@ -38,3 +38,7 @@ This custom property lets you add links to the navigation bar of your documentat
 ## Add custom meta tags (`x-metaTags`)
 
 This custom property lets you add custom meta tags in the `<head>` tag of your documentation pages. Find out more in our [dedicated section](/help/specification-support/meta-tags).
+
+## Change tags display name (`x-displayName`)
+
+This custom property lets you change the display name of your OpenAPI tags. Find out more in our [dedicated section](/help/specification-support/openapi-support/x-display-name).
