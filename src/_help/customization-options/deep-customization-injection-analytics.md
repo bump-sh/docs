@@ -1,14 +1,18 @@
 ---
-title: Custom CSS & head injection 
+title: Deep customization, injection & analytics
 ---
 
 - TOC
 {:toc}
 
-> Deep customization options are available in our [Enterprise plan](https://bump.sh/pricing/).
+> Deep customization options are available in our [paid plan](https://bump.sh/pricing/).
 {: .info}
 
-Bump.sh offers deeper customization options, offering full control of your branding. Combined with [Embed mode](/help/customization-options/embed-mode/), these options make your Bump.sh doc portal truly blend in with your platform.
+Bump.sh offers deeper customization options, offering full control of your branding. It makes your Bump.sh doc portal truly blend in with your platform. 
+
+It also allows you to set up the same set of tools that you have on your own platform, for example, by adding analytics to your Bump.sh documentation using a script injected in the `<head>` section of your docs.
+
+The [Embed mode](/help/customization-options/embed-mode/) is an even more advanced way to integrate Bump.sh with your existing doc sites and branding.
 
 ## How-to
 
@@ -43,7 +47,7 @@ You could also apply your own custom CSS, but keep in mind:
 
 ### Head injection
 
-If you want to use our CSS variables and your own fonts to apply your branding, or add custom scripts, the `<head>` section is the place to do it. It supports any attribute that can be added in a `<head>` section: metadata, scripts, stylesheets, fonts, ...
+If you want to use our CSS variables and your own fonts to apply your branding, or add custom scripts (such as Google Analytics), the `<head>` section is the place to do it. It supports any attribute that can be added in a `<head>` section: metadata, scripts, stylesheets, fonts, ...
 
 ```
 <!-- Bump.sh: head start -->

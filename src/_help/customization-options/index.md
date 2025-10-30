@@ -11,5 +11,5 @@ Bump.sh offers several customization options for your documentation and hubs to 
 
 Finally, you can define the method for [sorting API operations](/help/customization-options/operations-navigation/) to offer a comfortable and smooth reading experience.
 
-> Some customization options, such as [Embed mode](/help/customization-options/embed-mode/) or [custom CSS & head injection](/help/customization-options/custom-css-head-injection/), depend on the plan you have subscribed to. Feel free to [contact us](mailto:hello@bump.sh) if you’d like to take advantage of a specific feature.
+> Some customization options, such as [Embed mode](/help/customization-options/embed-mode/) or [custom CSS & head injection](/help/customization-options/deep-customization-injection-analytics/) (for analytics for instance), depend on the plan you have subscribed to. Feel free to [contact us](mailto:hello@bump.sh) if you’d like to take advantage of a specific feature.
 {: .info}
