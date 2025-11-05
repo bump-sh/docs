@@ -5,7 +5,9 @@ title: Head injection (analytics and tools integration)
 - TOC
 {:toc}
 
-`<head>` injection allows you to set up the same set of tools that you have on your own platform, for example, by adding analytics to your Bump.sh documentation or integration support tools such as Intercom, using a script injected in the `<head>` section of your docs.
+`<head>` injection allows you to add the same set of tools that you have on your own platform, for example to:
+- Add analytics tags (Google, Fathom, ...),
+- Integrate support tools (such as Intercom or AI assistants).
 
 ## How-to
 
@@ -18,5 +20,3 @@ The `<head>` section is the place to do it. It supports any attribute that can b
 <meta name="custom-head" />
 <!-- Bump.sh: head end -->
 ```
-
-
