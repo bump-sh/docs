@@ -77,12 +77,14 @@ resources:
     items:
       - label: Custom domains
         link: /customization-options/custom-domains/
-      - label: Color, logo and meta images
+      - label: Branding customization
         link: /customization-options/color-logo-meta-images/
       - label: Login page
         link: /customization-options/login/
       - label: Operations & Navigation
         link: /customization-options/operations-navigation/
+      - label: Head injection (analytics and tools integration)
+        link: /customization-options/head-injection-analytics-tools-integration/
       - label: Embed mode
         link: /customization-options/embed-mode/
   - type: category

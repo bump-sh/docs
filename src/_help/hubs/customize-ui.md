@@ -22,6 +22,9 @@ By default, we apply filters to make your light mode color and logo blend in dar
 
 ![Dark mode settings](/images/help/dark-mode-settings.png)
 
+## Advanced customization through CSS variables
+The [advanced customization settings](/help/customization-options/color-logo-meta-images/#advanced-customization-through-css-variables) available for documentation can also be applied to all the documentation within a hub.
+
 ## Operations sorting
 
 Finally, you can choose to apply a general sorting parameter to all the documentations in your hub with the Group by operations (by path or tag) and Navigation options.
