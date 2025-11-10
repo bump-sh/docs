@@ -157,6 +157,8 @@ resources:
             link: /specification-support/openapi-support/webhooks/
           - label: Custom code samples
             link: /specification-support/doc-code-samples/
+          - label: Change tags display name
+            link: /specification-support/openapi-support/x-display-name/
       - label: AsyncAPI support
         link: /specification-support/asyncapi-support/
   - label: FAQ
