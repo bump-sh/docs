@@ -19,7 +19,7 @@ Having quick results is useless if they aren't relevant. We have redesigned our 
 - Typos are also now better managed, ensuring relevant results even when the search query contains typos.
 
 ### Performance
-Speed is one of the keys to a good API discovery, and search is part of it. Search speed has been increased by a factor of 10. This is particularly visible on larger hubs and complex documentation, reducing the time from almost a second to a few milliseconds, making the search experience instantaneous. 
+Quickly finding the right information is one of the keys to a good API discovery, and search is part of it. **Search speed has been increased by a factor of 10.** This is particularly visible on larger hubs and complex documentation, reducing the time from almost a second to a few milliseconds, making the search experience instantaneous. 
 
 ![Comparison between the new search and the old search](/images/changelog/new-search-experience-performance.gif)
 
