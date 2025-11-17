@@ -1,10 +1,10 @@
 ---
-title: "New search experience: 10x faster"
+title: "New search experience"
 tags: [New]
-image: /images/changelog/new_search_experience.png
+image: /images/changelog/new-search-experience.png
 ---
 
-![new_search_experience.png](/images/changelog/new_search_experience.png)
+![new_search_experience.png](/images/changelog/new-search-experience.png)
 
 Search is at the core of our doc portal experience: your users need to easily find what they're looking for, as it's a key part of their API discovery.
 
