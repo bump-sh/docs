@@ -1,5 +1,5 @@
 ---
-title: New search experience
+title: "New search experience: 10x faster"
 tags: [New]
 image: /images/changelog/new_search_experience.png
 ---
@@ -23,7 +23,7 @@ We recently completely rebuilt it to make it more relevant, faster, and more rel
 ![Search result item overhaul](/images/changelog/new-search-experience-result-item.png)
 
 ### Performance
-On average, search speed has been increased by a factor of 7. This is particularly visible on larger hubs and complex documentations, moving from almost a second to a few hundred milliseconds. 
+On average, search speed has been increased by a factor of 10. This is particularly visible on larger hubs and complex documentations, moving from almost a second to a few milliseconds. 
 
 ![Comparison between the new search and the old search](/images/changelog/new-search-experience-performance.gif)
 
