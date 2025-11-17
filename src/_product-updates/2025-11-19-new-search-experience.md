@@ -25,13 +25,6 @@ We recently completely rebuilt it to make it more relevant, faster, and more rel
 ### Performance
 On average, search speed has been increased by a factor of 7. This is particularly visible on larger hubs and complex documentations, moving from almost a second to a few hundred milliseconds. 
 
-*New search: in this example, the search request takes 43 ms.*
-![New search performance](/images/changelog/new-search-experience-performance-new.gif)
-
-
-*Old search: in this example, the search request takes 306 ms.*
-![Old search performance](/images/changelog/new-search-experience-performance-old.gif)
-
-
+![Comparison between the new search and the old search](/images/changelog/new-search-experience-performance.gif)
 
 Any feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh)!
