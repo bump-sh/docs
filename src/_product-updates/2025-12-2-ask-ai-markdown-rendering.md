@@ -8,12 +8,12 @@ image: /images/changelog/ask-ai.png
 
 Many API consumers now rely on AI tools to help them quickly discover API capabilities. Conversational tools such as ChatGPT or Claude can be fed with documentation intended for humans, but that extra "human context" gives them more noise, impacting the AI tools' relevance and increasing token costs. 
 
-Our last release is aiming to provide these tools with the right context, empowering your API doc consumers through their favorite AI tools.
+Our latest release provides these tools with the right context, empowering your API doc consumers through their favorite AI tools.
 
 ## Markdown rendering
 Bump.sh now offers an alternative context optimized for AI tools through Markdown rendering.
 
-To access the Markdown version of a documentation, simply add `.md` at the end of the URL (or `/source.md`if you're at the root of the documentation).
+To access the Markdown version of a documentation, simply add `.md` at the end of the URL (or `/source.md` if you're at the root of the documentation).
 
 [On a documentation root](https://developers.bump.sh/source.md) *(example truncated for visibility purposes).*
 ```markdown
