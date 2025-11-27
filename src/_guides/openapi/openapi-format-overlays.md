@@ -30,7 +30,7 @@ Figuring out how to do all of this just from staring into an empty text editor c
 
 Copy in some OpenAPI into the box on the left. If you don’t have any handy why not use the [Train Travel API](https://github.com/bump-sh-examples/train-travel-api) by Bump.sh.
 
-![](images/guides/openapi-format-overlays/new-openapi-in-playground.png)
+![](/images/guides/openapi-format-overlays/new-openapi-in-playground.png)
 
 ### Step 2 - Open the Overlay section
 
