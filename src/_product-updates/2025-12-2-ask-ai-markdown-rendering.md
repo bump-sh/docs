@@ -13,7 +13,7 @@ Our latest release provides these tools with the right context, empowering your 
 ## Markdown rendering
 Bump.sh now offers an alternative context optimized for AI tools through Markdown rendering.
 
-To access the Markdown version of a documentation, simply add `.md` at the end of the URL (or `/source.md` if you're at the root of the documentation).
+To access the Markdown version of a documentation, simply add `.md` at the end of the URL (or `/source.md` if you have a custom domain, when the URL is the root of your documentation).
 
 [On a documentation root](https://developers.bump.sh/source.md) *(example truncated for visibility purposes).*
 ```markdown
