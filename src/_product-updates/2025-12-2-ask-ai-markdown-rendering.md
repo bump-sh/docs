@@ -84,6 +84,20 @@ LLMs crawlers face similar challenges when crawling API docs: they don't know wh
 
 `llms.txt` is available on both hubs and docs, by adding `/llms.txt` at the end of the URL.
 
-*Example to be added once the feature is available*
+[On a hub](https://demo.bump.sh/llms.txt) *(example truncated for visibility purposes).*
+```markdown
+# Throttle Express API catalog
+
+## Description
+## Welcome to the Bump.sh demo!
+
+*Bump.sh is much more than stunning documentation, for all your APIs.*
+
+Browse through **API Hubs** and our **sleek documentation experience**. [...]
+
+## APIs
+- [Api: train/book](https://demo.bump.sh/doc/trainbook.md)
+- [...]
+````
 
 Don't hesitate to reach out at [hello@bump.sh](mailto:hello@bump.sh) if you have any questions/feedback.
