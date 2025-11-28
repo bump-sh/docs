@@ -51,8 +51,8 @@ resources:
         label: Documentation access management
         link: /publish-documentation/documentation-access-management/
       - type: page
-        label: SEO
-        link: /publish-documentation/seo/
+        label: SEO & GEO
+        link: /publish-documentation/seo-geo/
       - type: page
         label: Provide links to external resources
         link: /publish-documentation/external-links/
