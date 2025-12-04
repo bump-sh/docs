@@ -64,6 +64,8 @@ help:
         link: /documentation-experience/markdown-support/
       - label: Topics
         link: /documentation-experience/topics/
+      - label: Integrate Bump.sh's docs in your search
+        link: /documentation-experience/search-integration/
   - type: category
     label: Customization Options
     link: /customization-options/
