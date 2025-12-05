@@ -8,7 +8,29 @@ title: SEO & GEO
 ## Sitemaps
 To optimize the indexing of your public documentation, Bump.sh automatically generates a sitemap for each one.
 
+[sitemap.xml of a documentation](https://bump.sh/bump-examples/doc/train-travel-api/sitemap.xml) *(example truncated for visibility purposes).*
+```xml
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bump.sh/bump-examples/doc/train-travel-api</loc>
+    <lastmod>2025-10-29T15:13:09+01:00</lastmod>
+  </url>
+  <url>
+    [...]
+```
+
 Similarly, if you use one or more [hubs](https://docs.bump.sh/help/hubs/), they will have their own sitemap_index for all the sitemaps of the documentation they contain.
+
+[sitemap_index.xml of a hub](https://demo.bump.sh/sitemap_index.xml) *(example truncated for visibility purposes).*
+```xml
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://demo.bump.sh/doc/external-adyen/sitemap_index.xml</loc>
+    <lastmod>2020-04-30T21:36:43+02:00</lastmod>
+  </sitemap>
+  <sitemap>
+   [...]
+```
 
 ## Meta titles
 The titles follow the construction below:
@@ -34,18 +56,22 @@ Last update on #{l(api_definition.created_at, format: :date)}
 ### llms.txt
 `llms.txt` provides context for AI tools, telling crawlers what information can be retrieved behind each page of a documentation. It's available on both hubs and docs by adding `/llms.txt` at the end of the URL.
 
-[llms.txt of a hub](https://demo.bump.sh/llms.txt) *(example truncated for visibility purposes).*
+[llms.txt of a documentation](https://bump.sh/bump-examples/doc/train-travel-api/llms.txt) *(example truncated for visibility purposes).*
 ```markdown
-# Throttle Express API catalog
+# Train Travel API
 
 ## Description
-## Welcome to the Bump.sh demo!
+API for finding and booking train trips across Europe.
 
-*Bump.sh is much more than stunning documentation, for all your APIs.*
+## Servers
+- Production: https://api.example.com (Production)
 
-Browse through **API Hubs** and our **sleek documentation experience**. [...]
+## Topics
+- [Getting started](https://bump.sh/bump-examples/doc/train-travel-api/topic/topic-getting-started.md)
 
-## APIs
-- [Api: train/book](https://demo.bump.sh/doc/trainbook.md)
+## Endpoints and operations
+
+### [Stations](https://bump.sh/bump-examples/doc/train-travel-api/group/endpoint-stations.md)
+- [Get a list of train stations](https://bump.sh/bump-examples/doc/train-travel-api/operation/operation-get-stations.md)
 - [...]
 ````
