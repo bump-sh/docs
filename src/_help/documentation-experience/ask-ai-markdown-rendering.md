@@ -7,6 +7,7 @@ title: Ask AI & Markdown rendering
 
 Markdown version of your API docs and hubs, optimized for AI tools, are offered next to your standard docs. These Markdown versions, by providing narrowed-down contexts, reduce token cost and hallucinations, therefore returning more relevant results. 
 
+## Ask AI
 Many API consumers now rely on AI tools to help them quickly discover API capabilities. The `Ask AI` dropdown menu offers documentation users easy access to ChatGPT and Claude, alongside a one-click Markdown access.
 
 ![ask-ai-dropdown.png](/images/help/ask-ai-dropdown.png)
