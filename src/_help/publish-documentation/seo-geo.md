@@ -53,8 +53,8 @@ Last update on #{l(api_definition.created_at, format: :date)}
 ```
 
 ## GEO (Generative Engine Optimization)
-### llms.txt
-`llms.txt` provides context for AI tools, telling crawlers what information can be retrieved behind each page of a documentation. It's available on both hubs and docs by adding `/llms.txt` at the end of the URL.
+### llms.txt for LLM crawlers
+`llms.txt` provides context for LLMs, telling crawlers what information can be retrieved behind each page of a documentation. It's available on both hubs and docs by adding `/llms.txt` at the end of the URL.
 
 [llms.txt of a documentation](https://bump.sh/bump-examples/doc/train-travel-api/llms.txt) *(example truncated for visibility purposes).*
 ```markdown
