@@ -70,6 +70,8 @@ resources:
         link: /documentation-experience/markdown-support/
       - label: Topics
         link: /documentation-experience/topics/
+      - label: Ask AI & Markdown rendering
+        link: /documentation-experience/ask-ai-markdown-rendering/
   - type: category
     label: Customization Options
     link: /customization-options/
