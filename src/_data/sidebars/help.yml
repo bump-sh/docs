@@ -127,8 +127,6 @@ resources:
         link: /account/user-account-settings/
       - label: Billing
         link: /account/billing/
-      - label: Github Student
-        link: /account/github-student/
   - type: category
     label: Specification Support
     link: /specification-support/
