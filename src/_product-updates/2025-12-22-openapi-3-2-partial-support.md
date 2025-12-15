@@ -1,7 +1,7 @@
 ---
 title: "OpenAPI 3.2: partial support"
 tags: [Improvement]
-image: /images/changelog/ask-ai.png
+image: /images/changelog/openapi-3-2-partial-support.png
 ---
 
 ![openapi-3-2-partial-support.png](/images/changelog/openapi-3-2-partial-support.png)
@@ -17,6 +17,6 @@ We started supporting some of the features brought by this new version:
 - `summary` can be added to responses when the level of detail doesn't justify the use of the existing `description` field.
 - Security schemes can now be `deprecated`. 
 
-OpenAPI 3.2 definition files can be deployed through your usual deployment process: using the Github Action, the CLI, the API, or directly in your Bump.sh dashboard.
+OpenAPI 3.2 definition files can be deployed through your usual deployment process: using our [Github Action](https://github.com/bump-sh/github-action), our [CLI](https://github.com/bump-sh/cli), our [API](https://developers.bump.sh/) (now in OpenAPI 3.2 ✨), or directly in your Bump.sh dashboard.
 
 As always, you can reach out at [hello@bump.sh](mailto:hello@bump.sh) for any questions/feedback.
