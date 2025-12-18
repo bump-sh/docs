@@ -38,7 +38,7 @@ This page can be customized with a logo and specific button labels and descripti
 
 The login page will systematically appear when attempting to access via the direct URL of a documentation or a hub behind this SSO, if one is not already authenticated.
 
-> SSO is a feature available from our Enterprise plan.
+> SSO is available in our [Custom plan](https://bump.sh/pricing/).
 {: .info}
 
 ### How to setup SSO

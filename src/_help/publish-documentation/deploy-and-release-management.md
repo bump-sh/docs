@@ -49,7 +49,7 @@ The Deployments section of your documentation provides access to the history of 
 
 ### Manual Release
 
-> Manual Release is available starting from our [Enterprise plan](https://bump.sh/pricing/).
+> Manual Release is available in our [Custom plan](https://bump.sh/pricing/).
 {: .info}
 
 The Manual Release mode is an option that allows you to separate the processing step from the releasing step of your API definition.

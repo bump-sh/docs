@@ -17,7 +17,7 @@ We take pride in offering exceptional support to any of our users, no matter whi
 
 As we understand the importance of having docs always up-and-running, available for your users to understand and adopt your APIs, we put all reasonable efforts in maintaining an above 99.9% availability.
 
-For our Enterprise subscription customers, we commit to that level. If we fall short, we can grant service credits. The credit is based on how much availability dropped below the target and gets applied to a future invoice. It’s a simple mechanism, just meant to give some peace of mind around reliability.
+For our Custom subscription customers, we commit to that level. If we fall short, we can grant service credits. The credit is based on how much availability dropped below the target and gets applied to a future invoice. It’s a simple mechanism, just meant to give some peace of mind around reliability.
 
 ## Monitoring
 
