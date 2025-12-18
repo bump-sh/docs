@@ -9,7 +9,7 @@ title: Head injection (analytics and tools integration)
 - Add analytics tags (Google, Fathom, ...),
 - Integrate support tools (such as Intercom or AI assistants).
 
-> Head injections are available in our [Custom plan](https://bump.sh/pricing/).
+> Head injections are available in our [custom plans](https://bump.sh/pricing/).
 {: .info}
 
 ## How-to
