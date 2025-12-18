@@ -19,9 +19,6 @@ Finally, you can decide whether this hub is visible to everyone or only to membe
 
 ![](/images/help/hub-creation.png)
 
-> Hubs are a feature available in our [paid plans](https://bump.sh/pricing/).
-{: .info}
-
 ## Add documentation to a hub
 
 ### Using the webapp

@@ -9,6 +9,9 @@ title: Head injection (analytics and tools integration)
 - Add analytics tags (Google, Fathom, ...),
 - Integrate support tools (such as Intercom or AI assistants).
 
+> Head injections are available in our [custom plans](https://bump.sh/pricing/).
+{: .info}
+
 ## How-to
 
 Head injections can be done either through a [reverse proxy](/help/customization-options/embed-mode/#configure-your-proxy) you've set up or managed by Bump.sh. Feel free to [contact us](mailto:hello@bump.sh) so we can assist you.

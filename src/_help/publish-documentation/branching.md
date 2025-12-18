@@ -17,7 +17,7 @@ Switching from one API definition to another in the documentation can be done in
 
 ![](/images/help/version-selector.png)
 
-> Branches are available in our [paid plans](https://bump.sh/pricing/).
+> Branches are available from our [Pro plan](https://bump.sh/pricing/).
 {: .info}
 
 ## Create a branch

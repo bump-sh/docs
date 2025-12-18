@@ -56,7 +56,7 @@ It is advisable not to exceed a width of 1200px and to maintain the height betwe
 
 ## Advanced customization through CSS variables
 
-> Deep customization options are available in our [paid plan](https://bump.sh/pricing/).
+> Deep customization options are available in our [custom plans](https://bump.sh/pricing/).
 {: .info}
 
 Bump.sh offers deeper customization options, offering full control of your branding. It makes your Bump.sh doc portal truly blend in with your platform. 

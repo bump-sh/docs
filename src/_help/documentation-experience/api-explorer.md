@@ -5,7 +5,7 @@ title: API Explorer
 - TOC
 {:toc}
 
-> The API Explorer is available in our [paid plans](https://bump.sh/pricing/).
+> The API Explorer is available from our [Pro plan](https://bump.sh/pricing/).
 {: .info}
 
 ## What is the API Explorer?
