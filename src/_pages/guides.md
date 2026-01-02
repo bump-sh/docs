@@ -7,7 +7,7 @@ paginate:
 ---
 
 <%= render Shared::HighlightBanner.new(
-  title: "OpenAPI: The Complete Guide",
+  title: "OpenAPI: the complete guide",
   image: "images/logos/openapi.svg",
   link_url: "/guides/openapi/specification/v3.2/introduction/what-is-openapi",
   link_label: "Discover the guide",
