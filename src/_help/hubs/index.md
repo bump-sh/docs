@@ -13,7 +13,4 @@ With hubs, your API ecosystem is displayed on a single page, where documentation
 
 Hubs also provide a unified changelog, making it easy to identify all changes across all the documentation it contains at a glance. Search is also global, allowing you to search across all documentation.
 
-> Hubs are a feature available in our [paid plans](https://bump.sh/pricing/).
-{: .info}
-
 Next step: [Create your first hub](/help/hubs/create-and-manage-hubs/)

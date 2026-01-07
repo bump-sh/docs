@@ -72,7 +72,7 @@ The release preparation page will appear, allowing you to add context by adding 
 
 ### Unrelease an API definition
 
-> Unrelease a version is available in our [paid plans](https://bump.sh/pricing/).
+> Unrelease a version is available from our [Pro plan](https://bump.sh/pricing/).
 {: .info}
 
 It is possible to "unrelease" any previously released deployment. By clicking on the deployment, you will find the "Unrelease" option under the "..." button.
