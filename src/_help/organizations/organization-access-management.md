@@ -1,12 +1,9 @@
 ---
-title: Organization Access Management
+title: Organization access management
 ---
 
 - TOC
 {:toc}
-
-> The Access Management features available depend on the [subscribed plan](https://bump.sh/pricing/).
-{: .info}
 
 ## Roles
 
@@ -30,7 +27,7 @@ A member's role can be changed at any time through the organization's list of me
 
 Bump.sh supports Single Sign-On through your identity providers, to ease who in your organization can access admin permissions.
 
-Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party Identity and Access Management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
+Our Single Sign-On feature relies on WorkOS, which supports a [wide variety of integrations](https://workos.com/docs/integrations) with third-party identity and access management solutions (e.g. generic SAML, SCIM, OpenID, as well as Auth0, Okta, Keycloak, Azure AD, Google SAML and more).
 
 Once an SSO connection is set up, a link pointing to a login page is available in the dashboard, allowing you to easily share it.
 
