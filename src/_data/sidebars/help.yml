@@ -116,10 +116,10 @@ resources:
     items:
       - label: Create and manage MCP servers
         link: /mcp-servers/create-and-manage-mcp-servers/
-      - label: Deployments
-        link: /mcp-servers/deployments/
-      - label: Access management
-        link: /mcp-servers/access-management/
+      - label: Deploy workflows
+        link: /mcp-servers/deploy-workflows/
+      - label: MCP server access management
+        link: /mcp-servers/mcp-server-access-management/
       - label: Secrets
         link: /mcp-servers/secrets/
       - label: Debugging
