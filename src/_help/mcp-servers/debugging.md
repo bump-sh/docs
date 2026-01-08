@@ -1,3 +1,6 @@
 ---
 title: Debugging
 ---
+
+- TOC
+{:toc}
