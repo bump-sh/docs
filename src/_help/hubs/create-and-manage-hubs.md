@@ -65,7 +65,7 @@ However, the API does not currently support the following actions:
 
 [Access Management](/help/publish-documentation/documentation-access-management) functions in a similar way for hubs, with a few exceptions.
 
-The Access Management settings for a hub apply to all the documentations within it.
+The access management settings for a hub apply to all the documentations within it.
 Two settings are possible:
 
 - Private: All documentations are accessible only to members of your organization and by invitation.

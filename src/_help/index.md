@@ -9,7 +9,7 @@ Learn how to get the most of Bump.sh for your API ecosystem.
 
 - [Getting started](/help/getting-started) -- Learn about Bump.sh, how to deploy your first specification file and explore the possibilities.
 - [Specification support](/help/specification-support) -- Which and how specifications are supported.
-- [Changes Management](/help/changes-management) -- Never miss any changes of your API, check them with the diff.
+- [Changes management](/help/changes-management) -- Never miss any changes of your API, check them with the diff.
 
 ## Manage your documentation and access
 - [Hubs](/help/hubs) -- Create groups of documentation.

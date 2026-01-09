@@ -17,5 +17,3 @@ Until now, each user had their own personal space and could create and/or join o
 To put it briefly, all documentation and hubs now belong to an organization.
 For our users, nothing changes or hardly anything: your existing hubs and documentation have been migrated to an organization bearing your username, and your URLs still work.
 We have naturally adjusted our Free plan to not impact our users under this plan: it now includes an organization (yours) with all its APIs publicly accessible as before.
-
-For more information, feel free to check out [our dedicated help page](/help/organizations/personal-user-account-migration/).
