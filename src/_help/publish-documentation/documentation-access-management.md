@@ -17,9 +17,6 @@ They require user authentication to be accessible and are not indexed by search 
 
 ![](/images/help/documentation-access-choice.png)
 
-> The Access Management features available depend on the [subscribed plan](https://bump.sh/pricing/).
-{: .info}
-
 ## Private
 
 ### Members of an organization

@@ -1,12 +1,9 @@
 ---
-title: Organization Access Management
+title: Organization access management
 ---
 
 - TOC
 {:toc}
-
-> The Access Management features available depend on the [subscribed plan](https://bump.sh/pricing/).
-{: .info}
 
 ## Roles
 
