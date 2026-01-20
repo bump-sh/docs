@@ -119,7 +119,7 @@ resources:
       - label: Organization access management
         link: /organizations/organization-access-management/
       - label: Billing
-        link: /account/billing/
+        link: /organizations/billing/
   - type: category
     label: Specification support
     link: /specification-support/
