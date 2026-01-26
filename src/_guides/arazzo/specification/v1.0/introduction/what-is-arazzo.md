@@ -1,9 +1,9 @@
--
+---
 title: What is Arazzo?
 authors: phil
 excerpt: Arazzo is the standard format for describing API workflows - sequences of API calls that work together to accomplish complex tasks, with built-in error handling and state management.
 date: 2025-01-23
--
+---
 
 - TOC
 {:toc}
@@ -29,16 +29,14 @@ Some HTTP APIs are treated like a data source, with CRUD operations being comple
 
 Each step depends on data from previous steps (like available trips depend on the chosen stations and date), and there are many ways things can go wrong (no trips found, seat already booked, payment failed, etc).
 
-### Current Limitations
-
-Most of the advice for teams maintaining API documentation was to document these workflows using one of the following approaches:
+Until Arazzo, most of the advice for teams maintaining API documentation was to document these workflows using one of the following approaches:
 
 - **Written documentation** - Technical writers will create written explanations with examples of workflows, but these explanations and examples can quickly become outdated, and they cannot be automatically tested.
 - **Sample codebases** - These are language specific which can cause confusion for developers not familiar with them, and cannot be reused for other automated workflows.
 - **Proprietary implementations** - Tools like Postman and Readme offer proprietary ways to handle this which can lead to vendor lock-in, limiting integration potential, and are limited in expressing complex logic.
 - **Custom scripts** - Useful for testing but not standardized or portable.
 
-All of these approaches will partially solve the problem for some aspect of what various teams need, but just like OpenAPI solved the problem of API contracts being rewritten over and over in different formats for different documentation, testing, and governance tools, a solution was needed to standardize API workflow documentation.
+All of these approaches will partially solve the problem for some aspect of what various teams need, but just like OpenAPI solved the problem of API contracts being rewritten over and over in different formats for different documentation, testing, and governance tools, a solution was needed to standardize API workflow documentation and reduce the repetition that was so prone to mistakes and mismatches.
 
 ## Introducing Arazzo
 
@@ -59,7 +57,7 @@ workflows:
   - ...
 ```
 
-Then your workflow steps can reference real operations from those sources.
+These workflow steps reference "operations" (API calls) from those sources.
 
 ```yaml
 workflows:
@@ -72,7 +70,9 @@ workflows:
         operationId: create-booking
 ```
 
-To turn this into solid documentation it just needs some descriptions, but whats even more interesting is the way steps interact with each other. In order to handle the messiest part of real integrations - carrying values from one step to the next - the authors and contributors behind Arazzo designed it to support passing inputs and outputs from each step. branching based on what happened, deciding success or failure based on more than “did I get a 2xx?”, and handling retries or recovery paths when something goes wrong.
+To turn this into brilliant documentation it needs some descriptions, which tools can use to generate user-friendly guides. Beyond that, the best part of this workflow documentation is visualizing the messiest part of real integrations: carrying values from one step to the next. 
+
+Arazzo is designed to allow inputs and outputs from each step to be clearly described and passed between each other, then branching based on what happened, deciding success or failure based on more than "did I get a 2xx?", and handling retries or recovery paths when something goes wrong.
 
 Because the whole thing is structured, the workflows can be executed. That means the same file can power testing and automation, not just documentation. And once the documentation is executable there is no way for documentation and implementation to drift out of sync, because you can run the workflows as tests to verify everything still works as expected on every single pull request or commit to main branch.
 
@@ -83,11 +83,10 @@ Here's a simple example of an Arazzo workflow for searching and booking a train:
 ```yaml
 arazzo: 1.0.1
 info:
-
   version: 1.0.0
 
 sourceDescriptions:
-  - name: trainTravel
+  - name: train-travel
     url: ./openapi.yaml
     type: openapi
 
@@ -122,11 +121,9 @@ workflows:
           bookingId: $response.body.id
 ```
 
-This workflow is self-documenting, executable, and maintainable. Tools can read it, execute it, and generate all sorts of outputs.
+This workflow defines two steps: searching for trips and creating a booking. It specifies how to pass parameters and handle outputs between steps, so it's clear which bits come from where, and clearly defining what success looks like: e.g: this API uses a 201 Created status code, where some poorly designed APIs might use 200 OK for everything, or a 202 Accepted for async operations.
 
-- Documentation generators can create step-by-step guides for users. 
-- Testing tools can run this workflow against a live API to ensure everything works as expected. 
-- Analytics platforms can track usage of specific workflows and see where people are failing to get through to the end of the funnel.
+This clarity allows tools to generate accurate documentation, run tests, and even automate these workflows reliably.
 
 ## Who Benefits from Arazzo?
 
