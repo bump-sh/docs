@@ -11,31 +11,31 @@ resources:
       - label: Benefits of Using Arazzo
         link: /introduction/benefits/
   
-  # - type: category
-  #   label: Understanding Arazzo Structure
-  #   items:
-  #     - label: Basic Structure
-  #       link: /understanding-structure/basic-structure/
-  #     - label: Defining Sources
-  #       link: /understanding-structure/defining-sources/
-  #     - label: Workflows
-  #       link: /understanding-structure/workflows/
-  #     - label: Steps, Inputs, and Outputs
-  #       link: /understanding-structure/steps-inputs-outputs/
-  #     - label: Success and Failure
-  #       link: /understanding-structure/success-and-failure/
-  #     - label: Components & References
-  #       link: /understanding-structure/components-and-references/
+  - type: category
+    label: Understanding Arazzo Structure
+    items:
+      - label: Basic Structure
+        link: /understanding-structure/basic-structure/
+      - label: Defining Sources
+        link: /understanding-structure/defining-sources/
+      - label: Workflows
+        link: /understanding-structure/workflows/
+      - label: Steps, Inputs, and Outputs
+        link: /understanding-structure/steps-inputs-outputs/
+      - label: Success and Failure
+        link: /understanding-structure/success-and-failure/
+      - label: Components & References
+        link: /understanding-structure/components-and-references/
   
-  # - type: category
-  #   label: Working with Arazzo
-  #   items:
-  #     - type: category
-  #       label: Runtime
-  #       items:
-  #         - label: Runtime Expressions
-  #           link: /working-with-arazzo/runtime/runtime-expressions/
-  #     - label: Workflow Documentation
-  #       link: /working-with-arazzo/workflow-documentation/
-  #     - label: API Testing
-  #       link: /working-with-arazzo/api-testing/
+  - type: category
+    label: Working with Arazzo
+    items:
+      - type: category
+        label: Runtime
+        items:
+          - label: Runtime Expressions
+            link: /working-with-arazzo/runtime/runtime-expressions/
+      - label: Workflow Documentation
+        link: /working-with-arazzo/workflow-documentation/
+      - label: API Testing
+        link: /working-with-arazzo/api-testing/
