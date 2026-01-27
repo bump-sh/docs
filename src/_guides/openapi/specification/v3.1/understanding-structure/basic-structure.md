@@ -63,7 +63,7 @@ Only the following fields are **required**:
 - `title` - Your API probably has a name, and if not perhaps now is a good time to think of one thats useful for public consumption.
 - `version` - The version of your OpenAPI document, which does not have to related to the API version, or the OpenAPI Specification version. 
 
-Updating the version number when you make changes is pretty common, and keeping it seperate from the API version at first feels a little bit odd, but soon makes sense. After all, you can fix issues with the OpenAPI document that produce no change whatsoever in the API, and vice-versa. 
+Updating the version number when you make changes is pretty common, and keeping it separate from the API version at first feels a little bit odd, but soon makes sense. After all, you can fix issues with the OpenAPI document that produce no change whatsoever in the API, and vice-versa. 
 
 These other fields are **optional**: 
 
