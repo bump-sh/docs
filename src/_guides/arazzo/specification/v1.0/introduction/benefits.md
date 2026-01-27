@@ -44,7 +44,7 @@ sequenceDiagram
   API-->>Client: confirmation + ticket
 ```
 
-And here's the same idea expressed as an Arazzo workflow snippet. Notice how the important part isn't the syntax; it's the fact that the workflow makes the data handoff explicit.
+And here's the same idea expressed as an Arazzo workflow snippet. Ignore the syntax of some of the runtime expressions for now, the key part is how the steps flow together with outputs from one step being used as inputs to the next:
 
 ```yaml
 workflows:
@@ -69,7 +69,7 @@ workflows:
           - condition: $response.body.status == 'confirmed'
 ```
 
-If you've ever maintained "getting started" docs, you'll know the pain: they're the first thing users read and the first thing that goes stale. Arazzo helps because you can treat workflows as the canonical version of those journeys, then generate docs and examples from the same source.
+If you've ever maintained getting started documentation, you'll know the pain: they're the first thing users read and the first thing that goes stale. Arazzo helps because you can treat workflows as the canonical version of those journeys, then generate docs and examples from the same source.
 
 Common workflows could involve: 
 
@@ -179,11 +179,11 @@ You can also handle real-world edge cases without turning your docs into a wall 
 
 Once you've got a handful of core workflows, they naturally become a contract for how the API should be used. That helps during design reviews. Can a customer actually complete checkout with this API? Did a recent change break a critical journey?
 
-Operationally, workflows are useful as smoke tests and as synthetic monitoring. This is different from a classic “is the service up?” health check: you’re not trying to prove the database is reachable, you’re trying to prove the product still works.
+Operationally, workflows are useful as smoke tests and as synthetic monitoring. This is different from a classic "is the service up?" health check: you're not trying to prove the database is reachable, you're trying to prove the product still works.
 
-If your “signup → create resource → view resource” journey is broken, your API might still be returning 200s all day long, but your users are stuck. Arazzo lets you encode that journey once and run it on a schedule (usually against a sandbox or a dedicated test tenant).
+If the "signup → create resource → view resource" journey is broken, the API might still be returning 200s all day long, but users are stuck. Arazzo lets you encode that journey once and run it on a schedule (either on a testing environment, sandbox, or production if you're careful).
 
-Here’s a compact example of a synthetic canary workflow you might run in CI or periodically in a monitoring job:
+Here's a compact example of a synthetic canary workflow you might run in CI or periodically in a monitoring job:
 
 ```yaml
 workflows:
@@ -232,14 +232,15 @@ workflows:
             stepId: rollbackInventory
 ```
 
-Notice the difference in `operationId` syntax. Instead of referencing just the operationId (e.g.; `reserve`), a longer runtime expression is used which references the API in the source descriptions as a prefix: `$sourceDescriptions.inventoryApi.reserve`.
+Notice the difference in `operationId` syntax. Instead of referencing just the `operationId` (e.g.; `reserve`), a longer runtime expression is used which references the API in the context of its source: `$sourceDescriptions.inventoryApi.reserve`.
 
-This is where Arazzo starts to feel more like CI/CD workflows, but for business journeys. Stitching together operations that live in different services, showing pass data between them, and defining what "success" means for the whole sequence.
+This is where Arazzo starts to feel more like CI/CD workflows, but for business journeys. Stitching together operations that live in different services, passing data between them, and defining what "success" means for the whole sequence in a single source of truth.
 
 ## Business Value
 
-Beyond making sure your API ecosystem is actually functioning properly (with fewer partial sources of truth to disagree with each other) most of the business value is second-order effects. 
+Beyond making sure an API ecosystem is actually functioning properly (with fewer partial sources of truth to disagree with each other) most of the business value is second-order effects. 
 
 - Properly documented flows lead to fewer support requests from confused client developers struggling to integrate.
 - Reduced chances of AI agents flailing around hallucinating incorrect API usage.
 - More confidence when you ship changes because you can run the same workflows as regression tests.
+- All of that saves time and money.
