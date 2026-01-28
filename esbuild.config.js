@@ -40,7 +40,11 @@ const esbuildOptions = {
   ],
   globOptions: {
     excludeFilter: /\.(dsd|lit)\.css$/
-  }
+  },
+  bridgetownConfig: {
+    destination: "output/docs",
+  },
+  publicPath: "/docs/_bridgetown/static",
 }
 
 build(esbuildOptions)
