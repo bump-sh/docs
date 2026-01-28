@@ -8,6 +8,8 @@ title: Important concepts
 Before we proceed further, we wanted to share some vocabulary to clarify what we are talking about throughout this documentation.
 The terminology used here aims to be as accurate as possible, but you may encounter different terms elsewhere. We have chosen to use the most common and meaningful terms.
 
+![Bump.sh global workflow including deploying, release and access management](/images/help/bump-sh-global-workflow.png)
+
 ## API definition
 
 An API definition is the representation of an API written in compliance with an existing specification.
