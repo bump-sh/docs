@@ -17,7 +17,7 @@ On another note, we know that SSO can be very handy for companies with a lot of 
 - One for for internal users ("members"), 
 - One for external users ("guests"). 
 
-The SSO login page can now be customized with your company's logo, providing a seamless experience for your users. [Learn more about SSO here →](https://docs.bump.sh/help/organizations/organization-access-management/#sso)
+The SSO login page can now be customized with your company's logo, providing a seamless experience for your users. [Learn more about SSO here →](/help/organizations/organization-access-management/#sso)
 
 We hope these improvements will make it easier for you to manage access to the platform. 
 

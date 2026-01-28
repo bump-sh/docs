@@ -203,7 +203,7 @@ This workflow provides a clear step-by-step guide, eliminating ambiguity and sim
 
 ## Using Bump.sh x-topic extensions
 
-The [x-topic](https://docs.bump.sh/help/enhance-documentation-content/topics/#use-x-topics) extensions from Bump.sh offers a method of including these kinds of documentation details into your OpenAPI Specification document. In this case, you can enclose your content using Markdown into the OpenAPI Specification and allow the Bump.sh platform to render it. 
+The [x-topic](/help/enhance-documentation-content/topics/#use-x-topics) extensions from Bump.sh offers a method of including these kinds of documentation details into your OpenAPI Specification document. In this case, you can enclose your content using Markdown into the OpenAPI Specification and allow the Bump.sh platform to render it. 
 
 Below is an example of how this might be used, by playing x-topics at the top-level of your OpenAPI Specification document:
 
@@ -226,7 +226,7 @@ GET /products/123
 …
 ```
 
-If you prefer not to include your workflows in your OpenAPI specification, you can also leverage [external JSON refs](https://docs.bump.sh/help/specification-support/references/#external-references) to decouple your workflow-based documentation from your API specification. 
+If you prefer not to include your workflows in your OpenAPI specification, you can also leverage [external JSON refs](/help/specification-support/references/#external-references) to decouple your workflow-based documentation from your API specification. 
 
 ## OpenAPI Workflow Specification: The Future of API Workflows
 

@@ -15,7 +15,7 @@ By letting you redirect this button to any link, we want to give you the freedom
 - A nicely designed form, 
 - An email to the support team, ...
 
-[Check our dedicated help page →](https://docs.bump.sh/help/publish-documentation/feedback/)
+[Check our dedicated help page →](/help/publish-documentation/feedback/)
 
 ![feedback-button-mockup.png](/images/changelog/feedback-button-mockup.png)
 

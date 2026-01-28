@@ -435,7 +435,7 @@ I hope this post/article/guide/tutorial/page (`anyOf` these formats) did help yo
 Writing this article was not easy, but I can assure you that implementing all the support for all these polymorphism concept
 in both OpenAPI and AsyncAPI was not a long, quiet river.
 That's why I'm very glad to reveal that these combinators `anyOf` and `oneOf` are now fully supported in every documentation hosted on Bump.sh, as
-detailed [in our changelog](https://docs.bump.sh/product-updates/2022/11/14/polymorphism/).
+detailed [in our changelog](/product-updates/2022/11/14/polymorphism/).
 
 Happy polymorphism,
 

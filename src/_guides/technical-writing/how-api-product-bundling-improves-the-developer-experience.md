@@ -61,9 +61,9 @@ For organizations that wish to create their own API product bundles, several act
 
 1. **Establish API Hubs and Categorize Documentation**
 
-   Creating [centralized API hubs](https://docs.bump.sh/help/hubs/) is essential for managing multiple API product bundles effectively. These hubs serve as the entry point for developers and partners, offering a comprehensive overview of available APIs. 
+   Creating [centralized API hubs](/help/hubs/) is essential for managing multiple API product bundles effectively. These hubs serve as the entry point for developers and partners, offering a comprehensive overview of available APIs. 
 
-   In some cases, you may have documentation that belongs in one or more portals. In this case, consider [assigning topics](https://docs.bump.sh/help/enhance-documentation-content/topics/) to your documentation that can then be used to publish related documentation to the proper portals. 
+   In some cases, you may have documentation that belongs in one or more portals. In this case, consider [assigning topics](/help/enhance-documentation-content/topics/) to your documentation that can then be used to publish related documentation to the proper portals. 
 
 2. **Implement User Access Management**
 

@@ -22,7 +22,7 @@ To understand the phased approach, let’s use a simple TODO API example. The AP
 
 While we could add more operations, this API will provide a good sample of operations to better understand how to iteratively compose our OpenAPI documentation. Let’s get started by first capturing the `info` section. 
 
-If you are new to the OpenAPI Specification, check out our article titled, [“What is OpenAPI?”](https://docs.bump.sh/guides/openapi/specification/v3.1/introduction/what-is-openapi/) to gain better understanding prior to jumping into this step-by-step guide. 
+If you are new to the OpenAPI Specification, check out our article titled, [“What is OpenAPI?”](/guides/openapi/specification/v3.1/introduction/what-is-openapi/) to gain better understanding prior to jumping into this step-by-step guide. 
 
 ***Looking for an OpenAPI reference? Be sure to check out the [OpenAPI Cheat Sheet](https://bump.sh/blog/openapi-31-cheatsheet/).***
 
@@ -105,7 +105,7 @@ paths: {}
 - **Objective:** Ensure clarity, accuracy, and effectiveness of the information provided.
 - **Action:** Review the `info` section with stakeholders, revise based on feedback, and keep it updated as changes occur in services or terms. Validate that the OpenAPI document is valid using your favorite editor or the [Swagger Editor](https://editor.swagger.io) as a quick check. 
 
-For more information on improving your `info` section, refer to the article titled, [“Enriching Your OpenAPI Info Documentation for Understanding”](https://docs.bump.sh/guides/technical-writing/enriching-your-openapi-info-documentation-for-understanding/)
+For more information on improving your `info` section, refer to the article titled, [“Enriching Your OpenAPI Info Documentation for Understanding”](/guides/technical-writing/enriching-your-openapi-info-documentation-for-understanding/)
 
 ## Phase 2: Capture High-Level Operation Details
 
@@ -179,7 +179,7 @@ paths:
       operationId: updateTask
 ```
 
-Refer to the guide [“5 Improvements to OpenAPI Operation Documentation”](https://docs.bump.sh/guides/technical-writing/5-improvements-to-openapi-operation-documentation/) for tips on improving your API operation documentation. 
+Refer to the guide [“5 Improvements to OpenAPI Operation Documentation”](/guides/technical-writing/5-improvements-to-openapi-operation-documentation/) for tips on improving your API operation documentation. 
 
 ### Step 2.3: Assign Tags to Group Operations
 - **Objective:** Identify a few tags that will group API operations
@@ -234,7 +234,7 @@ paths:
         - Manage Tasks
 ```
 
-Refer to our guide, [“Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints”](https://docs.bump.sh/guides/api-basics/openapi-asyncapi-tags-organize-endpoints/) for further details on using tagging in your OpenAPI description.
+Refer to our guide, [“Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints”](/guides/api-basics/openapi-asyncapi-tags-organize-endpoints/) for further details on using tagging in your OpenAPI description.
 
 ### Step 2.4: Capture Path Parameters and Query Arguments
 - **Objective:** Capture path parameter and query argument details.

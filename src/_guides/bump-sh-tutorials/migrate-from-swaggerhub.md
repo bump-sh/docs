@@ -79,7 +79,7 @@ Waiting for changes on file openapi.yaml......
 
 Instead of having to click around a web interface to fork versions, "commit" changes in a web interface, make sure the changes are published, etc. Bump.sh allows you to automate the changes. 
 
-You can set up your documentation to deploy [using the command-line](https://docs.bump.sh/help/continuous-integration/cli/), with the [Bump.sh GitHub Action](https://docs.bump.sh/help/continuous-integration/github-actions/), or using any other [Continuous Integration setup](https://docs.bump.sh/help/continuous-integration/ci/) you like. There's even an API for [more exciting deployment integration opportunities](https://docs.bump.sh/help/continuous-integration/api/). 
+You can set up your documentation to deploy [using the command-line](/help/continuous-integration/cli/), with the [Bump.sh GitHub Action](/help/continuous-integration/github-actions/), or using any other [Continuous Integration setup](/help/continuous-integration/ci/) you like. There's even an API for [more exciting deployment integration opportunities](/help/continuous-integration/api/). 
 
 A common workflow is to have Bump.sh make previews on Git branches, then deploy the main version of the documentation when a branch is merged. This allows you to defer all configuration about how reviews work, what checks should be involved, who is in charge of approving changes, etc to the pull request settings of your source control. 
 
@@ -91,4 +91,4 @@ Once you've done this for all of your APIs and got them publishing on commit, yo
 
 ## Step 4: Use Hubs to Group Your APIs (Optional)
 
-If you had your APIs grouped into different organizations you can either make multiple Bump.sh organizations, or you can use [Hubs](https://docs.bump.sh/help/hubs/) to group APIs together.
+If you had your APIs grouped into different organizations you can either make multiple Bump.sh organizations, or you can use [Hubs](/help/hubs/) to group APIs together.

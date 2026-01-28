@@ -157,4 +157,4 @@ The "carrot" of dangling a new shiny default version works best when deployed al
 
 The basic premise of deprecation for APIs is giving people a heads up that an operation is going away and is best avoided. This would make a new API user think twice about using that operation, or that entire version if all the operations are deprecated, and helps point them towards the new version.
 
-Bump.sh [eases the pain of API deprecation in several ways](https://docs.bump.sh/guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation/), with automatic changelogs showing people what has changed, highlighting deprecations in the documentation, and alerting subscribers about meaningful changes.
+Bump.sh [eases the pain of API deprecation in several ways](/guides/technical-writing/how-our-api-docs-can-ease-the-pain-of-api-deprecation/), with automatic changelogs showing people what has changed, highlighting deprecations in the documentation, and alerting subscribers about meaningful changes.
