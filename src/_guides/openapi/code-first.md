@@ -1,7 +1,7 @@
 ---
 title: "Code-first: How to Generate OpenAPI from Code"
 authors: phil
-image: images/guides/code_first_openapi.png
+image: /docs/images/guides/code_first_openapi.png
 canonical_url: https://bump.sh/blog/code-first-openapi
 excerpt: Learn how to generate OpenAPI from an existing codebase.
 date: 2024-01-22

@@ -10,7 +10,7 @@ Markdown version of your API docs and hubs, optimized for AI tools, are offered 
 ## Ask AI
 Many API consumers now rely on AI tools to help them quickly discover API capabilities. The `Ask AI` dropdown menu offers documentation users easy access to ChatGPT and Claude, alongside a one-click Markdown access.
 
-![ask-ai-dropdown.png](/images/help/ask-ai-dropdown.png)
+![ask-ai-dropdown.png](/docs/images/help/ask-ai-dropdown.png)
 
 ## Markdown rendering
 To access the Markdown version of a documentation, add `.md` at the end of the URL (or `/source.md` if you have a custom domain, when the URL is the root of your documentation).

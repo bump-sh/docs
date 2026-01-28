@@ -11,7 +11,7 @@ From the "Customize UI" tab in your documentation settings, you can select a col
 
 A preview allows you to anticipate the readability of the final rendering.
 
-![Light mode color settings](/images/help/light-mode-settings.png)
+![Light mode color settings](/docs/images/help/light-mode-settings.png)
 
 ## Logo and favicon
 
@@ -19,7 +19,7 @@ You can upload your own logo and favicon on Bump.sh to customize your documentat
 
 From the "Customize UI" tab in the documentation settings, you can add your own logo and favicon.
 
-![Favicon upload](/images/help/logo-favicon.png)
+![Favicon upload](/docs/images/help/logo-favicon.png)
 
 To provide the best image quality, it is recommended to adhere to the following dimensions for your logo: 140px*36px. Other dimensions will be adjusted by our renderer.
 
@@ -27,7 +27,7 @@ To provide the best image quality, it is recommended to adhere to the following 
 
 By default, we apply filters to make your light mode color and logo blend in dark mode. To ensure brand consistency, you can define a custom logo and color dedicated to dark mode.
 
-![Dark mode settings](/images/help/dark-mode-settings.png)
+![Dark mode settings](/docs/images/help/dark-mode-settings.png)
 
 ## Social media image
 
@@ -41,7 +41,7 @@ By default, Bump.sh will automatically generate a social media image that can be
 In case you don't have a visual you could use, Bump.sh will automatically generate a meta image that will display your documentation name, logo and API type.
 First generation of this new social media image may take a bit, but any modification or change will start the generation process.
 
-![Meta image example](/images/help/meta-image-example.png)
+![Meta image example](/docs/images/help/meta-image-example.png)
 
 > The social media image will be modified each time you change the name or the logo.
 {: .info}
@@ -52,7 +52,7 @@ From the "Customize UI" tab in the documentation settings, you can add your own 
 
 It is advisable not to exceed a width of 1200px and to maintain the height between 600px and 700px for better integration on most platforms.
 
-![Meta image upload](/images/help/meta-image.png)
+![Meta image upload](/docs/images/help/meta-image.png)
 
 ## Advanced customization through CSS variables
 

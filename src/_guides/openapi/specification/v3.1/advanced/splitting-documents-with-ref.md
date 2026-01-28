@@ -1,7 +1,7 @@
 ---
 title: "Splitting OpenAPI Documents with $ref"
 authors: phil
-image: images/guides/ref_advanced_usages.png
+image: /docs/images/guides/ref_advanced_usages.png
 canonical_url: https://bump.sh/blog/openapi-asyncapi-ref-usage-guide
 excerpt: Learn how to use $ref to reduce clutter and repetition in your OpenAPI documents.
 date: 2024-07-10

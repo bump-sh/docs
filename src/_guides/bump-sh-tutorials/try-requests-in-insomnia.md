@@ -21,7 +21,7 @@ First you'll need to make a free account with Insomnia. Head over to [Insomnia's
 
 When your account has been created you will see a simple dashboard, which is mostly for account management. To do anything meaningful in Insomnia you need to download the Desktop application.
 
-![](/images/guides/try-requests-in-insomnia/download-insomnia.png)
+![](/docs/images/guides/try-requests-in-insomnia/download-insomnia.png)
 
 ## Step 3) Create a Collection
 
@@ -31,7 +31,7 @@ The goal is to convert our OpenAPI into a Collection which will be full of reque
 
 Bump.sh users will already have an OpenAPI document somewhere in the form of a `openapi.yaml` or `openapi.json`, and this will be on a Git repository or in the filesystem somewhere. 
 
-![](/images/guides/try-requests-in-insomnia/import-or-clone.png)
+![](/docs/images/guides/try-requests-in-insomnia/import-or-clone.png)
 
 **Via Git**
 
@@ -41,15 +41,15 @@ You can Git Clone your repository through Insomnia if you have a paid "Team" acc
 
 Free users can create a collection by clicking "New Collection", and giving it a name. 
 
-![](/images/guides/try-requests-in-insomnia/new-collection.png)
+![](/docs/images/guides/try-requests-in-insomnia/new-collection.png)
 
 Once the collection is made you can click on the "..." and click "Import". 
 
-![](/images/guides/try-requests-in-insomnia/import.png)
+![](/docs/images/guides/try-requests-in-insomnia/import.png)
 
 Then select OpenAPI document.
 
-![](/images/guides/try-requests-in-insomnia/pick-a-file.png)
+![](/docs/images/guides/try-requests-in-insomnia/pick-a-file.png)
 
 This approach means the collection will get out of date over time, but will help you at least see how this whole thing works, and Git sync can be enabled later if you feel like its worth upgrading. 
 
@@ -61,7 +61,7 @@ Insomnia supports the idea of Environments, which means you can have one for "De
 
 The OpenAPI import for Insomnia currently seems to have a few snags, because on importing the [Train Travel API](https://github.com/bump-sh-examples/train-travel-api) it was showing errors about bad environment variables.
 
-![](/images/guides/try-requests-in-insomnia/env-error.png)
+![](/docs/images/guides/try-requests-in-insomnia/env-error.png)
 
 Clicking on that variable in the URL will show the following error: 
 
@@ -69,7 +69,7 @@ Clicking on that variable in the URL will show the following error:
 
 This can be fixed by selecting the `_.host` variable.
 
-![](/images/guides/try-requests-in-insomnia/edit-variable.png)
+![](/docs/images/guides/try-requests-in-insomnia/edit-variable.png)
 
 Doing this for each operation is not ideal, but the Insomnia team are [aware of the problem](https://github.com/Kong/insomnia/issues/6785) and hopefully this will be resolved soon.
 
@@ -77,11 +77,11 @@ Doing this for each operation is not ideal, but the Insomnia team are [aware of 
 
 Another quirk with the Insomnia import comes from it created environment variables for all path parameters, which are then not found in the environment so more errors appear. 
 
-![](/images/guides/try-requests-in-insomnia/path-param-error.png)
+![](/docs/images/guides/try-requests-in-insomnia/path-param-error.png)
 
 Fixing this requires the URL to be edited, removing that broken variable with the backspace key, and writing in `:parameterName`. You'll know it's worked when a box appears in the Path Parameters list.
 
-![](/images/guides/try-requests-in-insomnia/path-param.png)
+![](/docs/images/guides/try-requests-in-insomnia/path-param.png)
 
 Whilst these bugs are fixed up, it's a good chance to work through the parameters and add example values, or pop in dynamic ones. See what autocomplete suggestions pop up when you type things like "uuid" or "email", or any other [faker value](https://fakerjs.dev/api/).
 
@@ -89,15 +89,15 @@ Whilst these bugs are fixed up, it's a good chance to work through the parameter
 
 Export the collection as a Insomnia JSON, and publish that somewhere public. 
 
-![](/images/guides/try-requests-in-insomnia/export-insomnia.png)
+![](/docs/images/guides/try-requests-in-insomnia/export-insomnia.png)
 
 One place for that might be in an `insomnia/` directory in your main API source code and/or documentation repository.
 
-![](/images/guides/try-requests-in-insomnia/commit-export.png)
+![](/docs/images/guides/try-requests-in-insomnia/commit-export.png)
 
 Wherever it goes, make sure it is accessible via a public URL, which if it's on a GitHub public repository can be found by click on the file and clicking Raw:
 
-![](/images/guides/try-requests-in-insomnia/get-public-url.png)
+![](/docs/images/guides/try-requests-in-insomnia/get-public-url.png)
 
 This gives you a URL for the Insomnia collection like this:
 
@@ -111,7 +111,7 @@ Now we can use that URL for the next step.
 
 Buried in the Preferences page under Data there's a link to the [Create Run Button](https://insomnia.rest/create-run-button) applet. Open this page up and copy that public URL into the text box.
 
-![](/images/guides/try-requests-in-insomnia/run-in-insomnia.png)
+![](/docs/images/guides/try-requests-in-insomnia/run-in-insomnia.png)
 
 Take that Markdown, and pop it into your OpenAPI somewhere. The easiest place to put it is right in the `info.description` property. 
 
@@ -126,7 +126,7 @@ info:
 
     Experiment with this API on Insomnia, using our Insomnia Collection.
     
-    [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Train%20Travel%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbump-sh-examples%2Ftrain-travel-api%2Fmain%2Finsomnia%2FInsomnia_2024-05-27.json)
+    [![Run in Insomnia}](https://insomnia.rest/docs/images/run.svg)](https://insomnia.rest/run/?label=Train%20Travel%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbump-sh-examples%2Ftrain-travel-api%2Fmain%2Finsomnia%2FInsomnia_2024-05-27.json)
 ```
 
 > A better place for this button might be a [dedicated Topic](/help/enhance-documentation-content/topics/), using the `x-topics` extension supported by Bump.sh documentation.
@@ -140,8 +140,8 @@ npx bump-cli preview openapi.yaml --live
 
 The command will return a link, click that and see how the documentation looks.
 
-![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/images/guides/try-requests-in-insomnia/bump-docs-insomnia-button.png)
+![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/docs/images/guides/try-requests-in-insomnia/bump-docs-insomnia-button.png)
 
 When you (or your users) click the new Run in Insomnia button, they'll be asked to import your collection to their own workspace, and now they can interact with your API on their own computers making requests with all the parameters and authentication options set up for them! 
 
-![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/images/guides/try-requests-in-insomnia/view-collection-in-insomnia.png)
+![Back in the Bump.sh hosted API documentation we've added a "Run in Insomnia" section with the paragraph added in Markdown above, and the purple Run in Insomnia button showing](/docs/images/guides/try-requests-in-insomnia/view-collection-in-insomnia.png)

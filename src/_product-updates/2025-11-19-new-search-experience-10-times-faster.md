@@ -1,10 +1,10 @@
 ---
 title: "New search experience"
 tags: [New]
-image: /images/changelog/new-search-experience.png
+image: /docs/images/changelog/new-search-experience.png
 ---
 
-![new_search_experience.png](/images/changelog/new-search-experience.png)
+![new_search_experience.png](/docs/images/changelog/new-search-experience.png)
 
 Search is at the core of our doc portal experience: your users need to easily find what they're looking for, as it's a key part of their API discovery.
 
@@ -21,11 +21,11 @@ Having quick results is useless if they aren't relevant. We have redesigned our 
 ### Performance
 Quickly finding the right information is one of the keys to a good API discovery, and search is part of it. **Search speed has been increased by a factor of 10.** This is particularly visible on larger hubs and complex documentation, reducing the time from almost a second to a few milliseconds, making the search experience instantaneous. 
 
-![Comparison between the new search and the old search](/images/changelog/new-search-experience-performance.gif)
+![Comparison between the new search and the old search](/docs/images/changelog/new-search-experience-performance.gif)
 
 ### Usability
 All this work is under the hood, but we also made improvements to the search interface itself: the visual hierarchy of result items has been fully reworked to increase readability.
 
-![Search result item overhaul](/images/changelog/new-search-experience-result-item.png)
+![Search result item overhaul](/docs/images/changelog/new-search-experience-result-item.png)
 
 Any feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh)!

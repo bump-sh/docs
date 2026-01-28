@@ -23,7 +23,7 @@ Even if you’re not using the API design first workflow, if you have OpenAPI an
 
 First you'll need to get Microcks set up, and that can be done with Docker, or it could be a hosted installation that lets your whole team/organization work with it. Setting Microcks up for testing is the same process as setting [Microcks up for mocking](_guides/bump-sh-tutorials/mocking-with-microcks.md), so follow that guide and come back here when you're done.
 
-[](/images/guides/mocking-with-microcks/microcks-api-view.png)
+[](/docs/images/guides/mocking-with-microcks/microcks-api-view.png)
 
 Once Microcks knows about your API(s), we are almost ready to run compliance/contract testing. This means comparing the OpenAPI and the real API implementation, which of course means we'll need to have the API running on a URL where Microcks can access it.
 
@@ -61,7 +61,7 @@ Of course if you have your API deployed already then you can just take that URL 
 
 On the Microcks dashboard click on the API you want to test, then click “+ New Test”. The New Test screen asks for a Test Endpoint, which will be the base of the service you want to test, where each OpenAPI path begins. 
 
-![](/images/guides/microcks-testing/test-runner.png)
+![](/docs/images/guides/microcks-testing/test-runner.png)
 
 You also need to select a Runner, and Microcks has a few options here:
 
@@ -74,19 +74,19 @@ Pick that last one, and hit “Launch test”. Microcks will now send a test req
 
 For every operation that successfully ran, you’ll see a green tick, and others will show a red tick. 
 
-![](/images/guides/microcks-testing/microcks-test-results.png)
+![](/docs/images/guides/microcks-testing/microcks-test-results.png)
 
 Click “Full results” and expand each result to see what worked and what didn’t. For a success you will see a green tick, and the HTTP headers and the response body.
 
-![](/images/guides/microcks-testing/test-result-expanded.png)
+![](/docs/images/guides/microcks-testing/test-result-expanded.png)
 
 Failure results can come in many forms, but could highlight failures like schema mismatches.
 
-![](/images/guides/microcks-testing/test-details-missing.jpg)
+![](/docs/images/guides/microcks-testing/test-details-missing.jpg)
 
 Microcks can even spot unexpected HTTP statuses.
 
-![](/images/guides/microcks-testing/mismatched-status.png)
+![](/docs/images/guides/microcks-testing/mismatched-status.png)
 
 Here the contract testing has highlighted an important mistake: OpenAPI says that a 201 is supposed to be returned, but a 200 is being returned instead! Is the API wrong or is the OpenAPI wrong? You can now decide, and change one or the other, then run the tests again.
 

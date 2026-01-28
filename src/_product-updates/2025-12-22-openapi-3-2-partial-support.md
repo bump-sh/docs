@@ -1,10 +1,10 @@
 ---
 title: "OpenAPI 3.2: partial support"
 tags: [Improvement]
-image: /images/changelog/openapi-3-2-partial-support.png
+image: /docs/images/changelog/openapi-3-2-partial-support.png
 ---
 
-![openapi-3-2-partial-support.png](/images/changelog/openapi-3-2-partial-support.png)
+![openapi-3-2-partial-support.png](/docs/images/changelog/openapi-3-2-partial-support.png)
 
 The OpenAPI Initiative released a new version of their OpenAPI specification in September: [OpenAPI 3.2](https://spec.openapis.org/oas/v3.2.0.html). 
 

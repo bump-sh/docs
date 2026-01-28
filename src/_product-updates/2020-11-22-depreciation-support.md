@@ -3,7 +3,7 @@ title: Depreciation Support
 tags: [Improvement]
 ---
 
-![depreciation-support.png](/images/changelog/depreciation-support.png)
+![depreciation-support.png](/docs/images/changelog/depreciation-support.png)
 
 We now identify deprecated elements in both OpenApi and AsyncApi specifications, and highlight them in your documentations.
 

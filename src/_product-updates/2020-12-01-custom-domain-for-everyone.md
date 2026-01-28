@@ -3,7 +3,7 @@ title: Custom domain for everyone
 tags: [New]
 ---
 
-![custom-domains.png](/images/changelog/custom-domains.png)
+![custom-domains.png](/docs/images/changelog/custom-domains.png)
 
 You can now [configure your custom domain](/help/customization-options/custom-domains/) directly from the app. No more manual email to us, just create your CNAME record, fill the form, and voilà.
 

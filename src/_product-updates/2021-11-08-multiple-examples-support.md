@@ -7,4 +7,4 @@ Give your API users a personalized experience and a better understanding of your
 
 Bump now supports displaying multiple examples which are supported by both OpenAPI and AsyncAPI specifications.
 
-![multiple_examples.jpg](/images/changelog/multiple_examples.jpg)
+![multiple_examples.jpg](/docs/images/changelog/multiple_examples.jpg)

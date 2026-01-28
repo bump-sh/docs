@@ -1,7 +1,7 @@
 ---
 title: "Building your API: Design Mode"
 authors: Doug Sillars
-image: images/guides/building-your-api-design-mode.png
+image: /docs/images/guides/building-your-api-design-mode.png
 canonical_url: https://bump.sh/blog/building-your-api-design-mode
 excerpt: Read a practical example of how to write your first OpenAPI contract, and publish it via Bump.sh.
 date: 2023-11-10
@@ -19,7 +19,7 @@ Creating an OpenAPI specification from scratch may seem daunting, but when we ta
 
 When starting a new API specification, SwaggerHub offers you to start with an existing framework. We'll use the Simple API Template.
 
-![Swagger new api screen](/images/guides/swagger-new-api-screen.png)
+![Swagger new api screen](/docs/images/guides/swagger-new-api-screen.png)
 
 This creates an API that tracks Inventory. That's almost what we need, but rather than tracking objects in an inventory, we want to track jokes. So, with some editing (basically turning all "inventory" references to "joke") we have a Simple Joke API.
 
@@ -88,17 +88,17 @@ After we make all the changes in SwaggerHub, and there are no issues detected by
 
 Now, let's upload our documentation into Bump, so we can visualize our API. We'll create a new documentation, and call it the "Jokes Blueprint"
 
-![Bump new documentation screen](/images/guides/bump-new-documentation-screen.png)
+![Bump new documentation screen](/docs/images/guides/bump-new-documentation-screen.png)
 
 Now we can add our Swagger file to the documentation, and when we click "deploy" Bump will create our docs for us.
 
-![Bump new version screen](/images/guides/bump-new-version-screen.png)
+![Bump new version screen](/docs/images/guides/bump-new-version-screen.png)
 
 ## Changing views of our API
 
 When the API is added, we can immediately see [our documentation online](https://bump.sh/doc/jokes-blueprint):
 
-![Bump joke blueprint screen](/images/guides/bump-jokes-blueprint-screen.png)
+![Bump joke blueprint screen](/docs/images/guides/bump-jokes-blueprint-screen.png)
 
 Our endpoints are on the left, the description in the middle, and examples on the right. Bump has several settings to change the way your API will be displayed.
 
@@ -113,13 +113,13 @@ Your choices here are:
 
 The group by path just shows 3 endpoints: Joke, ThumbsUp and ThumbsDown. Inside the Joke group, you can see the GET (search jokes) and POST (upload new jokes).
 
-![Bump group by path screen](/images/guides/bump-group-by-path-screen.png)
+![Bump group by path screen](/docs/images/guides/bump-group-by-path-screen.png)
 
 ### Group by tag
 
 Group by tag uses the tags inside the API. The Joke POST is tagged as Admin (only privileged users can add jokes), while Joke GET, and the voting endpoints are available to all developers:
 
-![Bump group by tag screen](/images/guides/bump-group-by-tag-screen.png)
+![Bump group by tag screen](/docs/images/guides/bump-group-by-tag-screen.png)
 
 In this view, you cannot see the actual endpoints of the API, but we'll fix this with the next setting: Navigation
 
@@ -135,7 +135,7 @@ Other options include:
 
 For space reasons, we'll show just the "groups and operations with verbs." Should you choose the option without verbs, the GET/POST/PATCH etc. verbs will not be shown:
 
-![Bump navigation screen](/images/guides/bump-navigation-screen.png)
+![Bump navigation screen](/docs/images/guides/bump-navigation-screen.png)
 
 With this view, the endpoints are organized under the Admin and Developer tags (Group by Tags). Adding "Operations" places each operation under the tag. As seen above, we can see the "Searches jokes", "Thumbsup a joke" and "Thumbsdown a joke" under the Developers group.
 

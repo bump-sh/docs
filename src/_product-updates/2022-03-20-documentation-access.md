@@ -9,4 +9,4 @@ Three access levels are available: public, private (for your organization only) 
 
 Find more in our [Help Center](/help/publish-documentation/documentation-access-management/)!
 
-![access-management.png](/images/changelog/access-management.png)
+![access-management.png](/docs/images/changelog/access-management.png)

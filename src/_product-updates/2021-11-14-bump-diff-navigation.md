@@ -7,4 +7,4 @@ tags: [Improvement]
 
 Jump from change to change! No need to scroll anymore to see the latest changes in your documentation diff.
 
-![diff-navigation.gif](/images/changelog/diff-navigation.gif)
+![diff-navigation.gif](/docs/images/changelog/diff-navigation.gif)

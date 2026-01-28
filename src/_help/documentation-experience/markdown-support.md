@@ -89,7 +89,7 @@ My content
 
 will render:
 
-![Markdown accordion example](/images/help/markdown-accordion.gif)
+![Markdown accordion example](/docs/images/help/markdown-accordion.gif)
 
 ## Diagrams and charts (Mermaid Support)
 
@@ -116,7 +116,7 @@ To generate one, add a code block declared as `mermaid` inside a `description` o
 ```
 This example would render the following diagram [(see it live)](https://bump.sh/demo/doc/mermaid-demo/operation/operation-get-booking-parameter):
 
-![Mermaid example](/images/help/mermaid-diagram.png)
+![Mermaid example](/docs/images/help/mermaid-diagram.png)
 
 ## Images
 

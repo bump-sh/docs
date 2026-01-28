@@ -1,10 +1,10 @@
 ---
 title: New dashboard experience
 tags: [Improvement]
-image: /images/changelog/new-dashboard-2024.jpg
+image: /docs/images/changelog/new-dashboard-2024.jpg
 ---
 
-![new-dashboard-2024.jpg](/images/changelog/new-dashboard-2024.jpg)
+![new-dashboard-2024.jpg](/docs/images/changelog/new-dashboard-2024.jpg)
 
 It's been a big project that we've poured a lot of energy and even more love into, and our new dashboard is finally available to everyone.
 It's become a true home for your API ecosystem and everything that happens within it. From creating a hub to exploring your documentation, everything has been redesigned to offer you the best possible experience.

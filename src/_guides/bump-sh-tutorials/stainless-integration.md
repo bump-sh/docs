@@ -13,7 +13,7 @@ seamless workflow:
 2. **Code Sample Injection**: Each API endpoint in your documentation is enhanced with language-specific implementation examples
 3. **Live Documentation**: Developers see exactly how to call your API using your official SDKs alongside the raw HTTP details
 
-![Python code example rendered by Bump.sh API docs](/images/guides/stainless-integration/bump-sh-code-example.png)
+![Python code example rendered by Bump.sh API docs](/docs/images/guides/stainless-integration/bump-sh-code-example.png)
 
 This integration automatically injects idiomatic code samples for each endpoint, bridging the gap between documentation and implementation. Developers get exactly what they need: copy-paste-ready examples that demonstrate your API in action. As your API evolves, both your SDKs and documentation automatically stay in sync.
 
@@ -35,7 +35,7 @@ Before starting, make sure you have:
 
 The SDK Studio provides an immediate preview of your SDK structure based on your API's resources, methods, and models.
 
-![Stainless SDK Studio showing SDK preview](/images/guides/stainless-integration/studio-preview.png)
+![Stainless SDK Studio showing SDK preview](/docs/images/guides/stainless-integration/studio-preview.png)
 
 When first created, Stainless organizes your API into logical resources, but the exact names and hierarchy is up to you,
 allowing you to create the most intuitive experience for your users.
@@ -59,7 +59,7 @@ render. For advanced integration options and support for other documentation pla
 
 Go to your Stainless org page, select the "API Keys" tab, and create a new key.
 
-![Form to create an API key to use Stainless API](/images/guides/stainless-integration/create-api-key.png)
+![Form to create an API key to use Stainless API](/docs/images/guides/stainless-integration/create-api-key.png)
 
 Note: the API key should be considered secret and will only be shown once, be sure to copy and store it to a safe location,
 such as a password manager.

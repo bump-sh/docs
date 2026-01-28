@@ -1,7 +1,7 @@
 ---
 title: A Developer's Guide to API Design-First
 authors: phil
-image: images/guides/api-first-design-guide.png
+image: /docs/images/guides/api-first-design-guide.png
 canonical_url: https://bump.sh/blog/dev-guide-api-design-first
 excerpt: Learn about the principles of API design-first and how it can benefit your organization.
 date: 2024-11-15
@@ -125,7 +125,7 @@ Anyone who has been building APIs for more than a few years has probably done th
 
 Here's a quick look at the two workflows for comparison.
 
-![](/images/guides/design-first/code-first-design-first.png)
+![](/docs/images/guides/design-first/code-first-design-first.png)
 
 Whilst there are a few more steps, the time invested on agreeing a contract early on brings massive time benefits through the rest of the API lifecycle.
 

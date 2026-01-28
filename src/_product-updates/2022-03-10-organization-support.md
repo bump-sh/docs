@@ -7,7 +7,7 @@ Building the best APIs can be a considerable amount of work and you may need you
 
 Freshly out of beta, the awaited **Organizations** feature helps you with that. We did not reinvent the wheel but wanted to make it as simple but powerful as possible.
 
-![organization-support.png](/images/changelog/organization-support.png)
+![organization-support.png](/docs/images/changelog/organization-support.png)
 
 You can easily customize access with 3 different roles: admin, maintainer, and viewers.
 Admins can invite and manage access, maintainers can manage hubs and docs, guests are limited to read-only.

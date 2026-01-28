@@ -1,10 +1,10 @@
 ---
 title: Editable Change Release
 tags: [New]
-image: /images/changelog/editable-release.png
+image: /docs/images/changelog/editable-release.png
 ---
 
-![editable-release.png](/images/changelog/editable-release.png)
+![editable-release.png](/docs/images/changelog/editable-release.png)
 
 As part of our feature series on Release Management, making a change release editable was the obvious "go the extra mile" effort, while allowing you to further manipulate a change to be announced.
 

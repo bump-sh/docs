@@ -1,10 +1,10 @@
 ---
 title: Love Cycle - July 24
 tags: [Improvement]
-image: /images/changelog/love-cycle-july-2024.png
+image: /docs/images/changelog/love-cycle-july-2024.png
 ---
 
-![love-cycle.png](/images/changelog/love-cycle-july-2024.png)
+![love-cycle.png](/docs/images/changelog/love-cycle-july-2024.png)
 
 We have been busy improving Bump.sh through small enhancements, specific user requests, while globally polishing the product. We call these moments "Love Cycles".
 

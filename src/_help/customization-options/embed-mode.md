@@ -30,7 +30,7 @@ It’s designed for larger teams and companies who need their docs to look and f
 
 Here’s a high-level view of how requests and rendering flow in Embed Mode:
 
-![Embed Mode Flow](/images/help/embed-mode-workflow.png)
+![Embed Mode Flow](/docs/images/help/embed-mode-workflow.png)
 
 ### Step-by-step flow
 

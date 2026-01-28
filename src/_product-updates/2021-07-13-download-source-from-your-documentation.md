@@ -3,7 +3,7 @@ title: Download source from your documentation
 tags: [New]
 ---
 
-![download-source.png](/images/changelog/download-source.png)
+![download-source.png](/docs/images/changelog/download-source.png)
 
 We've made it easy for API consumers to [download the source](https://developers.bump.sh/) of an API documentation.
 

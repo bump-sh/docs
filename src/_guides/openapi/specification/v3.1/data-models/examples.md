@@ -175,7 +175,7 @@ The example names are entirely arbitrary, and casing does not matter, but it's b
 
 The summary name is optional, but is a great place to put human readable names in that can then show up in API documentation tools.
 
-![](/images/changelog/multiple_examples.jpg)
+![](/docs/images/changelog/multiple_examples.jpg)
 
 Notice that these examples are all defined _next_ to the `schema` keyword, not _inside_ it. Examples outside the schema object are an object with names, examples inside the schema object are just a list (array) which have no names. For clarity you can check the OpenAPI v3.1 Specification, looking at the [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) and the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object).
 

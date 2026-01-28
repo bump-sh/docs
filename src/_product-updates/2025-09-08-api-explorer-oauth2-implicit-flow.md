@@ -17,7 +17,7 @@ components:
           scopes: {}
           x-client-id: "123456abcdef"
 ```
-![Animated gif of the Oauth2 implicit flow experience](/images/changelog/api-explorer-oauth2-implicit-flow.gif)
+![Animated gif of the Oauth2 implicit flow experience](/docs/images/changelog/api-explorer-oauth2-implicit-flow.gif)
 Example of the OAuth2 implicit flow experience for an API consumer already logged into the API's cloud platform.
 
 [Learn more about it in our help center](/help/documentation-experience/api-explorer/#details-about-oauth2-flows)

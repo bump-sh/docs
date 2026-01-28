@@ -23,11 +23,11 @@ Seeing as YAML Pipelines are the newer approach, and many people may have never 
 
 Then navigate to an existing project, or create a new one if you need to.
 
-![](/images/guides/azure-devops/organization-and-project.png)
+![](/docs/images/guides/azure-devops/organization-and-project.png)
 
 Click on the project, then click **Pipelines**, and **New Pipeline** to get the whole thing going.
 
-![](/images/guides/azure-devops/new-project-pipeline.png)
+![](/docs/images/guides/azure-devops/new-project-pipeline.png)
 
 Select where your code is hosted. You can choose from Azure Repos Git, GitHub, Bitbucket, or other repositories. For this example, we’ll assume you are using **Azure Repos Git**.
 
@@ -37,7 +37,7 @@ Choose **YAML** when prompted to configure the pipeline, and select the reposito
 
 Then you'll be presented with lots of options for start templates. Click "Node.js" because Bump.sh CLI is built with Node.
 
-![](/images/guides/azure-devops/pipeline-templates.png)
+![](/docs/images/guides/azure-devops/pipeline-templates.png)
 
 Now we can override the YAML Pipeline they've popped in the repo with our own. You can do this by cloning the new repository, or by pulling the commits on an exist repository.
 
@@ -120,7 +120,7 @@ variables:
 
 The variable group in there refers to a group of environment variables, and these are defined in the Azure DevOps interface: **Pipelines > Library** and click on **\+ Variable Groups**. 
 
-![](/images/guides/azure-devops/add-variable-group.png)
+![](/docs/images/guides/azure-devops/add-variable-group.png)
 
 Create a new group with the name `bumpsh`, which matches the `group: bumpsh` we defined in the workflow.
  
@@ -128,11 +128,11 @@ In another browser tab, pop over to your Bump.sh API's Documentation settings, g
 
 Back in the Azure variable group page, create a new variable called `BUMP_TOKEN`, paste in the API key, and click the lock icon to make it secret.
 
-![](/images/guides/azure-devops/bump-variable-group.png)
+![](/docs/images/guides/azure-devops/bump-variable-group.png)
 
 For security reasons, referencing the variable group in the YAML workflow is not enough to give the pipeline access to the variables. This requires one more step: click "Pipeline permissions" and select your pipeline.
 
-![](/images/guides/azure-devops/pipeline-permissions-variable-group.png)
+![](/docs/images/guides/azure-devops/pipeline-permissions-variable-group.png)
 
 Now we should be good to go! 
 
@@ -142,11 +142,11 @@ Make sure the pipeline file is saved as `azure-pipelines.yml` in the root of you
 
 When pushing to a branch other than main, you should see output like this in the Pipelines section of the Azure Devops interface, letting you know if the OpenAPI was valid or not. 
 
-![](/images/guides/azure-devops/doc-validation.png)
+![](/docs/images/guides/azure-devops/doc-validation.png)
 
 When pushing to the `main` you will trigger the deploy job, which will update your hosted Bump.sh documentation if any changes are detected, which will look like this:
 
-![](/images/guides/azure-devops/doc-deploy-first.png)
+![](/docs/images/guides/azure-devops/doc-deploy-first.png)
 
 Here we can see the documentation has been created, and there's even a link to go and see it.
 
@@ -154,7 +154,7 @@ Here we can see the documentation has been created, and there's even a link to g
 
 One of the most powerful features in Bump.sh is the automated changelog, and this logic can be used to speed up API Design Reviews by showing people clearly in a single comment what has changed in a pull request. Instead of having to look at lots of YAML, you can see a summary of all meaningful changes added as a comment.
 
-![](/images/guides/azure-devops/diff-comment.png)
+![](/docs/images/guides/azure-devops/diff-comment.png)
 
 This is powered by the wonderful [PR Comment Task](https://marketplace.visualstudio.com/items?itemName=TommiLaukkanen.pr-comment-extension) **which you will need to install for your Azure DevOps Organization**.
 

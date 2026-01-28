@@ -11,11 +11,11 @@ Redocly is a hosted OpenAPI documentation SaaS which works in a similar way to B
 
 Most users will have set Redocly up to pull from GitHub, GitLab, or Bitbucket, making this stage very simple. You already have your OpenAPI in your control. Going to "Settings" > "Source" will remind you exactly which repository, which branch, and which file exactly.
 
-![](/images/guides/migrating-from-redocly/source-code.png)
+![](/docs/images/guides/migrating-from-redocly/source-code.png)
 
 If you are using some more complex CI/CD setup and have no idea where your OpenAPI originates, and the people who knew have left the company without a trace, you can export OpenAPI from Redocly.
 
-![](/images/guides/migrating-from-redocly/export-from-redocly.png)
+![](/docs/images/guides/migrating-from-redocly/export-from-redocly.png)
 
 Get the downloaded OpenAPI into your source code repository somewhere sensible, and give it a tidy name in the process.
 
@@ -90,11 +90,11 @@ jobs:
 
 Grab your Doc ID and Access Token from the Automatic Deployment settings, pop the Doc ID into the GitHub Action and put the API specific `BUMP_TOKEN` into the GitHub repository Secrets.
 
-![](/images/guides/migrating-from-redocly/automatic-deployment.png)
+![](/docs/images/guides/migrating-from-redocly/automatic-deployment.png)
 
 This workflow will have Bump.sh make previews on Git branches, then deploy the main version of the documentation when a branch is merged. By doing this the pull requests also get change detection, allowing for warnings about breaking changes, and making a simple list of changes to help with design reviews.
 
-![](/images/guides/migrating-from-redocly/bump-breaking-change.png)
+![](/docs/images/guides/migrating-from-redocly/bump-breaking-change.png)
 
 A side benefit of working this way is that you can defer all configuration about how reviews work, what checks should be involved, who is in charge of approving changes, etc. to the pull request settings of your source control.
 
@@ -104,7 +104,7 @@ Once a guide is published you can view the hosted documentation on Bump.sh, and 
 
 If you were using the Developer Portals feature with Redocly to group together multiple APIs, you can use [Hubs](/help/hubs/) to recreate this functionality and provide a landing page for each group of APIs.
 
-![](/images/help/categories.png)
+![](/docs/images/help/categories.png)
 
 ## Vendor Extension Compatibility
 

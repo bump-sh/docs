@@ -1,7 +1,7 @@
 ---
 title: "AsyncAPI vs. OpenAPI: Which Specification Is Right for Your App?"
 authors: Joanna Wallace
-image: images/guides/asyncapi-vs-openapi.png
+image: /docs/images/guides/asyncapi-vs-openapi.png
 canonical_url: https://bump.sh/blog/asyncapi-vs-openapi
 excerpt: Learn about the basic differences between AsyncAPI and OpenAPI that will help you pick one of them.
 date: 2024-03-25

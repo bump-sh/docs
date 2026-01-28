@@ -26,11 +26,11 @@ The CLI quickstart wizard will walk you through the process of creating the firs
 For the sake of the tutorial we're going with TypeScript, but you can pick from Python, Go, Java, PHP, C#, Ruby, Swift, and more. 
 
 ![Screenshot of the CLI wizard which is asking: "What directory should the typescript files be written to?"
-"We recommend a git repo per SDK. To use the current directory, leave empty." In the input box is the full-path of a new repository as relative filepaths do not seem to work, which is "/Users/phil/src/bump/train-travel-sdk-ts/"](/images/guides/generate-sdks-speakeasy/quickstart-2.webp)
+"We recommend a git repo per SDK. To use the current directory, leave empty." In the input box is the full-path of a new repository as relative filepaths do not seem to work, which is "/Users/phil/src/bump/train-travel-sdk-ts/"](/docs/images/guides/generate-sdks-speakeasy/quickstart-2.webp)
 
 Generally, you'll have a "central" repository which contains your OpenAPI, and Speakeasy suggests creating a new repository for each SDK you generate (although monorepo setups are possible). This repository will hold all the code and the relevant configuration to keep it all running, separate from your main OpenAPI and source code.
 
-![](/images/guides/generate-sdks-speakeasy/new-sdk-repo.png)
+![](/docs/images/guides/generate-sdks-speakeasy/new-sdk-repo.png)
 
 For example, if you ran the `speakeasy quickstart` from `/Users/phil/src/train-travel-api`, you might make a new repository for the TypeScript SDK next to that directory in `/Users/phil/src/train-travel-sdk-ts`. 
 
@@ -95,7 +95,7 @@ npm publish
 
 If this all worked then count to 100 and you should see your new package! 
 
-![](/images/guides/generate-sdks-speakeasy/publish-to-npm.png)
+![](/docs/images/guides/generate-sdks-speakeasy/publish-to-npm.png)
 
 Now our `train-travel-sdk` actually exists online, and you can [see how it's going from here](https://www.npmjs.com/package/train-travel-sdk).
 
@@ -138,7 +138,7 @@ Notice it is still using the `SPEAKEASY_API_KEY` that we used in the generate wo
 
 Now if you push commits your main branch or merge a pull request, this GitHub Action will automatically help publish a new version of the SDK. 
 
-![](/images/guides/generate-sdks-speakeasy/npm-new-version.png)
+![](/docs/images/guides/generate-sdks-speakeasy/npm-new-version.png)
 
 From here, if you change anything relevant in the SDK repo, it'll publish a new SDK, and if the central OpenAPI changes it will also publish a new SDK. This solves a lot of the frustrations with managing packages too, such as manually bumping version numbers and figuring out if it should be major, minor, or patch, or setting up confusing conventions for automatically doing it like Semantic Release. Speakeasy and GitHub Actions (or similar) can just do all that for you as changes are merged.
 
@@ -154,11 +154,11 @@ You can grab the latest SDK code samples right from Speakeasy, and merge them in
 
 If you don't know what Overlays are, that's ok, you don't really need to. Simply, they are a list of changes that should be applied to an OpenAPI document, and Speakeasy has done the hard work of making them already, so all you need to do is grab a URL. To do this, head to the API registry and look for something like "train-travel-api-typescript-code-samples". 
 
-![Screenshot of the Speakeasy dashboard on the "API Registries" tab. It has a list of three items for the same API: train-travel-api, train-travel-api-typescript-code-samples, train-travel-api-with-code-samples](/images/guides/generate-sdks-speakeasy/api-registries.png)
+![Screenshot of the Speakeasy dashboard on the "API Registries" tab. It has a list of three items for the same API: train-travel-api, train-travel-api-typescript-code-samples, train-travel-api-with-code-samples](/docs/images/guides/generate-sdks-speakeasy/api-registries.png)
 
 Check the private/public toggle on, and copy the URL. Paste it into your browser to see how it looks, and you should see something like this:
 
-![](/images/guides/generate-sdks-speakeasy/overlays.png)
+![](/docs/images/guides/generate-sdks-speakeasy/overlays.png)
 
 This overlay document will show you exactly what it's trying to do. It has a series of `actions`, which look for a specific `target` within the OpenAPI, and update the `x-codeSamples` with a perfect example of the SDK in action for _every single operation_ in your OpenAPI document.
 
@@ -213,7 +213,7 @@ bump preview openapi.codegen.yaml
 
 Open the preview link in the CLI output and you should see something like this:
 
-![](/images/guides/generate-sdks-speakeasy/preview-code-samples.png)
+![](/docs/images/guides/generate-sdks-speakeasy/preview-code-samples.png)
 
 Amazing! The TypeScript SDK is now integrated into the API documentation, and the consumer doesn't have to look at cURL commands to see how they might work with the API.
 

@@ -48,7 +48,7 @@ Regardless of a component's structural impact, attaching `x-beta` will not trigg
 
 The documentation displays custom badges on the operation and property:
 
-![Image of badges applied to operations and properties](/images/help/doc-x-state.png)
+![Image of badges applied to operations and properties](/docs/images/help/doc-x-state.png)
 
 ### Custom color
 
@@ -62,7 +62,7 @@ x-state:
   color: "#FF6B35"
 ```
 
-![Image of a custom color applied to a badge](/images/help/doc-x-state-custom-color.png)
+![Image of a custom color applied to a badge](/docs/images/help/doc-x-state-custom-color.png)
 
 ## Beta
 
@@ -100,5 +100,5 @@ paths:
 
 The documentation displays a “Beta” flag on the components:
 
-![Image of a beta tag applied to an operation](/images/help/doc-beta.png)
+![Image of a beta tag applied to an operation](/docs/images/help/doc-beta.png)
 
