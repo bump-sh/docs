@@ -34,3 +34,6 @@ https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 
 # Cribbed for the OpenAPI Specification Tutorial
 /guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/
+
+# Migration from docs.bump.sh to bump.sh
+/sitemap.xml /docs/sitemap.xml
