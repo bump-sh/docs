@@ -19,7 +19,7 @@ API governance establishes rules and best practices for designing, building, and
 - **Consistency**: APIs follow a unified design language, improving usability.
 - **Security**: Standardized authentication, authorization, and data handling policies.
 - **Scalability**: APIs are built with future growth in mind, avoiding breaking changes.
-- **Developer Experience**: [Well-documented](https://docs.bump.sh/guides/technical-writing/api-documentation-checklist/), predictable APIs accelerate adoption.
+- **Developer Experience**: [Well-documented](/guides/technical-writing/api-documentation-checklist/), predictable APIs accelerate adoption.
 
 Traditional governance models often rely on manual reviews, which can be slow, subjective, and difficult to enforce across multiple teams. OpenAPI helps bridge this gap by providing a machine-readable framework for enforcing governance at scale.
 
@@ -27,8 +27,8 @@ Traditional governance models often rely on manual reviews, which can be slow, s
 
 OpenAPI serves as a single source of truth for API definitions. By leveraging OpenAPI during design reviews, organizations can:
 - Use OpenAPI documents as descriptions of the API’s purpose, behavior, and schema definitions.
-- Facilitate [early discussions between API producers, consumers, and governance](https://docs.bump.sh/guides/technical-writing/using-readme-style-api-documentation-to-enhance-your-api-design/) teams.
-- [Align APIs with enterprise standards](https://docs.bump.sh/guides/technical-writing/incorporating-api-documentation-guidelines-into-your-api-style-guide/) before and during the development process.
+- Facilitate [early discussions between API producers, consumers, and governance](/guides/technical-writing/using-readme-style-api-documentation-to-enhance-your-api-design/) teams.
+- [Align APIs with enterprise standards](/guides/technical-writing/incorporating-api-documentation-guidelines-into-your-api-style-guide/) before and during the development process.
 - Simplify collaboration by providing a common language for stakeholders.
 
 By making OpenAPI part of the design review process, teams can proactively address inconsistencies and security risks, preventing costly rework later in the API lifecycle.
@@ -64,7 +64,7 @@ One of the most effective ways to improve API design is to collaborate on the de
 
 - Prevents poor design choices from being implemented by catching them early, when the cost of change is much lower.
 - Aligns stakeholders (developers, architects, security teams, product managers) before coding begins to ensure that the right thing is being built.
-- Encourages feedback from API consumers to [ensure usability](https://docs.bump.sh/guides/technical-writing/elements-of-great-api-documentation/) and alignment with their needs.
+- Encourages feedback from API consumers to [ensure usability](/guides/technical-writing/elements-of-great-api-documentation/) and alignment with their needs.
 - Reduces technical debt and rework by resolving issues at the design stage.
 
 ### **Best Practices for API Discussions**

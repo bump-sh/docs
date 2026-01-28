@@ -35,7 +35,7 @@ git commit -m "docs: imported openapi"
 
 ## Step 2: Publish OpenAPI as Documentation
 
-Instead of installing a GitHub Application, Bump.sh uses a [GitHub Action](https://docs.bump.sh/help/continuous-integration/github-actions/) for deployments. Alternatively you can get creative [with the command-line](https://docs.bump.sh/help/continuous-integration/cli/), using a [Continuous Integration setup](https://docs.bump.sh/help/continuous-integration/ci/), or even [deploying via the Bump.sh API](https://docs.bump.sh/help/continuous-integration/api/).
+Instead of installing a GitHub Application, Bump.sh uses a [GitHub Action](/help/continuous-integration/github-actions/) for deployments. Alternatively you can get creative [with the command-line](/help/continuous-integration/cli/), using a [Continuous Integration setup](/help/continuous-integration/ci/), or even [deploying via the Bump.sh API](/help/continuous-integration/api/).
 
 ```yaml
 # .github/workflows/bump.yml
@@ -102,7 +102,7 @@ Once a guide is published you can view the hosted documentation on Bump.sh, and 
 
 ## Step 3: Use Hubs to Replace Developer Portals
 
-If you were using the Developer Portals feature with Redocly to group together multiple APIs, you can use [Hubs](https://docs.bump.sh/help/hubs/) to recreate this functionality and provide a landing page for each group of APIs.
+If you were using the Developer Portals feature with Redocly to group together multiple APIs, you can use [Hubs](/help/hubs/) to recreate this functionality and provide a landing page for each group of APIs.
 
 ![](/images/help/categories.png)
 
@@ -112,11 +112,11 @@ Both Redocly and Bump.sh support vendor extensions, which are non-standard addit
 
 ### Bump.sh Supports
 
-- `x-topics` - Add more context paragraphs in your generated documentation. [Learn more](https://docs.bump.sh/help/enhance-documentation-content/topics/).
+- `x-topics` - Add more context paragraphs in your generated documentation. [Learn more](/help/enhance-documentation-content/topics/).
 
-- `x-codeSamples` - Add your own code samples in one or more programming languages to your documentation. [Learn more](https://docs.bump.sh/help/specification-support/doc-code-samples).
+- `x-codeSamples` - Add your own code samples in one or more programming languages to your documentation. [Learn more](/help/specification-support/doc-code-samples).
 
-- `x-beta` - Allows you to identify some components of your documentation as beta. [Learn more](https://docs.bump.sh/help/specification-support/doc-beta).
+- `x-beta` - Allows you to identify some components of your documentation as beta. [Learn more](/help/specification-support/doc-beta).
 
 To help you with your migration, here is a full list of the extensions Redocly support, with suggestions of alternative approaches where they exist.
 
@@ -125,7 +125,7 @@ To help you with your migration, here is a full list of the extensions Redocly s
 | Root      | `x-servers`                  | ❌      | Use the `servers` keyword added in OAS3.0                                                                                      |
 | Root      | `x-tagGroups`                | ❌      |
 | Tag Group | `x-ignoredHeaderParameters`  | ❌      |
-| Info      | `x-logo`                     | ❌      | Upload a logo using [customization settings](https://docs.bump.sh/help/customization-options/color-logo-meta-images/).         |
+| Info      | `x-logo`                     | ❌      | Upload a logo using [customization settings](/help/customization-options/color-logo-meta-images/).         |
 | Tag       | `x-traitTag`                 | ❌      |
 | Tag       | `x-displayName`              | ❌      | Use human-readable tag names.                                                                                                  |
 | Operation | `x-codeSamples`              | ✅      |

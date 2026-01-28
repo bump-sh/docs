@@ -201,7 +201,7 @@ requests, which is not only saving time writing code, but is making sure the
 OpenAPI and code line up perfectly. It’s pretty hard for code and docs to drift
 when they’re sharing a single source of truth like this.
 
-*Learn more about [using OpenAPI to simplify building Ruby on Rails APIs](https://docs.bump.sh/guides/openapi/design-first-rails/), with a [similar guide for Laravel PHP users](https://docs.bump.sh/guides/openapi/design-first-laravel-php/).*
+*Learn more about [using OpenAPI to simplify building Ruby on Rails APIs](/guides/openapi/design-first-rails/), with a [similar guide for Laravel PHP users](/guides/openapi/design-first-laravel-php/).*
 
 ## Phase 2: API Governance
 
@@ -657,7 +657,7 @@ Another key part of API governance is discoverability, which usually takes the
 form of "API Catalogs". Infinite awkward solutions have been employed in the
 past. API teams have bodged together infinite awkward solutions with miles of
 duct-tape, but Bump.sh makes this easy with [Bump.sh
-Hubs](https://docs.bump.sh/guides/bump-sh-tutorials/api-discovery-using-bump-sh-hubs/).
+Hubs](/guides/bump-sh-tutorials/api-discovery-using-bump-sh-hubs/).
 
 Each API that has been added to Bump.sh's hosted documentation can be grouped
 together into various Hubs, which could be for "Public" and "Internal" usage.

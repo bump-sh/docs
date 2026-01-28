@@ -75,7 +75,7 @@ paths:
 
 This snippet describes an API endpoint `/users` that responds with a list of users when a client sends a GET request. It then describes the responses a client could expect to see, with the status codes (e.g.: 200), content types (e.g.: `application/json`), then gets stuck into the `schema` which will outline the shape of the JSON.
 
-If you're just getting started with OpenAPI, we're here to help you on your journey. We've put together a guide to help you [learn OpenAPI from scratch](https://docs.bump.sh/guides/openapi/specification/v3.1/understanding-structure/basic-structure/), starting from the basic structure and going through every part of the functionality.
+If you're just getting started with OpenAPI, we're here to help you on your journey. We've put together a guide to help you [learn OpenAPI from scratch](/guides/openapi/specification/v3.1/understanding-structure/basic-structure/), starting from the basic structure and going through every part of the functionality.
 
 AsyncAPI works in a very similar way, but instead of describing endpoints you describe "publishers" and "consumers".
 

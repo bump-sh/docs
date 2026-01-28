@@ -150,7 +150,7 @@ In the past people would either have completely separate "API Docs" and "SDK Doc
 
 No more! 
 
-You can grab the latest SDK code samples right from Speakeasy, and merge them into your Bump.sh API documentation using [OpenAPI Overlays](https://docs.bump.sh/guides/technical-writing/efficient-tech-writing-process/) which Speakeasy create for you.
+You can grab the latest SDK code samples right from Speakeasy, and merge them into your Bump.sh API documentation using [OpenAPI Overlays](/guides/technical-writing/efficient-tech-writing-process/) which Speakeasy create for you.
 
 If you don't know what Overlays are, that's ok, you don't really need to. Simply, they are a list of changes that should be applied to an OpenAPI document, and Speakeasy has done the hard work of making them already, so all you need to do is grab a URL. To do this, head to the API registry and look for something like "train-travel-api-typescript-code-samples". 
 

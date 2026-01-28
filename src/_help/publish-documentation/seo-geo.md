@@ -19,7 +19,7 @@ To optimize the indexing of your public documentation, Bump.sh automatically gen
     [...]
 ```
 
-Similarly, if you use one or more [hubs](https://docs.bump.sh/help/hubs/), they will have their own sitemap_index for all the sitemaps of the documentation they contain.
+Similarly, if you use one or more [hubs](/help/hubs/), they will have their own sitemap_index for all the sitemaps of the documentation they contain.
 
 [sitemap_index.xml of a hub](https://demo.bump.sh/sitemap_index.xml) *(example truncated for visibility purposes).*
 ```xml
@@ -39,7 +39,7 @@ The titles follow the construction below:
 
 - `[Node Title]` indicates which sections of the documentation the URL points to (e.g., `authentication` or `servers`). For the URL pointing to the root of your documentation, this section remains empty.
 - `API expanded name` uses the name of your documentation followed by `API documentation`. For example, the documentation `Bump` becomes `Bump API documentation`.
-- `[branch name]` is present only if there is a [branch](https://docs.bump.sh/help/publish-documentation/branching/) on the documentation.
+- `[branch name]` is present only if there is a [branch](/help/publish-documentation/branching/) on the documentation.
 
 ## Meta descriptions
 Descriptions are limited to 160 characters and truncated beyond that.

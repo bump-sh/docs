@@ -5,7 +5,7 @@ excerpt: Integrate your OpenAPI-powered documentation with Insomnia to let custo
 date: 2024-06-04
 ---
 
-> Bump.sh now includes its own [API Explorer](https://docs.bump.sh/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try!](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
+> Bump.sh now includes its own [API Explorer](/product-updates/2025/01/09/api-explorer/), allowing you to test your API directly within your documentation. [Give it a try!](https://bump.sh/demo/doc/api-explorer/explorer/operation/operation-adduser)
 
 Seeing how an API works is the first step in an end-users journey to using the API, and the second step is making some test requests to get a feel for how it works. Some people like to do this with code, so code samples will be a good start for them, especially if the API has an SDK. Other people like to do this with interactive HTTP clients, like [Insomnia](https://insomnia.rest).
 
