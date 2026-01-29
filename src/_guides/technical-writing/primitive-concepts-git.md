@@ -32,7 +32,7 @@ Going beyond what a filesystem usually does, Git can store multiple trees.
 
 Here is an example of two trees with four files.
 
-![](/images/guides/git-1-file-tree.png)
+![](/docs/images/guides/git-1-file-tree.png)
 
 ## Commits
 
@@ -51,7 +51,7 @@ so that you can go back in time and recover previous revisions of files.
 Each commit would indicate the previous one as parent,
 creating a sequence of points in time:
 
-![](/images/guides/git-1-commit-seq.png)
+![](/docs/images/guides/git-1-commit-seq.png)
 
 ## Merge commits
 
@@ -83,7 +83,7 @@ that combines the changes of both of you, as follows:
   and figure out what the final result should be,
   before Git can complete the merge.
 
-![](/images/guides/git-1-commit-graph.png)
+![](/docs/images/guides/git-1-commit-graph.png)
 
 Note how Git remembers that work diverged and later converged,
 including the before, the after, the between, who did what,
@@ -118,7 +118,7 @@ Building on our example:
 * Branch "contrib" currently points to commit4, the work of your colleague.
 * Branch "main" currently points to the latest work, the merge commit.
 
-![](/images/guides/git-1-tag-branch.png)
+![](/docs/images/guides/git-1-tag-branch.png)
 
 Last week, branch "main" pointed to commit1.
 As you delivered work during the week,
@@ -150,7 +150,7 @@ you could use the Git operation "rebase" with the option "squash"
 to consolidate commit3, commit4, and the merge commit
 into a new commit6, as shown below.
 
-![](/images/guides/git-1-rebase.png)
+![](/docs/images/guides/git-1-rebase.png)
 
 The result is a commit that has the same tree as the merge commit,
 but that lost the memory of commit3, commit4, and the merge commit.
@@ -183,7 +183,7 @@ your multiple trees, files, commits, tags, and branches.
 The example below has two files, "a.txt" and "dir/b.txt",
 together with the magical ".git" directory.
 
-![](/images/guides/git-1-workdir.png)
+![](/docs/images/guides/git-1-workdir.png)
 
 Usually you work on a branch as follows:
 
@@ -232,7 +232,7 @@ Note that she has no idea that you delivered commit2 and commit3,
 although she could have pulled changes to the branch “main”
 to get those commits and synchronize her branch “main” with your work.
 
-![](/images/guides/git-1-remote.png)
+![](/docs/images/guides/git-1-remote.png)
 
 To coordinate the work of multiple people,
 one of the repositories is designated the central one,
@@ -240,7 +240,7 @@ and everyone clones, pulls, and pushes to that repository.
 This central repository is typically hosted on a server and,
 often, on a platform such as GitHub or GitLab.
 
-![](/images/guides/git-1-remote-hub.png)
+![](/docs/images/guides/git-1-remote-hub.png)
 
 ## Pull requests
 
@@ -282,7 +282,7 @@ Your colleague would collaborate with the other person over that fork,
 possibly using several branches,
 possibly using mutual pull requests.
 
-![](/images/guides/git-1-remote-hub2.png)
+![](/docs/images/guides/git-1-remote-hub2.png)
 
 ## What have we learned so far?
 Here are the major concepts that you have learned in this article:

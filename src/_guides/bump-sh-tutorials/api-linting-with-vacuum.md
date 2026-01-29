@@ -60,7 +60,7 @@ npx vacuum lint -d openapi.yaml
 
 The output can get quite large, as vacuum comes with a lot of useful rules baked in (so that every user doesn't have to invent them all by themselves every time.)
 
-![](/images/guides/api-linting-with-vacuum/cli-output-warnings.png)
+![](/docs/images/guides/api-linting-with-vacuum/cli-output-warnings.png)
 
 ### Step 3: Configure rules/rulesets
 
@@ -88,17 +88,17 @@ By default we're using the Spectral "OAS" (OpenAPI Specification) ruleset, which
 
 Running the lint command again should be a little cleaner.
 
-![](/images/guides/api-linting-with-vacuum/cli-output-fewer-problems.png)
+![](/docs/images/guides/api-linting-with-vacuum/cli-output-fewer-problems.png)
 
 If you spot an error in here you would like to fix, you can use the `Location` to find out exactly where it is. `openapi.yaml:1049:5` means it's in `openapi.yaml` on line `1049` and it's taken a stab at guessing which character of the problem, which in this case is 4 spaces of indent plus where is the thing in the 5th character... no worries, close enough.
 
-![](/images/guides/api-linting-with-vacuum/go-to-line.png)
+![](/docs/images/guides/api-linting-with-vacuum/go-to-line.png)
 
 The problem here was a lack of a description, so pop something in like `description: The link to the booking resource.` and run it again to see if that fixed the error. 
 
 Once everything is fixed or ignored, you should get a perfect run.
 
-![](/images/guides/api-linting-with-vacuum/perfect-score.png)
+![](/docs/images/guides/api-linting-with-vacuum/perfect-score.png)
 
 ### Step 4: Keep that perfect score
 
@@ -151,7 +151,7 @@ Instead of using `npx vacuum lint` this workflow uses the `npx vacuum report` co
 
 Finally, the "Publish Lint Results" step reads those results using the [JUnit Report GitHub Action](https://github.com/marketplace/actions/junit-report-action). As pull requests are made to the API, warnings and errors will start showing up, giving people the chance to fix the mistakes. These can be set up as "Checks" to block a pull request if there are errors, annotations to show other problems including warnings, or both, depending on various permissions configurations.
 
-![Screenshot from GitHub.com, showing the "GitHub Actions / API Lint Results" check result outputting annotations.](/images/guides/api-linting-with-vacuum/vacuum-annotations.png)
+![Screenshot from GitHub.com, showing the "GitHub Actions / API Lint Results" check result outputting annotations.](/docs/images/guides/api-linting-with-vacuum/vacuum-annotations.png)
 
 Blocking the build on OpenAPI errors stops contributors from accidentally breaking the OpenAPI document, which will cause all sorts of problems, not least the lack of updates for Bump.sh API Documentation!
 

@@ -161,7 +161,7 @@ $ bump deploy openapi.yaml \
 
 **Step 7:** Head over to your documentation and see how it looks at this early stage.
 
-![Bare bones of an OpenAPI document rendered by the Bump.sh hosted API documentation interface](/images/guides/code-first-laravel-initial.png)
+![Bare bones of an OpenAPI document rendered by the Bump.sh hosted API documentation interface](/docs/images/guides/code-first-laravel-initial.png)
 
 It looks like a start, but there is so much more we can do, including explaining responses, including longer descriptions, all of which is crucial to making API documentation useful, relevant, and readable. Time to learn a bit more about [Swagger-PHP Annotations](https://zircote.github.io/swagger-php/reference/attributes.html) and get more data into our docs.
 

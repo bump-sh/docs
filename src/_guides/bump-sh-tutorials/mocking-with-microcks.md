@@ -27,7 +27,7 @@ docker run -p 8585:8080 -it --rm quay.io/microcks/microcks-uber:latest-native
 
 When that's done, open a browser tab and point to the <http://localhost:8585> endpoint, changing the port if you picked a different one.
 
-![Microcks dashboard in a browser window running on http://localhost:8585](/images/guides/mocking-with-microcks/microcks-dashboard.png)
+![Microcks dashboard in a browser window running on http://localhost:8585](/docs/images/guides/mocking-with-microcks/microcks-dashboard.png)
 
 ## Step 2: Add Your First API
 
@@ -35,13 +35,13 @@ There are several ways to get OpenAPI into Microcks, but for the sake of simplic
 
 Once we've got Microcks loaded in the browser, click on "Importers", and click the "Upload" button.
 
-![The "Direct upload artifact" modal window](/images/guides/mocking-with-microcks/upload-modal.png)
+![The "Direct upload artifact" modal window](/docs/images/guides/mocking-with-microcks/upload-modal.png)
 
 The modal that pops up is asking for an Artifact, which is referring to various documents that could describe an API, like a [Postman Collection](_guides/bump-sh-tutorials/try-requests-in-postman.md) and [other API description documents](https://microcks.io/documentation/references/artifacts/). We can pop our OpenAPI in there, which is the same `openapi.yaml` document that you deploy to Bump.sh.
 
 The question about primary or secondary artifacts can be ignored for now.
 
-![The API View contains the title and version of the uploaded API, a list of endpoints, and shows whether it found "samples" (examples)](/images/guides/mocking-with-microcks/microcks-api-view.png)
+![The API View contains the title and version of the uploaded API, a list of endpoints, and shows whether it found "samples" (examples)](/docs/images/guides/mocking-with-microcks/microcks-api-view.png)
 
 Once you've uploaded, go to "APIs / Services" and click on your new API, which should have the same name as whatever was in the `info.title` of your OpenAPI. Below it you'll see a bunch of operations, which are all the endpoints that Microcks found in your OpenAPI.
 
@@ -49,7 +49,7 @@ Once you've uploaded, go to "APIs / Services" and click on your new API, which s
 
 Open up one of the operations and see what Microcks thinks about it.
 
-![The API view further down has a list of operations, which have been expanded to reveal more information about the mock URL and sample response](/images/guides/mocking-with-microcks/get-bookings.png)
+![The API view further down has a list of operations, which have been expanded to reveal more information about the mock URL and sample response](/docs/images/guides/mocking-with-microcks/get-bookings.png)
 
 You should see a URL which you can copy, and the sample JSON it has pulled from the OpenAPI `examples` object.
 
@@ -147,7 +147,7 @@ Microcks uses examples with a particular naming convention, pairing up request e
 
 Upload that to Microcks again and it will now be aware of these two examples, and show you the mock URLs for both.
 
-![](/images/guides/mocking-with-microcks/microcks-resources.png)
+![](/docs/images/guides/mocking-with-microcks/microcks-resources.png)
 
 Now you can call either of them, and get different HTTP responses with the appropriate example data being used for each.
 
@@ -279,7 +279,7 @@ You can deploy Microcks anywhere that takes Docker/Kubernetes instances, and the
 
 One approach is to deploy the Docker container into a managed Kubernetes cluster on [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster), which has free trials and free tiers to ease you into the process. 
 
-![A screenshot showing Google Cloud's Kubernetes Engine section, on the Create a deployment page](/images/guides/mocking-with-microcks/gke-setup.png)
+![A screenshot showing Google Cloud's Kubernetes Engine section, on the Create a deployment page](/docs/images/guides/mocking-with-microcks/gke-setup.png)
 
 This puts Microcks behind a publicly accessible load balancer, so you can stick some DNS on it and have everyone able to call the hosted version of the mock server.
 
@@ -350,11 +350,11 @@ servers:
 
 Adding this second server URL will offer users a dropdown menu in the Bump.sh documentation.
 
-![The select box apears on the Bump.sh API documentation allowing users to pick between servers based on server name](/images/guides/mocking-with-microcks/multiple-servers.png)
+![The select box apears on the Bump.sh API documentation allowing users to pick between servers based on server name](/docs/images/guides/mocking-with-microcks/multiple-servers.png)
 
 The mock server is now an option, and all of the URLs and example HTTP requests will show up using the chosen server URL.
 
-![A screenshot of the API documentation updated to contain the mocks.example.com after mock server has been selected](/images/guides/mocking-with-microcks/bump-mock-server-curl.png)
+![A screenshot of the API documentation updated to contain the mocks.example.com after mock server has been selected](/docs/images/guides/mocking-with-microcks/bump-mock-server-curl.png)
 
 If there's no production API only the mock server is ready then only define that:
 

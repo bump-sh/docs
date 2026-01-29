@@ -13,7 +13,7 @@ Bump.sh gives teams more flexibility in how they work, but the most common workf
 
 To liberate your OpenAPI from SwaggerHub for good, head to "My Hub", open each API one at a time, then click "Export" > "Download API" > "YAML Unresolved".
 
-![](/images/guides/migrating-from-swaggerhub/export-from-swaggerhub.png)
+![](/docs/images/guides/migrating-from-swaggerhub/export-from-swaggerhub.png)
 
 This will download a version which still has `$ref`'s, which will keep the file size smaller and avoid duplication of components.
 
@@ -49,7 +49,7 @@ Using open-source tooling can provide this exact same experience, easier, cheape
 
 The OpenAPI Editor from 42 Crunch is a powerful choice, offering not just a preview panel but auto-complete and a "explorer" view to help you move around the OpenAPI document. It also has a choice of preview tools, with Swagger UI being the exact same tool used on SwaggerHub. 
 
-![](/images/guides/migrating-from-swaggerhub/42crunch-openapi-editor.png)
+![](/docs/images/guides/migrating-from-swaggerhub/42crunch-openapi-editor.png)
 
 The other tools offer just a preview experience, but offer two alternative open-source OpenAPI rendering tools to give you a few options in how you look at the OpenAPI as you go.
 
@@ -57,7 +57,7 @@ The other tools offer just a preview experience, but offer two alternative open-
 
 The JetBrains team clearly recognize the importance of OpenAPI to their IntelliJ, PhpStorm, RubyMine, etc. community because they've created an official extension: [Jetbrains OpenAPI Specifications](https://plugins.jetbrains.com/plugin/14394-openapi-specifications).
 
-![](/images/guides/migrating-from-swaggerhub/jetbrains-openapi-specifications.png)
+![](/docs/images/guides/migrating-from-swaggerhub/jetbrains-openapi-specifications.png)
 
 The 42Crunch team have also built an extension: [OpenAPI​ Editor](https://plugins.jetbrains.com/plugin/14837-openapi-swagger-editor) will provide IntelliSense, "Go to Definition" for `$ref`, and the usual preview showing SwaggerUI or ReDoc.
 
@@ -83,7 +83,7 @@ You can set up your documentation to deploy [using the command-line](/help/conti
 
 A common workflow is to have Bump.sh make previews on Git branches, then deploy the main version of the documentation when a branch is merged. This allows you to defer all configuration about how reviews work, what checks should be involved, who is in charge of approving changes, etc to the pull request settings of your source control. 
 
-![](/images/guides/migrating-from-swaggerhub/bump-pull-request.png)
+![](/docs/images/guides/migrating-from-swaggerhub/bump-pull-request.png)
 
 Once a guide is published you can view the hosted documentation on Bump.sh, and it will look a little something like this: [Train Travel API Documentation](https://bump.sh/bump-examples/doc/train-travel-api).
 

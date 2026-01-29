@@ -1,10 +1,10 @@
 ---
 title: Access management
 tags: [Improvement]
-image: /images/changelog/changelog-access-management.png
+image: /docs/images/changelog/changelog-access-management.png
 ---
 
-![changelog-entry-page.png](/images/changelog/changelog-access-management.png)
+![changelog-entry-page.png](/docs/images/changelog/changelog-access-management.png)
 
 It's been a while since we added the first pillar of our access management system. It gave documentation maintainers a way to grant access to internal users ("members") and external users ("guests").
 

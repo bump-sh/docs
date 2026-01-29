@@ -3,7 +3,7 @@ title: Hello, OpenAPI webhooks
 tags: [New]
 ---
 
-![openapi-webhooks.png](/images/changelog/openapi-webhooks.png)
+![openapi-webhooks.png](/docs/images/changelog/openapi-webhooks.png)
 
 [OpenAPI 3.1](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.0.md) has been released today. Some important changes are coming with this new version. Above all, the greatest improvement is the support of `webhooks`, at the same first level than `paths`.
 

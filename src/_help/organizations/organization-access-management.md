@@ -21,7 +21,7 @@ The roles allow you to precisely choose which permissions to assign to members o
 
 A member's role can be changed at any time through the organization's list of members. The menu located to the right of each member allows you to change their role.
 
-![](/images/help/org-members.png)
+![](/docs/images/help/org-members.png)
 
 ## SSO
 

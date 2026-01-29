@@ -1,10 +1,10 @@
 ---
 title: "Ask AI, Markdown rendering & llms.txt"
 tags: [New]
-image: /images/changelog/ask-ai.png
+image: /docs/images/changelog/ask-ai.png
 ---
 
-![ask-ai.png](/images/changelog/ask-ai.png)
+![ask-ai.png](/docs/images/changelog/ask-ai.png)
 
 Many API consumers now rely on AI tools to help them quickly discover API capabilities. Conversational tools such as ChatGPT or Claude can be fed with documentation intended for humans, but that extra "human context" gives them more noise, impacting the AI tools' relevance and increasing token costs. 
 
@@ -13,7 +13,7 @@ Our latest release provides these tools with the right context, empowering your 
 ## Ask AI 
 Users can now easily ask questions about an API in their go-to conversational tools and get top-notch results. An "Ask AI" option has been added in documentation next to its introduction, x-topics, groups, and operations, offering access to ChatGPT and Claude with the right, narrowed-down context, alongside a one-click Markdown access.
 
-![Ask AI select displayed in documentation](/images/changelog/ask-ai-select.png)
+![Ask AI select displayed in documentation](/docs/images/changelog/ask-ai-select.png)
 
 ## Markdown rendering
 Bump.sh now offers an alternative context optimized for AI tools through Markdown rendering.

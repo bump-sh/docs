@@ -32,7 +32,7 @@ More recently LLMs like Copilot are helping remind users, myself included, how t
 
 Here’s the new structure (as it stands).
 
-![OpenAPI v4 diagram representation](/images/guides/openapi-v4-diagram.png)
+![OpenAPI v4 diagram representation](/docs/images/guides/openapi-v4-diagram.png)
 
 Diagrams like this can fail to convey much meaning to folks like myself, so lets create an example before (OAS3) and after (OAS4) by taking a snippet from the [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement) ([source on GitHub](https://github.com/bump-sh-examples/train-travel-api)).
 

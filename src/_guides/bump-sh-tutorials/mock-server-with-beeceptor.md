@@ -32,13 +32,13 @@ It then plugs a test data generator to create dynamic responses. Field names, de
 
 Creating the mock server is quick.
 
-![Beeceptor - accepts OpenAPI URL to start building mock](/images/guides/mock-with-beeceptor/beeceptor-openapi-url.png)
+![Beeceptor - accepts OpenAPI URL to start building mock](/docs/images/guides/mock-with-beeceptor/beeceptor-openapi-url.png)
 
-![Beeceptor - takes a minute to get mock server ready](/images/guides/mock-with-beeceptor/beeceptor-mock-server-created.png)
+![Beeceptor - takes a minute to get mock server ready](/docs/images/guides/mock-with-beeceptor/beeceptor-mock-server-created.png)
 
 You can open the mock server's dashboard to review the specification's path, request, and response payload.
 
-![Expanding API paths and payload in Beeceptor](/images/guides/mock-with-beeceptor/beeceptor-openapi-paths-expanded.gif)
+![Expanding API paths and payload in Beeceptor](/docs/images/guides/mock-with-beeceptor/beeceptor-openapi-paths-expanded.gif)
 
 Here is a sample API response when invoking the Get All Products API. Instead of placeholder values, you get domain-specific values without any extra configuration. Checkout the following response payload and refer to the `name`, `price`, `stock`, and `created_at` for the generated values.
 

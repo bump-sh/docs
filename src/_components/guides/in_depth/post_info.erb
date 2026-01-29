@@ -5,7 +5,7 @@
       <%= author_name(author) %>
       <% if !is_guest?(author) && github_link(author).present? %>
         <%= link_to github_link(author), "aria-label": "Go to GitHub" do %>
-          <%= svg "images/icons/github.svg" %>
+          <%= svg "/docs/images/icons/github.svg" %>
         <% end %>
       <% end %>
     <% end %>

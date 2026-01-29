@@ -26,7 +26,7 @@ Bump.sh supports branches as a concept, but this does not have to be specificall
 
 To add the v3 to the API documentation, go to the API settings on Bump.sh, click **Branches**, and add a new branch. Then pick which branch should be the default, which is the branch which will display to users before they pick a version.
 
-![](/images/guides/documenting-multiple-versions/set-branches.png)
+![](/docs/images/guides/documenting-multiple-versions/set-branches.png)
 
 Now there are two branches, using Bump CLI deploy command will deploy to the default branch of the API. You can pick a specific branch by using the `--branch=` argument like so:
 

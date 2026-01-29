@@ -1,10 +1,10 @@
 ---
 title: Changelog entry page
 tags: [New]
-image: /images/changelog/changelog-entry-page.png
+image: /docs/images/changelog/changelog-entry-page.png
 ---
 
-![changelog-entry-page.png](/images/changelog/changelog-entry-page.png)
+![changelog-entry-page.png](/docs/images/changelog/changelog-entry-page.png)
 
 We have recently improved the changelog to make it easier to share updates to your API documentation.
 

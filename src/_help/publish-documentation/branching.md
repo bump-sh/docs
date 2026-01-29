@@ -15,7 +15,7 @@ You can create as many branches as necessary, and each of these branches can rec
 
 Switching from one API definition to another in the documentation can be done in an instant via a dropdown menu.
 
-![](/images/help/version-selector.png)
+![](/docs/images/help/version-selector.png)
 
 > Branches are available from our [Pro plan](https://bump.sh/pricing/).
 {: .info}
@@ -24,7 +24,7 @@ Switching from one API definition to another in the documentation can be done in
 
 From the documentation settings, the Branches section allows you to create branches. Enter the name of the new branch and confirm. You can also create branches directly with our CLI or our API.
 
-![](/images/help/create-branch.png)
+![](/docs/images/help/create-branch.png)
 
 Once you have created your branch, you can start uploading and [deploying your first API definitions](/help/publish-documentation/deploy-and-release-management/) using your dashboard, the CLI, or your CI.
 
@@ -34,7 +34,7 @@ Deploying an API definition in a branch follows the usual procedure, with an add
 
 From the documentation settings, in the "Upload" section, select the branch in which to deploy the API definition before confirming the upload.
 
-![](/images/help/upload-branch.png)
+![](/docs/images/help/upload-branch.png)
 
 ### Using the Github-Action
 
@@ -76,7 +76,7 @@ Please note that, currently, the API does not support renaming a branch.
 
 The Branches section allows you to edit the name of a branch, set it as the default (the one that will be displayed when accessing the documentation), or delete it. After changing the branch name, don't forget to update your CI or CLI deployment settings.
 
-![](/images/help/manage-branch.png)
+![](/docs/images/help/manage-branch.png)
 
 > Deleting a branch is definitive: you will lose the branch, its content and deployment history.
 {: .warning}
@@ -85,6 +85,6 @@ The Branches section allows you to edit the name of a branch, set it as the defa
 
 By default, branches are sorted alphabetically by name (from A to Z) in the branch selector of an API documentation. You can reverse that order using with "Sorting order" select. Please note that the default branch is always displayed at the top of the list.
 
-![Sorting order select in the branch settings of a documentation](/images/help/branch-sorting.png)
+![Sorting order select in the branch settings of a documentation](/docs/images/help/branch-sorting.png)
 
 

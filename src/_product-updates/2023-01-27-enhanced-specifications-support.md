@@ -14,7 +14,7 @@ Wherever you need to document restrictions on string fields, OpenAPI and AsyncAP
 Email addresses, IBANs and ZIP/Postal codes could be great examples of these features.
 
 
-![minlength-example.png](/images/changelog/minlength-example.png)
+![minlength-example.png](/docs/images/changelog/minlength-example.png)
 
 
 ### readOnly  and  writeOnly  properties

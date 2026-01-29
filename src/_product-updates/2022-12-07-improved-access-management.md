@@ -3,7 +3,7 @@ title: Improved Access Management
 tags: [Improvement]
 ---
 
-![improved-access-management.png](/images/changelog/improved-access-management.png)
+![improved-access-management.png](/docs/images/changelog/improved-access-management.png)
 
 Access management has been reshaped, thanks to extended tests and user feedback.
 

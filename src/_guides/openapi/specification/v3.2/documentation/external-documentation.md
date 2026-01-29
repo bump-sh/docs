@@ -67,4 +67,4 @@ components:
 
 When you generate API documentation for the API description above, you'll see the link rendered like this:
 
-![How the externalDocs property is displayed in generated API documentation.](/images/guides/tag-with-externaldocs.png)
+![How the externalDocs property is displayed in generated API documentation.](/docs/images/guides/tag-with-externaldocs.png)

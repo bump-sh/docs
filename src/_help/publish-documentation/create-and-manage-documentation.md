@@ -9,13 +9,13 @@ title: Create and manage documentation
 
 By default, accessing your dashboard displays all your documentation.
 
-![](/images/help/organization-view.png)
+![](/docs/images/help/organization-view.png)
 
 ## Create a documentation
 
 Creating documentation starts from your dashboard, using the button of the same name. You will then need to provide some essential information:
 
-![](/images/help/doc-creation.png)
+![](/docs/images/help/doc-creation.png)
 
 | Name     | The name of the documentation as it will appear to those who have access to it.     |
 | API type     | Specify if your documentation pertains to a REST API or an Event-Driven API.     |
@@ -27,7 +27,7 @@ Creating documentation starts from your dashboard, using the button of the same 
 
 The next step is to deploy the first API document of your documentation, for which you will need your API document: the API definition file.
 
-![](/images/help/upload-document.png)
+![](/docs/images/help/upload-document.png)
 
 There are several methods for deploying the first and future API definitions of your documentation, which we will detail further in the next section.
 
@@ -37,13 +37,13 @@ Hubs are a convenient option to group multiple docs together, like a catalog. No
 
 Additionally, it is possible to group docs of a Hub per Category. 
 
-![](/images/help/categories.png)
+![](/docs/images/help/categories.png)
 
 Once a doc is created, go to the Settings of the doc, under Hubs settings.
 
 You can set as many categories as needed per doc. Categories must be comma-separated. 
 
-![](/images/help/doc-hub-settings.png)
+![](/docs/images/help/doc-hub-settings.png)
 
 > If at least one doc in a Hub has a category set, and that the [Hub setting](/help/hubs/hub-settings/#documentation-listing) "Group documentation by category" is selected, any doc without a category will not be displayed in the Hub.
 {: .warning}

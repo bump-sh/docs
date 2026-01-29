@@ -121,7 +121,7 @@ If this is a one-time submission and you don't want to bother, you can just add 
 
 The excerpt is a small description of the guide content that will show on the guide list so users can have a glimpse of what the guide is about. Be clear and concise!
 
-Images go under [`src/images`](https://github.com/bump-sh/docs/tree/main/src/images) and can be called with `![](/images/guides/<your_image_name>)`.
+Images go under [`src/docs/images`](https://github.com/bump-sh/docs/tree/main/src/docs/images) and can be called with `![](/docs/images/guides/<your_image_name>)`.
 
 ##### Gotchas
 * Ordered lists: if you need to any kind of blocks in your ordered list item, make sure it immediately follows the numbered paragraph line (no empty line in between). You might also want to [indent your block to line up with the first non-space character after the list item marker](https://stackoverflow.com/questions/34987908/embed-a-code-block-in-a-list-item-with-proper-indentation-in-kramdown). Just do both for safety!

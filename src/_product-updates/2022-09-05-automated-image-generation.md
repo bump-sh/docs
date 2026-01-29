@@ -10,4 +10,4 @@ You can now upload your own image or leave the work to us to generate a nice one
 
 Find out more in our [Help Center](/help/customization-options/color-logo-meta-images/#use-the-automated-image-generation)!
 
-![metaimage-forto.png](/images/changelog/metaimage-forto.png)
+![metaimage-forto.png](/docs/images/changelog/metaimage-forto.png)

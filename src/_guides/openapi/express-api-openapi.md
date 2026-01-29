@@ -1,7 +1,7 @@
 ---
 title: Creating an API with Express.js using OpenAPI
 authors: Jerry Ejonavi
-image: images/guides/express-js-open-api.png
+image: /docs/images/guides/express-js-open-api.png
 canonical_url: https://bump.sh/blog/express-api-openapi
 excerpt: This tutorial walks you through the creation of a REST API in a Node.JS enviromnent, and its documentation using Bump.sh.
 date: 2024-03-25
@@ -646,15 +646,15 @@ As mentioned, `bump-cli` can be used to preview, compare versions, or deploy new
 
 [Sign up](https://bump.sh/users/sign_up) or [login](https://bump.sh/users/sign_in) in your Bump.sh  account. You can begin by navigating to your dashboard and clicking **Create Documentation**.
 
-![Bump.sh account dashboard](/images/guides/bump-sh-user-dashboard.png)
+![Bump.sh account dashboard](/docs/images/guides/bump-sh-user-dashboard.png)
 
 Next, add your documentation's name and, optionally, specify its access level (public or private).
 
-![Create new documentation wizard](/images/guides/bump-sh-create-doc-wizard.png)
+![Create new documentation wizard](/docs/images/guides/bump-sh-create-doc-wizard.png)
 
 Next, you'll be asked to upload a specification file. Choose the **Use Bump.sh CLI** option, which will immediately take you to the newly created documentation's deployment configuration page. Here, you'll find the token that's required to deploy your documentation using the CLI. It's the string labeled **Access token**, as shown below.
 
-![Bump.sh deployment configuration](/images/guides/bump-sh-deployment-configuration.png)
+![Bump.sh deployment configuration](/docs/images/guides/bump-sh-deployment-configuration.png)
 
 Copy this token and replace `YOUR_TOKEN` with it when running the command to deploy your project:
 
@@ -664,11 +664,11 @@ npx bump deploy http://localhost:3000/api-definition --doc YOUR_DOCUMENTATION_SL
 
 Running the command above will trigger a deployment that you can view by clicking **View Documentation** from your documentation's General Settings page.
 
-![Documentation general settings](/images/guides/bump-sh-view-doc.png)
+![Documentation general settings](/docs/images/guides/bump-sh-view-doc.png)
 
 Your deployed documentation should open in a new tab, and it should look like this:
 
-![Bump.sh deployed documentation](/images/guides/bump-sh-deployed-doc.png)
+![Bump.sh deployed documentation](/docs/images/guides/bump-sh-deployed-doc.png)
 
 ### Automate API documentation update with Bump.sh
 
@@ -713,11 +713,11 @@ Just make sure you provide your Bump documentation slug (replace the `<BUMP_DOC_
 
 The resulting action should run on each push to the `main` branch:
 
-![Github Action Deploy Summary](/images/guides/bump-sh-github-action-summary.png)
+![Github Action Deploy Summary](/docs/images/guides/bump-sh-github-action-summary.png)
 
 Your API consumers can then subscribe to changes made to your API by clicking on **API Changelog** from your API documentation page. Either by completing the form or adding the RSS feed link to apps that can display RSS feeds.
 
-![Subscribe to API changelog](/images/guides/bump-sh-changelog-subscribe.png)
+![Subscribe to API changelog](/docs/images/guides/bump-sh-changelog-subscribe.png)
 
 ## Conclusion
 

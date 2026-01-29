@@ -1,10 +1,10 @@
 ---
 title: Love Cycle - April 24
 tags: [Improvement]
-image: /images/changelog/love-cycle-april-2024.png
+image: /docs/images/changelog/love-cycle-april-2024.png
 ---
 
-![love-cycle.png](/images/changelog/love-cycle-april-2024.png)
+![love-cycle.png](/docs/images/changelog/love-cycle-april-2024.png)
 
 We have a tradition of scheduling what we call Love Cycles between our development cycles: times dedicated to improving Bump.sh, responding to specific user requests that we find relevant, and providing a general polish.
 
@@ -23,7 +23,7 @@ Quality of Life:
 - From now on, the timestamp of your deploys and other actions will be based on your browser's timezone instead of GMT+1 by default.
 - We have added and modified some warning messages to make them more explicit.
 
-![new-highlights.png](/images/changelog/new-highlights.png)
+![new-highlights.png](/docs/images/changelog/new-highlights.png)
 
 Fixes:
 - We resolved the issue with discriminator values not always mapping correctly in certain specific cases. Special thanks to Phil Sturgeon for pointing it out and having a thorough discussion about discriminators with the team.

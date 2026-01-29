@@ -9,6 +9,6 @@ While perfectly functional for individual projects, organizations are designed t
 
 You can switch between them using the dropdown menu, in the top bar.
 
-![](/images/help/org-dropdown.png)
+![](/docs/images/help/org-dropdown.png)
 
 Next step: [Create your organization](/help/organizations/create-and-manage-organizations/)

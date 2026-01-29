@@ -21,7 +21,7 @@ This guide will go through getting started with Postman, creating a "Postman Col
 
 Create a new account (it's free). If you're doing this for a business or organization other than yourself you can create a workspace your collections to live in.
 
-![Create your workspace view, with a list of templates that can be used for the workspace, "API demos" template is selected.](/images/guides/try-requests-in-postman/postman-create-workspace.png)
+![Create your workspace view, with a list of templates that can be used for the workspace, "API demos" template is selected.](/docs/images/guides/try-requests-in-postman/postman-create-workspace.png)
 
 ## Step 3) Connect your API to Git version control
 
@@ -29,11 +29,11 @@ On the left sidebar click APIs, and you should see the option to create a new AP
 
 The APIs interface will show you have no APIs, so click "Create" and give the API a name.
 
-!["New API" screen in Postman, showing "Quickstart your API by connecting a repository" and a list of options to connect GitHub, Bitbucket, GitLab SaaS, or Azure DevOps.](/images/guides/try-requests-in-postman/postman-new-api.png)
+!["New API" screen in Postman, showing "Quickstart your API by connecting a repository" and a list of options to connect GitHub, Bitbucket, GitLab SaaS, or Azure DevOps.](/docs/images/guides/try-requests-in-postman/postman-new-api.png)
 
 Then you can configure which Git repository your API should be connected to.
 
-!["Connect Repository" screen in Postman, with dropdowns for GitHub organization, Repository, and initial branch.](/images/guides/try-requests-in-postman/postman-connect-repository.png)
+!["Connect Repository" screen in Postman, with dropdowns for GitHub organization, Repository, and initial branch.](/docs/images/guides/try-requests-in-postman/postman-connect-repository.png)
 
 Next, point Postman to the "API schema file", which is their way of saying "API description document." Whatever you call it, this is the same `openapi.yaml` document that you use to deploy to Bump.sh.
 
@@ -45,7 +45,7 @@ Click "Connect Repository" when it's all done and you'll be taken to the API ove
 
 Before you can publish this API to the world, we need to help Postman identify the specific API being described. If you hover over the Publish button it will suggest some changes, which it can commit for you.
 
-![Postman source control view with some changes it wants to make, and a warning to commit to a branch as main branch is protected.](/images/guides/try-requests-in-postman/postman-commit.png)
+![Postman source control view with some changes it wants to make, and a warning to commit to a branch as main branch is protected.](/docs/images/guides/try-requests-in-postman/postman-commit.png)
 
 Click the commit button and then create a pull request, ideally through the Postman "Create pull request" button on the same screen. It will take you to your Git hosting provider on the pull request page. The pull request contains a few bits of config, like the Postman API ID. 
 
@@ -57,15 +57,15 @@ When this is done, Postman will be all set up to work with your API in your repo
 
 Postman is now aware of your OpenAPI document, but in order to share a collection you'll need to generate a collection from your OpenAPI.
 
-![Postman's API overview lists "Definitions" with the one we just added, and "Collections" which is empty, but has an option to Generate from definition](/images/guides/try-requests-in-postman/generate-from-definition.png)
+![Postman's API overview lists "Definitions" with the one we just added, and "Collections" which is empty, but has an option to Generate from definition](/docs/images/guides/try-requests-in-postman/generate-from-definition.png)
 
 Clicking "Generate from definition" you'll see a modal window with a whole bunch of options. To start off just keep them all default, perhaps changing the Parameter Generation setting to Example if your OpenAPI happens to have great examples in there already.
 
-![Genereate from definition settings on their defaults, mainly Naming requests set to Fallback](/images/guides/try-requests-in-postman/generate-modal.png)
+![Genereate from definition settings on their defaults, mainly Naming requests set to Fallback](/docs/images/guides/try-requests-in-postman/generate-modal.png)
 
 Almost done! The collection lives in the APIs panel under our API, but in order to use the full power of Postman we need to copy it over to the main Collections tab.
 
-![The API definition contains the collection, but it needs to be copied to Collections tab by right clicking and selecting Copy to collections](/images/guides/try-requests-in-postman/copy-to-collections.png)
+![The API definition contains the collection, but it needs to be copied to Collections tab by right clicking and selecting Copy to collections](/docs/images/guides/try-requests-in-postman/copy-to-collections.png)
 
 ## Step 6) Integrate the Run in Postman button to Bump.sh
 
@@ -73,7 +73,7 @@ Finally, this collection is ready to rock, and we can embed the Run in Postman b
 
 To get the button, click on the collection and find the Share option, then select the Mxarkdown version.
 
-![Share modal, Via Run in Postman tab selected, with the Markdown friendly tab within that.](/images/guides/try-requests-in-postman/postman-share-button.png)
+![Share modal, Via Run in Postman tab selected, with the Markdown friendly tab within that.](/docs/images/guides/try-requests-in-postman/postman-share-button.png)
 
 Take that Markdown, and pop it into your OpenAPI somewhere. The easiest place to put it is right in the `info.description` property. 
 
@@ -102,8 +102,8 @@ npx bump-cli preview openapi.yaml --live
 
 The command will return a link, click that and see how the documentation looks.
 
-![Back in the Bump.sh hosted API documentation we've added a "Run in Postman" section with the paragraph added in Markdown above, and the orange Run in Postman button showing](/images/guides/try-requests-in-postman/bump-docs-postman-button.png)
+![Back in the Bump.sh hosted API documentation we've added a "Run in Postman" section with the paragraph added in Markdown above, and the orange Run in Postman button showing](/docs/images/guides/try-requests-in-postman/bump-docs-postman-button.png)
 
 When you (or your users) click the new Run in Postman button, they'll be able to view the original, or fork the collection to their own workspaces to customize the requests for their own needs. When it loads up, the collection will show all the possible requests, and help them add the right headers, parameters, and authorization details.
 
-![The view Postman users will get after clicking that button, with the Train Travel API example, and operation Get a list of train stations selected ready for HTTP requests](/images/guides/try-requests-in-postman/postman-view.png)
+![The view Postman users will get after clicking that button, with the Train Travel API example, and operation Get a list of train stations selected ready for HTTP requests](/docs/images/guides/try-requests-in-postman/postman-view.png)

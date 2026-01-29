@@ -19,4 +19,4 @@ tags:
     x-displayName: Diffs
 ```
 
-![Screenshot of an example API Documentation on Bump.sh, with x-displayName being used.](/images/help/x-displayName.png)
+![Screenshot of an example API Documentation on Bump.sh, with x-displayName being used.](/docs/images/help/x-displayName.png)

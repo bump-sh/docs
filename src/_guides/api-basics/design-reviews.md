@@ -151,14 +151,14 @@ Here's a change which looks like it's probably not going to break anything, it's
 just moving an inline definition of a parameter into a reference, and adding a
 new optional parameter.
 
-![](/images/guides/design-reviews/replaced-with-ref.png)
+![](/docs/images/guides/design-reviews/replaced-with-ref.png)
 
 Unfortunately when copying and pasting some of the reusable parameter
 definitions elsewhere something was changed, and that would be hard to spot
 without having both definitions open on two different monitors and comparing the
 two closely. Thankfully Bump.sh can handle that tedious work for you.
 
-![](/images/guides/design-reviews/breaking-change-detected.png)
+![](/docs/images/guides/design-reviews/breaking-change-detected.png)
 
 Bump.sh automatically filters out inconsequential YAML/JSON changes and automates all of the following:
 
@@ -272,7 +272,7 @@ endpoint that needs more review, etc. then the Preview feature can be used.
 When Bump.sh comments on a pull request with the summary of changes, there is
 also a little link on there marked Preview and this is pretty magical. 
 
-![](/images/guides/design-reviews/preview.png)
+![](/docs/images/guides/design-reviews/preview.png)
 
 Instead of just reviewing the YAML changes and hoping the docs look good when
 you merge, you can go and review the docs to make sure all is good before you
@@ -335,7 +335,7 @@ linting](_guides/bump-sh-tutorials/api-linting-with-vacuum.md) using tools like
 vacuum so that its already handled before even getting humans involved with the
 design review.
 
-![Screenshot from GitHub.com, showing the "GitHub Actions / API Lint Results" check result outputting annotations.](/images/guides/api-linting-with-vacuum/vacuum-annotations.png)
+![Screenshot from GitHub.com, showing the "GitHub Actions / API Lint Results" check result outputting annotations.](/docs/images/guides/api-linting-with-vacuum/vacuum-annotations.png)
 
 With Bump.sh spotting changes and offering previews, vacuum highlighting
 concerns automatically, API design reviews should be a pretty simple affair. 

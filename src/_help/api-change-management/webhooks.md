@@ -17,13 +17,13 @@ Notifications can be sent to several URLs, allowing better integration with your
 
 Select the **Integrations** tab from your Bump dashboard to reach the webhook section.
 
-![](/images/help/legacy/N3rDneaswUa7YztE6nH0.png)
+![](/docs/images/help/legacy/N3rDneaswUa7YztE6nH0.png)
 
 ### Step 2:
 
 After adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps securing requests coming from Bump).
 
-![](/images/help/legacy/OE8vOhb9gWGtCiB9bTvZ.png)
+![](/docs/images/help/legacy/OE8vOhb9gWGtCiB9bTvZ.png)
 
 Here is a pseudo-code (in Ruby language) which you should implement in your server if you want to check the authenticity of the received payload:
 
@@ -38,7 +38,7 @@ end
 
 The **Recent deliveries** section include a **Test Webhook **element that helps you verify that the webhook works correctly. You can also check the 10 last notifications.
 
-![](/images/help/legacy/MMsiIICn5P1iK10bnwO9.png)
+![](/docs/images/help/legacy/MMsiIICn5P1iK10bnwO9.png)
 
 ### Payload content
 
@@ -48,5 +48,5 @@ Details about the payload content sent for each setup webhooks is available in o
 
 To stop receiving notifications, you can delete a webhook by selecting it from the **Integrations** section and then confirm the deletion in the **Danger zone**.
 
-![](/images/help/legacy/zv44dbSnFqeaZqgfIvSD.png)
+![](/docs/images/help/legacy/zv44dbSnFqeaZqgfIvSD.png)
 

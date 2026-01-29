@@ -11,7 +11,7 @@ A Deployment is the processing of an API document - containing your API definiti
 
 Following this deployment, the new API definition is published to your API consumers. This is what we call a Release: your API documentation is updated, and if your API has changed since the last deployment, a new entry representing this API change is added to your API changelog.
 
-![](/images/help/deployments-list.png)
+![](/docs/images/help/deployments-list.png)
 
 By default, a deployment is automatically released after its processing. However, you can choose to control the release flow by activating the Manual Release setting. In this case, the latest deployments will be enqueued until you decide to release one of them.
 
@@ -23,7 +23,7 @@ To deploy a new API document from the dashboard, you first need to go to the set
 
 From there, you will find the "Deploy new version" button, which will allow you to choose the file to upload and, if the documentation has branches, the branch to deploy it on.
 
-![](/images/help/upload-document-quick.png)
+![](/docs/images/help/upload-document-quick.png)
 
 After processing, the new API document will be automatically released after a few moments unless you have enabled Manual Release mode.
 
@@ -45,7 +45,7 @@ By default, these two steps are automatically linked: uploading a new API docume
 
 The Deployments section of your documentation provides access to the history of all API documents uploaded to Bump.sh, including their status (`enqueued`, `deploying`, `deployed`, or `errored`) and their release status (`Released` or `Not released`).
 
-![](/images/help/deployments-list.png)
+![](/docs/images/help/deployments-list.png)
 
 ### Manual Release
 
@@ -54,7 +54,7 @@ The Deployments section of your documentation provides access to the history of 
 
 The Manual Release mode is an option that allows you to separate the processing step from the releasing step of your API definition.
 
-![](/images/help/manual-release-toggle.png)
+![](/docs/images/help/manual-release-toggle.png)
 
 When activated, uploading an API document will no longer automatically release it. We continue to prepare this API definition on our side (and you can view a preview and its future changelog entry), but the release step becomes manual. This means you can decide when to make an API definition live for your API users.
 
@@ -64,11 +64,11 @@ This option allows you to work on future versions of your API without disclosing
 
 Select a deployment with the "unreleased" status from the list of your deployments.
 
-![](/images/help/deployments-list-not-released.png)
+![](/docs/images/help/deployments-list-not-released.png)
 
 The release preparation page will appear, allowing you to add context by adding a title or a brief description, for example, to explain the context of the change. These fields [support Markdown](/help/enhance-documentation-content/markdown-support/) to make the result more readable.
 
-![](/images/help/deployment-release-form.png)
+![](/docs/images/help/deployment-release-form.png)
 
 ### Unrelease an API definition
 
@@ -77,7 +77,7 @@ The release preparation page will appear, allowing you to add context by adding 
 
 It is possible to "unrelease" any previously released deployment. By clicking on the deployment, you will find the "Unrelease" option under the "..." button.
 
-![](/images/help/unrelease-button.png)
+![](/docs/images/help/unrelease-button.png)
 
 > Unreleasing a deployment not only rolls back your API documentation to the previously released one. It also automatically reprocesses its changelog to correctly reflect the changes.
 {: .info}
