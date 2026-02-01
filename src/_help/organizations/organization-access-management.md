@@ -1,5 +1,5 @@
 ---
-title: Organization Access Management
+title: Organization access management
 ---
 
 - TOC
@@ -21,7 +21,7 @@ The roles allow you to precisely choose which permissions to assign to members o
 
 A member's role can be changed at any time through the organization's list of members. The menu located to the right of each member allows you to change their role.
 
-![](/images/help/org-members.png)
+![](/docs/images/help/org-members.png)
 
 ## SSO
 
@@ -35,7 +35,7 @@ This page can be customized with a logo and specific button labels and descripti
 
 The login page will systematically appear when attempting to access via the direct URL of a documentation or a hub behind this SSO, if one is not already authenticated.
 
-> SSO is a feature available from our Business plan.
+> SSO is available in our [custom plans](https://bump.sh/pricing/).
 {: .info}
 
 ### How to setup SSO

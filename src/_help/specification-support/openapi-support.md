@@ -5,7 +5,7 @@ title: OpenAPI support
 - TOC
 {:toc}
 
-We support all major versions from Swagger (OpenAPI v2), OpenAPI v3 and OpenAPI v3.1. This pages describes some specificities related to our support for this specification.
+We support all major versions from Swagger (OpenAPI v2), OpenAPI v3/3.1, and partially OpenAPI v3.2. This pages describes some specificities related to our support for this specification.
 
 ## Minimal mandatory fields
 
@@ -13,7 +13,7 @@ Bump.sh needs to receive at least these fields to generate a REST documentation
 
 | field                  | description                                                                                                                                 |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| `openapi` or `swagger` | define which version of the specification you want to use. Use the `swagger` key for v2 and `openapi` for the v3+. E.g. `openapi: "3.1.0"`. |
+| `openapi` or `swagger` | define which version of the specification you want to use. Use the `swagger` key for v2 and `openapi` for the v3+. E.g. `openapi: "3.2.0"`. |
 | `info`                 | General information about your API                                                                                                          |
 | `info.title`           | The title of the API                                                                                                                        |
 | `info.version`         | The version of the API document                                                                                                             |
@@ -47,3 +47,12 @@ You can use the `webhooks` field (introduced in OpenAPI 3.1) to define the API w
 ## Overlays support
 
 The [Overlay specification of OpenAPI](https://github.com/OAI/Overlay-Specification/) makes it possible to modify the content of an OpenAPI document by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. Please read to the [dedicated documentation page](/help/specification-support/overlays/) for more information.
+
+## OpenAPI 3.2: current support
+
+We are progressively rolling out our OpenAPI 3.2 support. This is what's currently supported:
+- Method: QUERY method, in both the documentation and the API Explorer.
+- Server object: `name` property.
+- Tag object: `summary` property, behaving like our existing [x-displayName vendor extension](/help/specification-support/openapi-support/x-display-name/).
+- Response object: `summary` property.
+- Security schemes: `deprecated` property.

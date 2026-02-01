@@ -161,7 +161,7 @@ $ bump deploy swagger/v1/swagger.yaml \
 
 **Step 10:** Head over to your documentation and see how it looks at this early stage.
 
-![Bare bones of an OpenAPI document rendered by the Bump.sh hosted API documentation interface](/images/guides/code-first-rails-initial.png)
+![Bare bones of an OpenAPI document rendered by the Bump.sh hosted API documentation interface](/docs/images/guides/code-first-rails-initial.png)
 
 It looks like a start, but it's missing a whole lot of the what, and the why, which is crucial to making API documentation useful, relevant, and readable. Time to learn a bit more about [the RSwag DSL](https://github.com/rswag/rswag/#the-rspec-dsl) and get more data into our docs.
 

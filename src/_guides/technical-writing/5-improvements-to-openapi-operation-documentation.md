@@ -204,7 +204,7 @@ paths:
         - Order Management
 ```
 
-Refer to our guide, ["Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints"](https://docs.bump.sh/guides/api-basics/openapi-asyncapi-tags-organize-endpoints/) for further details on using tagging in your OpenAPI description. 
+Refer to our guide, ["Using OpenAPI and AsyncAPI Tags to Better Organize API Endpoints"](/guides/api-basics/openapi-asyncapi-tags-organize-endpoints/) for further details on using tagging in your OpenAPI description. 
 
 ## 5. Improve Consistency in Operation Naming Conventions
 
@@ -258,7 +258,7 @@ components:
 ```
 ## Bonus: Applying OpenAPI Specification Overlays
 
-For teams that are generating OpenAPI Specification documents [directly from their code](https://docs.bump.sh/guides/openapi/code-first/) using annotations, [technical writers can further benefit](https://docs.bump.sh/guides/technical-writing/efficient-tech-writing-process/) from the use of OpenAPI overlays. Refer to [our article that details using overlays](https://docs.bump.sh/guides/openapi/augmenting-generated-openapi/) to improve your tech writing workflow. 
+For teams that are generating OpenAPI Specification documents [directly from their code](/guides/openapi/code-first/) using annotations, [technical writers can further benefit](/guides/technical-writing/efficient-tech-writing-process/) from the use of OpenAPI overlays. Refer to [our article that details using overlays](/guides/openapi/augmenting-generated-openapi/) to improve your tech writing workflow. 
 
 ## Final Thoughts on Improving Your API Documentation 
 

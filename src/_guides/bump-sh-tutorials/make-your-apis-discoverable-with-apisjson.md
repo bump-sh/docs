@@ -96,15 +96,15 @@ Bump.sh will automatically create an `/apis.json` for anyone using [Documentatio
 
 How you use them is up to you, but to work with APIs.json you'll want to make a Hub.
 
-![Screenshot of Bump dashboard listing standalone documentation, with a highlighted option to click New Hub](/images/guides/apis-json/new-hub.png)
+![Screenshot of Bump dashboard listing standalone documentation, with a highlighted option to click New Hub](/docs/images/guides/apis-json/new-hub.png)
 
 Then add some APIs to that Hub on the API's Settings page.
 
-![Screenshot of a Bump APIs settings page, a dropdown labelled Hub settings is selecting a Hub to assign to](/images/guides/apis-json/add-api-to-hub.png)
+![Screenshot of a Bump APIs settings page, a dropdown labelled Hub settings is selecting a Hub to assign to](/docs/images/guides/apis-json/add-api-to-hub.png)
 
 Now head over to the Dashboard and click View Hub, and you'll be taken to a URL like `https://bump.sh/<org-slug>/hub/<hub-slug>`. To get the APIs.json endpoint you can append `/apis.json` onto the end of that URL, to produce `https://bump.sh/<org-slug>/hub/<hub-slug>/apis.json`.
 
-![Screenshot of JSON in a browser window, showing name, description, url, created, modified and an array of apis](/images/guides/apis-json/apisjson.png)
+![Screenshot of JSON in a browser window, showing name, description, url, created, modified and an array of apis](/docs/images/guides/apis-json/apisjson.png)
 
 ### Submit APIs.json to APIs.io
 
@@ -112,7 +112,7 @@ Great! Now, the first thing we should do with this APIs.json is use it to help p
 
 Head over to [APIs.io: Add](https://apis.io/add/), and paste your link into the URL box.
 
-![Screenshot of apis.io with an Add API with a URL form input](/images/guides/apis-json/submit-apisio.png)
+![Screenshot of apis.io with an Add API with a URL form input](/docs/images/guides/apis-json/submit-apisio.png)
 
 If you want to automate submissions and updates then you can use the [APIs.io API](https://developer.apis.io/documentation/), or [grab one of their SDKs](https://developer.apis.io/sdks/), but it may well be easier to just submit the form.
 

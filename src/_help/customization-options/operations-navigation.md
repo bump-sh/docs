@@ -15,13 +15,13 @@ By default, Bump.sh analyzes your API definition and suggests the most suitable 
 
 If first-level field `tags` are present at the [root of your OpenAPI document object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#openapi-object), Bump.sh will use `Group by tags` as a default documentation generation behaviour.
 
-![](/images/help/operations.png)
+![](/docs/images/help/operations.png)
 
 ## Group operations by path
 
 When `Group operations by path` is chosen, Bump.sh deduces group names from related paths. The first part of the path is extracted to generate the group name, and every operation related to it will be grouped together.
 
-![](/images/help/group-by-path.png)
+![](/docs/images/help/group-by-path.png)
 
 ## Group operations by tag
 

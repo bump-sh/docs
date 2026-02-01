@@ -55,7 +55,7 @@ information about total area.
 But only an apartment has a specific floor. And we don't usually care about
 roof tiles unless you live in a house.
 
-![polymorphism diagram](/images/guides/polymorphism_accomodation.png)
+![polymorphism diagram](/docs/images/guides/polymorphism_accomodation.png)
 
 There are many solutions for implementing that into your codebase,
 based on your team, language, framework, architecture, opinions about typed VS object oriented language…
@@ -126,7 +126,7 @@ In this way, polymorphism in REST APIs allows for a more flexible and scalable A
 But API is consumed. And API consumers have to be very aware of this polymorphism.
 At Bump.sh, we are convinced that the best solution is to have a very nice documentation for your API.
 
-![new house request](/images/guides/house_without_discriminator.png)
+![new house request](/docs/images/guides/house_without_discriminator.png)
 
 source: https://bump.sh/demo/hub/support/doc/accommodation-polymorphism
 
@@ -418,7 +418,7 @@ requestBody:
 This is visible in generated documentation, where allowed value is explicitly
 defined as either `flat`, either `house`.
 
-![new flat request](/images/guides/apartment-with-discriminator.png)
+![new flat request](/docs/images/guides/apartment-with-discriminator.png)
 
 [See it live](https://bump.sh/demo/hub/support/doc/accommodation-polymorphism/with-discriminator/operation/operation-post-accommodation#operation-post-accommodation-body)
 
@@ -435,7 +435,7 @@ I hope this post/article/guide/tutorial/page (`anyOf` these formats) did help yo
 Writing this article was not easy, but I can assure you that implementing all the support for all these polymorphism concept
 in both OpenAPI and AsyncAPI was not a long, quiet river.
 That's why I'm very glad to reveal that these combinators `anyOf` and `oneOf` are now fully supported in every documentation hosted on Bump.sh, as
-detailed [in our changelog](https://docs.bump.sh/product-updates/2022/11/14/polymorphism/).
+detailed [in our changelog](/product-updates/2022/11/14/polymorphism/).
 
 Happy polymorphism,
 

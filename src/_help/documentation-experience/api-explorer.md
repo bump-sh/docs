@@ -1,30 +1,36 @@
 ---
-title: API Explorer (Beta)
+title: API Explorer
 ---
 
 - TOC
 {:toc}
 
-> The API Explorer is a new feature in beta with limited access. You can request access by [contacting our team](mailto:hello@bump.sh).
+> The API Explorer is available from our [Pro plan](https://bump.sh/pricing/).
 {: .info}
 
 ## What is the API Explorer?
 
 The API Explorer allows you to test an API in real-world conditions directly from its documentation. It facilitates API discovery by enabling you to try out specific API calls on any server listed in your definition file. It helps you get started quickly without a testing environment or share a specific use case for discovery, support, or debugging purposes.
 
+## How to activate the API Explorer?
+
+The API Explorer can be activated for a documentation or a whole hub through an option in its “Settings” tab. 
+
+![Image of the setting to activate the API Explorer](/docs/images/help/explorer/explorer-activation-option.png)
+
 ## How to use the API Explorer?
 
 The API Explorer is accessible at any time via a button at the top of your documentation (and remains visible as you scroll). Each operation also features a button that opens the API Explorer for that specific operation.
 
-![](/images/help/explorer-button.png)
+![Image of the API Explorer link in the navigation of a documentation](/docs/images/help/explorer/explorer-button.png)
 
 If you haven’t opened the API Explorer from a specific operation, you can select one from the corresponding menu.
 
-![](/images/help/explorer-operation-selection.png)
+![Image of the operation selector inside the API Explorer](/docs/images/help/explorer/explorer-operation-selection.png)
 
 We identify the required fields directly from the definition file, making it easier for you to fill out the request, detecting whether it’s a boolean, date, etc. Fill in the expected information to execute the request and receive a response.
 
-![](/images/help/explorer-response.png)
+![Image of the response module of the API Explorer](/docs/images/help/explorer/explorer-response.png)
 
 ### Sharing
 
@@ -33,7 +39,7 @@ It’s possible to share a request setup, which is useful for showing an example
 > This URL will never share your authentication parameters or the response.
 {: .info}
 
-![](/images/help/explorer-share.png)
+![Image of the sharing modal of the API Explorer](/docs/images/help/explorer/explorer-share.png)
 
 If the API documentation has been updated after the share URL was generated, the Explorer will notify you that the pre-filled fields may have changed and display a link to the API changelog for a more detailed review of the changes.
 
@@ -55,19 +61,72 @@ This proxy is hosted outside our infrastructure to ensure data security. Its ope
 
 You can also learn more about it in our [dedicated blog post](https://bump.sh/blog/releasing-cors-proxy-opensource/).
 
+A future update will add an option to disable the proxy (meaning you'll have to properly set up your CORS settings to use the API Explorer if you disable it).
+
 ### Authentication
 
-We support authentication for APIs that require prior authentication. Two options are available: via HTTP (Basic/Bearer) or via API keys.
+We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
 
-![](/images/help/explorer-auth.png)
+The authentication information are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
+
+![Image of the authentication module of the API Explorer](/docs/images/help/explorer/explorer-auth.png)
 
 > When sharing a request, this authentication information is never transmitted.
 {: .info}
 
-## Known Limitations of the Beta
+#### Details about OAuth2 flows
 
-The API Explorer is currently in closed beta. As such, not all features are yet available. Here is a non-exhaustive list of its current limitations:
+For now we partially support the “Implicit” OAuth2 grant type for automatic access token retrieval. To enable this feature you will need to include an `x-client-id` vendor extension in the API definition file, in the OAuth2 implicit flow object. This value should be the ID of a dedicated OAuth client application created on your Authorization server to identify your API consumers.
 
-- Branches are not yet supported: it works from the default branch of your documentation.
-- When multiple servers are mentioned in the definition file, all of them are accessible via the API Explorer (and the user can choose which one to use for their requests). It is not possible to hide some of them.
-- Rich responses are not yet supported: responses will display text only.
+E.g. for example:
+```yaml
+components:
+  securitySchemes:
+    "OAuth2 implicit flow":
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: "https://auth.example.org/oauth"
+          scopes: {}
+          x-client-id: "123456abcdef"
+```
+
+![Image of the authorization box with an implicit oauth2 flow and the “Get token” button](/docs/images/help/explorer/oauth-automatic-implicit-flow.png)
+
+All other OAuth2 flows are partially supported and will display an input field for the user to enter an access token manually (similarly to the **HTTP authorization** security scheme).
+
+![Image of the authorization box with a partially supported oauth2 flow and the access token field](/docs/images/help/explorer/oauth-access-token-field.png)
+
+## Server variables
+
+We support server variables in the API Explorer. Servers defined in the OpenAPI definition with variables in their paths are translated into enums and strings to be filled by the user of the API Explorer. It can be useful, for example, to choose between multiple server regions or to send requests to a subdomain that is specific to each API user.
+
+A default value can be set for each variable. If no value has been defined, the variable field is filled with the variable's name. Variable descriptions are displayed as tooltips above variables to guide the user into filling fields with the right information.
+
+The server variables are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
+
+> If the domain is not clearly defined in the definition (for example by having ```https://{my-variable}``` instead of ```https://{my-variable}.my-domain.com```), our proxy will block the request. More details about why we use a proxy [here](/help/documentation-experience/api-explorer/#proxy).
+{: .warning}
+
+Learn more about server variables in our [OpenAPI guide](/guides/openapi/specification/v3.1/understanding-structure/api-servers/#server-variables).
+
+### Example usage
+
+By defining two variables, `region` and `docId`, in the OpenAPI definition:
+```yaml
+servers:
+  - url: https://{region}.bump.sh/{docId}
+    description: The production API server
+    variables:
+      docId:
+        description: Can be found in your documentation settings.
+      region:
+        enum:
+          - "east-eu"
+          - "west-eu"
+        default: "east-eu"
+```
+
+The API Explorer renders a dynamic path with a select for the `region`, and an input for the `docId`:
+
+![Image of the topbar of the API Explorer that displays the verb, path, and the server variables to be filled by the user](/docs/images/help/explorer/explorer-server-variables-global-display.png)

@@ -1,10 +1,10 @@
 ---
 title: Introducing Manual Release Mode
 tags: [New]
-image: /images/changelog/manual-release.png
+image: /docs/images/changelog/manual-release.png
 ---
 
-![change-comparison.png](/images/changelog/manual-release.png)
+![change-comparison.png](/docs/images/changelog/manual-release.png)
 
 Gain greater control over your API Documentation deployments by using the Manual Release Mode for your API documentation.
 

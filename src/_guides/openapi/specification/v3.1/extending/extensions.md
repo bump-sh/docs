@@ -2,6 +2,7 @@
 title: Specification Extensions in OpenAPI
 authors: phil
 excerpt: Using extensions allows you to customize and integrate various tools through OpenAPI.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/extending/extensions/
 date: 2024-03-20
 ---
 
@@ -14,7 +15,7 @@ All those properties start with the `x-` naming convention to be identified as â
 
 ## Add a feedback link (`x-feedbackLink`)
 
-The `x-feedbackLink` object can be added directly in the `info` object of your OpenAPI document. Find out more in our [dedicated section](https://docs.bump.sh/help/publish-documentation/feedback/).
+The `x-feedbackLink` object can be added directly in the `info` object of your OpenAPI document. Find out more in our [dedicated section](/help/publish-documentation/feedback/).
 
 ## Add topics to your documentation (`x-topics`)
 

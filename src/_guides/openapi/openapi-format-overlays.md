@@ -30,7 +30,7 @@ Figuring out how to do all of this just from staring into an empty text editor c
 
 Copy in some OpenAPI into the box on the left. If you don’t have any handy why not use the [Train Travel API](https://github.com/bump-sh-examples/train-travel-api) by Bump.sh.
 
-![](images/guides/openapi-format-overlays/new-openapi-in-playground.png)
+![](/docs/images/guides/openapi-format-overlays/new-openapi-in-playground.png)
 
 ### Step 2 - Open the Overlay section
 
@@ -38,7 +38,7 @@ Click the “*OpenAPI Overlay”* button and it will go to a different section. 
 
 For example: “Add descriptions to tags” is pretty clear about what is going to be achieved by the actions of this overlay. The version number can be whatever. 
 
-![](/images/guides/openapi-format-overlays/overlay-name.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-name.png)
 
 ### Step 3 - Play with JSONPath
 
@@ -48,11 +48,11 @@ To start with JSONPath you use the `$` as the root, then `.` to go to a property
 
 When you type in a JSONPath in the Target field, the Target Preview will update, so you can be certain you are working on the right bit of the OpenAPI document.
 
-![](/images/guides/openapi-format-overlays/overlay-target.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-target.png)
 
 To update a specific tag, JSONPath supports filters, which use a `?(condition)` syntax. Here I am looking through an array of objects for the one which has a name property equal to “Stations”: `$.tags[?(@.name == "Stations")]`.
 
-![](/images/guides/openapi-format-overlays/overlay-target-better.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-target-better.png)
 
 The JSONPath worked, I can see the tag object is there in the target preview. Now to work on the action.
 
@@ -64,11 +64,11 @@ Update is basically a merge, taking the value provided and updating the target t
 
 To add/override the description for a specific tag, we can pass a new `description` property, along with any other properties from the [tags object](/guides/openapi/specification/v3.1/documentation/grouping-operations-with-tags/).
 
-![](/images/guides/openapi-format-overlays/overlay-update.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-update.png)
 
 Remove will not need to take a value, it just removes the target object entirely. For example, removing the tag Payments.
 
-![](/images/guides/openapi-format-overlays/overlay-remove.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-remove.png)
 
 There’s a whole lot more than can be done than just mess with tags, but instead of getting stuck into advanced overlaying, let’s see how these two actions run.
 
@@ -76,18 +76,18 @@ There’s a whole lot more than can be done than just mess with tags, but instea
 
 Click the *“Apply Overlay”* button and it’s back to the main Playground screen.
 
-![](/images/guides/openapi-format-overlays/apply-overlay.png)
+![](/docs/images/guides/openapi-format-overlays/apply-overlay.png)
 
 The main screen has OpenAPI input on the left and OpenAPI output on the right. The version on the right will have had the overlay applied as well as any other formatting rules, so we should see two changes to the `tags:` object: 
 
 1. Stations has a wonderful new description.
 2. The Payments tag has vanished entirely.
 
-![](/images/guides/openapi-format-overlays/output-difference.png)
+![](/docs/images/guides/openapi-format-overlays/output-difference.png)
 
 If its hard to see what has changed and you really want to be sure, you can click the *Show Diff* button to see the difference between the original OpenAPI document on the left, and the one with overlay changes on the right. Keep in mind that this will also show formatting changes, so there might be more changes than just the ones you made with the overlay.
 
-![](/images/guides/openapi-format-overlays/overlay-show-diff.png)
+![](/docs/images/guides/openapi-format-overlays/overlay-show-diff.png)
 
 Now you can keep iterating on the overlays you want to build, keep trying them out in this playground, then when its working nicely go back to the Overlay screen and click *“Download Overlay”*.
 

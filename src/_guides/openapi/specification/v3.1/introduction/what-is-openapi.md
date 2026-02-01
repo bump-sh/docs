@@ -2,6 +2,7 @@
 title: What is OpenAPI?
 authors: phil
 excerpt: OpenAPI describes how an Application Programming Interface (API) works, how a sequence of APIs work together, generate client code, create tests, apply design standards, deploy documentation, and much more.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/introduction/what-is-openapi/
 date: 2024-07-25
 ---
 
@@ -12,15 +13,13 @@ OpenAPI (the "OpenAPI Specification") is a standard for describing an API. OpenA
 
 OpenAPI provides a machine-readable structured data format which can be also be read and written by people, allowing for tooling to help API developers, API product managers, technical writers, and governance teams, all the way through the API lifecycle.
 
-![A flow diagram showing Requirements > Design > Configure / Publish / Develop, then Deploy and Test.](/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
+![A flow diagram showing Requirements > Design > Configure / Publish / Develop, then Deploy and Test.](/docs/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
 
 _Diagram created by [OpenAPI Initiative](https://www.openapis.org/)._
 
 ## Concepts
 
-As with anything in computing there's lots of terminology and some definitions vary or overlap, which can be a bit confusing. Here is a quick reminder to understand correctly every concept and call a cat a cat.
-
-![Call a cat a cat gif](https://storage.googleapis.com/bump-blog-resources/what-is-openapi/bump-api-call.gif)
+As with many things in computing, the terminology can be dense. Some definitions overlap, others vary, and it’s easy to get confused. Here’s a quick refresher to help clarify each concept and keep things straight.
 
 ## OpenAPI structure
 
@@ -62,18 +61,12 @@ Here is an example of a partial OpenAPI document covering one endpoint, written 
 
 ### OpenAPI Specification
 
-*Also known as OpenAPI spec / OAS*
-
-The "OpenAPI Specification" describes the [specification written and maintained](https://github.com/OAI/OpenAPI-Specification) by the [OpenAPI Initiative](https://openapis.org/), and published on [spec.openapis.org](https://spec.openapis.org/). This is a technical document that helps OpenAPI users and tooling vendors have one set of expectations about how things should work.
+Also known as OpenAPI spec / OAS, the "OpenAPI Specification" refers to the [official specification](https://github.com/OAI/OpenAPI-Specification) developed and maintained by the [OpenAPI Initiative](https://openapis.org/), and published at [spec.openapis.org](https://spec.openapis.org/). It’s a technical standard designed to ensure consistency for OpenAPI users and tooling providers, defining how things are expected to work.
 
 ### OpenAPI Document
 
-*Also known as OpenAPI documents / OpenAPI file / OpenAPI description / OpenAPI contract*
-
-An OpenAPI document describes how your API works, or how it will work when it's been built, and it's written following the OpenAPI specification. Think of this like a blueprint for your API. While an "API description" is a vague concept, OpenAPI Document is pretty concrete, it's where the OpenAPI that describes your API lives, and is usually something like `openapi.yaml` or `openapi.json`.
+Also known as OpenAPI documents / OpenAPI file / OpenAPI description / OpenAPI contract, an OpenAPI document outlines how your API behaves—or how it’s intended to behave once implemented—and is written according to the OpenAPI Specification. It serves as the blueprint for your API. While "API description" can be a broad term, an OpenAPI Document is specific: it’s the actual file, usually named openapi.yaml or openapi.json, that defines your API.
 
 ### OpenAPI Documentation
 
-*Also known as API Reference*
-
-When you have an OpenAPI document one of the main things people do with it is create API documentation, more specifically "API Reference Documentation", which is human-readable technical documentation showing an end user all the relevant information about endpoints, requests, responses, etc. Your documentation can be automatically generated from your OpenAPI document to avoid the pain of writing it by hand.
+Also known as API Reference, one of the most common uses of an OpenAPI document is to generate API documentation—specifically, "API Reference Documentation". This is human-readable technical content that presents all the key details about your API’s endpoints, parameters, requests, and responses. It can be automatically generated from your OpenAPI document, saving you from manually writing it all out.

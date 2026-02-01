@@ -2,6 +2,7 @@
 title: HTTP Requests
 authors: phil
 excerpt: Define HTTP requests in your OpenAPI to help users know the rules on what to send and how.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/http-requests/
 date: 2024-07-09
 ---
 

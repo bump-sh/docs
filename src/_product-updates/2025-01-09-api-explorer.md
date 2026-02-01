@@ -1,9 +1,9 @@
 ---
 title: Introducing the API Explorer
 tags: [New]
-image: /images/changelog/api-explorer.png
+image: /docs/images/changelog/api-explorer.png
 ---
-![api-explorer.png](/images/changelog/api-explorer.png)
+![api-explorer.png](/docs/images/changelog/api-explorer.png)
 
 We are happy to announce the launch of our API Explorer, our clients' most requested feature.
 
@@ -16,7 +16,7 @@ It can be difficult for API consumers to understand the complete behavior of an 
 
 Readability is key in a context of discovery. A dedicated view for the API Explorer next to the documentation means focusing on what’s important: the customer’s request, and the API’s response, while keeping the documentation just one click away. 
 
-![api-explorer-request.png](/images/changelog/api-explorer-request.png)
+![api-explorer-request.png](/docs/images/changelog/api-explorer-request.png)
 
 ## Deep support of OpenAPI
 Your [API definition file is a contract](https://bump.sh/blog/how-openapi-ensures-reliable-api-communication) between you and your users. That's why we went all-in on supporting the OpenAPI specification in our API Explorer. From simple properties such as strings and booleans, to more complex ones such as arrays of objects or oneOf/anyOf, try any sort of request, based on any API design.
@@ -34,7 +34,7 @@ Only the request is shared (the authentication method and the response are not).
 
 When your API evolves, [Bump.sh](http://bump.sh) automatically detects if a shared request has become obsolete, alerts your users of possible field changes, and provides them with a diff summary comparing the two versions.
 
-![api-explorer-share.png](/images/changelog/api-explorer-share.png)
+![api-explorer-share.png](/docs/images/changelog/api-explorer-share.png)
 
 ## Secure by design
 Testing requests sometimes involves using sensitive or confidential information. That’s why we built it safe from the ground up: we will never see any information about your APIs. Requests, execution and sharing are handled 100% client side.
@@ -60,4 +60,4 @@ And last, but not least, you can discover it now with [our demo API!](https://bu
 ## Live demo
 Yoan Gross, our Product Manager/Designer, made a demo to explain our vision and approach.
 
-[![api-explorer-demo.png](/images/changelog/api-explorer-demo.png)](https://youtu.be/mNnNbumbz08)
+[![api-explorer-demo.png](/docs/images/changelog/api-explorer-demo.png)](https://youtu.be/mNnNbumbz08)

@@ -2,6 +2,7 @@
 title: Multipart Form Data
 authors: phil
 excerpt: Dive into the world of API file uploads in OpenAPI.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/advanced/multipart-form-data/
 date: 2024-08-06
 ---
 

@@ -1,5 +1,9 @@
 ---
 title: Markdown support
+# We use a string variable here as it doesn't seem to be interpreted
+# correctly when used in the document below in a markdown code block.
+image_sizing_markdown: |
+  ![Alt text](/path/to/image.jpg "Image title" =dimension)
 ---
 
 - TOC
@@ -67,8 +71,25 @@ E.g.
 
 will render:
 
+
 > this is an important information to **standout**.
 {: .info}
+
+### Accordions
+
+Bump.sh support of accordions offers you a way to hide large content by default, for example if you need to share large tables.
+
+E.g.
+
+```markdown
+<details><summary>My accordion title</summary>
+My content
+</details>
+```
+
+will render:
+
+![Markdown accordion example](/docs/images/help/markdown-accordion.gif)
 
 ## Diagrams and charts (Mermaid Support)
 
@@ -95,7 +116,7 @@ To generate one, add a code block declared as `mermaid` inside a `description` o
 ```
 This example would render the following diagram [(see it live)](https://bump.sh/demo/doc/mermaid-demo/operation/operation-get-booking-parameter):
 
-![Mermaid example](/images/help/mermaid-diagram.png)
+![Mermaid example](/docs/images/help/mermaid-diagram.png)
 
 ## Images
 
@@ -109,9 +130,8 @@ Please, don't forget to add an [alt-text](https://en.wikipedia.org/wiki/Alt_attr
 ### Image sizing
 
 If you want to manually set the size of your image you can use our custom `=dimension` parameter just before the closing parenthesis as:
-```
-![Alt text](/path/to/image.jpg "Image title" =dimension)
-```
+
+<pre><code><%= resource.data.image_sizing_markdown %></code></pre>
 
 `=dimension` uses the following syntax:
 ```

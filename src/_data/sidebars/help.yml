@@ -15,7 +15,83 @@ resources:
         link: /getting-started/going-further/
     icon: zap
   - type: category
-    label: Integrate Bump.sh with your workflow
+    label: API documentation
+    icon: documentation
+    items:
+      - type: category
+        label: Publish documentation
+        link: /publish-documentation/
+        items:
+          - type: page
+            label: Create and manage documentation
+            link: /publish-documentation/create-and-manage-documentation/
+          - type: page
+            label: Deploy and release management
+            link: /publish-documentation/deploy-and-release-management/
+          - type: page
+            label: Branching
+            link: /publish-documentation/branching/
+          - type: page
+            label: Documentation access management
+            link: /publish-documentation/documentation-access-management/
+          - type: page
+            label: SEO & GEO
+            link: /publish-documentation/seo-geo/
+          - type: page
+            label: Provide links to external resources
+            link: /publish-documentation/external-links/
+          - type: page
+            label: Get feedback from users
+            link: /publish-documentation/feedback/
+      - type: category
+        label: Documentation experience
+        link: /documentation-experience/
+        items:
+          - label: API Explorer
+            link: /documentation-experience/api-explorer/
+          - label: Markdown support
+            link: /documentation-experience/markdown-support/
+          - label: Topics
+            link: /documentation-experience/topics/
+          - label: Ask AI & Markdown rendering
+            link: /documentation-experience/ask-ai-markdown-rendering/
+      - type: category
+        label: Customization options
+        link: /customization-options/
+        items:
+          - label: Custom domains
+            link: /customization-options/custom-domains/
+          - label: Branding customization
+            link: /customization-options/color-logo-meta-images/
+          - label: Login page
+            link: /customization-options/login/
+          - label: Operations & navigation
+            link: /customization-options/operations-navigation/
+          - label: Head injection (analytics and tools integration)
+            link: /customization-options/head-injection-analytics-tools-integration/
+          - label: Embed mode
+            link: /customization-options/embed-mode/
+      - type: category
+        label: Changes management
+        link: /changes-management/
+        items:
+          - label: Changelog
+            link: /changes-management/changelog/
+          - label: Integrations
+            link: /changes-management/integrations/
+  - type: category
+    label: Hubs
+    link: /hubs/
+    icon: hub
+    items:
+      - label: Create and manage hubs
+        link: /hubs/create-and-manage-hubs/
+      - label: General hub settings
+        link: /hubs/hub-settings/
+      - label: Hub UI customization
+        link: /hubs/customize-ui/
+  - type: category
+    label: CI & integrations
     link: /continuous-integration/
     icon: terminal
     items:
@@ -34,99 +110,18 @@ resources:
       - label: API (advanced)
         link: /continuous-integration/api/
   - type: category
-    label: Publish Documentation
-    link: /publish-documentation/
-    icon: book-open-check
-    items:
-      - type: page
-        label: Create and manage documentation
-        link: /publish-documentation/create-and-manage-documentation/
-      - type: page
-        label: Deploy and release management
-        link: /publish-documentation/deploy-and-release-management/
-      - type: page
-        label: Branching
-        link: /publish-documentation/branching/
-      - type: page
-        label: Documentation access management
-        link: /publish-documentation/documentation-access-management/
-      - type: page
-        label: SEO
-        link: /publish-documentation/seo/
-      - type: page
-        label: Provide links to external resources
-        link: /publish-documentation/external-links/
-      - type: page
-        label: Get feedback from users
-        link: /publish-documentation/feedback/
-  - type: category
-    label: Documentation experience
-    link: /documentation-experience/
-    icon: pencil-line
-    items:
-      - label: API Explorer
-        link: /documentation-experience/api-explorer/
-      - label: Markdown support
-        link: /documentation-experience/markdown-support/
-      - label: Topics
-        link: /documentation-experience/topics/
-  - type: category
-    label: Customization Options
-    link: /customization-options/
-    icon: sparkles
-    items:
-      - label: Custom domains
-        link: /customization-options/custom-domains/
-      - label: Color, logo and meta images
-        link: /customization-options/color-logo-meta-images/
-      - label: Login page
-        link: /customization-options/login/
-      - label: Operations & Navigation
-        link: /customization-options/operations-navigation/
-      - label: Embed mode
-        link: /customization-options/embed-mode/
-  - type: category
-    label: Changes management
-    link: /changes-management/
-    icon: bell-dot
-    items:
-      - label: Changelog
-        link: /changes-management/changelog/
-      - label: Integrations
-        link: /changes-management/integrations/
-  - type: category
-    label: Hubs
-    link: /hubs/
-    icon: hub
-    items:
-      - label: Create and manage hubs
-        link: /hubs/create-and-manage-hubs/
-      - label: General hub settings
-        link: /hubs/hub-settings/
-      - label: Hub UI customization
-        link: /hubs/customize-ui/
-  - type: category
     label: Organizations
     link: /organizations/
     icon: org
     items:
       - label: Create and manage organizations
         link: /organizations/create-and-manage-organizations/
-      - label: Organization Access Management
+      - label: Organization access management
         link: /organizations/organization-access-management/
-      - label: Personal user account migration
-        link: /organizations/personal-user-account-migration/
-  - label: Account
-    icon: user
-    items:
-      - label: User account settings
-        link: /account/user-account-settings/
       - label: Billing
-        link: /account/billing/
-      - label: Github Student
-        link: /account/github-student/
+        link: /organizations/billing/
   - type: category
-    label: Specification Support
+    label: Specification support
     link: /specification-support/
     icon: code-file
     items:
@@ -136,6 +131,8 @@ resources:
             link: /specification-support/json-schema/
           - label: Multiple servers
             link: /specification-support/multiple-servers/
+          - label: Overlays
+            link: /specification-support/overlays/
           - label: Polymorphism
             link: /specification-support/polymorphism/
           - label: References
@@ -144,8 +141,8 @@ resources:
             link: /specification-support/extensions/
           - label: Badges
             link: /specification-support/doc-badges/
-          - label: Overlays
-            link: /specification-support/overlays/
+          - label: Custom meta tags
+            link: /specification-support/meta-tags/
       - label: OpenAPI support
         link: /specification-support/openapi-support/
         items:
@@ -153,8 +150,13 @@ resources:
             link: /specification-support/openapi-support/webhooks/
           - label: Custom code samples
             link: /specification-support/doc-code-samples/
+          - label: Change tags display name
+            link: /specification-support/openapi-support/x-display-name/
       - label: AsyncAPI support
         link: /specification-support/asyncapi-support/
   - label: FAQ
     link: /faq/
     icon: help-circle
+  - label: Support and SLA
+    link: /support-and-sla/
+    icon: heart-plus

@@ -2,6 +2,7 @@
 title: Basic Structure
 authors: phil
 excerpt: Learn your way around the OpenAPI description format for HTTP APIs by learning the basic structure.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/understanding-structure/basic-structure/
 date: 2024-07-02
 ---
 
@@ -351,7 +352,7 @@ The name is often displayed to users in human-readable documentation so its best
 Putting it all together, here is a simple example of an OpenAPI document:
 
 ```yaml
-openapi: 3.0.3
+openapi: 3.1.1
 info:
   title: Sample API
   description: A sample API to illustrate OpenAPI concepts.

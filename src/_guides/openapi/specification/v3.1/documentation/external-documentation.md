@@ -2,6 +2,7 @@
 title: External Documentation
 authors: phil
 excerpt: Link OpenAPI documentation with other guides and tutorials.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/documentation/external-documentation/
 date: 2024-08-08
 ---
 
@@ -67,4 +68,4 @@ components:
 
 When you generate API documentation for the API description above, you'll see the link rendered like this:
 
-![How the externalDocs property is displayed in generated API documentation.](/images/guides/tag-with-externaldocs.png)
+![How the externalDocs property is displayed in generated API documentation.](/docs/images/guides/tag-with-externaldocs.png)

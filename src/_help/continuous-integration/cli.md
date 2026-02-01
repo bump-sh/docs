@@ -111,7 +111,7 @@ bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
 > You can find your own `my-documentation` slug and `$DOC_TOKEN` api key from your [documentation settings](https://bump.sh/docs).
 {: .info}
 
-You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature are available on [this dedicated help page](https://docs.bump.sh/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
+You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature are available on [this dedicated help page](/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
 
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN --branch staging

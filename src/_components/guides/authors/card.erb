@@ -13,12 +13,12 @@
       <div class="links">
         <% if @author.email.present? %>
           <a href="<%= "mailto:#{@author.email}" %>">
-            <%= svg "images/icons/mail.svg" %>
+            <%= svg "/docs/images/icons/mail.svg" %>
           </a>
         <% end %>
         <% if @author.github.present? %>
           <a href="<%= @author.github %>">
-            <%= svg "images/icons/github.svg" %>
+            <%= svg "/docs/images/icons/github.svg" %>
           </a>
         <% end %>
       </div>

@@ -1,10 +1,10 @@
 ---
 title: Changelog Diff
 tags: [Improvement]
-image: /images/changelog/changelog-diff.png
+image: /docs/images/changelog/changelog-diff.png
 ---
 
-![changelog-diff.png](/images/changelog/changelog-diff.png)
+![changelog-diff.png](/docs/images/changelog/changelog-diff.png)
 
 The lack of information between changes was repeatedly highlighted in our discussions with some of you. As the information contained in a diff was not obvious, it was sometimes difficult to visualize critical updates, which led us to take action.
 

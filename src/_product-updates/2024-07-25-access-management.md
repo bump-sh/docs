@@ -1,10 +1,10 @@
 ---
 title: Access management
 tags: [Improvement]
-image: /images/changelog/changelog-access-management.png
+image: /docs/images/changelog/changelog-access-management.png
 ---
 
-![changelog-entry-page.png](/images/changelog/changelog-access-management.png)
+![changelog-entry-page.png](/docs/images/changelog/changelog-access-management.png)
 
 It's been a while since we added the first pillar of our access management system. It gave documentation maintainers a way to grant access to internal users ("members") and external users ("guests").
 
@@ -17,7 +17,7 @@ On another note, we know that SSO can be very handy for companies with a lot of 
 - One for for internal users ("members"), 
 - One for external users ("guests"). 
 
-The SSO login page can now be customized with your company's logo, providing a seamless experience for your users. [Learn more about SSO here →](https://docs.bump.sh/help/organizations/organization-access-management/#sso)
+The SSO login page can now be customized with your company's logo, providing a seamless experience for your users. [Learn more about SSO here →](/help/organizations/organization-access-management/#sso)
 
 We hope these improvements will make it easier for you to manage access to the platform. 
 

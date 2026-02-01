@@ -13,6 +13,6 @@ Bump.sh offers various tools to simplify this process.
 
 This section also covers the concept of [branching](/help/publish-documentation/branching/), which allows you to have multiple versions and/or environements of an API (such as v1.0/v2.0 or production and staging).
 
-Finally, [Access Management](/help/publish-documentation/documentation-access-management/) details the different levels of accessibility for your documentation and how to secure access to it.
+Finally, [access management](/help/publish-documentation/documentation-access-management/) details the different levels of accessibility for your documentation and how to secure access to it.
 
 Next step: [Create your documentation](/help/publish-documentation/create-and-manage-documentation/).

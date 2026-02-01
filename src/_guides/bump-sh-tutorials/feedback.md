@@ -26,13 +26,13 @@ Once you’ve chosen a tool:
 
 The tools all have a slightly different approach to form building, but just to illustrate the idea, the Notion builder looks like this.
 
-![A few text boxes with questions asking "What are we doing well?", "What would you like to see improved?", and "Email"](/images/guides/feedback/notion-form-builder.png)
+![A few text boxes with questions asking "What are we doing well?", "What would you like to see improved?", and "Email"](/docs/images/guides/feedback/notion-form-builder.png)
 
 - **In Google Forms**: Click the “Send” button, select the link icon, and copy the link (something like `https://forms.gle/XYZ`).
 - **In Typeform**: Click "Share" at the top, then copy the link (typically `https://yourformname.typeform.com/to/XYZ`).
 - **In Notion**: Click "Share Form", then copy the link (`https://www.notion.so/bumpsh/XYZ`)
 
-![The "Share form" button has been activated, opening a URL box with a "Copy link" next to it](/images/guides/feedback/notion-send-form.png)
+![The "Share form" button has been activated, opening a URL box with a "Copy link" next to it](/docs/images/guides/feedback/notion-send-form.png)
 
 Now that you have the link to your form, we can add it to your API documentation.
 
@@ -63,7 +63,7 @@ Click save, then deploy Bump.sh API Documentation again however you normally dep
 
 Now, go to your API documentation on Bump.sh to confirm the feedback form is embedded correctly. You should see a “Give feedback” link up at the top of the API documentation, or it will use whatever other text you provided in `label`.
 
-![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/images/help/feedback-button.png)
+![Screenshot of an example API Documentation on Bump.sh, with the Give feedback button highlighted at the top right of the screen.](/docs/images/help/feedback-button.png)
 
 Click the link that has appeared, and try sending a test submission to make sure it works as expected. When you do this it's best to do it in a private window to flush out any odd permissions issues, because you want to emulate an end-user, and they won't be logged in to the form builder software either.
 
@@ -73,7 +73,7 @@ If you're using GitHub, and the audience using the API have access to this repos
 
 GitHub has its own form builder which you can use to create something very similar.
 
-![Text-boxes embedded in a new Github issue using the GitHub Form syntax](/images/guides/feedback/github-forms.png)
+![Text-boxes embedded in a new Github issue using the GitHub Form syntax](/docs/images/guides/feedback/github-forms.png)
 
 Create a new file `.github/ISSUE_TEMPLATE/feedback.yaml`, and use this example to start you off:
 

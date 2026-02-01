@@ -1,10 +1,10 @@
 ---
 title: Lightning-fast API documentation rendering
 tags: [Improvement]
-image: /images/changelog/bump-sh-performance-enhancements.png
+image: /docs/images/changelog/bump-sh-performance-enhancements.png
 ---
 
-![improved-access-management.png](/images/changelog/bump-sh-performance-enhancements.png)
+![improved-access-management.png](/docs/images/changelog/bump-sh-performance-enhancements.png)
 
 Fast-loading page is a must these days, both for human users and search engines.
 

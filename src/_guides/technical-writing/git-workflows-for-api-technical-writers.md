@@ -51,7 +51,7 @@ If you are a technical writer working with a team generating OpenAPI-based docum
 
 **Use code annotations for one-time generation**: Rather than using code annotations as the only API documentation method, consider generating the OpenAPI Specification once, then adopting the OpenAPI Specification document as the primary source of truth. This avoids the need for technical writers to edit source code, while reducing the need to author a YAML-based OpenAPI document from scratch. In this scenario, the OpenAPI document may be kept in the same or separate repository. 
 
-**OpenAPI specification overlays**: The use of [OpenAPI overlays](https://github.com/OAI/Overlay-Specification) allows the technical writer to replace a portion of an existing OpenAPI document with new content. This allows technical writers to enrich the documentation without cluttering the codebase while operating independently. Overlay support varies by vendor, but is supported [by Bump.sh](https://docs.bump.sh/help/specification-support/overlays/). 
+**OpenAPI specification overlays**: The use of [OpenAPI overlays](https://github.com/OAI/Overlay-Specification) allows the technical writer to replace a portion of an existing OpenAPI document with new content. This allows technical writers to enrich the documentation without cluttering the codebase while operating independently. Overlay support varies by vendor, but is supported [by Bump.sh](/help/specification-support/overlays/). 
 
 ## For Greenfield API Design, Collaboration is Key
 

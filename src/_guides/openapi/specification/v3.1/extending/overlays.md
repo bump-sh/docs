@@ -2,6 +2,7 @@
 title: Extending OpenAPI Documents with Overlays
 authors: phil
 excerpt: Use OpenAPI Overlays to enrich you API descriptions without creating conflicts in the source code.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/extending/overlays/
 date: 2024-03-20
 ---
 
@@ -103,7 +104,7 @@ actions:
 
 These descriptions (which can be much longer and full of even more Markdown) will then show up in API Documentation, pride of place, ready to explain the concepts to the user before they get stuck into what specific endpoints are about.
 
-![Untitled](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
+![A screenshot of Bump.sh generated API documentation on the Operations tag page, with the Markdown from the above example rendered as HTML including a link to the contact us page.](/docs/images/guides/efficient-tech-writing-process/bump-tag-description.png)
 
 Here’s the tag description rendered in Bump.sh.
 
@@ -122,7 +123,7 @@ x-topics:
 
 In [Bump.sh](http://Bump.sh) this will create a new navigation entry, and insert the Markdown content from the reference guide right into the main documentation.
 
-![Untitled](/images/guides/efficient-tech-writing-process/bump-x-topics.png)
+![Untitled](/docs/images/guides/efficient-tech-writing-process/bump-x-topics.png)
 
 Whether you inject `x-topics` with Overlays or directly into OpenAPI in the source code, the result is the same.
 

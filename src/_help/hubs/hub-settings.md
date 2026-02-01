@@ -22,7 +22,7 @@ The Custom Domain option allows you to keep your users within your brand experie
 
 This option allows you to add a description to your Hub, and supports Markdown for enhanced text formatting. For instance, you can explain what this collection includes in terms of documentation, share important details, or even provide a contact for questions.
 
-![](/images/help/slug-hub.png)
+![](/docs/images/help/slug-hub.png)
 
 ## Hub Access
 
@@ -32,8 +32,5 @@ Access management can be configured either at the [documentation level](/help/pu
 * If a Hub is private, all docs in that Hub are private.
 
 ## API Explorer
-
-> This feature is currently in Beta test. If you are not a Beta tester, it may not appear in your Hub settings.
-{: .note}
 
 Activating the feature on a hub will activate the feature for all docs in the hub.

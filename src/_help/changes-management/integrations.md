@@ -15,7 +15,7 @@ Bump.sh integration with Slack allows you to notify team members working with yo
 
 After configuration, remember to test the proper reception of notifications with the test button.
 
-![](/images/help/slack-integration.png)
+![](/docs/images/help/slack-integration.png)
 
 ## Webhooks
 
@@ -31,11 +31,11 @@ Notifications can be sent to several URLs, allowing better integration with your
 
 Webhooks can be configured from the Integrations tab in your documentation settings.
 
-![](/images/help/add-webhook.png)
+![](/docs/images/help/add-webhook.png)
 
 After adding your webhook, a confirmation will be displayed. From this screen, you can modify the payload URL and find the secret token to be used (which helps securing requests coming from Bump).
 
-![](/images/help/webhook-secret-token.png)
+![](/docs/images/help/webhook-secret-token.png)
 
 Here is a pseudo-code (in Ruby language) which you should implement in your server if you want to check the authenticity of the received payload:
 

@@ -8,6 +8,8 @@ title: Important concepts
 Before we proceed further, we wanted to share some vocabulary to clarify what we are talking about throughout this documentation.
 The terminology used here aims to be as accurate as possible, but you may encounter different terms elsewhere. We have chosen to use the most common and meaningful terms.
 
+![Bump.sh global workflow including deploying, release and access management](/docs/images/help/bump-sh-global-workflow.png)
+
 ## API definition
 
 An API definition is the representation of an API written in compliance with an existing specification.
@@ -15,7 +17,7 @@ It is sometimes referred to as an API schema, API contract, or even [API specifi
 
 As of today, Bump.sh supports the following specifications: [OpenAPI (Swagger)](https://spec.openapis.org/oas/latest.html), and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/v3.0.0).
 
-We provide a detailed introduction to API definitions [through this guide](https://docs.bump.sh/guides/api-basics/api-contracts-extended-introduction/).
+We provide a detailed introduction to API definitions [through this guide](/guides/api-basics/api-contracts-extended-introduction/).
 
 ## API contract
 
@@ -29,7 +31,7 @@ An API document refers to the file containing an API definition.
 
 Specifications are the official standards that define a format for describing an API, such as OpenAPI or AsyncAPI. These standards outline a set of elements and rules to follow when writing an API definition.
 
-To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi) and [AsyncAPI](https://docs.bump.sh/guides/asyncapi/what-is-asyncapi/).
+To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi) and [AsyncAPI](/guides/asyncapi/what-is-asyncapi/).
 
 ## Deployment
 

@@ -2,6 +2,7 @@
 title: JSON Schema in OpenAPI
 authors: phil
 excerpt: Learn how JSON Schema and OpenAPI Schema are similar and how they are different.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/data-models/json-schema/
 date: 2024-07-17
 ---
 

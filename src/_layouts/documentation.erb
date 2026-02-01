@@ -3,13 +3,20 @@ layout: application
 ---
 
 <% @entries = site.data.sidebar_entries[resource.data.sidebar_name] %>
+
 <%= render Shared::Sidebar.new(data: @entries, current: resource) do |sidebar| %>
   <% if resource.data.sidebar_title.present? %>
     <% sidebar.slot :before do %>
-      <h1>
+      <h2>
         <%= resource.data.sidebar_title %>
-        <span class="version"><%= resource.data.sidebar_version %></span>
-      </h1>
+        <% if resource.data.sidebar_versions.any? %>
+          <%= render Guides::VersionSelector.new(
+            entries: site.data.sidebar_entries,
+            current_url: resource.relative_url,
+            current_version: resource.data.sidebar_version,
+            available_versions: resource.data.sidebar_versions) %>
+        <% end %>
+      </h2>
     <% end %>
   <% end %>
   <% if resource.data.display_cta.present? %>

@@ -2,6 +2,7 @@
 title: Schema Composition
 authors: phil
 excerpt: Use oneOf, anyOf, and allOf in OpenAPI & JSON Schema for polymorphism and composition.
+canonical_url: https://docs.bump.sh/guides/openapi/specification/v3.2/data-models/schema-composition/
 date: 2024-07-24
 ---
 
