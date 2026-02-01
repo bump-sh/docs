@@ -57,7 +57,7 @@ workflows:
           - condition: $statusCode == 200
           - condition: $response.body.trips.length > 0
         outputs:
-          tripId: $response.body.trips[0].id
+          tripId: $response.body#/trips/0/id
         
       - stepId: book
         operationId: create-booking

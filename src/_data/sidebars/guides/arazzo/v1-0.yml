@@ -30,11 +30,8 @@ resources:
   - type: category
     label: Working with Arazzo
     items:
-      - type: category
-        label: Runtime
-        items:
-          - label: Runtime Expressions
-            link: /working-with-arazzo/runtime/runtime-expressions/
+      - label: Runtime Expressions
+        link: /working-with-arazzo/runtime-expressions/
       - label: Workflow Documentation
         link: /working-with-arazzo/workflow-documentation/
       - label: API Testing

@@ -106,7 +106,7 @@ workflows:
         successCriteria:
           - condition: $statusCode == 200
         outputs:
-          tripId: $response.body.trips[0].id
+          tripId: $response.body#/trips/0/id
 
       - stepId: createBooking
         operationId: create-booking
@@ -118,7 +118,7 @@ workflows:
         successCriteria:
           - condition: $statusCode == 201
         outputs:
-          bookingId: $response.body.id
+          bookingId: $response.body#/id
 ```
 
 This workflow defines two steps: searching for trips and creating a booking. It specifies how to pass parameters and handle outputs between steps, so it's clear which bits come from where, and clearly defining what success looks like: e.g: this API uses a 201 Created status code, where some poorly designed APIs might use 200 OK for everything, or a 202 Accepted for async operations.

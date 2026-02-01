@@ -119,7 +119,7 @@ workflows:
           - condition: $statusCode == 200
         
         outputs:
-          tripId: $response.body.trips[0].id
+          tripId: $response.body#/trips/0/id
       
       - stepId: createBooking
         description: Create booking for the selected trip
@@ -134,7 +134,7 @@ workflows:
           - condition: $statusCode == 201
         
         outputs:
-          bookingId: $response.body.id
+          bookingId: $response.body#/id
 ```
 
 Each workflow contains:
@@ -256,7 +256,7 @@ workflows:
           - condition: $statusCode == 200
 
         outputs:
-          tripId: $response.body.trips[0].id
+          tripId: $response.body#/trips/0/id
 
       - stepId: createBooking
         description: Create booking for the selected trip
@@ -270,7 +270,7 @@ workflows:
           - condition: $statusCode == 201
 
         outputs:
-          bookingId: $response.body.id
+          bookingId: $response.body#/id
 ```
 
 ## Next Steps
