@@ -46,7 +46,7 @@ Arazzo has seen growing interest across the API community with most tooling vend
 
 ## The Future
 
-Arazzo 1.1 is already underway wih non-breaking improvements potentially including:
+Arazzo 1.1 is already underway with non-breaking improvements potentially including:
 
 - Support for JSONPath as well as JSON Pointer and XPath.
 - Supporting AsyncAPI for event-driven workflows.

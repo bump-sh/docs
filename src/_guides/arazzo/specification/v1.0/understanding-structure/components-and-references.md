@@ -8,7 +8,7 @@ date: 2025-01-23
 - TOC
 {:toc}
 
-Arazzo helps teams and tools not waste time and effort writing and parsing the same stuff over and over again. By defining reusable components just the once, they can be reused in various parts of the workflow. This not only makes it quicker to write them and cuts down on the maintenance burden, but far more importantly it drastically reduces the chance of human error that can cause inconsistencies.
+Arazzo helps teams and tools not waste time and effort writing and parsing the same stuff over and over again. By defining reusable components just once, they can be reused in various parts of the workflow. This not only makes it quicker to write them and cuts down on the maintenance burden, but far more importantly it drastically reduces the chance of human error that can cause inconsistencies.
 
 Reuse in Arazzo is built upon two concepts: the `components` object, and the `reference` keyword.
 
