@@ -121,7 +121,7 @@ workflows:
           bookingId: $response.body#/id
 ```
 
-This workflow defines two steps: searching for trips and creating a booking. It specifies how to pass parameters and handle outputs between steps, so it's clear which bits come from where, and clearly defining what success looks like: e.g: this API uses a 201 Created status code, where some poorly designed APIs might use 200 OK for everything, or a 202 Accepted for async operations.
+This workflow defines two steps: searching for trips and creating a booking. It specifies how to pass parameters and handle outputs between steps, so it's clear which bits come from where, and clearly defining what success looks like: e.g: this API uses a `201 Created` status code, where some poorly designed APIs might use `200 OK` for everything, or a `202 Accepted` for async operations.
 
 This clarity allows tools to generate accurate documentation, run tests, and even automate these workflows reliably.
 
