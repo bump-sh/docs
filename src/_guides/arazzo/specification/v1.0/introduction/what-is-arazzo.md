@@ -18,7 +18,7 @@ For years OpenAPI has made "API reference documentation" considerably better, go
 
 This API reference documentation provides detailed information about specific bits of the API's interface, like all the endpoints, the parameters, request & response bodies, status codes, content types, etc. That's really handy stuff, even more so if there are no SDKs built for an API, but it does not help anyone understand how to actually use these API endpoints together to accomplish a real task.
 
-Some HTTP APIs are treated like a data source, with CRUD operations being completely independent of each other, but REST APIs are most commonly used to define workflows. Using our train travel API example, a typical user journey to book a ticket could involve a whole bunch of steps:
+Some HTTP APIs are treated like a data source, with CRUD operations being completely independent of each other, but REST APIs are most commonly used to define workflows. Using our [Train Travel API](https://bump.sh/bump-examples/doc/train-travel-api/) example, a typical user journey to book a ticket could involve a whole bunch of steps:
 
 1. Search for stations in a particular area.
 2. See available trips between origin and destination stations, on a certain date, and with a dog!
