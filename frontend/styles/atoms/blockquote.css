@@ -1,7 +1,7 @@
 :where(blockquote) {
   --callout-bg-color: var(--bg-color-secondary);
   --callout-border-color: var(--border-color-default);
-  --callout-icon-path: url(/images/icons/info.svg);
+  --callout-icon-path: url(/docs/images/icons/info.svg);
   border-left: 3px solid var(--border-color-default);
   margin-inline: 0;
   padding: var(--spacing-1) var(--spacing-3);
@@ -19,7 +19,7 @@
   &:where(.info, .success, .warning, .error) {
     --callout-bg-color: var(--bg-color-secondary);
     --callout-border-color: var(--border-color-default);
-    --callout-icon-path: url(/images/icons/info.svg);
+    --callout-icon-path: url(/docs/images/icons/info.svg);
 
     background-color: var(--callout-bg-color);
     border-left: 4px solid var(--callout-border-color);
@@ -45,25 +45,25 @@
     &.info {
       --callout-bg-color: var(--bg-color-info);
       --callout-border-color: var(--text-color-info);
-      --callout-icon-path: url(/images/icons/info.svg);
+      --callout-icon-path: url(/docs/images/icons/info.svg);
     }
 
     &.success {
       --callout-bg-color: var(--bg-color-success);
       --callout-border-color: var(--text-color-success);
-      --callout-icon-path: url(/images/icons/success.svg);
+      --callout-icon-path: url(/docs/images/icons/success.svg);
     }
 
     &.warning {
       --callout-bg-color: var(--bg-color-warning);
       --callout-border-color: var(--text-color-warning);
-      --callout-icon-path: url(/images/icons/warning.svg);
+      --callout-icon-path: url(/docs/images/icons/warning.svg);
     }
 
     &.error {
       --callout-bg-color: var(--bg-color-error);
       --callout-border-color: var(--text-color-error);
-      --callout-icon-path: url(/images/icons/error.svg);
+      --callout-icon-path: url(/docs/images/icons/error.svg);
     }
   }
 }

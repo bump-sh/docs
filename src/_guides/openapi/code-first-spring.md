@@ -193,7 +193,7 @@ Once the application is running and the HTTP server is available, the OpenAPI
 description will be available at <http://localhost:8080/openapi> for JSON, or
 <http://localhost:8080/openapi.yaml> for YAML.
 
-![](/images/guides/code-first-spring/springdoc-initial.png)
+![](/docs/images/guides/code-first-spring/springdoc-initial.png)
 
 Very basic, and it's only saying "what" which misses out on the critical "why"
 and "how" aspect of API documentation, but it will be a start. 
@@ -312,7 +312,7 @@ Of course these example operations are very basic, but this is a good place to
 get stuck into letting users know what to expect when they call your API. Is the
 response paginated? Is there a default sort order? 
 
-![](/images/guides/code-first-spring/operation-description.png)
+![](/docs/images/guides/code-first-spring/operation-description.png)
 
 **Tagging Controllers**
 
@@ -375,7 +375,7 @@ Parameter descriptions can contain all sorts of handy information, like letting 
 string parameter is a UUID. This is useful for consumers of the API to understand
 how to use the API correctly without having to look at the code or ask questions.
 
-![](/images/guides/code-first-spring/parameter-description.png)
+![](/docs/images/guides/code-first-spring/parameter-description.png)
 
 **Adding Responses**
 

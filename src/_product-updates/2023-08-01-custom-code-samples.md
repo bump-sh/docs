@@ -1,10 +1,10 @@
 ---
 title: Custom code samples
 tags: [Improvement]
-image: /images/changelog/code-samples-support-openapi.png
+image: /docs/images/changelog/code-samples-support-openapi.png
 ---
 
-![bump-sh-api-branch-management.png](/images/changelog/code-samples-support-openapi.png)
+![bump-sh-api-branch-management.png](/docs/images/changelog/code-samples-support-openapi.png)
 
 We now support the `x-codeSamples` extension that let you set language-specific code samples you expect your users to work with.
 

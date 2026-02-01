@@ -3,7 +3,7 @@ title: New Command Line Interface era
 tags: [New]
 ---
 
-![new-cli.gif](/images/changelog/new-cli.gif)
+![new-cli.gif](/docs/images/changelog/new-cli.gif)
 
 Goodbye to our legacy ruby gem, and hello to our new node-based CLI 👋.
 

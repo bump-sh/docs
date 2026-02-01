@@ -1,10 +1,10 @@
 ---
 title: API Explorer - Authentication support
 tags: [New]
-image: /images/changelog/api-explorer-auth.png
+image: /docs/images/changelog/api-explorer-auth.png
 ---
 
-![api-explorer-auth.png](/images/changelog/api-explorer-auth.png)
+![api-explorer-auth.png](/docs/images/changelog/api-explorer-auth.png)
 
 Authentication is now supported for APIs providing authentication methods. 
 

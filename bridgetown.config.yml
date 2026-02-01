@@ -25,9 +25,10 @@ template_engine: erb
 include: ["_redirects"]
 
 metadata:
-  favicon_light: "/images/favicon.svg"
-  favicon_dark: "/images/favicon-dark.svg"
+  favicon_light: "/docs/images/favicon.svg"
+  favicon_dark: "/docs/images/favicon-dark.svg"
 
+keep_files: ["docs"]
 # Other options you might want to investigate:
 #
 # base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,

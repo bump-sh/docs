@@ -22,7 +22,7 @@ Use the `x-codeSamples` property inside an Operation OpenAPI object. The `x-code
 
 The following screen capture shows the rendering of adding two code samples `cURL` and `Ruby` to your Operation.
 
-![x-codesamples.gif](/images/help/x-codesamples.gif)
+![x-codesamples.gif](/docs/images/help/x-codesamples.gif)
 
 This is done by adding the following `x-codeSamples` array to your API definition:
 

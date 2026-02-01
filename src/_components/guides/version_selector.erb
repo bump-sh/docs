@@ -2,7 +2,7 @@
   <button class="dropdown-trigger" data-toggle-target="button" data-action="toggle#click" aria-haspopup="true" aria-expanded="false">
     <span class="dropdown-label"><%= @current_version %></span>
     <span class="dropdown-caret">
-      <%= svg "images/icons/caret-right.svg" %>
+      <%= svg "/docs/images/icons/caret-right.svg" %>
     </span>
   </button>
   <div class="dropdown-menu" data-toggle-target="item" data-toggle-active="false" role="menu">
@@ -11,7 +11,7 @@
         <% if version == @current_version %>
           <li class="dropdown-item is-current" aria-current="true" data-action="click->toggle#click">
             <span><%= version %></span>
-            <%= svg "images/icons/checkmark.svg" %>
+            <%= svg "/docs/images/icons/checkmark.svg" %>
           </li>
         <% elsif page_exist_in_version?(version) %>
           <li class="dropdown-item">

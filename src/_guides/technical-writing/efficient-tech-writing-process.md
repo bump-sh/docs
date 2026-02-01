@@ -156,7 +156,7 @@ actions:
 
 These descriptions (which can be much longer and full of even more Markdown) will then show up in API Documentation, pride of place, ready to explain the concepts to the user before they get stuck into what specific endpoints are about.
 
-![Untitled](/images/guides/efficient-tech-writing-process/bump-tag-description.png)
+![Untitled](/docs/images/guides/efficient-tech-writing-process/bump-tag-description.png)
 
 Here’s the tag description rendered in Bump.sh.
 
@@ -175,7 +175,7 @@ x-topics:
 
 In [Bump.sh](https://bump.sh) this will create a new navigation entry, and insert the Markdown content from the reference guide right into the main documentation.
 
-![Untitled](/images/guides/efficient-tech-writing-process/bump-x-topics.png)
+![Untitled](/docs/images/guides/efficient-tech-writing-process/bump-x-topics.png)
 
 Whether you inject `x-topics` with Overlays or directly into OpenAPI in the source code, the result is the same.
 

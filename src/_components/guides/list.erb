@@ -12,7 +12,7 @@
   <% if @remaining_count > 0 %>
     <a href="<%= relative_url "/guides/#{Bridgetown::Utils.slugify(@category_name)}" %>" class="card browse-all">
       <span>Browse <strong><%= @remaining_count %> more </strong> guides</span>
-      <%= svg "images/icons/arrow-right-circle.svg" %>
+      <%= svg "/docs/images/icons/arrow-right-circle.svg" %>
     </a>
   <% end %>
 </guide-list>

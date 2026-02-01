@@ -1,10 +1,10 @@
 ---
 title: Mermaid support 
 tags: [New]
-image: /images/changelog/mermaid.png
+image: /docs/images/changelog/mermaid.png
 ---
 
-![mermaid.png](/images/changelog/mermaid.png)
+![mermaid.png](/docs/images/changelog/mermaid.png)
 
 Sometimes, the best way to explain something about your API is to do it visually. That's why we're announcing Mermaid support!
 
@@ -31,10 +31,10 @@ To generate one, add a code block declared as `mermaid` inside a `description` o
 ```
 This example would render the following diagram [(see it live)](https://bump.sh/demo/doc/mermaid-demo/operation/operation-get-booking-parameter):
 
-![Mermaid example](/images/changelog/mermaid-diagram.png)
+![Mermaid example](/docs/images/changelog/mermaid-diagram.png)
 
 
-The support of Mermaid is part of our global Markdown support. [Learn more about it in our help center.](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support)
+The support of Mermaid is part of our global Markdown support. [Learn more about it in our help center.](/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support)
 
 As always, don't hesitate to reach out if you have feedback about this feature!
 

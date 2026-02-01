@@ -1,6 +1,6 @@
 <side-item id="<%= category_id %>"<% if @items.present? %> aria-expanded="true" data-sidebar-target="expandable"<% end %>>
   <div class="item"<% if @is_current %> aria-current="true"<% elsif @is_parent %>data-current-parent="true"<% end %>>
-    <%= svg "images/icons/#{@icon}.svg" if @icon.present? %>
+    <%= svg "/docs/images/icons/#{@icon}.svg" if @icon.present? %>
     <% if @resource.present? %>
       <a class="link" href="<%= @resource.relative_url %>">
         <%= @label %>
@@ -12,7 +12,7 @@
     <% end %>
     <% if @items.present? %>
       <button data-button-style="secondary" data-button-size="xsmall" aria-controls="<%= category_id %>" data-action="sidebar#toggle" aria-label="<%= @is_current ? "Expand list" : "Hide list" %>">
-        <%= svg "images/icons/caret-right.svg" %>
+        <%= svg "/docs/images/icons/caret-right.svg" %>
       </button>
     <% end %>
   </div>

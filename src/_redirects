@@ -30,6 +30,7 @@ https://help.bump.sh/api-change-management/webhooks /help/api-change-management/
 https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 /help/continuous-integration/ci/ /help/continuous-integration/
 /help/hubs/hub-settings/#default-settings--visual-customization /help/hubs/customize-ui/
+/help/account/billing/ /help/organizations/billing/
 
 # Cribbed for the OpenAPI Specification Tutorial
 /guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/

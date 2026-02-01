@@ -1,7 +1,7 @@
 ---
 title: Creating Better API Architecture Diagrams
 authors: Damaso Sanoja
-image: images/guides/api-architecture-diagrams.png
+image: /docs/images/guides/api-architecture-diagrams.png
 canonical_url: https://bump.sh/blog/api-architecture-diagrams
 excerpt: Learn about the various types of API architecture diagrams and some tips for creating them.
 date: 2024-03-25
@@ -31,18 +31,18 @@ That said, here are a few interesting common types of API architecture diagrams:
 
 One way to use an API diagram is to illustrate a specific workflow that consumers need to know about. A sequence diagram often includes the HTTP verb (`GET`, `POST`, `PUT`, or `DELETE`) and resource name for each API call in the diagram. They can also be useful for noting any custom calls (like bulk endpoints) that your API offers.
 
-![API diagram that includes HTTP verb and resource](/images/guides/sequence-diagram.jpg)
+![API diagram that includes HTTP verb and resource](/docs/images/guides/sequence-diagram.jpg)
 
 The API diagram above uses the order of arrows to indicate the order in which the calls should be made. Complex workflows like authentication and authorization often require API calls to be made in a very specific order, so API architecture diagrams can help clarify this.
 
-![API flow diagram](/images/guides/workflow-diagram.png)
+![API flow diagram](/docs/images/guides/workflow-diagram.png)
 _Example of a REST API sequence diagram with swimlanes._
 
 ### Service Architecture Diagrams
 
 Another way to use API architecture diagrams is to show how multiple services are connected and integrated with one another.
 
-![API architecture diagram that shows system integration](/images/guides/service-architecture-diagram.jpg)
+![API architecture diagram that shows system integration](/docs/images/guides/service-architecture-diagram.jpg)
 
 The diagram above shows how an online store’s architecture diagram might look, including the resources, endpoints, and attributes of each resource.
 
@@ -52,7 +52,7 @@ Service Architecture Diagrams help new users get a “lay of the land” when it
 
 Finally, your diagram might be focused on illustrating the internal architecture of your system rather than the external.
 
-![Internal API architecture diagram](/images/guides/internal-architecture-diagram.jpg)
+![Internal API architecture diagram](/docs/images/guides/internal-architecture-diagram.jpg)
 
 These diagrams are useful for other engineers at your company to see how the system is designed so they can better understand errors and debug errors faster. They help new engineers onboard faster, and can serve as a reference point when designing new systems at the company. Finally, they help with internal processes like security audits as knowing all the layers a request goes through before accessing your data can help identify vulnerabilities.
 

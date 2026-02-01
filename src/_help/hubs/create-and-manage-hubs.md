@@ -9,7 +9,7 @@ title: Create and manage hubs
 
 In your dashboard, click on New hub.
 
-![](/images/help/new-hub.png)
+![](/docs/images/help/new-hub.png)
 
 You will be asked to choose a name for the hub, which will be visible to everyone. The slug is the portion of the URL that you can customize but you can also choose to use a custom domain instead:
 - By default, on Bump.sh, your hub will be available on this URL https://bump.sh/hub/<your-own-slug>
@@ -17,10 +17,7 @@ You will be asked to choose a name for the hub, which will be visible to everyon
 
 Finally, you can decide whether this hub is visible to everyone or only to members of your organization.
 
-![](/images/help/hub-creation.png)
-
-> Hubs are a feature available in our [paid plans](https://bump.sh/pricing/).
-{: .info}
+![](/docs/images/help/hub-creation.png)
 
 ## Add documentation to a hub
 
@@ -35,7 +32,7 @@ During the creation of a stand-alone documentation, you'll also find the option 
 
 From any documentation settings, you can choose to move it to an existing hub. The "Hubs Settings" section allows you to choose which hub to associate this documentation with. You can also specify a category if necessary.
 
-![](/images/help/move-standalone-doc.png)
+![](/docs/images/help/move-standalone-doc.png)
 
 ### Using the CLI
 
@@ -68,7 +65,7 @@ However, the API does not currently support the following actions:
 
 [Access Management](/help/publish-documentation/documentation-access-management) functions in a similar way for hubs, with a few exceptions.
 
-The Access Management settings for a hub apply to all the documentations within it.
+The access management settings for a hub apply to all the documentations within it.
 Two settings are possible:
 
 - Private: All documentations are accessible only to members of your organization and by invitation.
@@ -79,4 +76,4 @@ Two settings are possible:
 Categories are visible on the homepage of your hub and allow you to organize the documentation. You can add one or more categories to them by reaching the documentation settings.
 From the settings, you can choose to display the documentation sorted by categories.
 
-![](/images/help/categories.png)
+![](/docs/images/help/categories.png)

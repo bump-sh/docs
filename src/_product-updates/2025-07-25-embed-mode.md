@@ -1,10 +1,10 @@
 ---
 title: Introducing Embed mode 
 tags: [New]
-image: /images/changelog/embed-mode.png
+image: /docs/images/changelog/embed-mode.png
 ---
 
-![embed-mode.png](/images/changelog/embed-mode.png)
+![embed-mode.png](/docs/images/changelog/embed-mode.png)
 
 Thanks to Embed mode, documentation can now be fully integrated in your global navigation, to provide your users with one unified experience. 
 By integrating your Bump.sh documentation inside your own frontend stack, you get complete control over your branding and navigation.
@@ -16,7 +16,7 @@ To activate Embed mode, three steps are needed:
 
 [Discover our integration guide in our help center](/help/customization-options/embed-mode/)
 
-![embed-mode-mongo-db.png](/images/changelog/embed-mode-mongodb.png)
+![embed-mode-mongo-db.png](/docs/images/changelog/embed-mode-mongodb.png)
 *Embed mode used by MongoDB*  
 
 Don't hesitate to reach out if you have any feedback regarding this freshly released feature.

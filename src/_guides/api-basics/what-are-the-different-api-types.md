@@ -1,7 +1,7 @@
 ---
 title: What are the different API types?
 authors: jay
-image: images/guides/different-api-types.png
+image: /docs/images/guides/different-api-types.png
 canonical_url: https://bump.sh/blog/what-are-the-different-api-types
 excerpt: This is an introduction to the various API technologies that exist today, and their main use cases.
 date: 2023-11-09

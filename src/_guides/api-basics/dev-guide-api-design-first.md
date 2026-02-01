@@ -1,7 +1,7 @@
 ---
 title: A Developer's Guide to API Design-First
 authors: phil
-image: images/guides/api-first-design-guide.png
+image: /docs/images/guides/api-first-design-guide.png
 canonical_url: https://bump.sh/blog/dev-guide-api-design-first
 excerpt: Learn about the principles of API design-first and how it can benefit your organization.
 date: 2024-11-15
@@ -75,7 +75,7 @@ paths:
 
 This snippet describes an API endpoint `/users` that responds with a list of users when a client sends a GET request. It then describes the responses a client could expect to see, with the status codes (e.g.: 200), content types (e.g.: `application/json`), then gets stuck into the `schema` which will outline the shape of the JSON.
 
-If you're just getting started with OpenAPI, we're here to help you on your journey. We've put together a guide to help you [learn OpenAPI from scratch](https://docs.bump.sh/guides/openapi/specification/v3.1/understanding-structure/basic-structure/), starting from the basic structure and going through every part of the functionality.
+If you're just getting started with OpenAPI, we're here to help you on your journey. We've put together a guide to help you [learn OpenAPI from scratch](/guides/openapi/specification/v3.1/understanding-structure/basic-structure/), starting from the basic structure and going through every part of the functionality.
 
 AsyncAPI works in a very similar way, but instead of describing endpoints you describe "publishers" and "consumers".
 
@@ -125,7 +125,7 @@ Anyone who has been building APIs for more than a few years has probably done th
 
 Here's a quick look at the two workflows for comparison.
 
-![](/images/guides/design-first/code-first-design-first.png)
+![](/docs/images/guides/design-first/code-first-design-first.png)
 
 Whilst there are a few more steps, the time invested on agreeing a contract early on brings massive time benefits through the rest of the API lifecycle.
 

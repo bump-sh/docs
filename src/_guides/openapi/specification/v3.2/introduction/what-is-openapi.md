@@ -12,7 +12,7 @@ OpenAPI (the "OpenAPI Specification") is a standard for describing an API. OpenA
 
 OpenAPI provides a machine-readable structured data format which can be also be read and written by people, allowing for tooling to help API developers, API product managers, technical writers, and governance teams, all the way through the API lifecycle.
 
-![A flow diagram showing Requirements > Design > Configure / Publish / Develop, then Deploy and Test.](/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
+![A flow diagram showing Requirements > Design > Configure / Publish / Develop, then Deploy and Test.](/docs/images/guides/openapi/specification/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
 
 _Diagram created by [OpenAPI Initiative](https://www.openapis.org/)._
 

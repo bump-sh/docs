@@ -9,15 +9,15 @@ title: Create and manage organizations
 
 To create an organization, simply reach the account selection in menu in the top bar and click on "Create a new organization".
 
-![](/images/help/org-dropdown.png)
+![](/docs/images/help/org-dropdown.png)
 
 You can also, from your settings and the Organization section, create a new organization and view the list of those you are a member of.
 
-![](/images/help/create-org.png)
+![](/docs/images/help/create-org.png)
 
 You will then be prompted to specify the organization's name (visible to all its members and guests) and its slug, which determines its URL (in the format bump.sh/your-organization-slug/).
 
-![](/images/help/org-creation.png)
+![](/docs/images/help/org-creation.png)
 
 At this stage, you can also choose to move existing documentation and/or hubs to your new organization. These will retain the access settings they had before the migration.
 
@@ -27,7 +27,7 @@ From the Members section in the settings of an organization, you can add new mem
 
 To invite a new member, simply provide their email address and specify the role you wish to assign to them.
 
-![](/images/help/org-add-member.png)
+![](/docs/images/help/org-add-member.png)
 
 [Roles](/help/organizations/organization-access-management/#roles) allow you to precisely adjust what a member of your organization can or cannot do. You can change a member's role at any time.
 
@@ -69,7 +69,7 @@ This action can be initiated from the organization's settings, in the danger zon
 
 Deleting an organization is a significant decision with consequences for your documentation and organization members. It should be made with careful consideration. If you have any doubts or issues, feel free to contact us beforehand.
 
-![](/images/help/org-danger-zone.png)
+![](/docs/images/help/org-danger-zone.png)
 
 > Deleting an organization is permanent and irreversible; the documentation and hubs it contains will also be destroyed.
 We cannot recover content that has been deleted.

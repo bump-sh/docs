@@ -26,7 +26,7 @@ By managing documentation in a repository alongside the codebase, teams can:
 - Enable concurrent editing and review processes
 - Facilitate branching and merging to manage documentation updates
 
-_Are you new to git? Check out our article that provides an [introduction to git concepts](https://docs.bump.sh/guides/technical-writing/primitive-concepts-git/)._
+_Are you new to git? Check out our article that provides an [introduction to git concepts](/guides/technical-writing/primitive-concepts-git/)._
 
 ### Automated Testing to Enforce Quality
 
@@ -72,7 +72,7 @@ In addition, docs as code fosters a collaborative workflow where both developers
 - Enforce quality standards through automated checks
 - Ensure transparency in documentation changes
 
-Leveraging [OpenAPI overlays for your API reference documentation](https://docs.bump.sh/guides/openapi/augmenting-generated-openapi/) helps technical writers to enrich default documentation, without disrupting developer flow. This collaborative approach bridges the gap between developers and technical writers, leading to more comprehensive and developer-friendly documentation.
+Leveraging [OpenAPI overlays for your API reference documentation](/guides/openapi/augmenting-generated-openapi/) helps technical writers to enrich default documentation, without disrupting developer flow. This collaborative approach bridges the gap between developers and technical writers, leading to more comprehensive and developer-friendly documentation.
 
 With automated testing, continuous integration, and streamlined review processes, documentation updates can be implemented and deployed faster. This agility is crucial in API development, where rapid iterations and frequent releases require documentation to keep pace with evolving features.
 

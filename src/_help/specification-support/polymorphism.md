@@ -15,7 +15,7 @@ To ease readability, we strongly recommend to give titles to your alternatives: 
 
 Here's an [example of polymorphism](https://bump.sh/bump/doc/petstore-alternatives#operation-post-pets-body-animal-cat-species-species-alternative) in action:
 
-![](/images/help/anyOf-discriminator.gif)
+![](/docs/images/help/anyOf-discriminator.gif)
 
 ## Discriminator
 

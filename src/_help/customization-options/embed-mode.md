@@ -16,7 +16,7 @@ Embed Mode lets you integrate Bump.sh-generated documentation inside your own fr
 
 It’s designed for larger teams and companies who need their docs to look and feel like a native part of their platform or developer experience.
 
-> The Embed mode is only available starting from the Enterprise plan. If your current plan doesn’t include access, feel free to [contact us](mailto:hello@bump.sh) so we can assist you.
+> The Embed mode is available in our [custom plans](https://bump.sh/pricing/). If your current plan doesn’t include access, feel free to [contact us](mailto:hello@bump.sh) so we can assist you.
 {: .info}
 
 ### Benefits
@@ -30,7 +30,7 @@ It’s designed for larger teams and companies who need their docs to look and f
 
 Here’s a high-level view of how requests and rendering flow in Embed Mode:
 
-![Embed Mode Flow](/images/help/embed-mode-workflow.png)
+![Embed Mode Flow](/docs/images/help/embed-mode-workflow.png)
 
 ### Step-by-step flow
 
@@ -91,11 +91,16 @@ Show a branded footer with support links or legal information.
 
 You can safely style your documentation using the following CSS variables:
 
-- `--font-family`: the global font family used. Make sure to use a font that is available on the user's device, or loaded in your custom headers;
+- `--font-family`: the global font family;
+- `--heading-font-family`: the font family used for headings (h1, h2, h3, ...). If none is defined, the `--font-family` is displayed;
 - `--code-font-family`: the font used for code blocks and examples;
+- `--doc-font-size`: the global font size. The default value is 14px;
+- `--code-font-size`: the font size used on code blocks and examples. The default value is 12px;
+- `--nav-font-size`:  the font size used on side and top navigation bars. The default value is 14px;
+- `--doc-font-weight`: the default font weight. The default value is 500;
+- `--nav-font-weight`: the font weight used on side and top navigation bars. The default value is 500;
 - `--logo-width`: logo width, if the default width doesn't fit your logo width;
 - `--logo-height`: logo height, if the default height doesn't fit your logo height;
-- `--doc-base-color`: the main color, which will be used for links, button backgrounds, and cURL examples background;
 - `--doc-success-color`: the color used for success messages;
 - `--doc-error-color`: the color used for error messages;
 - `--doc-warning-color`: the color used for warning messages;
@@ -106,7 +111,7 @@ You may also override styles using your own custom CSS, but keep in mind:
 - We don't guarantee the stability of HTML or CSS class names
 - Custom overrides might break if we update the rendering engine
 
-We are always open to add more customization options: if you need to customize other parts of the UI, just send us a message and we'll add the required CSS variables.
+We are always open to adding more customization options: if you need to customize other parts of the UI, just send us a message and we'll add the required CSS variables.
 
 ## Technical requirements
 

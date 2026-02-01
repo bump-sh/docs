@@ -145,7 +145,7 @@ should be encoded, with the same encoding object as the `encoding` keyword.
 
 Using `itemEncoding` is only possible for `multipart/*` responses, so it is not
 very useful for an API that's streaming JSON, unless you were streaming a
-mixture of JSON and assets/images on a single response.
+mixture of JSON and assets/docs/images on a single response.
 
 ```yaml
 content:

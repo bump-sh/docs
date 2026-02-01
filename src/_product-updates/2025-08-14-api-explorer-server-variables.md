@@ -1,10 +1,10 @@
 ---
 title: API Explorer - Server variables 
 tags: [New]
-image: /images/changelog/api-explorer-server-variables.png
+image: /docs/images/changelog/api-explorer-server-variables.png
 ---
 
-![api-explorer-server-variables.png](/images/changelog/api-explorer-server-variables.png)
+![api-explorer-server-variables.png](/docs/images/changelog/api-explorer-server-variables.png)
 
 Server variables enable [API Explorer](/help/documentation-experience/api-explorer/) users  to customize the request server with predefined enums or custom strings. It's useful to specify a server region or a client specific instance, for example.
 
@@ -28,7 +28,7 @@ In this example, two variables were added:
 - `region` is an enumerated list, with `east-eu` being the default value.
 
 The API Explorer renders each variable accordingly.
-![Server variable topbar example](/images/changelog/api-explorer-server-variables-global-display.png)
+![Server variable topbar example](/docs/images/changelog/api-explorer-server-variables-global-display.png)
 
 [Learn more about it in our help center](/help/documentation-experience/api-explorer/#server-variables)
 

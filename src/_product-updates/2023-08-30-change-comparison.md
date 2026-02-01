@@ -1,10 +1,10 @@
 ---
 title: Comparison between (any) API changes
 tags: [New]
-image: /images/changelog/change-comparison.png
+image: /docs/images/changelog/change-comparison.png
 ---
 
-![change-comparison.png](/images/changelog/change-comparison.png)
+![change-comparison.png](/docs/images/changelog/change-comparison.png)
 
 APIs evolve constantly, each iteration creating changes, breaking ones or not. API consumers need to keep track of them or could need to upgrade from a several behind version.
 

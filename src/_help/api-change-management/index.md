@@ -9,11 +9,11 @@ title: API change management
 
 Bump automatically builds a changelog for your API. Each time you upload a new version of your API definition, you will have a new event in your changelog. A link to the changelog page is available on each documentation:
 
-![The changelog link](/images/help/changelog-link-dark.png)
+![The changelog link](/docs/images/help/changelog-link-dark.png)
 
 As you can see below on the [Bump API changelog](https://developers.bump.sh/changes), every changes we made are listed: whether it's a structural change (endpoint or parameter removed, modified or added for example) or a content change (description or example modification).
 
-![Bump API changelog](/images/help/changelog.png)
+![Bump API changelog](/docs/images/help/changelog.png)
 
 ## Breaking changes identification
 
@@ -33,13 +33,13 @@ Bump can notify changes via Slack, email, RSS or any custom HTTP webhook.
 
 Each time your API changes, you can notify your team directly on Slack by activating the Slack integration in your API integrations settings:
 
-![Check the "Notify changes on Slack", fill your webhook URL and the channels you want to get the notifications on](/images/help/legacy/twaSpSvrbHghRTMKtqa2.png)
+![Check the "Notify changes on Slack", fill your webhook URL and the channels you want to get the notifications on](/docs/images/help/legacy/twaSpSvrbHghRTMKtqa2.png)
 
 ### Email
 
 Users can subscribe to your API changelog and receive a weekly digest.
 
-![Email changelog subscription](/images/help/legacy/8S2a0sPvEPpUkg6J6LMS.png)
+![Email changelog subscription](/docs/images/help/legacy/8S2a0sPvEPpUkg6J6LMS.png)
 
 ### RSS
 
@@ -56,4 +56,4 @@ With our [Github Action](/help/continuous-integration/github-actions), you can r
 - a diff summary
 - information about the breaking change state
 
-![GitHub integration example](/images/help/github-api-diff.svg)
+![GitHub integration example](/docs/images/help/github-api-diff.svg)

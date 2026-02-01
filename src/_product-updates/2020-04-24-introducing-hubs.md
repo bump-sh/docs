@@ -5,7 +5,7 @@ tags: [New feature]
 
 Today, we are super excited to release a long-awaited feature: Hubs. You can now create your APIs catalogs, directly from Bump.
 
-![home-hub.png](https://cloud.headwayapp.co/changelogs_images/images/big/000/046/230-4d740fb504ecd138814ef507bb3fc4b256fd2118.png)
+![home-hub.png](https://cloud.headwayapp.co/changelogs_images/docs/images/big/000/046/230-4d740fb504ecd138814ef507bb3fc4b256fd2118.png)
 
 Highlighted features:
 * custom domain support

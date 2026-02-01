@@ -31,7 +31,7 @@ While deprecation is a strategic decision, its execution hinges on effective pro
 
 **Introducing the New API**: Detailed documentation for the new API should be readily available alongside the deprecation notice. This includes API endpoints, authentication methods, request and response formats, and code examples. If you are announcing the deprecation prior to the new API being ready for release, consider releasing details in stages as the new API’s features begin to stabilize. 
 
-**Mapping Old to New**: Highlight the [changes made between the old and new APIs](https://docs.bump.sh/help/changes-management/changelog/). This includes a mapping between the deprecated functionalities and their replacements in the new API. This mapping helps developers understand how to update their code using the new API.
+**Mapping Old to New**: Highlight the [changes made between the old and new APIs](/help/changes-management/changelog/). This includes a mapping between the deprecated functionalities and their replacements in the new API. This mapping helps developers understand how to update their code using the new API.
 
 **Versioning**: Implement API versioning to support both the old and new APIs concurrently for a defined period. This allows developers to test and migrate their code at their own pace.
 
@@ -45,7 +45,7 @@ While deprecation is a strategic decision, its execution hinges on effective pro
 
 **Use the HTTP Sunset Header**: [RFC 8594](https://datatracker.ietf.org/doc/html/rfc8594) provides a machine-readable method of noting the deprecation of an API by including the sunset date. API monitoring solutions are beginning to support this header as a way to detect, log, and notify an API’s sunset date for those that might not notice it via other communication methods.
 
-Since many of these changes involve documentation updates, you may want to consider applying a [branching strategy](https://docs.bump.sh/help/publish-documentation/branching/) to help you perform updates to all of your content and roll it out at once when ready. Also consider taking advantage of [automatic or manual release processes](https://docs.bump.sh/help/publish-documentation/deploy-and-release-management/) to manage the rollout of your announcement when you are ready. 
+Since many of these changes involve documentation updates, you may want to consider applying a [branching strategy](/help/publish-documentation/branching/) to help you perform updates to all of your content and roll it out at once when ready. Also consider taking advantage of [automatic or manual release processes](/help/publish-documentation/deploy-and-release-management/) to manage the rollout of your announcement when you are ready. 
 
 ## Best Practices for Deprecation Communication
 

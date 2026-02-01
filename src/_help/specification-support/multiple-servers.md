@@ -14,7 +14,7 @@ Publishing the list of all of your servers in your documentation on Bump.sh is o
 
 To show the list of servers on your documentation, activate the setting from the **Settings** tab of your documentation administration panel:
 
-![multiple servers setting](/images/help/multiple-servers--setting.png)
+![multiple servers setting](/docs/images/help/multiple-servers--setting.png)
 
 
 ## Render multiple servers
@@ -26,7 +26,7 @@ By default, the first server is used to generate all curl examples on your docum
 
 Readers of the documentation can select a different server from this selection component:
 
-![multiple servers component](/images/help/multiple-servers--component.png)
+![multiple servers component](/docs/images/help/multiple-servers--component.png)
 
 For REST API documentation, the url of selected server is used to generate curl examples.
 For Event-Driven API documentation, protocol and protocol versions are updated depending on the selected server.

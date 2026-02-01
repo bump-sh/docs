@@ -3,7 +3,7 @@ title: Markdown support
 tags: [Improvement]
 ---
 
-![markdown-callouts.jpg](/images/changelog/markdown-callouts.jpg)
+![markdown-callouts.jpg](/docs/images/changelog/markdown-callouts.jpg)
 
 As markdown is a standard and a common way to bring more readability into your documentation, we have made some improvements on markdown support and bring new features to help you create fast and beautiful API documentations.
 

@@ -10,17 +10,26 @@ It is also possible to modify the settings of a documentation within a hub to cu
   
 You can customize the visual appearance of your hub and its documentation by adding your logo and favicon directly from this section. By default, Bump.sh automatically generates a social media visual for you (when you share the URL of your hub or documentation on one of them). However, you can still choose your own image by uploading it at this step.
 
-![](/images/help/hubs-customization.png)
+![Light mode color settings](/docs/images/help/hubs-customization.png)
 
 You can also customize the general color scheme of your hub.
 
-![](/images/help/color-scheme.png)
+![Light mode color settings](/docs/images/help/light-mode-settings.png)
+
+## Dark mode
+
+By default, we apply filters to make your light mode color and logo blend in dark mode. To ensure brand consistency, you can define a custom logo and color dedicated to dark mode.
+
+![Dark mode settings](/docs/images/help/dark-mode-settings.png)
+
+## Advanced customization through CSS variables
+The [advanced customization settings](/help/customization-options/color-logo-meta-images/#advanced-customization-through-css-variables) available for documentation can also be applied to all the documentation within a hub.
 
 ## Operations sorting
 
 Finally, you can choose to apply a general sorting parameter to all the documentations in your hub with the Group by operations (by path or tag) and Navigation options.
 
-![](/images/help/operations.png)
+![Operations sorting settings](/docs/images/help/operations.png)
 
 ## Documentation listing
 
@@ -30,10 +39,10 @@ Categories can be, for instance, groups of API that belong to a same business do
 
 When the "Group documentation by category" setting is selected, any documentation with no specified category will not be displayed in the Hub. 
 
-![Hub doc sorting option](/images/help/hub-doc-categories.png)
+![Hub doc sorting option](/docs/images/help/hub-doc-categories.png)
 
 ## Filter documentation selector based on categories
 
 Hub categories can filter the documentation selector in the top navigation bar of a documentation, so readers only see relevant docs from the same category, improving navigation.
 
-![Doc quick access menu filtering option](/images/help/hub-doc-quick-access-menu.png)
+![Doc quick access menu filtering option](/docs/images/help/hub-doc-quick-access-menu.png)

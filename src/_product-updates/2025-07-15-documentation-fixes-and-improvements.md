@@ -5,7 +5,7 @@ tags: [Improvement]
 Even if our product grows with new features, taking the time to maintain, enhance, and polish existing features is crucial to ensure a solid documentation experience. That's why we always give ourselves time to tackle small enhancements and fixes alongside the development of new features. Here's a list of what's been worked on.
 
 Improvements:
-- You can now add more than one additional link to the navigation bar by using [our new custom extension](https://docs.bump.sh/help/publish-documentation/external-links/) called `x-externalLinks` instead of the `externalDocs` property,
+- You can now add more than one additional link to the navigation bar by using [our new custom extension](/help/publish-documentation/external-links/) called `x-externalLinks` instead of the `externalDocs` property,
 - When the link to an operation or group no longer exists, it now returns a 404 page instead of redirecting to the top of the documentation, providing a clearer feedback,
 - When switching from one branch to another, the active operation is maintained if it also exists in the target branch,
 - The global stability of the platform has been improved by optimizing requests and setting up deeper cache strategies. It's an ongoing endeavour that we'll continue for the next few months,
@@ -14,7 +14,7 @@ Improvements:
 - Enums support in query parameters has been deepened to handle complex combinations,
 - The sharing module appearing on hover no longer prevents from easily copying operation and property names,
 - Badges generated using the `x-state` property no longer have a string length limit, 
-- [Mermaid diagrams and charts](https://docs.bump.sh/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
+- [Mermaid diagrams and charts](/help/documentation-experience/markdown-support/#diagrams-and-charts-mermaid-support) added in Markdown now support custom text colors,
 - The switch between oneOfs now displays the discriminator mapping name instead of the component name: the mapping name value generally gives more information about the real use of an API consumer.
 
 

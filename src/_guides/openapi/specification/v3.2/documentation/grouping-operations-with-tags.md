@@ -1,7 +1,7 @@
 ---
 title: Organize API Endpoints with OpenAPI Tags
 authors: phil
-image: images/guides/tags-organize-endpoints.png
+image: /docs/images/guides/tags-organize-endpoints.png
 excerpt: Learn tips and tricks to group related endpoints in a meaningful way.
 date: 2025-05-16
 ---
@@ -89,7 +89,7 @@ tags:
       > before the expiry date 
 ```
 
-![The payments tag is showing the summary "Payments" in a header, with a HTML rendered description and warning box for the warn quote block.](/images/guides/openapi/specification/v3.2/bump-tag-description.png)
+![The payments tag is showing the summary "Payments" in a header, with a HTML rendered description and warning box for the warn quote block.](/docs/images/guides/openapi/specification/v3.2/bump-tag-description.png)
 [*See it live*](https://bump.sh/bump-examples/doc/train-travel-api/operation/operation-create-booking-payment)
 
 Note that [you can use Markdown](/help/enhance-documentation-content/markdown-support/) in the `description` field to better describe your tags.
@@ -111,7 +111,7 @@ tags:
 
 When you generate API documentation for the API contract above, you'll see the link rendered like this:
 
-![How the externalDocs property is displayed in generated API documentation.](/images/guides/tag-with-externaldocs.png)
+![How the externalDocs property is displayed in generated API documentation.](/docs/images/guides/tag-with-externaldocs.png)
 
 ## Tags Ordering Groups in Documentation
 
@@ -139,7 +139,7 @@ tags:
 
 When you generate API documentation, you'll notice the documentation orders the endpoint groups in the same way:
 
-![How tags are ordered in generated API documentation](/images/guides/tags_order.png)
+![How tags are ordered in generated API documentation](/docs/images/guides/tags_order.png)
 [*See it live*](https://bump.sh/demo/doc/bump)
 
 Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behavior of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
@@ -310,7 +310,7 @@ paths:
 
 When you generate the documentation, notice how the `Previews` and `Ping` sections are at the bottom of the list.
 
-![Previews and Ping sections displayed at the bottom](/images/guides/preview_pings_sections.png)
+![Previews and Ping sections displayed at the bottom](/docs/images/guides/preview_pings_sections.png)
 
 This incorrect ordering and lack of description will make this section much harder to understand for a developer consuming your API.
 
@@ -369,7 +369,7 @@ paths:
 
 By doing this, your documentation will display the endpoint groups in the correct order along with the tag’s description.
 
-![Generated documentation with every tag described in the root Tag Object](/images/guides/tags_order.png)
+![Generated documentation with every tag described in the root Tag Object](/docs/images/guides/tags_order.png)
 
 ## Conclusion
 

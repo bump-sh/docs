@@ -22,7 +22,7 @@ The Custom Domain option allows you to keep your users within your brand experie
 
 This option allows you to add a description to your Hub, and supports Markdown for enhanced text formatting. For instance, you can explain what this collection includes in terms of documentation, share important details, or even provide a contact for questions.
 
-![](/images/help/slug-hub.png)
+![](/docs/images/help/slug-hub.png)
 
 ## Hub Access
 

@@ -8,7 +8,7 @@ date: 2025-02-24
 
 APIs are at the core of modern enterprise architectures, powering integrations, automation, and digital products. Yet, API sprawl remains a persistent challenge—APIs are often scattered across different teams, tools, and repositories, making discovery and governance difficult.  
 
-This is where [Bump.sh Hubs](https://docs.bump.sh/help/hubs/) come in. By serving as a **unified API catalog**, Bump.sh helps enterprises streamline API discovery, governance, and collaboration across teams. Whether you're managing internal APIs, partner APIs, or external APIs, Hubs provide a single source of truth, accelerating developer onboarding and ensuring consistency across REST and AsyncAPI specifications.  
+This is where [Bump.sh Hubs](/help/hubs/) come in. By serving as a **unified API catalog**, Bump.sh helps enterprises streamline API discovery, governance, and collaboration across teams. Whether you're managing internal APIs, partner APIs, or external APIs, Hubs provide a single source of truth, accelerating developer onboarding and ensuring consistency across REST and AsyncAPI specifications.  
 
 ## Bump.sh Hubs: A Foundation for API Discovery 
 
@@ -29,7 +29,7 @@ This makes Hubs a **crucial piece of a platform engineering strategy**, enabling
  
 Large organizations often struggle with API silos, where teams build APIs independently without a shared catalog. This leads to inefficiencies, redundant work, and difficulty enforcing governance.  
 
-By adopting [Bump.sh Hubs](https://docs.bump.sh/help/hubs/), organizations can:  
+By adopting [Bump.sh Hubs](/help/hubs/), organizations can:  
 
 - Centralize all internal APIs in one place, making them easily discoverable  
 - Standardize API documentation, ensuring a consistent developer experience  
@@ -37,7 +37,7 @@ By adopting [Bump.sh Hubs](https://docs.bump.sh/help/hubs/), organizations can:
 
 ### 2. Partner-Facing API Catalogs  
 
-For enterprises with partner ecosystems, making APIs **easily accessible and well-documented** is critical. [Bump.sh Hubs](https://docs.bump.sh/help/hubs/) act as an **API storefront**, allowing partners to:  
+For enterprises with partner ecosystems, making APIs **easily accessible and well-documented** is critical. [Bump.sh Hubs](/help/hubs/) act as an **API storefront**, allowing partners to:  
 
 - Browse and explore available APIs  
 - Understand API updates through changelogs  
@@ -47,7 +47,7 @@ This improves API adoption and reduces integration friction, helping enterprises
 
 ### 3. Enabling API Discovery with SEO & Search Indexing
 
-Beyond internal and partner-facing use cases, [Bump.sh Hubs](https://docs.bump.sh/help/hubs/) can improve external API discoverability through search engine optimization (SEO).  
+Beyond internal and partner-facing use cases, [Bump.sh Hubs](/help/hubs/) can improve external API discoverability through search engine optimization (SEO).  
 
 One key example is **Elastic**, which integrates Bump.sh into their API documentation strategy. Elastic uses **Bump.sh-generated sitemaps** to feed their website’s search engine, allowing developers to search for any API operation directly from their main documentation site.  
 
@@ -58,7 +58,7 @@ This means:
 🔹 Developers can quickly locate API operations without digging through docs  
 🔹 Enterprises can **improve API discoverability through SEO optimization**  
 
-Bump.sh also [supports API.json](https://docs.bump.sh/guides/bump-sh-tutorials/make-your-apis-discoverable-with-apisjson/), making it easy to generate and expose machine-readable API metadata that can be indexed for improved searchability.  
+Bump.sh also [supports API.json](/guides/bump-sh-tutorials/make-your-apis-discoverable-with-apisjson/), making it easy to generate and expose machine-readable API metadata that can be indexed for improved searchability.  
 
 ## Integrating Bump.sh Hubs into Your Platform Engineering Strategy  
 

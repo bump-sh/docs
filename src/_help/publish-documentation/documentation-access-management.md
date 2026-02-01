@@ -15,10 +15,7 @@ Public documentation is indexed by search engines and can be found by anyone wit
 Private documentation, on the other hand, is only accessible to users who have been individually invited. There are two types of invited users: those who are part of the same organization and "external" guests.
 They require user authentication to be accessible and are not indexed by search engines.
 
-![](/images/help/documentation-access-choice.png)
-
-> The Access Management features available depend on the [subscribed plan](https://bump.sh/pricing/).
-{: .info}
+![](/docs/images/help/documentation-access-choice.png)
 
 ## Private
 
@@ -28,7 +25,7 @@ Members of an organization have access to all the documentation contained within
 
 Inviting a colleague or teammate to become a member of [your organization](/help/organizations/) can be done from the settings of that organization, by entering the email address in the dedicated form.
 
-![](/images/help/org-add-member.png)
+![](/docs/images/help/org-add-member.png)
 
 ### Invite external guests
 
@@ -37,11 +34,11 @@ Inviting a colleague or teammate to become a member of [your organization](/help
 
 To invite people from outside of your organization to access a private documentation, click on the `Share Access` button, which is visible in the settings of that documentation.
 
-![](/images/help/share-access-button.png)
+![](/docs/images/help/share-access-button.png)
 
 From there, you just need to enter the email address of the invited person.
 
-![](/images/help/share-access.png)
+![](/docs/images/help/share-access.png)
 
 They will receive an email inviting them to sign up on Bump.sh. This step is essential to ensure the security of access to your documentation.
 
