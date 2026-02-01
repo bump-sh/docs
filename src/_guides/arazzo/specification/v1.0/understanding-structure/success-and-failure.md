@@ -15,7 +15,9 @@ Some API workflow tools just check HTTP status codes for a 200 OK or a 500 serve
   operationId: $sourceDescriptions.api.searchTrips
   successCriteria:
     - condition: $statusCode == 200
-    - condition: $response.body.trips[0] != null
+    - type: jsonpath
+      context: $response.body
+      condition: $.trips[0] != null
   failureCriteria:
     - condition: $statusCode == 404
 ```
@@ -208,8 +210,10 @@ workflows:
         
         successCriteria:
           - condition: $statusCode == 200
-          - condition: $response.body.trips[0] != null
-        
+          - type: jsonpath
+            context: $response.body
+            condition: $.trips[0] != null
+
         onSuccess:
           # Found affordable trips - proceed to booking
           - name: foundAffordableTrips
@@ -235,7 +239,9 @@ workflows:
             type: goto
             stepId: searchAlternativeDates
             criteria:
-              - condition: $response.body.trips[0] == null
+              - type: jsonpath
+                context: $response.body
+                condition: $.trips[0] == null
           
           # API error - retry
           - name: apiError
@@ -436,7 +442,6 @@ successCriteria:
 successCriteria:
   - condition: $statusCode == 200
 ```
-
 
 ### Reusable Actions with Components
 
