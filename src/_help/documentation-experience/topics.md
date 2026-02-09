@@ -31,6 +31,22 @@ x-topics:
       ```
 ```
 
+## External references
+
+You can write your topics in dedicated Markdown files to keep your OpenAPI definition file clean. To reference a Markdown file, add a `$ref` link inside the `content` object of your topic.
+
+```yaml
+x-topics:
+  - title: Getting started
+    content: 
+      $ref: ./getting-started.md
+  - title: Authentication
+    content:
+      $ref: ./authentication.md
+    example:
+      $ref: ./authentication-example.md
+```
+
 ## Public documentation examples
 
 Here are some examples of public documentation made by teams using `x-topics`:
