@@ -9,7 +9,7 @@ layout: application
     <% sidebar.slot :before do %>
       <h2>
         <%= resource.data.sidebar_title %>
-        <% if resource.data.sidebar_versions.any? %>
+        <% if resource.data.sidebar_versions&.any? %>
           <%= render Guides::VersionSelector.new(
             entries: site.data.sidebar_entries,
             current_url: resource.relative_url,
