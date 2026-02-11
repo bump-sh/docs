@@ -16,6 +16,10 @@ categories:
     long_name: OpenAPI specification guides and tutorials
     description: Learn how to use OpenAPI to build HTTP APIs that humans and machines can interact with conveniently.
   
+  - name: Arazzo
+    long_name: Arazzo specification guides and tutorials
+    description: Learn how to use Arazzo to document, test, and execute API workflows that orchestrate multiple operations into meaningful tasks.
+  
   - name: AsyncAPI
     long_name: AsyncAPI specification guides and tutorials
     description: Learn how to use AsyncAPI to build event-driven APIs that humans and machines can interact with conveniently.   

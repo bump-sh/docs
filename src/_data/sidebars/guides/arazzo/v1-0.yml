@@ -1,0 +1,38 @@
+collection_name: guides
+root: /guides/arazzo/specification/v1.0
+resources:
+  - type: category
+    label: Introduction to Arazzo
+    items:
+      - label: What is Arazzo?
+        link: /introduction/what-is-arazzo/
+      - label: History and Evolution of Arazzo
+        link: /introduction/history/
+      - label: Benefits of Using Arazzo
+        link: /introduction/benefits/
+  
+  - type: category
+    label: Understanding Arazzo Structure
+    items:
+      - label: Basic Structure
+        link: /understanding-structure/basic-structure/
+      - label: Defining Sources
+        link: /understanding-structure/defining-sources/
+      - label: Workflows
+        link: /understanding-structure/workflows/
+      - label: Steps, Inputs, and Outputs
+        link: /understanding-structure/steps-inputs-outputs/
+      - label: Success and Failure
+        link: /understanding-structure/success-and-failure/
+      - label: Components & References
+        link: /understanding-structure/components-and-references/
+  
+  - type: category
+    label: Working with Arazzo
+    items:
+      - label: Runtime Expressions
+        link: /working-with-arazzo/runtime-expressions/
+      - label: Workflow Documentation
+        link: /working-with-arazzo/workflow-documentation/
+      - label: API Testing
+        link: /working-with-arazzo/api-testing/
