@@ -40,11 +40,11 @@ The login page will systematically appear when attempting to access via the dire
 
 ### How to setup SSO
 
-Enabling SSO typically involves two steps: one on the Bump.sh side and one on your identity provider's side.
+To activate SSO for your organization, [contact our support team](mailto:hello@bump.sh) with the email of the member of your team responsible for SSO connection.
 
-To activate SSO for your organization, the organization's owner must contact our support team.
+You'll receive a WorkOS invitation link. The setup workflow is guided step-by-step by WorkOS. The configuration step for your identity provider depends on the [specific provider](https://workos.com/docs/integrations) you are using.
 
-The configuration step for your identity provider depends on the specific provider you are using. You can refer to the [various guides provided by WorkOS](https://workos.com/docs/integrations) to follow the necessary steps.
+Once it's done, [notify our support team](mailto:hello@bump.sh) so we can finalize the configuration on our end.
 
 > By default, all users who get access to Bump.sh via the configured SSO will have the “Viewer” Role/Permission.
 {: .info}
