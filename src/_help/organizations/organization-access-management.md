@@ -40,7 +40,7 @@ The login page will systematically appear when attempting to access via the dire
 
 ### How to setup SSO
 
-To activate SSO for your organization, [contact our support team](mailto:hello@bump.sh) with the email of the member of your team responsible for SSO connection.
+To enable SSO for your organization, [contact our support team](mailto:hello@bump.sh) with the email adress of your team member responsible for the SSO connection.
 
 You'll receive a WorkOS invitation link. The setup workflow is guided step-by-step by WorkOS. The configuration step for your identity provider depends on the [specific provider](https://workos.com/docs/integrations) you are using.
 
