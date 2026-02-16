@@ -40,7 +40,7 @@ Bridgetown.configure do |config|
 
   # For more documentation on how to configure your site using this initializers file,
   # visit: https://edge.bridgetownrb.com/docs/configuration/initializers/
-  init :"bridgetown-lit-renderer" 
+  init :"bridgetown-lit-renderer"
   init :"bridgetown-quick-search"
   init :"bridgetown-seo-tag"
   init :"bridgetown-sitemap"
@@ -48,4 +48,14 @@ Bridgetown.configure do |config|
   init :bridgetown_internal_markdown_links
 
   config.internal_markdown_links.collections = ["pages", "help", "guides", "product-updates"]
+
+
+  # Move sitemap.xml to /docs/sitemap.xml after build
+  hook :site, :post_write do |site|
+    source = site.in_dest_dir("sitemap.xml")
+    dest = site.in_dest_dir("docs", "sitemap.xml")
+    if File.exist?(source)
+      FileUtils.mv(source, dest)
+    end
+  end
 end
