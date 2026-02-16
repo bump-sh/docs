@@ -1,7 +1,7 @@
 ---
 title: Handling Error Formats
 authors: phil
-excerpt: Describing HTTP errors efficiently in OpenAPI v3.1.
+excerpt: Describing HTTP errors efficiently in OpenAPI v3.2.
 date: 2024-08-07
 ---
 

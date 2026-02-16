@@ -8,7 +8,7 @@ date: 2025-07-04
 - TOC
 {:toc}
 
-Parameters in OpenAPI v3.1 are a fundamental part of creating an API specification, allowing you to define the inputs your API can accept. 
+Parameters in OpenAPI are a fundamental part of creating an API specification, allowing you to define the inputs your API can accept. 
 
 Parameters fall into one of a few types:
 
@@ -17,12 +17,19 @@ Parameters fall into one of a few types:
 - **Header Parameters:** Included in the request header, e.g., `Acme-Custom-Header: Value`.
 - **Cookie Parameters:** Passed in the request cookies.
 
-> In previous versions of OpenAPI the entire request body and form data would all be sent as parameters, but since OpenAPI v3.0 this has been moved to the content object. Learn more in [HTTP Requests](_guides/openapi/specification/v3.2/understanding-structure/http-requests.md).
-{: .info }
-
 Each parameter in OpenAPI is defined with specific attributes such as `name`, `in` (location), `required`, `description`, and `schema` (for defining data types and validation rules). Defining parameters with these keywords allows documentation to show example how HTTP requests should be constructed making life easier for the client, but also make sure machines know what to do with it, making SDKs and server-side validation a whole lot more powerful.
 
 ## Parameter Types
+
+There are five main types of parameters in OpenAPI v3.2, each serving a different purpose in the context of an HTTP request.
+
+- Path Parameters - `in: path`
+- Query Parameters -`in: query`
+- Header Parameters - `in: header`
+- Cookie Parameters - `in: cookie`
+- OpenAPI 3.2 added Querystring Parameters `in: querystring`
+
+That new addition is a little confusing as the names are so similar, but we'll cover that in a bit.
 
 ### Path Parameters
 
@@ -47,7 +54,7 @@ Here is one required path parameter, `bookingId`, with its `name` matching `{boo
 > Path parameters have to be marked as `required: true` because they're in the path, and if its missing it would break especially if the variable was between two other segments, e.g: `/bookings/{bookingId}/payment` would become `/bookings//payment` if the value was empty and that's going to be confusing.
 {: .warning }
 
-OpenAPI v3.1 is very particular about allowed characters:
+OpenAPIis very particular about allowed characters:
 
 > The value for these path parameters MUST NOT contain any unescaped "generic syntax" characters described by RFC3986: forward slashes (/), question marks (?), or hashes (#).
 
@@ -154,6 +161,72 @@ paths:
             example: 5
 ```
 
+### Querystring Parameters
+
+OpenAPI v3.2 added support for a new type of parameter called `querystring` parameters. These are similar to query parameters, but they allow for more complex structures to be sent in the query string.
+
+Unlike `in: query`, with `in: querystring` the entire query string is treated as a single parameter with complex structure. This means that combinations of query parameters can be expressed using a well-defined Schema object:
+
+```yaml
+paths:
+  /search:
+    get:
+      parameters:
+      - name: advancedQuery
+        in: querystring
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                sorting:
+                  type: array
+                  items:
+                    type: string
+```
+
+In HTTP that would look like this:
+
+```http
+GET /search?filters[origin]=london&filters[destination]=paris
+  &filters[has_dogs]=true&sorting[]=price&sorting[]=duration
+```
+
+It also allows for JSON encoded query strings:
+
+```yaml
+paths:
+  /search:
+    get:
+      summary: Search for items
+      parameters:
+        - name: filter
+          in: querystring
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  origin:
+                    type: string
+                  destination:
+                    type: string
+                  has_dogs:
+                    type: boolean
+          
+```
+
+In HTTP that would look like this:
+
+```http
+GET /search?filter={"origin":"london","destination":"paris","has_dogs":true}
+```
+
+Handling advanced query strings like this used to rely on trickery with a combination of [parameter serialization](_guides/openapi/specification/v3.2/understanding-structure/parameter-serialization.md) options most users (and tooling) seemed to struggle with. This new `querystring` parameter type makes it much clearer what is going on, and allows for more complex structures to be expressed in a way that is easier to understand.
+
+Thanks to this new approach giving you the full power of the `schema` keyword, you can re-use and combine sets of query parameters with allOf, you can make them conditional and interdependent with `if`/`then`/`else`, and support [polymorphism with `oneOf`/`anyOf`](_guides/openapi/specification/v3.2/data-models/schema-composition.md). You can even forbid unexpected parameters with `additionalProperties: false` if you want to be strict about what is allowed.
 
 ## Defining Parameters for Multiple Operations 
 

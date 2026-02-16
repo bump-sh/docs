@@ -348,4 +348,5 @@ Whatever the schema is, it can be defined using the standard JSON Schema keyword
 
 ## Further Reading
 
-You can find details in the **OpenAPI Specification v3.2.0** under [Media Types Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.2.0.md#media-type-object) and look for `itemSchema`.
+- [Learn OpenAPI: Sequential Media Types](https://learn.openapis.org/specification/media-types.html)
+- [OpenAPI Specification v3.2.0: Media Types Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.2.0.md#media-type-object)

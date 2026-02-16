@@ -13,7 +13,7 @@ OpenAPI uses the term "security scheme" to cover both authentication and authori
 - **Authentication:** Who is this user, are they who they say they are.
 - **Authorization:** What data can this user see, what actions can they take.
 
-OpenAPI v3.1 lets you describe APIs protected using the following security schemes:
+OpenAPI lets you describe APIs protected using the following security schemes:
 
 - HTTP authentication schemes (anything using the `Authorization` header)
   - Basic
@@ -207,7 +207,7 @@ In this example, the `/bookings` path requires the `OAuth2ReadWrite` security sc
 
 OpenID Connect is an identity layer built on top of OAuth 2.0 that allows clients to verify the identity of end-users based on the authentication performed by an authorization server. It provides a standardized way to authenticate users and obtain their identity information, such as name, email, and profile picture.
 
-In OpenAPI v3.1, you can describe OpenID Connect authentication using the following example:
+In OpenAPI v3.x, you can describe OpenID Connect authentication using the following example:
 
 ```yaml
 OpenIDConnect:
@@ -324,7 +324,7 @@ All other paths will continue to be secured regardless of what order they're in.
 
 You might have noticed the empty array showing up: `HttpBearerToken: []`. This empty array is where "scopes" go.
 
-Scopes allow you to define fine-grained permissions within some types of security schema that support them, and in OpenAPI v3.1 that means OAuth 2 and OpenID Connect. 
+Scopes allow you to define fine-grained permissions within some types of security schema that support them, and in OpenAPI v3.x that means OAuth 2 and OpenID Connect. 
 
 Each security scheme can have its own set of scopes, which can be used to control access to specific resources or actions. 
 

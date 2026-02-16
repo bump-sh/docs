@@ -6,7 +6,7 @@ excerpt: "OpenAPI Format is a brilliant tool for helping teams get started with 
 date: 2025-06-12
 ---
 
-[Overlays for OpenAPI](/guides/openapi/specification/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve API descriptions by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
+[Overlays for OpenAPI](/guides/openapi/specification/v3.2/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve API descriptions by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
 
 The OpenAPI Format Playground aims to make things easier with a graphical interface on building and applying overlays, so let’s take a look at how it works.
 

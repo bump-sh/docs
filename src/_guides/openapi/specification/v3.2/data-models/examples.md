@@ -20,7 +20,7 @@ There are three main types of examples:
 
 ## Schema Examples
 
-The [schema object](_guides/openapi/specification/v3.2/data-models/schema-and-data-types.md) is used all over in OpenAPI, for requests and responses, parameters, and headers. A schema in OpenAPI v3.1 can add an example for an entire schema, part of a schema, or a single specific property, which is either confusing or flexible, depending on how you see the world.
+The [schema object](_guides/openapi/specification/v3.2/data-models/schema-and-data-types.md) is used all over in OpenAPI, for requests and responses, parameters, and headers. A schema in OpenAPI v3.x can add an example for an entire schema, part of a schema, or a single specific property, which is either confusing or flexible, depending on how you see the world.
 
 Here's an example of the `examples` keyword being used for specific properties inside an object.
 
@@ -97,7 +97,7 @@ For more on these schema examples, head over to the [Learn JSON Schema: Examples
 
 ## Media Type Examples
 
-The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) is the same object that defines the request body and each response underneath the `application/json` or whichever other content type is being defined. 
+The [Media Type Object](https://spec.openapis.org/oas/v3.2.0#media-type-object) is the same object that defines the request body and each response underneath the `application/json` or whichever other content type is being defined. 
 
 This type of example allows you to create an entire request or response example, and you have a choice between two two keywords: `example` or `examples`. There is more than just an `s` difference between these keywords, they're different shapes too. `example` is singular example which just contains the actual example value.
 
@@ -176,7 +176,7 @@ The summary name is optional, but is a great place to put human readable names i
 
 ![](/docs/images/changelog/multiple_examples.jpg)
 
-Notice that these examples are all defined _next_ to the `schema` keyword, not _inside_ it. Examples outside the schema object are an object with names, examples inside the schema object are just a list (array) which have no names. For clarity you can check the OpenAPI v3.1 Specification, looking at the [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) and the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object).
+Notice that these examples are all defined _next_ to the `schema` keyword, not _inside_ it. Examples outside the schema object are an object with names, examples inside the schema object are just a list (array) which have no names. For clarity you can check the OpenAPI v3.2 Specification, looking at the [Media Type Object](https://spec.openapis.org/oas/v3.2.0#media-type-object) and the [Schema Object](https://spec.openapis.org/oas/v3.2.0#schema-object).
 
 Here's a quick example of all the examples so you know where to start.
 
@@ -200,7 +200,7 @@ requestBody:
 
 ## Parameter Examples
 
-The OpenAPI v3.1 Parameter Object describes path parameters, query parameters, headers, etc. Since OpenAPI v3.0 They can have `examples` or an `example`, which work the same as the media type examples. They can also have a `schema`, which means they can have schema `examples` just like we talked about above.
+The OpenAPI v3.2 Parameter Object describes path parameters, query parameters, headers, etc. Since OpenAPI v3.0 They can have `examples` or an `example`, which work the same as the media type examples. They can also have a `schema`, which means they can have schema `examples` just like we talked about above.
 
 ```yaml
 /params:
@@ -254,7 +254,7 @@ Some mocking tools [like Microcks][microcks] might prefer you use named examples
 
 ## Example of All Examples
 
-Let's go on an adventure through all the types of examples available in OpenAPI v3.1, with a bunch of Adventure Time characters with random coordinates of their last known locations.
+Let's go on an adventure through all the types of examples available in OpenAPI v3.2, with a bunch of Adventure Time characters with random coordinates of their last known locations.
 
 ```yaml
 openapi: 3.2.0
@@ -344,3 +344,7 @@ What are we trying to achieve in doing this? We want the docs and mocks to have 
 This lets tools know that false is the default state for this property, which will make documentation more clear, help mock servers act more consistently, and can even make any code generated from OpenAPI work as expected.
 
 The `default` keyword is therefore quite similar to `examples` within a schema object, as it can introduce concrete values into the schema which can be used for all sorts of tooling, but it's more functional.
+
+
+
+<!-- NEW EXAMPLE KEYWORDS -->
