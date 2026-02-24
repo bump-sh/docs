@@ -9,8 +9,8 @@ layout: application
     <% sidebar.slot :before do %>
       <h2>
         <%= resource.data.sidebar_title %>
-        <% if resource.data.sidebar_versions&.any? %>          
-            <%= render Guides::VersionSelector.new(
+        <% if resource.data.sidebar_versions&.any? %>
+          <%= render Guides::VersionSelector.new(
             entries: site.data.sidebar_entries,
             current_url: resource.relative_url,
             current_version: resource.data.sidebar_version,
