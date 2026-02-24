@@ -6,31 +6,31 @@ resources:
     items:
       - label: What is Arazzo?
         link: /introduction/what-is-arazzo/
-      - label: History and Evolution of Arazzo
+      - label: History and evolution of Arazzo
         link: /introduction/history/
-      - label: Benefits of Using Arazzo
+      - label: Benefits of using Arazzo
         link: /introduction/benefits/
 
   - type: category
-    label: Understanding Arazzo Structure
+    label: Understanding Arazzo structure
     items:
-      - label: Basic Structure
+      - label: Basic structure
         link: /understanding-structure/basic-structure/
-      - label: Defining Sources
+      - label: Defining sources
         link: /understanding-structure/defining-sources/
       - label: Workflows
         link: /understanding-structure/workflows/
-      - label: Steps, Inputs, and Outputs
+      - label: Steps, inputs, and outputs
         link: /understanding-structure/steps-inputs-outputs/
-      - label: Success and Failure
+      - label: Success and failure
         link: /understanding-structure/success-and-failure/
-      - label: Components & References
+      - label: Components & references
         link: /understanding-structure/components-and-references/
 
   - type: category
     label: Working with Arazzo
     items:
-      - label: Runtime Expressions
+      - label: Runtime expressions
         link: /working-with-arazzo/runtime-expressions/
   - label: The Cheat Sheet
     link: /cheatsheet/

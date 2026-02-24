@@ -23,4 +23,4 @@ Here are the different sections:
 * Outputs
 * Runtime (step execution, runtime expressions, success and failure)
 
-Feel free to contribute to future versions of it! You can open issues to requests changes directly [in our public repository](https://github.com/bump-sh/docs/issues).
+Feel free to contribute to future versions of it! You can open issues to request changes directly [in our public repository](https://github.com/bump-sh/docs/issues).

@@ -1,5 +1,5 @@
 ---
-title: History and Evolution of Arazzo
+title: History and evolution of Arazzo
 authors: phil
 excerpt: Learn about the origins of Arazzo, from early workflow experiments to becoming an official OpenAPI Initiative standard for API workflow descriptions.
 date: 2025-01-24

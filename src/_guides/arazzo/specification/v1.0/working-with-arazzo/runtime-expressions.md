@@ -10,7 +10,7 @@ date: 2025-02-01
 
 Runtime expressions are the heart of Arazzo's dynamic capabilities. They allow you to reference data from inputs, previous steps, and responses, compute new values, and create conditional logic. Understanding runtime expressions is essential for building sophisticated workflows.
 
-## What are Runtime expressions?
+## What are runtime expressions?
 
 Runtime expressions are evaluated during workflow execution to produce values. They start with a `$` and use dot notation to access data:
 

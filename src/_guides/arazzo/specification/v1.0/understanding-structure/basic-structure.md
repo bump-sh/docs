@@ -1,5 +1,5 @@
 ---
-title: Basic Structure
+title: Basic structure
 authors: phil
 excerpt: Learn your way around an Arazzo document for describing HTTP workflows.
 date: 2025-01-27
