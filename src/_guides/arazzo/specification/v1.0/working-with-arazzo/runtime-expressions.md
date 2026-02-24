@@ -266,7 +266,7 @@ outputs:
   destinationCity: $response.body.trip.destination.city
 ```
 
-## Using Expressions in Conditions
+## Examples
 
 Expressions are frequently used in success and failure criteria. Here's a comprehensive guide to condition patterns:
 
