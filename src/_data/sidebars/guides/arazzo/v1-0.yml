@@ -32,7 +32,3 @@ resources:
     items:
       - label: Runtime Expressions
         link: /working-with-arazzo/runtime-expressions/
-      - label: Workflow Documentation
-        link: /working-with-arazzo/workflow-documentation/
-      - label: API Testing
-        link: /working-with-arazzo/api-testing/
