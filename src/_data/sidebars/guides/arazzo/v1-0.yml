@@ -10,7 +10,7 @@ resources:
         link: /introduction/history/
       - label: Benefits of Using Arazzo
         link: /introduction/benefits/
-  
+
   - type: category
     label: Understanding Arazzo Structure
     items:
@@ -26,9 +26,11 @@ resources:
         link: /understanding-structure/success-and-failure/
       - label: Components & References
         link: /understanding-structure/components-and-references/
-  
+
   - type: category
     label: Working with Arazzo
     items:
       - label: Runtime Expressions
         link: /working-with-arazzo/runtime-expressions/
+  - label: The Cheat Sheet
+    link: /cheatsheet/
