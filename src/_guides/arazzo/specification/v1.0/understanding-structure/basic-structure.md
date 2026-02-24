@@ -10,21 +10,21 @@ date: 2025-01-27
 
 The [Arazzo Specification](https://spec.openapis.org/arazzo/v1.0.1.html) defines how exactly an Arazzo document should be laid out, and understanding this structure is essential for creating effective HTTP workflow documentation. 
 
-## The Arazzo Document
+## The Arazzo document
 
 An Arazzo document is written as YAML or JSON. In a simple world you would typically name it `arazzo.yaml` or `arazzo.json`, but you can use any name you prefer. 
 
 Let's go through the main sections in an Arazzo document:
 
-1. **Arazzo Version**
-2. **Info Object**
-3. **Source Descriptions**
+1. **Arazzo version**
+2. **Info object**
+3. **Source descriptions**
 4. **Workflows**
 5. **Components**
 
 Let's examine each of these in detail.
 
-## 1. Arazzo Version
+## 1. Arazzo version
 
 The root of every Arazzo document must specify the version of the Arazzo Specification being used:
 
@@ -34,7 +34,7 @@ arazzo: 1.0.1
 
 The `arazzo` field is required, and tells tooling which version of the specification to use when parsing the document. The latest version at time of writing is `1.0.1`, but there is no semantic difference between `1.0.0` and `1.0.1`. It is just good practice to use the latest patch version.
 
-## 2. Info Object
+## 2. Info object
 
 The `info` object provides metadata about the workflow document:
 
@@ -60,7 +60,7 @@ info:
 
 The `info` object is similar to the OpenAPI `info` object, but describes the workflows rather than an API.
 
-## 3. Source Descriptions
+## 3. Source descriptions
 
 The `sourceDescriptions` array references the API definitions that workflows will use, which will often just be a single `openapi` document but could be multiple APIs or even other Arazzo documents.
 
@@ -139,7 +139,7 @@ workflows:
 
 Each workflow contains:
 
-**Workflow Metadata:**
+**Workflow metadata:**
 
 - `workflowId` (**required**) - Unique identifier for this workflow.
 - `summary` - A shorter description (used as a title).
@@ -147,7 +147,7 @@ Each workflow contains:
 - `inputs` - JSON Schema defining what inputs the workflow accepts.
 - `outputs` - What outputs the workflow produces.
 
-**Steps Array:**
+**Steps array:**
 
 - `stepId` (**required**) - Unique identifier for this step within the workflow.
 - `operationId` - Reference to an API operation to call.
@@ -202,7 +202,7 @@ components:
 
 **Learn more about [components and referencing](_guides/arazzo/specification/v1.0/understanding-structure/components-and-references.md).**
 
-## Putting It All Together
+## Putting it all together
 
 To see how this structure all works together, here's a complete (but very minimal) Arazzo document showing the key bits, including a couple of reusable components:
 
@@ -273,12 +273,12 @@ workflows:
           bookingId: $response.body#/id
 ```
 
-## Next Steps
+## Next steps
 
 Now that you understand the basic structure, if you'd like to learn more about any of the sections in particular you can take a look at these guides.
 
-- [Defining Sources](_guides/arazzo/specification/v1.0/understanding-structure/defining-sources.md) - How to reference API definitions
+- [Defining sources](_guides/arazzo/specification/v1.0/understanding-structure/defining-sources.md) - How to reference API definitions
 - [Workflows](_guides/arazzo/specification/v1.0/understanding-structure/workflows.md) - Creating workflow sequences  
-- [Steps, Inputs, and Outputs](_guides/arazzo/specification/v1.0/understanding-structure/steps-inputs-outputs.md) - Working with data flow
-- [Success and Failure](_guides/arazzo/specification/v1.0/understanding-structure/success-and-failure.md) - Handling outcomes
-- [Components & References](_guides/arazzo/specification/v1.0/understanding-structure/components-and-references.md) - Reusing definitions
+- [Steps, inputs, and outputs](_guides/arazzo/specification/v1.0/understanding-structure/steps-inputs-outputs.md) - Working with data flow
+- [Success and failure](_guides/arazzo/specification/v1.0/understanding-structure/success-and-failure.md) - Handling outcomes
+- [Components & references](_guides/arazzo/specification/v1.0/understanding-structure/components-and-references.md) - Reusing definitions

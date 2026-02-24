@@ -1,5 +1,5 @@
 ---
-title: Success and Failure in API Workflows
+title: Success and failure in API workflows
 authors: phil
 excerpt: Define precise success and failure criteria for each step in your Arazzo workflows, describing comprehensive error handling and branching logic.
 date: 2025-01-30
@@ -34,7 +34,7 @@ Here are a few things we might want to check:
 
 Both the success and failure criteria are arrays of checks that work in in the same way, using the same criteria objects.
 
-## Criteria Object
+## Criteria object
 
 Every one of these conditions must pass for the step to be considered successful, making it an `AND` operation, not an `OR`.
 
@@ -74,13 +74,13 @@ successCriteria:
   - condition: $response.body.status == 'confirmed'
 ```
 
-## Success and Failure Actions
+## Success and failure actions
 
 Once criteria determine whether a step has succeeded or failed, what happens next? By default, the workflow continues to the next sequential step. But we can also define `onSuccess` and `onFailure` actions to branch the workflow based on outcomes.
 
 Actions can be defined inline or referenced from [reusable components](_guides/arazzo/specification/v1.0/understanding-structure/components-and-references.md) to maintain consistency across workflows.
 
-### Action Types
+### Action types
 
 Both `onSuccess` and `onFailure` use the same action types. Each action has a `name`, a `type` (what to do), optional `criteria` which is a list of assertions to see if this action should be executed, and type-specific fields.
 
@@ -124,7 +124,7 @@ onFailure:
       - condition: $statusCode == 408  # Request Timeout
 ```
 
-### Invoking Workflows on Actions
+### Invoking workflows on actions
 
 Sometimes a single step can't handle the recovery or next phase. The `workflowId` field lets actions invoke other workflows for complex scenarios:
 
@@ -162,7 +162,7 @@ The workflow will run completely when it's invoked, then returns to the current 
 
 Let's rattle through a few more complete scenarios to see how it all fits together.
 
-### Branching on Search Results
+### Branching on search results
 
 A more advanced workflow has been created for the Train Travel API which allows folks to search for train trips, and based on various critera it will either look for better trips or go ahead and book.
 
@@ -256,7 +256,7 @@ This workflow branches based on the search results:
 - **No trips at all** - Also suggest alternative dates.
 - **API failure** - Retry the search.
 
-### Branching on Booking Status
+### Branching on booking status
 
 Once a trip is selected, creating the booking might succeed in different ways:
 
@@ -337,7 +337,7 @@ workflows:
         # ... notify about validation issues
 ```
 
-### Multi-Passenger Validation
+### Multi-passenger validation
 
 When handling multiple passengers, validate all requirements before proceeding:
 
@@ -416,7 +416,7 @@ workflows:
 
 ## Best practices
 
-### Validate Business Rules, Not Just HTTP
+### Validate business rules, not just HTTP
 
 The goal is to ensure the workflow meets business needs, not just technical success at the transportation level. Get business logic written down, and if the logic changes that's ok, the workflow can be updated to match.
 
@@ -433,7 +433,7 @@ successCriteria:
   - condition: $statusCode == 200
 ```
 
-### Reusable Actions with Components
+### Reusable actions with components
 
 For actions used across multiple steps or workflows, define them in the components section:
 

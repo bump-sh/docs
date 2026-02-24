@@ -1,5 +1,5 @@
 ---
-title: Defining Sources
+title: Defining sources
 authors: phil
 excerpt: Learn how to reference OpenAPI operations in Arazzo workflows using source descriptions.
 date: 2025-01-30
@@ -10,7 +10,7 @@ date: 2025-01-30
 
 Source descriptions are how Arazzo gets a leg up on understanding the APIs being worked with. To avoid repeating all the HTTP-level bits like endpoints, status codes, schema, etc. Arazzo just defines source description, then references operations by their `operationId`. Most source descriptions are OpenAPI documents. However, you can also reference workflows defined in other Arazzo documents, and support for AsyncAPI documents is coming soon.
 
-## The sourceDescriptions Array
+## The sourceDescriptions array
 
 Source descriptions are described in the `sourceDescriptions` array at the root level, and there needs to be at least one:
 
@@ -35,7 +35,7 @@ workflows:
 
 This array has the two APIs, one local OpenAPI document written in YAML and a payment service where the OpenAPI is hosted remotely, available as a JSON URl. That'll all work fine, and makes it easier to work across context boundaries where different teams might manage their own APIs and OpenAPI.
 
-## Source Description Fields
+## Source description fields
 
 Let's have a bit of a closer look at the fields that make up a source description. Each source description object has three required fields:
 
@@ -101,7 +101,7 @@ sourceDescriptions:
     type: arazzo
 ```
 
-## Referencing Operations from Sources
+## Referencing operations from sources
 
 Once you've defined a source, you reference operations using the `operationId` with a runtime expression in the following format: `$sourceDescriptions.{name}.{operationId}`.
 
@@ -120,7 +120,7 @@ workflows:
 
 The operation must exist in the referenced API definition with a matching `operationId`. 
 
-### OpenAPI Operation IDs
+### OpenAPI operation IDs
 
 In your OpenAPI document:
 
@@ -136,7 +136,7 @@ paths:
 
 The `operationId` in OpenAPI should be unique across the entire API description. You'll also need to be cautious when renaming `operationId` or sunsetting old endpoints as it could break some workflows.
 
-## Multiple Sources
+## Multiple sources
 
 Simple workflows might only need one API but when working on cross-API orchestration (e.g., microservices, third-party integrations) or writing end-to-end tests that cross multiple APIs/services, you'll likely need to define multiple sources:
 
@@ -176,7 +176,7 @@ workflows:
 
 This is powerful for orchestrating across multiple microservices, combining your API with external third-party integrations, and using multiple providers together in multi-vendor workflows.
 
-## Composing Arazzo Documents
+## Composing Arazzo documents
 
 Arazzo documents can reference other Arazzo documents to compose workflows, enabling you to share common workflows across different teams or projects, or build complex workflows from simpler, reusable components.
 

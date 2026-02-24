@@ -1,5 +1,5 @@
 ---
-title: Benefits of Using Arazzo
+title: Benefits of using Arazzo
 authors: phil
 excerpt: Discover the advantages of adopting the Arazzo Specification for documenting, testing, and managing API workflows to benefit humans and agentic-AI.
 date: 2025-01-26
@@ -20,7 +20,7 @@ The Arazzo Specification provides a standardized way to define these API workflo
 
 Using Arazzo not only solves the documentation problem, but also drastically improves the process of design, governance, end to end testing, chaos testing, and all sorts of operational challenges like monitoring and health checks.
 
-## Documentation Benefits
+## Documentation benefits
 
 An API client needs to do a thing: book a ticket, onboard a user, move an order from "draft" to "paid", or recover when something fails halfway through.
 
@@ -81,7 +81,7 @@ Common workflows could involve:
 
 It seems like it should be pretty standard stuff, but every API is different and these journeys are often surprisingly confusing to navigate without clear documentation that's definitely up-to-date.
 
-## Testing Benefits
+## Testing benefits
 
 Once workflows are written down in a machine-readable format, testing stops being a separate project. The workflow itself becomes the test: run it against staging in CI, run it as a smoke test before deploy, or run it periodically as monitoring.
 
@@ -175,7 +175,7 @@ You can also handle real-world edge cases without turning your docs into a wall 
         - condition: $response.body.reason == 'ORDER_SHIPPED'
 ```
 
-## Design, Governance, and Operations
+## Design, governance, and operations
 
 Once you've got a handful of core workflows, they naturally become a contract for how the API should be used. That helps during design reviews. Can a customer actually complete checkout with this API? Did a recent change break a critical journey?
 
@@ -202,7 +202,7 @@ workflows:
 
 Even if you never generate a fancy visualization as documentation, the day-to-day payoff is simple: onboarding is faster when people can run the workflow and watch it work; integration is smoother when the happy path is explicit; and breakages are easier to spot because failures show up as a specific step, with a specific condition that didn't match.
 
-## Cross-API Orchestration
+## Cross-API orchestration
 
 While OpenAPI describes a single API, Arazzo can orchestrate across multiple APIs by referencing multiple source descriptions. This is especially useful for documenting and testing business processes that span different APIs or services.
 
@@ -236,7 +236,7 @@ Notice the difference in `operationId` syntax. Instead of referencing just the `
 
 This is where Arazzo starts to feel more like CI/CD workflows, but for business journeys. Stitching together operations that live in different services, passing data between them, and defining what "success" means for the whole sequence in a single source of truth.
 
-## Business Value
+## Business value
 
 Beyond making sure an API ecosystem is actually functioning properly (with fewer partial sources of truth to disagree with each other) most of the business value is second-order effects. 
 

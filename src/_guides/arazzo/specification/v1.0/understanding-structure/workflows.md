@@ -10,7 +10,7 @@ date: 2025-01-31
 
 Think of workflows as recipes for API operations. Just like a recipe breaks down cooking into steps (chop onions, sauté garlic, add tomatoes), an Arazzo workflow breaks down complex API tasks into manageable steps. If you've used GitHub Actions or Jenkins pipelines, the concept will feel familiar, but Arazzo is purpose-built for API orchestration rather than CI/CD.
 
-## What is a Workflow?
+## What is a workflow?
 
 A workflow is a named sequence of steps that performs a complete task using one or more APIs. Each workflow is self-contained. It declares what inputs it needs, what steps to execute, and what outputs to return. This makes workflows portable and reusable across different contexts.
 
@@ -47,9 +47,9 @@ workflows:
       ticketUrl: $steps.confirm.outputs.ticketUrl
 ```
 
-## Workflow Structure
+## Workflow structure
 
-### Required Fields
+### Required fields
 
 Only two fields are actually required to create a workflow:
 
@@ -72,7 +72,7 @@ workflows:
         # ... step configuration
 ```
 
-### Optional Fields
+### Optional fields
 
 **summary** - A brief description:
 
@@ -168,11 +168,11 @@ workflows:
       # This workflow assumes authentication has been completed
 ```
 
-## Workflow Inputs
+## Workflow inputs
 
 Workflows need some data to get started. Maybe it's a user ID, search criteria, or a new resource being created. Arazzo uses JSON Schema to define what inputs a workflow accepts, which has the handy side effect of providing validation and documentation automatically.
 
-### Basic Inputs
+### Basic inputs
 
 ```yaml
 workflows:
@@ -191,7 +191,7 @@ workflows:
 
 Input objects can have any valid JSON Schema structure, including nested objects and arrays. If you are new to JSON Schema, check out the [official documentation](https://json-schema.org/learn) for a full guide.
 
-### Required vs Optional
+### Required vs optional
 
 Some inputs are must-haves (where are you going?), while others can have sensible defaults (how many passengers? probably just one). 
 
@@ -221,7 +221,7 @@ workflows:
           maximum: 9
 ```
 
-### Complex Input Types
+### Complex input types
 
 Inputs can be as simple or complex as you need. Nested objects, arrays, enums, JSON Schema has a keyword for pretty much everything.
 
@@ -254,7 +254,7 @@ workflows:
               type: string
 ```
 
-### Using Inputs in Steps
+### Using inputs in steps
 
 Once you've defined inputs at the workflow level, steps can access them using runtime expressions like `$inputs.origin`. This is how data flows from the workflow into individual API calls:
 
@@ -281,11 +281,11 @@ workflows:
             value: $inputs.destination  # Reference input
 ```
 
-## Workflow Outputs
+## Workflow outputs
 
 Workflows should return useful data. What good is running a booking workflow if you can't get the booking ID back? Outputs define what data the workflow makes available upon completion.
 
-### Simple Outputs
+### Simple outputs
 
 ```yaml
 workflows:
@@ -301,7 +301,7 @@ workflows:
       createdAt: $steps.book.outputs.timestamp
 ```
 
-### Computed Outputs
+### Computed outputs
 
 ```yaml
 workflows:
@@ -321,7 +321,7 @@ workflows:
       total: $steps.getBasePrice.outputs.basePrice + $steps.getTax.outputs.taxAmount
 ```
 
-## Global Parameters
+## Global parameters
 
 Got a header or query parameter that every single step needs? Don't repeat yourself. Define them at the workflow level and all steps inherit it automatically:
 
@@ -349,7 +349,7 @@ workflows:
         # Also automatically includes both headers
 ```
 
-## Workflow Dependencies
+## Workflow dependencies
 
 When workflows need to run in a specific order, the `dependsOn` field makes those dependencies explicit. This is particularly useful for authentication flows, multi-stage processes, or any scenario where one workflow produces data that another workflow requires:
 
@@ -378,11 +378,11 @@ workflows:
 
 Smart tools can use this information to automatically run prerequisite workflows, validate execution order, or generate nice workflow diagrams.
 
-## Workflow Patterns
+## Workflow patterns
 
 Here are some common patterns for organizing workflows:
 
-### Linear Sequential Workflows
+### Linear sequential workflows
 
 The most straightforward pattern - steps execute one after another:
 
@@ -396,7 +396,7 @@ workflows:
       - stepId: processPayment
 ```
 
-### Multi-Source Workflows
+### Multi-source workflows
 
 Workflows can orchestrate across multiple APIs by referencing operations from different source descriptions:
 
@@ -414,7 +414,7 @@ workflows:
         operationId: $sourceDescriptions.shippingApi.createShipment
 ```
 
-### Nested Workflows
+### Nested workflows
 
 Break complex processes into smaller, reusable workflows:
 
@@ -437,11 +437,11 @@ workflows:
         operationId: $sourceDescriptions.bookingApi.create
 ```
 
-## Best Practices
+## Best practices
 
 Here's a few tips for writing workflows that are easy to understand and maintain.
 
-### Descriptive Workflow IDs
+### Descriptive workflow IDs
 
 Pick workflow IDs that clearly describe what the workflow does:
 
@@ -457,7 +457,7 @@ Pick workflow IDs that clearly describe what the workflow does:
 - workflowId: sab
 ```
 
-### Write Summaries That Add Value
+### Write summaries that add value
 
 Don't just repeat the workflow ID in different words. Your summary should tell readers what the workflow accomplishes and when they'd want to use it:
 
@@ -471,7 +471,7 @@ Don't just repeat the workflow ID in different words. Your summary should tell r
   summary: Checkout workflow
 ```
 
-### Document Complex Workflows
+### Document complex workflows
 
 For workflows with many steps or intricate logic, use the `description` field to explain the overall process, key decisions, and error handling:
 
@@ -495,7 +495,7 @@ For workflows with many steps or intricate logic, use the `description` field to
     - Connection validation ensures minimum 30 minute layovers
 ```
 
-### Keep Workflows Focused
+### Keep workflows focused
 
 Each workflow should do one thing well. Don't create a mega-workflow that handles everything from user registration to coffee machine calibration:
 

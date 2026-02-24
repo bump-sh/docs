@@ -1,5 +1,5 @@
 ---
-title: Components & References
+title: Components & references
 authors: phil
 excerpt: Learn how to use components and references in Arazzo to reduce repetition and build maintainable workflows.
 date: 2025-01-23
@@ -12,7 +12,7 @@ Arazzo helps teams and tools not waste time and effort writing and parsing the s
 
 Reuse in Arazzo is built upon two concepts: the `components` object, and the `reference` keyword.
 
-## The Components Object
+## The Components object
 
 The `components` object at the root of your Arazzo document contains reusable definitions:
 
@@ -39,7 +39,7 @@ workflows:
   # ... workflows can reference components
 ```
 
-## Component Types
+## Component types
 
 Arazzo supports several component types, each designed to reduce repetition and make workflows easier to maintain.
 
@@ -115,7 +115,7 @@ components:
       value: $inputs.itemId
 ```
 
-### Success Actions
+### Success actions
 
 Success actions define reusable actions to take when a step completes successfully.
 
@@ -144,9 +144,9 @@ components:
 
 Both of those conditions are actually the same but using different expression types. The first uses a simple expression, while the second uses JSONPath to extract the status from the response body. 
 
-Learn more about success and failure actions in the [Success and Failure](_guides/arazzo/specification/v1.0/understanding-structure/success-and-failure.md) guide.
+Learn more about success and failure actions in the [Success and failure](_guides/arazzo/specification/v1.0/understanding-structure/success-and-failure.md) guide.
 
-### Failure Actions
+### Failure actions
 
 Failure actions define reusable actions to take when a step fails.
 
@@ -175,7 +175,7 @@ components:
       stepId: logError
 ```
 
-## Referencing Components
+## Referencing components
 
 Now that these components are defined, they can be referenced using the `reference` keyword.
 
@@ -216,7 +216,7 @@ steps:
 
 Here the `authHeader` parameter is reused as-is, while `query` and `limit` are defined inline for this one step.
 
-## Referencing Inputs
+## Referencing inputs
 
 Inputs are a little different than the rest of Arazzo in that they are defined entirely using JSON Schema. This means there is little space for the `reference` keyword, but that's no trouble as JSON Schema comes with its own `$ref` keyword.
 
@@ -259,11 +259,11 @@ workflows:
 
 Each input schema can define properties, and use `$ref` to pull in reusable input components mixed in with inline definitions for just that workflow.
 
-## Referencing Actions
+## Referencing actions
 
 Actions are where `reference` really shines: define consistent behavior once, then attach it to any step using `onSuccess` or `onFailure`.
 
-### Success Actions
+### Success actions
 
 Use a success action component when multiple steps should react the same way to success.
 
@@ -282,7 +282,7 @@ workflows:
 
 Because each success action has criteria, you can attach both and let runtime data decide whether the workflow continues (`goto`) or completes (`end`).
 
-### Failure Actions
+### Failure actions
 
 Failure actions are often reused even more heavily, because retry logic and error routing tends to be consistent across many steps.
 
@@ -300,7 +300,7 @@ workflows:
 
 This step reuses the failure actions from earlier: retry on transient server errors, retry more cautiously when rate limited, and then route to a logging step if it still fails.
 
-### Conditional Action Reuse
+### Conditional action reuse
 
 Criteria let you attach multiple actions to the same step and still get different outcomes based on runtime data.
 

@@ -1,5 +1,5 @@
 ---
-title: Runtime Expressions
+title: Runtime expressions
 authors: phil
 excerpt: Learn how to use runtime expressions in Arazzo to create dynamic, data-driven workflows.
 date: 2025-02-01
@@ -10,7 +10,7 @@ date: 2025-02-01
 
 Runtime expressions are the heart of Arazzo's dynamic capabilities. They allow you to reference data from inputs, previous steps, and responses, compute new values, and create conditional logic. Understanding runtime expressions is essential for building sophisticated workflows.
 
-## What Are Runtime Expressions?
+## What are Runtime expressions?
 
 Runtime expressions are evaluated during workflow execution to produce values. They start with a `$` and use dot notation to access data:
 
@@ -28,11 +28,11 @@ $statusCode
 $response.body.booking.id
 ```
 
-## Expression Contexts
+## Expression contexts
 
 Expressions can reference data from several contexts:
 
-### Workflow Inputs
+### Workflow inputs
 
 Access data passed to the workflow:
 
@@ -98,7 +98,7 @@ value: $inputs.userName
 value: $inputs.email
 ```
 
-### Previous Step Outputs
+### Previous step outputs
 
 Reference outputs from earlier steps:
 
@@ -129,7 +129,7 @@ For this to work the output must be defined in the referenced step, and that ste
 
 **Learn more about [steps and outputs](_guides/arazzo/specification/v1.0/understanding-structure/steps-inputs-outputs.md).**
 
-### Current Response
+### Current response
 
 Within success/failure criteria and outputs, access the current response:
 
@@ -155,7 +155,7 @@ Within success/failure criteria and outputs, access the current response:
 - `$response.header` - Response headers object
 - `$response.header.content-type` - Specific header
 
-### HTTP Status
+### HTTP status
 
 Access the HTTP status code of the current response:
 
@@ -167,7 +167,7 @@ outputs:
   responseCode: $statusCode
 ```
 
-### Source Descriptions
+### Source descriptions
 
 Reference operations from source APIs:
 
@@ -185,11 +185,11 @@ steps:
 
 That's `$sourceDescriptions.{sourceName}.{operationId}` or  `$sourceDescriptions.{sourceName}.{workflowId}` for other Arazzo workflows.
 
-## Operators in Conditions
+## Operators in conditions
 
 Runtime expressions support various operators for use in success and failure criteria:
 
-### Comparison Operators
+### Comparison operators
 
 ```yaml
 successCriteria:
@@ -215,7 +215,7 @@ successCriteria:
   - condition: $response.body.quantity <= $response.body.maxQuantity
 ```
 
-### Logical Operators
+### Logical operators
 
 ```yaml
 successCriteria:
@@ -228,7 +228,7 @@ successCriteria:
   - condition: $response.body.status == 'confirmed' || $response.body.status == 'pending'
 ```
 
-### String Operators
+### String operators
 
 Concat strings using interpolation:
 
@@ -250,7 +250,7 @@ successCriteria:
   - condition: $response.body.id != null
 ```
 
-## Extracting Values
+## Extracting values
 
 Use outputs to extract values from responses:
 
@@ -270,7 +270,7 @@ outputs:
 
 Expressions are frequently used in success and failure criteria. Here's a comprehensive guide to condition patterns:
 
-### Status Code Checks
+### Status code checks
 
 ```yaml
   # Exact status
@@ -284,7 +284,7 @@ Expressions are frequently used in success and failure criteria. Here's a compre
   - condition: $statusCode == 200 || $statusCode == 201
 ```
 
-### Field Value Checks
+### Field value checks
 
 ```yaml
 # Simple field checks
@@ -297,7 +297,7 @@ Expressions are frequently used in success and failure criteria. Here's a compre
 - condition: $response.body.bookingReference != null
 ```
 
-### Checking Response Structure
+### Checking response structure
 
 ```yaml
 # Check for required object properties
@@ -306,7 +306,7 @@ Expressions are frequently used in success and failure criteria. Here's a compre
 - condition: $response.body.trip.price <= $inputs.maxPrice
 ```
 
-### Header Checks
+### Header checks
 
 ```yaml
   # Header values
@@ -318,7 +318,7 @@ Expressions are frequently used in success and failure criteria. Here's a compre
   - condition: $response.header['retry-after'] == null
 ```
 
-### JSONPath in Conditions
+### JSONPath in conditions
 
 For complex filtering, use JSONPath expressions with `type: jsonpath`. This is **only available in conditions** (`successCriteria`/`failureCriteria`), not in outputs or parameters.
 

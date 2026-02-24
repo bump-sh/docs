@@ -1,5 +1,5 @@
 ---
-title: Steps, Inputs, and Outputs
+title: Steps, inputs, and outputs
 authors: phil
 excerpt: Master the building blocks of Arazzo workflows - steps that call operations, inputs that provide data, and outputs that capture results for subsequent steps.
 date: 2025-01-31
@@ -10,7 +10,7 @@ date: 2025-01-31
 
 If workflows are the recipes, then steps are the individual cooking instructions. Each step does one thing: call an API endpoint, run another workflow, or make a decision. Steps get their data from inputs and output from other steps, do their work, then save interesting bits of the response for steps that come after.
 
-## What is a Step?
+## What is a step?
 
 A step is a single action in your workflow. Most often that means calling an API endpoint, but steps can also invoke other workflows or handle conditional branching.
 
@@ -31,7 +31,7 @@ steps:
       firstTripId: $response.body#/trips/0/id
 ```
 
-### Required Fields
+### Required fields
 
 **stepId** - The unique name for this step within the workflow.
 
@@ -68,7 +68,7 @@ Every step needs to specify what it's going to do, and that will be a single ope
   workflowId: $sourceDescriptions.trainApi.cancelBookingWorkflow
 ```
 
-### Optional Fields
+### Optional fields
 
 **description** - Explain what the step does in a way that is useful for human-readable documentation.
 
@@ -137,7 +137,7 @@ Every step needs to specify what it's going to do, and that will be a single ope
     totalPrice: $response.body#/pricing/total
 ```
 
-## Step Execution Order
+## Step execution order
 
 By default, steps run in order from top to bottom. Step 1 finishes, then step 2 runs, then step 3, and so on. Simple and predictable:
 
@@ -153,7 +153,7 @@ steps:
     # ...
 ```
 
-### Controlling Flow with Actions
+### Controlling flow with actions
 
 But sometimes you need to jump around. The `onSuccess` and `onFailure` fields let you break out of that linear flow:
 
@@ -177,11 +177,11 @@ steps:
     # Runs if inventory check failed
 ```
 
-## Working with Inputs
+## Working with inputs
 
 Steps need data to do their work, and that data comes from three places. Let's look at each:
 
-### 1. Workflow Inputs
+### 1. Workflow inputs
 
 Data passed to the entire workflow gets accessed with `$inputs`:
 
@@ -209,7 +209,7 @@ workflows:
             value: $inputs.destination
 ```
 
-### 2. Previous Step Outputs
+### 2. Previous step outputs
 
 Access data from earlier steps.
 
@@ -228,7 +228,7 @@ steps:
         tripId: $steps.search.outputs.selectedTripId
 ```
 
-### 3. Global Parameters
+### 3. Global parameters
 
 Inherit parameters defined at the workflow level:
 
@@ -250,7 +250,7 @@ workflows:
 
 Parameters are how you customize API calls. They can go in the URL (query or path), in headers, or in cookies. Each parameter overrides or supplements what's defined in the OpenAPI operation:
 
-### Query Parameters
+### Query parameters
 
 ```yaml
 - stepId: search
@@ -270,7 +270,7 @@ Parameters are how you customize API calls. They can go in the URL (query or pat
       value: $inputs.passengerCount
 ```
 
-### Path Parameters
+### Path parameters
 
 ```yaml
 - stepId: getBooking
@@ -281,7 +281,7 @@ Parameters are how you customize API calls. They can go in the URL (query or pat
       value: $steps.createBooking.outputs.bookingId
 ```
 
-### Header Parameters
+### Header parameters
 
 ```yaml
 - stepId: authenticatedRequest
@@ -295,7 +295,7 @@ Parameters are how you customize API calls. They can go in the URL (query or pat
       value: $inputs.requestId
 ```
 
-### Cookie Parameters
+### Cookie parameters
 
 ```yaml
 - stepId: sessionRequest
@@ -306,11 +306,11 @@ Parameters are how you customize API calls. They can go in the URL (query or pat
       value: $steps.auth.outputs.sessionId
 ```
 
-## Request Bodies
+## Request bodies
 
 For POST, PUT, PATCH, and QUERY operations, you'll usually need to send a request body. Arazzo makes this straightforward:
 
-### Simple Request Body
+### Simple request body
 
 ```yaml
 - stepId: addPassenger
@@ -322,7 +322,7 @@ For POST, PUT, PATCH, and QUERY operations, you'll usually need to send a reques
       email: $inputs.passengerEmail
 ```
 
-### Complex Request Body
+### Complex request body
 
 ```yaml
 - stepId: createBooking
@@ -344,7 +344,7 @@ For POST, PUT, PATCH, and QUERY operations, you'll usually need to send a reques
       specialRequests: $inputs.specialRequests
 ```
 
-### Using Previous Step Data
+### Using previous step data
 
 ```yaml
 - stepId: updateBooking
@@ -362,7 +362,7 @@ For POST, PUT, PATCH, and QUERY operations, you'll usually need to send a reques
       confirmationCode: $steps.generateCode.outputs.code
 ```
 
-### Different Content Types
+### Different content types
 
 ```yaml
 # JSON
@@ -393,7 +393,7 @@ For POST, PUT, PATCH, and QUERY operations, you'll usually need to send a reques
 
 Outputs are how you pluck useful data from responses and make it available to later steps. Don't extract everything, just grab what you'll actually need.
 
-### Basic Outputs
+### Basic outputs
 
 ```yaml
 - stepId: createBooking
@@ -403,7 +403,7 @@ Outputs are how you pluck useful data from responses and make it available to la
     status: $response.body#/status
 ```
 
-### JSON Pointer Notation
+### JSON pointer notation
 
 Most real-world APIs using JSON are going to have nested data, with objects and arrays inside each other. Selecting out the exact piece of data needed for an output value can be done with [JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901.html) notation.
 
@@ -429,7 +429,7 @@ When dealing with arrays, you can access a specific record in an array by its in
     secondTripPrice: $response.body#/trips/1/price
 ```
 
-### Headers and Status
+### Headers and status
 
 Besides response bodies, you can also extract HTTP status codes and headers. This is useful for capturing rate limits, pagination tokens, or debugging information:
 
@@ -449,7 +449,7 @@ Besides response bodies, you can also extract HTTP status codes and headers. Thi
 ```
 
 
-## Using Outputs in Subsequent Steps
+## Using outputs in subsequent steps
 
 Outputs are referenced using the `$steps` runtime expression:
 
@@ -488,11 +488,11 @@ steps:
 ```
 
 
-## Best Practices
+## Best practices
 
 A few tips that'll make your workflows easier to work with:
 
-### Descriptive Step IDs
+### Descriptive step IDs
 
 Make step IDs self-documenting. Six months from now, `searchAvailableTrips` will be much clearer than `step1`:
 
@@ -509,7 +509,7 @@ Make step IDs self-documenting. Six months from now, `searchAvailableTrips` will
 - stepId: api_call
 ```
 
-### Extract Useful Outputs
+### Extract useful outputs
 
 Be intentional about outputs. Only extract data you know you'll need in a later step:
 
@@ -533,7 +533,7 @@ outputs:
   amount: $response.body#/pricing/total
 ```
 
-### Clear Descriptions
+### Clear descriptions
 
 ```yaml
 - stepId: validatePayment
@@ -544,7 +544,7 @@ outputs:
   operationId: $sourceDescriptions.paymentApi.validateCard
 ```
 
-## Wrapping Up
+## Wrapping up
 
 Steps are where workflows get real work done. Each step calls an operation, transforms data, and passes results to the next step.
 

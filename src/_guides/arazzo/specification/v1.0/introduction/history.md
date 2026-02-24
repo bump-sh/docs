@@ -10,7 +10,7 @@ date: 2025-01-24
 
 The Arazzo Specification represents years of evolution in API workflow documentation, emerging from real-world needs and community collaboration to become an official standard under the OpenAPI Initiative.
 
-## The Birth of Arazzo
+## The birth of Arazzo
 
 The first time Arazzo came up was on an OpenAPI community call somewhere in late 2021 where a bunch of the usual OpenAPI contributors were discussing the Special Interest Groups that could be formed under the OpenAPI Initiative. Along with groups for Overlays, Security, Travel, etc. one of the groups was Workflows. The idea was to explore how to standardize the way API workflows were defined.
 
@@ -28,7 +28,7 @@ In 2022 a formal proposal was drafted and presented to the OpenAPI Initiative, a
 
 The specification was initially called "OpenAPI Workflows" but was later renamed to **Arazzo** to give it a distinct identity while maintaining its connection to the OpenAPI ecosystem. The name "Arazzo" (Italian for "tapestry") reflects how workflows weave together multiple API calls into a cohesive pattern.
 
-### Version 1.0 Release (2024)
+### Version 1.0 release (2024)
 
 After extensive community review, tooling experiments, and real-world testing, Arazzo 1.0.0 was officially released in 2024 as a standard under the OpenAPI Initiative. This first version includes:
 
@@ -40,11 +40,11 @@ After extensive community review, tooling experiments, and real-world testing, A
 - **Components and reusability** - Reducing duplication through references
 - **Outputs** - Capturing and passing results between steps
 
-## Adoption and Ecosystem
+## Adoption and ecosystem
 
 Arazzo has seen growing interest across the API community with most tooling vendors busily working on adding support, with the first two being Spectral and Speakeasy. The list of Arazzo-compatible tools continues to grow, and for the most up-to-date list check [OpenAPI.Tools: Arazzo](https://openapi.tools/collections/arazzo).
 
-## The Future
+## The future
 
 Arazzo 1.1 is already underway with non-breaking improvements potentially including:
 

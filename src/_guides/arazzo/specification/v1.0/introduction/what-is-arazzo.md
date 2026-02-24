@@ -12,7 +12,7 @@ Arazzo (the "Arazzo Specification") is a standard format for describing API work
 
 While OpenAPI describes what an API can do in any given interaction, Arazzo describes how those interactions can be chained together to achieve real-world goals, like finding the right train ticket, picking a seat, and booking it.
 
-## Previous Approaches to API Workflows
+## Previous approaches to API workflows
 
 For years OpenAPI has made "API reference documentation" considerably better, going beyond the hand-crafted written stuff that rarely had any useful details and was usually out of date. API clients are able to integrate with APIs much quicker, and it's helped at every stage of the API lifecycle from design, testing, monitoring, and back to designing new versions again. 
 
@@ -76,7 +76,7 @@ Arazzo is designed to allow inputs and outputs from each step to be clearly desc
 
 Because the whole thing is structured, the workflows can be executed. That means the same file can power testing and automation, not just documentation. And once the documentation is executable there is no way for documentation and implementation to drift out of sync, because you can run the workflows as tests to verify everything still works as expected on every single pull request or commit to main branch.
 
-## What Arazzo Looks Like
+## What Arazzo looks like
 
 Here's a simple example of an Arazzo workflow for searching and booking a train:
 
@@ -125,13 +125,13 @@ This workflow defines two steps: searching for trips and creating a booking. It 
 
 This clarity allows tools to generate accurate documentation, run tests, and even automate these workflows reliably.
 
-## Who Benefits from Arazzo?
+## Who benefits from Arazzo?
 
-- **API Designers** - Document intended usage patterns during the design phase
-- **Backend Developers** - Validate that implementations support the designed workflows
-- **QA Engineers** - Use workflows as integration test suites
-- **Technical Writers** - Generate accurate workflow documentation automatically
-- **API Consumers** - Understand how to accomplish real tasks, not just individual calls
-- **DevOps Teams** - Use workflows for smoke tests and monitoring
+- **API designers** - Document intended usage patterns during the design phase
+- **Backend developers** - Validate that implementations support the designed workflows
+- **QA engineers** - Use workflows as integration test suites
+- **Technical writers** - Generate accurate workflow documentation automatically
+- **API consumers** - Understand how to accomplish real tasks, not just individual calls
+- **DevOps teams** - Use workflows for smoke tests and monitoring
 
 Arazzo brings the same revolution to API workflow documentation that OpenAPI brought to API reference documentation: a single source of truth that serves multiple purposes throughout the API lifecycle.
