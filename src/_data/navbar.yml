@@ -1,9 +1,9 @@
 left_links:
   - {title: "Documentation", link: "/help"}
-  - {title: "Product Updates", link: "/product-updates"}
+  - {title: "Product updates", link: "/product-updates"}
   - {title: "Guides", link: "/guides"}
-  - {title: "OpenAPI Specification", link: "/guides/openapi/specification/v3.2/introduction/what-is-openapi"}
-  - {title: "Arazzo Specification", link: "/guides/arazzo/specification/v1.0/introduction/what-is-arazzo"}
+  - {title: "OpenAPI specification", link: "/guides/openapi/specification/v3.2/introduction/what-is-openapi"}
+  - {title: "Arazzo specification", link: "/guides/arazzo/specification/v1.0/introduction/what-is-arazzo"}
 right_links:
-  - {title: "API Reference", link: "https://developers.bump.sh"}
+  - {title: "API reference", link: "https://developers.bump.sh"}
   - {title: "Bump.sh", link: "https://bump.sh"}
