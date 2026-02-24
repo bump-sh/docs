@@ -1,7 +1,12 @@
 <highlight-banner>
   <div class="wrapper">
     <div class="content">
-      <h3><%= @title %></h3>
+        <div class="title">    
+            <% if @image.present? %>
+                <%= svg "#{@image}", class: "image" %>
+            <% end %>
+            <h3><%= @title %></h3>
+        </div>
       <%= content %>
       <% if has_button_content? %>
         <%= link_to @link_url, class: "button" do %>
@@ -10,8 +15,5 @@
         <% end %>
       <% end %>
     </div>
-    <% if @image.present? %>
-      <%= svg "#{@image}", class: "image" %>
-    <% end %>
   </div>
 </highlight-banner>
