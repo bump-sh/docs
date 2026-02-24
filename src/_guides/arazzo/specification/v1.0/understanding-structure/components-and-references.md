@@ -104,20 +104,15 @@ components:
       in: header
       value: Bearer $inputs.token
     
-    apiVersion:
-      name: API-Version
-      in: header
-      value: "2024-01"
-    
-    requestId:
-      name: X-Request-ID
-      in: header
-      value: $inputs.requestId
-    
     acceptJson:
       name: Accept
       in: header
       value: application/json
+
+    itemId:
+      name: id
+      in: query
+      value: $inputs.itemId
 ```
 
 ### Success Actions

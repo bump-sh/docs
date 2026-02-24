@@ -8,7 +8,7 @@ date: 2025-01-30
 - TOC
 {:toc}
 
-Source descriptions are how Arazzo gets a leg up pn understanding the APIs being worked with. To avoid repeating all the HTTP-level bits like endpoints, status codes, schema, etc. Arazzo just defines source description, then references operations by their `operationId`. Mostly these will be OpenAPI descriptions, but other Arazzo documents can also be used to reference workflows defined elsewhere, and soon AsyncAPI documents will be supported too.
+Source descriptions are how Arazzo gets a leg up on understanding the APIs being worked with. To avoid repeating all the HTTP-level bits like endpoints, status codes, schema, etc. Arazzo just defines source description, then references operations by their `operationId`. Most source descriptions are OpenAPI documents. However, you can also reference workflows defined in other Arazzo documents, and support for AsyncAPI documents is coming soon.
 
 ## The sourceDescriptions Array
 

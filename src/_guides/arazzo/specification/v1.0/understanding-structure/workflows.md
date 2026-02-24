@@ -223,7 +223,7 @@ workflows:
 
 ### Complex Input Types
 
-Inputs can be as simple or complex as you need. Nested objects, arrays, enums,JSON Schema has a keyword for pretty much everything.
+Inputs can be as simple or complex as you need. Nested objects, arrays, enums, JSON Schema has a keyword for pretty much everything.
 
 ```yaml
 workflows:
@@ -283,7 +283,7 @@ workflows:
 
 ## Workflow Outputs
 
-Workflows should return useful data. What good is running a booking workflow if you can't get the booking ID back? Outputs define what data the workflow makes available to whatever called it.
+Workflows should return useful data. What good is running a booking workflow if you can't get the booking ID back? Outputs define what data the workflow makes available upon completion.
 
 ### Simple Outputs
 

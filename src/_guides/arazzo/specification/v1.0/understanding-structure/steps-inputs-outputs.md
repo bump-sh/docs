@@ -33,9 +33,7 @@ steps:
 
 ### Required Fields
 
-**stepId** 
-
-The unique name for this step within the workflow.
+**stepId** - The unique name for this step within the workflow.
 
 ```yaml
 steps:
@@ -48,18 +46,14 @@ Stick to descriptive names in `camelCase` or `kebab-case`. This ID is how other 
 
 Every step needs to specify what it's going to do, and that will be a single operation or a whole other workflow. Operations can be picked with the `operationId` if the OpenAPI has defined operationIds (best practice, and most linters will pester you to do this), or `operationPath` if operationIds are missing. Kicking off a whole workflow can be done with `workflowId`. 
 
-**operationId**
-
-References an operation from your source APIs.
+**operationId** - References an operation from your source APIs.
 
 ```yaml
 - stepId: getBooking
   operationId: $sourceDescriptions.trainApi.getBookingById
 ```
 
-**operationPath**
-
-Reference by HTTP method and path. Requires a bit more implementation detail and will break when a path or parameter changes.
+**operationPath** - Reference by HTTP method and path. Requires a bit more implementation detail and will break when a path or parameter changes.
 
 ```yaml
 - stepId: getBooking
@@ -67,9 +61,7 @@ Reference by HTTP method and path. Requires a bit more implementation detail and
   method: get  # Will also need to specify method
 ```
 
-**workflowId**
-
-Execute another workflow.
+**workflowId** - Execute another workflow.
 
 ```yaml
 - stepId: cancelBooking
@@ -78,8 +70,7 @@ Execute another workflow.
 
 ### Optional Fields
 
-**description**
-Explain what the step does in a way that is useful for human-readable documentation.
+**description** - Explain what the step does in a way that is useful for human-readable documentation.
 
 ```yaml
 - stepId: search
@@ -87,9 +78,7 @@ Explain what the step does in a way that is useful for human-readable documentat
   operationId: $sourceDescriptions.trainApi.searchTrips
 ```
 
-**parameters** 
-
-Override or add parameters to the operation.
+**parameters** - Override or add parameters to the operation.
 
 ```yaml
 - stepId: search
@@ -103,8 +92,7 @@ Override or add parameters to the operation.
       value: $inputs.destination
 ```
 
-**requestBody** 
-Define the request body for POST/PUT/PATCH/QUERY operations.
+**requestBody** - Define the request body for POST/PUT/PATCH/QUERY operations.
 
 ```yaml
 - stepId: createBooking
@@ -116,9 +104,7 @@ Define the request body for POST/PUT/PATCH/QUERY operations.
       passengers: $inputs.passengers
 ```
 
-**successCriteria**
-
-Define what counts as a successful step execution.
+**successCriteria** - Define what counts as a successful step execution.
 
 ```yaml
 - stepId: search
@@ -128,9 +114,7 @@ Define what counts as a successful step execution.
     - condition: $response.body.trips.length > 0
 ```
 
-**onSuccess** / **onFailure** 
-
-Actions to take based on outcome.
+**onSuccess** / **onFailure** - Actions to take based on outcome.
 
 ```yaml
 - stepId: checkAvailability
@@ -142,9 +126,7 @@ Actions to take based on outcome.
       type: end
 ```
 
-**outputs**
-
-Extract data from the response.
+**outputs** - Extract data from the response.
 
 ```yaml
 - stepId: createBooking
@@ -543,6 +525,12 @@ Be intentional about outputs. Only extract data you know you'll need in a later 
   outputs:
     entireResponse: $response.body
     # Too broad - unclear what will actually be used
+
+# Avoid - vague names
+outputs:
+  id: $response.body#/trips/0/id
+  value: $response.body#/customer/email
+  amount: $response.body#/pricing/total
 ```
 
 ### Clear Descriptions
@@ -554,24 +542,6 @@ Be intentional about outputs. Only extract data you know you'll need in a later 
     Checks card number format, expiry date, and CVV.
     Returns validation errors if any field is invalid.
   operationId: $sourceDescriptions.paymentApi.validateCard
-```
-
-### Extract Useful Outputs
-
-Be intentional about outputs. Only extract data you know you'll need in a later step:
-
-```yaml
-# Good - clear purpose
-outputs:
-  selectedTripId: $response.body#/trips/0/id
-  userEmailAddress: $response.body#/customer/email
-  totalPriceIncludingTax: $response.body#/pricing/total
-
-# Avoid - vague names
-outputs:
-  id: $response.body#/trips/0/id
-  value: $response.body#/customer/email
-  amount: $response.body#/pricing/total
 ```
 
 ## Wrapping Up

@@ -53,9 +53,7 @@ steps:
       type: jsonpath
 ```
 
-**condition (required)**
-
-A boolean expression that must evaluate to true.
+**condition (required)** - A boolean expression that must evaluate to true.
 
 ```yaml
 successCriteria:
@@ -63,17 +61,13 @@ successCriteria:
   - condition: $response.body.available == true
 ```
 
-**type (optional)**
-
-Type of criterion (defaults to `simple`):
+**type (optional)** - Type of criterion (defaults to `simple`):
 
 - `simple` - Basic condition evaluation.
 - `regex` - Regular expression matching.
 - `jsonpath` - JSONPath query.
 
-**context (required when type == regex or jsonpath)**
-
-Which bit of the data are we evaluating. This could be `$response.body`, `$response.headers`, or any other valid [runtime expressions](_guides/arazzo/specification/v1.0/working-with-arazzo/runtime-expressions.md).
+**context (required when type == regex or jsonpath)** - Which bit of the data are we evaluating. This could be `$response.body`, `$response.headers`, or any other valid [runtime expressions](_guides/arazzo/specification/v1.0/working-with-arazzo/runtime-expressions.md).
 
 ```yaml
 successCriteria:
@@ -90,9 +84,7 @@ Actions can be defined inline or referenced from [reusable components](_guides/a
 
 Both `onSuccess` and `onFailure` use the same action types. Each action has a `name`, a `type` (what to do), optional `criteria` which is a list of assertions to see if this action should be executed, and type-specific fields.
 
-**type: end**
-
-Stops the workflow immediately.
+**type: end** - Stops the workflow immediately.
 
 ```yaml
 onFailure:
@@ -102,9 +94,7 @@ onFailure:
       - condition: $statusCode >= 500
 ```
 
-**type: goto**
-
-Jumps to another step (perfect for error handlers or alternative paths).
+**type: goto** - Jumps to another step (perfect for error handlers or alternative paths).
 
 ```yaml
 onFailure:
@@ -122,9 +112,7 @@ onSuccess:
       - condition: $response.body.requiresPayment == true
 ```
 
-**type: retry**
-
-Tries the same step again (with optional delays and limits).
+**type: retry** - Tries the same step again (with optional delays and limits).
 
 ```yaml
 onFailure:
@@ -168,7 +156,7 @@ This is particularly useful for:
 - **Data synchronization** - Trigger reconciliation workflows when data inconsistencies are detected.
 - **Escalation procedures** - Invoke notification and logging workflows for critical errors.
 
-The workflow will runs completely when it's invoked, then returns to the current step to continue processing based on the result.
+The workflow will run completely when it's invoked, then returns to the current step to continue processing based on the result.
 
 ## Examples 
 
@@ -268,7 +256,7 @@ This workflow branches based on the search results:
 - **No trips at all** - Also suggest alternative dates.
 - **API failure** - Retry the search.
 
-## Example: Branching on Booking Status
+### Branching on Booking Status
 
 Once a trip is selected, creating the booking might succeed in different ways:
 
@@ -349,7 +337,7 @@ workflows:
         # ... notify about validation issues
 ```
 
-## Example: Multi-Passenger Validation
+### Multi-Passenger Validation
 
 When handling multiple passengers, validate all requirements before proceeding:
 
@@ -425,6 +413,8 @@ workflows:
         # ... request valid passport for international travel
 ```
 
+
+## Best practices
 
 ### Validate Business Rules, Not Just HTTP
 

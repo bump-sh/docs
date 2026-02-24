@@ -238,7 +238,7 @@ outputs:
   message: 'Booking {$response.body.id} confirmed'
 ```
 
-## Null Safety
+### Null Safety
 
 Check for null values in conditions:
 
