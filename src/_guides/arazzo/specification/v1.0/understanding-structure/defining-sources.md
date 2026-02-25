@@ -230,7 +230,7 @@ workflows:
         parameters:
           - name: Authorization
             in: header
-            value: Bearer $steps.auth.outputs.token
+            value: 'Bearer {$steps.auth.outputs.token}'
 ```
 
 This enables workflow reuse by sharing common workflows across documents, modularity by organizing workflows by domain or team, and composition by building complex workflows from simpler ones.
