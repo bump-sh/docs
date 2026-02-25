@@ -276,8 +276,8 @@ workflows:
       - stepId: payForBooking
         operationId: $sourceDescriptions.api.createBookingPayment
         onSuccess:
-          - reference: paymentPending
-          - reference: paymentSucceeded
+          - reference: $components.successActions.paymentPending
+          - reference: $components.successActions.paymentSucceeded
 ```
 
 Because each success action has criteria, you can attach both and let runtime data decide whether the workflow continues (`goto`) or completes (`end`).
@@ -293,9 +293,9 @@ workflows:
       - stepId: payForBooking
         operationId: $sourceDescriptions.api.createBookingPayment
         onFailure:
-          - reference: retryOnServerError
-          - reference: handleRateLimit
-          - reference: logAndEnd
+          - reference: $components.failureActions.retryOnServerError
+          - reference: $components.failureActions.handleRateLimit
+          - reference: $components.failureActions.logAndEnd
 ```
 
 This step reuses the failure actions from earlier: retry on transient server errors, retry more cautiously when rate limited, and then route to a logging step if it still fails.
@@ -311,11 +311,11 @@ workflows:
       - stepId: payForBooking
         operationId: $sourceDescriptions.api.createBookingPayment
         onSuccess:
-          - reference: paymentPending
-          - reference: paymentSucceeded
+          - reference: $components.successActions.paymentPending
+          - reference: $components.successActions.paymentSucceeded
         onFailure:
-          - reference: retryOnServerError
-          - reference: handleRateLimit
+          - reference: $components.failureActions.retryOnServerError
+          - reference: $components.failureActions.handleRateLimit
 ```
 
 Because each action has criteria, you can attach them together without them all firing every time.
