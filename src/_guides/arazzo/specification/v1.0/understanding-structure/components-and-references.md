@@ -185,7 +185,7 @@ components:
     authHeader:
       name: Authorization
       in: header
-      value: Bearer $inputs.token
+      value: 'Bearer {$inputs.token}'
 
 workflows:
   - workflowId: myWorkflow
