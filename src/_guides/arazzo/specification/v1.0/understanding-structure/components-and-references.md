@@ -193,7 +193,7 @@ workflows:
       - stepId: authenticatedCall
         operationId: $sourceDescriptions.api.getUser
         parameters:
-          - reference: authHeader
+          - reference: $components.parameters.authHeader
 ```
 
 Referenced parameters are pulled into the step at runtime, just as if they had been defined inline.
