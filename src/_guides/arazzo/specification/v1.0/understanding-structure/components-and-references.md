@@ -205,7 +205,7 @@ steps:
   - stepId: search
     operationId: $sourceDescriptions.api.search
     parameters:
-      - reference: authHeader
+      - reference: $components.parameters.authHeader
       - name: query
         in: query
         value: $inputs.searchTerm
