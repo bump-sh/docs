@@ -12,7 +12,7 @@ Arazzo helps teams and tools not waste time and effort writing and parsing the s
 
 Reuse in Arazzo is built upon two concepts: the `components` object, and the `reference` keyword.
 
-## The Components object
+## The components object
 
 The `components` object at the root of your Arazzo document contains reusable definitions:
 
@@ -42,6 +42,8 @@ workflows:
 ## Component types
 
 Arazzo supports several component types, each designed to reduce repetition and make workflows easier to maintain.
+
+### Inputs
 
 ```yaml
 components:
@@ -216,7 +218,7 @@ steps:
 
 Here the `authHeader` parameter is reused as-is, while `query` and `limit` are defined inline for this one step.
 
-## Referencing inputs
+### Inputs
 
 Inputs are a little different than the rest of Arazzo in that they are defined entirely using JSON Schema. This means there is little space for the `reference` keyword, but that's no trouble as JSON Schema comes with its own `$ref` keyword.
 
@@ -259,11 +261,11 @@ workflows:
 
 Each input schema can define properties, and use `$ref` to pull in reusable input components mixed in with inline definitions for just that workflow.
 
-## Referencing actions
+### Actions
 
 Actions are where `reference` really shines: define consistent behavior once, then attach it to any step using `onSuccess` or `onFailure`.
 
-### Success actions
+#### Success actions
 
 Use a success action component when multiple steps should react the same way to success.
 
@@ -282,7 +284,7 @@ workflows:
 
 Because each success action has criteria, you can attach both and let runtime data decide whether the workflow continues (`goto`) or completes (`end`).
 
-### Failure actions
+#### Failure actions
 
 Failure actions are often reused even more heavily, because retry logic and error routing tends to be consistent across many steps.
 
@@ -300,7 +302,7 @@ workflows:
 
 This step reuses the failure actions from earlier: retry on transient server errors, retry more cautiously when rate limited, and then route to a logging step if it still fails.
 
-### Conditional action reuse
+#### Conditional action reuse
 
 Criteria let you attach multiple actions to the same step and still get different outcomes based on runtime data.
 
