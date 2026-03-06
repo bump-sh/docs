@@ -24,8 +24,8 @@ $steps.search.outputs.tripId
 # Reference response status
 $statusCode
 
-# Reference response body
-$response.body.booking.id
+# Reference response body (The body payload needs to be accessed with a JSON pointer)
+$response.body#/booking/id
 ```
 
 ## Expression contexts
@@ -86,16 +86,17 @@ value: $inputs.passenger.age
 
 ```yaml
 inputs:
-  type: object
-  properties:
-    userName:
-      type: string
-    email:
-      type: string
+  type: array
+  items:
+    properties:
+      userName:
+        type: string
+      email:
+        type: string
 
 # Access input properties
-value: $inputs.userName
-value: $inputs.email
+value: $inputs[0].userName
+value: $inputs[0].email
 ```
 
 ### Previous step outputs
@@ -107,8 +108,8 @@ steps:
   - stepId: search
     operationId: $sourceDescriptions.api.searchTrips
     outputs:
-      selectedTripId: $response.body.trip.id
-      tripPrice: $response.body.trip.price
+      selectedTripId: $response.body#/trip/id
+      tripPrice: $response.body#/trip/price
   
   - stepId: createBooking
     operationId: $sourceDescriptions.api.createBooking
@@ -125,7 +126,7 @@ To access an output from a previous step, use the syntax:
 $steps.{stepId}.outputs.{outputName}
 ```
 
-For this to work the output must be defined in the referenced step, and that step must have already run. 
+For this to work the output must be defined in the referenced step, and that step must have already run.
 
 **Learn more about [steps and outputs](_guides/arazzo/specification/v1.0/understanding-structure/steps-inputs-outputs.md).**
 
@@ -138,16 +139,16 @@ Within success/failure criteria and outputs, access the current response:
   operationId: $sourceDescriptions.api.getBooking
   successCriteria:
     # Access response body
-    - condition: $response.body.status == 'confirmed'
-    
+    - condition: $response.body#/status == 'confirmed'
+
     # Access response headers
     - condition: $response.header.content-type == 'application/json'
-  
+
   outputs:
     # Extract from response
-    bookingId: $response.body.id
-    customerEmail: $response.body.customer.email
-    total: $response.body.pricing.total
+    bookingId: $response.body#/id
+    customerEmail: $response.body#/customer/email
+    total: $response.body#/pricing/total
 ```
 
 **Response properties:**
@@ -194,25 +195,25 @@ Runtime expressions support various operators for use in success and failure cri
 ```yaml
 successCriteria:
   # Equality
-  - condition: $response.body.status == 'confirmed'
+  - condition: $response.body#/status == 'confirmed'
   - condition: $statusCode == 200
   
   # Inequality
-  - condition: $response.body.error != null
+  - condition: $response.body#/error != null
   - condition: $statusCode != 404
   
   # Greater than
-  - condition: $response.body.price > 100
-  - condition: $response.body.stock > $inputs.quantity
+  - condition: $response.body#/price > 100
+  - condition: $response.body#/stock > $inputs.quantity
   
   # Greater than or equal
-  - condition: $response.body.rating >= 4.0
+  - condition: $response.body#/rating >= 4.0
   
   # Less than
-  - condition: $response.body.price < $inputs.maxPrice
+  - condition: $response.body#/price < $inputs.maxPrice
   
   # Less than or equal
-  - condition: $response.body.quantity <= $response.body.maxQuantity
+  - condition: $response.body#/quantity <= $response.body#/maxQuantity
 ```
 
 ### Logical operators
@@ -220,12 +221,12 @@ successCriteria:
 ```yaml
 successCriteria:
   # AND - all conditions must be true
-  - condition: $statusCode == 200 && $response.body.available == true
-  - condition: $response.body.price > 0 && $response.body.price < 1000
+  - condition: $statusCode == 200 && $response.body#/available == true
+  - condition: $response.body#/price > 0 && $response.body#/price < 1000
   
   # OR - at least one condition must be true
   - condition: $statusCode == 200 || $statusCode == 201
-  - condition: $response.body.status == 'confirmed' || $response.body.status == 'pending'
+  - condition: $response.body#/status == 'confirmed' || $response.body#/status == 'pending'
 ```
 
 ### String operators
@@ -234,8 +235,8 @@ Concat strings using interpolation:
 
 ```yaml
 outputs:
-  fullName: '{$response.body.firstName} {$response.body.lastName}'
-  message: 'Booking {$response.body.id} confirmed'
+  fullName: '{$response.body#/firstName} {$response.body#/lastName}'
+  message: 'Booking {$response.body#/id} confirmed'
 ```
 
 ### Null Safety
@@ -245,9 +246,9 @@ Check for null values in conditions:
 ```yaml
 successCriteria:
   # Check for null/undefined
-  - condition: $response.body.email != null
-  - condition: $response.body.address != null
-  - condition: $response.body.id != null
+  - condition: $response.body#/email != null
+  - condition: $response.body#/address != null
+  - condition: $response.body#/id != null
 ```
 
 ## Extracting values
@@ -257,13 +258,13 @@ Use outputs to extract values from responses:
 ```yaml
 outputs:
   # Extract simple values
-  bookingId: $response.body.id
-  customerEmail: $response.body.customer.email
-  tripPrice: $response.body.trip.price
+  bookingId: $response.body#/id
+  customerEmail: $response.body#/customer/email
+  tripPrice: $response.body#/trip/price
   
   # Extract nested values
-  originCity: $response.body.trip.origin.city
-  destinationCity: $response.body.trip.destination.city
+  originCity: $response.body#/trip/origin/city
+  destinationCity: $response.body#/trip/destination/city
 ```
 
 ## Examples
@@ -288,22 +289,22 @@ Expressions are frequently used in success and failure criteria. Here's a compre
 
 ```yaml
 # Simple field checks
-- condition: $response.body.status == 'confirmed'
-- condition: $response.body.stock > 0
-- condition: $response.body.payment.processed == true
+- condition: $response.body#/status == 'confirmed'
+- condition: $response.body#/stock > 0
+- condition: $response.body#/payment/processed == true
 
 # Field existence
-- condition: $response.body.id != null
-- condition: $response.body.bookingReference != null
+- condition: $response.body#/id != null
+- condition: $response.body#/bookingReference != null
 ```
 
 ### Checking response structure
 
 ```yaml
 # Check for required object properties
-- condition: $response.body.trip != null
-- condition: $response.body.trip.available == true
-- condition: $response.body.trip.price <= $inputs.maxPrice
+- condition: $response.body#/trip != null
+- condition: $response.body#/trip/available == true
+- condition: $response.body#/trip/price <= $inputs.maxPrice
 ```
 
 ### Header checks

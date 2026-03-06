@@ -111,7 +111,9 @@ Every step needs to specify what it's going to do, and that will be a single ope
   operationId: $sourceDescriptions.trainApi.searchTrips
   successCriteria:
     - condition: $statusCode == 200
-    - condition: $response.body.trips.length > 0
+    - context: $response.body
+      condition: $[?count(@.trips) > 0]
+      type: jsonpath
 ```
 
 **onSuccess** / **onFailure** - Actions to take based on outcome.
@@ -120,7 +122,7 @@ Every step needs to specify what it's going to do, and that will be a single ope
 - stepId: checkAvailability
   operationId: $sourceDescriptions.api.checkStock
   successCriteria:
-    - condition: $response.body.available == true
+    - condition: $response.body#/available == true
   onFailure:
     - name: soldOut
       type: end

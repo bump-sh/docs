@@ -55,7 +55,9 @@ workflows:
         operationId: search-trips
         successCriteria:
           - condition: $statusCode == 200
-          - condition: $response.body.trips.length > 0
+          - context: $response.body
+            condition: $[?count(@.trips) > 0]
+            type: jsonpath
         outputs:
           tripId: $response.body#/trips/0/id
         
@@ -66,7 +68,7 @@ workflows:
             tripId: $steps.search.outputs.tripId
         successCriteria:
           - condition: $statusCode == 201
-          - condition: $response.body.status == 'confirmed'
+          - condition: $response.body#/status == 'confirmed'
 ```
 
 If you've ever maintained getting started documentation, you'll know the pain: they're the first thing users read and the first thing that goes stale. Arazzo helps because you can treat workflows as the canonical version of those journeys, then generate docs and examples from the same source.
@@ -115,7 +117,7 @@ workflows:
         description: Create order in draft state
         operationId: createOrder
         successCriteria:
-          - condition: $response.body.state == 'draft'
+          - condition: $response.body#/state == 'draft'
       
       - stepId: submitOrder
         description: Transition from draft to submitted
@@ -124,26 +126,26 @@ workflows:
           - name: orderId
             value: $steps.createDraft.outputs.orderId
         successCriteria:
-          - condition: $response.body.state == 'submitted'
+          - condition: $response.body#/state == 'submitted'
       
       - stepId: processPayment
         description: Process payment, moving to processing state
         operationId: processPayment
         successCriteria:
-          - condition: $response.body.state == 'processing'
-          - condition: $response.body.paymentStatus == 'paid'
+          - condition: $response.body#/state == 'processing'
+          - condition: $response.body#/paymentStatus == 'paid'
       
       - stepId: ship
         description: Ship the order
         operationId: shipOrder
         successCriteria:
-          - condition: $response.body.state == 'shipped'
+          - condition: $response.body#/state == 'shipped'
         
       - stepId: confirmDelivery
         description: Final state transition to delivered
         operationId: confirmDelivery
         successCriteria:
-          - condition: $response.body.state == 'delivered'
+          - condition: $response.body#/state == 'delivered'
 ```
 
 Instead of being locked away in some cloud testing environment or hidden QA repository for only a select few to see, the criteria for success and failure become easily visible and knowable to everyone. 
@@ -158,7 +160,7 @@ You can also handle real-world edge cases without turning your docs into a wall 
   operationId: cancelOrder
   successCriteria:
     - condition: $statusCode == 200
-    - condition: $response.body.state == 'cancelled'
+    - condition: $response.body#/state == 'cancelled'
   
   # This step can be reached from multiple prior states
   dependsOn:
@@ -172,7 +174,7 @@ You can also handle real-world edge cases without turning your docs into a wall 
       type: goto
       stepId: refundProcess
       criteria:
-        - condition: $response.body.reason == 'ORDER_SHIPPED'
+        - condition: $response.body#/reason == 'ORDER_SHIPPED'
 ```
 
 ## Design, governance, and operations

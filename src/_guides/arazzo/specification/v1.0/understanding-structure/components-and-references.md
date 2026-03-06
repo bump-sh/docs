@@ -133,7 +133,7 @@ components:
       type: goto
       stepId: getBooking
       criteria:
-        - condition: $response.body.status == 'pending'
+        - condition: $response.body#/status == 'pending'
 
     paymentSucceeded:
       name: paymentSucceeded

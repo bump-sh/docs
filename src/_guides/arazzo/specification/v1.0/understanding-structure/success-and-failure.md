@@ -45,7 +45,7 @@ steps:
 
   successCriteria:
     - condition: $statusCode == 200
-    - condition: $response.body.results != null
+    - condition: $response.body#/results != null
 
   failureCriteria:
     - context: $response.body
@@ -58,7 +58,7 @@ steps:
 ```yaml
 successCriteria:
   - condition: $statusCode == 200
-  - condition: $response.body.available == true
+  - condition: $response.body#/available == true
 ```
 
 **type (optional)** - Type of criterion (defaults to `simple`):
@@ -71,7 +71,7 @@ successCriteria:
 
 ```yaml
 successCriteria:
-  - condition: $response.body.status == 'confirmed'
+  - condition: $response.body#/status == 'confirmed'
 ```
 
 ## Success and failure actions
@@ -109,7 +109,7 @@ onSuccess:
     type: goto
     stepId: processPayment
     criteria:
-      - condition: $response.body.requiresPayment == true
+      - condition: $response.body#/requiresPayment == true
 ```
 
 **type: retry** - Tries the same step again (with optional delays and limits).
@@ -138,7 +138,7 @@ onFailure:
     retryLimit: 3
     criteria:
       - condition: $statusCode == 401
-      - condition: $response.body.errorCode == 'TOKEN_EXPIRED'
+      - condition: $response.body#/errorCode == 'TOKEN_EXPIRED'
   
   # Primary API down - switch to backup
   - name: useBackupApi
@@ -280,7 +280,7 @@ workflows:
         
         successCriteria:
           - condition: $statusCode == 201
-          - condition: $response.body.id != null
+          - condition: $response.body#/id != null
         
         onSuccess:
           # Booking confirmed immediately - skip to payment
@@ -288,21 +288,21 @@ workflows:
             type: goto
             stepId: processPayment
             criteria:
-              - condition: $response.body.status == 'confirmed'
+              - condition: $response.body#/status == 'confirmed'
           
           # Pending confirmation - wait for availability check
           - name: pendingConfirmation
             type: goto
             stepId: pollBookingStatus
             criteria:
-              - condition: $response.body.status == 'pending'
+              - condition: $response.body#/status == 'pending'
           
           # Free trip (promotional) - skip payment
           - name: freeTrip
             type: goto
             stepId: sendConfirmationEmail
             criteria:
-              - condition: $response.body.totalPrice == 0
+              - condition: $response.body#/totalPrice == 0
         
         onFailure:
           # Seats sold out - offer alternative trips
@@ -311,7 +311,7 @@ workflows:
             stepId: findAlternativeTrips
             criteria:
               - condition: $statusCode == 409
-              - condition: $response.body.errorCode == 'SEATS_UNAVAILABLE'
+              - condition: $response.body#/errorCode == 'SEATS_UNAVAILABLE'
           
           # Invalid passenger data - return to form
           - name: invalidPassengerData
@@ -319,7 +319,7 @@ workflows:
             stepId: notifyValidationError
             criteria:
               - condition: $statusCode == 400
-              - condition: $response.body.errorCode == 'INVALID_PASSENGER_DATA'
+              - condition: $response.body#/errorCode == 'INVALID_PASSENGER_DATA'
       
       - stepId: processPayment
         # ... payment processing
@@ -395,7 +395,7 @@ workflows:
             type: goto
             stepId: requestValidPassport
             criteria:
-              - condition: $response.body.tripType == 'international'
+              - condition: $response.body#/tripType == 'international'
               - type: jsonpath
                 context: $response.body
                 condition: $.passengers[?(@.passportValid == false)][0] != null
@@ -424,9 +424,9 @@ The goal is to ensure the workflow meets business needs, not just technical succ
 # Good - checks business requirements
 successCriteria:
   - condition: $statusCode == 200
-  - condition: $response.body.status == 'confirmed'
-  - condition: $response.body.seats != null
-  - condition: $response.body.totalPrice <= $inputs.maxBudget
+  - condition: $response.body#/status == 'confirmed'
+  - condition: $response.body#/seats != null
+  - condition: $response.body#/totalPrice <= $inputs.maxBudget
 
 # Insufficient - only checks HTTP
 successCriteria:
