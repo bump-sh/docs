@@ -1,0 +1,11 @@
+layout: documentation
+page_class: documentation
+sidebar_title: OpenAPI Specification
+skip_listing: true
+display_authors: true
+display_pagination: true
+display_cta: true
+exclude_from_pagination: true
+sidebar_versions:
+- "3.1"
+- "3.2"
