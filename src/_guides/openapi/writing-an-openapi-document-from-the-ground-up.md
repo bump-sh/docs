@@ -22,7 +22,7 @@ To understand the phased approach, let’s use a simple TODO API example. The AP
 
 While we could add more operations, this API will provide a good sample of operations to better understand how to iteratively compose our OpenAPI documentation. Let’s get started by first capturing the `info` section. 
 
-If you are new to the OpenAPI Specification, check out our article titled, [“What is OpenAPI?”](/guides/openapi/specification/v3.1/introduction/what-is-openapi/) to gain better understanding prior to jumping into this step-by-step guide. 
+If you are new to the OpenAPI Specification, check out our article titled, [“What is OpenAPI?”](/openapi/v3.1/) to gain better understanding prior to jumping into this step-by-step guide. 
 
 ***Looking for an OpenAPI reference? Be sure to check out the [OpenAPI Cheat Sheet](https://bump.sh/blog/openapi-31-cheatsheet/).***
 

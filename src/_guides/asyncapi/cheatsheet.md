@@ -10,7 +10,7 @@ AsyncAPI, as per the [official documentation site](https://www.asyncapi.com/docs
 Their sites offers extensive guides and tutorials, as well as the reference documentation of the AsyncAPI specification.
 
 
-As we have built [one for OpenAPI](_guides/openapi/specification/v3.1/cheatsheet.md), we wanted to write our own AsyncAPI Cheat Sheet:
+As we have built [one for OpenAPI](_specifications/openapi/v3.1/cheatsheet.md), we wanted to write our own AsyncAPI Cheat Sheet:
 
 ![asyncapi-30-cheatsheet-v1.png](https://storage.googleapis.com/bump-blog-resources/asyncapi-30-cheatsheet/asyncapi-30-cheatsheet-v1.png)
 [Download the PDF version](https://storage.googleapis.com/bump-blog-resources/asyncapi-30-cheatsheet/asyncapi-30-cheatsheet-v1.pdf)

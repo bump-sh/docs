@@ -6,7 +6,7 @@ excerpt: "OpenAPI Format is a brilliant tool for helping teams get started with 
 date: 2025-06-12
 ---
 
-[Overlays for OpenAPI](/guides/openapi/specification/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve API descriptions by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
+[Overlays for OpenAPI](/openapi/v3.1/extending/overlays/) and AsyncAPI are all the rage, helping all sorts of users improve API descriptions by “patching” in extra content. Tech writers improving bare bones OpenAPI with descriptions and tags to improve the resulting API documentation. Developers are popping code samples for generated SDKs in instead of relying on generic samples. The utility of this specification seems limitless, but overlays come with a steep learning curve. 
 
 The OpenAPI Format Playground aims to make things easier with a graphical interface on building and applying overlays, so let’s take a look at how it works.
 
@@ -62,7 +62,7 @@ Overlay actions come in two flavours: “update” or “remove”.
 
 Update is basically a merge, taking the value provided and updating the target to include these values. If it’s an object it will add in the properties provided and override any that were there with the same name.
 
-To add/override the description for a specific tag, we can pass a new `description` property, along with any other properties from the [tags object](/guides/openapi/specification/v3.1/documentation/grouping-operations-with-tags/).
+To add/override the description for a specific tag, we can pass a new `description` property, along with any other properties from the [tags object](/openapi/v3.1/documentation/grouping-operations-with-tags/).
 
 ![](/docs/images/guides/openapi-format-overlays/overlay-update.png)
 

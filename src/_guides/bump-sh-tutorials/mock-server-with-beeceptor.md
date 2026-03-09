@@ -26,7 +26,7 @@ Beeceptor is a no-code tool for mocking APIs. It provides a lightweight approach
 - Request and response payload schemas
 - Parameters, headers, and query definitions
 
-It then plugs a test data generator to create dynamic responses. Field names, descriptions, [JSON-Schema](_guides/openapi/specification/v3.1/data-models/json-schema.md), and formats (e.g. enums, date-time, emails, prices) are all considered to produce realistic payloads.
+It then plugs a test data generator to create dynamic responses. Field names, descriptions, [JSON-Schema](_specifications/openapi/v3.1/data-models/json-schema.md), and formats (e.g. enums, date-time, emails, prices) are all considered to produce realistic payloads.
 
 > Have your OpenAPI spec published via Bump.sh? You can import it into Beeceptor and use the generated mock server URLs directly inside your spec's servers block for interactive try-outs.
 
