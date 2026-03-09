@@ -103,7 +103,7 @@ Content-Type: application/json
 }
 ```
 
-The callbackURL could be in headers or could be composed of various other bits of data in the request, take a look at OpenAPI v3.1's [runtime expressions](https://spec.openapis.org/oas/v3.1.0#runtime-expressions) syntax to get more advanced.
+The callbackURL could be in headers or could be composed of various other bits of data in the request, take a look at OpenAPI's [runtime expressions](https://spec.openapis.org/oas/v3.1.0#runtime-expressions) syntax to get more advanced.
 
 Once you've got a callback named and figured out where the URL is going, the rest of the OpenAPI is going to feel very familiar, only it's backwards.
 

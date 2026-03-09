@@ -19,7 +19,7 @@ resources:
         link: /understanding-structure/api-servers/
       - label: Paths and Operations
         link: /understanding-structure/paths-operations/
-      - label: Parameters (Path, Query, Header, and Cookie)
+      - label: HTTP Parameters
         link: /understanding-structure/parameters/
       - label: Parameter Serialization
         link: /understanding-structure/parameter-serialization/

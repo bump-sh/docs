@@ -169,7 +169,7 @@ requestBody:
                 type: integer
 ```
 
-Take a look at the OpenAPI v3.1 Specification to learn more about the [Encoding Object](https://spec.openapis.org/oas/v3.1.0#encoding-object), and see how to handle custom headers and even "styles" and "explode" to handle complex data expressed in a string form.
+Take a look at the OpenAPI v3.2 Specification to learn more about the [Encoding Object](https://spec.openapis.org/oas/v3.2.0#encoding-object), and see how to handle custom headers and even "styles" and "explode" to handle complex data expressed in a string form.
 
 > Multipart form data is only one way to handle file uploads, so read the [File Uploads](_guides/openapi/specification/v3.2/advanced/file-uploads.md) guide to see other ways to do it.
 {: .info }
