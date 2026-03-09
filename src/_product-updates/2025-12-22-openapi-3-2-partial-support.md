@@ -8,7 +8,7 @@ image: /docs/images/changelog/openapi-3-2-partial-support.png
 
 The OpenAPI Initiative released a new version of their OpenAPI specification in September: [OpenAPI 3.2](https://spec.openapis.org/oas/v3.2.0.html). 
 
-If you didn't hear about this new version, feel free to read our [OpenAPI complete guide](/guides/openapi/specification/v3.2/introduction/what-is-openapi/), updated for OpenAPI 3.2. 
+If you didn't hear about this new version, feel free to read our [OpenAPI complete guide](/openapi/v3.2/), updated for OpenAPI 3.2. 
 
 We started supporting some of the features brought by this new version:
 - The QUERY method is now supported in both the documentation and the API Explorer.

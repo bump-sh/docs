@@ -108,7 +108,7 @@ The server variables are stored in the localStorage of the user’s browser, to 
 > If the domain is not clearly defined in the definition (for example by having ```https://{my-variable}``` instead of ```https://{my-variable}.my-domain.com```), our proxy will block the request. More details about why we use a proxy [here](/help/documentation-experience/api-explorer/#proxy).
 {: .warning}
 
-Learn more about server variables in our [OpenAPI guide](/guides/openapi/specification/v3.1/understanding-structure/api-servers/#server-variables).
+Learn more about server variables in our [OpenAPI guide](/openapi/v3.1/understanding-structure/api-servers/#server-variables).
 
 ### Example usage
 

@@ -1,6 +1,8 @@
-collection_name: guides
-root: /guides/arazzo/specification/v1.0
+collection_name: specifications
+root: /arazzo/v1.0
 resources:
+  - label: Home
+    link: /
   - type: category
     label: Introduction to Arazzo
     items:

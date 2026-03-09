@@ -46,7 +46,7 @@ editors](https://openapi.tools/#text-editors), or [traffic
 sniffing](/guides/openapi/code-first/#traffic-sniffing), or
 [AI](https://create-api.dev/) to generate this OpenAPI, and you can use our
 [ultimate OpenAPI
-Guide](_guides/openapi/specification/v3.1/introduction/what-is-openapi.md)
+Guide](_specifications/openapi/v3.1/introduction/what-is-openapi.md)
 to help you get started writing and updating OpenAPI.
 
 If you are switching from code first and getting on the design first train, you

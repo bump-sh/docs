@@ -135,7 +135,7 @@ without getting lost in unnecessary details.
 
 Some changes in OpenAPI documents have no impact on API consumers, such as:
 
-- [Splitting larger documents](_guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref.md) into smaller pieces with `$ref`.
+- [Splitting larger documents](_specifications/openapi/v3.1/advanced/splitting-documents-with-ref.md) into smaller pieces with `$ref`.
 - Renaming referenced files.
 - Renaming component names (e.g. renaming `components.schemas.Something` which
   does not change the actual API)

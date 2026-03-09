@@ -1,6 +1,8 @@
-collection_name: guides
-root: /guides/openapi/specification/v3.2
+collection_name: specifications
+root: /openapi/v3.2
 resources:
+  - label: Home
+    link: /
   - type: category
     label: Introduction to OpenAPI
     items:
