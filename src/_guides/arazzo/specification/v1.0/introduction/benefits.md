@@ -60,7 +60,7 @@ workflows:
             type: jsonpath
         outputs:
           tripId: $response.body#/trips/0/id
-        
+
       - stepId: book
         operationId: create-booking
         requestBody:
@@ -69,6 +69,23 @@ workflows:
         successCriteria:
           - condition: $statusCode == 201
           - condition: $response.body#/status == 'confirmed'
+        outputs:
+          bookingId: $response.body#/id
+
+      - stepId: pay
+        operationId: pay-booking
+        requestBody:
+          payload:
+            bookingId: $steps.book.outputs.bookingId
+            payment:
+              mean: credit_card
+              details: NDExMTExMTExMTExOjAxMzE6MTExCg==
+        successCriteria:
+          - condition: $statusCode == 201
+          - condition: $response.body#/status == 'payment_succeeded'
+        outputs:
+          ticketNumber: $response.body#/ticket/number
+          ticketAztecCode: $response.body#/ticket/aztecCode
 ```
 
 If you've ever maintained getting started documentation, you'll know the pain: they're the first thing users read and the first thing that goes stale. Arazzo helps because you can treat workflows as the canonical version of those journeys, then generate docs and examples from the same source.
