@@ -33,4 +33,14 @@ https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 /help/account/billing/ /help/organizations/billing/
 
 # Cribbed for the OpenAPI Specification Tutorial
-/guides/openapi/advanced-ref-usage/ /guides/openapi/specification/v3.1/advanced/splitting-documents-with-ref/
+/guides/openapi/advanced-ref-usage/ /openapi/v3.1/advanced/splitting-documents-with-ref/
+
+# OpenAPI specification URL migration
+/guides/openapi/specification/v3.1/ /openapi/v3.1/ 301
+/guides/openapi/specification/v3.1/* /openapi/v3.1/:splat 301
+/guides/openapi/specification/v3.2/ /openapi/v3.2/ 301
+/guides/openapi/specification/v3.2/* /openapi/v3.2/:splat 301
+
+# Arazzo specification URL migration
+/guides/arazzo/specification/v1.0/ /arazzo/v1.0/ 301
+/guides/arazzo/specification/v1.0/* /arazzo/v1.0/:splat 301
