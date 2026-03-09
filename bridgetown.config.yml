@@ -56,5 +56,10 @@ collections:
     future: true
     sort_by: date
     sort_direction: descending
+  specifications:
+    name: Specifications
+    output: true
+    future: true
+    permalink: "/:path/"
 kramdown:
   parse_html_blocks: true
