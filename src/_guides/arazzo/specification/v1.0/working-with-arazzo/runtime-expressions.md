@@ -2,7 +2,7 @@
 title: Runtime expressions
 authors: phil
 excerpt: Learn how to use runtime expressions in Arazzo to create dynamic, data-driven workflows.
-date: 2025-02-01
+date: 2026-02-01
 ---
 
 - TOC

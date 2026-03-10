@@ -2,7 +2,7 @@
 title: Components & references
 authors: phil
 excerpt: Learn how to use components and references in Arazzo to reduce repetition and build maintainable workflows.
-date: 2025-01-23
+date: 2026-01-23
 ---
 
 - TOC

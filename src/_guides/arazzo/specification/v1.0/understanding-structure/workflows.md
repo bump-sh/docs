@@ -2,7 +2,7 @@
 title: Workflows
 authors: phil
 excerpt: Learn how to define Arazzo workflows, similar to GitHub Actions and CI/CD workflows but for describing API interactions.
-date: 2025-01-31
+date: 2026-01-31
 ---
 
 - TOC

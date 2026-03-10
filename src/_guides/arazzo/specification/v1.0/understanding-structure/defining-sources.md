@@ -2,7 +2,7 @@
 title: Defining sources
 authors: phil
 excerpt: Learn how to reference OpenAPI operations in Arazzo workflows using source descriptions.
-date: 2025-01-30
+date: 2026-01-30
 ---
 
 - TOC

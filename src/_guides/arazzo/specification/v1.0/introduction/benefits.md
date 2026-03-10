@@ -2,7 +2,7 @@
 title: Benefits of using Arazzo
 authors: phil
 excerpt: Discover the advantages of adopting the Arazzo Specification for documenting, testing, and managing API workflows to benefit humans and agentic-AI.
-date: 2025-01-26
+date: 2026-01-26
 ---
 
 - TOC
