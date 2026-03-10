@@ -2,7 +2,7 @@
 title: What is Arazzo?
 authors: phil
 excerpt: Arazzo is the standard format for describing API workflows - sequences of API calls that work together to accomplish complex tasks, with built-in error handling and state management.
-date: 2025-01-23
+date: 2026-01-23
 ---
 
 - TOC

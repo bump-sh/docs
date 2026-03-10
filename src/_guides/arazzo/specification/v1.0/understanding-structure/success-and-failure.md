@@ -2,7 +2,7 @@
 title: Success and failure in API workflows
 authors: phil
 excerpt: Define precise success and failure criteria for each step in your Arazzo workflows, describing comprehensive error handling and branching logic.
-date: 2025-01-30
+date: 2026-01-30
 ---
 
 - TOC

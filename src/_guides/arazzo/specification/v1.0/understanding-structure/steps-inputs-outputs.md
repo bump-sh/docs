@@ -2,7 +2,7 @@
 title: Steps, inputs, and outputs
 authors: phil
 excerpt: Master the building blocks of Arazzo workflows - steps that call operations, inputs that provide data, and outputs that capture results for subsequent steps.
-date: 2025-01-31
+date: 2026-01-31
 ---
 
 - TOC
