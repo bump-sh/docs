@@ -21,17 +21,6 @@
     max-width: 50ch;
   }
 
-  bridgetown-search-results {
-    max-width: 560px;
-    width: 100%;
-  }
-
-  bridgetown-search-form input[type="search"] {
-    font-size: 1rem;
-    height: var(--spacing-12);
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--shadow-elevation-low);
-  }
 }
 
 /* === MAIN CARDS === */
@@ -39,7 +28,8 @@
   display: grid;
   gap: var(--gap-medium);
   grid-template-columns: repeat(4, 1fr);
-  padding-block: var(--spacing-14);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-2);
 }
 
 .home-card {
@@ -96,7 +86,7 @@
 
 /* === SECTIONS === */
 .home-section {
-  padding-block: var(--spacing-14);
+  padding-block: var(--spacing-12);
 
   & + .home-section {
     border-top: var(--border-default);
@@ -107,7 +97,7 @@
   display: flex;
   align-items: baseline;
   gap: var(--gap-medium);
-  margin-bottom: var(--spacing-10);
+  margin-bottom: var(--spacing-8);
   flex-wrap: wrap;
 
   h2 {
@@ -142,9 +132,9 @@
 
 .home-step-number {
   align-items: center;
-  background: var(--gradient-blue);
+  background: var(--blue-10);
   border-radius: 50%;
-  color: var(--white);
+  color: var(--blue-60);
   display: flex;
   font-size: 0.875rem;
   font-weight: var(--font-weight-semibold);
