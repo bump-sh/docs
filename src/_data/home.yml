@@ -15,4 +15,29 @@ cards:
     description: Learn about our latest features and changes
     link: /product-updates/
     icon: icons/product-updates
-    
+
+popular_topics:
+  - label: Upload your first API definition
+    link: /help/getting-started/upload-your-first-definition/
+    icon: icons/zap
+  - label: GitHub Actions integration
+    link: /help/continuous-integration/github-actions/
+    icon: icons/github
+  - label: Custom domains
+    link: /help/customization-options/custom-domains/
+    icon: icons/key
+  - label: Markdown support
+    link: /help/documentation-experience/markdown-support/
+    icon: icons/documentation
+  - label: API Explorer
+    link: /help/documentation-experience/api-explorer/
+    icon: icons/search
+  - label: Hubs
+    link: /help/hubs/
+    icon: icons/hub
+  - label: Deploy & release management
+    link: /help/publish-documentation/deploy-and-release-management/
+    icon: icons/iteration
+  - label: Branching
+    link: /help/publish-documentation/branching/
+    icon: icons/branch

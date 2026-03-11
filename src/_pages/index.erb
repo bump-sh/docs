@@ -1,0 +1,114 @@
+---
+layout: home
+title: Bump.sh Docs & Guides
+page_class: home
+---
+
+<%# === HERO === %>
+<section class="home-hero full-bleed wrapper">
+  <h1>How can we help you?</h1>
+  <p>Discover everything about Bump.sh, API documentation and specifications.</p>
+  <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search documentation…", display_collection: true %>
+</section>
+
+<%# === MAIN CARDS === %>
+<section class="home-cards">
+  <% site.data.home.cards.each do |card| %>
+    <a class="home-card card" href="<%= card.link %>">
+      <div class="home-card-icon">
+        <%= svg "/docs/images/#{card.icon}.svg" %>
+      </div>
+      <h3><%= card.label %></h3>
+      <p><%= card.description %></p>
+      <span class="home-card-arrow"><%= svg "/docs/images/icons/arrow-right.svg" %></span>
+    </a>
+  <% end %>
+</section>
+
+<%# === GETTING STARTED === %>
+<section class="home-section">
+  <div class="home-section-header">
+    <h2>Getting started</h2>
+    <p>New to Bump.sh? Start here to get up and running quickly.</p>
+  </div>
+  <div class="home-getting-started">
+    <a class="card" href="/help/getting-started/concepts/">
+      <div class="home-step-number">1</div>
+      <h3>Important concepts</h3>
+      <p>Understand the key building blocks of Bump.sh: documentations, hubs, and how they work together.</p>
+    </a>
+    <a class="card" href="/help/getting-started/upload-your-first-definition/">
+      <div class="home-step-number">2</div>
+      <h3>Upload your first API definition</h3>
+      <p>Deploy your OpenAPI or AsyncAPI file and get a beautiful documentation in minutes.</p>
+    </a>
+    <a class="card" href="/help/getting-started/going-further/">
+      <div class="home-step-number">3</div>
+      <h3>Going further</h3>
+      <p>Set up CI/CD, customize your docs, manage access and explore advanced features.</p>
+    </a>
+  </div>
+</section>
+
+<%# === SPECIFICATIONS === %>
+<section class="home-section">
+  <div class="home-section-header">
+    <h2>Specification references</h2>
+    <p>Complete guides to the API specifications supported by Bump.sh.</p>
+  </div>
+  <div class="highlight-banners-row">
+    <%= render Shared::HighlightBanner.new(
+      title: "OpenAPI (v3.2)",
+      image: "/docs/images/logos/openapi.svg",
+      link_url: "/openapi/v3.2/",
+      link_label: "Read the guide") do %>
+        <p>The industry standard for describing HTTP APIs. Learn every aspect of the specification from design to maintenance.</p>
+    <% end %>
+
+    <%= render Shared::HighlightBanner.new(
+      title: "Arazzo (v1.0)",
+      image: "/docs/images/logos/arazzo.svg",
+      link_url: "/arazzo/v1.0/",
+      link_label: "Read the guide") do %>
+        <p>Describe API workflows as sequences of calls. Automate real multi-step operations across your API surface.</p>
+    <% end %>
+  </div>
+</section>
+
+<%# === POPULAR TOPICS === %>
+<section class="home-section">
+  <div class="home-section-header">
+    <h2>Popular topics</h2>
+  </div>
+  <div class="home-topics">
+    <% site.data.home.popular_topics.each do |topic| %>
+      <a class="home-topic" href="<%= topic.link %>">
+        <%= svg "/docs/images/#{topic.icon}.svg" %>
+        <span><%= topic.label %></span>
+        <%= svg "/docs/images/icons/caret-right.svg", class: "home-topic-arrow" %>
+      </a>
+    <% end %>
+  </div>
+</section>
+
+<%# === LATEST UPDATES === %>
+<% latest_updates = site.collections["product-updates"].resources.sort_by { |u| u.date }.reverse.first(3) %>
+<section class="home-section">
+  <div class="home-section-header">
+    <h2>Latest product updates</h2>
+    <a href="/product-updates/" class="button" data-button-style="outline" data-button-size="small">View all updates</a>
+  </div>
+  <div class="home-updates">
+    <% latest_updates.each do |update| %>
+      <a class="home-update card" href="<%= update.relative_url %>">
+        <time datetime="<%= update.date %>"><%= update.date.strftime("%B %d, %Y") %></time>
+        <h3><%= update.data.title %></h3>
+        <div class="home-update-tags">
+          <% update.data.tags&.each do |tag| %>
+            <span class="label" data-label-status="inverted"><%= tag %></span>
+          <% end %>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</section>
