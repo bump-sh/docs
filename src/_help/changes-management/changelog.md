@@ -42,6 +42,12 @@ You have the option to share the URL of this comparison directly with your API c
 Your API consumers can subscribe to a weekly summary of changes to your API via email by clicking on `Get Updates` from the changelog page.
 Two options are available: email notification or RSS feed.
 
+### How frequently emails are sent?
+
+To avoid sending too many emails to your API consumers, change notifications are sent no more than once a week by email: 
+- If there are one or more changes per week, a recap email is sent a week after the last recap was sent.
+- If the API documentation hasn't been updated for more than a week, a recap email is sent the day after a new change is added.
+
 > The emails collected in this way will only be used for sending this changelog summary and nothing else.
 {: .info}
 
