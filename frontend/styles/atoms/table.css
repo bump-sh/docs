@@ -49,11 +49,15 @@ thead {
 }
 
 th, td {
-  padding: var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
 }
 
 td {
   border-bottom: var(--border-default);
+
+  code {
+    white-space: nowrap;
+  }
 }
 
 tr {
@@ -64,12 +68,12 @@ tr {
   td:last-child {
     border-right: var(--border-default);
   }
-  
+
   &:last-child {
     td:first-child {
       border-bottom-left-radius: var(--border-radius-large);
     }
-  
+
     td:last-child {
       border-bottom-right-radius: var(--border-radius-large);
     }
