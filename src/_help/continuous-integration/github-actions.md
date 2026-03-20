@@ -23,6 +23,10 @@ Then you can pick from one of the three following API workflow files.
 - [Deploy documentation only](#deploy-documentation-only)
 - [Diff on pull requests only](#diff-on-pull-requests-only)
 
+> You can use the GitHub Action to interact with your MCP server:
+> see how to [deploy a workflow document on your MCP server](#deploy-a-workflow-document-for-your-mcp-server).
+{: .info}
+
 ### Deploy documentation & diff on pull requests
 
 This is the [recommended workflow](/help/continuous-integration#integrate-with-your-ci), which will create two steps in your automation flow: a validation & diff step on code reviews, followed by a deployment step on merged changes.
@@ -154,7 +158,7 @@ jobs:
 
 ### Deploy a single documentation on a hub
 
-You can deploy a documentation inside a hub by adding a `hub` slug or id. 
+You can deploy a documentation inside a hub by adding a `hub` slug or id.
 Note that the documentation will be automatically created if it doesn't exist by using the slug you defined with the `doc:` input.
 
 `.github/workflows/bump-deploy.yml`
@@ -249,6 +253,39 @@ In order to deploy the 3 services API definition files from this folder (`privat
           filename_pattern: '*-api-{slug}-service'
 ```
 
+### Deploy a workflow document for your MCP server
+
+Replace `BUMP_MCP_SERVER_ID_OR_SLUG`with the slug (or id) of your MCP server. It can be found in your MCP server settings. Don't forget to replace the `file` path with the path to your [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo (soon) workflow document. 
+
+`.github/workflows/bump.yml`
+
+```yaml
+name: Deploy workflow document for your MCP server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-workflow-document:
+    name: Deploy workflow document for MCP server on Bump.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy workflow document
+        uses: bump-sh/github-action@v1
+        with:
+          command: deploy
+          mcp_server: <BUMP_MCP_SERVER_ID_OR_SLUG>
+          token: ${{secrets.BUMP_TOKEN}}
+          file: doc/flower-document.yml
+```
+
+This feature is currently in closed beta.
+Request an early access at [hello@bump.sh](mailto:hello@bump.sh)
+
 ## Inputs
 
 * `doc` (required unless you deploy a directory on a hub): Documentation slug or id. Can be found in the documentation settings on [your API dashboard](https://bump.sh/dashboard).
@@ -267,7 +304,7 @@ In order to deploy the 3 services API definition files from this folder (`privat
 
 * `command`: Bump.sh command to execute. _Default: `deploy`_
 
-  * `deploy`: deploy a new version of the documentation
+  * `deploy`: deploy a new version of the documentation (or MCP server ✨)
   * `diff`: automatically comment your pull request with the API diff
   * `dry-run`: dry-run a deployment of the API definition file
   * `preview`: create a temporary preview
@@ -275,6 +312,8 @@ In order to deploy the 3 services API definition files from this folder (`privat
 * `expires` (optional): Specify a longer expiration date for **public diffs** (defaults to 1 day). Use iso8601 format to provide a date, or you can use `never` to keep the result live indefinitely.
 
 * `fail_on_breaking` (optional): Mark the action as failed when a breaking change is detected with the diff command. This is only valid with `diff` command.
+
+* `mcp_server` (required to deploy workflow documents on an MCP server): MCP Server id or slug. It can be found in MCP server settings. This is only valid with the `deploy` command (default command).
 
 ## Contributing
 
