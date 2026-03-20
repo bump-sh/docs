@@ -27,6 +27,12 @@ We advise to setup two steps in your automation flow:
 - a [**validation** and **diff** step](#api-diff--validation-of-the-documentation-file) during development
 - followed by a [**deployment** step](#deploy-your-api-document) on production merges.
 
+
+> You can use the CI to interact with your MCP server,
+> see examples with [the CLI](/help/continuous-integration/cli#deploy-a-workflow-document-on-your-mcp-server)
+> or [the GitHub Action](/help/continuous-integration/github-actions#deploy-a-workflow-document-for-your-mcp-server).
+{: .info}
+
 ### API diff & validation of the documentation file
 
 When suggesting a change to your API, you probably follow a pull request flow (also known as merge request) and make the changes on a development branch. You can integrate Bump.sh at this stage to generate an API diff or only validate your changed API document.
@@ -49,6 +55,10 @@ The GitHub action example uses a dedicated action we crafted especially for you.
 - [API diff & validation step](/help/continuous-integration/github-actions/#diff-on-pull-requests-only)
 - [Deploy to your documentation](/help/continuous-integration/github-actions/#deploy-documentation-only)
 
+The GitHub Action can be used to interact with your MCP server:
+
+- [Deploy a workflow document for your MCP server](/help/continuous-integration/github-actions/#deploy-a-workflow-document-for-your-mcp-server).
+
 ### Other Continuous Integration tools (CI)
 
 The CI examples are here to help you build a similar process described with our GitHub action. We try to keep some specially crafted scripts for you to build the same experience for your own tools:
@@ -62,7 +72,7 @@ The CI examples are here to help you build a similar process described with our 
 The CLI can be used in your custom CI scripts with the two available recommendeded steps:
 
 - [`bump diff`](/help/continuous-integration/cli/#api-diff-of-your-changes) to check the changes & validate the API document
-- [`bump deploy`](/help/continuous-integration/cli/#deploy-a-file) to publish to your Bump.sh documentation
+- [`bump deploy`](/help/continuous-integration/cli/#deploy-a-file) to publish to your Bump.sh documentation, or MCP server
 
 
 ## Recommendation

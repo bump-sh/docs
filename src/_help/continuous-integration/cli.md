@@ -15,6 +15,10 @@ Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https:
 
 Under the hood, it uses the API of [developers.bump.sh](https://developers.bump.sh). And is built with the [`oclif`](https://oclif.io) framework in Typescript.
 
+> You can use the CLI to interact with your MCP server:
+> see how to [deploy a workflow document on your MCP server](#deploy-a-workflow-document-on-your-mcp-server).
+{: .info}
+
 ## Installation
 
 The Bump.sh CLI is a node package currently distributed via NPM. This means you must have the Node v20+ interpreter installed on your computer or CI servers.
@@ -72,7 +76,7 @@ $ bump --help
 The Bump.sh CLI is used to interact with your API documentation hosted on Bump.sh by using the API of developers.bump.sh
 
 VERSION
-  bump-cli/2.9.2 linux-x64 node-v20.18.1
+  bump-cli/2.9.12 linux-x64 node-v20.18.1
 
 USAGE
   $ bump [COMMAND]
@@ -113,9 +117,13 @@ bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN
 
 You can also deploy a given API document to a different branch of your documentation with the `--branch <branch-name>` parameter. Please note the branch will be created if it doesn’t exist. More details about the branching feature are available on [this dedicated help page](/help/branching). E.g. deploy the API document to the `staging` branch of the documentation:
 
+
 ```shell
 bump deploy path/to/api-document.yml --doc my-documentation --token $DOC_TOKEN --branch staging
 ```
+
+> You can also use this command to interact with your MCP server, see [how to deploy a workflow definition](#deploy-a-workflow-document-on-your-mcp-server).
+{: .info}
 
 #### Deploy a folder all at once
 
@@ -159,10 +167,24 @@ bump deploy path/to/api-document.yml --dry-run --doc my-documentation --token $D
 
 Please check `bump deploy --help` for more usage details.
 
+#### Deploy a workflow document on your MCP server
+
+Use the `bump deploy` command with the `--mcp-server` flag to deploy a [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo (soon) workflow document.
+
+```shell
+bump deploy path/to/flower-document.yml --mcp-server my-mcp-server-id-or-slug --token $BUMP_TOKEN
+```
+
+> You can find your `mcp-server-id-or-slug` and `$BUMP_TOKEN` API key in your MCP server settings.
+{: .info}
+
+This feature is currently in closed beta.
+Request an early access at [hello@bump.sh](mailto:hello@bump.sh)
+
 ### The `diff` command
 
 Using the `diff` command can help to spot differences between the local API
-document and the latest deployed version. 
+document and the latest deployed version.
 
 #### Public API diffs
 
@@ -180,7 +202,7 @@ Modified: GET /consommations
 By default the command will always exit with a successful return code. If you
 want to use this command in a CI environment and want the command to fail **in
 case of a breaking change**, you will need to add the `--fail-on-breaking` flag
-to your diff command. 
+to your diff command.
 
 By default if the environment variable `CI=1` is present (in most continuous
 integration environment), the flag will be enabled. In that case you can disable
@@ -254,7 +276,7 @@ Please check `bump preview --help` for more usage details
 
 ### The `overlay` command
 
-The [Overlay Specification](https://spec.openapis.org/overlay/v1.0.0.html) from the OpenAPI Initiative makes it possible to modify the content of an API definition by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition. 
+The [Overlay Specification](https://spec.openapis.org/overlay/v1.0.0.html) from the OpenAPI Initiative makes it possible to modify the content of an API definition by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original definition.
 
 The `bump overlay` command takes an original API document (an OpenAPI or AsyncAPI document), applies the changes from the overlay document, and outputs a modified version. No changes are made directly to the original document.
 
