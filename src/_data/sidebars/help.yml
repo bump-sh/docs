@@ -11,6 +11,8 @@ resources:
         link: /getting-started/concepts/
       - label: Upload your first API definition
         link: /getting-started/upload-your-first-definition/
+      - label: Start your first MCP server
+        link: /getting-started/start-your-first-mcp-server/
       - label: Going further
         link: /getting-started/going-further/
     icon: zap
@@ -142,6 +144,31 @@ resources:
         link: /continuous-integration/cli/
       - label: API (advanced)
         link: /continuous-integration/api/
+  - type: category
+    label: MCP servers
+    link: /mcp-servers/
+    icon: mcp
+    items:
+      - label: Create and manage MCP servers
+        link: /mcp-servers/create-and-manage-mcp-servers/
+      - label: Deploy workflows
+        link: /mcp-servers/deploy-workflows/
+      - label: Use an MCP server
+        link: /mcp-servers/use-mcp-server/
+      - label: Access management
+        link: /mcp-servers/access-management/
+      - label: Secrets
+        link: /mcp-servers/secrets/
+      - label: Runtime expressions
+        link: /mcp-servers/runtime-expressions/
+      - label: Debug sessions
+        link: /mcp-servers/debug-sessions/
+      - label: Security
+        link: /mcp-servers/security/
+      - label: Specification support
+        items:
+          - label: Flower support
+            link: /mcp-servers/specification-support/flower-support/
   - type: category
     label: Organizations
     link: /organizations/
