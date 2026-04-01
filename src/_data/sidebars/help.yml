@@ -101,6 +101,8 @@ resources:
                 link: /specification-support/extensions/
               - label: Badges
                 link: /specification-support/doc-badges/
+              - label: Roles requirements
+                link: /specification-support/roles-requirements/
               - label: Custom meta tags
                 link: /specification-support/meta-tags/
           - label: OpenAPI support
