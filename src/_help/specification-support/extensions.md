@@ -42,3 +42,7 @@ This custom property lets you add custom meta tags in the `<head>` tag of your d
 ## Change tags display name (`x-displayName`)
 
 This custom property lets you change the display name of your OpenAPI tags. Find out more in our [dedicated section](/help/specification-support/openapi-support/x-display-name).
+
+## Define role requirements (`x-rolesRequirements`)
+
+This custom property specifies which roles or permissions are required to access an endpoint. Find out more in our [dedicated section](/help/specification-support/roles-requirements).
