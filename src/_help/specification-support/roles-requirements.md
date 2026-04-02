@@ -7,7 +7,7 @@ title: Role requirements
 
 Specify which roles or permissions are required to access an API endpoint with `x-rolesRequirements`. Combined with security schemes, this extension helps your API users understand both **what authentication method** they need and **what access levels or roles** their credentials must have.
 
-Add the `x-rolesRequirements` property to any operation in OpenAPI or AsyncAPI. The property accepts either a string or an array of strings.
+Add the `x-rolesRequirements` property to any OpenAPI/AsyncAPI operation or OpenAPI webhook. The property accepts either a string or an array of strings.
 
 ### Example usage
 
