@@ -18,7 +18,7 @@ The live debugger offers you a visual way to analyze logs returned during the de
 1. Create a new debug session in your MCP server settings.
 2. Click on "Open debugger".
 3. Interact with the MCP server using your favorite [AI tool](/help/mcp-servers/use-mcp-server/).
-4. The life debugger is updated dynamically as the workflows are executed via the MCP server.
+4. The live debugger is updated dynamically as the workflows are executed via the MCP server.
 
 ### Read the live debugger
 
