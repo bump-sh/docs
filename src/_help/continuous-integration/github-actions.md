@@ -255,7 +255,7 @@ In order to deploy the 3 services API definition files from this folder (`privat
 
 ### Deploy a workflow document for your MCP server
 
-Replace `BUMP_MCP_SERVER_ID_OR_SLUG`with the slug (or id) of your MCP server. It can be found in your MCP server settings. Don't forget to replace the `file` path with the path to your [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo (soon) workflow document. 
+Replace `BUMP_MCP_SERVER_ID_OR_SLUG`with the slug (or id) of your MCP server. It can be found in your MCP server settings. Don't forget to replace the `file` path with the path to your [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo workflow document. 
 
 `.github/workflows/bump.yml`
 
