@@ -169,7 +169,7 @@ Please check `bump deploy --help` for more usage details.
 
 #### Deploy a workflow document on your MCP server
 
-Use the `bump deploy` command with the `--mcp-server` flag to deploy a [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo (soon) workflow document.
+Use the `bump deploy` command with the `--mcp-server` flag to deploy a [Flower](/help/mcp-servers/specification-support/flower-support/) or Arazzo workflow document.
 
 ```shell
 bump deploy path/to/flower-document.yml --mcp-server my-mcp-server-id-or-slug --token $BUMP_TOKEN
