@@ -26,7 +26,7 @@ This architecture keeps credentials and sensitive API responses away from the LL
 Workflows can be written in two formats:
 
 - [**Flower**](/help/mcp-servers/specification-support/flower-support): a lightweight specification designed by Bump.sh. Ideal for small projects, quick prototyping, or workflows calling APIs for which you don't have an OpenAPI document.
-- **Arazzo**: the workflow specification from the OpenAPI Initiative. Better suited for complex projects that need to reference existing OpenAPI documents.
+- [**Arazzo**](/help/mcp-servers/specification-support/arazzo-support): the workflow specification from the OpenAPI Initiative. Better suited for complex projects that need to reference existing OpenAPI documents.
 
 Both formats support multi-step sequences, conditional logic (retry, goto, end), runtime expressions, and secrets.
 

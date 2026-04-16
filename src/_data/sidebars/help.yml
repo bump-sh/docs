@@ -171,6 +171,8 @@ resources:
         items:
           - label: Flower support
             link: /mcp-servers/specification-support/flower-support/
+          - label: Arazzo support
+            link: /mcp-servers/specification-support/arazzo-support/
   - type: category
     label: Organizations
     link: /organizations/
