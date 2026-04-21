@@ -153,6 +153,8 @@ resources:
     items:
       - label: Create and manage MCP servers
         link: /mcp-servers/create-and-manage-mcp-servers/
+      - label: Write your first workflow
+        link: /mcp-servers/write-your-first-flower-workflow/
       - label: Deploy workflows
         link: /mcp-servers/deploy-workflows/
       - label: Use an MCP server

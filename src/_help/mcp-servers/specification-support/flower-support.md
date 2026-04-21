@@ -11,6 +11,9 @@ That said, thanks to its simplicity, Flower can replace Arazzo for small project
 
 The specification, along with a JSON Schema for validation and a set of utilities, is available on [GitHub](https://github.com/bump-sh/flower-spec).
 
+> New to Flower? Follow the [step-by-step getting started guide](/help/mcp-servers/write-your-first-flower-workflow/) to write your first workflow file.
+{: .info}
+
 ## Quick example
 
 This workflow looks up the current weather for a city by chaining two API calls:
