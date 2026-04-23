@@ -7,6 +7,30 @@ title: Write your first Flower workflow
 
 This guide provides a step-by-step explanation of how to define an API workflow to achieve real-world goals using the Flower specification. For a complete reference of all properties, see [Flower support](/help/mcp-servers/specification-support/flower-support).
 
+## How to design your workflows
+
+Before writing a single line of YAML, take the time to define your use cases. The first question you should ask yourself is: what tasks most of my users (either humans or agents) want to achieve using my APIs, or my UI? It could be looking at analytics, checking the gross revenue for the last 30 days, finding a product in a catalog, ...
+
+Once that question is behind you, think about:
+- The API call chain needed to achieve the workflow. Does your API currently have the capabilities to execute that workflow? 
+- The inputs the workflow will need.
+- What are the expected outputs from the user/AI?
+
+If that's the first time you design workflows for an MCP server, start simple: focus on the two or three workflows that will be the most useful to your users. Ideally, these first workflows are read-only.
+
+> The closer your workflows stay to real user needs, the more effectively AI tools will use them, and the less guesswork they'll need.
+{: .info}
+
+## Generate a Flower document using AI
+
+We recommend following this getting started to get a hand on the specification, but you can also generate a Flower document using an LLM. To do so:
+- Describe what you want to achieve with these workflows (book a train ticket, retrieve analytics from different sources, ...).
+- Provide a link to your API documentation or your API document.
+- Give the LLM context about the Flower specification:
+  - [Flower support reference](https://docs.bump.sh/help/mcp-servers/specification-support/flower-support/)
+  - [Flower schema](https://github.com/bump-sh/flower-spec)
+  - [Flower document examples](https://github.com/bump-sh/flower-spec/tree/main/examples)
+
 ## Learn the basics
 
 ### Set the global structure
@@ -69,6 +93,8 @@ flows:
         request:
           method: GET
           url: https://nominatim.openstreetmap.org/search
+          headers:
+            Authorization: "Bearer $secrets.my-api-key"
           query:
             q: $inputs.city
             format: jsonv2
@@ -78,7 +104,7 @@ flows:
 ```
 
 A few things to notice:
-
+-  `$secrets.my-api-key` injects a [secret](/help/mcp-servers/secrets/) stored on Bump.sh. 
 - `$inputs.city` is a **runtime expression** that injects a value provided either by an AI agent or a human through its LLM. Expressions always start with `$`. See [Runtime expressions](/help/mcp-servers/runtime-expressions) for the full reference.
 - `query` maps to URL query parameters. The request above resolves to `GET /search?q=Paris&format=jsonv2` when `city` is `Paris`.
 - `outputs` extracts values from the response. `$response.body.0.lat` reads the `lat` property from the first element of the response array.
@@ -185,7 +211,9 @@ actions:
 
 It's not the case in our example, but if the API you're calling requires authentication, create a [secret](/help/mcp-servers/secrets/) on Bump.sh to store the key securely. 
 
-Reference it with the `$secrets.{name}` expression. For example, if the API expects the key in a request header, add it in the step `request.headers`:
+Reference it with the `$secrets.{name}` expression. You can also use `$currentUser.token` to directly retrieve the authenticated user's token.
+
+For example, if the API expects the key in a request header, add it in the step `request.headers`:
 
 ```yaml
 flows:
