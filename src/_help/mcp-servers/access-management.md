@@ -31,4 +31,4 @@ Once authorized, the tool gets access to workflows provided by the MCP server.
 ### Authenticating with APIs
 
 While the visibility of the MCP server defines if a user has access to it, or not, your workflow APIs themselves can require authentication. 
-Setting [secrets](/help/mcp-servers/secrets) in Bump.sh is the way to go. 
+[Secrets and config](/help/mcp-servers/secrets-and-config/) cover both server-wide credentials and per-user values forwarded at runtime. 

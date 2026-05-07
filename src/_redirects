@@ -2,6 +2,7 @@ https://help.bump.sh/markdown-support https://docs.bump.sh/help/documentation-ex
 https://help.bump.sh/references https://docs.bump.sh/help/specifications-support/references/
 https://help.bump.sh/* https://docs.bump.sh/:splat 301!
 / /help/ 302
+/help/mcp-servers/secrets/ /help/mcp-servers/secrets-and-config/
 /help/getting-started/api-platform/ /guides/bump-sh-tutorials/api-platform/
 /help/getting-started/fastapi/ /guides/bump-sh-tutorials/fastapi/
 /help/publish-documentation/release-management/ /help/publish-documentation/deploy-and-release-management/

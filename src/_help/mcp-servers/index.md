@@ -38,7 +38,7 @@ Both formats support multi-step sequences, conditional logic (retry, goto, end),
 
 ## Go further
 
-- [Secrets](/help/mcp-servers/secrets/): store API keys and tokens so they are never exposed in your workflow documents.
+- [Secrets and config](/help/mcp-servers/secrets-and-config/): store API keys and tokens, or let each user pass their own values at runtime.
 - [Access management](/help/mcp-servers/access-management/): control who can use your MCP server.
 - [Debug sessions](/help/mcp-servers/debug-sessions/): inspect execution traces to troubleshoot workflows step by step.
 - [Runtime expressions](/help/mcp-servers/runtime-expressions/): reference dynamic data between steps.

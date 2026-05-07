@@ -161,8 +161,8 @@ resources:
         link: /mcp-servers/use-mcp-server/
       - label: Access management
         link: /mcp-servers/access-management/
-      - label: Secrets
-        link: /mcp-servers/secrets/
+      - label: Secrets and config
+        link: /mcp-servers/secrets-and-config/
       - label: Runtime expressions
         link: /mcp-servers/runtime-expressions/
       - label: Debug sessions
