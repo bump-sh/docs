@@ -117,17 +117,30 @@ headers:
 
 Secret names must start with a letter, followed by letters, digits, or underscores (e.g. `API_KEY`, `myToken2`).
 
-> See [Secrets](/help/mcp-servers/secrets) for how to configure secrets on your MCP server.
+> See [Secrets and config](/help/mcp-servers/secrets-and-config/) for how to configure secrets on your MCP server.
 {: .info}
 
-### Current user token (`$current_user.token`)
+### Current user (`$current_user`)
 
-Returns the OAuth token of the currently authenticated user. Only available on [private MCP servers](/help/mcp-servers/access-management/). Useful for forwarding the user's identity to external APIs.
+Reference values tied to the user currently invoking the MCP server. Only available on [private MCP servers](/help/mcp-servers/access-management/).
+
+| Expression | Source | Description |
+|---|---|---|
+| `$current_user.token` | `Authorization: Bearer ...` | OAuth token of the authenticated user |
+| `$current_user.<name>` | `Config-<Name>` header | Per-user config sent by the client |
 
 ```yaml
 headers:
   Authorization: "Bearer $current_user.token"
+  X-Org-Id: "$current_user.org_id"
 ```
+
+For `$current_user.<name>`, matching is case-insensitive, and underscores in the expression map to dashes in the header. All of `$current_user.api_key`, `$current_user.API_KEY` and `$current_user.Api-Key` resolve the same `Config-Api-Key` header.
+
+If no matching header is sent by the client, the expression resolves to an empty string.
+
+> See [Per-user config](/help/mcp-servers/secrets-and-config/#per-user-config) for how clients send these values.
+{: .info}
 
 
 ## Accessing data
