@@ -132,10 +132,10 @@ Reference values tied to the user currently invoking the MCP server. Only availa
 ```yaml
 headers:
   Authorization: "Bearer $current_user.token"
-  X-Org-Id: "$current_user.org_id"
+  Config-Org-Id: "$current_user.org_id"
 ```
 
-For `$current_user.<name>`, matching is case-insensitive, and underscores in the expression map to dashes in the header. All of `$current_user.api_key`, `$current_user.API_KEY` and `$current_user.Api-Key` resolve the same `Config-Api-Key` header.
+For `$current_user.<name>`, matching is case-insensitive, and underscores in the expression map to dashes in the header. All of `$current_user.org_id`, `$current_user.ORG_ID` and `$current_user.Org-Id` resolve the same `Config-Org-Id` header.
 
 If no matching header is sent by the client, the expression resolves to an empty string.
 
