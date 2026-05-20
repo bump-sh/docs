@@ -9,13 +9,13 @@ Enable LLMs and AI agents to access your doc portal using Bump.sh [AI features](
 
 ## Enable Ask AI
 
-Ask AI can be enabled or disabled from your documentation or hub settings, under the **Ask AI** section.
+Ask AI can be enabled or disabled from your documentation or hub settings, under the "Ask AI" section.
 
 ![Ask AI settings, a toggle to make a doc portal available to AI tools](/docs/images/help/ask-ai-settings.png)
 
 Enabling these capabilities:
-- Exposes an ** MCP server** for the API doc/hub, available by adding `/mcp` at the end of the URL.
-- Makes every page available as **Markdown** (by appending `.md` to any URL).
+- Exposes an MCP server for the API doc/hub, available by adding `/mcp` at the end of the URL.
+- Makes every page available as Markdown (by appending `.md` to any URL).
 - Generates a **[llms.txt](/help/publish-documentation/seo-geo/#llmstxt-for-llm-crawlers)** file at the root of your documentation.
 
 ## Ask AI dropdown
