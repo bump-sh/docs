@@ -197,6 +197,9 @@ actions:
   - do: next
 ```
 
+> See [Runtime expressions](/help/mcp-servers/runtime-expressions) to see how response values can be transformed and used as a condition to define the next step.
+{: .info}
+
 | Action | What it does |
 |--------|-------------|
 | `end` | Terminates the flow and returns collected outputs so far. |
@@ -299,5 +302,5 @@ flows:
 - [Deploy this file](/help/mcp-servers/deploy-workflows/) to your MCP server.
 - Store API keys safely using [secrets](/help/mcp-servers/secrets/).
 - Add more flows to the same file following the same pattern.
-- Learn how to do more complex data transformation using [Runtime expressions](/help/mcp-servers/runtime-expressions).
+- Learn how to do more complex data transformation and create condition trees using [Runtime expressions](/help/mcp-servers/runtime-expressions).
 - Read the full [Flower specification reference](/help/mcp-servers/specification-support/flower-support/) for all available properties and options.
