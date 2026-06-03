@@ -13,4 +13,4 @@ To help you enrich your API documentation, Bump.sh supports [Markdown](/help/doc
 
 We also offer [topics](/help/documentation-experience/topics/): an exclusive custom property that allows you to add extra information to your documentation.
 
-Enable LLMs and AI agents to access your doc portal using Bump.sh [AI features](/help/documentation-experience/ask-ai-markdown-rendering/). When enabled, your documentation are made accessible through an MCP server and offered as Markdown pages, so AI assistants and agents can search, navigate, and read your doc portal.
+Enable LLMs and AI agents to access your doc portal using Bump.sh [Ask AI features](/help/documentation-experience/ask-ai-capabilities/). When enabled, your documentation are made accessible through an MCP server and offered as Markdown pages, so AI assistants and agents can search, navigate, and read your doc portal.

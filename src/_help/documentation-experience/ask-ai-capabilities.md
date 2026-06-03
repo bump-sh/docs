@@ -1,11 +1,11 @@
 ---
-title: Ask AI & Markdown rendering
+title: Ask AI capabilities
 ---
 
 - TOC
 {:toc}
 
-Enable LLMs and AI agents to access your doc portal using Bump.sh [AI features](/help/documentation-experience/ask-ai-markdown-rendering/). When enabled, your documentation are made accessible through an MCP server and offered as Markdown pages, so AI assistants and agents can search, navigate, and read your doc portal.
+Enable LLMs and AI agents to access your doc portal using Bump.sh Ask AI capabilities. When enabled, your documentation are made accessible through an MCP server and served as Markdown pages, so AI assistants and agents can search, navigate, and read your doc portal.
 
 ## Enable Ask AI
 
@@ -18,7 +18,7 @@ Enabling these capabilities:
 - Makes every page available as Markdown (by appending `.md` to any URL).
 - Generates a **[llms.txt](/help/publish-documentation/seo-geo/#llmstxt-for-llm-crawlers)** file at the root of your documentation.
 
-## Ask AI dropdown
+## Ask AI dropdown in the documentation
 
 Many API consumers now rely on AI tools to help them quickly discover API capabilities. The Ask AI dropdown menu offers documentation users a way to either add the doc MCP server, open the current page in Claude/ChatGPT, or access the Markdown version.
 
@@ -38,11 +38,14 @@ Available options:
 
 ## MCP server
 
+> Docs MCP servers are only available for public docs/hubs. Private MCP servers coming soon.
+{: .info}
+
 When Ask AI is enabled, Bump.sh exposes an MCP server for your doc/hub. AI agents can use it to search, navigate, and read your API documentation programmatically, without having to scrape HTML pages or parse raw OpenAPI files. As search results are computed on our side, based on your documentation, it reduces the risk of AI hallucinations: the AI should just output information provided by the MCP server.
 
 The MCP server URL is shown in your doc/hub settings and accessible from the Ask AI dropdown.
 
-> Docs MCP servers are currently only available for public API docs/hubs. Support for private doc portals coming soon.
+> Note that each MCP server URL is scoped to a specific doc or hub: it will only expose information about the doc/hub it was activated on, not your entire Bump.sh doc portal.
 {: .info}
 
 ### Add the MCP server to your AI tool
