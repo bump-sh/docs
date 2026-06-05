@@ -38,7 +38,7 @@ Available options:
 
 ## MCP server
 
-> Docs MCP servers are only available for public docs/hubs. Private MCP servers coming soon.
+> Docs MCP servers are currently only available for public docs/hubs.
 {: .info}
 
 When Ask AI is enabled, Bump.sh exposes an MCP server for your doc/hub. AI agents can use it to search, navigate, and read your API documentation programmatically, without having to scrape HTML pages or parse raw OpenAPI files. As search results are computed on our side, based on your documentation, it reduces the risk of AI hallucinations: the AI should just output information provided by the MCP server.
@@ -48,21 +48,15 @@ The MCP server URL is shown in your doc/hub settings and accessible from the Ask
 > Note that each MCP server URL is scoped to a specific doc or hub: it will only expose information about the doc/hub it was activated on, not your entire Bump.sh doc portal.
 {: .info}
 
-### Add the MCP server to your AI tool
-
-The "Ask AI" dropdown in your API docs/hubs provides a one-click setup for Cursor and VS Code. The MCP server URL is available by clicking the "Add to other AI tools (MCP)" section.
-
-If it's your first time adding an MCP server in your AI tool, check our [tutorial covering major AI tools](/help/mcp-servers/use-mcp-server).  
-
 ### Available tools
 
 The MCP server exposes three tools:
 
 | Tool | Description |
 |---|---|
+| **list_pages** | Lists all child pages under a given URL in the documentation hierarchy. Returns each page's URL, title, type, and description. Useful as a starting point to explore what documentation is available before fetching specific pages. |
 | **search** | Searches across all documentation pages by keyword. Supports filtering by type (operation, schema, topic, authentication, webhook, etc.). Returns up to 20 matching results with their URL, title, type, and a text excerpt. |
 | **get_pages** | Retrieves the full content of one or more pages by their URLs. Accepts up to 10 URLs per request. Use this when you already know which pages you need, for example from `search` or `list_pages` results. |
-| **list_pages** | Lists all child pages under a given URL in the documentation hierarchy. Returns each page's URL, title, type, and description. Useful as a starting point to explore what documentation is available before fetching specific pages. |
 
 A typical request from an API user to the LLM, like "How do I do that using this API" will trigger the **search** tool to get the right API/operation, and then a **get_pages** to get the actual content.
 
