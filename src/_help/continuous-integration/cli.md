@@ -13,7 +13,7 @@ Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https:
 - Publish an API document to your Bump.sh documentation or hubs.
 - Compare two API documents to generate a human-readable diff from your API definition.
 
-Under the hood, it uses the API of [developers.bump.sh](https://developers.bump.sh). And is built with the [`oclif`](https://oclif.io) framework in Typescript.
+Under the hood, it uses the [Bump.sh Workspace API](https://developers.bump.sh/doc/workspace/). And is built with the [`oclif`](https://oclif.io) framework in Typescript.
 
 > You can use the CLI to interact with your MCP server:
 > see how to [deploy a workflow document on your MCP server](#deploy-a-workflow-document-on-your-mcp-server).
@@ -65,7 +65,7 @@ npx bump --help
 
 ### Can I install Bump.sh CLI without using NodeJS?
 
-Unfortunately, at the moment we only support the Node environment. However, you can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets which you can run as a standalone binary. Or you can push your documentation using [our API](https://developers.bump.sh/) (advanced usage only).
+Unfortunately, at the moment we only support the Node environment. However, you can download a standalone package directly from the [latest Github release](https://github.com/bump-sh/cli/releases) assets which you can run as a standalone binary. Or you can push your documentation using [our API](https://developers.bump.sh/doc/workspace/) (advanced usage only).
 
 ## Usage
 
@@ -252,7 +252,7 @@ bump preview path/to/file.json
 You can also preview a document available via a URL:
 
 ```shell
-bump preview https://developers.bump.sh/source.yaml
+bump preview https://developers.bump.sh/doc/workspace/source.yaml
 ```
 
 #### Live preview

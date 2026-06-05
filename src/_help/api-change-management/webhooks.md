@@ -42,11 +42,10 @@ The **Recent deliveries** section include a **Test Webhook **element that helps 
 
 ### Payload content
 
-Details about the payload content sent for each setup webhooks is available in our [absolutely gorgeous API documentation](https://developers.bump.sh/#webhook-documentation-change).
+Details about the payload content sent for each setup webhooks is available in our [absolutely gorgeous API documentation](https://developers.bump.sh/doc/workspace/operation/operation-webhookdocstructurechange).
 
 ## Delete a webhook
 
 To stop receiving notifications, you can delete a webhook by selecting it from the **Integrations** section and then confirm the deletion in the **Danger zone**.
 
 ![](/docs/images/help/legacy/zv44dbSnFqeaZqgfIvSD.png)
-

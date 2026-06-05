@@ -7,12 +7,11 @@ cards:
     description: Learn about APIs at large, and how to use Bump.sh in your API ecosystem
     link: /guides/
     icon: icons/guides
-  - label: API Reference
-    description: Find the documentation to our very own API
+  - label: API References
+    description: Find documentation of our own APIs
     link: https://developers.bump.sh/
     icon: icons/api-reference
   - label: Product Updates
     description: Learn about our latest features and changes
     link: /product-updates/
     icon: icons/product-updates
-    

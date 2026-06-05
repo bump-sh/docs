@@ -7,7 +7,7 @@ Until now, for documentation having a customised logo, the same one was used as 
 
 From now on, you can use a specific one, to brighten up your documentation more than ever!
 
-Here is how [Bump's documentation](https://developers.bump.sh/) looks like now:
+Here is how [Bump's documentation](https://developers.bump.sh/doc/workspace/) looks like now:
 
 ![Bump doc with favicon.png](/docs/images/changelog/favicon.png)
 

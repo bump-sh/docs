@@ -15,7 +15,7 @@ Many API consumers now rely on AI tools to help them quickly discover API capabi
 ## Markdown rendering
 To access the Markdown version of a documentation, add `.md` at the end of the URL (or `/source.md` if you have a custom domain, when the URL is the root of your documentation).
 
-[On a documentation root](https://developers.bump.sh/source.md) *(example truncated for visibility purposes).*
+[On a documentation root](https://developers.bump.sh/doc/workspace/source.md) *(example truncated for visibility purposes).*
 ```markdown
 # Bump.sh Api
 
@@ -31,16 +31,16 @@ The Bump.sh API is a REST API. It enables you to [...]
 
 
 ## Endpoints
-- [Branches](https://developers.bump.sh/group/endpoint-branches.md)
-- [Diffs](https://developers.bump.sh/group/endpoint-diffs.md)
+- [Branches](https://developers.bump.sh/doc/workspace/group/endpoint-branches.md)
+- [Diffs](https://developers.bump.sh/doc/workspace/group/endpoint-diffs.md)
 - [...]
 
 
 ## Webhooks
-- [Documentation change](https://developers.bump.sh/group/webhook-documentation-change.md)
+- [Documentation change](https://developers.bump.sh/doc/workspace/group/webhook-documentation-change.md)
 ````
 
-[For a specific operation](https://developers.bump.sh/operation/operation-post-versions.md) *(example truncated for visibility purposes).*
+[For a specific operation](https://developers.bump.sh/doc/workspace/operation/operation-post-versions.md) *(example truncated for visibility purposes).*
 ```markdown
 # Create a new version
 

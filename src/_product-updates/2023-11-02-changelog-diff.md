@@ -12,4 +12,4 @@ With the new Changelog Diff, you get a clearer overview of EVERY change. Instead
 
 We've also overhauled the visual aspect of a diff. The hierarchy of information is clearer and more intuitive, as is the order of change statuses, which is now better ordered.
 
-Now available to see on your API, or [see it in action on Bump.sh API Changelog →](https://developers.bump.sh/changes)
+Now available to see on your API, or [see it in action on Bump.sh API Changelog →](https://developers.bump.sh/doc/workspace/changes)

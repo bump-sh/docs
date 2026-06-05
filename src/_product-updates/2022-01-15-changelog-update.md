@@ -5,9 +5,9 @@ tags: [Improvement]
 
 The API changelog page has been redesigned to give you a clearer view of what has changed inside your API, it is the groundwork of having fine-grained changelog details 🕵️
 
-Hope you will enjoy it! 
+Hope you will enjoy it!
 
-See it in action on our [own API documentation](https://developers.bump.sh/changes)
+See it in action on our [own API documentation](https://developers.bump.sh/doc/workspace/changes)
 
 • Bonus point:
 

@@ -20,7 +20,7 @@ Bump.sh now offers an alternative context optimized for AI tools through Markdow
 
 To access the Markdown version of a documentation, simply add `.md` at the end of the URL (or `/source.md` if you have a custom domain, when the URL is the root of your documentation).
 
-[On a documentation root](https://developers.bump.sh/source.md) *(example truncated for visibility purposes).*
+[On a documentation root](https://developers.bump.sh/doc/workspace/source.md) *(example truncated for visibility purposes).*
 ```markdown
 # Bump.sh Api
 
@@ -36,27 +36,27 @@ The Bump.sh API is a REST API. It enables you to [...]
 
 
 ## Topics
-- [Authentication](https://developers.bump.sh/authentication.md)
+- [Authentication](https://developers.bump.sh/doc/workspace/authentication.md)
 
 
 ## Endpoints and operations
 
-### [Branches](https://developers.bump.sh/group/endpoint-branches.md)
-- [Promote branch as the default one](https://developers.bump.sh/operation/operation-patch-docs-parameter-branches-parameter-set_default.md)
-- [Delete a branch](https://developers.bump.sh/operation/operation-delete-docs-parameter-branches-parameter.md)
-- [List available branches](https://developers.bump.sh/operation/operation-get-docs-parameter-branches.md)
-- [Create a new branch](https://developers.bump.sh/operation/operation-post-docs-parameter-branches.md)
-### [Diffs](https://developers.bump.sh/group/endpoint-diffs.md)
+### [Branches](https://developers.bump.sh/doc/workspace/group/endpoint-branches.md)
+- [Promote branch as the default one](https://developers.bump.sh/doc/workspace/operation/operation-patch-docs-parameter-branches-parameter-set_default.md)
+- [Delete a branch](https://developers.bump.sh/doc/workspace/operation/operation-delete-docs-parameter-branches-parameter.md)
+- [List available branches](https://developers.bump.sh/doc/workspace/operation/operation-get-docs-parameter-branches.md)
+- [Create a new branch](https://developers.bump.sh/doc/workspace/operation/operation-post-docs-parameter-branches.md)
+### [Diffs](https://developers.bump.sh/doc/workspace/group/endpoint-diffs.md)
 - [...]
 
 
 ## Webhooks
 
-### [Documentation change](https://developers.bump.sh/group/webhook-documentation-change.md)
-- [Structure change](https://developers.bump.sh/operation/operation-webhookdocstructurechange.md)
+### [Documentation change](https://developers.bump.sh/doc/workspace/group/webhook-documentation-change.md)
+- [Structure change](https://developers.bump.sh/doc/workspace/operation/operation-webhookdocstructurechange.md)
 ````
 
-[For a specific operation](https://developers.bump.sh/operation/operation-post-versions.md) *(example truncated for visibility purposes).*
+[For a specific operation](https://developers.bump.sh/doc/workspace/operation/operation-post-versions.md) *(example truncated for visibility purposes).*
 ```markdown
 # Create a new version
 

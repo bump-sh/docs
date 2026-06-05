@@ -87,6 +87,6 @@ Besides the ones mentioned above, here is an amazing and more exhaustive list of
 Now that you know what OpenAPI is, try it out with one of the following OpenAPI documents.
 
 * [Train Travel API](https://raw.githubusercontent.com/bump-sh-examples/train-travel-api/main/openapi.yaml)
-* [Bump API](https://developers.bump.sh/source.json)
+* [Bump API](https://developers.bump.sh/doc/workspace/source.json)
 
 Or why not learn to make your own, heading over to the next section: **[Understanding the Structure of OpenAPI](_specifications/openapi/v3.1/understanding-structure/basic-structure.md).**

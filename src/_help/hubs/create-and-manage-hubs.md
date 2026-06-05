@@ -59,7 +59,7 @@ However, the API does not currently support the following actions:
 - Modifying the metadata of a hub (title, description, settings, etc.).
 - Deleting a hub.
 
-[For more information, please refer to our API documentation.](https://developers.bump.sh/)
+[For more information, please refer to our API documentation.](https://developers.bump.sh/doc/workspace/)
 
 ## Hub access management
 

@@ -5,5 +5,5 @@ left_links:
   - {title: "OpenAPI specification", link: "/openapi/v3.2/"}
   - {title: "Arazzo specification", link: "/arazzo/v1.0/"}
 right_links:
-  - {title: "API reference", link: "https://developers.bump.sh"}
+  - {title: "API references", link: "https://developers.bump.sh/"}
   - {title: "Bump.sh", link: "https://bump.sh"}

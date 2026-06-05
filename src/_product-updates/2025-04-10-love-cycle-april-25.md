@@ -7,9 +7,9 @@ Every now and then between larger product cycles, the whole team gets together t
 Here's a list of what's been worked on.
 
 Improvements:
-- You can now easily list all your organization's hubs using the new ``GET /hubs`` [endpoint in our API](https://developers.bump.sh/operation/operation-listhubs),
+- You can now easily list all your organization's hubs using the new ``GET /hubs`` [endpoint in our API](https://developers.bump.sh/doc/workspace/operation/operation-listhubs),
 - Our [GitHub Action](https://github.com/marketplace/actions/bump-sh-api-documentation-changelog) has been updated and now supports overlays,
-- [Bump.sh CLI](https://github.com/bump-sh/cli): 
+- [Bump.sh CLI](https://github.com/bump-sh/cli):
   - A message is now displayed at every document update, so you know the CLI is running and updating the preview properly,
   - When using `bump overlay`, we now display a message if an overlay doesn't match anything,
   - When using `bump deploy`, an explicit message is displayed if the target directory doesn't exist.

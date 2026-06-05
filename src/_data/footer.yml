@@ -32,7 +32,7 @@ columns:
       link: https://github.com/bump-sh/cli
     - label: Status
       link: https://status.bump.sh/
-    - label: API Reference
+    - label: API References
       link: https://developers.bump.sh/
     - label: Contact
       link: mailto:hello@bump.sh
