@@ -8,4 +8,4 @@ tags: [Improvement]
 
 We redesigned the whole changelog page in order to bring you a better understanding of changes history of your API.
 
-Here's an example: https://developers.bump.sh/changes
+Here's an example: https://developers.bump.sh/doc/workspace/changes

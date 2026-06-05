@@ -11,7 +11,7 @@ Bump automatically builds a changelog for your API. Each time you upload a new v
 
 ![The changelog link](/docs/images/help/changelog-link-dark.png)
 
-As you can see below on the [Bump API changelog](https://developers.bump.sh/changes), every changes we made are listed: whether it's a structural change (endpoint or parameter removed, modified or added for example) or a content change (description or example modification).
+As you can see below on the [Bump API changelog](https://developers.bump.sh/doc/workspace/changes), every changes we made are listed: whether it's a structural change (endpoint or parameter removed, modified or added for example) or a content change (description or example modification).
 
 ![Bump API changelog](/docs/images/help/changelog.png)
 
@@ -43,7 +43,7 @@ Users can subscribe to your API changelog and receive a weekly digest.
 
 ### RSS
 
-The changelog page exposes an RSS feed your users can subscribe to. Here is an example with the [Bump API changelog](https://developers.bump.sh/changes.rss).
+The changelog page exposes an RSS feed your users can subscribe to. Here is an example with the [Bump API changelog](https://developers.bump.sh/doc/workspace/changes.rss).
 
 ### Webhooks
 

@@ -66,9 +66,9 @@ bump deploy path/to/file.json --doc my-documentation --branch staging
 
 ### Using the API
 
-Our [API](https://developers.bump.sh/operation/operation-post-versions) lets you publish to a specific branch by providing the `branch_name` request body parameter. However, we recommend using either our CLI or our Github-Action to publish your API documents to Bump.sh.
+Our [API](https://developers.bump.sh/doc/workspace/operation/operation-post-versions) lets you publish to a specific branch by providing the `branch_name` request body parameter. However, we recommend using either our CLI or our Github-Action to publish your API documents to Bump.sh.
 
-Our dedicated [Branch API](https://developers.bump.sh/group/endpoint-branches) endpoints, help to manage the branches of your documentation. You can create a new branch, delete one, list them all, or select one as the default branch.
+Our dedicated [Branch API](https://developers.bump.sh/doc/workspace/group/endpoint-branches) endpoints, help to manage the branches of your documentation. You can create a new branch, delete one, list them all, or select one as the default branch.
 
 Please note that, currently, the API does not support renaming a branch.
 

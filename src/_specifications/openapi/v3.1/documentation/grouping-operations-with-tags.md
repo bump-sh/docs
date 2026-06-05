@@ -86,7 +86,7 @@ Tags are a powerful tool for improving the usability of your OpenAPI document. B
 
 When specifying your tags in the root level of your API contract, you can give context to the tag using the `description` property.
 
-Let’s take [Bump.sh API documentation](https://bump.sh/demo/doc/bump). Here is how the `Diffs` tag is created and described in [Bump.sh API Contract](https://developers.bump.sh):
+Let’s take [Bump.sh API documentation](https://bump.sh/demo/doc/bump). Here is how the `Diffs` tag is created and described in [Bump.sh API Contract](https://developers.bump.sh/doc/workspace/):
 
 ```yaml
 tags:
@@ -178,7 +178,7 @@ paths:
       [...]
 ```
 
-You can [see live](https://developers.bump.sh/group/endpoint-diffs) how they are all available under the section Diffs. By clicking the name of the section in the left menu, the tagged endpoints will show up.
+You can [see live](https://developers.bump.sh/doc/workspace/group/endpoint-diffs) how they are all available under the section Diffs. By clicking the name of the section in the left menu, the tagged endpoints will show up.
 
 ![tagged endpoints on Bump.sh documentation](/docs/images/guides/tagged_endpoints.png)
 

@@ -9,7 +9,7 @@ In API documentation, changelogs are important, and your API consumers need to s
 
 It's now possible for them to subscribe by email to your API changelog: they will receive a summary of the changelog every week in their mailbox!
 
-Want to see it in action on Bump API documentation? [See it live](https://developers.bump.sh/changes)
+Want to see it in action on Bump API documentation? [See it live](https://developers.bump.sh/doc/workspace/changes)
 
 Do not hesitate to invite your API consumers to subscribe to your API updates (available at `http://{your-doc-url}/changes`)
 

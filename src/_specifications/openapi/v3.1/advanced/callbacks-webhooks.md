@@ -150,16 +150,16 @@ The key bits to notice here are:
 - The `requestBody` is the request you're going to send.
 - The `responses` property is a map of responses you want the client to return.
 
-These then don't need to be tied to paths. In fact, you can have an OpenAPI document which has no paths. This could be because you're splitting your documents up in interesting reusable ways with these webhooks being shared across multiple APIs, or because your API is entirely asynchronous. 
+These then don't need to be tied to paths. In fact, you can have an OpenAPI document which has no paths. This could be because you're splitting your documents up in interesting reusable ways with these webhooks being shared across multiple APIs, or because your API is entirely asynchronous.
 
-## Consider AsyncAPI 
+## Consider AsyncAPI
 
-If you are using a few webhooks in an API which is largely otherwise driven by request/response, OpenAPI will be just fine for you with callbacks and webhooks helping as needed. 
+If you are using a few webhooks in an API which is largely otherwise driven by request/response, OpenAPI will be just fine for you with callbacks and webhooks helping as needed.
 
 However if you are building an API that is entirely asynchronous, you are using technologies like WebSockets, or are working with any other event-driven API protocols, you should consider using [AsyncAPI](_guides/asyncapi/what-is-asyncapi.md) for describing those parts of the architecture.
 
 ## Examples
 
-There's a full example in either [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), or [Bump.sh API](https://developers.bump.sh/operation/operation-webhookdocstructurechange): every structural change on API documentation generates a new request to this webhook.
+There's a full example in either [Train Travel API](https://bump.sh/blog/modern-openapi-petstore-replacement), or [Bump.sh API](https://developers.bump.sh/doc/workspace/operation/operation-webhookdocstructurechange): every structural change on API documentation generates a new request to this webhook.
 
 You can also find more information about documenting webhooks in [this blog post](https://bump.sh/blog/documenting-your-OpenAPI-webhooks).

@@ -9,4 +9,4 @@ In the age of information overload, getting access to information that matters c
 
 From now, get notified of the API changes through RSS in addition to the existing email.
 
-Give it a try with the [Bump RSS feed](https://developers.bump.sh/changes.rss) in your favorite RSS reader.
+Give it a try with the [Bump RSS feed](https://developers.bump.sh/doc/workspace/changes.rss) in your favorite RSS reader.

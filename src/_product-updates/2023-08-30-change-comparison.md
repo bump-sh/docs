@@ -10,7 +10,7 @@ APIs evolve constantly, each iteration creating changes, breaking ones or not. A
 
 We have worked on a new feature that allows to compare any versions of an API with another, accessible from its changelog. Changes are instantly highlighted, and if you need to easily share the result with your teammates, we got you covered: use the generated link or even better, try to press `Y` key!
 
-Come and test this new feature directly on [Bump.sh API documentation](https://developers.bump.sh/compare).
+Come and test this new feature directly on [Bump.sh API documentation](https://developers.bump.sh/doc/workspace/compare).
 
 **Improvements and fixes**
 

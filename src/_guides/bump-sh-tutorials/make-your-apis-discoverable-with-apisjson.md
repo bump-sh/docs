@@ -118,7 +118,7 @@ If you want to automate submissions and updates then you can use the [APIs.io AP
 
 ### Private Bump.sh Hubs
 
-If you want to make your hubs private but still want to access the data in APIs.json, then you can access it via the [Bump.sh API](https://developers.bump.sh/) using the [Hubs endpoint](https://developers.bump.sh/operation/operation-get-hubs-parameter).
+If you want to make your hubs private but still want to access the data in APIs.json, then you can access it via the [Bump.sh API](https://developers.bump.sh/doc/workspace/) using the [Hubs endpoint](https://developers.bump.sh/doc/workspace/operation/operation-get-hubs-parameter).
 
 ```
 curl -X GET https://bump.sh/api/v1/hubs/<hub-slug-or-id> -H "Authorization: Token <access-token>"

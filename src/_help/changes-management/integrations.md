@@ -50,7 +50,7 @@ Finally, you can check from this same page if your setup is working correctly by
 
 ### Payload content
 
-Details about the payload content sent for each setup webhooks is available in our [Bump.sh API documentation](https://developers.bump.sh/#webhook-documentation-change).
+Details about the payload content sent for each setup webhooks is available in our [Bump.sh API documentation](https://developers.bump.sh/doc/workspace/operation/operation-webhookdocstructurechange).
 
 ### Delete a webhook
 
