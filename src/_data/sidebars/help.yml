@@ -55,8 +55,8 @@ resources:
             link: /documentation-experience/markdown-support/
           - label: Topics
             link: /documentation-experience/topics/
-          - label: Ask AI & Markdown rendering
-            link: /documentation-experience/ask-ai-markdown-rendering/
+          - label: Ask AI capabilities
+            link: /documentation-experience/ask-ai-capabilities/
       - type: category
         label: Customization options
         link: /customization-options/
@@ -73,6 +73,8 @@ resources:
             link: /customization-options/head-injection-analytics-tools-integration/
           - label: Embed mode
             link: /customization-options/embed-mode/
+          - label: Headless doc portal (API)
+            link: /customization-options/headless-doc-portal-api/
       - type: category
         label: Changes management
         link: /changes-management/

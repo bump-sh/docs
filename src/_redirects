@@ -32,6 +32,7 @@ https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 /help/continuous-integration/ci/ /help/continuous-integration/
 /help/hubs/hub-settings/#default-settings--visual-customization /help/hubs/customize-ui/
 /help/account/billing/ /help/organizations/billing/
+/help/documentation-experience/ask-ai-markdown-rendering/ /help/documentation-experience/ask-ai-capabilities/
 
 # Cribbed for the OpenAPI Specification Tutorial
 /guides/openapi/advanced-ref-usage/ /openapi/v3.1/advanced/splitting-documents-with-ref/
