@@ -1,7 +1,7 @@
 ---
 title: Introducing Bump.sh Portal API and MCP server
 tags: [New]
-image: /docs/images/changelog/doc-portal-mcp-server.png
+image: /docs/images/changelog/portal-api-mcp-server.png
 ---
 
 ![doc-portal-mcp-server.png](/docs/images/changelog/portal-api-mcp-server.png)
