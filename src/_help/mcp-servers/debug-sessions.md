@@ -7,7 +7,27 @@ title: Debug sessions
 
 A debug session is a temporary authorization to access execution traces on the [data plane](/help/mcp-servers/#data-plane). It lets you see which API calls your MCP server actually executes, what responses it receives, and how it produces its final output. Sessions last 4 hours max and only one can be active at a time.
 
-## Start a debug session
+## Live debugger in the dashboard 
+
+The live debugger offers you a visual way to analyze logs returned during the debug session. It returns the same level of information as the [debug endpoint](/help/mcp-servers/debug-sessions/#debug-endpoint). 
+
+![MCP server debug session live debugger](/docs/images/help/mcp-servers/mcp-servers-live-debugger.png)
+
+### Access the live debugger 
+
+1. Create a new debug session in your MCP server settings.
+2. Click on "Open debugger".
+3. Interact with the MCP server using your favorite [AI tool](/help/mcp-servers/use-mcp-server/).
+4. The live debugger is updated dynamically as the workflows are executed via the MCP server.
+
+### Read the live debugger
+
+For each tool called by the MCP server, the live debugger returns:
+- **Flow-level information** with `flow.run`: what the workflow received (`inputs`) and what it returned (`outputs`).
+- **Steps** with `step.run`: each HTTP request the data plane executed, with the full request (method, URL, query, body) and the API response (status, body).
+- **Actions** with `action.select`: flow control decisions between steps. If your workflow uses conditions (retry, goto, end), this is where they are evaluated.
+
+## Debug endpoint
 
 Go to your MCP server settings and create a new session. You will get a unique token to authenticate your requests.
 
@@ -45,18 +65,18 @@ $ curl \
 > Debug sessions run on the production environment. Responses may include sensitive data. Handle them with care.
 {: .warning}
 
-## Read the response
+### Read the response
 
 The debug endpoint returns a JSON object with two keys:
 
 - `outputs`: the final values returned to the AI agent after running the workflow.
 - `trace`: the full execution trace, showing every step the data plane ran.
 
-### Quick check
+#### Quick check
 
 Start by looking at `outputs`. If the values are wrong or missing, dive into the `trace` to find where things went wrong.
 
-### Understand the trace
+#### Understand the trace
 
 The `trace` object contains:
 
@@ -64,7 +84,7 @@ The `trace` object contains:
 - **Steps** (`step.run`): each HTTP request the data plane executed, with the full request (method, URL, query, body) and the API response (status, body).
 - **Actions** (`action.run`): flow control decisions between steps. If your workflow uses conditions (retry, goto, end), this is where they are evaluated.
 
-### Example
+#### Example
 
 Here is a shortened trace from our Weather MCP server. The workflow resolves a city name to coordinates, then fetches the current weather.
 
