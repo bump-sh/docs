@@ -10,6 +10,6 @@ To get there, we made multiple improvements:
 - Database queries have been optimized to serve your documentation faster, even under heavy load,
 - Our caching strategy has been deepened to ensure that, most of the time, API users hit pre-generated content instead of waiting on cold requests.
 
-These gains are most noticeable on large hubs and deep multi-API portals.
+These gains are most noticeable on large hubs and API documentation with deep request/response bodies.
 
 Any feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh).
