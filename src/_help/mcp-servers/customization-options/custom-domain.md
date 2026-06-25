@@ -28,6 +28,8 @@ Once this is done, you can set your custom domain in Bump.sh.
 
 From the settings of your MCP server, check the "Custom domain" box. You will then be asked to enter the URL of your custom domain, which has been configured on your end in the previous step. Confirm by selecting "Update general settings". SSL certificates are automatically issued at this step.
 
+![Setting page of an MCP server with the custom domain option activated](/docs/images/help/mcp-servers/mcp-servers-custom-domains.png)
+
 > It may take some time for your custom domain update to propagate. This delay is normal and is not dependent on Bump.sh or your hosting provider.
 During this period, AI tools trying to connect to your MCP server may have difficulty reaching it.
 {: .info}
