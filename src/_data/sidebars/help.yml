@@ -171,6 +171,11 @@ resources:
         link: /mcp-servers/debug-sessions/
       - label: Security
         link: /mcp-servers/security/
+      - type: category
+        label: Customization options    
+        items:   
+        - label: Custom domains
+          link: /mcp-servers/customization-options/custom-domain/
       - label: Specification support
         items:
           - label: Flower support
