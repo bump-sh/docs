@@ -178,9 +178,6 @@ bump deploy path/to/flower-document.yml --mcp-server my-mcp-server-id-or-slug --
 > You can find your `mcp-server-id-or-slug` and `$BUMP_TOKEN` API key in your MCP server settings.
 {: .info}
 
-This feature is currently in closed beta.
-Request an early access at [hello@bump.sh](mailto:hello@bump.sh)
-
 ### The `diff` command
 
 Using the `diff` command can help to spot differences between the local API

@@ -43,6 +43,3 @@ Both formats support multi-step sequences, conditional logic (retry, goto, end),
 - [Debug sessions](/help/mcp-servers/debug-sessions/): inspect execution traces to troubleshoot workflows step by step.
 - [Runtime expressions](/help/mcp-servers/runtime-expressions/): reference dynamic data between steps.
 - [Security](/help/mcp-servers/security/): understand the architecture and data handling guarantees.
-
-> MCP servers are in closed beta. [Contact us to be among our first users](mailto:hello@bump.sh).
-{: .info}
