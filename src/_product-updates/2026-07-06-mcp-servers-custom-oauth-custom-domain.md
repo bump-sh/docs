@@ -15,4 +15,4 @@ Just provide your OAuth authorization server URL in your MCP server settings, we
 
 Your MCP server URL can now live under your own domain, as you do for your API docs. Simply set up a CNAME record and add the custom domain in your MCP server settings. More about it in the [help center](/help/mcp-servers/customization-options/custom-domain/).
 
-Any questions or feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh).
+Following this release, the MCP Platform is out of beta and available on all plans. Go to your dashboard to give it a try! Any questions or feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh).
