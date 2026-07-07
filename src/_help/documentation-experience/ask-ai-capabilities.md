@@ -57,6 +57,8 @@ The MCP server exposes three tools:
 | **list_pages** | Lists all child pages under a given URL in the documentation hierarchy. Returns each page's URL, title, type, and description. Useful as a starting point to explore what documentation is available before fetching specific pages. |
 | **search** | Searches across all documentation pages by keyword. Supports filtering by type (operation, schema, topic, authentication, webhook, etc.). Returns up to 20 matching results with their URL, title, type, and a text excerpt. |
 | **get_pages** | Retrieves the full content of one or more pages by their URLs. Accepts up to 10 URLs per request. Use this when you already know which pages you need, for example from `search` or `list_pages` results. |
+| **list_changes** | Lists all the changes of a documentation/hub. Returns each change's ID, URL, title, content, and creation date. |
+| **get_change** | Retrieves the full content of a specific change. |
 
 A typical request from an API user to the LLM, like "How do I do that using this API" will trigger the **search** tool to get the right API/operation, and then a **get_pages** to get the actual content.
 
