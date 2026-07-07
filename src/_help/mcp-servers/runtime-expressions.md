@@ -271,9 +271,9 @@ outputs:
 > String interpolation only works with dot notation expressions. JMESPath expressions (containing `[*]`, `[0]`, functions, etc.) are resolved as a whole and cannot be combined with other expressions in the same string.
 {: .warning}
 
-## Conditions
+## Action conditions
 
-Expressions inside `when` clauses are resolved, then evaluated with standard operators.
+Actions defined in a step can use expressions variables inside then `when` clause. Those are resolved, then evaluated with standard operators.
 
 ```yaml
 actions:
@@ -288,6 +288,8 @@ actions:
 
 Supported operators: `==`, `!=`, `>`, `<`, `>=`, `<=`, `AND`, `OR`, `!`.
 
+> JMESPath functions are not supported inside action conditions. You should only use expression variables with a comparaison operator. You can however, use a function in a step `outputs` and then use the output in the condition, i.e. `$step.my-step.outputs.aggregated-result > 10`.
+{: .warning}
 
 ## Complete example
 
