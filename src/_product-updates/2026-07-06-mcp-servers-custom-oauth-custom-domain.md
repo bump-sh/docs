@@ -19,4 +19,5 @@ Your MCP server URL can now live under your own domain, as you do for your API d
 
 ![MCP server settings - Custom OAuth field.png](/docs/images/changelog/mcp-servers-custom-domains.png)
 
-The MCP Platform is now out of beta and available on all plans. Go to your dashboard to give it a try! Any questions or feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh).
+The MCP Platform is now out of beta and available on all plans. Go to your dashboard to give it a try! 
+Any questions or feedback? Reach out at [hello@bump.sh](mailto:hello@bump.sh).
