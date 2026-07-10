@@ -53,7 +53,7 @@ $ curl \
 
 ### Using the visual debugger
 
-The visual debugger allows you to visually analyze workflow's execution. To access it, click on "Open debugger" from the Debug sessions page.
+The visual debugger allows you to visually analyze workflow's execution made by an MCP request. To access it, click on "Open debugger" from the Debug sessions page.
 
 It returns the same level of information as the debug endpoint. [`trace` content detailed here.](/help/mcp-servers/debug-sessions/#understand-the-trace)
 
