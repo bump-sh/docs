@@ -9,16 +9,20 @@ A debug session is a temporary authorization to access execution traces on the [
 
 ## Start a debug session
 
-Go to your MCP server settings and create a new session. You will get a unique token to authenticate your requests.
+Go to your MCP server settings and create a new session. 
 
-From the debug session page, select a tool to get a pre-filled cURL command. The request uses 4 variables:
+### Send requests using the MCP server
+
+After starting a session, you can analyze requests sent by your AI tool. For debug/QA, we recommend using [MCPJam](/help/mcp-servers/use-mcp-server/#mcpjam-debug-tool), a free MCP testing platform.
+
+### Send requests using cURL
+
+You can also directly send requests using cURL. From the debug session page, select a tool to get a pre-filled cURL command. The request uses 4 variables:
 
 - `ORGANIZATION_SLUG`: your Bump.sh organization slug.
 - `MCP_SERVER_SLUG`: your MCP server slug.
 - `DEBUG_TOKEN`: your unique session token.
 - `TOOL_NAME`: the tool to debug, as defined in your workflow file.
-
-### Pass inputs
 
 If the workflow requires inputs, you can pass them in two ways.
 
@@ -47,18 +51,26 @@ $ curl \
 
 ## Read the response
 
+### Using the visual debugger
+
+The visual debugger allows you to visually analyze workflow's execution. To access it, click on "Open debugger" from the Debug sessions page.
+
+It returns the same level of information as the debug endpoint. [`trace` content detailed here.](/help/mcp-servers/debug-sessions/#understand-the-trace)
+
+![MCP server live debugger](/docs/images/help/mcp-servers/mcp-servers-live-debugger.png) 
+
+### Using the debug endpoint
+
 The debug endpoint returns a JSON object with two keys:
 
 - `outputs`: the final values returned to the AI agent after running the workflow.
 - `trace`: the full execution trace, showing every step the data plane ran.
 
-### Quick check
-
 Start by looking at `outputs`. If the values are wrong or missing, dive into the `trace` to find where things went wrong.
 
 ### Understand the trace
 
-The `trace` object contains:
+The `trace` object returned in cURL contains all the information about the workflow's execution. The visual debugger structures and renders its content. You'll find:
 
 - **Flow-level inputs and outputs**: what the workflow received and what it returned.
 - **Steps** (`step.run`): each HTTP request the data plane executed, with the full request (method, URL, query, body) and the API response (status, body).
