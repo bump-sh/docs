@@ -13,7 +13,7 @@ Go to your MCP server settings and create a new session.
 
 ### Send requests using the MCP server
 
-After starting the session, you can analyze requests sent by your AI tool. For debug/QA, we recommend using [MCPJam](/help/mcp-servers/use-mcp-server/#mcpjam-debug-tool), a free MCP testing platform.
+After starting a session, you can analyze requests sent by your AI tool. For debug/QA, we recommend using [MCPJam](/help/mcp-servers/use-mcp-server/#mcpjam-debug-tool), a free MCP testing platform.
 
 ### Send requests using cURL
 
