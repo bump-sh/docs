@@ -5,7 +5,9 @@ title: Headless doc portal (API)
 - TOC
 {:toc}
 
-The Portal API provides access to API documentation hosted on Bump.sh programmatically. The API returns structured content through a REST API call, with the same level of content as the visual API doc.
+The Portal API provides access to API documentation hosted on Bump.sh programmatically. The API returns structured content through a REST API call, with the same level of content as the visual API doc. 
+
+[Check out the API documentation.](https://developers.bump.sh/doc/portal/)
 
 > The Portal API currently works on public docs.
 {: .info}
@@ -24,14 +26,19 @@ The Portal API is useful when you want to build your own integration on top of B
 
 ## Explore the documentation structure
 
-You can use the [`GET /list`](https://https://developers.bump.sh/doc/portal/operation/operation-get-list) endpoint to list all child pages under a given URL in the portal hierarchy. It returns each page's URL, title, type, and a short description. It's useful as a starting point to understand what a portal contains before fetching specific pages.
+You can use the [`GET /list`](https://developers.bump.sh/doc/portal/operation/operation-get-list) endpoint to list all child pages under a given URL in the portal hierarchy. It returns each page's URL, title, type, and a short description. It's useful as a starting point to understand what a portal contains before fetching specific pages.
 
 ## Search across documentation
 
-You can use the [`GET /search`](https://https://developers.bump.sh/doc/portal/operation/operation-get-search) endpoint to search across all documentation pages in a portal by keyword. Results include URL, title, type, and a text excerpt for each page. You can optionally filter by page URL or by page type (`operation`, `model`, `guide`, etc.).
+You can use the [`GET /search`](https://developers.bump.sh/doc/portal/operation/operation-get-search) endpoint to search across all documentation pages in a portal by keyword. Results include URL, title, type, and a text excerpt for each page. You can optionally filter by page URL or by page type (`operation`, `model`, `guide`, etc.).
 
 ## Retrieve page content
 
-You can use the [`GET /fetch`](https://https://developers.bump.sh/doc/portal/operation/operation-get-fetch) endpoint to retrieve the full content of one or more pages by their URLs (up to 10 per request). Content is returned in Markdown format.
+You can use the [`GET /fetch`](https://developers.bump.sh/doc/portal/operation/operation-get-fetch) endpoint to retrieve the full content of one or more pages by their URLs (up to 10 per request). Content is returned in Markdown format.
 
 A common flow is to call `GET /search` first to identify relevant pages, then `GET /fetch` to read their full content.
+
+## Retrieve the changelog
+
+You can use the [`GET /changes/list`](https://developers.bump.sh/doc/portal/operation/operation-get-changes-list) endpoint to retrieve the changelog for a specific API or a hub, and then use the [`GET /changes/fetch`](https://developers.bump.sh/doc/portal/operation/operation-get-changes-fetch) endpoint to get the full content of a specific change.
+
