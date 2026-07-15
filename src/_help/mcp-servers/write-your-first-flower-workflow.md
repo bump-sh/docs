@@ -28,7 +28,7 @@ We recommend following this getting started to get a hand on the specification, 
 - Provide a link to your API documentation or your API document.
 - Give the LLM context about the Flower specification:
   - [Flower support reference](https://docs.bump.sh/help/mcp-servers/specification-support/flower-support/)
-  - [Flower schema](https://github.com/bump-sh/flower-spec)
+  - [Flower schema](https://github.com/bump-sh/flower-spec/blob/main/specification/v0/schema.json)
   - [Flower document examples](https://github.com/bump-sh/flower-spec/tree/main/examples)
 
 ## Learn the basics
