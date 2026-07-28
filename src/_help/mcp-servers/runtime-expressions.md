@@ -127,15 +127,22 @@ Reference values tied to the user currently invoking the MCP server. Only availa
 | Expression | Source | Description |
 |---|---|---|
 | `$current_user.token` | `Authorization: Bearer ...` | OAuth token of the authenticated user |
-| `$current_user.<name>` | `Config-<Name>` header | Per-user config sent by the client |
 
 ```yaml
 headers:
   Authorization: "Bearer $current_user.token"
-  Config-Org-Id: "$current_user.org_id"
 ```
 
-For `$current_user.<name>`, matching is case-insensitive, and underscores in the expression map to dashes in the header. All of `$current_user.org_id`, `$current_user.ORG_ID` and `$current_user.Org-Id` resolve the same `Config-Org-Id` header.
+### Per-user config (`$config`)
+
+Reference per-user config values sent by the client through `Config-*` HTTP headers.
+
+```yaml
+headers:
+  Authorization: "Bearer $config.api_key"
+```
+
+Matching is case-insensitive, and underscores in the expression map to dashes in the header. All of `$config.org_id`, `$config.ORG_ID` and `$config.Org-Id` resolve the same `Config-Org-Id` header.
 
 If no matching header is sent by the client, the expression resolves to an empty string.
 

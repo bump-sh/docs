@@ -205,6 +205,7 @@ Runtime expressions reference dynamic data during execution. They use a `$` pref
 | `$steps.step_id.outputs.key` | Output from a previous step. |
 | `$statusCode` | HTTP status code of the current response. |
 | `$secrets.name` | Secret value (never exposed in outputs). |
+| `$config.name` | Per-user config value, sent through `Config-*` headers. |
 
 For the complete reference (JMESPath queries, conditions, resolution order), see [Runtime expressions](/help/mcp-servers/runtime-expressions).
 
