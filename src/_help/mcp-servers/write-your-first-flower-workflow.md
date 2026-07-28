@@ -94,7 +94,7 @@ flows:
           method: GET
           url: https://nominatim.openstreetmap.org/search
           headers:
-            Authorization: "Bearer $secrets.my-api-key"
+            Authorization: "Bearer $secrets.my_api_key"
           query:
             q: $inputs.city
             format: jsonv2
@@ -104,7 +104,7 @@ flows:
 ```
 
 A few things to notice:
--  `$secrets.my-api-key` injects a [secret](/help/mcp-servers/secrets/) stored on Bump.sh. 
+-  `$secrets.my_api_key` injects a [secret](/help/mcp-servers/secrets-and-config/) stored on Bump.sh. 
 - `$inputs.city` is a **runtime expression** that injects a value provided either by an AI agent or a human through its LLM. Expressions always start with `$`. See [Runtime expressions](/help/mcp-servers/runtime-expressions) for the full reference.
 - `query` maps to URL query parameters. The request above resolves to `GET /search?q=Paris&format=jsonv2` when `city` is `Paris`.
 - `outputs` extracts values from the response. `$response.body.0.lat` reads the `lat` property from the first element of the response array.
@@ -212,9 +212,9 @@ actions:
 
 ### Authenticate with protected APIs
 
-It's not the case in our example, but if the API you're calling requires authentication, create a [secret](/help/mcp-servers/secrets/) on Bump.sh to store the key securely. 
+It's not the case in our example, but if the API you're calling requires authentication, create a [secret](/help/mcp-servers/secrets-and-config/) on Bump.sh to store the key securely. 
 
-Reference it with the `$secrets.{name}` expression. You can also use `$currentUser.token` to directly retrieve the authenticated user's token.
+Reference it with the `$secrets.{name}` expression. You can also use `$current_user.token` to directly retrieve the authenticated user's token.
 
 For example, if the API expects the key in a request header, add it in the step `request.headers`:
 
@@ -227,7 +227,7 @@ flows:
           method: GET
           url: https://api.example.com/weather
           headers:
-            Authorization: "Bearer $secrets.my-api-key"
+            Authorization: "Bearer $secrets.my_api_key"
 ```
 
 > The secret is injected at runtime and never sent to the AI tool.
@@ -300,7 +300,7 @@ flows:
 ## Next steps
 
 - [Deploy this file](/help/mcp-servers/deploy-workflows/) to your MCP server.
-- Store API keys safely using [secrets](/help/mcp-servers/secrets/).
+- Store API keys safely using [secrets](/help/mcp-servers/secrets-and-config/).
 - Add more flows to the same file following the same pattern.
 - Learn how to do more complex data transformation and create condition trees using [Runtime expressions](/help/mcp-servers/runtime-expressions).
 - Read the full [Flower specification reference](/help/mcp-servers/specification-support/flower-support/) for all available properties and options.

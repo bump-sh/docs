@@ -33,7 +33,7 @@ flows:
     description: ...
     inputs: {}
     steps: []
-    security: $secrets.booking-api-key
+    security: $secrets.booking_api_key
 ```
 
 ### Storage and security
@@ -44,7 +44,7 @@ At runtime, secrets are decrypted in memory only for the duration of a workflow 
 
 ## Per-user config
 
-Per-user config lets each end-user supply their own values when they connect to your MCP server. The values are passed as HTTP headers prefixed with `Config-`, never stored on Bump.sh, and resolved in workflows through `$current_user.<name>`.
+Per-user config lets each end-user supply their own values when they interact with your MCP server. The values are passed as HTTP headers prefixed with `Config-`, never stored on Bump.sh, and resolved in workflows through `$config.<name>`.
 
 Typical use cases:
 
@@ -72,32 +72,32 @@ For instance, the following Cursor configuration sends two values, `api_key` and
 }
 ```
 
-> Headers without the `Config-` prefix are never forwarded to workflows. This protects sensitive headers (cookies, internal auth, ...) from being leaked through `$current_user.*`.
+> Headers without the `Config-` prefix are never forwarded to workflows. This protects sensitive headers (cookies, internal auth, ...) from being leaked through `$config.*`.
 {: .info}
 
 ### Using a config value in a workflow
 
-Reference the config value with `$current_user.<name>`:
+Reference the config value with `$config.<name>`:
 
 ```yaml
 steps:
   - id: list_projects
     request:
       method: GET
-      url: https://api.example.com/v1/orgs/$current_user.org_id/projects
+      url: https://api.example.com/v1/orgs/$config.org_id/projects
       headers:
-        Authorization: "Bearer $current_user.api_key"
+        Authorization: "Bearer $config.api_key"
 ```
 
 The matching between the runtime expression and the header name is case-insensitive, and underscores in the expression are mapped to dashes in the header. All these expressions resolve the same `Config-Api-Key` header:
 
 | Expression | Resolves to |
 |---|---|
-| `$current_user.api_key` | `Config-Api-Key` header |
-| `$current_user.API_KEY` | `Config-Api-Key` header |
-| `$current_user.Api-Key` | `Config-Api-Key` header |
+| `$config.api_key` | `Config-Api-Key` header |
+| `$config.API_KEY` | `Config-Api-Key` header |
+| `$config.Api-Key` | `Config-Api-Key` header |
 
-See [Runtime expressions](/help/mcp-servers/runtime-expressions/#current-user-current_user) for the full reference.
+See [Runtime expressions](/help/mcp-servers/runtime-expressions/#per-user-config-config) for the full reference.
 
 ### Storage and security
 
