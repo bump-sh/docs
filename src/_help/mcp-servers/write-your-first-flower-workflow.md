@@ -23,13 +23,19 @@ If that's the first time you design workflows for an MCP server, start simple: f
 
 ## Generate a Flower document using AI
 
-We recommend following this getting started to get a hand on the specification, but you can also generate a Flower document using an LLM. To do so:
-- Describe what you want to achieve with these workflows (book a train ticket, retrieve analytics from different sources, ...).
-- Provide a link to your API documentation or your API document.
-- Give the LLM context about the Flower specification:
-  - [Flower support reference](https://docs.bump.sh/help/mcp-servers/specification-support/flower-support/)
-  - [Flower schema](https://github.com/bump-sh/flower-spec/blob/main/specification/v0/schema.json)
-  - [Flower document examples](https://github.com/bump-sh/flower-spec/tree/main/examples)
+You can easily generate a Flower document using an LLM.
+
+The smoothest way is to use our [Flower skill](https://github.com/bump-sh/skills), which packages everything an AI agent needs to generate a valid Flower document for you. It works with any AI tools that support skills: Claude Code, Cursor, Codex, Copilot, Windsurf, ...
+
+You can also manually give the right context the Flower specification to your LLM:
+- [Flower support reference](https://docs.bump.sh/help/mcp-servers/specification-support/flower-support/)
+- [Flower schema](https://github.com/bump-sh/flower-spec/blob/main/specification/v0/schema.json)
+- [Flower document examples](https://github.com/bump-sh/flower-spec/tree/main/examples)
+
+You can then focus on what matters: describing what you want to achieve with these workflows (book a train ticket, retrieve analytics from different sources, ...).
+
+> If you can, provide a link to your API documentation or your API definition file, so the LLM doesn't have to look for it.
+{: .info}
 
 ## Learn the basics
 
