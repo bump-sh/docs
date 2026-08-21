@@ -34,7 +34,7 @@ Both formats support multi-step sequences, conditional logic (retry, goto, end),
 
 1. [Create an MCP server](/help/mcp-servers/create-and-manage-mcp-servers/) from your dashboard.
 2. [Deploy a workflow document](/help/mcp-servers/deploy-workflows/) that describes the API calls your server can perform.
-3. Share the server URL so that end-users can [add it to their AI tool](/help/mcp-servers/use-mcp-server/).
+3. Share the server URL so that end-users can [add it to their AI tool](/help/mcp-servers/use-mcp-server/), or [embed a chat widget](/help/mcp-servers/agent-chat-widget-headless-client/) directly in your product.
 
 ## Go further
 

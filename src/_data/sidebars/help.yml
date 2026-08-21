@@ -161,6 +161,8 @@ resources:
         link: /mcp-servers/deploy-workflows/
       - label: Use an MCP server
         link: /mcp-servers/use-mcp-server/
+      - label: Agent chat widget and headless client
+        link: /mcp-servers/agent-chat-widget-headless-client/
       - label: Access management
         link: /mcp-servers/access-management/
       - label: Secrets and config
@@ -172,10 +174,10 @@ resources:
       - label: Security
         link: /mcp-servers/security/
       - type: category
-        label: Customization options    
-        items:   
-        - label: Custom domains
-          link: /mcp-servers/customization-options/custom-domain/
+        label: Customization options
+        items:
+          - label: Custom domains
+            link: /mcp-servers/customization-options/custom-domain/
       - label: Specification support
         items:
           - label: Flower support
