@@ -10,6 +10,12 @@ To use an MCP server, the most common way is to add it to your IDE or AI tool. S
 >If your Bump.sh MCP server is private, don't forget to select OAuth as the authentication type while adding the server to your tool.
 {: .info}
 
+## Embed a chat widget in your own product
+
+Rather than asking users to add your MCP server to a third-party tool, you can enable the **Agent** endpoint in your MCP server settings and embed a ready-made chat widget directly in your product. See [Agent chat widget and headless client](/help/mcp-servers/agent-chat-widget-headless-client/).
+
+![The chat widget open on a demo page, in modal mode](/docs/images/help/mcp-servers/mcp-servers-chatbot-demo.gif)
+
 ## ChatGPT
 To add an MCP server to ChatGPT, go to Settings -> Apps -> Advanced settings -> Create app, and fill the MCP server URL field.
 
