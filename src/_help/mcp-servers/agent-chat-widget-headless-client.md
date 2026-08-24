@@ -111,7 +111,7 @@ Events, error handling, cancellation, and the wire protocol are covered in the [
 Your workflow might need something specific to the current user: a personal API key, a workspace ID, ... You can pass it in from the client. Each can be a static value or a function called again on every request, handy for a token that expires:
 
 - `token`: sent as `Authorization: Bearer <token>`, available in your workflow as `$current_user.token`. You should use a short-lived, user-scoped token.
-- `config`: sent as `Config-<Key>` headers, available as `$config.<key>`. A `headers` option covers any other custom header.
+- `config`: sent as `Config-<Key>` headers, available as `$config.<key>` runtime expression in your workflow definition. A `headers` option covers any other custom header.
 
 ```ts
 new Widget({
