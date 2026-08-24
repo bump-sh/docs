@@ -9,7 +9,7 @@ Every MCP server can also be reached as a conversational agent: no MCP client or
 
 ![Agent toggle and endpoint in MCP server settings](/docs/images/help/mcp-servers/mcp-servers-agent-activation.png)
 
-The agent endpoint follows the format `https://run.bump.sh/ORGANIZATION_SLUG/MCP_SERVER_SLUG/agent`, or your `your-custom-domain/agent` if you [set one up](/help/mcp-servers/customization-options/custom-domain/).
+The agent endpoint follows the format `https://run.bump.sh/ORGANIZATION_SLUG/MCP_SERVER_SLUG/agent`, or your `https://your-custom-domain.com/agent` if you [set one up](/help/mcp-servers/customization-options/custom-domain/).
 
 From there, you have two ways to build on it, both from the open-source [`agent-client`](https://github.com/bump-sh/agent-client) SDK:
 
