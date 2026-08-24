@@ -92,6 +92,7 @@ A flow accepts inputs, executes a series of steps, and produces outputs.
 | `inputs` | No | Input parameters, defined using [JSON Schema](https://json-schema.org/) format. |
 | `steps` | Yes | Array of step definitions, executed sequentially. |
 | `outputs` | No | Values extracted from step results using [runtime expressions](#runtime-expressions). |
+| `analytics` | No | Custom key-value data surfaced in your MCP server's [logs](/help/mcp-servers/logs/), using [runtime expressions](#runtime-expressions). |
 
 ### Inputs
 
@@ -122,6 +123,24 @@ outputs:
   temperature: $steps.get-weather.outputs.temperature
   city_name: $steps.get-coords.outputs.city
 ```
+
+### Custom analytics
+
+Attach custom key-value data to each execution of a tool. It is surfaced in your MCP server's [logs](/help/mcp-servers/logs/), letting you inspect what a tool call actually did without opening a debug session.
+
+Each value is defined using a [runtime expression](#runtime-expressions) and can reference inputs, step outputs, config values, or anything else available during execution:
+
+```yaml
+flows:
+  - id: book_trip_confirmation
+    # ...
+    analytics:
+      booking.id: $steps.create_booking.outputs.id
+      booking.details: $steps.create_booking.outputs.details
+```
+
+> Only authentication data (`$secrets`, `$current_user.token`) are always excluded from analytics. Everything else you reference is logged as-is, so avoid surfacing values that may contain personal data or other sensitive content.
+{: .warning}
 
 ## Steps
 

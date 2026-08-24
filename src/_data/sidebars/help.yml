@@ -171,6 +171,8 @@ resources:
         link: /mcp-servers/runtime-expressions/
       - label: Debug sessions
         link: /mcp-servers/debug-sessions/
+      - label: Logs
+        link: /mcp-servers/logs/
       - label: Security
         link: /mcp-servers/security/
       - type: category

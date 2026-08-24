@@ -42,4 +42,5 @@ Both formats support multi-step sequences, conditional logic (retry, goto, end),
 - [Access management](/help/mcp-servers/access-management/): control who can use your MCP server.
 - [Debug sessions](/help/mcp-servers/debug-sessions/): inspect execution traces to troubleshoot workflows step by step.
 - [Runtime expressions](/help/mcp-servers/runtime-expressions/): reference dynamic data between steps.
+- [Logs](/help/mcp-servers/logs/): monitor every tool call made to your MCP server.
 - [Security](/help/mcp-servers/security/): understand the architecture and data handling guarantees.
