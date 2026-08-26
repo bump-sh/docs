@@ -11,6 +11,10 @@ These additional properties are not specified by the OpenAPI or the AsyncAPI spe
 
 This vendor-specific property we created helps to add more context paragraphs in your generated documentation. Find out more in our [dedicated section](/help/enhance-documentation-content/topics/).
 
+## Add custom sections to your documentation (`x-tagGroups`)
+
+This vendor-specific property, is defined at the root level of your API definition. It helps to define custom sections in the navigation part of your documentation. Find out more in our [dedicated section](/help/documentation-experience/sections/).
+
 ## Custom code sample examples (`x-codeSamples`)
 
 > This vendor extension is only available for OpenAPI documents for now
@@ -18,7 +22,7 @@ This vendor-specific property we created helps to add more context paragraphs in
 
 We added a custom property, not supported by OpenAPI, so you can add your own code samples in one or more programming languages to your documentation. Find out more in our [dedicated section](/help/specification-support/doc-code-samples).
 
-## Add badges to your endpoints/operations (`x-state`) 
+## Add badges to your endpoints/operations (`x-state`)
 
 This custom property can be added to an operation/endpoint to display a contextual badge in the documentation.
 More information on its usage is available in the [dedicated section](/help/specification-support/doc-badges).

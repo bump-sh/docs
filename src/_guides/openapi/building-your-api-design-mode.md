@@ -100,13 +100,15 @@ When the API is added, we can immediately see [our documentation online](https:/
 
 ![Bump joke blueprint screen](/docs/images/guides/bump-jokes-blueprint-screen.png)
 
-Our endpoints are on the left, the description in the middle, and examples on the right. Bump has several settings to change the way your API will be displayed.
+Our endpoints are on the left in the navigation, the description of
+each operation in the middle, and examples on the right. Bump has
+several settings to change the way your API will be displayed/organized.
 
 Your choices here are:
 
 - Group by path
 - Group by tag
-- Default (group by path)
+- Automatic (group by tag if `tags` are present in your definition document, group by path otherwise)
 
 
 ### Group by Path
@@ -117,12 +119,18 @@ The group by path just shows 3 endpoints: Joke, ThumbsUp and ThumbsDown. Inside 
 
 ### Group by tag
 
-Group by tag uses the tags inside the API. The Joke POST is tagged as Admin (only privileged users can add jokes), while Joke GET, and the voting endpoints are available to all developers:
+Group by tag uses the tags inside the API definition. The Joke POST is tagged as Admin (only privileged users can add jokes), while Joke GET, and the voting endpoints are available to all developers:
 
 ![Bump group by tag screen](/docs/images/guides/bump-group-by-tag-screen.png)
 
 In this view, you cannot see the actual endpoints of the API, but we'll fix this with the next setting: Navigation
 
+> When grouping your operations by tags, you can also customize the
+> top-level sections displayed in your documentation if needed. The
+> `x-tagGroups` vendor extension can be defined in your API document to
+> organize your tags within custom secitons. Check out the [dedicated
+> vendor extension documentation page for details](/help/documentation-experience/sections/).
+{: .info}
 
 ### Navigation
 
