@@ -13,7 +13,7 @@ You can choose whether your MCP server is public or private:
 
 Server visibility is set during the MCP server creation, and can be changed at any time in your MCP server settings.
 
-![Access management module of the MCP server](/docs/images/help/mcp-servers/mcp-servers-access-management.png) 
+![Access management module of the MCP server](/docs/images/help/mcp-servers/mcp-servers-access-management.png)
 
 #### Private MCP servers using a Bump.sh account (default)
 
@@ -25,7 +25,8 @@ If your users already have accounts in your own identity provider (Okta, Auth0, 
 
 **On your side:** set up an authorization server in your identity provider and configure the appropriate scopes and clients. Refer to your provider's documentation for this step.
 
-> Only OAuth servers are supported for now. For validation purposes, the server needs to be set up using [JWT tokens](https://oauth.net/2/jwt/) or a [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo).
+> Only OAuth servers supporting either the legacy DCR (Dynamic Client Registration) or the state-of-the art CIMD (ClientID Metadata Document) client registration methods are supported for now.
+> Also, the server needs to be set up using [JWT tokens](https://oauth.net/2/jwt/) or a [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) for validation of the user token during an MCP client request.
 {: .info}
 
 **On Bump.sh side:** provide the URL of your OAuth authorization server in your MCP server settings. Bump.sh will redirect users through your authentication flow before granting access.
