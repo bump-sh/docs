@@ -123,11 +123,11 @@ To help you with your migration, here is a full list of the extensions Redocly s
 | Location  | Extension Keyword            | Bump.sh | Alternative                                                                                                                    |
 | --------- | ---------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Root      | `x-servers`                  | ❌      | Use the `servers` keyword added in OAS3.0                                                                                      |
-| Root      | `x-tagGroups`                | ❌      |
+| Root      | `x-tagGroups`                | ✅      | OAS <=3.1 or AsyncAPI. Use `tags` navigational hierarchy feature from OAS3.2. |
 | Tag Group | `x-ignoredHeaderParameters`  | ❌      |
 | Info      | `x-logo`                     | ❌      | Upload a logo using [customization settings](/help/customization-options/color-logo-meta-images/).         |
 | Tag       | `x-traitTag`                 | ❌      |
-| Tag       | `x-displayName`              | ❌      | Use human-readable tag names.                                                                                                  |
+| Tag       | `x-displayName`              | ✅      | Or use `summary` keyword added with OAS3.2.                                                                                                  |
 | Operation | `x-codeSamples`              | ✅      |
 | Parameter | `x-examples`                 | ❌      | Use the `examples` keyword added in OAS3.0.                                                                                    |
 | Response  | `x-summary`                  | ❌      |
