@@ -13,6 +13,6 @@ To help you enrich your API documentation, Bump.sh supports [Markdown](/help/doc
 
 We also offer [topics](/help/documentation-experience/topics/): an exclusive custom property that allows you to add extra information to your documentation.
 
-Instead of the basic endpoints, webhooks, or channels navigation, you can customize the documentation structure with your own [sections](/help/documentation-experience/topics/), defined directly from your OpenAPI or AsyncAPI document, with enhanced support for the `tags` property.
+Instead of the basic endpoints, webhooks, or channels navigation, you can customize the documentation structure with your own [sections](/help/documentation-experience/sections/), defined directly from your OpenAPI or AsyncAPI document, with enhanced support for the `tags` property.
 
 Enable LLMs and AI agents to access your doc portal using Bump.sh [Ask AI features](/help/documentation-experience/ask-ai-capabilities/). When enabled, your documentation are made accessible through an MCP server and offered as Markdown pages, so AI assistants and agents can search, navigate, and read your doc portal.
