@@ -20,6 +20,7 @@
     "read-cache": "^1.0.0"
   },
   "dependencies": {
+    "@bump-sh/agent-widget": "^0.1.0",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo": "^7.3.0",
     "bridgetown-lit-renderer": "2.1.0-beta2",
