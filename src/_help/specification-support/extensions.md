@@ -22,9 +22,9 @@ This vendor-specific property, is defined at the root level of your API definiti
 
 We added a custom property, not supported by OpenAPI, so you can add your own code samples in one or more programming languages to your documentation. Find out more in our [dedicated section](/help/specification-support/doc-code-samples).
 
-## Add badges to your endpoints/operations (`x-state`)
+## Add badges to your operations and properties (`x-state`)
 
-This custom property can be added to an operation/endpoint to display a contextual badge in the documentation.
+This custom property can be added to operations and properties to display contextual badges in a documentation.
 More information on its usage is available in the [dedicated section](/help/specification-support/doc-badges).
 
 ## Expose your beta features (`x-beta`)
