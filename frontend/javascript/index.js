@@ -4,6 +4,7 @@ import * as Turbo from "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
 import "bridgetown-lit-renderer";
 import "bridgetown-quick-search";
+import "@bump-sh/agent-widget";
 import mermaid from "mermaid";
 
 /**
