@@ -11,7 +11,8 @@ Add badges to your endpoints/operations for a quick visual indication of their s
 Some operations may require specific context to clarify their usage, such as “Technical Preview” or “Soon deprecated.”
 
 `x-state` is a custom property which can be added inside an operation or a schema to identify it with a custom badge.
-The `x-state` property is a string.
+
+The `x-state` property can be a string, or an object (see [custom color](#custom-color) section). Multiple badges can be added on the same element using an array of objects. 
 
 ### Example usage
 
@@ -21,8 +22,12 @@ Here under is an example of an operation and a schema with an `x-state`.
 paths:
   /diffs:
     post:
-      description: Create a diff between any two given API definitions
-      x-state: Technical preview # x-state flag at the operation level
+      summary: Create a diff
+      x-state: # x-state flags at the operation level, displayed as two badges
+        - label: Technical preview
+          color: "#7C3AED"
+        - label: Enterprise only
+          color: "#FF6B35"
       requestBody:
         description: The diff creation request object
         content:
@@ -44,7 +49,7 @@ Adding or removing the `x-state` property (displaying or removing the badge) is 
 Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a potential breaking change event.
 
 Exception: Usage together with the [`x-beta`](#beta) property.
-Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). Only one visual badge will be visible in the documentation: the one with the `x-state` value.
+Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). 
 
 The documentation displays custom badges on the operation and property:
 
