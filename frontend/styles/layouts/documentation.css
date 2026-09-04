@@ -18,7 +18,7 @@
     padding: var(--spacing-8) var(--spacing-10);
     width: calc(100vw - var(--doc-sidebar-width));
 
-    button {
+    [data-toggle-target="button"] {
       display: none;
       width: fit-content;
     }
@@ -81,7 +81,7 @@
       grid-column: 1 / -1;
       width: 100%;
 
-      button {
+      [data-toggle-target="button"] {
         display: inline-flex;
       }
     }

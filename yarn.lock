@@ -15,6 +15,18 @@
   resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-7.1.1.tgz#15e19737d946559289b915e5dad3b4c28407735e"
   integrity sha512-i1L7noDNxtFyL5DmZafWy1wRVhGehQmzZaz1HiN5e7iylJMSZR7ekOV7NsIqa5qBldlLrsKv4HbgFUVlQrz8Mw==
 
+"@bump-sh/agent-conversation@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@bump-sh/agent-conversation/-/agent-conversation-0.1.0.tgz#9fbd98d10b10b60b876be92efc9950d174f4a5f7"
+  integrity sha512-CHWkc3nU340G17KOu30dLdViVOEwzpNXbtjDuu+ugjw920MVPNwtRD1kOM32YSR3Xe7PDfcFiMHL4kUgK/kMTw==
+
+"@bump-sh/agent-widget@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@bump-sh/agent-widget/-/agent-widget-0.1.0.tgz#6cbf1b0a6d9f666dadddce7112153f2f8003d726"
+  integrity sha512-Oa0bbZ31jNRZpFzkykIBwiNxKRLf9Zz3ffbZRsSKkYrizS/zACVDH/GPeU26KO+EO5fdu4u7w1gF2rxHnqYSUA==
+  dependencies:
+    "@bump-sh/agent-conversation" "^0.1.0"
+
 "@chevrotain/cst-dts-gen@11.0.3":
   version "11.0.3"
   resolved "https://registry.yarnpkg.com/@chevrotain/cst-dts-gen/-/cst-dts-gen-11.0.3.tgz#5e0863cc57dc45e204ccfee6303225d15d9d4783"
