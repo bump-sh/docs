@@ -22,6 +22,16 @@ From there, you have two ways to build on it, both from the open-source [`agent-
 
 A ready-to-use chat widget for your product, so your own users can run your workflows straight from your app in natural language: no external LLM tool or MCP client needed on their end. It's a Web Component that can easily be added to your page in HTML or JavaScript.
 
+It's live on this page: hit the button below and ask it anything about the weather.
+
+<div data-controller="agent"
+     data-agent-endpoint-value="https://run.bump.sh/mcp-demo/weather-demo/agent"
+     data-agent-title-value="Weather wizard 🪄"
+     data-agent-placeholder-value="Ask anything about weather, and I'll find the right answer!"
+     data-agent-theme-value='{"accent": "#025fd7", "bg": "#f9fafb"}'>
+  <button type="button" data-action="agent#toggle">Ask the weather wizard</button>
+</div>
+
 ![The chat widget open on a demo page, in modal mode](/docs/images/help/mcp-servers/mcp-servers-chatbot-demo.gif)
 
 ### Try it in the playground
