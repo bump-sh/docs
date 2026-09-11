@@ -5,7 +5,7 @@ title: OpenAPI support
 - TOC
 {:toc}
 
-We support all major versions from Swagger (OpenAPI v2), OpenAPI v3/3.1, and partially OpenAPI v3.2. This pages describes some specificities related to our support for this specification.
+We support all major versions from Swagger (OpenAPI v2) to OpenAPI 3.2. This page describes some specificities related to our support for this specification.
 
 ## Minimal mandatory fields
 
@@ -48,11 +48,23 @@ You can use the `webhooks` field (introduced in OpenAPI 3.1) to define the API w
 
 The [Overlay specification of OpenAPI](https://github.com/OAI/Overlay-Specification/) makes it possible to modify the content of an OpenAPI document by adding a layer on top of it. That layer helps adding, removing or changing some or all of the content of the original file. Please read to the [dedicated documentation page](/help/specification-support/overlays/) for more information.
 
-## OpenAPI 3.2: current support
+## OpenAPI 3.2
 
-We are progressively rolling out our OpenAPI 3.2 support. This is what's currently supported:
-- Method: QUERY method, in both the documentation and the API Explorer.
-- Server object: `name` property.
-- Tag object: `summary` property, behaving like our existing [x-displayName vendor extension](/help/specification-support/openapi-support/x-display-name/).
-- Response object: `summary` property.
-- Security schemes: `deprecated` property.
+OpenAPI 3.2 is fully supported. To use it, set the version in your API document:
+
+```yaml
+openapi: "3.2.0"
+```
+
+The features introduced by this version are handled as follows:
+
+| Feature | Bump.sh behaviour |
+|---------|-------------------|
+| `QUERY` method | Rendered in the documentation and available in the API Explorer. |
+| Tag object: `parent` | Builds a nested navigation. A tag used as a `parent` becomes a section of the navigation, and its child tags become the groups of operations it contains. This is the OpenAPI 3.2 equivalent of the [`x-tagGroups`](/help/customization-options/sections/) vendor extension. To learn more, see [Grouping operations with tags](/openapi/v3.2/documentation/grouping-operations-with-tags/). |
+| Tag object: `kind` | Used to distinguish navigation tags (`kind: nav`) from other categorizations. |
+| Tag object: `summary` | Used as the tag display name, behaving like our [`x-displayName` vendor extension](/help/specification-support/openapi-support/x-display-name/). |
+| Server object: `name` | Displayed in the [server selector](/help/specification-support/multiple-servers/). |
+| Response object: `summary` | Displayed alongside the response. |
+| Security Scheme object: `deprecated` | Displays a deprecation badge on the security scheme. |
+

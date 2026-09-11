@@ -29,6 +29,10 @@ Bump.sh is able to extract:
 - messages (payload and headers), with examples.
 - bindings (server, operation and message).
 
+## Customizing the navigation
+
+By default, channels are displayed under a “Channels” section. You can replace it with your own set of sections using the [`x-tagGroups` vendor extension](/help/customization-options/sections/), which groups your tagged channels under the section names of your choice.
+
 ## Partially supported: message object `payload`
 
 [Message object](https://www.asyncapi.com/docs/reference/specification/v2.6.0#messageObject) field `payload` could be of any type according to the specification, but we only support `SchemaObject` type.
