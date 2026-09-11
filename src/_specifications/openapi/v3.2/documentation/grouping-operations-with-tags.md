@@ -184,6 +184,11 @@ tags:
 
 A [registry of the most commonly used values](https://spec.openapis.org/registry/tag-kind/) is available here, and more conventions will appear over time.
 
+Bump.sh reads two of these kinds. Tags with `kind: nav`, or with no `kind` at all, build the navigation. Tags with `kind: badge` are kept out of the navigation and displayed as a badge on every operation carrying them, using the tag `name` as the badge text. Other kinds, such as `audience`, are ignored when rendering the documentation.
+
+> Badges can also be added to properties with the [`x-state` vendor extension](/help/specification-support/doc-badges/), which additionally supports custom colors.
+{: .info}
+
 ## Nested Tag Structures
 
 By default using tags creates a flat grouping of operations, which is usually enough for smaller APIs, but larger APIs with hundreds of operations might need more structure especially for navigation purposes.

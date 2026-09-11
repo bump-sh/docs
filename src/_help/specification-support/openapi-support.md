@@ -54,5 +54,6 @@ We are progressively rolling out our OpenAPI 3.2 support. This is what's current
 - Method: QUERY method, in both the documentation and the API Explorer.
 - Server object: `name` property.
 - Tag object: `summary` property, behaving like our existing [x-displayName vendor extension](/help/specification-support/openapi-support/x-display-name/).
+- Tag object: `kind` property. A tag declared with `kind: badge` is displayed as a [badge](/help/specification-support/doc-badges/#using-openapi-32-tags) on the operations carrying it, instead of grouping them.
 - Response object: `summary` property.
 - Security schemes: `deprecated` property.
