@@ -55,8 +55,6 @@ resources:
             link: /documentation-experience/markdown-support/
           - label: Topics
             link: /documentation-experience/topics/
-          - label: Custom sections
-            link: /documentation-experience/sections/
           - label: Ask AI capabilities
             link: /documentation-experience/ask-ai-capabilities/
       - type: category
@@ -71,6 +69,9 @@ resources:
             link: /customization-options/login/
           - label: Operations & navigation
             link: /customization-options/operations-navigation/
+            items:
+              - label: Custom sections (x-tagGroups)
+                link: /customization-options/sections/
           - label: Head injection (analytics and tools integration)
             link: /customization-options/head-injection-analytics-tools-integration/
           - label: Embed mode

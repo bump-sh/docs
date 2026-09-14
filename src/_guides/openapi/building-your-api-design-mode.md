@@ -128,8 +128,8 @@ In this view, you cannot see the actual endpoints of the API, but we'll fix this
 > When grouping your operations by tags, you can also customize the
 > top-level sections displayed in your documentation if needed. The
 > `x-tagGroups` vendor extension can be defined in your API document to
-> organize your tags within custom secitons. Check out the [dedicated
-> vendor extension documentation page for details](/help/documentation-experience/sections/).
+> organize your tags within custom sections. Check out the [dedicated
+> vendor extension documentation page for details](/help/customization-options/sections/).
 {: .info}
 
 ### Navigation

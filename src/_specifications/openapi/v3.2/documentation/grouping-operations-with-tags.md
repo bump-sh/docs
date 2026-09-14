@@ -142,7 +142,7 @@ When you generate API documentation, you'll notice the documentation orders the 
 ![How tags are ordered in generated API documentation](/docs/images/guides/tags_order.png)
 [*See it live*](https://bump.sh/demo/doc/bump)
 
-Note that [Bump.sh helps you order your endpoints and webhooks](/help/specifications-support/openapi-support/name-and-sort-resources/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
+Note that [Bump.sh helps you order your endpoints and webhooks](/help/customization-options/operations-navigation/#group-by-tag) using a "Group by tag" operation. It is actually the default behaviour of Bump.sh when you have these tags defined and have not selected an other sorting option for your Bump.sh API documentation.
 
 Now that you understand what tags are and their benefits, you'll see some best practices you should follow when using OpenAPI tags in API contracts.
 
@@ -197,21 +197,28 @@ OpenAPI v3.2 introduced the `parent` keyword, which allows for tags to be given 
 
 ```yaml
 tags: 
+  - name: journeys
+    kind: nav
+  
   - name: stations
     summary: Stations
     kind: nav
+    parent: journeys
   
-  - name: bookings
-    summary: Bookings
+  - name: trips
+    summary: Trips
     kind: nav
-  
-  - name: payments
-    summary: Payments
-    kind: nav
-    parent: bookings
+    parent: journeys
 ```
 
 How this gets implemented by different tools is up to the tooling maintainers to decide, but the most common implementation for API documentation tools, especially for `kind: nav`, will be to treat "no parent" tags as top-level navigation, and nested items as expandable groups.
+
+Bump.sh follows that convention: a tag used as a `parent` becomes a section of the navigation, titled with its `name`, and its child tags become the groups of operations listed inside that section. These sections replace the default "Endpoints" and "Webhooks" ones for the operations they contain, and appear in the order in which you declare the parent tags. Tags that are neither a parent nor a child keep being displayed in the default sections.
+
+![A navigation where the journeys, bookings and account tags each become a section containing their child tags](/docs/images/help/nested-tags.png)
+
+> Before OpenAPI v3.2, the same result could only be obtained with the [`x-tagGroups` vendor extension](/help/customization-options/sections/), which Bump.sh still supports for OpenAPI v3.1 and below, as well as for AsyncAPI documents.
+{: .info}
 
 ## OpenAPI Tags Best Practices
 

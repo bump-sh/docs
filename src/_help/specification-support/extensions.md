@@ -13,7 +13,7 @@ This vendor-specific property we created helps to add more context paragraphs in
 
 ## Add custom sections to your documentation (`x-tagGroups`)
 
-This vendor-specific property, is defined at the root level of your API definition. It helps to define custom sections in the navigation part of your documentation. Find out more in our [dedicated section](/help/documentation-experience/sections/).
+This vendor-specific property, is defined at the root level of your API definition. It helps to define custom sections in the navigation part of your documentation. Find out more in our [dedicated section](/help/customization-options/sections/).
 
 ## Custom code sample examples (`x-codeSamples`)
 
