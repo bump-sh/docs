@@ -17,15 +17,14 @@ By default, all operations are displayed in your documentation navigation within
 - `Webhooks` for all groups of REST webhook operations
 - `Channels` for all groups of Message Driven operations
 
-If you want to customize those sections, you can use the dedicated
-vendor extention `x-tagGroups`. This extension lets you define
-specific section names, with their list of tagged groups they should
-contain. [More details on how to do that on the dedicated extension
-page](/help/documentation-experience/sections/).
+If you want to customize those sections, you have two options depending on the version of the specification you use:
 
-> Note: customized sections with `x-tagGroups` will only work if your
-> documentation is in “automatic” or “group by tag” grouping mode (see
-> next paragraph)
+- **OpenAPI 3.2**: use the native tag hierarchy. A tag used as a `parent` becomes a section containing its child tags, which lets you build your own sections without any vendor extension. [More details on the OpenAPI 3.2 support page](/help/specification-support/openapi-support/#openapi-32).
+- **OpenAPI 3.1 and below, or AsyncAPI**: use the dedicated vendor extension `x-tagGroups`, which lets you define specific section names with the list of tagged groups they should contain. [More details on the dedicated extension page](/help/customization-options/sections/).
+
+> Both custom sections with `x-tagGroups` and nested navigation with OpenAPI
+> 3.2 tags only work if your documentation is in “automatic” or “group by tag”
+> grouping mode ([see Grouping operations](/help/customization-options/operations-navigation/#grouping-operations)).
 {: .info}
 
 ## Grouping operations

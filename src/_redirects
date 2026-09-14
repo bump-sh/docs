@@ -46,3 +46,6 @@ https://help.bump.sh/custom-domains /help/customization-options/custom-domains/
 # Arazzo specification URL migration
 /guides/arazzo/specification/v1.0/ /arazzo/v1.0/ 301
 /guides/arazzo/specification/v1.0/* /arazzo/v1.0/:splat 301
+
+# Custom sections (x-tagGroups) moved to Customization options
+/help/documentation-experience/sections/ /help/customization-options/sections/ 301
