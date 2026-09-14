@@ -7,16 +7,15 @@ title: Badges
 
 ## State
 
-Add badges to your endpoints/operations for a quick visual indication of their status.
-Some operations may require specific context to clarify their usage, such as “Technical Preview” or “Soon deprecated.”
+Add badges to your operations and properties for a quick visual indication of their status, such as “Technical Preview” or “Soon deprecated”.
 
-`x-state` is a custom property which can be added inside an operation or a schema to identify it with a custom badge.
+![Image of badges applied to operations and properties](/docs/images/help/doc-x-state.png)
 
-The `x-state` property can be a string, or an object (see [custom color](#custom-color) section). Multiple badges can be added on the same element using an array of objects. 
+Badges can be declared in two ways: with the `x-state` custom property, or, from OpenAPI 3.2 onwards, with tags.
 
-### Example usage
+### Using x-state
 
-Here under is an example of an operation and a schema with an `x-state`.
+`x-state` is a custom property added on an operation or a property. Set it to a string to display a badge carrying that text, or to an object to [choose its color](#custom-color) as well. An array of objects displays several badges on the same element.
 
 ```yaml
 paths:
@@ -38,28 +37,17 @@ paths:
                 url:
                   type: string
                   format: uri
-                  x-state: Still unstable # x-state flag at the schema level
+                  x-state: Still unstable # x-state flag at the property level
                   description: |
                     **Required** if `definition` is not present.
                     Current definition URL. It should be accessible through HTTP by Bump.sh servers.
 ```
 
-Adding or removing the `x-state` property (displaying or removing the badge) is not considered a breaking change in the changelog, as it does not affect the integrity or structure of the API.
+Adding or removing an `x-state` is never a structural change in the changelog, as it does not affect the structure of the API. It does not shield the component it is attached to either: if that component changes structurally, the changelog still reports a potential breaking change — unless the component also carries [`x-beta`](#beta), which takes precedence and suppresses it.
 
-Important: The `x-state` property does not alter the changelog behavior of the component it is attached to. If the component itself introduces a structural impact on the API (through addition, modification, or removal), the changelog will still display a potential breaking change event.
+#### Custom color
 
-Exception: Usage together with the [`x-beta`](#beta) property.
-Regardless of a component's structural impact, attaching `x-beta` will not trigger a breaking change event. If both `x-state` and `x-beta` are applied to a component, no breaking change will be generated (the `x-beta` behavior takes precedence). 
-
-The documentation displays custom badges on the operation and property:
-
-![Image of badges applied to operations and properties](/docs/images/help/doc-x-state.png)
-
-### Custom color
-
-The default color can be overrided. To do so, you can define 2 elements inside the `x-state` object:
-- `label`: the text that will appear on the badge,
-- `color`: the color of the text inside the badge. The background color will be generated based on the text's color, to ensure its readability.
+The default text color can be overridden using the `color` property. The badge background is generated from it, to ensure readability.
 
 ```yaml
 x-state:
@@ -69,16 +57,38 @@ x-state:
 
 ![Image of a custom color applied to a badge](/docs/images/help/doc-x-state-custom-color.png)
 
+### Using OpenAPI 3.2 tags
+
+With OpenAPI 3.2, a tag declared with `kind: badge` is not used to group operations: every operation carrying it displays it as a badge, in the default color.
+
+```yaml
+tags:
+  - name: diffs
+    summary: Diffs
+    kind: nav
+  - name: Technical preview # displayed as a badge, not as a navigation group
+    kind: badge
+  - name: Enterprise only
+    kind: badge
+
+paths:
+  /diffs:
+    post:
+      summary: Create a diff
+      tags: ["diffs", "Technical preview", "Enterprise only"]
+      ...
+```
+
+The badge text is the tag `name`, and not its `summary`, so write it exactly as you want it to be read: spaces are allowed. A tag that is not declared at the root of your document with `kind: badge` displays nothing, badge tags never appear in the navigation, and webhooks are supported just like operations.
+
+> In OpenAPI, tags apply to operations and webhooks: use `x-state` when you need a badge on a property, or when you need a custom color.
+{: .info}
+
 ## Beta
 
-Use the `x-beta` property inside an operation, a schema or a parameter object to identify it as beta.
-The `x-beta` property is a boolean.
-
-A change in a beta component is never identified as a breaking change.
+Use the boolean `x-beta` property inside an operation, a schema or a parameter object to identify it as beta. A change in a beta component is never identified as a breaking change.
 
 ### Example usage
-
-Here under is an example of a beta operation, a beta request body and a beta schema attribute.
 
 ```yaml
 paths:
