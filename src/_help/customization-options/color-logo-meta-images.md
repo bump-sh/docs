@@ -66,22 +66,45 @@ Custom CSS can be added either through a [reverse proxy](/help/customization-opt
 > If you customize fonts, make sure to use a font that is available on the user's device, or loaded in your custom headers.
 {: .info}
 
+### Supported variables
+
 You can safely customize the style of your doc portal using these CSS variables:
 
-- `--font-family`: the global font family;
-- `--heading-font-family`: the font family used for headings (h1, h2, h3, ...). If none is defined, the global font family is displayed;
-- `--code-font-family`: the font used for code blocks and examples;
-- `--doc-font-size`: the global font size. The default value is 14px;
-- `--code-font-size`: the font size used on code blocks and examples. The default value is 12px;
-- `--nav-font-size`:  the font size used on side and top navigation bars. The default value is 14px;
-- `--doc-font-weight`: the default font weight. The default value is 500;
-- `--nav-font-weight`: the font weight used on side and top navigation bars. The default value is 500;
-- `--logo-width`: logo width, if the default width doesn't fit your logo width;
-- `--logo-height`: logo height, if the default height doesn't fit your logo height;
-- `--doc-success-color`: the color used for success messages;
-- `--doc-error-color`: the color used for error messages;
-- `--doc-warning-color`: the color used for warning messages;
-- `--doc-warning-light-color`: the color used for warning messages with a lighter background;
+| Variable | Role |
+| --- | --- |
+| `--font-family` | the global font family |
+| `--heading-font-family` | the font family used for headings (h1, h2, h3, ...). If none is defined, the global font family is used |
+| `--code-font-family` | the font family used for code blocks and examples |
+| `--doc-base-color` | the primary color, used for links, buttons and verb pills. Can also be set in the documentation or hub settings |
+| `--doc-soft-color` | the soft tint used for the active navigation entry, selection, labels and chips |
+| `--text-color` | the color used for body text |
+| `--title-color` | the color used for headings |
+| `--page-background-color` | the page background color |
+| `--page-background` | the full page background. Also accepts a gradient |
+| `--code-background-color` | the background color of code blocks and examples, dark in both themes |
+| `--code-text-color` | the text color of code blocks and examples, dark in both themes |
+| `--doc-font-size` | the global font size. The default value is 14px |
+| `--code-font-size` | the font size used on code blocks and examples. The default value is 12px |
+| `--nav-font-size` | the font size used on side and top navigation bars. The default value is 14px |
+| `--doc-font-weight` | the default font weight. The default value is 500 |
+| `--nav-font-weight` | the font weight used on side and top navigation bars. The default value is 500 |
+| `--logo-width` | the logo width, if the default width doesn't fit your logo |
+| `--logo-height` | the logo height, if the default height doesn't fit your logo |
+
+### How overrides are applied
+
+- Any override you declare wins over default values, as long as it isn't placed in a CSS `@layer`.
+- `:root` styles the light theme. The dark theme keeps its own default values unless your override is scoped under `.dark-theme`:
+
+```css
+:root {
+  --doc-base-color: #1c64f2;
+}
+
+.dark-theme {
+  --doc-base-color: #76a9fa;
+}
+```
 
 You could also apply your own custom CSS, but keep in mind:
 
