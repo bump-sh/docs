@@ -4,7 +4,7 @@ tags: [New]
 image: /docs/images/changelog/openapi-3-2-full-support.png
 ---
 
-![MCP server logs.png](/docs/images/changelog/openapi-3-2-full-support.png)
+![OpenAPI 3.2 full support.png](/docs/images/changelog/openapi-3-2-full-support.png)
 
 We released a partial OpenAPI 3.2 support in late 2025. That support is now complete: deploy your OpenAPI 3.2 documents as usual and get the best of its new capabilities.
 
