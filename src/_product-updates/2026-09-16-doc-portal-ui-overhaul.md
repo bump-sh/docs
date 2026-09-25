@@ -3,7 +3,7 @@ title: Your API docs get a whole new look
 tags: [Improvement]
 ---
 
-Most of the attention right now goes to making APIs readable by AI tools. But agents aren't the only ones who use your APIs: developers are. They still read your documentation, scan response bodies, look for the one parameter they're missing. And that part of the experience hasn't moved much in years.
+Most of the attention right now goes to making APIs readable by AI tools. But agents aren't the only ones who use your APIs: developers are, too. They still read your documentation, scan response bodies, look for the one parameter they're missing. And that part of the experience hasn't moved much in years.
 
 This is why we worked on a major UI verhaul: new type scale, new color palette, and a real dark mode, among many other things. We focused on one thing: making your documentation as scannable as possible.
 
