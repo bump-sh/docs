@@ -71,7 +71,7 @@ The features introduced by this version are handled as follows:
 | `QUERY` method | Rendered in the documentation and available in the API Explorer. |
 | Path Item object: `additionalOperations` | Operations using any custom HTTP method are rendered like the others, with their method written as defined. |
 | Example object: `dataValue` | Displayed in request and response examples. |
-| Example object: `serializedValue` | Displayed in request and response examples without reformatting, and used in cURL samples for path and query parameters. |
+| Example object: `serializedValue` | Displayed in request and response examples without reformatting, and used in cURL samples for path, query and header parameters. |
 | Response object: `summary` | Displayed alongside the response. |
 | Server object: `name` | Displayed in the [Servers section](/help/specification-support/multiple-servers/). |
 | Security Requirement object: reference by URI | Security schemes can be referenced by their path, not only by their name. |
