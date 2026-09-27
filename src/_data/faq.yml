@@ -1,0 +1,140 @@
+- title: About Bump.sh
+  questions:
+    - question: What is Bump.sh?
+      answer: |
+        Bump.sh is a platform that publishes API documentation from OpenAPI and AsyncAPI documents, and hosts MCP servers built from API workflow documents. From an API definition, Bump.sh generates a documentation portal with an API explorer, an automatic changelog with breaking change detection, and AI-ready formats (Markdown pages, `llms.txt`, an MCP server). From a Flower or Arazzo workflow document, it deploys an MCP server that AI agents can call to run real API workflows. See the [quick start](/help/getting-started/) to deploy your first document.
+    - question: Which API specifications does Bump.sh support?
+      answer: |
+        Bump.sh supports OpenAPI from version 2.0 (Swagger) to version 3.2, and AsyncAPI up to version 2.6. JSON Schema is supported inside both, including `readOnly` and `writeOnly` properties, `enum` and `const`. For MCP servers, Bump.sh accepts Flower and Arazzo workflow documents. Details and known limits are listed on the [OpenAPI support](/help/specification-support/openapi-support/) and [AsyncAPI support](/help/specification-support/asyncapi-support/) pages.
+    - question: Does Bump.sh support GraphQL, gRPC or SOAP?
+      answer: |
+        No. Bump.sh focuses on OpenAPI and AsyncAPI for API documentation, and on Flower and Arazzo for MCP servers. Other specifications may come later. If you need one, [tell us](mailto:hello@bump.sh) about your use case.
+    - question: Which plans are available?
+      answer: |
+        Bump.sh offers a Pro plan and custom plans, billed monthly or annually, and every account starts with a 14-day free trial, no credit card required. Branches, the API Explorer and unrelease are part of the Pro plan. Custom plans add SSO, manual release, embed mode, head injection, advanced CSS customization, an on-premise data plane for MCP servers and a contractual SLA. Custom domains are available on every plan. Current plans and prices are on the [pricing page](https://bump.sh/pricing/).
+    - question: Can I try Bump.sh for free?
+      answer: |
+        Yes, in two ways. Every new account starts with a 14-day free trial of the platform when you [sign up](https://bump.sh/users/sign_up), with no credit card required. Without any account, the `bump preview` command of the CLI creates a temporary documentation with a unique URL, valid for 30 minutes, without any authentication. Add `--live --open` to refresh the preview each time you save the file. See the [preview command](/help/continuous-integration/cli/#the-preview-command).
+
+- title: Publishing documentation
+  questions:
+    - question: How do I deploy my API documentation?
+      answer: |
+        There are four ways to deploy an API document to Bump.sh:
+
+        - **Dashboard**: upload the file from the documentation settings.
+        - **CLI**: `npx bump-cli deploy openapi.yml --doc my-doc --token $BUMP_TOKEN` (npm package `bump-cli`, Node 20+, or a standalone binary).
+        - **GitHub Action**: `bump-sh/github-action@v1` with a `BUMP_TOKEN` secret.
+        - **API**: `POST /versions` on the Workspace API.
+
+        Each deployment is released automatically by default. See [deploy and release management](/help/publish-documentation/deploy-and-release-management/).
+    - question: Can I deploy from my CI/CD pipeline?
+      answer: |
+        Yes. The CLI runs in any CI environment, and Bump.sh documents ready-made setups for [GitHub Actions](/help/continuous-integration/github-actions/), [GitLab CI](/help/continuous-integration/gitlab-ci/), [Azure DevOps](/help/continuous-integration/azure-devops/), [CircleCI](/help/continuous-integration/circle-ci/) and [Travis CI](/help/continuous-integration/travis-ci/). The CLI reads the `BUMP_ID`, `BUMP_TOKEN` and `BUMP_HUB_ID` environment variables, so tokens never appear in your scripts.
+    - question: How do I validate a document before deploying it?
+      answer: |
+        Run the deploy command with the `--dry-run` flag. Bump.sh validates the document against its specification and simulates the deployment without publishing anything. The GitHub Action offers the same through its `command: dry-run` input. See [validate an API document](/help/continuous-integration/cli/#validate-an-api-document).
+    - question: What are branches and when should I use them?
+      answer: |
+        Branches are parallel definitions of the same documentation, for example one per environment (staging, production) or per API version (v1, v2). Each branch has its own deployments and changelog, and readers switch between branches with a dropdown. The default branch is shown first and receives deployments that specify no target. Deploy to a branch with `--branch` in the CLI, the `branch` input of the GitHub Action, or `branch_name` in the API. Branches are a Pro plan feature. See [branching](/help/publish-documentation/branching/).
+    - question: Can I control when a new version becomes visible?
+      answer: |
+        Yes. With manual release, available on custom plans, deployments queue up with a preview and are only published when you release them, optionally with a title and a description. On the Pro plan, you can unrelease a version to roll back to the previous one. See [manual release](/help/publish-documentation/deploy-and-release-management/#manual-release).
+    - question: Are external `$ref` references supported?
+      answer: |
+        Yes. Bump.sh resolves internal references and external references to URLs or files, with absolute or relative paths, even where the specification does not allow them. Recursive references are limited to 5 levels. When uploading from the dashboard, file-system references cannot be resolved, so use the CLI or the GitHub Action for multi-file definitions. See [references](/help/specification-support/references/).
+    - question: Can I apply an OpenAPI overlay?
+      answer: |
+        Yes. The CLI applies OpenAPI overlays with `bump overlay`, or directly during a deployment with one or several `--overlay` flags. See [overlays](/help/specification-support/overlays/).
+
+- title: Changelog and API changes
+  questions:
+    - question: How does Bump.sh detect API changes?
+      answer: |
+        Every release is compared with the previous one, and the differences become a changelog entry. Additions are shown in green, modifications in orange, deletions in red, and breaking changes are highlighted at the top of the entry. Any two entries can be compared, even across branches, and the comparison has a shareable URL. See [changelog](/help/changes-management/changelog/).
+    - question: What counts as a breaking change?
+      answer: |
+        A breaking change is a change that can break existing API consumers. Bump.sh flags, among others:
+
+        - renaming or deleting an endpoint or a property, unless it was deprecated before,
+        - changing the type of a property,
+        - making an existing property required,
+        - adding or removing a security requirement,
+        - removing the polymorphism of a property.
+
+        See [breaking change identification](/help/api-change-management/#breaking-changes-identification).
+    - question: How can API consumers be notified of changes?
+      answer: |
+        Consumers subscribe from the documentation with the "Get Updates" button, by email (at most one email a week) or RSS. For your own tooling, Bump.sh sends Slack notifications and signed webhooks (`X-Bump-Signature-256` header, HMAC SHA-256) on every structural change. See [integrations](/help/changes-management/integrations/).
+    - question: Can I see the API diff in a pull request?
+      answer: |
+        Yes. The GitHub Action posts a comment with the API diff on each pull request, and can fail the check when a breaking change is detected (`fail_on_breaking`). The CLI provides the same with `bump diff`, which fails on breaking changes by default in CI. See the [GitHub Action](/help/continuous-integration/github-actions/) and the [diff command](/help/continuous-integration/cli/#the-diff-command).
+
+- title: Access and security
+  questions:
+    - question: Can I make my documentation private?
+      answer: |
+        Yes. A private documentation requires authentication, is not indexed by search engines, and is accessible to the members of your organization and to external guests you invite. A private hub makes all its documentation private. Public documentation is open to everyone and indexed. See [documentation access management](/help/publish-documentation/documentation-access-management/).
+    - question: Does Bump.sh support SSO?
+      answer: |
+        Yes, on custom plans. SSO runs on WorkOS and supports generic SAML, SCIM, OpenID Connect, Okta, Auth0, Keycloak, Azure AD, Google SAML and more. Users signing in through SSO get the Viewer role by default, and the login page can be customized. See [SSO](/help/organizations/organization-access-management/#sso).
+    - question: What data does Bump.sh store?
+      answer: |
+        Bump.sh only stores what you explicitly send: your API and workflow documents, and user information (name, email, role). Bump.sh never accesses your infrastructure or source code. The platform is protected by a WAF, continuous monitoring, daily dependency updates, staff security training and penetration tests conducted by customers. See [security and confidentiality](#security-and-confidentiality).
+    - question: Is Bump.sh GDPR compliant?
+      answer: |
+        Yes. Bump.sh is a French company and complies with the GDPR. The [Data Processing Agreement](https://bump.sh/dpa) describes the data protection practices in detail.
+
+- title: Customization and reading experience
+  questions:
+    - question: Can I use my own domain?
+      answer: |
+        Yes, on every plan. Create a CNAME record pointing to `custom.bump.sh` for a documentation or a hub, then enable the custom domain in the settings. SSL certificates are issued automatically. MCP servers use a CNAME to `custom.run.bump.sh`. See [custom domains](/help/customization-options/custom-domains/).
+    - question: Can I customize the look of my documentation?
+      answer: |
+        Yes. You can set the color scheme, logo, favicon and social image, with a dedicated logo and color for dark mode. Custom plans can go further with CSS variables. Navigation can be organized by path, by tag, or into custom sections with `x-tagGroups`. See [branding customization](/help/customization-options/color-logo-meta-images/).
+    - question: Can I embed the documentation in my own website?
+      answer: |
+        Yes, on custom plans. Embed mode serves the documentation through your reverse proxy (Fastly, Cloudflare, CloudFront, Netlify Edge) and lets you inject your own head, top bar and footer, so the documentation lives on your site with your navigation. The headless Portal API also exposes list, search and fetch endpoints to build a fully custom portal. See [embed mode](/help/customization-options/embed-mode/) and the [Portal API](/help/customization-options/headless-doc-portal-api/).
+    - question: Can I add analytics or a support widget to my documentation?
+      answer: |
+        Yes, on custom plans. Head injection adds your analytics or support scripts to every documentation page. See [head injection](/help/customization-options/head-injection-analytics-tools-integration/).
+    - question: Can I write guides and free-form content next to the API reference?
+      answer: |
+        Yes. Topics (`x-topics`) add Markdown pages such as guides, authentication walkthroughs or FAQs to the documentation, and their content can be pulled from `.md` files with `$ref`. Every description supports Markdown, with code blocks, callouts, images, accordions and Mermaid diagrams. See [topics](/help/documentation-experience/topics/) and [Markdown support](/help/documentation-experience/markdown-support/).
+    - question: Can readers try the API from the documentation?
+      answer: |
+        Yes. The API Explorer, available on the Pro plan, sends real requests to any server declared in the definition. It supports HTTP Basic and Bearer, API keys and OAuth2 authentication, server variables, and shareable pre-filled requests that never include credentials or responses. Requests go through an open-source CORS proxy that can be disabled. See the [API Explorer](/help/documentation-experience/api-explorer/).
+
+- title: MCP servers and AI
+  questions:
+    - question: What is an MCP server on Bump.sh?
+      answer: |
+        An MCP server exposes tools that AI agents (ChatGPT, Claude, Cursor, and any Model Context Protocol client) can call. On Bump.sh, you describe API workflows in a document and Bump.sh hosts an MCP server that executes them, with no code to write and no infrastructure to run. Each execution follows the workflow definition exactly, so the behavior is deterministic. See [MCP servers](/help/mcp-servers/).
+    - question: Should I write my workflows in Flower or Arazzo?
+      answer: |
+        Use Arazzo, the OpenAPI Initiative workflow specification, when you already have OpenAPI documents to reference. Use Flower, the lightweight specification by Bump.sh, for quick prototyping, small projects, workflows calling APIs without an OpenAPI document, or when you need data transformation between steps. Both support multi-step sequences, retries, conditional flow and runtime expressions. See [Flower support](/help/mcp-servers/specification-support/flower-support/) and [Arazzo support](/help/mcp-servers/specification-support/arazzo-support/).
+    - question: Are my API keys exposed to the LLM?
+      answer: |
+        No. The AI agent never calls your APIs directly. It invokes a tool on the MCP server, and an isolated data plane runs the workflow: it resolves secrets, executes the HTTP requests and returns only the declared outputs. Secrets are encrypted at rest with AES-256-GCM and decrypted in memory only, API responses are discarded after execution, and logs never contain secrets, request bodies or response payloads. See [MCP server security](/help/mcp-servers/security/).
+    - question: Who can use my MCP server?
+      answer: |
+        You choose per server: public (anyone with the URL), private with a Bump.sh account (members of your organization), or private through your own OAuth server such as Okta, Auth0 or Keycloak, so your users sign in as they already do. See [MCP server access management](/help/mcp-servers/access-management/).
+    - question: Can AI agents and LLMs read my API documentation?
+      answer: |
+        Yes. With Ask AI enabled, a public documentation or hub exposes an MCP server at its URL followed by `/mcp`, serves every page as Markdown by appending `.md` to its URL, and publishes an `llms.txt` index. Readers get an "Ask AI" menu to add the documentation to Cursor, VS Code, ChatGPT or Claude. See [Ask AI capabilities](/help/documentation-experience/ask-ai-capabilities/).
+
+- title: Hubs, organizations and billing
+  questions:
+    - question: What is a hub?
+      answer: |
+        A hub gathers several API documentation on a single page, sorted by categories, with a unified changelog and a search across all its APIs. Access, branding, sorting and API Explorer settings are managed once at the hub level. See [hubs](/help/hubs/).
+    - question: Which roles exist in an organization?
+      answer: |
+        Three roles: Admin, Maintainer and Viewer. All three can access the documentation and hubs. Admins and Maintainers can manage documentation and hubs and invite external guests. Only Admins manage the organization and its members, and only the owner has access to billing. See [organization access management](/help/organizations/organization-access-management/).
+    - question: How does billing work?
+      answer: |
+        Plans are billed monthly or annually, by credit card, through Stripe. Invoices are sent as PDF to the account email and to an optional extra address, and list your company name, address and VAT number. VAT is not applied outside Europe, and not applied in Europe when you provide a VAT number. See [billing](/help/organizations/billing/).
+    - question: What support and uptime can I expect?
+      answer: |
+        Support is provided by the Bump.sh team, never by a chatbot, for every plan, by email at [hello@bump.sh](mailto:hello@bump.sh) or through the in-app chat. Bump.sh aims for above 99.9% availability, and commits to it with service credits on custom plans. Live and past incidents are on the [status page](https://status.bump.sh/), with notifications by email, Slack, RSS, SMS or webhook. See [support and SLA](/help/support-and-sla/).
