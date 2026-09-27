@@ -32,7 +32,7 @@ Available options:
 | **Add to VS Code** | Adds the doc/hub MCP server to VS Code in one click. |
 | **Add to other AI tools (MCP)** | Shows the MCP server URL and a ready-to-use `mcp.json` snippet. |
 | **Open in ChatGPT** | Opens the current page in ChatGPT with the right Markdown page pre-linked. |
-| **Open in Claude** | Opens the current page in ChatGPT with the right Markdown page pre-linked. |
+| **Open in Claude** | Opens the current page in Claude with the right Markdown page pre-linked. |
 | **View as Markdown** | Opens the Markdown version of the current page. |
 | **Copy as Markdown** | Copies the Markdown content of the current page to the clipboard. |
 
@@ -50,7 +50,7 @@ The MCP server URL is shown in your doc/hub settings and accessible from the Ask
 
 ### Available tools
 
-The MCP server exposes three tools:
+The MCP server exposes five tools:
 
 | Tool | Description |
 |---|---|

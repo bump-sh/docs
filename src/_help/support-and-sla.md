@@ -9,7 +9,7 @@ title: Support and Service Level Agreement (SLA)
 
 We believe in human interactions. Support is ensured only by the Bump.sh team, not by any chatbot. 
 
-You can at anytime reach out to us via [support@bump.sh](mailto:hello@bump.sh), or via the chat icon which may appear at the bottom right hand side of some of the screens (mostly on our marketing site, the product documentation pages, and your administration dashboard - never on user-facing documentation pages).
+You can at anytime reach out to us via [hello@bump.sh](mailto:hello@bump.sh), or via the chat icon which may appear at the bottom right hand side of some of the screens (mostly on our marketing site, the product documentation pages, and your administration dashboard - never on user-facing documentation pages).
 
 We take pride in offering exceptional support to any of our users, no matter which plan they're on.
 

@@ -19,7 +19,7 @@ Specifications are the official standards used to describe, among other things:
 - an API workflow (Flower, Arazzo, ...).
 These standards outline a set of elements and rules to follow when writing an API definition.
 
-We support OpenAPI, AsyncAPI (up to 2.6), and Flower (our internal workflow specification). Arazzo will be supported soon. To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi) and [AsyncAPI](/guides/asyncapi/what-is-asyncapi/). We also made a guide on [Flower](/help/mcp-servers/specification-support/flower-support), our own workflow standard.
+We support OpenAPI, AsyncAPI (up to 2.6), Flower (our own workflow specification) and Arazzo. To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi), [AsyncAPI](/guides/asyncapi/what-is-asyncapi/) and [Arazzo](/arazzo/v1.0/). We also made a guide on [Flower](/help/mcp-servers/specification-support/flower-support), our own workflow standard.
 
 ### Deployment
 
