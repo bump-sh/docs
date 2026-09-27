@@ -4,8 +4,8 @@
 <link rel="shortcut icon" type="image/svg+xml" href="<%= relative_url site.config["metadata"]["favicon_light"] %>" media="(prefers-color-scheme: light)">
 <link rel="shortcut icon" type="image/svg+xml" href="<%= relative_url site.config["metadata"]["favicon_dark"] %>" media="(prefers-color-scheme: dark)">
 <link rel="preload" href="/docs<%= asset_path "fonts/InterVariable.woff2" %>" as="font" type="font/woff2" crossorigin fetchpriority="high">
-<link rel="stylesheet" href="/docs<%= asset_path :css %>" />
+<link rel="stylesheet" href="/docs<%= asset_path :css %>" data-turbo-track="reload" />
 <%# Applies the saved theme before first paint so the page never flashes %>
 <script>document.documentElement.dataset.theme = localStorage.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")</script>
-<script src="/docs<%= asset_path :js %>" defer></script>
+<script src="/docs<%= asset_path :js %>" defer data-turbo-track="reload"></script>
 <%= live_reload_dev_js %>
