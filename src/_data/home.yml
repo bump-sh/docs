@@ -1,17 +1,87 @@
-cards:
-  - label: Help Center
-    description: Everything about Bump.sh
-    link: /help/
-    icon: icons/help-center
-  - label: Guides
-    description: Learn about APIs at large, and how to use Bump.sh in your API ecosystem
-    link: /guides/
-    icon: icons/guides
-  - label: API References
-    description: Find documentation of our own APIs
+popular:
+  - {label: Deploy with the CLI, link: /help/continuous-integration/cli/}
+  - {label: GitHub Action, link: /help/continuous-integration/github-actions/}
+  - {label: Custom domains, link: /help/customization-options/custom-domains/}
+  - {label: Markdown support, link: /help/documentation-experience/markdown-support/}
+  - {label: Flower workflows, link: /help/mcp-servers/specification-support/flower-support/}
+
+paths:
+  - title: Publish your API documentation
+    icon: documentation
+    description: Upload an OpenAPI or AsyncAPI document and get a documentation portal with a changelog, an API explorer and Ask AI. Deploy from the dashboard, the CLI or your CI.
+    code: npx bump-cli deploy openapi.yml --doc my-api --token $BUMP_TOKEN
+    link: /help/getting-started/upload-your-first-definition/
+    link_label: Publish your first doc
+  - title: Deploy an MCP server
+    icon: mcp
+    description: Describe API workflows in a Flower or Arazzo document. Bump.sh hosts an MCP server that runs them for AI agents, with no code and no infrastructure on your side.
+    code: npx bump-cli deploy workflow.yml --mcp-server my-server --token $BUMP_TOKEN
+    link: /help/getting-started/start-your-first-mcp-server/
+    link_label: Start your first MCP server
+
+help:
+  - title: Publish documentation
+    description: Create docs, deploy and release, branches, access management, SEO.
+    link: /help/publish-documentation/
+    icon: documentation
+  - title: Documentation experience
+    description: API explorer, Markdown, topics and Ask AI capabilities.
+    link: /help/documentation-experience/
+    icon: sparkles
+  - title: Customization options
+    description: Custom domains, branding, navigation, head injection, embed and headless modes.
+    link: /help/customization-options/
+    icon: pencil
+  - title: Changes management
+    description: Changelog, breaking change detection and notification integrations.
+    link: /help/changes-management/
+    icon: iteration
+  - title: Specification support
+    description: OpenAPI, AsyncAPI, JSON Schema, references, overlays, polymorphism and extensions.
+    link: /help/specification-support/
+    icon: code-file
+  - title: Hubs
+    description: Group documentation into catalogs with their own settings and UI.
+    link: /help/hubs/
+    icon: hub
+  - title: CI & integrations
+    description: GitHub Action, GitLab, Azure DevOps, CircleCI, Travis, CLI and API.
+    link: /help/continuous-integration/
+    icon: terminal
+  - title: MCP servers
+    description: Workflows, deployment, access, secrets, debug sessions, logs and security.
+    link: /help/mcp-servers/
+    icon: mcp
+  - title: Organizations
+    description: Members, roles, access management and billing.
+    link: /help/organizations/
+    icon: org
+
+developers:
+  - title: Bump CLI
+    description: Validate, preview, diff and deploy API and workflow documents from your terminal.
+    link: /help/continuous-integration/cli/
+    meta: npm install -g bump-cli
+  - title: GitHub Action
+    description: Deploy documentation and post API diffs on pull requests.
+    link: /help/continuous-integration/github-actions/
+    meta: bump-sh/github-action
+  - title: API references
+    description: Workspace API to manage docs and hubs, Portal API to search and read any documentation.
     link: https://developers.bump.sh/
-    icon: icons/api-reference
-  - label: Product Updates
-    description: Learn about our latest features and changes
-    link: /product-updates/
-    icon: icons/product-updates
+    meta: developers.bump.sh
+  - title: MCP server for the API references
+    description: Let your AI agent search and read the Bump.sh API references.
+    link: https://developers.bump.sh/mcp
+    meta: developers.bump.sh/mcp
+  - title: llms.txt
+    description: Index of every page of this site, for LLMs and agents.
+    link: /llms.txt
+    meta: docs.bump.sh/llms.txt
+
+support:
+  - {label: FAQ, link: /help/faq/, icon: help-circle}
+  - {label: Support and SLA, link: /help/support-and-sla/, icon: heart-plus}
+  - {label: Status page, link: "https://status.bump.sh/", icon: activity}
+  - {label: hello@bump.sh, link: "mailto:hello@bump.sh", icon: mail}
+  - {label: Edit this site on GitHub, link: "https://github.com/bump-sh/docs", icon: github}
