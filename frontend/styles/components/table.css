@@ -1,10 +1,12 @@
 /* Tables: horizontal hairline dividers only. */
 
 @layer components {
-  .prose table {
-    display: block;
-    width: 100%;
+  .table-scroll {
     overflow-x: auto;
+  }
+
+  .prose table {
+    width: 100%;
     text-align: left;
   }
 
