@@ -10,12 +10,13 @@
         <%= render Shared::Nav::Item.new(title: item.title, link: item.link, active: current_item?(item)) %>
       <% end %>
     </div>
-    <search class="site-search">
+    <search class="site-search" data-controller="search" data-action="keydown.meta+k@window->search#focus keydown.ctrl+k@window->search#focus keydown.esc@window->search#close click@window->search#closeOutside">
       <%= svg "/docs/images/icons/search.svg" %>
       <docs-search-form>
-        <input slot="input" type="search" placeholder="Search…" />
-        <docs-search-results></docs-search-results>
+        <input slot="input" type="search" placeholder="Search…" data-search-target="input" data-action="focus->search#open" />
+        <docs-search-results data-search-target="results"></docs-search-results>
       </docs-search-form>
+      <kbd class="search-shortcut">⌘K</kbd>
     </search>
     <div class="nav-group">
       <% @site.data.navbar.right_links.each do |item| %>
