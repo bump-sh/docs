@@ -1,23 +1,24 @@
 ---
-title: FAQ
+title: Frequently asked questions
 ---
 
-## Will you support others specifications like BluePrint or GraphQL?
+- TOC
+{:toc}
 
-When we initially had the Bump idea, we though that it would be absolutely perfect to be able to handle any kind of documentation.
+Short answers to the questions we hear most often about Bump.sh, from supported specifications to MCP servers and billing. Each answer links to the page that covers the topic in depth.
 
-This said, at the moment, we are focusing on OpenAPI and AsyncAPI to offer the best support of these specifications.
+<% site.data.faq.each do |section| %>
+## <%= section.title %>
 
-## Why not supporting all the OpenAPI specification?
-
-If you have tried Bump, you probably have already discovered that we don't support the whole Swagger / OpenApi specification.
-
-There are 2 reasons for that:
-
-- first, we are a fresh new project, which is far from being complete. So we may have decided to postpone some features due to our priorities.
-- second, we may have decided that a specification feature adds too much complexity to the documentation, and have preferred to simply ignore it to keep things simple for now.
-
-Feel free to <a class="intercom-launcher-selector" href="mailto:help@bump.sh">ask us</a> why a feature you need is missing, we'll be happy to answer and try to find a solution with you.
+<div class="faq" markdown="0">
+<% section.questions.each do |item| %>
+<details id="<%= Bridgetown::Utils.slugify(item.question) %>">
+<summary><%= item.question %></summary>
+<div class="faq-answer"><%= markdownify item.answer %></div>
+</details>
+<% end %>
+</div>
+<% end %>
 
 ## Security and confidentiality
 
@@ -25,15 +26,19 @@ Bump.sh has been designed from the ground up with security as a core principle. 
 
 We only handle two types of strictly controlled data:
 
-* API documents (OpenAPI, AsyncAPI) explicitly provided by your teams via our secure API.
-* User information (email, name, role), created automatically via SSO or manually within the tool.
+* API and workflow documents explicitly provided by your teams through the dashboard, the API, the [open-source CLI](https://github.com/bump-sh/cli) or the [GitHub Action](https://github.com/bump-sh/github-action).
+* User information (email, name, role), created automatically through SSO or manually in the application.
 
-Integration into your workflow is secure and transparent. You retain full control over what data is shared and how:
+We implement industry-leading security practices, including WAF protection, continuous monitoring, daily dependency updates, regular staff security training, and authorized penetration tests conducted by our customers. As a French company, we fully comply with GDPR, following the data protection practices outlined in our [Data Processing Agreement (DPA)](https://bump.sh/dpa).
 
-* Direct uploads via our API through your own integration code.
-* Using our [open-source CLI](https://github.com/bump-sh/cli) integrated into your CI pipeline, which exclusively sends files explicitly defined by you.
-* Utilizing our [GitHub Action](https://github.com/bump-sh/github-action), also open-source, built upon the same secure, vetted codebase as our CLI.
+> Your question is not here? Write to [hello@bump.sh](mailto:hello@bump.sh), a member of the team answers every message.
+{: .info}
 
-Additionally, we implement industry-leading security practices, including WAF protection, continuous monitoring, daily dependency updates, regular staff security training, and authorized penetration tests conducted by our customers.
-
-As a French company, we fully comply with GDPR, adhering to stringent data protection practices outlined in our [Data Processing Agreement (DPA)](https://bump.sh/dpa).
+<%
+  faq_entities = site.data.faq.flat_map do |section|
+    section.questions.map do |item|
+      {"@type" => "Question", "name" => item.question, "acceptedAnswer" => {"@type" => "Answer", "text" => markdownify(item.answer)}}
+    end
+  end
+%>
+<script type="application/ld+json"><%= {"@context" => "https://schema.org", "@type" => "FAQPage", "mainEntity" => faq_entities}.to_json.html_safe %></script>
