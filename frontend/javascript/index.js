@@ -3,6 +3,7 @@ import * as Turbo from "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
 import "bridgetown-lit-renderer";
 import "bridgetown-quick-search";
+import "./docs_search.js";
 import mermaid from "mermaid";
 
 /**
