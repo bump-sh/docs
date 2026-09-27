@@ -3,6 +3,17 @@ class Builders::Inspectors < SiteBuilder
     inspect_html do |document|
       add_heading_anchors(document)
       move_toc_aside(document)
+      wrap_tables(document)
+    end
+  end
+
+  # Markdown tables keep their table layout (full width) and scroll
+  # horizontally inside this wrapper when they overflow.
+  def wrap_tables(document)
+    document.query_selector_all(".prose table").each do |table|
+      wrapper = document.create_element("div", class: "table-scroll")
+      table.add_next_sibling(wrapper)
+      wrapper << table.remove
     end
   end
 
