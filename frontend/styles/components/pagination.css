@@ -42,13 +42,24 @@
     rotate: 180deg;
   }
 
+  /* Paginated lists: previous | page count | next on one row */
+  post-pagination {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-block: var(--spacing-8) 0;
+  }
+
+  post-pagination .next {
+    justify-self: end;
+  }
+
+  post-pagination .page[aria-disabled] {
+    opacity: 0.4;
+  }
+
   post-pagination .page-count {
     color: var(--text-secondary);
     font-size: var(--text-xs);
-    width: 100%;
-  }
-
-  post-pagination .pagination {
-    display: contents;
   }
 }
