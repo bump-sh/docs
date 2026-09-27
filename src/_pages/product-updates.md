@@ -8,7 +8,7 @@ paginate:
   sort_reverse: true
 ---
 
-<main class="wrapper">
+<main class="wrapper updates-page">
   <ul class="update-list">
     <% paginator.resources.each do |update| %>
       <li>

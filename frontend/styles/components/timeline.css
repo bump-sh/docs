@@ -5,6 +5,10 @@
    aligns the dot with both. */
 
 @layer components {
+  .updates-page {
+    padding-block-end: var(--spacing-24);
+  }
+
   timeline-element {
     --timeline-width: var(--spacing-40, 160px);
     --first-line: var(--spacing-7);
