@@ -1,10 +1,5 @@
 module.exports = {
   plugins: {
-    'postcss-mixins': {},
-    'postcss-color-mod-function': {
-      // Uncomment the following to import CSS variables for use in `color-mod`:
-      // importFrom: "frontend/styles/variables.css"
-    },
     'postcss-flexbugs-fixes': {},
     'postcss-preset-env': {
       autoprefixer: {
@@ -13,7 +8,10 @@ module.exports = {
       stage: 2,
       features: {
         'nesting-rules': true,
-        'custom-media-queries': true
+        'custom-media-queries': true,
+        // Native in every targeted browser: no polyfill that would rewrite selectors
+        'cascade-layers': false,
+        'color-mix': false
       },
     },
     'cssnano': {

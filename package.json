@@ -11,11 +11,9 @@
     "esbuild": "^0.19.2",
     "glob": "^10.2.6",
     "postcss": "^8.4.23",
-    "postcss-color-mod-function": "^3.0.3",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
     "postcss-load-config": "^4.0.1",
-    "postcss-mixins": "^9.0.4",
     "postcss-preset-env": "^8.4.1",
     "read-cache": "^1.0.0"
   },
@@ -30,5 +28,10 @@
     "mermaid": "^11.12.2",
     "turbo-shadow": "^1.1.0"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not op_mini all"
+  ],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,38 +1,34 @@
+/* docs.bump.sh visual theme, aligned with the Bump.sh API documentation
+   theme: Inter, zinc neutrals, one accent, hairlines, near-zero elevation.
+
+   Cascade layers fix precedence once: later layers win whatever the
+   selector specificity, so components never fight the base styles. */
+@layer reset, tokens, base, layout, components, pages;
+
 @import "fonts.css";
-
-@import "variables/fonts.css";
-@import "variables/spacings.css";
-@import "variables/sizes.css";
-@import "variables/colors.css";
-@import "variables/states.css";
-@import "variables/fonts.css";
-@import "variables/transitions.css";
-@import "variables/borders.css";
-
+@import "tokens.css";
+@import "reset.css";
+@import "base.css";
 @import "layout.css";
-@import "typography.css";
-@import "layouts/documentation.css";
 
-@import "atoms/blockquote.css";
-@import "atoms/button.css";
-@import "atoms/code.css";
-@import "atoms/definition-list.css";
-@import "atoms/details.css";
-@import "atoms/input.css";
-@import "atoms/kbd.css";
-@import "atoms/label.css";
-@import "atoms/table.css";
-
-@import "components/card.css";
+@import "components/prose.css";
+@import "components/code.css";
+@import "components/callout.css";
+@import "components/table.css";
+@import "components/button.css";
+@import "components/label.css";
+@import "components/header.css";
 @import "components/search.css";
-@import "components/dropdown.css";
-@import "components/tasklist.css";
+@import "components/sidebar.css";
 @import "components/toc.css";
+@import "components/dropdown.css";
+@import "components/section-header.css";
+@import "components/card.css";
+@import "components/hero.css";
+@import "components/authors.css";
 @import "components/timeline.css";
-@import "components/update.css";
+@import "components/pagination.css";
+@import "components/footer.css";
 
-@import "pages/category.css";
-@import "pages/errored.css";
 @import "pages/guides.css";
-@import "pages/indepth-guide.css";
-@import "pages/updates.css";
+@import "pages/errored.css";

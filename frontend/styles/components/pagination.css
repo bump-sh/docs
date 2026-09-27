@@ -1,0 +1,54 @@
+/* Previous/next links: between documentation pages and between
+   paginated lists. */
+
+@layer components {
+  page-navigation,
+  post-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    margin-block: var(--spacing-16) var(--spacing-6);
+  }
+
+  page-navigation a,
+  post-pagination .page {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: var(--text-secondary);
+    font-weight: var(--weight-medium);
+  }
+
+  page-navigation a:hover,
+  post-pagination a.page:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  page-navigation .next,
+  post-pagination .next {
+    margin-inline-start: auto;
+  }
+
+  page-navigation svg,
+  post-pagination svg {
+    width: 11px;
+    height: 12px;
+  }
+
+  page-navigation .previous svg,
+  post-pagination .previous svg {
+    rotate: 180deg;
+  }
+
+  post-pagination .page-count {
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    width: 100%;
+  }
+
+  post-pagination .pagination {
+    display: contents;
+  }
+}

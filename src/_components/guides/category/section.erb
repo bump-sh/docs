@@ -1,10 +1,4 @@
-<guide-category class="<%= @css_classes %>">
-  <div class="list-header">
-    <h2><%= @title %></h2>
-    <% if @description.present? %>
-      <p><%= @description %></p>
-    <% end %>
-  </div>
-
-  <%= render Guides::List.new(resources: @resources.first(3), category_name: @category_name, remaining_count: @remaining_count) %>
+<guide-category>
+  <%= render Shared::SectionHeader.new(title: @title, description: @description, link_url: see_all_url, link_label: "See all #{@resources.count} guides") %>
+  <%= render Guides::List.new(resources: @resources.first(4)) %>
 </guide-category>

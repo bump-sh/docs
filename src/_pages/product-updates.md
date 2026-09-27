@@ -15,13 +15,13 @@ paginate:
         <article class="update">
           <timeline-element>
             <div class="timeline-side">
-              <time><%= update.date.strftime("%B %d, %Y") %></time>
+              <%= time_tag update.date %>
             </div>
-            <div class="timeline-content">
+            <div class="timeline-content prose">
               <h2><a href="<%= update.relative_url %>"><%= update.data.title %></a></h2>
               <div class="tag-list">
                 <% update.data.tags.each do |tag| %>
-                  <a class="label" data-label-status="inverted"><%= tag %></a>
+                  <span class="label" data-label-status="inverted"><%= tag %></span>
                 <% end %>
               </div>
               <%= update.content %>

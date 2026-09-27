@@ -1,0 +1,45 @@
+/* Blockquotes: a quiet quote by default, a callout when the markdown
+   attaches a status class ({: .info}, {: .warning}, ...). */
+
+@layer components {
+  .prose blockquote {
+    border-inline-start: 2px solid var(--border);
+    color: var(--text-secondary);
+    padding-inline-start: var(--spacing-4);
+  }
+
+  .prose blockquote > * + * {
+    margin-block-start: var(--spacing-3);
+  }
+
+  .prose blockquote:is(.info, .tip, .success, .warning, .error) {
+    --callout-bg: var(--surface-muted);
+    --callout-border: var(--zinc-400);
+
+    background-color: var(--callout-bg);
+    border-inline-start: 3px solid var(--callout-border);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    padding: var(--spacing-4) var(--spacing-5);
+  }
+
+  .prose blockquote:is(.info, .tip) {
+    --callout-bg: var(--info-soft);
+    --callout-border: var(--accent);
+  }
+
+  .prose blockquote.success {
+    --callout-bg: var(--success-soft);
+    --callout-border: var(--success);
+  }
+
+  .prose blockquote.warning {
+    --callout-bg: var(--warning-soft);
+    --callout-border: var(--warning);
+  }
+
+  .prose blockquote.error {
+    --callout-bg: var(--error-soft);
+    --callout-border: var(--error);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="section-header">
+  <div>
+    <h2><%= @title %></h2>
+    <% if @description.present? %>
+      <p><%= @description %></p>
+    <% end %>
+  </div>
+  <% if @link_url.present? %>
+    <a class="see-all" href="<%= @link_url %>">
+      <%= @link_label %>
+      <%= svg "/docs/images/icons/arrow-right.svg" %>
+    </a>
+  <% end %>
+</div>

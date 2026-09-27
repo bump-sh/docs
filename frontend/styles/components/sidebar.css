@@ -1,0 +1,120 @@
+/* Documentation sidebar: title row, then the page tree. Rows are pills,
+   the active page a soft accent pill.
+
+   Stimulus contract (sidebar controller): a button carrying
+   aria-controls toggles the hidden attribute of its sublist. */
+
+@layer components {
+  .doc-sidebar {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+  }
+
+  .sidebar-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-2);
+    margin-block-end: var(--spacing-4);
+    padding-inline: var(--spacing-3);
+    color: var(--title);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+  }
+
+  .sidebar-list,
+  .sidebar-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-05);
+  }
+
+  .sidebar-sublist {
+    margin-block-start: var(--spacing-05);
+    padding-inline-start: var(--spacing-3);
+  }
+
+  .sidebar-sublist .sidebar-link {
+    font-weight: var(--weight-regular);
+  }
+
+  .sidebar-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    padding-inline-end: var(--spacing-2);
+  }
+
+  .sidebar-row:hover {
+    background-color: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .sidebar-row:has([aria-current]) {
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+  }
+
+  .sidebar-row > svg {
+    flex-shrink: 0;
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+    margin-inline-start: var(--spacing-3);
+  }
+
+  /* Each row keeps its inline padding when there is no icon */
+  .sidebar-row > svg + .sidebar-link {
+    padding-inline-start: 0;
+  }
+
+  .sidebar-link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-2);
+    min-height: var(--spacing-8);
+    padding: var(--spacing-1-5) 0 var(--spacing-1-5) var(--spacing-3);
+    color: inherit;
+    text-align: left;
+  }
+
+  .sidebar-link:hover {
+    text-decoration: none;
+  }
+
+  /* --- Collapse caret --- */
+
+  .sidebar-caret {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: var(--spacing-5);
+    height: var(--spacing-5);
+    border-radius: var(--radius-sm);
+    color: inherit;
+  }
+
+  .sidebar-caret:hover {
+    background-color: color-mix(in srgb, currentColor, transparent 85%);
+  }
+
+  .sidebar-caret svg {
+    width: 6px;
+    height: 10px;
+    opacity: 0.7;
+    transition: transform var(--duration) var(--easing);
+  }
+
+  [aria-expanded="true"] > .sidebar-caret svg,
+  .sidebar-caret[aria-expanded="true"] svg {
+    transform: rotate(90deg);
+  }
+
+  bump-cta {
+    margin-block-start: var(--spacing-8);
+  }
+}

@@ -1,0 +1,97 @@
+/* Header contents: nav links and the theme toggle. The band itself and
+   the mobile drawer behavior live in layout.css. */
+
+@layer components {
+  .site-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    height: var(--spacing-8);
+    color: var(--text-secondary);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+  }
+
+  .site-nav a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .site-nav a[aria-current] {
+    color: var(--title);
+  }
+
+  /* --- Theme toggle: sun in light mode, moon in dark mode --- */
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    color: var(--text-secondary);
+    font-weight: var(--weight-medium);
+  }
+
+  .theme-toggle:hover {
+    color: var(--text);
+  }
+
+  .theme-toggle-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: var(--spacing-8);
+    height: var(--spacing-8);
+    border-radius: var(--radius-md);
+  }
+
+  .theme-toggle:hover .theme-toggle-icon {
+    background-color: var(--surface-muted);
+  }
+
+  .theme-toggle svg {
+    grid-area: 1 / 1;
+    width: 18px;
+    height: 18px;
+  }
+
+  .theme-toggle .moon,
+  :root[data-theme="dark"] .theme-toggle .sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.6);
+  }
+
+  :root[data-theme="dark"] .theme-toggle .moon {
+    opacity: 1;
+    transform: none;
+  }
+
+  .theme-toggle-label {
+    display: none;
+  }
+
+  @media (--nav-collapsed) {
+    .site-nav a {
+      height: var(--spacing-11);
+    }
+
+    .theme-toggle {
+      justify-content: space-between;
+      min-height: var(--spacing-11);
+      margin-block-start: var(--spacing-4);
+      padding-block-start: var(--spacing-4);
+      border-block-start: var(--hairline);
+    }
+
+    .theme-toggle-label {
+      display: block;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .theme-toggle svg {
+      transition:
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.25s var(--easing);
+    }
+  }
+}

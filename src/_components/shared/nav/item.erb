@@ -1,3 +1,1 @@
-<nav-item<% if @active %> aria-current="true"<% end %>>
-  <a href="<%= relative_url @link %>"><%= @title %></a>
-</nav-item>
+<a href="<%= relative_url @link %>"<% if @active %> aria-current="page"<% end %>><%= @title %></a>

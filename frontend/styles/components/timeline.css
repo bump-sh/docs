@@ -1,58 +1,104 @@
-timeline-element {
-  align-items: start;
-  display: grid;
-  grid-template-columns: clamp(100px, 25%, 200px) auto;
-  gap: var(--spacing-10) clamp(var(--spacing-10), 15%, var(--spacing-34));
+/* Product updates timeline, same construction as the API documentation
+   changelog: mono date column with a hairline, a hollow dot centered on
+   the entry's first line, content column on the right. Every first line
+   (date, title) shares the same --spacing-7 line box so one formula
+   aligns the dot with both. */
+
+@layer components {
+  timeline-element {
+    --timeline-width: var(--spacing-40, 160px);
+    --first-line: var(--spacing-7);
+    --entry-padding: var(--spacing-12);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    border-inline-start: var(--hairline);
+    padding-block: var(--spacing-6) 0;
+    padding-inline-start: var(--spacing-6);
+  }
 
   .timeline-side {
-    border-right: var(--border-default);
-    box-sizing: border-box;
-    height: 100%;
-    padding-block: var(--spacing-14);
-    padding-right: var(--spacing-10);
+    position: relative;
+  }
 
-    time {
-      display: flex;
-      position: sticky;
-      top: var(--spacing-24);
+  .timeline-side time {
+    display: block;
+    line-height: var(--first-line);
+  }
 
-      &::after {
-        background-color: var(--title-color);
-        border-radius: 50%;
-        content: "";
-        display: block;
-        height: var(--spacing-2);
-        position: absolute;
-        right: calc(var(--spacing-11-minus) - 0.5px);
-        top: var(--spacing-2);
-        width: var(--spacing-2);
-      }
-    }
+  /* Stroked, not filled: the hollow dot sits lighter on the line. The
+     ring lifts it off the hairline it is centered on. */
+  .timeline-side::after {
+    content: "";
+    position: absolute;
+    top: calc((var(--first-line) - var(--spacing-2)) / 2);
+    left: calc(-1 * var(--spacing-6));
+    width: var(--spacing-2);
+    height: var(--spacing-2);
+    background-color: var(--bg);
+    border: 1px solid var(--zinc-400);
+    border-radius: var(--radius-round);
+    box-shadow: 0 0 0 3px var(--bg);
+    transform: translateX(calc(-50% - 0.5px));
   }
 
   .timeline-content {
-    padding-block: var(--spacing-10) var(--spacing-10);
-
-    img {
-      border-radius: var(--border-radius-xlarge);
-      width: 100%;
-    }
+    max-width: var(--content-width);
+    padding-block-end: var(--spacing-10);
   }
 
-  @container main (width < 800px) {
-    border-left: var(--border-default);
-    grid-template-columns: 1fr;
-    padding-left: var(--spacing-10);
+  .timeline-content > h2 {
+    font-size: var(--text-xl);
+    line-height: var(--first-line);
+  }
 
-    time {
+  .timeline-content > h2 a {
+    color: inherit;
+  }
+
+  .timeline-content > h2 a:hover {
+    color: var(--accent-text);
+    text-decoration: none;
+  }
+
+  .timeline-content > .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-block: var(--spacing-3) var(--spacing-5);
+  }
+
+  @media not (--doc-collapsed) {
+    timeline-element {
+      display: grid;
+      grid-template-columns: var(--timeline-width) minmax(0, 1fr);
+      gap: 0 var(--spacing-12);
       border: 0;
       padding: 0;
-      position: relative;
+    }
 
-      &::after {
-        right: calc(100% + var(--spacing-10) - var(--spacing-1));
-        top: var(--spacing-2);
-      }
+    .timeline-side {
+      border-inline-end: var(--hairline);
+      padding-block: var(--entry-padding);
+      padding-inline-end: var(--spacing-8);
+    }
+
+    .timeline-side time {
+      position: sticky;
+      top: calc(var(--header-height) + var(--spacing-8));
+    }
+
+    /* Dot on the column's inner edge, centered on the hairline itself */
+    .timeline-side::after {
+      top: calc(var(--entry-padding) + (var(--first-line) - var(--spacing-2)) / 2);
+      left: auto;
+      right: 0;
+      transform: translateX(calc(50% + 0.5px));
+    }
+
+    .timeline-content {
+      padding-block: var(--entry-padding) var(--spacing-6);
     }
   }
 }

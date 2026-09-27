@@ -1,22 +1,32 @@
-<header>
-  <a href="/">
-    <img src="<%= relative_url '/docs/images/bump-logo.svg' %>" alt="Bump.sh" />
+<header class="site-header" data-controller="toggle" data-action="keydown.esc@window->toggle#close">
+  <a class="site-logo" href="/">
+    <img class="logo-light" src="<%= relative_url '/docs/images/bump-logo.svg' %>" alt="Bump.sh" />
+    <img class="logo-dark" src="<%= relative_url '/docs/images/bump-logo-wht.svg' %>" alt="Bump.sh" />
   </a>
 
-  <nav data-controller="toggle">
-    <nav-links data-toggle-target="item">
-      <div class="nav-group">
-        <% @site.data.navbar.left_links.each do |item| %>
-          <%= render Shared::Nav::Item.new(title: item.title, link: item.link, active: current_item?(item)) %>
-        <% end %>
-      </div>
-      <div class="nav-group">
-        <% @site.data.navbar.right_links.each do |item| %>
-          <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
-        <% end %>
-      </div>
-    </nav-links>
-    <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…", display_collection: true %>
-    <%= render Shared::Nav::Button.new %>
+  <nav class="site-nav" aria-label="Main" data-toggle-target="item" data-drawer>
+    <div class="nav-group">
+      <% @site.data.navbar.left_links.each do |item| %>
+        <%= render Shared::Nav::Item.new(title: item.title, link: item.link, active: current_item?(item)) %>
+      <% end %>
+    </div>
+    <search class="site-search">
+      <%= svg "/docs/images/icons/search.svg" %>
+      <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…", display_collection: true %>
+    </search>
+    <div class="nav-group">
+      <% @site.data.navbar.right_links.each do |item| %>
+        <%= render Shared::Nav::Item.new(title: item.title, link: item.link) %>
+      <% end %>
+    </div>
+    <button type="button" class="theme-toggle" data-controller="theme" data-action="theme#toggle" aria-label="Toggle dark mode">
+      <span class="theme-toggle-label">Dark mode</span>
+      <span class="theme-toggle-icon">
+        <%= svg "/docs/images/icons/sun.svg", class: "sun" %>
+        <%= svg "/docs/images/icons/moon.svg", class: "moon" %>
+      </span>
+    </button>
   </nav>
+
+  <button type="button" class="menu-toggle" data-toggle-target="button" data-action="toggle#click" aria-label="Menu" aria-expanded="false"></button>
 </header>

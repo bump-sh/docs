@@ -1,0 +1,22 @@
+/* Page hero: title, optional description and tags. */
+
+@layer components {
+  page-hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding-block: var(--spacing-16) var(--spacing-4);
+  }
+
+  page-hero p {
+    max-width: 72ch;
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+  }
+
+  @media (--doc-collapsed) {
+    page-hero {
+      padding-block-start: var(--spacing-10);
+    }
+  }
+}

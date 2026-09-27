@@ -1,0 +1,108 @@
+/* Element defaults: typography, links, code, focus. */
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Anchored headings land below the sticky header */
+    scroll-padding-top: calc(var(--header-height) + var(--spacing-8));
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-size: var(--doc-font-size);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--title);
+    font-weight: var(--weight-semibold);
+    line-height: var(--line-height-title);
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: var(--text-base);
+  }
+
+  a {
+    color: var(--accent-text);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  pre,
+  code,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
+    font-size: var(--code-font-size);
+  }
+
+  /* Inline code: subtle surface, hairline, small radius */
+  :not(pre) > code {
+    background-color: var(--surface-muted);
+    border: var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 1px var(--spacing-1);
+  }
+
+  /* Every date on the site: quiet mono chip */
+  time {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    white-space: nowrap;
+  }
+
+  ::selection {
+    background-color: var(--accent-soft);
+  }
+
+  strong {
+    font-weight: var(--weight-semibold);
+  }
+
+  hr {
+    border: 0;
+    border-top: var(--hairline);
+  }
+
+  :focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+}

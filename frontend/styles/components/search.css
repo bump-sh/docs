@@ -1,7 +1,84 @@
-bridgetown-search-form {
-  input[type="search"] {
-    background: var(--bg-color) url(/docs/images/icons/search.svg) left var(--spacing-3) center no-repeat;
+/* Site search: quiet chip input, results panel from bridgetown-quick-search
+   (shadow DOM, themed through its custom properties and the inner part). */
+
+@layer components {
+  .site-search {
+    display: block;
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin-inline-start: auto;
+  }
+
+  .site-search > svg {
+    position: absolute;
+    top: 50%;
+    left: var(--spacing-3);
+    width: 14px;
+    height: 14px;
+    color: var(--text-secondary);
+    pointer-events: none;
+    translate: 0 -50%;
+  }
+
+  bridgetown-search-form {
+    display: block;
+    position: relative;
+  }
+
+  .site-search input {
+    appearance: none;
     width: 100%;
-    padding-left: var(--spacing-9);
+    height: var(--spacing-8);
+    background-color: var(--surface);
+    border: var(--hairline);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-size: var(--doc-font-size);
+    padding: 0 var(--spacing-3) 0 var(--spacing-8);
+    transition: border-color var(--duration) var(--easing);
+  }
+
+  .site-search input::placeholder {
+    color: var(--text-secondary);
+  }
+
+  .site-search input:hover,
+  .site-search input:focus {
+    border-color: var(--border-hover);
+    outline: none;
+  }
+
+  bridgetown-search-results {
+    --background: var(--surface);
+    --text-color: var(--text);
+    --link-color: var(--title);
+    --divider-color: var(--border);
+    --border-radius: var(--radius-lg);
+    --border-corner-radius: var(--radius-lg);
+
+    font-size: var(--doc-font-size);
+    margin-top: var(--spacing-1);
+  }
+
+  bridgetown-search-results::part(inner) {
+    border: var(--hairline);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+
+  @media (--nav-collapsed) {
+    /* First row of the drawer */
+    .site-search {
+      flex: none;
+      order: -1;
+      max-width: none;
+      margin-inline-start: 0;
+      margin-block-end: var(--spacing-3);
+    }
+
+    bridgetown-search-results {
+      width: 100%;
+    }
   }
 }

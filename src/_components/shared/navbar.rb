@@ -1,6 +1,6 @@
 class Shared::Navbar < Bridgetown::Component
-  def initialize(metadata:, resource:, collection: nil)
-    @metadata, @resource = metadata, resource
+  def initialize(resource:, collection: nil)
+    @resource = resource
     @collection = collection || @resource.collection&.label
     @site = Bridgetown::Current.site
   end
