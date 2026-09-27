@@ -116,4 +116,4 @@ A common practice is to have your unit tests results tested against the API cont
 
 Once you’ve defined your contract and implemented your API, you can use a tool to [create the user-facing documentation](https://bump.sh/api-documentation). In addition to documentation generation based on API contract documents, Bump.sh also integrates with your CI pipeline to ensure that changes to the API are noted in the documentation upon each release.
 
-If you’re interested in learning more about API design or development, be sure to check out the [Bump.sh blog](https://bump.sh/blog), or [sign up for free](https://bump.sh/users/sign_up) to see how Bump.sh can help you generate user documentation more easily.
+If you’re interested in learning more about API design or development, be sure to check out the [Bump.sh blog](https://bump.sh/blog), or [sign up](https://bump.sh/users/sign_up) to see how Bump.sh can help you generate user documentation more easily.
