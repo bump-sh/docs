@@ -1,39 +1,37 @@
-columns: 
+columns:
   - label: Product
     items:
-    - label: API Documentation
+    - label: API documentation
       link: https://bump.sh/api-documentation
-    - label: Change Management
-      link: https://bump.sh/api-change-management
-    - label: Hubs
-      link: https://bump.sh/api-catalog
+    - label: MCP platform
+      link: https://bump.sh/mcp
+    - label: Pricing
+      link: https://bump.sh/pricing
     - label: API Diff
       link: https://api-diff.io/
       external: true
   - label: Specifications
     items:
-    - label: OpenAPI (Swagger)
-      link: https://bump.sh/openapi
+    - label: OpenAPI
+      link: /openapi/v3.2/
     - label: AsyncAPI
-      link: https://bump.sh/asyncapi
-    - label: GraphQL
-      link: https://bump.sh/graphql
-    - label: gRPC
-      link: https://bump.sh/grpc
-    - label: SOAP
-      link: https://bump.sh/soap
+      link: /guides/asyncapi/what-is-asyncapi/
+    - label: Arazzo
+      link: /arazzo/v1.0/
+    - label: Flower
+      link: /help/mcp-servers/specification-support/flower-support/
   - label: Resources
     items:
-    - label: Customers
-      link: https://bump.sh/customers
     - label: Blog
       link: https://bump.sh/blog
     - label: CLI
       link: https://github.com/bump-sh/cli
+    - label: API references
+      link: https://developers.bump.sh/
     - label: Status
       link: https://status.bump.sh/
-    - label: API References
-      link: https://developers.bump.sh/
+    - label: About
+      link: https://bump.sh/about
     - label: Contact
       link: mailto:hello@bump.sh
 bottom:
@@ -45,16 +43,20 @@ bottom:
     link: https://bump.sh/terms
   - label: Data Processing Agreement
     link: https://bump.sh/dpa
+  - label: Cookie policy
+    link: https://bump.sh/cookie-policy
+  - label: Security
+    link: https://bump.sh/security
 social:
-  - label: Github
+  - label: GitHub
     link: https://github.com/bump-sh
     icon: github.svg
+  - label: Bluesky
+    link: https://bsky.app/profile/bumpsh.bsky.social
+    icon: bluesky.svg
   - label: Mastodon
     link: https://fosstodon.org/@Bump_hq
     icon: mastodon.svg
-  - label: Linkedin
+  - label: LinkedIn
     link: https://www.linkedin.com/company/bump-sh/
     icon: linkedin.svg
-  - label: X
-    link: https://twitter.com/bump_hq
-    icon: twitter.svg
