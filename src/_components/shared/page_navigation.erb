@@ -6,7 +6,7 @@
     <% end %>
   <% end %>
   <% if @next.present? %>
-    <%= link_to @next.resource.relative_url do %>
+    <%= link_to @next.resource.relative_url, class: "next" do %>
       <%= @next.label %>
       <%= svg "/docs/images/icons/arrow-right.svg" %>
     <% end %>

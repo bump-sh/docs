@@ -1,0 +1,81 @@
+/* Buttons opt in with .button; data-button-style and data-button-size
+   only swap the --button-* values. Bare <button> elements stay unstyled
+   (the reset strips their chrome) so shell controls keep their own look,
+   except inside prose where an author's <button> is always a button. */
+
+@layer components {
+  .button,
+  .prose button {
+    --button-bg: var(--accent);
+    --button-bg-hover: color-mix(in srgb, var(--accent), black 10%);
+    --button-text: var(--white);
+    --button-text-hover: var(--white);
+    --button-border: transparent;
+    --button-border-hover: transparent;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    height: var(--spacing-8);
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border);
+    border-radius: var(--radius-md);
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: var(--doc-font-size);
+    font-weight: var(--weight-medium);
+    line-height: 1;
+    padding: var(--spacing-2) var(--spacing-4);
+    text-decoration: none;
+    transition:
+      background-color var(--duration) var(--easing),
+      border-color var(--duration) var(--easing),
+      color var(--duration) var(--easing);
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .button:hover,
+  .prose button:hover {
+    background-color: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
+    color: var(--button-text-hover);
+    text-decoration: none;
+  }
+
+  .button:disabled,
+  .prose button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .button svg,
+  .prose button svg {
+    flex-shrink: 0;
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+  }
+
+  /* Quiet chip: surface + hairline */
+  .button[data-button-style="secondary"] {
+    --button-bg: var(--surface);
+    --button-bg-hover: var(--surface);
+    --button-border: var(--border);
+    --button-border-hover: var(--border-hover);
+    --button-text: var(--text);
+    --button-text-hover: var(--title);
+  }
+
+  .button[data-button-size="small"] {
+    gap: var(--spacing-1);
+    height: var(--spacing-6);
+    font-size: var(--text-xs);
+    padding: var(--spacing-1) var(--spacing-3);
+  }
+
+  .button[data-button-size="small"] svg {
+    width: var(--spacing-3);
+    height: var(--spacing-3);
+  }
+}

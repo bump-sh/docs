@@ -1,28 +1,27 @@
-<side-item id="<%= category_id %>"<% if @items.present? %> aria-expanded="true" data-sidebar-target="expandable"<% end %>>
-  <div class="item"<% if @is_current %> aria-current="true"<% elsif @is_parent %>data-current-parent="true"<% end %>>
+<li>
+  <div class="sidebar-row">
     <%= svg "/docs/images/icons/#{@icon}.svg" if @icon.present? %>
     <% if @resource.present? %>
-      <a class="link" href="<%= @resource.relative_url %>">
+      <a class="sidebar-link" href="<%= @resource.relative_url %>"<% if current? %> aria-current="page"<% end %>>
         <%= @label %>
       </a>
+      <% if @items.present? %>
+        <button type="button" class="sidebar-caret" aria-controls="<%= category_id %>" aria-expanded="<%= expanded? %>" aria-label="Toggle <%= @label %> pages" data-action="sidebar#toggle">
+          <%= svg "/docs/images/icons/caret-right.svg" %>
+        </button>
+      <% end %>
     <% else %>
-      <a href="" aria-controls="<%= category_id %>" data-action="click->sidebar#toggle">
+      <button type="button" class="sidebar-link" aria-controls="<%= category_id %>" aria-expanded="<%= expanded? %>" data-action="sidebar#toggle">
         <%= @label %>
-      </a>
-    <% end %>
-    <% if @items.present? %>
-      <button data-button-style="secondary" data-button-size="xsmall" aria-controls="<%= category_id %>" data-action="sidebar#toggle" aria-label="<%= @is_current ? "Expand list" : "Hide list" %>">
-        <%= svg "/docs/images/icons/caret-right.svg" %>
+        <span class="sidebar-caret"><%= svg "/docs/images/icons/caret-right.svg" %></span>
       </button>
     <% end %>
   </div>
   <% if @items.present? %>
-    <ul class="sidebar-sublist">
+    <ul class="sidebar-sublist" id="<%= category_id %>"<% unless expanded? %> hidden<% end %>>
       <% @items.each do |item| %>
-        <li>
-          <%= render Shared::Sidebar::Item.new(page: item, current: @current, parent_id: category_id) %>
-        </li>
+        <%= render Shared::Sidebar::Item.new(page: item, current: @current, parent_id: category_id) %>
       <% end %>
     </ul>
   <% end %>
-</side-item>
+</li>

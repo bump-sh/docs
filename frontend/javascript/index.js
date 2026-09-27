@@ -1,5 +1,4 @@
 import "$styles/index.css";
-import "$styles/syntax-highlighting.css";
 import * as Turbo from "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
 import "bridgetown-lit-renderer";
@@ -56,10 +55,11 @@ function renderMermaidDiagrams() {
     preEl.replaceWith(container);
   });
 
+  // ponytail: the theme is picked at render time, diagrams keep it when the theme toggles
   mermaid.initialize({
     startOnLoad: false,
     securityLevel: "strict",
-    theme: "default",
+    theme: document.documentElement.dataset.theme === "dark" ? "dark" : "default",
   });
 
   mermaid.run({ querySelector: ".mermaid" });

@@ -1,0 +1,89 @@
+/* Code panels (Rouge output) on the dark panel, in both themes: same
+   colorway as the API documentation examples. Strings derive from the
+   accent, the rest is a fixed palette tuned for contrast on zinc-900. */
+
+@layer components {
+  pre {
+    /* Dark panel whatever the page theme: scrollbars and selection follow */
+    color-scheme: dark;
+    background-color: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: var(--radius-lg);
+    color: var(--code-text);
+    line-height: 1.7;
+    overflow-x: auto;
+    padding: var(--spacing-4) var(--spacing-5);
+    tab-size: 2;
+  }
+
+  pre code {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .highlight {
+    --code-string: var(--accent-on-dark);
+    --code-key: color-mix(in srgb, var(--accent), white 85%);
+    --code-keyword: #c4b5fd;
+    --code-number: #fbbf24;
+    --code-title: #7dd3fc;
+    --code-comment: var(--zinc-400);
+    --code-deletion: color-mix(in srgb, var(--error), white 40%);
+    --code-addition: color-mix(in srgb, var(--success), white 40%);
+  }
+
+  /* Comments, shell prompts */
+  .highlight :is(.c, .c1, .cm, .cp, .cs, .gp) {
+    color: var(--code-comment);
+    font-style: italic;
+  }
+
+  /* Keywords, types */
+  .highlight :is(.k, .kc, .kd, .kn, .kp, .kr, .kt, .ow) {
+    color: var(--code-keyword);
+  }
+
+  /* Strings, symbols, regexps, variables */
+  .highlight :is(.s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss, .nv, .vi, .vg, .vc) {
+    color: var(--code-string);
+  }
+
+  /* Keys and attributes (YAML keys, JSON properties, HTML attributes) */
+  .highlight :is(.na, .nl, .py) {
+    color: var(--code-key);
+  }
+
+  /* Numbers, literals, constants */
+  .highlight :is(.m, .mf, .mh, .mi, .mo, .il, .no, .bp) {
+    color: var(--code-number);
+  }
+
+  /* Functions, classes, tags, builtins */
+  .highlight :is(.nf, .nb, .nc, .nn, .nt, .ne, .nd, .ni) {
+    color: var(--code-title);
+  }
+
+  /* Diff */
+  .highlight .gi {
+    color: var(--code-addition);
+  }
+
+  .highlight .gd {
+    color: var(--code-deletion);
+  }
+
+  .highlight .gs {
+    font-weight: var(--weight-semibold);
+  }
+
+  .highlight .ge {
+    font-style: italic;
+  }
+
+  /* Rouge flags stray characters (a colon in a YAML path) as errors:
+     they read as plain text */
+  .highlight .err {
+    color: inherit;
+  }
+}

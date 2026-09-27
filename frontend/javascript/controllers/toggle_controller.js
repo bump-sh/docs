@@ -11,9 +11,12 @@ export default class Toggle extends Controller {
     document.removeEventListener('click', this.handleClickOutside)
   }
 
+  // Any click outside the panel and its button closes it: the page,
+  // the scrim, the header
   handleClickOutside(event) {
     if (this.itemTarget.getAttribute("data-toggle-active") === "true" &&
-      !this.element.contains(event.target)) {
+      !this.itemTarget.contains(event.target) &&
+      !this.buttonTarget.contains(event.target)) {
       this.close()
     }
   }

@@ -4,7 +4,7 @@ class Guides::Sidebar < Bridgetown::Component
     @authors = @data.authors
     @category = @data.categories.first
     @tags = @data.tags
-    @update = @data.date.strftime("%B %d, %Y")
+    @date = @data.date
     @relative_path = relative_path
     @slug = @data.slug
   end

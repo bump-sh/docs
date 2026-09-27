@@ -1,19 +1,15 @@
 <highlight-banner>
-  <div class="wrapper">
-    <div class="content">
-        <div class="title">    
-            <% if @image.present? %>
-                <%= svg "#{@image}", class: "image" %>
-            <% end %>
-            <h3><%= @title %></h3>
-        </div>
-      <%= content %>
-      <% if has_button_content? %>
-        <%= link_to @link_url, class: "button" do %>
-          <%= svg "#{@link_icon}" if @link_icon.present? %>
-          <%= @link_label if @link_label.present? %>
-        <% end %>
-      <% end %>
-    </div>
+  <div class="title">
+    <% if @image.present? %>
+      <%= svg "#{@image}", class: "image" %>
+    <% end %>
+    <h3><%= @title %></h3>
   </div>
+  <%= content %>
+  <% if has_button_content? %>
+    <%= link_to @link_url, class: "button" do %>
+      <%= svg "#{@link_icon}" if @link_icon.present? %>
+      <%= @link_label if @link_label.present? %>
+    <% end %>
+  <% end %>
 </highlight-banner>

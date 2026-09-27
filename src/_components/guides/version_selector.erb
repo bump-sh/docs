@@ -1,30 +1,24 @@
-<div class="dropdown" data-controller="toggle">
-  <button class="dropdown-trigger" data-toggle-target="button" data-action="toggle#click" aria-haspopup="true" aria-expanded="false">
-    <span class="dropdown-label"><%= @current_version %></span>
-    <span class="dropdown-caret">
-      <%= svg "/docs/images/icons/caret-right.svg" %>
-    </span>
+<div class="dropdown" data-controller="toggle" data-action="keydown.esc@window->toggle#close">
+  <button type="button" class="dropdown-trigger" data-toggle-target="button" data-action="toggle#click" aria-haspopup="true" aria-expanded="false">
+    <%= @current_version %>
+    <%= svg "/docs/images/icons/caret-right.svg" %>
   </button>
-  <div class="dropdown-menu" data-toggle-target="item" data-toggle-active="false" role="menu">
-    <ul class="dropdown-list">
-      <% @available_versions.each do |version| %>
-        <% if version == @current_version %>
-          <li class="dropdown-item is-current" aria-current="true" data-action="click->toggle#click">
-            <span><%= version %></span>
-            <%= svg "/docs/images/icons/checkmark.svg" %>
-          </li>
-        <% elsif page_exist_in_version?(version) %>
-          <li class="dropdown-item">
-            <%= link_to page_url_in_version(version) do %>
-              <%= version %>
-            <% end %>
-          </li>
-        <% else %>
-          <li class="dropdown-item disabled">
-            <span><%= version %></span>
-          </li>
-        <% end %>
+  <ul class="dropdown-menu" data-toggle-target="item" role="menu">
+    <% @available_versions.each do |version| %>
+      <% if version == @current_version %>
+        <li class="dropdown-item" aria-current="true">
+          <span><%= version %></span>
+          <%= svg "/docs/images/icons/checkmark.svg" %>
+        </li>
+      <% elsif page_exist_in_version?(version) %>
+        <li class="dropdown-item">
+          <%= link_to version, page_url_in_version(version) %>
+        </li>
+      <% else %>
+        <li class="dropdown-item disabled">
+          <span><%= version %></span>
+        </li>
       <% end %>
-    </ul>
-  </div>
+    <% end %>
+  </ul>
 </div>

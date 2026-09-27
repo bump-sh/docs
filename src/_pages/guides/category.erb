@@ -16,8 +16,6 @@ prototype:
 <% else %>
   <%= render Shared::Hero.new(title: data.category.titleize) %>
 <% end %>
-<div class="double-pane">
-  <%= render Categories::Sidebar.new(categories: site.data.guides.categories, current: data.category) %>
-  <%= render Guides::List.new(resources: paginator.resources, category_name: @category.name) %>
-</div>
+<%= render Guides::Filters.new(categories: site.data.guides.categories, current: data.category) %>
+<%= render Guides::List.new(resources: paginator.resources) %>
 <%= render Shared::Pagination.new(paginator: paginator) %>

@@ -1,32 +1,37 @@
-#markdown-toc {
-  align-self: start;
-  border-left: var(--border-default);
-  grid-column: 2 / -1;
-  grid-row: 1 / 1000;
-  position: sticky;
-  top: var(--spacing-8);
-  font-size: var(--text-sm);
-}
+/* "On this page" column, built from the kramdown TOC by the inspector. */
 
-#markdown-toc,
-#markdown-toc ul {
-  list-style-type: none;
-  padding-left: var(--spacing-6);
-}
+@layer components {
+  .doc-toc {
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-10));
+    font-size: var(--text-xs);
+    max-height: calc(100dvh - var(--header-height) - var(--spacing-10));
+    overflow-y: auto;
+  }
 
-#markdown-toc,
-#markdown-toc ul,
-#markdown-toc li {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-small);
-}
+  .doc-toc-title {
+    margin-block-end: var(--spacing-2);
+    color: var(--title);
+    font-weight: var(--weight-semibold);
+  }
 
-#markdown-toc :where(a) {
-  color: var(--text-color);
-  text-decoration: none;
-}
+  .doc-toc ul {
+    list-style: none;
+    padding: 0;
+  }
 
-#markdown-toc :where(a:hover) {
-  color: var(--base-color);
+  .doc-toc ul ul {
+    padding-inline-start: var(--spacing-3);
+  }
+
+  .doc-toc a {
+    display: block;
+    color: var(--text-secondary);
+    padding-block: var(--spacing-1);
+  }
+
+  .doc-toc a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
 }

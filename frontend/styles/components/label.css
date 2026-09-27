@@ -1,0 +1,70 @@
+/* Pills: tags, categories, version chips. */
+
+@layer components {
+  .label {
+    --label-bg: var(--surface);
+    --label-border: var(--border);
+    --label-text: var(--text-secondary);
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    background-color: var(--label-bg);
+    border: 1px solid var(--label-border);
+    border-radius: var(--radius-round);
+    color: var(--label-text);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    line-height: 1.25rem;
+    padding: var(--spacing-05) var(--spacing-2-5);
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      border-color var(--duration) var(--easing),
+      color var(--duration) var(--easing);
+  }
+
+  a.label:hover {
+    --label-border: var(--border-hover);
+    --label-text: var(--text);
+    text-decoration: none;
+  }
+
+  .label[aria-current],
+  .label[data-label-status="info"] {
+    --label-bg: var(--accent-soft);
+    --label-border: color-mix(in srgb, var(--accent), transparent 70%);
+    --label-text: var(--accent-text);
+  }
+
+  .label[data-label-status="success"] {
+    --label-bg: var(--success-soft);
+    --label-border: color-mix(in srgb, var(--success), transparent 70%);
+    --label-text: var(--success-text);
+  }
+
+  .label[data-label-status="warning"] {
+    --label-bg: var(--warning-soft);
+    --label-border: color-mix(in srgb, var(--warning), transparent 70%);
+    --label-text: var(--warning-text);
+  }
+
+  .label[data-label-status="error"],
+  .label[data-label-status="breaking"] {
+    --label-bg: var(--error-soft);
+    --label-border: color-mix(in srgb, var(--error), transparent 70%);
+    --label-text: var(--error-text);
+  }
+
+  .label[data-label-status="inverted"] {
+    --label-bg: var(--title);
+    --label-border: var(--title);
+    --label-text: var(--bg);
+  }
+
+  tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+}

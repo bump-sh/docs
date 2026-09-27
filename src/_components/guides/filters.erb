@@ -1,0 +1,6 @@
+<nav class="guide-filters" aria-label="Guide categories">
+  <a class="label" href="<%= relative_url "/guides" %>"<% if @current.nil? %> aria-current="page"<% end %>>All guides</a>
+  <% @categories.each do |category| %>
+    <a class="label" href="<%= relative_url guide_category_url(category.name) %>"<% if current?(category) %> aria-current="page"<% end %>><%= category.name %></a>
+  <% end %>
+</nav>

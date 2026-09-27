@@ -1,60 +1,47 @@
-.guides {
-  .section-container {
-    container: guides / inline-size;
+/* Guides index and category pages: hero, category filters, sections. */
+
+@layer pages {
+  .guides-page {
+    row-gap: var(--spacing-12);
+    padding-block-end: var(--spacing-24);
+  }
+
+  .guides-page page-hero {
+    padding-block-end: 0;
+  }
+
+  /* Filters sit right under the hero, sections breathe below */
+  .guides-page .guide-filters {
+    margin-block: calc(-1 * var(--spacing-6)) 0;
+  }
+
+  .guide-filters {
     display: flex;
-    flex-direction: column;
-    gap: var(--gap-xlarge);
-    margin-block: var(--spacing-16);
-  }
-
-  guide-list {
-    .list-container {
-      grid-template-columns: repeat(3, 1fr);
-
-      @container guides (width < 800px) {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .browse-all {
-      flex-direction: row;
-      gap: var(--gap-small);
-      justify-content: center;
-      padding-block: var(--spacing-4);
-    }
-  }
-}
-
-.guide {
-  .double-pane {
-    --side-min-width: 250px;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
   }
 
   .guide-content {
-    padding-block: var(--spacing-10);
-
-    h1 {
-      font-size: clamp(2rem, 10vw, 2.5rem);
-    }
-
-    .guide-cover {
-      margin-bottom: var(--spacing-10);
-    }
-
-    img {
-      border-radius: var(--border-radius-xlarge);
-      width: 100%;
-    }
+    max-width: var(--content-width);
   }
 
-  @container main (width < 800px) {
-    aside {
-      border: 0;
-      padding: 0;
+  .guide-content h1 {
+    margin-block-end: var(--spacing-8);
+  }
+
+  .guide-content img {
+    width: 100%;
+  }
+
+  @media (--doc-collapsed) {
+    .guides-page {
+      row-gap: var(--spacing-10);
     }
 
-    .guide-content {
-      border-top: var(--border-default);
+    .guide-filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-block-end: var(--spacing-2);
     }
   }
 }

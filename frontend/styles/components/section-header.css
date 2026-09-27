@@ -1,0 +1,41 @@
+/* Section header: title, optional description, optional "see all" link. */
+
+@layer components {
+  .section-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--spacing-2) var(--spacing-6);
+  }
+
+  .section-header h2 {
+    font-size: var(--text-xl);
+  }
+
+  .section-header p {
+    max-width: 72ch;
+    margin-block-start: var(--spacing-1);
+    color: var(--text-secondary);
+  }
+
+  .see-all {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+  }
+
+  .see-all:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .see-all svg {
+    width: 11px;
+    height: 12px;
+  }
+}

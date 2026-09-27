@@ -1,77 +1,311 @@
-body {
-  grid-template-rows: auto 1fr auto;
-  line-height: 1.5;
-  margin: 0;
-  min-height: 100vh;
-  position: relative;
-}
+/* Page shells: centered wrapper, sticky header band, off-canvas drawers,
+   the documentation two-column layout and the guides double pane.
 
-body > header {
-  grid-area: header;
-}
+   Drawers are mobile-first: the header nav and the documentation sidebar
+   start as off-canvas panels and become inline columns past their own
+   breakpoint (--nav-collapsed, --doc-collapsed in tokens.css).
 
-body > aside {
-  grid-area: aside;
-}
+   Stimulus contract (toggle controller): data-toggle-active="true" is
+   set on the open drawer ([data-drawer]). */
 
-body > main {
-  container: main / inline-size;
-  grid-area: main;
-}
+@layer layout {
+  /* --- Centered grid shell --- */
 
-body > footer {
-  grid-area: footer;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr min(var(--page-content-width), calc(100% - var(--spacing-20))) 1fr;
-  column-gap: var(--spacing-10);
-  justify-content: center;
-}
-
-.wrapper > * {
-  grid-column: 2;
-}
-
-.wrapper[data-wrapper-size="small"] {
-  --page-content-width: 75ch;
-}
-
-.full-bleed {
-  grid-column: 1 / -1;
-}
-
-.double-pane {
-  --side-min-width: 100px;
-
-  display: grid;
-  grid-template-columns: max(var(--side-min-width), min(25%, 200px)) auto;
-  gap: var(--spacing-10) clamp(var(--spacing-10), 15%, var(--spacing-34));
-
-  aside {
-    border-right: var(--border-default);
-    box-sizing: border-box;
-    height: 100%;
-    padding-block: var(--spacing-14);
-    padding-right: var(--spacing-10);
-    width: 100%
+  .wrapper {
+    display: grid;
+    grid-template-columns:
+      1fr
+      min(var(--wrapper-width), calc(100% - 2 * var(--spacing-6)))
+      1fr;
+    column-gap: var(--spacing-8);
   }
-}
 
-@container main (width < 800px) {
-  .double-pane {
-    gap: var(--gap-large);
-    grid-template-columns: 1fr;
-    padding-block: var(--spacing-10);
+  .wrapper > * {
+    grid-column: 2;
+  }
 
-    aside {
-      border-right: 0;
+  .full-bleed {
+    grid-column: 1 / -1;
+  }
+
+  /* --- Off-canvas drawers --- */
+
+  [data-drawer] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: fixed;
+    inset-block: 0;
+    left: 0;
+    z-index: var(--z-drawer);
+    width: var(--sidebar-width);
+    max-width: calc(100vw - var(--spacing-16));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background-color: var(--bg);
+    border-inline-end: var(--hairline);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-6);
+    transform: translateX(-100%);
+    /* visibility, not display: the closed panel stays in the tree so
+       the slide transition can run */
+    visibility: hidden;
+  }
+
+  [data-drawer][data-toggle-active="true"] {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  /* Scrim: dims everything behind an open drawer, header included, and
+     swallows the tap that closes it (the toggle controller closes on
+     any click outside the panel). It lives in the header's stacking
+     context so it paints above the header's own contents. */
+  .site-header::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-scrim);
+    background-color: rgb(0 0 0 / 0.4);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body:has([data-drawer][data-toggle-active="true"]) {
+    overflow: hidden;
+  }
+
+  body:has([data-drawer][data-toggle-active="true"]) .site-header::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* --- Sticky header band --- */
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    height: var(--header-height);
+    padding-inline: var(--spacing-6);
+    border-block-end: var(--hairline);
+  }
+
+  /* The blurred band is a pseudo-element: a backdrop-filter on the
+     header itself would turn it into the containing block of the fixed
+     nav drawer and scrim inside it. */
+  .site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: color-mix(in srgb, var(--bg), transparent 20%);
+    backdrop-filter: blur(8px);
+  }
+
+  .site-logo {
+    flex-shrink: 0;
+  }
+
+  .site-logo img {
+    height: 28px;
+  }
+
+  .logo-dark,
+  :root[data-theme="dark"] .logo-light {
+    display: none;
+  }
+
+  :root[data-theme="dark"] .logo-dark {
+    display: block;
+  }
+
+  .site-nav {
+    gap: var(--spacing-2);
+  }
+
+  .nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Burger: two bars crossing into an X when the drawer is open */
+  .menu-toggle {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    margin-inline-start: auto;
+    width: var(--spacing-6);
+    height: var(--spacing-8);
+  }
+
+  .menu-toggle::before,
+  .menu-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: var(--spacing-2);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--text);
+  }
+
+  .menu-toggle::after {
+    top: auto;
+    bottom: var(--spacing-2);
+  }
+
+  .menu-toggle[aria-expanded="true"]::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"]::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media not (--nav-collapsed) {
+    .site-header {
+      gap: var(--spacing-8);
     }
 
-    .wrapper {
-      gap: 0;
-      grid-template-columns: 1fr;
+    /* The nav leaves the drawer and lays out as a row in the band */
+    .site-nav {
+      all: unset;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      gap: var(--spacing-6);
+      min-width: 0;
+    }
+
+    .nav-group {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--spacing-6);
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  /* --- Documentation: sidebar drawer or column + content --- */
+
+  .doc-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    column-gap: var(--spacing-12);
+    min-width: 0;
+    padding: 0 var(--spacing-6) var(--spacing-16);
+  }
+
+  .doc-article {
+    max-width: var(--content-width);
+  }
+
+  .doc-toc {
+    display: none;
+  }
+
+  /* Sticky bar under the header holding the sidebar trigger */
+  .doc-mobile-bar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: var(--header-height);
+    z-index: 1;
+    height: var(--spacing-12);
+    margin-inline: calc(-1 * var(--spacing-6));
+    margin-block-end: var(--spacing-6);
+    padding-inline: var(--spacing-6);
+    background-color: color-mix(in srgb, var(--bg), transparent 20%);
+    backdrop-filter: blur(8px);
+    border-block-end: var(--hairline);
+  }
+
+  @media not (--doc-collapsed) {
+    .doc-layout {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    /* The sidebar leaves the drawer and becomes a sticky column */
+    .doc-sidebar {
+      all: unset;
+      display: block;
+      position: sticky;
+      top: var(--header-height);
+      flex-shrink: 0;
+      width: var(--sidebar-width);
+      height: calc(100dvh - var(--header-height));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      border-inline-end: var(--hairline);
+      padding: var(--spacing-5) var(--spacing-5) var(--spacing-7);
+    }
+
+    .doc-main {
+      flex: 1;
+      padding: var(--spacing-10) var(--spacing-12) var(--spacing-24);
+    }
+
+    .doc-mobile-bar {
+      display: none;
+    }
+  }
+
+  @media not (--toc-collapsed) {
+    .doc-main:has(> .doc-toc) {
+      grid-template-columns: minmax(0, 1fr) 14rem;
+    }
+
+    .doc-toc {
+      display: block;
+    }
+  }
+
+  /* --- Guides: side column + content --- */
+
+  .double-pane {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--spacing-10) var(--spacing-12);
+    padding-block: var(--spacing-8) var(--spacing-16);
+  }
+
+  @media not (--doc-collapsed) {
+    .double-pane {
+      grid-template-columns: minmax(200px, 25%) minmax(0, 1fr);
+      padding-block: var(--spacing-10) var(--spacing-24);
+    }
+
+    .double-pane > aside {
+      border-inline-end: var(--hairline);
+      padding-inline-end: var(--spacing-8);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    [data-drawer] {
+      transition:
+        transform 0.35s cubic-bezier(0.32, 0.72, 0, 1),
+        visibility 0.35s;
+    }
+
+    body::after {
+      transition: opacity 0.35s var(--easing);
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after {
+      transition: transform 0.25s ease-out;
     }
   }
 }

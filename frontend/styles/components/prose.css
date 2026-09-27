@@ -1,0 +1,179 @@
+/* Markdown output: vertical rhythm, lists, images, headings anchors,
+   collapsibles, keyboard keys. Code panels, callouts and tables live
+   in their own files. */
+
+@layer components {
+  .prose {
+    --flow-space: var(--spacing-4);
+    overflow-wrap: break-word;
+  }
+
+  .prose > * + * {
+    margin-block-start: var(--flow-space);
+  }
+
+  .prose > :is(h2, h3, h4, h5, h6) {
+    --flow-space: var(--spacing-10);
+  }
+
+  .prose > h1 + *,
+  .prose > :is(h2, h3, h4, h5, h6) + * {
+    --flow-space: var(--spacing-4);
+  }
+
+  .prose p {
+    line-height: 1.75;
+  }
+
+  .prose ul,
+  .prose ol {
+    list-style-position: outside;
+    padding-inline-start: var(--spacing-6);
+  }
+
+  .prose ul {
+    list-style-type: disc;
+  }
+
+  .prose ul ul {
+    list-style-type: circle;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+  }
+
+  .prose ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  .prose li + li,
+  .prose li > ul,
+  .prose li > ol {
+    margin-block-start: var(--spacing-2);
+  }
+
+  .prose li::marker {
+    color: var(--text-secondary);
+  }
+
+  .prose img {
+    border: var(--hairline);
+    border-radius: var(--radius-md);
+    max-height: 600px;
+  }
+
+  .prose hr {
+    margin-block: var(--spacing-8);
+  }
+
+  .prose mark {
+    background: none;
+    color: var(--accent-text);
+  }
+
+  /* --- Heading anchors (injected by the inspector, hover to reveal) --- */
+
+  .heading-anchor {
+    color: var(--text-secondary);
+    font-weight: var(--weight-regular);
+    opacity: 0;
+    text-decoration: none;
+    transition: opacity var(--duration) var(--easing);
+  }
+
+  :is(h2, h3, h4):hover .heading-anchor,
+  .heading-anchor:focus-visible {
+    opacity: 1;
+  }
+
+  /* --- Collapsible blocks --- */
+
+  .prose details {
+    border: var(--hairline);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+
+  .prose details + details {
+    margin-block-start: var(--spacing-2);
+  }
+
+  .prose summary {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: var(--title);
+    cursor: pointer;
+    font-weight: var(--weight-medium);
+    list-style: none;
+  }
+
+  .prose summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .prose summary::before {
+    content: "";
+    flex-shrink: 0;
+    width: var(--spacing-2);
+    height: var(--spacing-2);
+    border-right: 1.5px solid var(--accent-text);
+    border-bottom: 1.5px solid var(--accent-text);
+    transform: rotate(-45deg);
+    transition: transform var(--duration) var(--easing);
+  }
+
+  .prose details[open] summary::before {
+    transform: rotate(45deg);
+  }
+
+  .prose details[open] summary {
+    margin-block-end: var(--spacing-3);
+  }
+
+  /* --- Keyboard keys --- */
+
+  .prose kbd {
+    display: inline-block;
+    background-color: var(--surface-muted);
+    border: var(--hairline);
+    border-bottom-width: 2px;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    line-height: 1;
+    padding: var(--spacing-1) var(--spacing-1-5);
+    white-space: nowrap;
+  }
+
+  /* --- Definition lists --- */
+
+  .prose dt {
+    color: var(--title);
+    font-weight: var(--weight-semibold);
+  }
+
+  .prose dd + dt {
+    margin-block-start: var(--spacing-3);
+  }
+
+  /* --- Task lists --- */
+
+  .prose .task-list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .prose .task-list-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-2);
+  }
+
+  /* --- Diagrams --- */
+
+  .prose .mermaid {
+    display: flex;
+    justify-content: center;
+  }
+}
