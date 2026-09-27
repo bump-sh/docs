@@ -37,7 +37,7 @@ On this page, you will also find a history of your invoices, available in PDF.
 
 ### Taxes
 
-We apply taxes in accordance with current regulations. Three scenarios are possible:
+We apply taxes in accordance with current regulations. Two scenarios are possible:
 
 - your billing address is located outside of Europe: we do not apply VAT.
 - your billing address is located in Europe : we apply a 20% VAT unless you provide your VAT number in your billing details.

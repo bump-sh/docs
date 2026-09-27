@@ -22,7 +22,13 @@ You can deploy workflow documents directly from your MCP server settings. To do 
 
 ## Deploy from the CLI
 
-You can deploy a workflow document using our CLI using the `TBD` command. The complete process is available on the dedicated [CLI page](/help/continuous-integration/cli/).
+You can deploy a workflow document with the CLI, using the `deploy` command and its `--mcp-server` flag:
+
+```shell
+bump deploy path/to/workflow.yml --mcp-server my-mcp-server-id-or-slug --token $BUMP_TOKEN
+```
+
+The complete process is available on the dedicated [CLI page](/help/continuous-integration/cli/#deploy-a-workflow-document-on-your-mcp-server).
 
 ## Deploy using the GitHub Action
 
