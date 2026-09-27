@@ -30,5 +30,6 @@
 @import "components/pagination.css";
 @import "components/footer.css";
 
+@import "pages/home.css";
 @import "pages/guides.css";
 @import "pages/errored.css";

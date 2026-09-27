@@ -1,0 +1,147 @@
+---
+layout: default
+title: Bump.sh documentation
+page_class: home
+---
+
+<%
+  home = site.data.home
+  guides = site.collections.guides.resources.reject { |guide| guide.data.skip_listing }
+  updates = site.collections["product-updates"].resources.sort_by(&:date).reverse.first(4)
+%>
+<main class="wrapper home">
+  <section class="home-hero">
+    <a class="home-latest" href="<%= updates.first.relative_url %>">
+      <span class="label" data-label-status="info">New</span>
+      <%= updates.first.data.title %>
+      <%= svg "/docs/images/icons/arrow-right.svg" %>
+    </a>
+    <h1>Bump.sh documentation</h1>
+    <p>Everything you need to publish API documentation, deploy MCP servers, and keep your API consumers, humans and agents, up to date.</p>
+    <search class="home-search" aria-label="Search the documentation" data-controller="search" data-action="keydown.meta+k@window->search#focus keydown.ctrl+k@window->search#focus keydown.esc@window->search#close click@window->search#closeOutside">
+      <%= svg "/docs/images/icons/search.svg" %>
+      <docs-search-form>
+        <input slot="input" type="search" placeholder="Search the documentation…" data-search-target="input" data-action="focus->search#open" />
+        <docs-search-results data-search-target="results"></docs-search-results>
+      </docs-search-form>
+      <kbd class="search-shortcut">⌘K</kbd>
+    </search>
+    <div class="home-popular">
+      <span>Popular</span>
+      <% home.popular.each do |item| %>
+        <a class="label" href="<%= item.link %>"><%= item.label %></a>
+      <% end %>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(
+      title: "Get started",
+      description: "New to Bump.sh? Read the important concepts first, then pick your path.",
+      link_url: "/help/getting-started/concepts/",
+      link_label: "Important concepts") %>
+    <div class="home-paths">
+      <% home.paths.each do |path| %>
+        <article class="card path-card">
+          <h3><span class="icon-chip"><%= svg "/docs/images/icons/#{path.icon}.svg" %></span><%= path.title %></h3>
+          <p><%= path.description %></p>
+          <div class="command">
+            <%= markdownify "```shell\n#{path.code}\n```" %>
+            <button type="button" class="copy-button" data-action="copy#text" data-copy-text-param="<%= path.code %>" aria-label="Copy the command">
+              <%= svg "/docs/images/icons/copy.svg" %>
+              <%= svg "/docs/images/icons/checkmark.svg" %>
+            </button>
+          </div>
+          <a class="button" href="<%= path.link %>"><%= path.link_label %> <%= svg "/docs/images/icons/arrow-right.svg" %></a>
+        </article>
+      <% end %>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(
+      title: "Help center",
+      description: "The product documentation, feature by feature.",
+      link_url: "/help/",
+      link_label: "Browse the help center") %>
+    <div class="home-grid">
+      <% home.help.each do |item| %>
+        <a class="card home-card" href="<%= item.link %>">
+          <h3><%= svg "/docs/images/icons/#{item.icon}.svg" %><%= item.title %></h3>
+          <p><%= item.description %></p>
+        </a>
+      <% end %>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(
+      title: "Product updates",
+      description: "What shipped recently.",
+      link_url: "/product-updates/",
+      link_label: "All product updates") %>
+    <ol class="home-updates">
+      <% updates.each do |update| %>
+        <li>
+          <%= time_tag update.date %>
+          <a href="<%= update.relative_url %>"><%= update.data.title %></a>
+          <%= render Shared::Taglist.new(tags: update.data.tags) %>
+        </li>
+      <% end %>
+    </ol>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(
+      title: "Guides",
+      description: "Learn about APIs at large, and how to get the most out of Bump.sh.",
+      link_url: "/guides/",
+      link_label: "All #{guides.count} guides") %>
+    <div class="highlight-banners-row">
+      <%= render Shared::HighlightBanner.new(
+        title: "OpenAPI complete guide",
+        image: "/docs/images/logos/openapi.svg",
+        link_url: "/openapi/v3.2/",
+        link_label: "Discover the guide") do %>
+          <p>Every aspect of the OpenAPI 3.2 specification, from document structure to streaming, pagination and overlays.</p>
+      <% end %>
+      <%= render Shared::HighlightBanner.new(
+        title: "Arazzo complete guide",
+        image: "/docs/images/logos/arazzo.svg",
+        link_url: "/arazzo/v1.0/",
+        link_label: "Discover the guide") do %>
+          <p>Design and maintain Arazzo documents that describe real API workflows, ready to power MCP servers.</p>
+      <% end %>
+    </div>
+    <nav class="guide-filters" aria-label="Guide categories">
+      <% site.data.guides.categories.each do |category| %>
+        <a class="label" href="<%= guide_category_url(category.name) %>"><%= category.name %></a>
+      <% end %>
+    </nav>
+    <%= render Guides::List.new(resources: guides.first(4)) %>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(
+      title: "Developers and agents",
+      description: "Automate Bump.sh from your tools, and let LLMs read this documentation.") %>
+    <div class="home-grid" data-columns="5">
+      <% home.developers.each do |item| %>
+        <a class="card home-card" href="<%= item.link %>">
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+          <code class="card-meta"><%= item.meta %></code>
+        </a>
+      <% end %>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <%= render Shared::SectionHeader.new(title: "Need help?") %>
+    <div class="home-support">
+      <% home.support.each do |item| %>
+        <a class="button" data-button-style="secondary" href="<%= item.link %>"><%= svg "/docs/images/icons/#{item.icon}.svg" %><%= item.label %></a>
+      <% end %>
+    </div>
+  </section>
+</main>

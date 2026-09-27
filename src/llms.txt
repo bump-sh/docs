@@ -1,0 +1,29 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+<%
+  # The internal-markdown-links plugin rewrites any literal "](" in the source, hence the split string
+  entry = ->(resource, suffix = "") { "- [#{resource.data.title}]" + "(#{absolute_url resource.relative_url})#{suffix}" }
+  help = site.collections.help.resources.sort_by(&:relative_url)
+  guides = site.collections.guides.resources.reject { |guide| guide.data.skip_listing }
+  specifications = site.collections.specifications.resources.sort_by(&:relative_url)
+  updates = site.collections["product-updates"].resources.sort_by(&:date).reverse
+%>
+# Bump.sh documentation
+
+> <%= site.metadata.description.strip %>
+
+Bump.sh publishes API documentation from OpenAPI and AsyncAPI documents, and hosts MCP servers built from Flower or Arazzo workflow documents. Related resources: the Bump.sh API references at https://developers.bump.sh/ (MCP server at https://developers.bump.sh/mcp), the CLI at https://github.com/bump-sh/cli and the product at https://bump.sh/.
+
+## Help center
+<%= help.map { |page| entry.call(page) }.join("\n") %>
+
+## Guides
+<%= guides.map { |guide| entry.call(guide, guide.data.excerpt.present? ? ": #{guide.data.excerpt}" : "") }.join("\n") %>
+
+## Specifications
+<%= specifications.map { |page| entry.call(page) }.join("\n") %>
+
+## Product updates
+<%= updates.map { |update| entry.call(update, " (#{update.date.strftime("%Y-%m-%d")})") }.join("\n") %>
