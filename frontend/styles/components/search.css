@@ -1,5 +1,6 @@
-/* Site search: quiet chip input, results panel from bridgetown-quick-search
-   (shadow DOM, themed through its custom properties and the inner part). */
+/* Site search: quiet chip input. The results panel is docs-search-results
+   (frontend/javascript/docs_search.js), styled in its shadow DOM with the
+   site tokens. */
 
 @layer components {
   .site-search {
@@ -21,7 +22,7 @@
     translate: 0 -50%;
   }
 
-  bridgetown-search-form {
+  docs-search-form {
     display: block;
     position: relative;
   }
@@ -49,24 +50,6 @@
     outline: none;
   }
 
-  bridgetown-search-results {
-    --background: var(--surface);
-    --text-color: var(--text);
-    --link-color: var(--title);
-    --divider-color: var(--border);
-    --border-radius: var(--radius-lg);
-    --border-corner-radius: var(--radius-lg);
-
-    font-size: var(--doc-font-size);
-    margin-top: var(--spacing-1);
-  }
-
-  bridgetown-search-results::part(inner) {
-    border: var(--hairline);
-    box-shadow: var(--shadow-lg);
-    padding: var(--spacing-3) var(--spacing-4);
-  }
-
   @media (--nav-collapsed) {
     /* First row of the drawer */
     .site-search {
@@ -77,7 +60,7 @@
       margin-block-end: var(--spacing-3);
     }
 
-    bridgetown-search-results {
+    docs-search-results {
       width: 100%;
     }
   }

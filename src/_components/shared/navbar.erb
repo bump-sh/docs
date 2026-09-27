@@ -12,7 +12,10 @@
     </div>
     <search class="site-search">
       <%= svg "/docs/images/icons/search.svg" %>
-      <%= liquid_render "bridgetown_quick_search/search", placeholder: "Search…", display_collection: true %>
+      <docs-search-form>
+        <input slot="input" type="search" placeholder="Search…" />
+        <docs-search-results></docs-search-results>
+      </docs-search-form>
     </search>
     <div class="nav-group">
       <% @site.data.navbar.right_links.each do |item| %>
