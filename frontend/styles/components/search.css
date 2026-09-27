@@ -11,15 +11,34 @@
     margin-inline-start: auto;
   }
 
-  .site-search > svg {
+  .site-search > svg,
+  .site-search > kbd {
     position: absolute;
     top: 50%;
-    left: var(--spacing-3);
-    width: 14px;
-    height: 14px;
+    z-index: 1;
     color: var(--text-secondary);
     pointer-events: none;
     translate: 0 -50%;
+  }
+
+  .site-search > svg {
+    left: var(--spacing-3);
+    width: 14px;
+    height: 14px;
+  }
+
+  .site-search > kbd {
+    right: var(--spacing-2);
+  }
+
+  /* Shortcut chip, same rendering as the API documentation search button */
+  .search-shortcut {
+    background-color: var(--surface-muted);
+    border: var(--hairline);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    padding: 0 var(--spacing-1-5);
   }
 
   docs-search-form {
@@ -36,7 +55,7 @@
     border-radius: var(--radius-md);
     color: var(--text);
     font-size: var(--doc-font-size);
-    padding: 0 var(--spacing-3) 0 var(--spacing-8);
+    padding: 0 var(--spacing-10) 0 var(--spacing-8);
     transition: border-color var(--duration) var(--easing);
   }
 
@@ -51,6 +70,11 @@
   }
 
   @media (--nav-collapsed) {
+    /* No keyboard on the drawer's touch layouts */
+    .site-search > kbd {
+      display: none;
+    }
+
     /* First row of the drawer */
     .site-search {
       flex: none;

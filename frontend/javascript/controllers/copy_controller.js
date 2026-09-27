@@ -7,4 +7,12 @@ export default class Copy extends Controller {
       navigator.clipboard.writeText(window.location.href.split("#")[0] + link)
     }
   }
+
+  // Copies data-copy-text-param and flags the button as copied for a moment
+  text(event) {
+    const button = event.currentTarget
+    navigator.clipboard.writeText(event.params.text)
+    button.dataset.copied = "true"
+    setTimeout(() => delete button.dataset.copied, 1500)
+  }
 }
