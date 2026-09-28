@@ -19,15 +19,22 @@
 [build.processing.images]
   compress = true
 
+# Pages: cacheable by the CDN, revalidated on every request (ETag), so a
+# deploy shows up immediately. Hashed assets: cached forever.
 [[headers]]
-  for = "*"
+  for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=15552000; includeSubDomains"
     Referrer-Policy = "no-referrer-when-downgrade"
-    Cache-Control = "private, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/docs/_bridgetown/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/"
@@ -37,8 +44,3 @@
       "<JS_PATH>; rel=preload; as=script",
       "<https://NETLIFY_IMAGES_CDN_DOMAIN>; rel=preconnect"
     ]
-
-[[headers]]
-  for = "/*.(png|jpg|js|css|svg|woff|ttf|eot|ico|woff2)"
-  [headers.values]
-    Cache-Control = "private, max-age=0, must-revalidate"
