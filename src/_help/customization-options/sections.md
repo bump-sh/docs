@@ -99,3 +99,7 @@ Sections appear in the order in which you declare them in the `x-tagGroups` arra
 ### Operations and webhooks can share a section
 
 A group is a list of tags, whatever those tags are attached to: a single custom section can therefore contain both regular operations and webhook operations.
+
+### Topics can join a section or a group
+
+A [topic](/help/documentation-experience/topics/) can also be displayed in a custom section, or inside one of its groups, instead of the default “Topics” section. Add a `tags` array to the topic: its first value must be the name of the section (for example `journeys`) or of one of its tags (for example `Stations`). See [Place topics in sections and groups](/help/documentation-experience/topics/#place-topics-in-sections-and-groups).
