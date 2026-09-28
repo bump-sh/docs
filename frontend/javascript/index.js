@@ -4,7 +4,6 @@ import { Application } from "@hotwired/stimulus";
 import "bridgetown-lit-renderer";
 import "bridgetown-quick-search";
 import "./docs_search.js";
-import mermaid from "mermaid";
 
 /**
  * Adds support for declarative shadow DOM. Requires your HTML <head> to include:
@@ -37,11 +36,14 @@ Object.entries(controllers).forEach(([filename, controller]) => {
   }
 });
 
-function renderMermaidDiagrams() {
+async function renderMermaidDiagrams() {
   const mermaidCodeBlocks = document.querySelectorAll(
     "pre > code.language-mermaid:not([data-mermaid-processed])"
   );
   if (mermaidCodeBlocks.length === 0) return;
+
+  // Mermaid weighs more than the rest of the bundle: loaded only on pages that draw a diagram
+  const { default: mermaid } = await import("mermaid");
 
   mermaidCodeBlocks.forEach((codeEl) => {
     codeEl.setAttribute("data-mermaid-processed", "true");
