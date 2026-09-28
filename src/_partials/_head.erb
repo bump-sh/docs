@@ -7,5 +7,5 @@
 <link rel="stylesheet" href="/docs<%= asset_path :css %>" data-turbo-track="reload" />
 <%# Applies the saved theme before first paint so the page never flashes %>
 <script>document.documentElement.dataset.theme = localStorage.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")</script>
-<script src="/docs<%= asset_path :js %>" defer data-turbo-track="reload"></script>
+<script type="module" src="/docs<%= asset_path :js %>" data-turbo-track="reload"></script>
 <%= live_reload_dev_js %>

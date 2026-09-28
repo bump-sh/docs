@@ -45,6 +45,10 @@ const esbuildOptions = {
     destination: "output/docs",
   },
   publicPath: "/docs/_bridgetown/static",
+  // ES modules with code splitting so heavy dependencies can be import()ed on demand
+  format: "esm",
+  splitting: true,
+  chunkNames: "chunks/[name].[hash]",
 }
 
 build(esbuildOptions)
