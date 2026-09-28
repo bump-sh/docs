@@ -1,7 +1,7 @@
 left_links:
-  - {title: "Documentation", link: "/help"}
-  - {title: "Product updates", link: "/product-updates"}
-  - {title: "Guides", link: "/guides"}
+  - {title: "Documentation", link: "/help/"}
+  - {title: "Product updates", link: "/product-updates/"}
+  - {title: "Guides", link: "/guides/"}
   - {title: "OpenAPI specification", link: "/openapi/v3.2/"}
   - {title: "Arazzo specification", link: "/arazzo/v1.0/"}
 right_links:

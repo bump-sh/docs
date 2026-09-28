@@ -4,6 +4,18 @@ class Builders::Inspectors < SiteBuilder
       add_heading_anchors(document)
       move_toc_aside(document)
       wrap_tables(document)
+      add_trailing_slashes(document)
+    end
+  end
+
+  # Netlify serves pages at /path/ and redirects /path: internal links get
+  # their slash at build time so a click costs one request, not two.
+  def add_trailing_slashes(document)
+    document.query_selector_all("a[href^='/']:not([href^='//'])").each do |link|
+      path, suffix = link[:href].split(/(?=[?#])/, 2)
+      next if path.end_with?("/") || path.match?(/\.\w*[a-z]\w*\z/i)
+
+      link[:href] = "#{path}/#{suffix}"
     end
   end
 
