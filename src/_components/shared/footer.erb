@@ -1,19 +1,26 @@
 <footer class="site-footer wrapper">
-  <div class="footer-columns">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="site-logo" href="https://bump.sh">
+        <img class="logo-light" src="<%= relative_url '/docs/images/bump-logo.svg' %>" alt="Bump.sh" />
+        <img class="logo-dark" src="<%= relative_url '/docs/images/bump-logo-wht.svg' %>" alt="Bump.sh" />
+      </a>
+      <p>Build APIs for humans and agents.</p>
+      <div class="footer-social">
+        <% @site.data.footer.social.each do |entry| %>
+          <a class="link" href="<%= entry.link %>" aria-label="<%= entry.label %>"><%= svg "/docs/images/icons/#{entry.icon}" %></a>
+        <% end %>
+      </div>
+    </div>
     <% @site.data.footer.columns.each do |column| %>
       <%= render Shared::Footer::Column.new(column: column) %>
     <% end %>
   </div>
   <div class="footer-bottom">
-    <div class="bottom-column">
-      <div class="copyright">© <%= Time.now.year %> Bump.sh. Built with <a class="link" href="https://www.bridgetownrb.com/">Bridgetown</a>.</div>
+    <div class="copyright">© <%= Time.now.year %> Bump.sh. All rights reserved.</div>
+    <div class="footer-legal">
       <% @site.data.footer.bottom.each do |entry| %>
         <a class="link" href="<%= entry.link %>"><%= entry.label %></a>
-      <% end %>
-    </div>
-    <div class="bottom-column">
-      <% @site.data.footer.social.each do |entry| %>
-        <a class="link" href="<%= entry.link %>" aria-label="<%= entry.label %>"><%= svg "/docs/images/icons/#{entry.icon}" %></a>
       <% end %>
     </div>
   </div>
