@@ -16,6 +16,10 @@ export class DocsSearchForm extends BridgetownSearchForm {
   }
 }
 
+// One index for the whole session: fetched and built on the first focus,
+// shared between the header and the home search, kept across Turbo visits.
+let sharedIndex
+
 export class DocsSearchResults extends BridgetownSearchResults {
   static styles = [
     BridgetownSearchResults.styles,
@@ -83,7 +87,17 @@ export class DocsSearchResults extends BridgetownSearchResults {
     `
   ]
 
-  showResultsForQuery(query) {
+  // Nothing at connect time: the index loads when a search starts
+  fetchSearchIndex() {}
+
+  async loadIndex() {
+    sharedIndex ||= BridgetownSearchResults.prototype.fetchSearchIndex.call(this)
+      .then(() => ({ searchIndex: this.searchIndex, searchEngine: this.searchEngine }))
+    Object.assign(this, await sharedIndex)
+  }
+
+  async showResultsForQuery(query) {
+    await this.loadIndex()
     this.latestQuery = query
     this.showResults = query.length > 1
     this.results = this.showResults ? this.searchEngine.performSearch(query, this.snippetLength).slice(0, 10) : []
