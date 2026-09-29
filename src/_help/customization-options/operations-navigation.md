@@ -22,9 +22,12 @@ If you want to customize those sections, you have two options depending on the v
 - **OpenAPI 3.2**: use the native tag hierarchy. A tag used as a `parent` becomes a section containing its child tags, which lets you build your own sections without any vendor extension. [More details on the OpenAPI 3.2 support page](/help/specification-support/openapi-support/#openapi-32).
 - **OpenAPI 3.1 and below, or AsyncAPI**: use the dedicated vendor extension `x-tagGroups`, which lets you define specific section names with the list of tagged groups they should contain. [More details on the dedicated extension page](/help/customization-options/sections/).
 
-> Both custom sections with `x-tagGroups` and nested navigation with OpenAPI
-> 3.2 tags only work if your documentation is in “automatic” or “group by tag”
-> grouping mode ([see Grouping operations](/help/customization-options/operations-navigation/#grouping-operations)).
+[Topics](/help/documentation-experience/topics/) can also be moved out of the “Topics” section, into a custom section or one of its groups, with a `tags` array. See [Place topics in sections and groups](/help/documentation-experience/topics/#place-topics-in-sections-and-groups).
+
+> Custom sections with `x-tagGroups`, nested navigation with OpenAPI
+> 3.2 tags, and topics placed in sections or groups only work if your
+> documentation is in “automatic” or “group by tag” grouping mode
+> ([see Grouping operations](/help/customization-options/operations-navigation/#grouping-operations)).
 {: .info}
 
 ## Grouping operations
