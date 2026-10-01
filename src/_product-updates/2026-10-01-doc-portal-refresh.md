@@ -20,7 +20,7 @@ Examples now sit on neutral, high contrast surfaces, and read the same way in li
 
 ![Bump.sh API operation code example](/docs/images/changelog/docs-ui-refresh-code-example.png)
 
-## Reworked dark mode
+## Improved dark mode
 
 Dark mode no longer relies on filters applied to the light theme. Surfaces, badges and code samples get their own colors in each theme, picked with accessibility in mind. Your brand color (and your dedicated dark mode color, if you set one) still drives accent colors, hover states and text variants, adjusted so text stays readable.
 
