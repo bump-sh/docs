@@ -6,7 +6,7 @@ image: /docs/images/changelog/docs-ui-refresh.png
 
 ![Bump.sh API doc with the new theme](/docs/images/changelog/docs-ui-refresh.png)
 
-Most of the attention right now goes to making APIs readable by AI tools. But agents aren't the only ones who use your APIs: developers are, too. They still read your documentation, scan response bodies, look for the one parameter they're missing. And that part of the experience hasn't changed that much.
+Most of the attention right now goes to making APIs readable by AI tools. But agents aren't the only ones who use your APIs: developers still are. They read your documentation, scan response bodies, look for that one specific parameter, trying to understand the big picture. And that part of the experience hasn't changed that much on Bump.sh.
 
 So we refreshed the UI with one focus: making your docs easier to scan. It comes with a new type scale, a new color palette and an improved dark mode. It's live across your whole doc portal: docs, hubs, API Explorer and changelog.
 
