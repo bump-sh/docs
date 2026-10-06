@@ -15,17 +15,17 @@
   resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-7.1.1.tgz#15e19737d946559289b915e5dad3b4c28407735e"
   integrity sha512-i1L7noDNxtFyL5DmZafWy1wRVhGehQmzZaz1HiN5e7iylJMSZR7ekOV7NsIqa5qBldlLrsKv4HbgFUVlQrz8Mw==
 
-"@bump-sh/agent-conversation@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@bump-sh/agent-conversation/-/agent-conversation-0.1.0.tgz#9fbd98d10b10b60b876be92efc9950d174f4a5f7"
-  integrity sha512-CHWkc3nU340G17KOu30dLdViVOEwzpNXbtjDuu+ugjw920MVPNwtRD1kOM32YSR3Xe7PDfcFiMHL4kUgK/kMTw==
+"@bump-sh/agent-conversation@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@bump-sh/agent-conversation/-/agent-conversation-0.3.0.tgz#c56c46b1e9516318f3e81f0d4c79ebb125404789"
+  integrity sha512-X5/HEM9hUxZQY4jrDX/BFV5dd7WcPXc+n7stnfruZpY3pUfulkdap+/QUqib23+jSABZNs10BTtIDubT9ovC+A==
 
-"@bump-sh/agent-widget@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@bump-sh/agent-widget/-/agent-widget-0.1.0.tgz#6cbf1b0a6d9f666dadddce7112153f2f8003d726"
-  integrity sha512-Oa0bbZ31jNRZpFzkykIBwiNxKRLf9Zz3ffbZRsSKkYrizS/zACVDH/GPeU26KO+EO5fdu4u7w1gF2rxHnqYSUA==
+"@bump-sh/agent-widget@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@bump-sh/agent-widget/-/agent-widget-0.3.1.tgz#214ed9dc7a2039a211d31c013abe8fe1a0534e70"
+  integrity sha512-2u9ccQbf0XQc42n1Bf+uoGoeoSBrxhOcfUXGUjYTVCetk7zk6VfLTksb1xwAKrUzV8I2BB5oGSaUQVhrB8/KCQ==
   dependencies:
-    "@bump-sh/agent-conversation" "^0.1.0"
+    "@bump-sh/agent-conversation" "^0.3.0"
 
 "@chevrotain/cst-dts-gen@11.0.3":
   version "11.0.3"
