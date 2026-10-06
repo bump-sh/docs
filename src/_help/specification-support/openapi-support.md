@@ -76,6 +76,6 @@ The features introduced by this version are handled as follows:
 | Server object: `name` | Displayed in the [Servers section](/help/specification-support/multiple-servers/). |
 | Security Requirement object: reference by URI | Security schemes can be referenced by their path, not only by their name. |
 | Security Scheme object: `deprecated` | Displays a deprecation badge on the security scheme. |
-| OAuth Flows object: `deviceAuthorization` | Displayed in the Authentication section, with its Device Authorization URL.
+| OAuth Flows object: `deviceAuthorization` | Displayed in the Authentication section, with its Device Authorization URL. |
 | Security Scheme object: `oauth2MetadataUrl` | Displayed in the Authentication section. Only HTTPS URLs are displayed. |
 
