@@ -20,7 +20,7 @@ From there, you have two ways to build on it, both from the open-source [`agent-
 
 ## Choose an AI model
 
-Once **Agent** is turned on, you can pick the LLM that powers it in your MCP server settings. A free model is provided for free so you can test the agent right away (limits apply). For production, switch to a more capable model with your own provider and API key.
+Once **Agent** is turned on, you can pick the LLM that powers it in your MCP server settings. A basic model is provided for free so you can test the agent right away (limits apply). For production, switch to a more capable model with your own provider and API key.
 
 | Provider | Model | API key |
 |---|---|---|
