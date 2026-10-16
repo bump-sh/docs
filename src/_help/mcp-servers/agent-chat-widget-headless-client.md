@@ -18,6 +18,21 @@ From there, you have two ways to build on it, both from the open-source [`agent-
 | [**Chat widget**](#chat-widget) | A ready-to-use, embeddable chat UI (Web Component). | You want to add a working chat widget to your app in a few lines of code. |
 | [**Headless client**](#headless-client) | A dependency-free client that streams the conversation, with no interface. | You're building your own UI: a Slack bot, a CLI, a custom chat panel, ... |
 
+## Choose an AI model
+
+Once **Agent** is turned on, you can pick the LLM that powers it in your MCP server settings. A basic model is provided for free so you can test the agent right away (limits apply). For production, switch to a more capable model with your own provider and API key.
+
+| Provider | Model | API key |
+|---|---|---|
+| **Bump.sh** (default) | Claude Haiku | Not needed |
+| Any major AI provider (Anthropic, OpenAI, Mistral, Google, ...) | Any model from that provider that supports tool calling | Your own key for that provider |
+
+
+> Once sent, the API key is stored on the data plane and can't be retrieved. Switching to another model or turning **Agent** off deletes the API key from the data plane.
+{: .info}
+
+![LLM picker for agent server settings](/docs/images/help/mcp-servers/mcp-servers-agent-activation-llm-pick.png)
+
 ## Chat widget
 
 A ready-to-use chat widget for your product, so your own users can run your workflows straight from your app in natural language: no external LLM tool or MCP client needed on their end. It's a Web Component that can easily be added to your page in HTML or JavaScript.
