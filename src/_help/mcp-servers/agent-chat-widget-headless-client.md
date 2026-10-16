@@ -28,7 +28,7 @@ Once **Agent** is turned on, you can pick the LLM that powers it in your MCP ser
 | Any major AI provider (Anthropic, OpenAI, Mistral, Google, ...) | Any model from that provider that supports tool calling | Your own key for that provider |
 
 
-> Switching back to the **Bump.sh** provider or turning **Agent** off removes your custom model and key from the data plane.
+> Once sent, the API key is stored on the data plane and can't be retrieved. Switching to another model or turning **Agent** off deletes the API key from the data plane.
 {: .info}
 
 ![LLM picker for agent server settings](/docs/images/help/mcp-servers/mcp-servers-agent-activation-llm-pick.png)
