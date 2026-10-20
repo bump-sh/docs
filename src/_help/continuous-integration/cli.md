@@ -7,7 +7,7 @@ title: Bump CLI
 
 The Bump.sh CLI is used to interact with API documentation and hubs hosted on Bump.sh from your choice of popular API description formats: OpenAPI, Swagger, or AsyncAPI.
 
-Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2.x), you can do any of the following:
+Using [OpenAPI](https://spec.openapis.org/) (v3.x and v2.0) or [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest) (2 and 3), you can do any of the following:
 
 - Validate an API document before publishing to your documentation.
 - Publish an API document to your Bump.sh documentation or hubs.

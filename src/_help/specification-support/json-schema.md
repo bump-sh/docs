@@ -52,12 +52,12 @@ Thus, it becomes easy to use the same `Schema Object` in different contexts, for
 }
 ```
 
-> - `writeOnly` properties **are hidden** when they belong to a `subscribe` operation in AsyncAPI or a `response` in OpenAPI.
+> - `writeOnly` properties **are hidden** when they belong to a `subscribe` operation in AsyncAPI 2, a `receive` operation in AsyncAPI 3, or a `response` in OpenAPI.
 >
-> - `readOnly` properties **are hidden** when they belong to a `publish` operation in AsyncAPI or a `request` in OpenAPI.
+> - `readOnly` properties **are hidden** when they belong to a `publish` operation in AsyncAPI 2, a `send` operation in AsyncAPI 3, or a `request` in OpenAPI.
 {: .warning}
 
-> Not displaying `writeOnly` properties in subscribe operations and `readOnly` properties in publish operations allows the use of the same `Schema Object` everywhere it is needed, without documenting confusing/irrelevant properties in the wrong context.
+> Not displaying `writeOnly` properties in subscribe and receive operations, and `readOnly` properties in publish and send operations, allows the use of the same `Schema Object` everywhere it is needed, without documenting confusing/irrelevant properties in the wrong context.
 {: .info}
 
 
