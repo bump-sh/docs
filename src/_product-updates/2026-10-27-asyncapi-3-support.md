@@ -54,7 +54,7 @@ operations:
         - $ref: '#/channels/tripQuoteReplies/messages/tripQuote'
 ```
 
-Your documentation now displays this reply: a new "Reply" block appears right below the operation, with the reply direction, its address, its messages, its parameters and its bindings. The request and its expected answer are documented side by side.
+Your documentation now displays this reply: a new "Reply" block appears right below the operation, showing the reply's address, messages, parameters and bindings. The request and its expected answer are documented side by side.
 
 ![The Reply block of an operation](/docs/images/changelog/asyncapi-3-support-reply.png)
 
