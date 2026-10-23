@@ -19,7 +19,7 @@ Specifications are the official standards used to describe, among other things:
 - an API workflow (Flower, Arazzo, ...).
 These standards outline a set of elements and rules to follow when writing an API definition.
 
-We support OpenAPI, AsyncAPI (up to 2.6), Flower (our own workflow specification) and Arazzo. To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi), [AsyncAPI](/guides/asyncapi/what-is-asyncapi/) and [Arazzo](/arazzo/v1.0/). We also made a guide on [Flower](/help/mcp-servers/specification-support/flower-support), our own workflow standard.
+We support OpenAPI, AsyncAPI (2 and 3), Flower (our own workflow specification) and Arazzo. To learn more about the supported specifications, we have written dedicated guides on [OpenAPI](/guides/openapi), [AsyncAPI](/guides/asyncapi/what-is-asyncapi/) and [Arazzo](/arazzo/v1.0/). We also made a guide on [Flower](/help/mcp-servers/specification-support/flower-support), our own workflow standard.
 
 ### Deployment
 
@@ -34,7 +34,7 @@ A deployment is the processing of an API or a workflow document by Bump.sh: afte
 An API definition is the representation of an API written in compliance with an existing specification.
 It is sometimes referred to as an API schema, API contract, or even [API specification](/help/getting-started/concepts/#specification) (which is something different).
 
-As of today, Bump.sh supports the following specifications: [OpenAPI (Swagger)](https://spec.openapis.org/oas/latest.html), and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/v3.0.0).
+As of today, Bump.sh supports the following specifications: [OpenAPI (Swagger)](https://spec.openapis.org/oas/latest.html), and [AsyncAPI](https://www.asyncapi.com/docs/reference/specification/latest).
 
 We provide a detailed introduction to API definitions [through this guide](/guides/api-basics/api-contracts-extended-introduction/).
 
