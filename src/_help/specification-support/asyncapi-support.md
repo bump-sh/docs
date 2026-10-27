@@ -67,7 +67,10 @@ The features introduced by this version are handled as follows:
 
 The following fields are not supported yet:
 - Message object: `correlationId`, `contentType`, and root `defaultContentType`,
-- Message object: Multi Format Schema `payload` (`schemaFormat` and `schema`): the payload is not displayed,
+- Message object: Partial support of Multi Format Schema `payload` and
+  `headers` (`schemaFormat` and `schema`). We only support it when
+  `schemaFormat` is AsyncAPI Schema objects, OpenAPI schema objects or
+  JSONSchema objects,
 - Operation object: `security`,
 - Channel object: `servers`.
 
