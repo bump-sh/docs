@@ -14,7 +14,7 @@ The API Explorer allows you to test an API in real-world conditions directly fro
 
 ## How to activate the API Explorer?
 
-The API Explorer can be activated for a documentation or a whole hub through an option in its “Settings” tab. 
+The API Explorer can be activated for a documentation or a whole hub through an option in its “Settings” tab.
 
 ![Image of the setting to activate the API Explorer](/docs/images/help/explorer/explorer-activation-option.png)
 
@@ -68,7 +68,7 @@ You can also learn more about it in our [dedicated blog post](https://bump.sh/bl
 
 We support authentication for APIs that require prior authentication. Three options are available: via **HTTP authorization** (Basic or Bearer tokens), via **API key** (In header, query param or cookie) or via **OAuth2** flows. These are the most common [security schemes available in OpenAPI](https://spec.openapis.org/oas/v3.1.0#security-scheme-object) and AsyncAPI.
 
-The authentication information are stored in the localStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
+The authentication information are stored in the sessionStorage of the user’s browser, to avoid having to fill it out on every refresh/operation switch.
 
 ![Image of the authentication module of the API Explorer](/docs/images/help/explorer/explorer-auth.png)
 
