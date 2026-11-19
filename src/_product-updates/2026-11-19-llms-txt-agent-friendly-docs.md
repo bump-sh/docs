@@ -1,5 +1,5 @@
 ---
-title: "Agent-friendly API docs: llms.txt improvements"
+title: "Agent-friendly API docs: llms.txt and Markdown page improvements"
 tags: [Improvement]
 image: /docs/images/changelog/agent-friendly-docs.png
 ---
