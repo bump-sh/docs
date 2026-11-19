@@ -1,7 +1,10 @@
 ---
 title: "Agent-friendly API docs: llms.txt improvements"
 tags: [Improvement]
+image: /docs/images/changelog/agent-friendly-docs.png
 ---
+
+![Bump.sh docs score 100/100 on the Agent-Friendly Docs Scorecard](/docs/images/changelog/agent-friendly-docs.png)
 
 Your API docs have a new kind of reader. Coding assistants like Claude Code, Cursor or Copilot fetch documentation pages on their own, to understand an API, write an integration or debug a call. They don't browse like humans: they need the right entry point, clean content, and no tokens wasted on page layout.
 
