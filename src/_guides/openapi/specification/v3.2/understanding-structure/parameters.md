@@ -54,7 +54,7 @@ Here is one required path parameter, `bookingId`, with its `name` matching `{boo
 > Path parameters have to be marked as `required: true` because they're in the path, and if its missing it would break especially if the variable was between two other segments, e.g: `/bookings/{bookingId}/payment` would become `/bookings//payment` if the value was empty and that's going to be confusing.
 {: .warning }
 
-OpenAPIis very particular about allowed characters:
+OpenAPI is very particular about allowed characters:
 
 > The value for these path parameters MUST NOT contain any unescaped "generic syntax" characters described by RFC3986: forward slashes (/), question marks (?), or hashes (#).
 
