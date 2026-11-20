@@ -10,7 +10,7 @@ date: 2025-05-16
 
 One of the most important parts of OpenAPI is the `schema` object. Schema objects are used to describe HTTP request and response bodies, parameters, headers, and all sorts of other data, whether its JSON, XML, or primitive types like integers and strings. 
 
-> If you're familiar with JSON Schema, you'll be right at home here, because OpenAPI v3.1 onward is compatible with JSON Schema. For those who have not used JSON Schema before, that's ok, follow along.
+> If you're familiar with JSON Schema, you'll be right at home here, because OpenAPI v3 onward is compatible with JSON Schema. For those who have not used JSON Schema before, that's ok, follow along.
 {: .info }
 
 The first thing to learn about a schema is the `type` keyword, which can be one or more of the following types:
