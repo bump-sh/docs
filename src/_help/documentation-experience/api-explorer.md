@@ -32,6 +32,42 @@ We identify the required fields directly from the definition file, making it eas
 
 ![Image of the response module of the API Explorer](/docs/images/help/explorer/explorer-response.png)
 
+### Responses
+
+Text responses, such as JSON or XML, are displayed in the response module, where they can be copied or expanded.
+
+#### Images
+
+Image responses (PNG, JPEG, GIF and WebP) are displayed directly in the response module, below a block to download them.
+
+![Animated image of the API Explorer sending a request and displaying a GIF response](/docs/images/help/explorer/explorer-response-file.gif)
+
+#### Files
+
+When the API returns a file, such as a PDF or a ZIP archive, the response module displays a download block instead of unreadable text: the file name, its media type and size, and a “Download” button.
+
+The file is named after the date and time of the response (UTC), with the extension matching its media type, for example `response-20261127134859.pdf`.
+
+| Extension | Media type |
+|-----------|------------|
+| `.pdf` | `application/pdf` |
+| `.zip` | `application/zip` |
+| `.gz` | `application/gzip` |
+| `.xlsx` | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` |
+| `.docx` | `application/vnd.openxmlformats-officedocument.wordprocessingml.document` |
+| None | `application/octet-stream` |
+| `.png` | `image/png` |
+| `.jpg` | `image/jpeg` |
+| `.gif` | `image/gif` |
+| `.webp` | `image/webp` |
+| `.svg` | `image/svg+xml` |
+| `.mp3` | `audio/mpeg` |
+| `.mp4` | `video/mp4` |
+| `.mpeg` | `video/mpeg` |
+
+> Responses with any other media type are displayed as text. SVG images can be downloaded but are not displayed.
+{: .info}
+
 ### Sharing
 
 It’s possible to share a request setup, which is useful for showing an example in a demo or for support purposes. The share button generates a URL that includes the pre-filled request parameters.
